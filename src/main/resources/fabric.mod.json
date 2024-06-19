@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "excessive_building",
+	"version": "${version}",
+	"name": "Excessive Building",
+	"description": "Excessive Building is a building mod designed to enchance the building experience of users while still aiming for the vanilla feel.",
+	"authors": [
+		"Yirmiri"
+	],
+	"contact": {
+		"homepage": "NA",
+		"sources": "NA"
+	},
+	"license": "All Rights Reserved",
+	"icon": "excessive_building_icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.yirmiri.excessive_building.ExcessiveBuilding"
+		],
+		"fabric-datagen": [
+          "net.yirmiri.excessive_building.ExcessiveBuildingDataGenerator"
+		]
+	},
+	"mixins": [
+		"excessive_building.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
