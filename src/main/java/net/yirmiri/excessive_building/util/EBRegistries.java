@@ -16,6 +16,7 @@ public class EBRegistries {
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.OAK_MOSAIC, 20, 5);
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.OAK_MOSAIC_STAIRS, 20, 5);
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.OAK_MOSAIC_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.OAK_MOSAIC_VERTICAL_STAIRS, 20, 5);
     }
 
     public static void registerStrippables() {
@@ -27,6 +28,7 @@ public class EBRegistries {
         FuelRegistry.INSTANCE.add(EBBlocks.OAK_MOSAIC, 150);
         FuelRegistry.INSTANCE.add(EBBlocks.OAK_MOSAIC_STAIRS, 150);
         FuelRegistry.INSTANCE.add(EBBlocks.OAK_MOSAIC_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.OAK_MOSAIC_VERTICAL_STAIRS, 150);
     }
 
     private static void registerCompostables() {

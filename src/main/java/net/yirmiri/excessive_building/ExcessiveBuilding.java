@@ -3,7 +3,6 @@ package net.yirmiri.excessive_building;
 import net.fabricmc.api.ModInitializer;
 
 import net.yirmiri.excessive_building.registry.EBBlocks;
-import net.yirmiri.excessive_building.registry.EBItemGroups;
 import net.yirmiri.excessive_building.util.EBRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +15,7 @@ public class ExcessiveBuilding implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		EBBlocks.registerEBBlocks();
-		EBItemGroups.registerAddToVanilla();
+		//EBItemGroups.registerAddToVanilla();
 		EBRegistries.registerRegistries();
 	}
 }
