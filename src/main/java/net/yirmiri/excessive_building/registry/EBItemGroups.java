@@ -64,13 +64,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WARPED_MOSAIC_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WARPED_MOSAIC_SLAB);
             }).build());
-//TODO: Add to vanilla tabs
 
-//    public static void registerAddToVanilla() {
-//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
-//            entries.addAfter(Items.OAK_PLANKS, EBBlocks.OAK_MOSAIC);
-//            entries.addAfter(Items.OAK_STAIRS, EBBlocks.OAK_MOSAIC_STAIRS);
-//            entries.addAfter(Items.OAK_SLAB, EBBlocks.OAK_MOSAIC_SLAB);
-//        });
-//    }
+    public static void registerEBItemGroups() {
+    }
 }

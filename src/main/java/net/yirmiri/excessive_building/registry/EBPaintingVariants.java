@@ -20,4 +20,7 @@ public class EBPaintingVariants {
     private static RegistryKey<PaintingVariant> of(String id) {
         return RegistryKey.of(RegistryKeys.PAINTING_VARIANT, Identifier.ofVanilla(id));
     }
+
+    public static void registerEBPaintings() {
+    }
 }
