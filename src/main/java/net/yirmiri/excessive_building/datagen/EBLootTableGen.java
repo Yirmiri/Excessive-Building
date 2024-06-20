@@ -55,5 +55,24 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.WARPED_MOSAIC_SLAB, slabDrops(EBBlocks.WARPED_MOSAIC_SLAB));
         addDrop(EBBlocks.WARPED_MOSAIC_VERTICAL_STAIRS);
         addDrop(EBBlocks.BAMBOO_MOSAIC_VERTICAL_STAIRS);
+        addDrop(EBBlocks.COBBLESTONE_BRICKS);
+        addDrop(EBBlocks.COBBLESTONE_BRICK_STAIRS);
+        addDrop(EBBlocks.COBBLESTONE_BRICK_SLAB, slabDrops(EBBlocks.COBBLESTONE_BRICK_SLAB));
+        addDrop(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
+        addDrop(EBBlocks.MOSSY_COBBLESTONE_BRICKS);
+        addDrop(EBBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS);
+        addDrop(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB, slabDrops(EBBlocks.COBBLESTONE_BRICK_SLAB));
+        addDrop(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
+        addDrop(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
+        addDrop(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB, slabDrops(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB));
+        addDrop(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
+        addDrop(EBBlocks.BLACKSTONE_BRICKS);
+        addDrop(EBBlocks.BLACKSTONE_BRICK_STAIRS);
+        addDrop(EBBlocks.BLACKSTONE_BRICK_SLAB, slabDrops(EBBlocks.BLACKSTONE_BRICK_SLAB));
+        addDrop(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
+        addDrop(EBBlocks.BLACKSTONE_BRICK_WALL);
+        addDrop(EBBlocks.COBBLESTONE_BRICK_WALL);
+        addDrop(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL);
+        addDrop(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
     }
 }

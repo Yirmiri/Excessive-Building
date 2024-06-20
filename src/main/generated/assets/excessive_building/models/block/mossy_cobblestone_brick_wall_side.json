@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "excessive_building:block/mossy_cobblestone_bricks"
+  }
+}

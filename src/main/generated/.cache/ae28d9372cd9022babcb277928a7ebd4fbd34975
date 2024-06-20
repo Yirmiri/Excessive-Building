@@ -1,2 +1,4 @@
-// 1.21	2024-06-19T15:43:15.9368293	Excessive Building/Tags for minecraft:block
+// 1.21	2024-06-20T08:32:27.824588	Excessive Building/Tags for minecraft:block
 203402e55abfda02d34eb6b65a56b6f67fdbcdb0 data\minecraft\tags\block\mineable\axe.json
+99af194f5c52c9b4f9ed52f9b9d9875c8a9dc90d data\minecraft\tags\block\mineable\pickaxe.json
+419a9c03943ac97171b048feb819b0e35119cafb data\minecraft\tags\block\walls.json

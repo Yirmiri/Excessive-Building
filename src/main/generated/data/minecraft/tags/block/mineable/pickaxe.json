@@ -1,0 +1,27 @@
+{
+  "values": [
+    "excessive_building:cobblestone_bricks",
+    "excessive_building:cobblestone_brick_stairs",
+    "excessive_building:cobblestone_brick_slab",
+    "excessive_building:cobblestone_brick_vertical_stairs",
+    "excessive_building:cobblestone_brick_wall",
+    "excessive_building:cracked_cobblestone_bricks",
+    "excessive_building:mossy_cobblestone_bricks",
+    "excessive_building:mossy_cobblestone_brick_stairs",
+    "excessive_building:mossy_cobblestone_brick_slab",
+    "excessive_building:mossy_cobblestone_brick_vertical_stairs",
+    "excessive_building:mossy_cobblestone_brick_wall",
+    "excessive_building:cobbled_deepslate_bricks",
+    "excessive_building:cobbled_deepslate_brick_stairs",
+    "excessive_building:cobbled_deepslate_brick_slab",
+    "excessive_building:cobbled_deepslate_brick_vertical_stairs",
+    "excessive_building:cobbled_deepslate_brick_wall",
+    "excessive_building:cracked_cobbled_deepslate_bricks",
+    "excessive_building:blackstone_bricks",
+    "excessive_building:blackstone_brick_stairs",
+    "excessive_building:blackstone_brick_slab",
+    "excessive_building:blackstone_brick_vertical_stairs",
+    "excessive_building:blackstone_brick_wall",
+    "excessive_building:cracked_blackstone_bricks"
+  ]
+}

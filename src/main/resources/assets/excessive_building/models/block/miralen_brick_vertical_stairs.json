@@ -1,0 +1,8 @@
+{
+  "parent": "excessive_building:custom/vertical_stairs",
+  "textures": {
+    "particle": "excessive_building:block/miralen_bricks",
+    "0": "excessive_building:block/miralen_bricks"
+  },
+  "render_type": "solid"
+}

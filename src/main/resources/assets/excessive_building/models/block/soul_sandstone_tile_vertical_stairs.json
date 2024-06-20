@@ -1,0 +1,8 @@
+{
+  "parent": "excessive_building:custom/vertical_stairs",
+  "textures": {
+    "particle": "excessive_building:block/soul_sandstone_tiles",
+    "0": "excessive_building:block/soul_sandstone_tiles"
+  },
+  "render_type": "solid"
+}

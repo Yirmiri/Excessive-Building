@@ -52,6 +52,30 @@ public class EBModelGen extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool warpedMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.WARPED_MOSAIC);
         warpedMosaic.stairs(EBBlocks.WARPED_MOSAIC_STAIRS);
         warpedMosaic.slab(EBBlocks.WARPED_MOSAIC_SLAB);
+
+        BlockStateModelGenerator.BlockTexturePool cobblestoneBricks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.COBBLESTONE_BRICKS);
+        cobblestoneBricks.stairs(EBBlocks.COBBLESTONE_BRICK_STAIRS);
+        cobblestoneBricks.slab(EBBlocks.COBBLESTONE_BRICK_SLAB);
+        cobblestoneBricks.wall(EBBlocks.COBBLESTONE_BRICK_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool mossyCobblestoneBricks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.MOSSY_COBBLESTONE_BRICKS);
+        mossyCobblestoneBricks.stairs(EBBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS);
+        mossyCobblestoneBricks.slab(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB);
+        mossyCobblestoneBricks.wall(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool cobbledDeepslateBricks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
+        cobbledDeepslateBricks.stairs(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
+        cobbledDeepslateBricks.slab(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB);
+        cobbledDeepslateBricks.wall(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool blackstoneBricks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.BLACKSTONE_BRICKS);
+        blackstoneBricks.stairs(EBBlocks.BLACKSTONE_BRICK_STAIRS);
+        blackstoneBricks.slab(EBBlocks.BLACKSTONE_BRICK_SLAB);
+        blackstoneBricks.wall(EBBlocks.BLACKSTONE_BRICK_WALL);
+
+        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
+        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
     }
 
     @Override

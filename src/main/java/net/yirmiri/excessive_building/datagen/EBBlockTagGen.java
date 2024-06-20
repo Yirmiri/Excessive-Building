@@ -15,6 +15,37 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapper) {
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(EBBlocks.COBBLESTONE_BRICK_WALL)
+                .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)
+                .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)
+                .add(EBBlocks.BLACKSTONE_BRICK_WALL);
+
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(EBBlocks.COBBLESTONE_BRICKS)
+                .add(EBBlocks.COBBLESTONE_BRICK_STAIRS)
+                .add(EBBlocks.COBBLESTONE_BRICK_SLAB)
+                .add(EBBlocks.COBBLESTONE_BRICK_VERTICAL_STAIRS)
+                .add(EBBlocks.COBBLESTONE_BRICK_WALL)
+                .add(EBBlocks.CRACKED_COBBLESTONE_BRICKS)
+                .add(EBBlocks.MOSSY_COBBLESTONE_BRICKS)
+                .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS)
+                .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB)
+                .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS)
+                .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)
+                .add(EBBlocks.COBBLED_DEEPSLATE_BRICKS)
+                .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS)
+                .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB)
+                .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS)
+                .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)
+                .add(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS)
+                .add(EBBlocks.BLACKSTONE_BRICKS)
+                .add(EBBlocks.BLACKSTONE_BRICK_STAIRS)
+                .add(EBBlocks.BLACKSTONE_BRICK_SLAB)
+                .add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS)
+                .add(EBBlocks.BLACKSTONE_BRICK_WALL)
+                .add(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
+
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(EBBlocks.OAK_MOSAIC)
                 .add(EBBlocks.OAK_MOSAIC_STAIRS)

@@ -63,6 +63,33 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WARPED_MOSAIC_STAIRS);
                 entries.add(EBBlocks.WARPED_MOSAIC_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WARPED_MOSAIC_SLAB);
+
+                entries.add(EBBlocks.COBBLESTONE_BRICKS);
+                entries.add(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
+                entries.add(EBBlocks.COBBLESTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.COBBLESTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.COBBLESTONE_BRICK_SLAB);
+                entries.add(EBBlocks.COBBLESTONE_BRICK_WALL);
+
+                entries.add(EBBlocks.MOSSY_COBBLESTONE_BRICKS);
+                entries.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB);
+                entries.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL);
+
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
+                entries.add(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB);
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
+
+                entries.add(EBBlocks.BLACKSTONE_BRICKS);
+                entries.add(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
+                entries.add(EBBlocks.BLACKSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BLACKSTONE_BRICK_SLAB);
+                entries.add(EBBlocks.BLACKSTONE_BRICK_WALL);
             }).build());
 
     public static void registerEBItemGroups() {

@@ -56,6 +56,29 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         builder.add(EBBlocks.WARPED_MOSAIC_SLAB, "Warped Mosaic Slab");
         builder.add(EBBlocks.WARPED_MOSAIC_VERTICAL_STAIRS, "Warped Mosaic Vertical Stairs");
         builder.add(EBBlocks.BAMBOO_MOSAIC_VERTICAL_STAIRS, "Bamboo Mosaic Vertical Stairs");
+        builder.add(EBBlocks.COBBLESTONE_BRICKS, "Cobblestone Bricks");
+        builder.add(EBBlocks.COBBLESTONE_BRICK_STAIRS, "Cobblestone Brick Stairs");
+        builder.add(EBBlocks.COBBLESTONE_BRICK_SLAB, "Cobblestone Brick Slab");
+        builder.add(EBBlocks.COBBLESTONE_BRICK_VERTICAL_STAIRS, "Cobblestone Brick Vertical Stairs");
+        builder.add(EBBlocks.CRACKED_COBBLESTONE_BRICKS, "Cracked Cobblestone Bricks");
+        builder.add(EBBlocks.MOSSY_COBBLESTONE_BRICKS, "Mossy Cobblestone Bricks");
+        builder.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS, "Mossy Cobblestone Brick Stairs");
+        builder.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB, "Mossy Cobblestone Brick Slab");
+        builder.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS, "Mossy Cobblestone Brick Vertical Stairs");
+        builder.add(EBBlocks.COBBLED_DEEPSLATE_BRICKS, "Cobbled Deepslate Bricks");
+        builder.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS, "Cobbled Deepslate Brick Stairs");
+        builder.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB, "Cobbled Deepslate Brick Slab");
+        builder.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS, "Cobbled Deepslate Brick Vertical Stairs");
+        builder.add(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS, "Cracked Cobbled Deepslate Bricks");
+        builder.add(EBBlocks.BLACKSTONE_BRICKS, "Blackstone Bricks");
+        builder.add(EBBlocks.BLACKSTONE_BRICK_STAIRS, "Blackstone Brick Stairs");
+        builder.add(EBBlocks.BLACKSTONE_BRICK_SLAB, "Blackstone Brick Slab");
+        builder.add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS, "Blackstone Brick Vertical Stairs");
+        builder.add(EBBlocks.CRACKED_BLACKSTONE_BRICKS, "Cracked Blackstone Bricks");
+        builder.add(EBBlocks.COBBLESTONE_BRICK_WALL, "Cobblestone Brick Wall");
+        builder.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL, "Mossy Cobblestone Brick Wall");
+        builder.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL, "Cobbled Deepslate Brick Wall");
+        builder.add(EBBlocks.BLACKSTONE_BRICK_WALL, "Blackstone Brick Wall");
 
         //ITEM GROUPS
         builder.add("itemgroup.excessive_building", "Excessive Building");

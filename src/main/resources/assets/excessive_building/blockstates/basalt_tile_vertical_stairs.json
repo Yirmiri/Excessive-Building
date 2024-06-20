@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "excessive_building:block/basalt_tile_vertical_stairs"
+    },
+    "facing=east": {
+      "model": "excessive_building:block/basalt_tile_vertical_stairs",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "excessive_building:block/basalt_tile_vertical_stairs",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "excessive_building:block/basalt_tile_vertical_stairs",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "## ",
+    "#  "
+    ],
+  "key": {
+    "#": {
+      "item": "excessive_building:mud_tiles"
+    }
+  },
+  "result": {
+    "count": 4,
+    "item": "excessive_building:mud_tile_vertical_stairs"
+  }
+}

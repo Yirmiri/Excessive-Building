@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "planks_vertical_stairs",
+  "pattern": [
+    "###",
+    "## ",
+    "#  "
+    ],
+  "key": {
+    "#": {
+      "item": "minecraft:bamboo_planks"
+    }
+  },
+  "result": {
+    "count": 4,
+    "item": "excessive_building:bamboo_vertical_stairs"
+  }
+}

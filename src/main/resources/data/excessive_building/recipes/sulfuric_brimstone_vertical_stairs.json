@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "## ",
+    "#  "
+    ],
+  "key": {
+    "#": {
+      "item": "excessive_building:sulfuric_brimstone"
+    }
+  },
+  "result": {
+    "count": 4,
+    "item": "excessive_building:sulfuric_brimstone_vertical_stairs"
+  }
+}

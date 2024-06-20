@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "excessive_building:block/deepslate_brick_vertical_stairs",
+      "uvlock": true
+    },
+    "facing=south": {
+      "model": "excessive_building:block/deepslate_brick_vertical_stairs",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west": {
+      "model": "excessive_building:block/deepslate_brick_vertical_stairs",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=east": {
+      "model": "excessive_building:block/deepslate_brick_vertical_stairs",
+      "y": 90,
+      "uvlock": true
+    }
+  }
+}

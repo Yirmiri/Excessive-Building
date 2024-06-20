@@ -1,0 +1,22 @@
+{
+  "parent": "excessive_building:block/polished_basalt_vertical_stairs",
+  "display": {
+    "thirdperson": {
+      "rotation": [
+        10,
+        -45,
+        130
+      ],
+      "translation": [
+        0,
+        1.5,
+        -2.75
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    }
+  }
+}

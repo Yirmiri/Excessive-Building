@@ -1,0 +1,8 @@
+{
+  "parent": "excessive_building:custom/vertical_stairs",
+  "textures": {
+    "0": "excessive_building:block/mossy_polished_stone_bricks",
+    "particle": "excessive_building:block/mossy_polished_stone_bricks"
+  },
+  "render_type": "solid"
+}

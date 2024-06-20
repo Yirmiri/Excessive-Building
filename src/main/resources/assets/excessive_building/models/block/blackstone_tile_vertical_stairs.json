@@ -1,0 +1,9 @@
+{
+  "parent": "excessive_building:custom/vertical_stairs",
+  "textures": {
+    "all": "excessive_building:block/polished_blackstone_tiles",
+    "particle": "excessive_building:block/polished_blackstone_tiles",
+    "0": "excessive_building:block/middle"
+  },
+  "render_type": "solid"
+}

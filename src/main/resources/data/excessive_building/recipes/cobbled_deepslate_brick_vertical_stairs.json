@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "## ",
+    "#  "
+    ],
+  "key": {
+    "#": {
+      "item": "excessive_building:cobbled_deepslate_bricks"
+    }
+  },
+  "result": {
+    "count": 4,
+    "item": "excessive_building:cobbled_deepslate_brick_vertical_stairs"
+  }
+}

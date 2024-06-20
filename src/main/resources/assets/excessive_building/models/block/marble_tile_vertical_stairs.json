@@ -1,0 +1,8 @@
+{
+  "parent": "excessive_building:custom/vertical_stairs",
+  "textures": {
+    "particle": "excessive_building:block/marble_tiles",
+    "0": "excessive_building:block/marble_tiles"
+  },
+  "render_type": "solid"
+}
