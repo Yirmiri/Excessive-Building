@@ -2,8 +2,10 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.TexturedModel;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 
 public class EBModelGen extends FabricModelProvider {
@@ -76,6 +78,8 @@ public class EBModelGen extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
+
+        blockStateModelGenerator.registerCooker(EBBlocks.KILN, TexturedModel.ORIENTABLE_WITH_BOTTOM);
     }
 
     @Override

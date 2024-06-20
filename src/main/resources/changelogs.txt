@@ -8,6 +8,10 @@ Version Release v3.0.2 Fabric-1.21
 
 •   Ported to Fabric 1.21
 
+  Additions
+•   Added "Evil Eye" painting (uh me @yirmiris)
+•   Added "Catastrophes Before the Calamity" painting (@CupBackup)
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Version Release v3.0.1 Forge/NeoForge-1.20.1

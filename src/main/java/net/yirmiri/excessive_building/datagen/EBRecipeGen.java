@@ -334,6 +334,15 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLACKSTONE_BRICK_STAIRS, EBBlocks.BLACKSTONE_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLACKSTONE_BRICK_SLAB, EBBlocks.BLACKSTONE_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.BLACKSTONE_BRICKS, 1);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.KILN, 1)
+                .input('#', Items.BRICKS).input('@', Items.SMOOTH_STONE).input('%', Items.FURNACE).input('!', Items.BRICK)
+                .pattern("@@@")
+                .pattern("#!#")
+                .pattern("#%#")
+                .criterion(hasItem(Items.BRICKS), conditionsFromItem(Items.BRICKS))
+                .criterion(hasItem(Items.SMOOTH_STONE), conditionsFromItem(Items.SMOOTH_STONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.KILN)));
     }
 
     public static CraftingRecipeJsonBuilder createVerticalStairsRecipe(ItemConvertible output, Ingredient input) {

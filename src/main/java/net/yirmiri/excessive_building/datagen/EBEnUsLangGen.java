@@ -79,8 +79,67 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         builder.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL, "Mossy Cobblestone Brick Wall");
         builder.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL, "Cobbled Deepslate Brick Wall");
         builder.add(EBBlocks.BLACKSTONE_BRICK_WALL, "Blackstone Brick Wall");
+        builder.add(EBBlocks.KILN, "Kiln");
+        builder.add(EBBlocks.LOGO, "Logo Block");
+
+        //MISC
+        builder.add("excessive_building.container.kiln", "Kiln");
 
         //ITEM GROUPS
         builder.add("itemgroup.excessive_building", "Excessive Building");
+
+        //PAINTING TITLES
+        builder.add("painting.excessive_building.forgotten_kingdom.title", "Forgotten Kingdom");
+        builder.add("painting.excessive_building.beacon_of_the_desert.title", "Beacon of the Desert");
+        builder.add("painting.excessive_building.beacon_of_the_desert_trimmed.title", "Beacon of the Desert (Trimmed)");
+        builder.add("painting.excessive_building.burrito.title", "Burrito?");
+        builder.add("painting.excessive_building.courbet_original.title", "Courbet (Original)");
+        builder.add("painting.excessive_building.crash_landing.title", "Crash Landing");
+        builder.add("painting.excessive_building.fit_for_a_queen.title", "Fit for a Queen");
+        builder.add("painting.excessive_building.floors.title", "Floors");
+        builder.add("painting.excessive_building.horizon.title", "Shine");
+        builder.add("painting.excessive_building.imminent_detonation.title", "Imminent Detonation");
+        builder.add("painting.excessive_building.kolos_bug.title", "Kolos Bug");
+        builder.add("painting.excessive_building.lone_bridge.title", "Lone Bridge");
+        builder.add("painting.excessive_building.long_trips.title", "Long Trips");
+        builder.add("painting.excessive_building.paleobotany.title", "Paleobotany");
+        builder.add("painting.excessive_building.pufferlight.title", "Pufferlight");
+        builder.add("painting.excessive_building.scourge_bringer.title", "Scourge Bringer");
+        builder.add("painting.excessive_building.sniffing_in_the_pine_forest.title", "Sniffing in the Pine Forest");
+        builder.add("painting.excessive_building.stage_original.title", "Stage (Original)");
+        builder.add("painting.excessive_building.the_end.title", "The End");
+        builder.add("painting.excessive_building.the_lone_tree.title", "The Lone Tree");
+        builder.add("painting.excessive_building.thine_holy_peanut.title", "Thine Holy Peanut");
+        builder.add("painting.excessive_building.why_do_my_eyes_hurt.title", "Bleeding Eclipse");
+        builder.add("painting.excessive_building.evil_eye.title", "Evil Eye");
+        builder.add("painting.excessive_building.rebellious.title", "Rebellious");
+        builder.add("painting.excessive_building.catastrophes_before_the_calamity.title", "Catastrophes Before the Calamity");
+
+        //PAINTING AUTHORS
+        builder.add("painting.excessive_building.forgotten_kingdom.author", "Yirmiri");
+        builder.add("painting.excessive_building.beacon_of_the_desert.author", "Brickerman");
+        builder.add("painting.excessive_building.beacon_of_the_desert_trimmed.author", "Brickerman");
+        builder.add("painting.excessive_building.burrito.author", "Drisfish");
+        builder.add("painting.excessive_building.courbet_original.author", "Kristoffer Zetterstrand");
+        builder.add("painting.excessive_building.crash_landing.author", "BackupCup");
+        builder.add("painting.excessive_building.fit_for_a_queen.author", "Yirmiri");
+        builder.add("painting.excessive_building.floors.author", "Brickerman");
+        builder.add("painting.excessive_building.horizon.author", "HaWii");
+        builder.add("painting.excessive_building.imminent_detonation.author", "BackupCup");
+        builder.add("painting.excessive_building.kolos_bug.author", "Kolos");
+        builder.add("painting.excessive_building.lone_bridge.author", "Nebula");
+        builder.add("painting.excessive_building.long_trips.author", "SmillyScarfs");
+        builder.add("painting.excessive_building.paleobotany.author", "Hecco");
+        builder.add("painting.excessive_building.pufferlight.author", "Pepagg");
+        builder.add("painting.excessive_building.scourge_bringer.author", "BackupCup");
+        builder.add("painting.excessive_building.sniffing_in_the_pine_forest.author", "Brickerman");
+        builder.add("painting.excessive_building.stage_original.author", "Kristoffer Zetterstrand");
+        builder.add("painting.excessive_building.the_end.author", "BackupCup");
+        builder.add("painting.excessive_building.the_lone_tree.author", "SuperMightByte");
+        builder.add("painting.excessive_building.thine_holy_peanut.author", "YesMan2");
+        builder.add("painting.excessive_building.why_do_my_eyes_hurt.author", "BackupCup");
+        builder.add("painting.excessive_building.evil_eye.author", "Yirmiri");
+        builder.add("painting.excessive_building.rebellious.author", "Rebel (the dog)");
+        builder.add("painting.excessive_building.catastrophes_before_the_calamity.author", "BackupCup");
     }
 }

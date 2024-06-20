@@ -20,6 +20,10 @@ public class EBProperties {
         public static final Block.Settings COBBLESTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLESTONE);
         public static final Block.Settings COBBLED_DEEPSLATE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE);
         public static final Block.Settings BLACKSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.BLACKSTONE);
+
+        //MISC
+        public static final Block.Settings KILN = FabricBlockSettings.copyOf(Blocks.FURNACE);
+        public static final Block.Settings INDESTRUCTIBLE = FabricBlockSettings.copyOf(Blocks.BEDROCK);
     }
 
     public class ItemP {

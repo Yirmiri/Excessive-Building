@@ -15,5 +15,6 @@ public class ExcessiveBuildingDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(EBModelGen::new);
 		pack.addProvider(EBBlockTagGen::new);
 		pack.addProvider(EBItemTagGen::new);
+		pack.addProvider(EBPaintingVariantTagGen::new);
 	}
 }

@@ -44,7 +44,8 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.BLACKSTONE_BRICK_SLAB)
                 .add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS)
                 .add(EBBlocks.BLACKSTONE_BRICK_WALL)
-                .add(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
+                .add(EBBlocks.CRACKED_BLACKSTONE_BRICKS)
+                .add(EBBlocks.KILN);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(EBBlocks.OAK_MOSAIC)

@@ -11,7 +11,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBItemGroups {
     public static ItemGroup EXCESSIVE_BUILDING = Registry.register(Registries.ITEM_GROUP, Identifier.of(ExcessiveBuilding.MOD_ID, "excessive_building"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(EBBlocks.OAK_MOSAIC)).displayName(Text.translatable("itemgroup.excessive_building")).entries((displayContext, entries) -> {
+            FabricItemGroup.builder().icon(() -> new ItemStack(EBBlocks.LOGO)).displayName(Text.translatable("itemgroup.excessive_building")).entries((ctx, entries) -> {
                 entries.add(EBBlocks.OAK_MOSAIC);
                 entries.add(EBBlocks.OAK_MOSAIC_STAIRS);
                 entries.add(EBBlocks.OAK_MOSAIC_VERTICAL_STAIRS);
@@ -90,6 +90,10 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.BLACKSTONE_BRICK_SLAB);
                 entries.add(EBBlocks.BLACKSTONE_BRICK_WALL);
+
+                entries.add(EBBlocks.KILN);
+
+                //TODO: All EB painting variants at the bottom
             }).build());
 
     public static void registerEBItemGroups() {
