@@ -9,8 +9,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.entity.KilnBlockEntity;
 
 public class EBBlockEntities {
-    public static final BlockEntityType<KilnBlockEntity> KILN_BLOCK_ENTITY = Registry.register(
-            Registries.BLOCK_ENTITY_TYPE, Identifier.of(ExcessiveBuilding.MOD_ID, "kiln_block_entity"),
+    public static final BlockEntityType<KilnBlockEntity> KILN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(ExcessiveBuilding.MOD_ID, "kiln_block_entity"),
             FabricBlockEntityTypeBuilder.create(KilnBlockEntity::new, EBBlocks.KILN).build()
     );
 

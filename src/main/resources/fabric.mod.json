@@ -18,6 +18,9 @@
 		"main": [
 			"net.yirmiri.excessive_building.ExcessiveBuilding"
 		],
+		"client": [
+			"net.yirmiri.excessive_building.ExcessiveBuildingClient"
+		],
 		"fabric-datagen": [
           "net.yirmiri.excessive_building.ExcessiveBuildingDataGenerator"
 		]
