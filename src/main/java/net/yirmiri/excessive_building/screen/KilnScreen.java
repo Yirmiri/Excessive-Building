@@ -18,5 +18,4 @@ public class KilnScreen extends AbstractFurnaceScreen<KilnScreenHandler> {
     public KilnScreen(KilnScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, new FurnaceRecipeBookScreen(), inventory, title, KILN_GUI, LIT_PROGRESS, BURN_PROGRESS);
     }
-
 }

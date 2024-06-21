@@ -5,15 +5,15 @@ import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.SmokerScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
-import net.yirmiri.excessive_building.recipe.EBRecipeRegistry;
+import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.registry.EBBlockEntities;
+import net.yirmiri.excessive_building.screen.KilnScreenHandler;
 
 public class KilnBlockEntity extends AbstractFurnaceBlockEntity {
     public KilnBlockEntity(BlockPos pos, BlockState state) {
-        super(EBBlockEntities.KILN_BLOCK_ENTITY, pos, state, EBRecipeRegistry.KILN_RECIPE_TYPE);
+        super(EBBlockEntities.KILN_BLOCK_ENTITY, pos, state, ExcessiveBuilding.KILN_RECIPE_TYPE);
     }
 
     @Override
@@ -28,6 +28,6 @@ public class KilnBlockEntity extends AbstractFurnaceBlockEntity {
 
     @Override
     protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
-        return new SmokerScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
+        return new KilnScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
     }
 }

@@ -1,0 +1,10 @@
+{
+  "type": "excessive_building:kiln",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "minecraft:potato"
+  },
+  "result": "minecraft:baked_potato"
+}
