@@ -138,6 +138,12 @@ public class EBBlocks {
     public static final Block BLACKSTONE_BRICK_WALL = register("blackstone_brick_wall", new WallBlock(EBProperties.BlockP.BLACKSTONE_BRICKS));
     public static final Block CRACKED_BLACKSTONE_BRICKS = register("cracked_blackstone_bricks", new Block(EBProperties.BlockP.BLACKSTONE_BRICKS));
 
+    //ANCIENT
+    public static final Block ANCIENT_PLANKS = register("ancient_planks", new Block(EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_STAIRS = register("ancient__stairs", new StairsBlock(ANCIENT_PLANKS.getDefaultState(), EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_SLAB = register("ancient__slab", new SlabBlock(EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_VERTICAL_STAIRS = register("ancient__vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ANCIENT_WOOD));
+    
     //FUNCTIONAL
     public static final Block KILN = register("kiln", new KilnBlock(EBProperties.BlockP.KILN));
 

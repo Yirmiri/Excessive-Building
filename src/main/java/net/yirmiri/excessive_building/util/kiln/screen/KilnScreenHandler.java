@@ -1,18 +1,18 @@
-package net.yirmiri.excessive_building.screen;
+package net.yirmiri.excessive_building.util.kiln.screen;
 
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.recipe.book.RecipeBookCategory;
 import net.minecraft.screen.AbstractFurnaceScreenHandler;
 import net.minecraft.screen.PropertyDelegate;
-import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.util.kiln.recipe.EBRecipeRegistries;
 
 public class KilnScreenHandler extends AbstractFurnaceScreenHandler {
     public KilnScreenHandler(int syncId, PlayerInventory playerInventory) {
-        super(ExcessiveBuilding.KILN_SCREEN_HANDLER, ExcessiveBuilding.KILN_RECIPE_TYPE, RecipeBookCategory.FURNACE, syncId, playerInventory);
+        super(EBRecipeRegistries.KILN_SCREEN_HANDLER, EBRecipeRegistries.KILN_RECIPE_TYPE, RecipeBookCategory.FURNACE, syncId, playerInventory);
     }
 
     public KilnScreenHandler(int syncId, PlayerInventory playerInv, Inventory inv, PropertyDelegate delegate) {
-        super(ExcessiveBuilding.KILN_SCREEN_HANDLER, ExcessiveBuilding.KILN_RECIPE_TYPE, RecipeBookCategory.FURNACE, syncId, playerInv, inv, delegate);
+        super(EBRecipeRegistries.KILN_SCREEN_HANDLER, EBRecipeRegistries.KILN_RECIPE_TYPE, RecipeBookCategory.FURNACE, syncId, playerInv, inv, delegate);
     }
 }

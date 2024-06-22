@@ -1,16 +1,15 @@
-package net.yirmiri.excessive_building.recipe;
+package net.yirmiri.excessive_building.util.kiln.recipe;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.AbstractCookingRecipe;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.CookingRecipeCategory;
-import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 
 public class KilnRecipe extends AbstractCookingRecipe {
     public KilnRecipe(String group, CookingRecipeCategory category, Ingredient input, ItemStack output, float experience, int cookTime) {
-        super(ExcessiveBuilding.KILN_RECIPE_TYPE, group, category, input, output, experience, cookTime);
+        super(EBRecipeRegistries.KILN_RECIPE_TYPE, group, category, input, output, experience, cookTime);
     }
 
     @Override
@@ -20,6 +19,6 @@ public class KilnRecipe extends AbstractCookingRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return ExcessiveBuilding.KILN_RECIPE_SERIALIZER;
+        return EBRecipeRegistries.KILN_RECIPE_SERIALIZER;
     }
 }

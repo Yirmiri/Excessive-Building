@@ -1,6 +1,6 @@
 {
-  "type": "excessive_building:kiln",
-  "category": "food",
+  "type": "excessive_building:kilning",
+  "category": "blocks",
   "cookingtime": 100,
   "experience": 0.1,
   "ingredient": {
