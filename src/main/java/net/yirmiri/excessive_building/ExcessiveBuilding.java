@@ -7,7 +7,6 @@ import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItemGroups;
 import net.yirmiri.excessive_building.registry.EBParticles;
 import net.yirmiri.excessive_building.util.EBRegistries;
-import net.yirmiri.excessive_building.block.kiln.recipe.EBRecipeRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +21,6 @@ public class ExcessiveBuilding implements ModInitializer {
 		EBRegistries.registerRegistries();
 		EBItemGroups.registerEBItemGroups();
 		EBBlockEntities.registerEBBlockEntities();
-		EBRecipeRegistries.registerEBRecipeRegistries();
 		EBParticles.registerEBParticles();
 	}
 }

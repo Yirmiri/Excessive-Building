@@ -8,7 +8,6 @@ import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.entity.EBHangingSignBlockEntity;
 import net.yirmiri.excessive_building.block.entity.EBSignBlockEntity;
-import net.yirmiri.excessive_building.block.entity.KilnBlockEntity;
 
 public class EBBlockEntities {
 

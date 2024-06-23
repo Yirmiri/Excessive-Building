@@ -91,8 +91,6 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BLACKSTONE_BRICK_SLAB);
                 entries.add(EBBlocks.BLACKSTONE_BRICK_WALL);
 
-                //entries.add(EBBlocks.KILN); //TODO: finish kiln before adding to tabs
-
                 //TODO: All EB painting variants at the bottom
             }).build());
 

@@ -4,14 +4,11 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.block.entity.HangingSignBlockEntityRenderer;
 import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
-import net.yirmiri.excessive_building.block.kiln.recipe.EBRecipeRegistries;
-import net.yirmiri.excessive_building.block.kiln.screen.KilnScreen;
 import net.yirmiri.excessive_building.registry.EBBlockEntities;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.util.EBBlockSetTypes;
@@ -20,8 +17,6 @@ import net.yirmiri.excessive_building.util.EBBlockSetTypes;
 public class ExcessiveBuildingClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        HandledScreens.register(EBRecipeRegistries.KILN_SCREEN_HANDLER, KilnScreen::new);
-
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(EBBlockSetTypes.EBWoodTypes.ANCIENT, TexturedRenderLayers.getSignTextureId(EBBlockSetTypes.EBWoodTypes.ANCIENT));
 
         BlockEntityRendererFactories.register(EBBlockEntities.EB_SIGN_BLOCK_ENTITY, SignBlockEntityRenderer::new);

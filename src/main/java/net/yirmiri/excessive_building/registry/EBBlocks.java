@@ -9,7 +9,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.AncientLeavesBlock;
-import net.yirmiri.excessive_building.block.KilnBlock;
 import net.yirmiri.excessive_building.block.VerticalStairsBlock;
 import net.yirmiri.excessive_building.block.sign.EBHangingSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBSignBlock;
@@ -176,7 +175,7 @@ public class EBBlocks {
     public static final Block CRACKED_BLACKSTONE_BRICKS = register("cracked_blackstone_bricks", new Block(EBProperties.BlockP.BLACKSTONE_BRICKS));
     
     //FUNCTIONAL
-    public static final Block KILN = register("kiln", new KilnBlock(EBProperties.BlockP.KILN));
+    public static final Block KILN = register("kiln", new FurnaceBlock(EBProperties.BlockP.KILN));
 
     //MISC
     public static final Block LOGO = registerWithoutItem("logo", new Block(EBProperties.BlockP.INDESTRUCTIBLE));
