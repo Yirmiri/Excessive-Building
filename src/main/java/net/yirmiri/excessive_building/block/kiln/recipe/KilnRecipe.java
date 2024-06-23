@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.util.kiln.recipe;
+package net.yirmiri.excessive_building.block.kiln.recipe;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.AbstractCookingRecipe;

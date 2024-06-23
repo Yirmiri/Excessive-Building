@@ -8,8 +8,14 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.block.AncientLeavesBlock;
 import net.yirmiri.excessive_building.block.KilnBlock;
 import net.yirmiri.excessive_building.block.VerticalStairsBlock;
+import net.yirmiri.excessive_building.block.sign.EBHangingSignBlock;
+import net.yirmiri.excessive_building.block.sign.EBSignBlock;
+import net.yirmiri.excessive_building.block.sign.EBWallHangingSignBlock;
+import net.yirmiri.excessive_building.block.sign.EBWallSignBlock;
+import net.yirmiri.excessive_building.util.EBBlockSetTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
 
 public class EBBlocks {
@@ -58,7 +64,7 @@ public class EBBlocks {
     public static final Block PURPUR_VERTICAL_STAIRS = register("purpur_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.PURPUR_BLOCK)));
     public static final Block END_STONE_BRICK_VERTICAL_STAIRS = register("end_stone_brick_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.END_STONE_BRICKS)));
 
-    //WOOD
+    //MOSAIC WOOD
     public static final Block OAK_MOSAIC = register("oak_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD));
     public static final Block OAK_MOSAIC_STAIRS = register("oak_mosaic_stairs", new StairsBlock(OAK_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD));
     public static final Block OAK_MOSAIC_SLAB = register("oak_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD));
@@ -111,6 +117,37 @@ public class EBBlocks {
     public static final Block WARPED_MOSAIC_SLAB = register("warped_mosaic_slab", new SlabBlock(EBProperties.BlockP.WARPED_WOOD));
     public static final Block WARPED_MOSAIC_VERTICAL_STAIRS = register("warped_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.WARPED_WOOD));
 
+    //ANCIENT
+    public static final Block ANCIENT_LOG = register("ancient_log", new PillarBlock(EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block STRIPPED_ANCIENT_LOG = register("stripped_ancient_log", new PillarBlock(EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_WOOD = register("ancient_wood", new PillarBlock(EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block STRIPPED_ANCIENT_WOOD = register("stripped_ancient_wood", new PillarBlock(EBProperties.BlockP.ANCIENT_WOOD));
+
+    public static final Block ANCIENT_PLANKS = register("ancient_planks", new Block(EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_STAIRS = register("ancient_stairs", new StairsBlock(ANCIENT_PLANKS.getDefaultState(), EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_SLAB = register("ancient_slab", new SlabBlock(EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_VERTICAL_STAIRS = register("ancient_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ANCIENT_WOOD));
+
+    public static final Block ANCIENT_MOSAIC = register("ancient_mosaic", new Block(EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_MOSAIC_STAIRS = register("ancient_mosaic_stairs", new StairsBlock(ANCIENT_MOSAIC.getDefaultState(), EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_MOSAIC_SLAB = register("ancient_mosaic_slab", new SlabBlock(EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_MOSAIC_VERTICAL_STAIRS = register("ancient_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ANCIENT_WOOD));
+
+    public static final Block ANCIENT_FENCE = register("ancient_fence", new FenceBlock(EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_FENCE_GATE = register("ancient_fence_gate", new FenceGateBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_DOOR = register("ancient_door", new DoorBlock(EBBlockSetTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_TRAPDOOR = register("ancient_trapdoor", new TrapdoorBlock(EBBlockSetTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_PRESSURE_PLATE = register("ancient_pressure_plate", new PressurePlateBlock(EBBlockSetTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_BUTTON = register("ancient_button", new ButtonBlock(EBBlockSetTypes.ANCIENT, 30, EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_SIGN = register("ancient_sign", new EBSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_WALL_SIGN = register("ancient_wall_sign", new EBWallSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", new EBHangingSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD));
+    public static final Block ANCIENT_WALL_HANGING_SIGN = register("ancient_wall_hanging_sign", new EBWallHangingSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD));
+
+    public static final Block ANCIENT_LEAVES = register("ancient_leaves", new AncientLeavesBlock(EBProperties.BlockP.ANCIENT_LEAVES));
+    public static final Block ANCIENT_SAPLING = register("ancient_sapling", new SaplingBlock(SaplingGenerator.CHERRY, EBProperties.BlockP.ANCIENT_SAPLING));
+    public static final Block POTTED_ANCIENT_SAPLING = registerWithoutItem("potted_ancient_sapling", Blocks.createFlowerPotBlock(EBBlocks.ANCIENT_SAPLING));
+
     //COBBLED BRICKS
     public static final Block COBBLESTONE_BRICKS = register("cobblestone_bricks", new Block(EBProperties.BlockP.COBBLESTONE_BRICKS));
     public static final Block COBBLESTONE_BRICK_STAIRS = register("cobblestone_brick_stairs", new StairsBlock(COBBLESTONE_BRICKS.getDefaultState(), EBProperties.BlockP.COBBLESTONE_BRICKS));
@@ -137,12 +174,6 @@ public class EBBlocks {
     public static final Block BLACKSTONE_BRICK_VERTICAL_STAIRS = register("blackstone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BLACKSTONE_BRICKS));
     public static final Block BLACKSTONE_BRICK_WALL = register("blackstone_brick_wall", new WallBlock(EBProperties.BlockP.BLACKSTONE_BRICKS));
     public static final Block CRACKED_BLACKSTONE_BRICKS = register("cracked_blackstone_bricks", new Block(EBProperties.BlockP.BLACKSTONE_BRICKS));
-
-    //ANCIENT
-    public static final Block ANCIENT_PLANKS = register("ancient_planks", new Block(EBProperties.BlockP.ANCIENT_WOOD));
-    public static final Block ANCIENT_STAIRS = register("ancient__stairs", new StairsBlock(ANCIENT_PLANKS.getDefaultState(), EBProperties.BlockP.ANCIENT_WOOD));
-    public static final Block ANCIENT_SLAB = register("ancient__slab", new SlabBlock(EBProperties.BlockP.ANCIENT_WOOD));
-    public static final Block ANCIENT_VERTICAL_STAIRS = register("ancient__vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ANCIENT_WOOD));
     
     //FUNCTIONAL
     public static final Block KILN = register("kiln", new KilnBlock(EBProperties.BlockP.KILN));

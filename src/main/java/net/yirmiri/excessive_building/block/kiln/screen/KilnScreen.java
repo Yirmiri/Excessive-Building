@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.util.kiln.screen;
+package net.yirmiri.excessive_building.block.kiln.screen;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

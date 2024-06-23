@@ -17,6 +17,7 @@ public class EBTags {
 
     public static class Items {
         public static final TagKey<Item> MOSAIC = create("mosaic");
+        public static final TagKey<Item> GLOW_REMOVALS = create("glow_removals");
 
         private static TagKey<Item> create(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, name));

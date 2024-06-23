@@ -5,6 +5,7 @@ package net.yirmiri.excessive_building.util;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 
 public class EBRegistries {
@@ -16,8 +17,8 @@ public class EBRegistries {
     }
 
     public static void registerStrippables() {
-//        StrippableBlockRegistry.register(AUBlocks.GLOOM_LOG, AUBlocks.STRIPPED_GLOOM_LOG);
-//        StrippableBlockRegistry.register(AUBlocks.GLOOM_WOOD, AUBlocks.STRIPPED_GLOOM_WOOD);
+        StrippableBlockRegistry.register(EBBlocks.ANCIENT_LOG, EBBlocks.STRIPPED_ANCIENT_LOG);
+        StrippableBlockRegistry.register(EBBlocks.ANCIENT_WOOD, EBBlocks.STRIPPED_ANCIENT_WOOD);
     }
 
     public static void registerFuels() {

@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.yirmiri.excessive_building.registry.EBBlocks;
+import net.yirmiri.excessive_building.registry.EBItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -81,6 +82,44 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         builder.add(EBBlocks.BLACKSTONE_BRICK_WALL, "Blackstone Brick Wall");
         builder.add(EBBlocks.KILN, "Kiln");
         builder.add(EBBlocks.LOGO, "Logo Block");
+        builder.add(EBBlocks.ANCIENT_PLANKS, "Ancient Planks");
+        builder.add(EBBlocks.ANCIENT_STAIRS, "Ancient Stairs");
+        builder.add(EBBlocks.ANCIENT_SLAB, "Ancient Slab");
+        builder.add(EBBlocks.ANCIENT_VERTICAL_STAIRS, "Ancient Vertical Stairs");
+        builder.add(EBBlocks.ANCIENT_MOSAIC, "Ancient Mosaic");
+        builder.add(EBBlocks.ANCIENT_MOSAIC_STAIRS, "Ancient Mosaic Stairs");
+        builder.add(EBBlocks.ANCIENT_MOSAIC_SLAB, "Ancient Mosaic Slab");
+        builder.add(EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS, "Ancient Mosaic Vertical Stairs");
+        builder.add(EBBlocks.ANCIENT_BUTTON, "Ancient Button");
+        builder.add(EBBlocks.ANCIENT_PRESSURE_PLATE, "Ancient Pressure Plate");
+        builder.add(EBBlocks.ANCIENT_DOOR, "Ancient Door");
+        builder.add(EBBlocks.ANCIENT_TRAPDOOR, "Ancient Trapdoor");
+        builder.add(EBBlocks.ANCIENT_LOG, "Ancient Log");
+        builder.add(EBBlocks.ANCIENT_WOOD, "Ancient Wood");
+        builder.add(EBBlocks.STRIPPED_ANCIENT_LOG, "Stripped Ancient Log");
+        builder.add(EBBlocks.STRIPPED_ANCIENT_WOOD, "Stripped Ancient Wood");
+        builder.add(EBBlocks.ANCIENT_LEAVES, "Ancient Leaves");
+        builder.add(EBBlocks.ANCIENT_FENCE, "Ancient Fence");
+        builder.add(EBBlocks.ANCIENT_FENCE_GATE, "Ancient Fence Gate");
+        builder.add(EBBlocks.ANCIENT_SAPLING, "Ancient Sapling");
+        builder.add(EBBlocks.POTTED_ANCIENT_SAPLING, "Potted Ancient Sapling");
+
+        //ITEMS
+        builder.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
+        builder.add(EBItems.ANCIENT_HANGING_SIGN, "Ancient Hanging Sign");
+        builder.add(EBItems.ANCIENT_FRUIT, "Ancient Fruit");
+
+        //TOOLTIPS
+        builder.add("tooltip.block.interact", "Upon Interaction:");
+        builder.add("tooltip.block.variant", "Cycles Block Variants:");
+        builder.add("tooltip.block.interact_sugar", "Interact with Sugar:");
+        builder.add("tooltip.block.swift", "Increases Movement Speed");
+        builder.add("tooltip.block.interact_soil", "Interact with Soil:");
+        builder.add("tooltip.block.fill", "Fills Up Pot");
+        builder.add("tooltip.block.interact_glow_removals", "Interact with Paper:");
+        builder.add("tooltip.block.glow_removal", "Removes it's Glow");
+        builder.add("tooltip.block.when_powered", "When Powered by Redstone:");
+        builder.add("tooltip.block.soul_magma", "Creates a Lifting Bubble Column");
 
         //MISC
         builder.add("excessive_building.container.kiln", "Kiln");

@@ -15,6 +15,18 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapper) {
+        getOrCreateTagBuilder(BlockTags.SAPLINGS)
+                .add(EBBlocks.ANCIENT_SAPLING);
+
+        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                .add(EBBlocks.POTTED_ANCIENT_SAPLING);
+
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(EBBlocks.ANCIENT_FENCE);
+
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(EBBlocks.ANCIENT_FENCE_GATE);
+
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(EBBlocks.COBBLESTONE_BRICK_WALL)
                 .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)
@@ -46,6 +58,9 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.BLACKSTONE_BRICK_WALL)
                 .add(EBBlocks.CRACKED_BLACKSTONE_BRICKS)
                 .add(EBBlocks.KILN);
+
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                .add(EBBlocks.ANCIENT_LEAVES);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(EBBlocks.OAK_MOSAIC)
@@ -88,6 +103,27 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.WARPED_MOSAIC_STAIRS)
                 .add(EBBlocks.WARPED_MOSAIC_SLAB)
                 .add(EBBlocks.WARPED_MOSAIC_VERTICAL_STAIRS)
-                .add(EBBlocks.BAMBOO_MOSAIC_VERTICAL_STAIRS);
+                .add(EBBlocks.BAMBOO_MOSAIC_VERTICAL_STAIRS)
+
+                .add(EBBlocks.ANCIENT_PLANKS)
+                .add(EBBlocks.ANCIENT_STAIRS)
+                .add(EBBlocks.ANCIENT_SLAB)
+                .add(EBBlocks.ANCIENT_VERTICAL_STAIRS)
+                .add(EBBlocks.ANCIENT_MOSAIC)
+                .add(EBBlocks.ANCIENT_MOSAIC_STAIRS)
+                .add(EBBlocks.ANCIENT_MOSAIC_SLAB)
+                .add(EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS)
+                .add(EBBlocks.ANCIENT_LOG)
+                .add(EBBlocks.ANCIENT_WOOD)
+                .add(EBBlocks.STRIPPED_ANCIENT_LOG)
+                .add(EBBlocks.STRIPPED_ANCIENT_WOOD)
+                .add(EBBlocks.ANCIENT_DOOR)
+                .add(EBBlocks.ANCIENT_TRAPDOOR)
+                .add(EBBlocks.ANCIENT_BUTTON)
+                .add(EBBlocks.ANCIENT_PRESSURE_PLATE)
+                .add(EBBlocks.ANCIENT_SIGN)
+                .add(EBBlocks.ANCIENT_WALL_SIGN)
+                .add(EBBlocks.ANCIENT_HANGING_SIGN)
+                .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN);
     }
 }

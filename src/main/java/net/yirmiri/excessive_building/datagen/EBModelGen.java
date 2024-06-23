@@ -80,6 +80,29 @@ public class EBModelGen extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
 
         blockStateModelGenerator.registerCooker(EBBlocks.KILN, TexturedModel.ORIENTABLE_WITH_BOTTOM);
+
+        BlockStateModelGenerator.BlockTexturePool ancientPlanks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_PLANKS);
+        ancientPlanks.stairs(EBBlocks.ANCIENT_STAIRS);
+        ancientPlanks.slab(EBBlocks.ANCIENT_SLAB);
+        ancientPlanks.fence(EBBlocks.ANCIENT_FENCE);
+        ancientPlanks.customFenceGate(EBBlocks.ANCIENT_FENCE);
+        ancientPlanks.button(EBBlocks.ANCIENT_BUTTON);
+        ancientPlanks.pressurePlate(EBBlocks.ANCIENT_PRESSURE_PLATE);
+
+        BlockStateModelGenerator.BlockTexturePool ancientMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_MOSAIC);
+        ancientMosaic.stairs(EBBlocks.ANCIENT_MOSAIC_STAIRS);
+        ancientMosaic.slab(EBBlocks.ANCIENT_MOSAIC_SLAB);
+
+        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.ANCIENT_LEAVES);
+        blockStateModelGenerator.registerDoor(EBBlocks.ANCIENT_DOOR);
+        blockStateModelGenerator.registerTrapdoor(EBBlocks.ANCIENT_TRAPDOOR);
+
+        blockStateModelGenerator.registerLog(EBBlocks.ANCIENT_LOG);
+        blockStateModelGenerator.registerLog(EBBlocks.STRIPPED_ANCIENT_LOG);
+        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.ANCIENT_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.STRIPPED_ANCIENT_WOOD);
+
+        blockStateModelGenerator.registerFlowerPotPlant(EBBlocks.ANCIENT_SAPLING, EBBlocks.POTTED_ANCIENT_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

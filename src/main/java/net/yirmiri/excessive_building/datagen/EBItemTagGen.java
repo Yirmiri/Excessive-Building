@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.util.EBTags;
 
@@ -28,5 +29,8 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.CHERRY_MOSAIC.asItem())
                 .add(EBBlocks.CRIMSON_MOSAIC.asItem())
                 .add(EBBlocks.WARPED_MOSAIC.asItem());
+
+        getOrCreateTagBuilder(ItemTags.SAPLINGS)
+                .add(EBBlocks.ANCIENT_SAPLING.asItem());
     }
 }

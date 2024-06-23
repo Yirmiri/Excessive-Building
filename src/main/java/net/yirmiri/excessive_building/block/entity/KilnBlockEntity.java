@@ -7,9 +7,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
-import net.yirmiri.excessive_building.util.kiln.recipe.EBRecipeRegistries;
+import net.yirmiri.excessive_building.block.kiln.recipe.EBRecipeRegistries;
 import net.yirmiri.excessive_building.registry.EBBlockEntities;
-import net.yirmiri.excessive_building.util.kiln.screen.KilnScreenHandler;
+import net.yirmiri.excessive_building.block.kiln.screen.KilnScreenHandler;
 
 public class KilnBlockEntity extends AbstractFurnaceBlockEntity {
     public KilnBlockEntity(BlockPos pos, BlockState state) {

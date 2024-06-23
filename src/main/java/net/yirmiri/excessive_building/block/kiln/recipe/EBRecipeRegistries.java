@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.util.kiln.recipe;
+package net.yirmiri.excessive_building.block.kiln.recipe;
 
 import net.minecraft.recipe.CookingRecipeSerializer;
 import net.minecraft.recipe.RecipeSerializer;
@@ -9,7 +9,7 @@ import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.util.kiln.screen.KilnScreenHandler;
+import net.yirmiri.excessive_building.block.kiln.screen.KilnScreenHandler;
 
 public class EBRecipeRegistries {
 

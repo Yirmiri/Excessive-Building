@@ -342,6 +342,8 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(Items.BRICKS), conditionsFromItem(Items.BRICKS))
                 .criterion(hasItem(Items.SMOOTH_STONE), conditionsFromItem(Items.SMOOTH_STONE))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.KILN)));
+
+        //TODO: ANCIENT RECIPES
     }
 
     public static CraftingRecipeJsonBuilder createVerticalStairsRecipe(ItemConvertible output, Ingredient input) {
