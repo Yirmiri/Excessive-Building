@@ -6,6 +6,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.CraftingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -13,6 +14,7 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.registry.EBBlocks;
+import net.yirmiri.excessive_building.registry.EBItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -334,16 +336,100 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLACKSTONE_BRICK_SLAB, EBBlocks.BLACKSTONE_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.BLACKSTONE_BRICKS, 1);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.KILN, 1)
-                .input('#', Items.BRICKS).input('@', Items.SMOOTH_STONE).input('%', Items.FURNACE).input('!', Items.BRICK)
-                .pattern("@@@")
-                .pattern("#!#")
-                .pattern("#%#")
-                .criterion(hasItem(Items.BRICKS), conditionsFromItem(Items.BRICKS))
-                .criterion(hasItem(Items.SMOOTH_STONE), conditionsFromItem(Items.SMOOTH_STONE))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.KILN)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_MOSAIC, 1)
+                .input('#', EBBlocks.ANCIENT_SLAB)
+                .pattern("#")
+                .pattern("#")
+                .criterion(hasItem(EBBlocks.ANCIENT_SLAB), conditionsFromItem(EBBlocks.ANCIENT_SLAB))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_MOSAIC)));
 
-        //TODO: ANCIENT RECIPES
+        createStairsRecipe(EBBlocks.ANCIENT_MOSAIC_STAIRS,
+                Ingredient.ofItems(EBBlocks.ANCIENT_MOSAIC))
+                .criterion(hasItem(EBBlocks.ANCIENT_MOSAIC), conditionsFromItem(EBBlocks.ANCIENT_MOSAIC))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_MOSAIC_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_MOSAIC_SLAB,
+                Ingredient.ofItems(EBBlocks.ANCIENT_MOSAIC))
+                .criterion(hasItem(EBBlocks.ANCIENT_MOSAIC), conditionsFromItem(EBBlocks.ANCIENT_MOSAIC))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_MOSAIC_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.ANCIENT_MOSAIC))
+                .criterion(hasItem(EBBlocks.ANCIENT_MOSAIC), conditionsFromItem(EBBlocks.ANCIENT_MOSAIC))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_PLANKS, 4)
+                .input(EBBlocks.ANCIENT_LOG)
+                .criterion(hasItem(EBBlocks.ANCIENT_LOG), conditionsFromItem(EBBlocks.ANCIENT_LOG))
+                .offerTo(exporter, Identifier.of("ancient_planks_from_log"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_PLANKS, 4)
+                .input(EBBlocks.ANCIENT_WOOD)
+                .criterion(hasItem(EBBlocks.ANCIENT_WOOD), conditionsFromItem(EBBlocks.ANCIENT_WOOD))
+                .offerTo(exporter, Identifier.of("ancient_planks_from_wood"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_PLANKS, 4)
+                .input(EBBlocks.STRIPPED_ANCIENT_LOG)
+                .criterion(hasItem(EBBlocks.STRIPPED_ANCIENT_LOG), conditionsFromItem(EBBlocks.STRIPPED_ANCIENT_LOG))
+                .offerTo(exporter, Identifier.of("ancient_planks_from_stripped_log"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_PLANKS, 4)
+                .input(EBBlocks.STRIPPED_ANCIENT_WOOD)
+                .criterion(hasItem(EBBlocks.STRIPPED_ANCIENT_WOOD), conditionsFromItem(EBBlocks.STRIPPED_ANCIENT_WOOD))
+                .offerTo(exporter, Identifier.of("ancient_planks_from_stripped_wood"));
+
+        createStairsRecipe(EBBlocks.ANCIENT_STAIRS,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_SLAB,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.ANCIENT_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_VERTICAL_STAIRS)));
+
+        createFenceRecipe(EBBlocks.ANCIENT_FENCE,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_FENCE)));
+
+        createFenceGateRecipe(EBBlocks.ANCIENT_FENCE_GATE,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_FENCE_GATE)));
+
+        createDoorRecipe(EBBlocks.ANCIENT_DOOR,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_DOOR)));
+
+        createTrapdoorRecipe(EBBlocks.ANCIENT_TRAPDOOR,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_TRAPDOOR)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.ANCIENT_PRESSURE_PLATE, 1)
+                .input('#', EBBlocks.ANCIENT_PLANKS)
+                .pattern("##")
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_PRESSURE_PLATE)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.ANCIENT_BUTTON, 1)
+                .input(EBBlocks.ANCIENT_PLANKS)
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_BUTTON)));
+
+        createSignRecipe(EBItems.ANCIENT_SIGN,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBItems.ANCIENT_SIGN)));
+
+        offerHangingSignRecipe(exporter, EBItems.ANCIENT_HANGING_SIGN, EBBlocks.STRIPPED_ANCIENT_LOG);
     }
 
     public static CraftingRecipeJsonBuilder createVerticalStairsRecipe(ItemConvertible output, Ingredient input) {

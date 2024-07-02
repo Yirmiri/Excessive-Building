@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "excessive_building:block/ancient_planks"
+  }
+}

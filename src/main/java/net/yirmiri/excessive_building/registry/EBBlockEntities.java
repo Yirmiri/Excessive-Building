@@ -11,9 +11,6 @@ import net.yirmiri.excessive_building.block.entity.EBSignBlockEntity;
 
 public class EBBlockEntities {
 
-    public static final BlockEntityType<KilnBlockEntity> KILN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
-            Identifier.of(ExcessiveBuilding.MOD_ID, "kiln"), FabricBlockEntityTypeBuilder.create(KilnBlockEntity::new, EBBlocks.KILN).build());
-
     public static final BlockEntityType<EBSignBlockEntity> EB_SIGN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             Identifier.of(ExcessiveBuilding.MOD_ID, "eb_sign"), FabricBlockEntityTypeBuilder.create(EBSignBlockEntity::new,
                     EBBlocks.ANCIENT_SIGN, EBBlocks.ANCIENT_WALL_SIGN).build());

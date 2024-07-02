@@ -22,7 +22,6 @@
     "excessive_building:blackstone_brick_slab",
     "excessive_building:blackstone_brick_vertical_stairs",
     "excessive_building:blackstone_brick_wall",
-    "excessive_building:cracked_blackstone_bricks",
-    "excessive_building:kiln"
+    "excessive_building:cracked_blackstone_bricks"
   ]
 }

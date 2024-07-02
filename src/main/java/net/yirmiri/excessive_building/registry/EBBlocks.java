@@ -16,6 +16,7 @@ import net.yirmiri.excessive_building.block.sign.EBWallHangingSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBWallSignBlock;
 import net.yirmiri.excessive_building.util.EBBlockSetTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
+import net.yirmiri.excessive_building.worldgen.EBSaplingGenerators;
 
 public class EBBlocks {
 
@@ -144,7 +145,7 @@ public class EBBlocks {
     public static final Block ANCIENT_WALL_HANGING_SIGN = register("ancient_wall_hanging_sign", new EBWallHangingSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD));
 
     public static final Block ANCIENT_LEAVES = register("ancient_leaves", new AncientLeavesBlock(EBProperties.BlockP.ANCIENT_LEAVES));
-    public static final Block ANCIENT_SAPLING = register("ancient_sapling", new SaplingBlock(SaplingGenerator.CHERRY, EBProperties.BlockP.ANCIENT_SAPLING));
+    public static final Block ANCIENT_SAPLING = register("ancient_sapling", new SaplingBlock(EBSaplingGenerators.ANCIENT, EBProperties.BlockP.ANCIENT_SAPLING));
     public static final Block POTTED_ANCIENT_SAPLING = registerWithoutItem("potted_ancient_sapling", Blocks.createFlowerPotBlock(EBBlocks.ANCIENT_SAPLING));
 
     //COBBLED BRICKS
@@ -173,9 +174,6 @@ public class EBBlocks {
     public static final Block BLACKSTONE_BRICK_VERTICAL_STAIRS = register("blackstone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BLACKSTONE_BRICKS));
     public static final Block BLACKSTONE_BRICK_WALL = register("blackstone_brick_wall", new WallBlock(EBProperties.BlockP.BLACKSTONE_BRICKS));
     public static final Block CRACKED_BLACKSTONE_BRICKS = register("cracked_blackstone_bricks", new Block(EBProperties.BlockP.BLACKSTONE_BRICKS));
-    
-    //FUNCTIONAL
-    public static final Block KILN = register("kiln", new FurnaceBlock(EBProperties.BlockP.KILN));
 
     //MISC
     public static final Block LOGO = registerWithoutItem("logo", new Block(EBProperties.BlockP.INDESTRUCTIBLE));

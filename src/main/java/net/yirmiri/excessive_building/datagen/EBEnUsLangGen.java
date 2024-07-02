@@ -80,7 +80,6 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         builder.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL, "Mossy Cobblestone Brick Wall");
         builder.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL, "Cobbled Deepslate Brick Wall");
         builder.add(EBBlocks.BLACKSTONE_BRICK_WALL, "Blackstone Brick Wall");
-        builder.add(EBBlocks.KILN, "Kiln");
         builder.add(EBBlocks.LOGO, "Logo Block");
         builder.add(EBBlocks.ANCIENT_PLANKS, "Ancient Planks");
         builder.add(EBBlocks.ANCIENT_STAIRS, "Ancient Stairs");

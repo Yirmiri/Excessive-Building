@@ -33,7 +33,7 @@ public class AncientLeavesBlock extends LeavesBlock {
 
     public AncientLeavesBlock(Settings settings) {
         super(settings);
-        setDefaultState(stateManager.getDefaultState().with(GLOWING, true).with(DISTANCE, Integer.valueOf(7)).with(PERSISTENT, Boolean.valueOf(false)).with(WATERLOGGED, Boolean.valueOf(false)));
+        setDefaultState(stateManager.getDefaultState().with(GLOWING, true));
     }
 
     @Override
@@ -47,8 +47,8 @@ public class AncientLeavesBlock extends LeavesBlock {
     @Override @NotNull
     public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemstack = player.getStackInHand(hand);
-        if (!state.get(GLOWING) && itemstack.isIn(EBTags.Items.GLOW_REMOVALS)) {
-            addGlow(state, world, pos);
+        if (state.get(GLOWING) && itemstack.isIn(EBTags.Items.GLOW_REMOVALS)) {
+            removeGlow(state, world, pos);
             if (!player.isCreative()) {
                 itemstack.decrement(1);
             }
@@ -58,9 +58,9 @@ public class AncientLeavesBlock extends LeavesBlock {
         return ItemActionResult.success(world.isClient);
     }
 
-    private static void addGlow(BlockState state, World world, BlockPos pos) {
+    private static void removeGlow(BlockState state, World world, BlockPos pos) {
         if (!world.isClient) {
-            world.setBlockState(pos, state.with(GLOWING, true));
+            world.setBlockState(pos, state.with(GLOWING, false));
             world.playSound(null, pos, SoundEvents.ITEM_DYE_USE, SoundCategory.BLOCKS, 1, 1);
         }
     }
@@ -71,7 +71,7 @@ public class AncientLeavesBlock extends LeavesBlock {
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(GLOWING);
+        builder.add(GLOWING, DISTANCE, PERSISTENT, WATERLOGGED);
     }
 
     @Override

@@ -32,5 +32,8 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.SAPLINGS)
                 .add(EBBlocks.ANCIENT_SAPLING.asItem());
+
+        getOrCreateTagBuilder(EBTags.Items.GLOW_REMOVALS)
+                .add(Items.PAPER);
     }
 }

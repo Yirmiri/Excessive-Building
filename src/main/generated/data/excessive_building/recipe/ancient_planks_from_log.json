@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "excessive_building:ancient_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:ancient_planks"
+  }
+}

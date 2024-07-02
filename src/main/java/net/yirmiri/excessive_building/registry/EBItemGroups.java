@@ -52,6 +52,25 @@ public class EBItemGroups {
                 entries.add(EBBlocks.CHERRY_MOSAIC_VERTICAL_STAIRS);
                 entries.add(EBBlocks.CHERRY_MOSAIC_SLAB);
 
+                entries.add(EBBlocks.ANCIENT_LOG);
+                entries.add(EBBlocks.STRIPPED_ANCIENT_LOG);
+                entries.add(EBBlocks.ANCIENT_WOOD);
+                entries.add(EBBlocks.STRIPPED_ANCIENT_WOOD);
+                entries.add(EBBlocks.ANCIENT_PLANKS);
+                entries.add(EBBlocks.ANCIENT_MOSAIC);
+                entries.add(EBBlocks.ANCIENT_STAIRS);
+                entries.add(EBBlocks.ANCIENT_MOSAIC_STAIRS);
+                entries.add(EBBlocks.ANCIENT_VERTICAL_STAIRS);
+                entries.add(EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS);
+                entries.add(EBBlocks.ANCIENT_SLAB);
+                entries.add(EBBlocks.ANCIENT_MOSAIC_SLAB);
+                entries.add(EBBlocks.ANCIENT_FENCE);
+                entries.add(EBBlocks.ANCIENT_FENCE_GATE);
+                entries.add(EBBlocks.ANCIENT_DOOR);
+                entries.add(EBBlocks.ANCIENT_TRAPDOOR);
+                entries.add(EBBlocks.ANCIENT_PRESSURE_PLATE);
+                entries.add(EBBlocks.ANCIENT_BUTTON);
+
                 entries.add(EBBlocks.BAMBOO_MOSAIC_VERTICAL_STAIRS);
 
                 entries.add(EBBlocks.CRIMSON_MOSAIC);
@@ -90,6 +109,14 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.BLACKSTONE_BRICK_SLAB);
                 entries.add(EBBlocks.BLACKSTONE_BRICK_WALL);
+
+                entries.add(EBItems.ANCIENT_SIGN);
+                entries.add(EBItems.ANCIENT_HANGING_SIGN);
+
+                entries.add(EBBlocks.ANCIENT_LEAVES);
+                entries.add(EBBlocks.ANCIENT_SAPLING);
+
+                entries.add(EBItems.ANCIENT_FRUIT);
 
                 //TODO: All EB painting variants at the bottom
             }).build());

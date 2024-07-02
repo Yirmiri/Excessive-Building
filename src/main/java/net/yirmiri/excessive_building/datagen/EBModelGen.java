@@ -3,10 +3,10 @@ package net.yirmiri.excessive_building.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.TexturedModel;
+import net.minecraft.client.model.Model;
+import net.minecraft.data.client.*;
 import net.yirmiri.excessive_building.registry.EBBlocks;
+import net.yirmiri.excessive_building.registry.EBItems;
 
 public class EBModelGen extends FabricModelProvider {
     public EBModelGen(FabricDataOutput output) {
@@ -79,13 +79,11 @@ public class EBModelGen extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
         blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
 
-        blockStateModelGenerator.registerCooker(EBBlocks.KILN, TexturedModel.ORIENTABLE_WITH_BOTTOM);
-
         BlockStateModelGenerator.BlockTexturePool ancientPlanks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_PLANKS);
         ancientPlanks.stairs(EBBlocks.ANCIENT_STAIRS);
         ancientPlanks.slab(EBBlocks.ANCIENT_SLAB);
         ancientPlanks.fence(EBBlocks.ANCIENT_FENCE);
-        ancientPlanks.customFenceGate(EBBlocks.ANCIENT_FENCE);
+        ancientPlanks.customFenceGate(EBBlocks.ANCIENT_FENCE_GATE);
         ancientPlanks.button(EBBlocks.ANCIENT_BUTTON);
         ancientPlanks.pressurePlate(EBBlocks.ANCIENT_PRESSURE_PLATE);
 
@@ -97,16 +95,16 @@ public class EBModelGen extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(EBBlocks.ANCIENT_DOOR);
         blockStateModelGenerator.registerTrapdoor(EBBlocks.ANCIENT_TRAPDOOR);
 
-        blockStateModelGenerator.registerLog(EBBlocks.ANCIENT_LOG);
-        blockStateModelGenerator.registerLog(EBBlocks.STRIPPED_ANCIENT_LOG);
-        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.ANCIENT_WOOD);
-        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.STRIPPED_ANCIENT_WOOD);
+        blockStateModelGenerator.registerLog(EBBlocks.ANCIENT_LOG).log(EBBlocks.ANCIENT_LOG).wood(EBBlocks.ANCIENT_WOOD);
+        blockStateModelGenerator.registerLog(EBBlocks.STRIPPED_ANCIENT_LOG).log(EBBlocks.STRIPPED_ANCIENT_LOG).wood(EBBlocks.STRIPPED_ANCIENT_WOOD);
 
         blockStateModelGenerator.registerFlowerPotPlant(EBBlocks.ANCIENT_SAPLING, EBBlocks.POTTED_ANCIENT_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-
+        itemModelGenerator.register(EBItems.ANCIENT_FRUIT, Models.GENERATED);
+        itemModelGenerator.register(EBItems.ANCIENT_SIGN, Models.GENERATED);
+        itemModelGenerator.register(EBItems.ANCIENT_HANGING_SIGN, Models.GENERATED);
     }
 }

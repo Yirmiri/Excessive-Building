@@ -86,7 +86,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.COBBLESTONE_BRICK_WALL);
         addDrop(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL);
         addDrop(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
-        addDrop(EBBlocks.KILN);
         addDrop(EBBlocks.ANCIENT_PLANKS);
         addDrop(EBBlocks.ANCIENT_STAIRS);
         addDrop(EBBlocks.ANCIENT_SLAB, slabDrops(EBBlocks.ANCIENT_SLAB));
