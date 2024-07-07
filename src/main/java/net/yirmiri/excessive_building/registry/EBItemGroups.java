@@ -3,6 +3,7 @@ package net.yirmiri.excessive_building.registry;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -117,6 +118,28 @@ public class EBItemGroups {
                 entries.add(EBBlocks.ANCIENT_SAPLING);
 
                 entries.add(EBItems.ANCIENT_FRUIT);
+
+                entries.add(EBItems.ANCIENT_POTTERY_SHERD);
+                entries.add(EBItems.BITTER_POTTERY_SHERD);
+                entries.add(EBItems.BOIN_POTTERY_SHERD);
+                entries.add(EBItems.BUSTLING_POTTERY_SHERD);
+                entries.add(EBItems.CHECKERED_POTTERY_SHERD);
+                entries.add(EBItems.DECAY_POTTERY_SHERD);
+                entries.add(EBItems.DESTRUCTION_POTTERY_SHERD);
+                entries.add(EBItems.FORWARDS_POTTERY_SHERD);
+                entries.add(EBItems.HEXXED_POTTERY_SHERD);
+                entries.add(EBItems.IS_THAT_POTTERY_SHERD);
+                entries.add(EBItems.KITTEH_POTTERY_SHERD);
+                entries.add(EBItems.LIFE_POTTERY_SHERD);
+                entries.add(EBItems.MESMERIZE_POTTERY_SHERD);
+                entries.add(EBItems.PORTAL_POTTERY_SHERD);
+                entries.add(EBItems.POTTERY_POTTERY_SHERD);
+                entries.add(EBItems.RING_POTTERY_SHERD);
+                entries.add(EBItems.ROYALTY_POTTERY_SHERD);
+                entries.add(EBItems.SNOUT_POTTERY_SHERD);
+                entries.add(EBItems.SPRITE_POTTERY_SHERD);
+                entries.add(EBItems.TWINS_POTTERY_SHERD);
+                entries.add(EBItems.WRATHFUL_POTTERY_SHERD);
 
                 //TODO: All EB painting variants at the bottom
             }).build());

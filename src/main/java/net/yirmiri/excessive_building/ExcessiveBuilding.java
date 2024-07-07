@@ -3,6 +3,7 @@ package net.yirmiri.excessive_building;
 import net.fabricmc.api.ModInitializer;
 
 import net.yirmiri.excessive_building.registry.*;
+import net.yirmiri.excessive_building.util.EBDecoratedPotPatterns;
 import net.yirmiri.excessive_building.util.EBRegistries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,5 +21,9 @@ public class ExcessiveBuilding implements ModInitializer {
 		EBBlockEntities.registerEBBlockEntities();
 		EBParticles.registerEBParticles();
 		EBItems.registerEBItems();
+		EBStatusEffects.registerEBEffects();
+		EBPotions.registerEBPotions();
+		EBDecoratedPotPatterns.registerEBPotPatterns();
+		EBSounds.registerEBSounds();
 	}
 }

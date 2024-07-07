@@ -18,6 +18,10 @@ fabricApi {
 	configureDataGeneration()
 }
 
+loom {
+	accessWidenerPath = file("src/main/resources/excessive_building.accesswidener")
+}
+
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 
