@@ -34,6 +34,7 @@ public class EBDecoratedPotPatterns {
     private static final RegistryKey<DecoratedPotPattern> WRATHFUL = create("wrathful");
     private static final RegistryKey<DecoratedPotPattern> IS_THAT = create("is_that");
     private static final RegistryKey<DecoratedPotPattern> MESMERIZE = create("mesmerize");
+    private static final RegistryKey<DecoratedPotPattern> KOKOS_BUG = create("kokos_bug");
 
     public static final DecoratedPotPattern ROYALTY_POTTERY_PATTERN = registerPattern(ROYALTY, "royalty_pottery_pattern");
     public static final DecoratedPotPattern ANCIENT_POTTERY_PATTERN = registerPattern(ANCIENT, "ancient_pottery_pattern");
@@ -56,6 +57,7 @@ public class EBDecoratedPotPatterns {
     public static final DecoratedPotPattern WRATHFUL_POTTERY_PATTERN = registerPattern(WRATHFUL, "wrathful_pottery_pattern");
     public static final DecoratedPotPattern IS_THAT_POTTERY_PATTERN = registerPattern(IS_THAT, "is_that_pottery_pattern");
     public static final DecoratedPotPattern MESMERIZE_POTTERY_PATTERN = registerPattern(MESMERIZE, "mesmerize_pottery_pattern");
+    public static final DecoratedPotPattern KOKOS_BUG_POTTERY_PATTERN = registerPattern(KOKOS_BUG, "kokos_bug_pottery_pattern");
 
     public static final Map<Item, RegistryKey<DecoratedPotPattern>> SHERD_MAP = Map.ofEntries(
             Map.entry(EBItems.ROYALTY_POTTERY_SHERD, ROYALTY),
@@ -78,7 +80,8 @@ public class EBDecoratedPotPatterns {
             Map.entry(EBItems.TWINS_POTTERY_SHERD, TWINS),
             Map.entry(EBItems.WRATHFUL_POTTERY_SHERD, WRATHFUL),
             Map.entry(EBItems.IS_THAT_POTTERY_SHERD, IS_THAT),
-            Map.entry(EBItems.MESMERIZE_POTTERY_SHERD, MESMERIZE)
+            Map.entry(EBItems.MESMERIZE_POTTERY_SHERD, MESMERIZE),
+            Map.entry(EBItems.KOKOS_BUG_POTTERY_SHERD, KOKOS_BUG)
     );
 
     private static RegistryKey<DecoratedPotPattern> create(String id) {

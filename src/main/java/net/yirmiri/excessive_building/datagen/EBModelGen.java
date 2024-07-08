@@ -128,5 +128,6 @@ public class EBModelGen extends FabricModelProvider {
         itemModelGenerator.register(EBItems.TWINS_POTTERY_SHERD, Models.GENERATED);
         itemModelGenerator.register(EBItems.WRATHFUL_POTTERY_SHERD, Models.GENERATED);
         itemModelGenerator.register(EBItems.IS_THAT_POTTERY_SHERD, Models.GENERATED);
+        itemModelGenerator.register(EBItems.KOKOS_BUG_POTTERY_SHERD, Models.GENERATED);
     }
 }

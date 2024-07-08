@@ -119,7 +119,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBItems.DESTRUCTION_POTTERY_SHERD, "Destruction Pottery Sherd");
         build.add(EBItems.FORWARDS_POTTERY_SHERD, "Forwards Pottery Sherd");
         build.add(EBItems.HEXXED_POTTERY_SHERD, "Hexxed Pottery Sherd");
-        build.add(EBItems.KITTEH_POTTERY_SHERD, "Kitteh Pottery Sherd");
+        build.add(EBItems.KITTEH_POTTERY_SHERD, "Kitteh Pottewy Shewd");
         build.add(EBItems.LIFE_POTTERY_SHERD, "Life Pottery Sherd");
         build.add(EBItems.MESMERIZE_POTTERY_SHERD, "Mesmerize Pottery Sherd");
         build.add(EBItems.PORTAL_POTTERY_SHERD, "Portal Pottery Sherd");
@@ -130,6 +130,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBItems.TWINS_POTTERY_SHERD, "Twins Pottery Sherd");
         build.add(EBItems.WRATHFUL_POTTERY_SHERD, "Wrathful Pottery Sherd");
         build.add(EBItems.IS_THAT_POTTERY_SHERD, "Is That Pottery Sherd");
+        build.add(EBItems.KOKOS_BUG_POTTERY_SHERD, "Kokos Bug Pottery Sherd");
 
         //TOOLTIPS
         build.add("tooltip.block.interact", "Upon Interaction:");

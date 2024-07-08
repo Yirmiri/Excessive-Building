@@ -130,6 +130,7 @@ public class EBItemGroups {
                 entries.add(EBItems.HEXXED_POTTERY_SHERD);
                 entries.add(EBItems.IS_THAT_POTTERY_SHERD);
                 entries.add(EBItems.KITTEH_POTTERY_SHERD);
+                entries.add(EBItems.KOKOS_BUG_POTTERY_SHERD);
                 entries.add(EBItems.LIFE_POTTERY_SHERD);
                 entries.add(EBItems.MESMERIZE_POTTERY_SHERD);
                 entries.add(EBItems.PORTAL_POTTERY_SHERD);

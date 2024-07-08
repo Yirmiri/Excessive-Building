@@ -58,6 +58,7 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBItems.TWINS_POTTERY_SHERD)
                 .add(EBItems.WRATHFUL_POTTERY_SHERD)
                 .add(EBItems.IS_THAT_POTTERY_SHERD)
+                .add(EBItems.KOKOS_BUG_POTTERY_SHERD)
         ;
 
         getOrCreateTagBuilder(ItemTags.DECORATED_POT_INGREDIENTS)
@@ -82,6 +83,7 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBItems.TWINS_POTTERY_SHERD)
                 .add(EBItems.WRATHFUL_POTTERY_SHERD)
                 .add(EBItems.IS_THAT_POTTERY_SHERD)
+                .add(EBItems.KOKOS_BUG_POTTERY_SHERD)
         ;
 
         getOrCreateTagBuilder(EBTags.Items.GLOW_REMOVALS)
