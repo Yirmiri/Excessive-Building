@@ -60,6 +60,17 @@
     "excessive_building:ancient_sign",
     "excessive_building:ancient_wall_sign",
     "excessive_building:ancient_hanging_sign",
-    "excessive_building:ancient_wall_hanging_sign"
+    "excessive_building:ancient_wall_hanging_sign",
+    "excessive_building:chiseled_ancient_planks",
+    "excessive_building:chiseled_oak_planks",
+    "excessive_building:chiseled_spruce_planks",
+    "excessive_building:chiseled_birch_planks",
+    "excessive_building:chiseled_jungle_planks",
+    "excessive_building:chiseled_acacia_planks",
+    "excessive_building:chiseled_dark_oak_planks",
+    "excessive_building:chiseled_mangrove_planks",
+    "excessive_building:chiseled_bamboo_planks",
+    "excessive_building:chiseled_crimson_planks",
+    "excessive_building:chiseled_warped_planks"
   ]
 }

@@ -142,6 +142,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBItems.WRATHFUL_POTTERY_SHERD, "Wrathful Pottery Sherd");
         build.add(EBItems.IS_THAT_POTTERY_SHERD, "Is That Pottery Sherd");
         build.add(EBItems.KOKOS_BUG_POTTERY_SHERD, "Kokos Bug Pottery Sherd");
+        build.add(EBItems.THIEF_POTTERY_SHERD, "Thief Pottery Sherd");
 
         //TOOLTIPS
         build.add("tooltip.block.interact", "Upon Interaction:");

@@ -41,6 +41,7 @@ public class EBItems {
     public static final Item WRATHFUL_POTTERY_SHERD = register("wrathful_pottery_sherd", new Item(EBProperties.ItemP.GENERIC));
     public static final Item IS_THAT_POTTERY_SHERD = register("is_that_pottery_sherd", new Item(EBProperties.ItemP.GENERIC));
     public static final Item KOKOS_BUG_POTTERY_SHERD = register("kokos_bug_pottery_sherd", new Item(EBProperties.ItemP.GENERIC));
+    public static final Item THIEF_POTTERY_SHERD = register("thief_pottery_sherd", new Item(EBProperties.ItemP.GENERIC));
 
     private static Item register(String id, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), item);

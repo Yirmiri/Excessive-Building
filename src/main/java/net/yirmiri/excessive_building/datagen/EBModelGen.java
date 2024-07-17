@@ -102,32 +102,33 @@ public class EBModelGen extends FabricModelProvider {
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(EBItems.ANCIENT_FRUIT, Models.GENERATED);
-        itemModelGenerator.register(EBItems.ANCIENT_SIGN, Models.GENERATED);
-        itemModelGenerator.register(EBItems.ANCIENT_HANGING_SIGN, Models.GENERATED);
+    public void generateItemModels(ItemModelGenerator generator) {
+        generator.register(EBItems.ANCIENT_FRUIT, Models.GENERATED);
+        generator.register(EBItems.ANCIENT_SIGN, Models.GENERATED);
+        generator.register(EBItems.ANCIENT_HANGING_SIGN, Models.GENERATED);
 
-        itemModelGenerator.register(EBItems.ROYALTY_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.ANCIENT_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.BITTER_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.BOIN_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.BUSTLING_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.CHECKERED_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.DECAY_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.DESTRUCTION_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.FORWARDS_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.HEXXED_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.KITTEH_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.LIFE_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.MESMERIZE_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.PORTAL_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.POTTERY_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.RING_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.SNOUT_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.SPRITE_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.TWINS_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.WRATHFUL_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.IS_THAT_POTTERY_SHERD, Models.GENERATED);
-        itemModelGenerator.register(EBItems.KOKOS_BUG_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.ROYALTY_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.ANCIENT_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.BITTER_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.BOIN_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.BUSTLING_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.CHECKERED_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.DECAY_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.DESTRUCTION_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.FORWARDS_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.HEXXED_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.KITTEH_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.LIFE_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.MESMERIZE_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.PORTAL_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.POTTERY_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.RING_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.SNOUT_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.SPRITE_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.TWINS_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.WRATHFUL_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.IS_THAT_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.KOKOS_BUG_POTTERY_SHERD, Models.GENERATED);
+        generator.register(EBItems.THIEF_POTTERY_SHERD, Models.GENERATED);
     }
 }

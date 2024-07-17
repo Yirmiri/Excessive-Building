@@ -35,29 +35,31 @@ public class EBDecoratedPotPatterns {
     private static final RegistryKey<DecoratedPotPattern> IS_THAT = create("is_that");
     private static final RegistryKey<DecoratedPotPattern> MESMERIZE = create("mesmerize");
     private static final RegistryKey<DecoratedPotPattern> KOKOS_BUG = create("kokos_bug");
+    private static final RegistryKey<DecoratedPotPattern> THIEF = create("thief");
 
-    public static final DecoratedPotPattern ROYALTY_POTTERY_PATTERN = registerPattern(ROYALTY, "royalty_pottery_pattern");
-    public static final DecoratedPotPattern ANCIENT_POTTERY_PATTERN = registerPattern(ANCIENT, "ancient_pottery_pattern");
-    public static final DecoratedPotPattern BITTER_POTTERY_PATTERN = registerPattern(BITTER, "bitter_pottery_pattern");
-    public static final DecoratedPotPattern BOIN_POTTERY_PATTERN = registerPattern(BOIN, "boin_pottery_pattern");
-    public static final DecoratedPotPattern BUSTLING_POTTERY_PATTERN = registerPattern(BUSTLING, "bustling_pottery_pattern");
-    public static final DecoratedPotPattern CHECKERED_POTTERY_PATTERN = registerPattern(CHECKERED, "checkered_pottery_pattern");
-    public static final DecoratedPotPattern DECAY_POTTERY_PATTERN = registerPattern(DECAY, "decay_pottery_pattern");
-    public static final DecoratedPotPattern DESTRUCTION_POTTERY_PATTERN = registerPattern(DESTRUCTION, "destruction_pottery_pattern");
-    public static final DecoratedPotPattern FORWARDS_POTTERY_PATTERN = registerPattern(FORWARDS, "forwards_pottery_pattern");
-    public static final DecoratedPotPattern HEXXED_POTTERY_PATTERN = registerPattern(HEXXED, "hexxed_pottery_pattern");
-    public static final DecoratedPotPattern KITTEH_POTTERY_PATTERN = registerPattern(KITTEH, "kitteh_pottery_pattern");
-    public static final DecoratedPotPattern LIFE_POTTERY_PATTERN = registerPattern(LIFE, "life_pottery_pattern");
-    public static final DecoratedPotPattern PORTAL_POTTERY_PATTERN = registerPattern(PORTAL, "portal_pottery_pattern");
-    public static final DecoratedPotPattern POTTERY_POTTERY_PATTERN = registerPattern(POTTERY, "pottery_pottery_pattern");
-    public static final DecoratedPotPattern RING_POTTERY_PATTERN = registerPattern(RING, "ring_pottery_pattern");
-    public static final DecoratedPotPattern SNOUT_POTTERY_PATTERN = registerPattern(SNOUT, "snout_pottery_pattern");
-    public static final DecoratedPotPattern SPRITE_POTTERY_PATTERN = registerPattern(SPRITE, "sprite_pottery_pattern");
-    public static final DecoratedPotPattern TWINS_POTTERY_PATTERN = registerPattern(TWINS, "twins_pottery_pattern");
-    public static final DecoratedPotPattern WRATHFUL_POTTERY_PATTERN = registerPattern(WRATHFUL, "wrathful_pottery_pattern");
-    public static final DecoratedPotPattern IS_THAT_POTTERY_PATTERN = registerPattern(IS_THAT, "is_that_pottery_pattern");
-    public static final DecoratedPotPattern MESMERIZE_POTTERY_PATTERN = registerPattern(MESMERIZE, "mesmerize_pottery_pattern");
-    public static final DecoratedPotPattern KOKOS_BUG_POTTERY_PATTERN = registerPattern(KOKOS_BUG, "kokos_bug_pottery_pattern");
+    public static final DecoratedPotPattern ROYALTY_POTTERY_PATTERN = register(ROYALTY, "royalty_pottery_pattern");
+    public static final DecoratedPotPattern ANCIENT_POTTERY_PATTERN = register(ANCIENT, "ancient_pottery_pattern");
+    public static final DecoratedPotPattern BITTER_POTTERY_PATTERN = register(BITTER, "bitter_pottery_pattern");
+    public static final DecoratedPotPattern BOIN_POTTERY_PATTERN = register(BOIN, "boin_pottery_pattern");
+    public static final DecoratedPotPattern BUSTLING_POTTERY_PATTERN = register(BUSTLING, "bustling_pottery_pattern");
+    public static final DecoratedPotPattern CHECKERED_POTTERY_PATTERN = register(CHECKERED, "checkered_pottery_pattern");
+    public static final DecoratedPotPattern DECAY_POTTERY_PATTERN = register(DECAY, "decay_pottery_pattern");
+    public static final DecoratedPotPattern DESTRUCTION_POTTERY_PATTERN = register(DESTRUCTION, "destruction_pottery_pattern");
+    public static final DecoratedPotPattern FORWARDS_POTTERY_PATTERN = register(FORWARDS, "forwards_pottery_pattern");
+    public static final DecoratedPotPattern HEXXED_POTTERY_PATTERN = register(HEXXED, "hexxed_pottery_pattern");
+    public static final DecoratedPotPattern KITTEH_POTTERY_PATTERN = register(KITTEH, "kitteh_pottery_pattern");
+    public static final DecoratedPotPattern LIFE_POTTERY_PATTERN = register(LIFE, "life_pottery_pattern");
+    public static final DecoratedPotPattern PORTAL_POTTERY_PATTERN = register(PORTAL, "portal_pottery_pattern");
+    public static final DecoratedPotPattern POTTERY_POTTERY_PATTERN = register(POTTERY, "pottery_pottery_pattern");
+    public static final DecoratedPotPattern RING_POTTERY_PATTERN = register(RING, "ring_pottery_pattern");
+    public static final DecoratedPotPattern SNOUT_POTTERY_PATTERN = register(SNOUT, "snout_pottery_pattern");
+    public static final DecoratedPotPattern SPRITE_POTTERY_PATTERN = register(SPRITE, "sprite_pottery_pattern");
+    public static final DecoratedPotPattern TWINS_POTTERY_PATTERN = register(TWINS, "twins_pottery_pattern");
+    public static final DecoratedPotPattern WRATHFUL_POTTERY_PATTERN = register(WRATHFUL, "wrathful_pottery_pattern");
+    public static final DecoratedPotPattern IS_THAT_POTTERY_PATTERN = register(IS_THAT, "is_that_pottery_pattern");
+    public static final DecoratedPotPattern MESMERIZE_POTTERY_PATTERN = register(MESMERIZE, "mesmerize_pottery_pattern");
+    public static final DecoratedPotPattern KOKOS_BUG_POTTERY_PATTERN = register(KOKOS_BUG, "kokos_bug_pottery_pattern");
+    public static final DecoratedPotPattern THIEF_POTTERY_PATTERN = register(THIEF, "thief_pottery_pattern");
 
     public static final Map<Item, RegistryKey<DecoratedPotPattern>> SHERD_MAP = Map.ofEntries(
             Map.entry(EBItems.ROYALTY_POTTERY_SHERD, ROYALTY),
@@ -81,14 +83,15 @@ public class EBDecoratedPotPatterns {
             Map.entry(EBItems.WRATHFUL_POTTERY_SHERD, WRATHFUL),
             Map.entry(EBItems.IS_THAT_POTTERY_SHERD, IS_THAT),
             Map.entry(EBItems.MESMERIZE_POTTERY_SHERD, MESMERIZE),
-            Map.entry(EBItems.KOKOS_BUG_POTTERY_SHERD, KOKOS_BUG)
+            Map.entry(EBItems.KOKOS_BUG_POTTERY_SHERD, KOKOS_BUG),
+            Map.entry(EBItems.THIEF_POTTERY_SHERD, THIEF)
     );
 
     private static RegistryKey<DecoratedPotPattern> create(String id) {
         return RegistryKey.of(RegistryKeys.DECORATED_POT_PATTERN, Identifier.of(ExcessiveBuilding.MOD_ID, id));
     }
 
-    private static DecoratedPotPattern registerPattern(RegistryKey<DecoratedPotPattern> key, String id) {
+    private static DecoratedPotPattern register(RegistryKey<DecoratedPotPattern> key, String id) {
         return Registry.register(Registries.DECORATED_POT_PATTERN, key, new DecoratedPotPattern(Identifier.of(ExcessiveBuilding.MOD_ID, id)));
     }
 

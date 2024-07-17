@@ -151,6 +151,7 @@ public class EBItemGroups {
                 entries.add(EBItems.ROYALTY_POTTERY_SHERD);
                 entries.add(EBItems.SNOUT_POTTERY_SHERD);
                 entries.add(EBItems.SPRITE_POTTERY_SHERD);
+                entries.add(EBItems.THIEF_POTTERY_SHERD);
                 entries.add(EBItems.TWINS_POTTERY_SHERD);
                 entries.add(EBItems.WRATHFUL_POTTERY_SHERD);
 
