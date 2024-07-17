@@ -110,13 +110,14 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerSingleton(EBBlocks.CHISELED_CRIMSON_PLANKS, TexturedModel.CUBE_COLUMN);
         generator.registerSingleton(EBBlocks.CHISELED_WARPED_PLANKS, TexturedModel.CUBE_COLUMN);
         generator.registerSingleton(EBBlocks.CHISELED_ANCIENT_PLANKS, TexturedModel.CUBE_COLUMN);
+
+        generator.registerHangingSign(EBBlocks.STRIPPED_ANCIENT_LOG, EBBlocks.ANCIENT_HANGING_SIGN, EBBlocks.ANCIENT_WALL_HANGING_SIGN);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator generator) {
         generator.register(EBItems.ANCIENT_FRUIT, Models.GENERATED);
         generator.register(EBItems.ANCIENT_SIGN, Models.GENERATED);
-        generator.register(EBItems.ANCIENT_HANGING_SIGN, Models.GENERATED);
 
         generator.register(EBItems.ROYALTY_POTTERY_SHERD, Models.GENERATED);
         generator.register(EBItems.ANCIENT_POTTERY_SHERD, Models.GENERATED);
