@@ -131,6 +131,18 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.ANCIENT_WALL_SIGN)
                 .add(EBBlocks.ANCIENT_HANGING_SIGN)
                 .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN)
+
+                .add(EBBlocks.CHISELED_ANCIENT_PLANKS)
+                .add(EBBlocks.CHISELED_OAK_PLANKS)
+                .add(EBBlocks.CHISELED_SPRUCE_PLANKS)
+                .add(EBBlocks.CHISELED_BIRCH_PLANKS)
+                .add(EBBlocks.CHISELED_JUNGLE_PLANKS)
+                .add(EBBlocks.CHISELED_ACACIA_PLANKS)
+                .add(EBBlocks.CHISELED_DARK_OAK_PLANKS)
+                .add(EBBlocks.CHISELED_MANGROVE_PLANKS)
+                .add(EBBlocks.CHISELED_BAMBOO_PLANKS)
+                .add(EBBlocks.CHISELED_CRIMSON_PLANKS)
+                .add(EBBlocks.CHISELED_WARPED_PLANKS)
         ;
     }
 }

@@ -102,6 +102,17 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.ANCIENT_FENCE_GATE, "Ancient Fence Gate");
         build.add(EBBlocks.ANCIENT_SAPLING, "Ancient Sapling");
         build.add(EBBlocks.POTTED_ANCIENT_SAPLING, "Potted Ancient Sapling");
+        build.add(EBBlocks.CHISELED_OAK_PLANKS, "Chiseled Oak Planks");
+        build.add(EBBlocks.CHISELED_SPRUCE_PLANKS, "Chiseled Spruce Planks");
+        build.add(EBBlocks.CHISELED_BIRCH_PLANKS, "Chiseled Birch Planks");
+        build.add(EBBlocks.CHISELED_JUNGLE_PLANKS, "Chiseled Jungle Planks");
+        build.add(EBBlocks.CHISELED_ACACIA_PLANKS, "Chiseled Acacia Planks");
+        build.add(EBBlocks.CHISELED_DARK_OAK_PLANKS, "Chiseled Dark Oak Planks");
+        build.add(EBBlocks.CHISELED_MANGROVE_PLANKS, "Chiseled Mangrove Planks");
+        build.add(EBBlocks.CHISELED_BAMBOO_PLANKS, "Chiseled Bamboo Planks");
+        build.add(EBBlocks.CHISELED_CRIMSON_PLANKS, "Chiseled Crimson Planks");
+        build.add(EBBlocks.CHISELED_WARPED_PLANKS, "Chiseled Warped Planks");
+        build.add(EBBlocks.CHISELED_ANCIENT_PLANKS, "Chiseled Ancient Planks");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

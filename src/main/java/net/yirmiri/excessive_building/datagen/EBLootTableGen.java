@@ -105,6 +105,17 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         ancientLeavesDrops(EBBlocks.ANCIENT_LEAVES, EBBlocks.ANCIENT_SAPLING);
         addDrop(EBBlocks.ANCIENT_SAPLING);
         addPottedPlantDrops(EBBlocks.POTTED_ANCIENT_SAPLING);
+        addDrop(EBBlocks.CHISELED_OAK_PLANKS);
+        addDrop(EBBlocks.CHISELED_SPRUCE_PLANKS);
+        addDrop(EBBlocks.CHISELED_BIRCH_PLANKS);
+        addDrop(EBBlocks.CHISELED_JUNGLE_PLANKS);
+        addDrop(EBBlocks.CHISELED_ACACIA_PLANKS);
+        addDrop(EBBlocks.CHISELED_DARK_OAK_PLANKS);
+        addDrop(EBBlocks.CHISELED_MANGROVE_PLANKS);
+        addDrop(EBBlocks.CHISELED_CHERRY_PLANKS);
+        addDrop(EBBlocks.CHISELED_BAMBOO_PLANKS);
+        addDrop(EBBlocks.CHISELED_CRIMSON_PLANKS);
+        addDrop(EBBlocks.CHISELED_WARPED_PLANKS);
     }
 
     public LootTable.Builder ancientLeavesDrops(Block leaves, Block sapling, float... saplingChance) {
