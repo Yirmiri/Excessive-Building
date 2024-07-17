@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 import net.yirmiri.excessive_building.datagen.*;
-import net.yirmiri.excessive_building.worldgen.EBConfiguredFeatures;
+import net.yirmiri.excessive_building.util.EBPaintingVariants;
 
 public class ExcessiveBuildingDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -18,11 +18,11 @@ public class ExcessiveBuildingDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(EBModelGen::new);
 		pack.addProvider(EBBlockTagGen::new);
 		pack.addProvider(EBItemTagGen::new);
-		pack.addProvider(EBPaintingVariantTagGen::new);
+		pack.addProvider(EBPaintingTagGen::new);
 	}
 
 	@Override
 	public void buildRegistry(RegistryBuilder builder) {
-		builder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, EBConfiguredFeatures::bootstrap);
+		builder.addRegistry(RegistryKeys.PAINTING_VARIANT, EBPaintingVariants::bootstrap);
 	}
 }

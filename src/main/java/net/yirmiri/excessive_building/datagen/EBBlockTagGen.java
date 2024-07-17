@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.yirmiri.excessive_building.registry.EBBlocks;
+import net.yirmiri.excessive_building.util.EBTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -15,59 +16,111 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapper) {
+        appendAxeMineable();
+        appendPickaxeMineable();
+        appendHoeMineable();
+        appendWalls();
+        appendFences();
+        appendFenceGates();
+        appendFlowerPots();
+        appendSaplings();
+        appendLogs();
+        appendLeaves();
+        appendAncientLogs();
+    }
+
+    public void appendLogs() {
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(EBBlocks.ANCIENT_LOG)
+                .add(EBBlocks.STRIPPED_ANCIENT_LOG)
+                .add(EBBlocks.ANCIENT_WOOD)
+                .add(EBBlocks.STRIPPED_ANCIENT_WOOD)
+        ;
+    }
+
+    public void appendLeaves() {
+        getOrCreateTagBuilder(BlockTags.LEAVES)
+                .add(EBBlocks.ANCIENT_SAPLING)
+        ;
+    }
+
+    public void appendAncientLogs() {
+        getOrCreateTagBuilder(EBTags.Blocks.ANCIENT_LOGS)
+                .add(EBBlocks.ANCIENT_LOG)
+                .add(EBBlocks.STRIPPED_ANCIENT_LOG)
+                .add(EBBlocks.ANCIENT_WOOD)
+                .add(EBBlocks.STRIPPED_ANCIENT_WOOD)
+        ;
+    }
+
+    public void appendSaplings() {
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
                 .add(EBBlocks.ANCIENT_SAPLING)
         ;
+    }
 
-        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
-                .add(EBBlocks.POTTED_ANCIENT_SAPLING)
-        ;
+        public void appendFlowerPots() {
+            getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                    .add(EBBlocks.POTTED_ANCIENT_SAPLING)
+            ;
+        }
 
-        getOrCreateTagBuilder(BlockTags.FENCES)
-                .add(EBBlocks.ANCIENT_FENCE)
-        ;
+        public void appendFences() {
+            getOrCreateTagBuilder(BlockTags.FENCES)
+                    .add(EBBlocks.ANCIENT_FENCE)
+            ;
+        }
 
-        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
-                .add(EBBlocks.ANCIENT_FENCE_GATE)
-        ;
+        public void appendFenceGates() {
+            getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                    .add(EBBlocks.ANCIENT_FENCE_GATE)
+            ;
+        }
 
-        getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(EBBlocks.COBBLESTONE_BRICK_WALL)
-                .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)
-                .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)
-                .add(EBBlocks.BLACKSTONE_BRICK_WALL)
-        ;
+        public void appendWalls() {
+            getOrCreateTagBuilder(BlockTags.WALLS)
+                    .add(EBBlocks.COBBLESTONE_BRICK_WALL)
+                    .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)
+                    .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)
+                    .add(EBBlocks.BLACKSTONE_BRICK_WALL)
+            ;
+        }
 
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(EBBlocks.COBBLESTONE_BRICKS)
-                .add(EBBlocks.COBBLESTONE_BRICK_STAIRS)
-                .add(EBBlocks.COBBLESTONE_BRICK_SLAB)
-                .add(EBBlocks.COBBLESTONE_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.COBBLESTONE_BRICK_WALL)
-                .add(EBBlocks.CRACKED_COBBLESTONE_BRICKS)
-                .add(EBBlocks.MOSSY_COBBLESTONE_BRICKS)
-                .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS)
-                .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB)
-                .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)
-                .add(EBBlocks.COBBLED_DEEPSLATE_BRICKS)
-                .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS)
-                .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB)
-                .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)
-                .add(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS)
-                .add(EBBlocks.BLACKSTONE_BRICKS)
-                .add(EBBlocks.BLACKSTONE_BRICK_STAIRS)
-                .add(EBBlocks.BLACKSTONE_BRICK_SLAB)
-                .add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.BLACKSTONE_BRICK_WALL)
-                .add(EBBlocks.CRACKED_BLACKSTONE_BRICKS)
-        ;
+        public void appendPickaxeMineable() {
+            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.COBBLESTONE_BRICKS)
+                    .add(EBBlocks.COBBLESTONE_BRICK_STAIRS)
+                    .add(EBBlocks.COBBLESTONE_BRICK_SLAB)
+                    .add(EBBlocks.COBBLESTONE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.COBBLESTONE_BRICK_WALL)
+                    .add(EBBlocks.CRACKED_COBBLESTONE_BRICKS)
+                    .add(EBBlocks.MOSSY_COBBLESTONE_BRICKS)
+                    .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS)
+                    .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB)
+                    .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)
+                    .add(EBBlocks.COBBLED_DEEPSLATE_BRICKS)
+                    .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS)
+                    .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB)
+                    .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)
+                    .add(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS)
+                    .add(EBBlocks.BLACKSTONE_BRICKS)
+                    .add(EBBlocks.BLACKSTONE_BRICK_STAIRS)
+                    .add(EBBlocks.BLACKSTONE_BRICK_SLAB)
+                    .add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.BLACKSTONE_BRICK_WALL)
+                    .add(EBBlocks.CRACKED_BLACKSTONE_BRICKS)
+            ;
+        }
 
-        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
-                .add(EBBlocks.ANCIENT_LEAVES)
-        ;
+        public void appendHoeMineable() {
+            getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                    .add(EBBlocks.ANCIENT_LEAVES)
+            ;
+        }
 
+        public void appendAxeMineable() {
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(EBBlocks.OAK_MOSAIC)
                 .add(EBBlocks.OAK_MOSAIC_STAIRS)

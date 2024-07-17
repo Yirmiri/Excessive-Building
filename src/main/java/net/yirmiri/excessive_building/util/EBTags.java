@@ -9,9 +9,10 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBTags {
     public static class Blocks {
+        public static final TagKey<Block> ANCIENT_LOGS = create("ancient_logs");
 
-        private static TagKey<Block> create(String name) {
-            return TagKey.of(RegistryKeys.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, name));
+        private static TagKey<Block> create(String id) {
+            return TagKey.of(RegistryKeys.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id));
         }
     }
 
@@ -19,8 +20,8 @@ public class EBTags {
         public static final TagKey<Item> MOSAIC = create("mosaic");
         public static final TagKey<Item> GLOW_REMOVALS = create("glow_removals");
 
-        private static TagKey<Item> create(String name) {
-            return TagKey.of(RegistryKeys.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, name));
+        private static TagKey<Item> create(String id) {
+            return TagKey.of(RegistryKeys.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id));
         }
     }
 }

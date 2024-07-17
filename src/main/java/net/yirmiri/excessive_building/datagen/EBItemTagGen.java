@@ -18,6 +18,15 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapper) {
+        appendMosaic();
+        appendPlanks();
+        appendSaplings();
+        appendDecoratedPotSherds();
+        appendDecoratedPotIngredients();
+        appendGlowRemovals();
+    }
+
+    public void appendMosaic() {
         getOrCreateTagBuilder(EBTags.Items.MOSAIC)
                 .add(Items.BAMBOO_MOSAIC)
                 .add(EBBlocks.OAK_MOSAIC.asItem())
@@ -31,11 +40,21 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.CRIMSON_MOSAIC.asItem())
                 .add(EBBlocks.WARPED_MOSAIC.asItem())
         ;
+    }
 
+    public void appendSaplings() {
         getOrCreateTagBuilder(ItemTags.SAPLINGS)
                 .add(EBBlocks.ANCIENT_SAPLING.asItem())
         ;
+    }
 
+    public void appendPlanks() {
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(EBBlocks.ANCIENT_PLANKS.asItem())
+        ;
+    }
+
+    public void appendDecoratedPotSherds() {
         getOrCreateTagBuilder(ItemTags.DECORATED_POT_SHERDS)
                 .add(EBItems.ROYALTY_POTTERY_SHERD)
                 .add(EBItems.ANCIENT_POTTERY_SHERD)
@@ -61,7 +80,9 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBItems.KOKOS_BUG_POTTERY_SHERD)
                 .add(EBItems.THIEF_POTTERY_SHERD)
         ;
+    }
 
+    public void appendDecoratedPotIngredients() {
         getOrCreateTagBuilder(ItemTags.DECORATED_POT_INGREDIENTS)
                 .add(EBItems.ROYALTY_POTTERY_SHERD)
                 .add(EBItems.ANCIENT_POTTERY_SHERD)
@@ -87,7 +108,9 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBItems.KOKOS_BUG_POTTERY_SHERD)
                 .add(EBItems.THIEF_POTTERY_SHERD)
         ;
+    }
 
+    public void appendGlowRemovals() {
         getOrCreateTagBuilder(EBTags.Items.GLOW_REMOVALS)
                 .add(Items.PAPER)
         ;

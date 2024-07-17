@@ -2,8 +2,6 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.block.Blocks;
-import net.minecraft.client.model.Model;
 import net.minecraft.data.client.*;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
@@ -14,72 +12,72 @@ public class EBModelGen extends FabricModelProvider {
     }
 
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        BlockStateModelGenerator.BlockTexturePool oakMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.OAK_MOSAIC);
+    public void generateBlockStateModels(BlockStateModelGenerator generator) {
+        BlockStateModelGenerator.BlockTexturePool oakMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.OAK_MOSAIC);
         oakMosaic.stairs(EBBlocks.OAK_MOSAIC_STAIRS);
         oakMosaic.slab(EBBlocks.OAK_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool spruceMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.SPRUCE_MOSAIC);
+        BlockStateModelGenerator.BlockTexturePool spruceMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.SPRUCE_MOSAIC);
         spruceMosaic.stairs(EBBlocks.SPRUCE_MOSAIC_STAIRS);
         spruceMosaic.slab(EBBlocks.SPRUCE_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool birchMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.BIRCH_MOSAIC);
+        BlockStateModelGenerator.BlockTexturePool birchMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.BIRCH_MOSAIC);
         birchMosaic.stairs(EBBlocks.BIRCH_MOSAIC_STAIRS);
         birchMosaic.slab(EBBlocks.BIRCH_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool jungleMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.JUNGLE_MOSAIC);
+        BlockStateModelGenerator.BlockTexturePool jungleMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.JUNGLE_MOSAIC);
         jungleMosaic.stairs(EBBlocks.JUNGLE_MOSAIC_STAIRS);
         jungleMosaic.slab(EBBlocks.JUNGLE_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool acaciaMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.ACACIA_MOSAIC);
+        BlockStateModelGenerator.BlockTexturePool acaciaMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.ACACIA_MOSAIC);
         acaciaMosaic.stairs(EBBlocks.ACACIA_MOSAIC_STAIRS);
         acaciaMosaic.slab(EBBlocks.ACACIA_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool darkOakMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.DARK_OAK_MOSAIC);
+        BlockStateModelGenerator.BlockTexturePool darkOakMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.DARK_OAK_MOSAIC);
         darkOakMosaic.stairs(EBBlocks.DARK_OAK_MOSAIC_STAIRS);
         darkOakMosaic.slab(EBBlocks.DARK_OAK_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool mangroveMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.MANGROVE_MOSAIC);
+        BlockStateModelGenerator.BlockTexturePool mangroveMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.MANGROVE_MOSAIC);
         mangroveMosaic.stairs(EBBlocks.MANGROVE_MOSAIC_STAIRS);
         mangroveMosaic.slab(EBBlocks.MANGROVE_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool cherryMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.CHERRY_MOSAIC);
+        BlockStateModelGenerator.BlockTexturePool cherryMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.CHERRY_MOSAIC);
         cherryMosaic.stairs(EBBlocks.CHERRY_MOSAIC_STAIRS);
         cherryMosaic.slab(EBBlocks.CHERRY_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool crimsonMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.CRIMSON_MOSAIC);
+        BlockStateModelGenerator.BlockTexturePool crimsonMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.CRIMSON_MOSAIC);
         crimsonMosaic.stairs(EBBlocks.CRIMSON_MOSAIC_STAIRS);
         crimsonMosaic.slab(EBBlocks.CRIMSON_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool warpedMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.WARPED_MOSAIC);
+        BlockStateModelGenerator.BlockTexturePool warpedMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.WARPED_MOSAIC);
         warpedMosaic.stairs(EBBlocks.WARPED_MOSAIC_STAIRS);
         warpedMosaic.slab(EBBlocks.WARPED_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool cobblestoneBricks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.COBBLESTONE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool cobblestoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.COBBLESTONE_BRICKS);
         cobblestoneBricks.stairs(EBBlocks.COBBLESTONE_BRICK_STAIRS);
         cobblestoneBricks.slab(EBBlocks.COBBLESTONE_BRICK_SLAB);
         cobblestoneBricks.wall(EBBlocks.COBBLESTONE_BRICK_WALL);
 
-        BlockStateModelGenerator.BlockTexturePool mossyCobblestoneBricks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.MOSSY_COBBLESTONE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool mossyCobblestoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.MOSSY_COBBLESTONE_BRICKS);
         mossyCobblestoneBricks.stairs(EBBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS);
         mossyCobblestoneBricks.slab(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB);
         mossyCobblestoneBricks.wall(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL);
 
-        BlockStateModelGenerator.BlockTexturePool cobbledDeepslateBricks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool cobbledDeepslateBricks = generator.registerCubeAllModelTexturePool(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
         cobbledDeepslateBricks.stairs(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
         cobbledDeepslateBricks.slab(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB);
         cobbledDeepslateBricks.wall(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
 
-        BlockStateModelGenerator.BlockTexturePool blackstoneBricks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.BLACKSTONE_BRICKS);
+        BlockStateModelGenerator.BlockTexturePool blackstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.BLACKSTONE_BRICKS);
         blackstoneBricks.stairs(EBBlocks.BLACKSTONE_BRICK_STAIRS);
         blackstoneBricks.slab(EBBlocks.BLACKSTONE_BRICK_SLAB);
         blackstoneBricks.wall(EBBlocks.BLACKSTONE_BRICK_WALL);
 
-        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
-        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool ancientPlanks = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_PLANKS);
+        BlockStateModelGenerator.BlockTexturePool ancientPlanks = generator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_PLANKS);
         ancientPlanks.stairs(EBBlocks.ANCIENT_STAIRS);
         ancientPlanks.slab(EBBlocks.ANCIENT_SLAB);
         ancientPlanks.fence(EBBlocks.ANCIENT_FENCE);
@@ -87,18 +85,18 @@ public class EBModelGen extends FabricModelProvider {
         ancientPlanks.button(EBBlocks.ANCIENT_BUTTON);
         ancientPlanks.pressurePlate(EBBlocks.ANCIENT_PRESSURE_PLATE);
 
-        BlockStateModelGenerator.BlockTexturePool ancientMosaic = blockStateModelGenerator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_MOSAIC);
+        BlockStateModelGenerator.BlockTexturePool ancientMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_MOSAIC);
         ancientMosaic.stairs(EBBlocks.ANCIENT_MOSAIC_STAIRS);
         ancientMosaic.slab(EBBlocks.ANCIENT_MOSAIC_SLAB);
 
-        blockStateModelGenerator.registerSimpleCubeAll(EBBlocks.ANCIENT_LEAVES);
-        blockStateModelGenerator.registerDoor(EBBlocks.ANCIENT_DOOR);
-        blockStateModelGenerator.registerTrapdoor(EBBlocks.ANCIENT_TRAPDOOR);
+        generator.registerSimpleCubeAll(EBBlocks.ANCIENT_LEAVES);
+        generator.registerDoor(EBBlocks.ANCIENT_DOOR);
+        generator.registerTrapdoor(EBBlocks.ANCIENT_TRAPDOOR);
 
-        blockStateModelGenerator.registerLog(EBBlocks.ANCIENT_LOG).log(EBBlocks.ANCIENT_LOG).wood(EBBlocks.ANCIENT_WOOD);
-        blockStateModelGenerator.registerLog(EBBlocks.STRIPPED_ANCIENT_LOG).log(EBBlocks.STRIPPED_ANCIENT_LOG).wood(EBBlocks.STRIPPED_ANCIENT_WOOD);
+        generator.registerLog(EBBlocks.ANCIENT_LOG).log(EBBlocks.ANCIENT_LOG).wood(EBBlocks.ANCIENT_WOOD);
+        generator.registerLog(EBBlocks.STRIPPED_ANCIENT_LOG).log(EBBlocks.STRIPPED_ANCIENT_LOG).wood(EBBlocks.STRIPPED_ANCIENT_WOOD);
 
-        blockStateModelGenerator.registerFlowerPotPlant(EBBlocks.ANCIENT_SAPLING, EBBlocks.POTTED_ANCIENT_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        generator.registerFlowerPotPlant(EBBlocks.ANCIENT_SAPLING, EBBlocks.POTTED_ANCIENT_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
