@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "excessive_building:block/chiseled_crimson_planks_top",
+    "side": "excessive_building:block/chiseled_crimson_planks_side"
+  }
+}
