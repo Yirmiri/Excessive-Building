@@ -338,6 +338,9 @@ public class EBBlocks {
     public static final Block SCARLET_SEA_GLASS_PANE = register("scarlet_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
     public static final Block FUCHSIA_SEA_GLASS_PANE = register("fuchsia_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
 
+    //SOUL SANDSTONE
+    public static final Block SOUL_MAGMA_BLOCK = register("soul_magma_block", new SoulMagmaBlock(EBProperties.BlockP.SOUL_MAGMA), true);
+
     //MISC
     public static final Block BONE_BRICKS = register("bone_bricks", new Block(EBProperties.BlockP.BONE), true);
     public static final Block BONE_BRICK_STAIRS = register("bone_brick_stairs", new StairsBlock(BONE_BRICKS.getDefaultState(), EBProperties.BlockP.BONE), true);

@@ -1,11 +1,8 @@
 package net.yirmiri.excessive_building.mixin;
 
 import com.mojang.authlib.GameProfile;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.client.util.SkinTextures;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import org.spongepowered.asm.mixin.Final;

@@ -324,6 +324,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.SOUL_MAGMA_BLOCK)
                     .add(EBBlocks.BONE_BRICKS)
                     .add(EBBlocks.BONE_BRICK_STAIRS)
                     .add(EBBlocks.BONE_BRICK_SLAB)

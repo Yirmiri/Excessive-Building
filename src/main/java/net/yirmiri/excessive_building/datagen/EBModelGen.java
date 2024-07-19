@@ -279,6 +279,8 @@ public class EBModelGen extends FabricModelProvider {
         for (DyeColor colors : DyeColor.values()) {
             generator.registerWoolAndCarpet(EBBlocks.getDyedKnittedWools(colors.getId()), EBBlocks.getDyedKnittedCarpets(colors.getId()));
         }
+
+        generator.registerSimpleCubeAll(EBBlocks.SOUL_MAGMA_BLOCK);
     }
 
     @Override

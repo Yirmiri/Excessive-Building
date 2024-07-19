@@ -231,6 +231,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.BONE_BRICK_SLAB, "Bone Brick Slab");
         build.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS, "Bone Brick Vertical Stairs");
         build.add(EBBlocks.BONE_BRICK_WALL, "Bone Brick Wall");
+        build.add(EBBlocks.SOUL_MAGMA_BLOCK, "Soul Magma Block");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

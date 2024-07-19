@@ -1,4 +1,4 @@
-// 1.21	2024-07-19T13:19:35.2600055	Excessive Building/Tags for minecraft:block
+// 1.21	2024-07-19T13:53:30.9179872	Excessive Building/Tags for minecraft:block
 9973d3c2d4c8d54df2f5e0f5fd6efa300f3971fd data\minecraft\tags\block\logs_that_burn.json
 ecc53e060230f69caffdb4ae26bd668560c24bb3 data\excessive_building\tags\block\ancient_logs.json
 e05777f505cb8a218e6a221fa779322c5014b7db data\minecraft\tags\block\mineable\hoe.json
@@ -17,7 +17,7 @@ e57c89144a6a859d23ae0190b7b4a0eb99343af5 data\minecraft\tags\block\wooden_pressu
 6dd942d3b54ba1e9b4f4900ea217c449cfc9ebb3 data\minecraft\tags\block\mineable\axe.json
 9bbc61ac96b94b83c813a0a90d2c2ca2185e87d1 data\minecraft\tags\block\wall_hanging_signs.json
 0fff8aee72a8ddb53110fd58e5b8b23fdf6aa3cf data\minecraft\tags\block\fences.json
-2689cba7955ec5f7d77530a4559852fb90f379a8 data\minecraft\tags\block\mineable\pickaxe.json
+d01a4660e0f2489c3a5af2bec4a5c564b0868577 data\minecraft\tags\block\mineable\pickaxe.json
 1fe6a4ab118fe40333e2c7473ec910c1ab776576 data\minecraft\tags\block\wooden_buttons.json
 e32155463b285e0ee20df435b74a8c619e4cece2 data\minecraft\tags\block\needs_iron_tool.json
 4f3de040689e1c94cb012af78cc9328ab95eeb50 data\minecraft\tags\block\wall_signs.json

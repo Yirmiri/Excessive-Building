@@ -1231,6 +1231,13 @@ public class EBRecipeGen extends FabricRecipeProvider {
         for (DyeColor colors : DyeColor.values()) {
             createDyeRecipe(EBBlocks.getDyedKnittedCarpets(colors.getId()), 1, colors);
         }
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_MAGMA_BLOCK, 2)
+                .input('#', Blocks.SOUL_SOIL).input('@', Items.MAGMA_CREAM)
+                .pattern("@#")
+                .pattern("#@")
+                .criterion(hasItem(Items.MAGMA_CREAM), conditionsFromItem(Items.MAGMA_CREAM))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SOUL_MAGMA_BLOCK)));
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {
