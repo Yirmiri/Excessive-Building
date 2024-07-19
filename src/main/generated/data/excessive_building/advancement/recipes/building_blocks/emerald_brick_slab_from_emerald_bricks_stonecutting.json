@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_emerald_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:emerald_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:emerald_brick_slab_from_emerald_bricks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_emerald_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:emerald_brick_slab_from_emerald_bricks_stonecutting"
+    ]
+  }
+}

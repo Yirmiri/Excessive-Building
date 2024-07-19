@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.registry;
 
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.HangingSignItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
@@ -10,6 +11,11 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.util.EBProperties;
 
 public class EBItems {
+    //BLOCK ITEMS
+    public static final Item NETHERITE_BRICKS = register("netherite_bricks", new BlockItem(EBBlocks.NETHERITE_BRICKS, EBProperties.ItemP.NETHERITE));
+    public static final Item NETHERITE_BRICK_STAIRS = register("netherite_brick_stairs", new BlockItem(EBBlocks.NETHERITE_BRICK_STAIRS, EBProperties.ItemP.NETHERITE));
+    public static final Item NETHERITE_BRICK_SLAB = register("netherite_brick_slab", new BlockItem(EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS, EBProperties.ItemP.NETHERITE));
+    public static final Item NETHERITE_BRICK_VERTICAL_STAIRS = register("netherite_brick_vertical_stairs", new BlockItem(EBBlocks.NETHERITE_BRICK_SLAB, EBProperties.ItemP.NETHERITE));
 
     //SIGNS
     public static final Item ANCIENT_SIGN = register("ancient_sign", new SignItem(new Item.Settings().maxCount(16), EBBlocks.ANCIENT_SIGN, EBBlocks.ANCIENT_WALL_SIGN));

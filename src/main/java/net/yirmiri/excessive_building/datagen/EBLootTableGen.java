@@ -190,6 +190,30 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON);
         addDrop(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON);
         addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
+        addDrop(EBBlocks.IRON_BRICKS);
+        addDrop(EBBlocks.IRON_BRICK_STAIRS);
+        addDrop(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.IRON_BRICK_SLAB, slabDrops(EBBlocks.IRON_BRICK_SLAB));
+        addDrop(EBBlocks.GOLD_BRICKS);
+        addDrop(EBBlocks.GOLD_BRICK_STAIRS);
+        addDrop(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.GOLD_BRICK_SLAB, slabDrops(EBBlocks.GOLD_BRICK_SLAB));
+        addDrop(EBBlocks.LAPIS_BRICKS);
+        addDrop(EBBlocks.LAPIS_BRICK_STAIRS);
+        addDrop(EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.LAPIS_BRICK_SLAB, slabDrops(EBBlocks.LAPIS_BRICK_SLAB));
+        addDrop(EBBlocks.EMERALD_BRICKS);
+        addDrop(EBBlocks.EMERALD_BRICK_STAIRS);
+        addDrop(EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.EMERALD_BRICK_SLAB, slabDrops(EBBlocks.EMERALD_BRICK_SLAB));
+        addDrop(EBBlocks.DIAMOND_BRICKS);
+        addDrop(EBBlocks.DIAMOND_BRICK_STAIRS);
+        addDrop(EBBlocks.DIAMOND_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.DIAMOND_BRICK_SLAB, slabDrops(EBBlocks.DIAMOND_BRICK_SLAB));
+        addDrop(EBBlocks.NETHERITE_BRICKS);
+        addDrop(EBBlocks.NETHERITE_BRICK_STAIRS);
+        addDrop(EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.NETHERITE_BRICK_SLAB, slabDrops(EBBlocks.NETHERITE_BRICK_SLAB));
     }
 
     public LootTable.Builder ancientLeavesDrops(Block leaves, Block sapling, float... saplingChance) {

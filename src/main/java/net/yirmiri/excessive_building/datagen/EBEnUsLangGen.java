@@ -180,6 +180,30 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON, "Waxed Exposed Copper Button");
         build.add(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON, "Waxed Weathered Copper Button");
         build.add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON, "Waxed Oxidized Copper Button");
+        build.add(EBBlocks.IRON_BRICKS, "Iron Bricks");
+        build.add(EBBlocks.IRON_BRICK_STAIRS, "Iron Brick Stairs");
+        build.add(EBBlocks.IRON_BRICK_SLAB, "Iron Brick Slab");
+        build.add(EBBlocks.IRON_BRICK_VERTICAL_STAIRS, "Iron Brick Vertical Stairs");
+        build.add(EBBlocks.GOLD_BRICKS, "Gold Bricks");
+        build.add(EBBlocks.GOLD_BRICK_STAIRS, "Gold Brick Stairs");
+        build.add(EBBlocks.GOLD_BRICK_SLAB, "Gold Brick Slab");
+        build.add(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS, "Gold Brick Vertical Stairs");
+        build.add(EBBlocks.LAPIS_BRICKS, "Lapis Bricks");
+        build.add(EBBlocks.LAPIS_BRICK_STAIRS, "Lapis Brick Stairs");
+        build.add(EBBlocks.LAPIS_BRICK_SLAB, "Lapis Brick Slab");
+        build.add(EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS, "Lapis Brick Vertical Stairs");
+        build.add(EBBlocks.EMERALD_BRICKS, "Emerald Bricks");
+        build.add(EBBlocks.EMERALD_BRICK_STAIRS, "Emerald Brick Stairs");
+        build.add(EBBlocks.EMERALD_BRICK_SLAB, "Emerald Brick Slab");
+        build.add(EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS, "Emerald Brick Vertical Stairs");
+        build.add(EBBlocks.DIAMOND_BRICKS, "Diamond Bricks");
+        build.add(EBBlocks.DIAMOND_BRICK_STAIRS, "Diamond Brick Stairs");
+        build.add(EBBlocks.DIAMOND_BRICK_SLAB, "Diamond Brick Slab");
+        build.add(EBBlocks.DIAMOND_BRICK_VERTICAL_STAIRS, "Diamond Brick Vertical Stairs");
+        build.add(EBBlocks.NETHERITE_BRICKS, "Netherite Bricks");
+        build.add(EBBlocks.NETHERITE_BRICK_STAIRS, "Netherite Brick Stairs");
+        build.add(EBBlocks.NETHERITE_BRICK_SLAB, "Netherite Brick Slab");
+        build.add(EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS, "Netherite Brick Vertical Stairs");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

@@ -35,6 +35,14 @@ public class EBProperties {
         public static final Block.Settings ANCIENT_LEAVES = FabricBlockSettings.of().luminance(state -> AncientLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
         public static final Block.Settings ANCIENT_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).luminance(state -> 5);
 
+        //RESOURCES
+        public static final Block.Settings GOLD = FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK);
+        public static final Block.Settings IRON = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK);
+        public static final Block.Settings EMERALD = FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK);
+        public static final Block.Settings LAPIS = FabricBlockSettings.copyOf(Blocks.LAPIS_BLOCK);
+        public static final Block.Settings DIAMOND = FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK);
+        public static final Block.Settings NETHERITE = FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK);
+
         //COPPER
         public static final Block.Settings COPPER = FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK);
         public static final Block.Settings EXPOSED_COPPER = FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER);
@@ -53,6 +61,7 @@ public class EBProperties {
 
         //MISC
         public static final Item.Settings GENERIC = new Item.Settings();
+        public static final Item.Settings NETHERITE = new Item.Settings().fireproof();
 
         public static class Food {
             public static final FoodComponent ANCIENT_FRUIT = new FoodComponent.Builder().nutrition(4).saturationModifier(0.8F).statusEffect(new StatusEffectInstance(EBStatusEffects.REACHING, 600, 1), 1.0F).alwaysEdible().build();

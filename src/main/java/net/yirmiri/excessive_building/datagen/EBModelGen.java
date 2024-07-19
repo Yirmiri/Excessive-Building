@@ -202,6 +202,36 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerParented(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
         generator.registerParented(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
         generator.registerParented(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
+
+        BlockStateModelGenerator.BlockTexturePool ironBricks = generator.registerCubeAllModelTexturePool(EBBlocks.IRON_BRICKS);
+        ironBricks.stairs(EBBlocks.IRON_BRICK_STAIRS);
+        ironBricks.slab(EBBlocks.IRON_BRICK_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.IRON_BRICK_VERTICAL_STAIRS, EBBlocks.IRON_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool goldBricks = generator.registerCubeAllModelTexturePool(EBBlocks.GOLD_BRICKS);
+        goldBricks.stairs(EBBlocks.GOLD_BRICK_STAIRS);
+        goldBricks.slab(EBBlocks.GOLD_BRICK_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.GOLD_BRICK_VERTICAL_STAIRS, EBBlocks.GOLD_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool lapisBricks = generator.registerCubeAllModelTexturePool(EBBlocks.LAPIS_BRICKS);
+        lapisBricks.stairs(EBBlocks.LAPIS_BRICK_STAIRS);
+        lapisBricks.slab(EBBlocks.LAPIS_BRICK_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS, EBBlocks.LAPIS_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool emeraldBricks = generator.registerCubeAllModelTexturePool(EBBlocks.EMERALD_BRICKS);
+        emeraldBricks.stairs(EBBlocks.EMERALD_BRICK_STAIRS);
+        emeraldBricks.slab(EBBlocks.EMERALD_BRICK_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS, EBBlocks.EMERALD_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool diamondBricks = generator.registerCubeAllModelTexturePool(EBBlocks.DIAMOND_BRICKS);
+        diamondBricks.stairs(EBBlocks.DIAMOND_BRICK_STAIRS);
+        diamondBricks.slab(EBBlocks.DIAMOND_BRICK_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.DIAMOND_BRICK_VERTICAL_STAIRS, EBBlocks.DIAMOND_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool netheriteBricks = generator.registerCubeAllModelTexturePool(EBBlocks.NETHERITE_BRICKS);
+        netheriteBricks.stairs(EBBlocks.NETHERITE_BRICK_STAIRS);
+        netheriteBricks.slab(EBBlocks.NETHERITE_BRICK_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS, EBBlocks.NETHERITE_BRICKS);
     }
 
     @Override

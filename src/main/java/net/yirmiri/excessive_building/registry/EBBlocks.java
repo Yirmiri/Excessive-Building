@@ -216,6 +216,37 @@ public class EBBlocks {
     public static final Block BLACKSTONE_BRICK_WALL = register("blackstone_brick_wall", new WallBlock(EBProperties.BlockP.BLACKSTONE_BRICKS), true);
     public static final Block CRACKED_BLACKSTONE_BRICKS = register("cracked_blackstone_bricks", new Block(EBProperties.BlockP.BLACKSTONE_BRICKS), true);
 
+    //RESOURCE
+    public static final Block GOLD_BRICKS = register("gold_bricks", new Block(EBProperties.BlockP.GOLD), true);
+    public static final Block GOLD_BRICK_STAIRS = register("gold_brick_stairs", new StairsBlock(GOLD_BRICKS.getDefaultState(), EBProperties.BlockP.GOLD), true);
+    public static final Block GOLD_BRICK_SLAB = register("gold_brick_slab", new SlabBlock(EBProperties.BlockP.GOLD), true);
+    public static final Block GOLD_BRICK_VERTICAL_STAIRS = register("gold_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GOLD), true);
+
+    public static final Block IRON_BRICKS = register("iron_bricks", new Block(EBProperties.BlockP.IRON), true);
+    public static final Block IRON_BRICK_STAIRS = register("iron_brick_stairs", new StairsBlock(IRON_BRICKS.getDefaultState(), EBProperties.BlockP.IRON), true);
+    public static final Block IRON_BRICK_SLAB = register("iron_brick_slab", new SlabBlock(EBProperties.BlockP.IRON), true);
+    public static final Block IRON_BRICK_VERTICAL_STAIRS = register("iron_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.IRON), true);
+
+    public static final Block LAPIS_BRICKS = register("lapis_bricks", new Block(EBProperties.BlockP.LAPIS), true);
+    public static final Block LAPIS_BRICK_STAIRS = register("lapis_brick_stairs", new StairsBlock(LAPIS_BRICKS.getDefaultState(), EBProperties.BlockP.LAPIS), true);
+    public static final Block LAPIS_BRICK_SLAB = register("lapis_brick_slab", new SlabBlock(EBProperties.BlockP.LAPIS), true);
+    public static final Block LAPIS_BRICK_VERTICAL_STAIRS = register("lapis_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.LAPIS), true);
+
+    public static final Block EMERALD_BRICKS = register("emerald_bricks", new Block(EBProperties.BlockP.EMERALD), true);
+    public static final Block EMERALD_BRICK_STAIRS = register("emerald_brick_stairs", new StairsBlock(EMERALD_BRICKS.getDefaultState(), EBProperties.BlockP.EMERALD), true);
+    public static final Block EMERALD_BRICK_SLAB = register("emerald_brick_slab", new SlabBlock(EBProperties.BlockP.EMERALD), true);
+    public static final Block EMERALD_BRICK_VERTICAL_STAIRS = register("emerald_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.EMERALD), true);
+
+    public static final Block DIAMOND_BRICKS = register("diamond_bricks", new Block(EBProperties.BlockP.DIAMOND), true);
+    public static final Block DIAMOND_BRICK_STAIRS = register("diamond_brick_stairs", new StairsBlock(DIAMOND_BRICKS.getDefaultState(), EBProperties.BlockP.DIAMOND), true);
+    public static final Block DIAMOND_BRICK_SLAB = register("diamond_brick_slab", new SlabBlock(EBProperties.BlockP.DIAMOND), true);
+    public static final Block DIAMOND_BRICK_VERTICAL_STAIRS = register("diamond_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.DIAMOND), true);
+
+    public static final Block NETHERITE_BRICKS = register("netherite_bricks", new Block(EBProperties.BlockP.NETHERITE), false);
+    public static final Block NETHERITE_BRICK_STAIRS = register("netherite_brick_stairs", new StairsBlock(NETHERITE_BRICKS.getDefaultState(), EBProperties.BlockP.NETHERITE), false);
+    public static final Block NETHERITE_BRICK_SLAB = register("netherite_brick_slab", new SlabBlock(EBProperties.BlockP.NETHERITE), false);
+    public static final Block NETHERITE_BRICK_VERTICAL_STAIRS = register("netherite_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.NETHERITE), false);
+
     //COPPER - UNAFFECTED
     public static final Block COPPER_BRICKS = register("copper_bricks", new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, EBProperties.BlockP.COPPER), true);
     public static final Block COPPER_BRICK_STAIRS = register("copper_brick_stairs", new OxidizableStairsBlock(Oxidizable.OxidationLevel.UNAFFECTED, COPPER_BRICKS.getDefaultState(), EBProperties.BlockP.COPPER), true);

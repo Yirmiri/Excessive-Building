@@ -563,23 +563,23 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHISELED_GLOOM_PLANKS)));
 
         createFourForFourWendysMealRecipe(EBBlocks.COPPER_BRICKS,
-                Ingredient.ofItems(Blocks.COPPER_BLOCK))
-                .criterion(hasItem(Blocks.COPPER_BLOCK), conditionsFromItem(Blocks.COPPER_BLOCK))
+                Ingredient.ofItems(EBBlocks.COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.COPPER_BRICKS), conditionsFromItem(EBBlocks.COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.COPPER_BRICKS)));
 
         createStairsRecipe(EBBlocks.COPPER_BRICK_STAIRS,
-                Ingredient.ofItems(Blocks.COPPER_BLOCK))
-                .criterion(hasItem(Blocks.COPPER_BLOCK), conditionsFromItem(Blocks.COPPER_BLOCK))
+                Ingredient.ofItems(EBBlocks.COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.COPPER_BRICKS), conditionsFromItem(EBBlocks.COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.COPPER_BRICK_STAIRS)));
 
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.COPPER_BRICK_SLAB,
-                Ingredient.ofItems(Blocks.COPPER_BLOCK))
-                .criterion(hasItem(Blocks.COPPER_BLOCK), conditionsFromItem(Blocks.COPPER_BLOCK))
+                Ingredient.ofItems(EBBlocks.COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.COPPER_BRICKS), conditionsFromItem(Blocks.COPPER_BLOCK))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.COPPER_BRICK_SLAB)));
 
         createVerticalStairsRecipe(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS,
-                Ingredient.ofItems(Blocks.COPPER_BLOCK))
-                .criterion(hasItem(Blocks.COPPER_BLOCK), conditionsFromItem(Blocks.COPPER_BLOCK))
+                Ingredient.ofItems(EBBlocks.COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.COPPER_BRICKS), conditionsFromItem(EBBlocks.COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.COPPER_PRESSURE_PLATE, 1)
@@ -594,18 +594,18 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.EXPOSED_COPPER_BRICKS)));
 
         createStairsRecipe(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS,
-                Ingredient.ofItems(Blocks.EXPOSED_COPPER))
-                .criterion(hasItem(Blocks.EXPOSED_COPPER), conditionsFromItem(Blocks.EXPOSED_COPPER))
+                Ingredient.ofItems(EBBlocks.EXPOSED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.EXPOSED_COPPER_BRICKS), conditionsFromItem(EBBlocks.EXPOSED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS)));
 
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.EXPOSED_COPPER_BRICK_SLAB,
-                Ingredient.ofItems(Blocks.EXPOSED_COPPER))
-                .criterion(hasItem(Blocks.EXPOSED_COPPER), conditionsFromItem(Blocks.EXPOSED_COPPER))
+                Ingredient.ofItems(EBBlocks.EXPOSED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.EXPOSED_COPPER_BRICKS), conditionsFromItem(EBBlocks.EXPOSED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.EXPOSED_COPPER_BRICK_SLAB)));
 
         createVerticalStairsRecipe(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS,
-                Ingredient.ofItems(Blocks.EXPOSED_COPPER))
-                .criterion(hasItem(Blocks.EXPOSED_COPPER), conditionsFromItem(Blocks.EXPOSED_COPPER))
+                Ingredient.ofItems(EBBlocks.EXPOSED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.EXPOSED_COPPER_BRICKS), conditionsFromItem(EBBlocks.EXPOSED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE, 1)
@@ -620,18 +620,18 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEATHERED_COPPER_BRICKS)));
 
         createStairsRecipe(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS,
-                Ingredient.ofItems(Blocks.WEATHERED_COPPER))
-                .criterion(hasItem(Blocks.WEATHERED_COPPER), conditionsFromItem(Blocks.WEATHERED_COPPER))
+                Ingredient.ofItems(EBBlocks.WEATHERED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WEATHERED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WEATHERED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS)));
 
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEATHERED_COPPER_BRICK_SLAB,
-                Ingredient.ofItems(Blocks.WEATHERED_COPPER))
-                .criterion(hasItem(Blocks.WEATHERED_COPPER), conditionsFromItem(Blocks.WEATHERED_COPPER))
+                Ingredient.ofItems(EBBlocks.WEATHERED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WEATHERED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WEATHERED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEATHERED_COPPER_BRICK_SLAB)));
 
         createVerticalStairsRecipe(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS,
-                Ingredient.ofItems(Blocks.WEATHERED_COPPER))
-                .criterion(hasItem(Blocks.WEATHERED_COPPER), conditionsFromItem(Blocks.WEATHERED_COPPER))
+                Ingredient.ofItems(EBBlocks.WEATHERED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WEATHERED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WEATHERED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE, 1)
@@ -646,18 +646,18 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OXIDIZED_COPPER_BRICKS)));
 
         createStairsRecipe(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS,
-                Ingredient.ofItems(Blocks.OXIDIZED_COPPER))
-                .criterion(hasItem(Blocks.OXIDIZED_COPPER), conditionsFromItem(Blocks.OXIDIZED_COPPER))
+                Ingredient.ofItems(EBBlocks.OXIDIZED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.OXIDIZED_COPPER_BRICKS), conditionsFromItem(EBBlocks.OXIDIZED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS)));
 
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.OXIDIZED_COPPER_BRICK_SLAB,
-                Ingredient.ofItems(Blocks.OXIDIZED_COPPER))
-                .criterion(hasItem(Blocks.OXIDIZED_COPPER), conditionsFromItem(Blocks.OXIDIZED_COPPER))
+                Ingredient.ofItems(EBBlocks.OXIDIZED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.OXIDIZED_COPPER_BRICKS), conditionsFromItem(EBBlocks.OXIDIZED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB)));
 
         createVerticalStairsRecipe(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS,
-                Ingredient.ofItems(Blocks.OXIDIZED_COPPER))
-                .criterion(hasItem(Blocks.OXIDIZED_COPPER), conditionsFromItem(Blocks.OXIDIZED_COPPER))
+                Ingredient.ofItems(EBBlocks.OXIDIZED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.OXIDIZED_COPPER_BRICKS), conditionsFromItem(EBBlocks.OXIDIZED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE, 1)
@@ -672,18 +672,18 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_BRICKS)));
 
         createStairsRecipe(EBBlocks.WAXED_COPPER_BRICK_STAIRS,
-                Ingredient.ofItems(Blocks.WAXED_COPPER_BLOCK))
-                .criterion(hasItem(Blocks.WAXED_COPPER_BLOCK), conditionsFromItem(Blocks.WAXED_COPPER_BLOCK))
+                Ingredient.ofItems(EBBlocks.WAXED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_BRICK_STAIRS)));
 
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WAXED_COPPER_BRICK_SLAB,
-                Ingredient.ofItems(Blocks.WAXED_COPPER_BLOCK))
-                .criterion(hasItem(Blocks.WAXED_COPPER_BLOCK), conditionsFromItem(Blocks.WAXED_COPPER_BLOCK))
+                Ingredient.ofItems(EBBlocks.WAXED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_BRICK_SLAB)));
 
         createVerticalStairsRecipe(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS,
-                Ingredient.ofItems(Blocks.WAXED_COPPER_BLOCK))
-                .criterion(hasItem(Blocks.WAXED_COPPER_BLOCK), conditionsFromItem(Blocks.WAXED_COPPER_BLOCK))
+                Ingredient.ofItems(EBBlocks.WAXED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.WAXED_COPPER_PRESSURE_PLATE, 1)
@@ -698,18 +698,18 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS)));
 
         createStairsRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS,
-                Ingredient.ofItems(Blocks.WAXED_EXPOSED_COPPER))
-                .criterion(hasItem(Blocks.WAXED_EXPOSED_COPPER), conditionsFromItem(Blocks.WAXED_EXPOSED_COPPER))
+                Ingredient.ofItems(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS)));
 
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB,
-                Ingredient.ofItems(Blocks.WAXED_EXPOSED_COPPER))
-                .criterion(hasItem(Blocks.WAXED_EXPOSED_COPPER), conditionsFromItem(Blocks.WAXED_EXPOSED_COPPER))
+                Ingredient.ofItems(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB)));
 
         createVerticalStairsRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS,
-                Ingredient.ofItems(Blocks.WAXED_EXPOSED_COPPER))
-                .criterion(hasItem(Blocks.WAXED_EXPOSED_COPPER), conditionsFromItem(Blocks.WAXED_EXPOSED_COPPER))
+                Ingredient.ofItems(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE, 1)
@@ -724,18 +724,18 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS)));
 
         createStairsRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS,
-                Ingredient.ofItems(Blocks.WAXED_WEATHERED_COPPER))
-                .criterion(hasItem(Blocks.WAXED_WEATHERED_COPPER), conditionsFromItem(Blocks.WAXED_WEATHERED_COPPER))
+                Ingredient.ofItems(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS)));
 
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB,
-                Ingredient.ofItems(Blocks.WAXED_WEATHERED_COPPER))
-                .criterion(hasItem(Blocks.WAXED_WEATHERED_COPPER), conditionsFromItem(Blocks.WAXED_WEATHERED_COPPER))
+                Ingredient.ofItems(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB)));
 
         createVerticalStairsRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS,
-                Ingredient.ofItems(Blocks.WAXED_WEATHERED_COPPER))
-                .criterion(hasItem(Blocks.WAXED_WEATHERED_COPPER), conditionsFromItem(Blocks.WAXED_WEATHERED_COPPER))
+                Ingredient.ofItems(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE, 1)
@@ -750,18 +750,18 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS)));
 
         createStairsRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS,
-                Ingredient.ofItems(Blocks.WAXED_OXIDIZED_COPPER))
-                .criterion(hasItem(Blocks.WAXED_OXIDIZED_COPPER), conditionsFromItem(Blocks.WAXED_OXIDIZED_COPPER))
+                Ingredient.ofItems(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS)));
 
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB,
-                Ingredient.ofItems(Blocks.WAXED_OXIDIZED_COPPER))
-                .criterion(hasItem(Blocks.WAXED_OXIDIZED_COPPER), conditionsFromItem(Blocks.WAXED_OXIDIZED_COPPER))
+                Ingredient.ofItems(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB)));
 
         createVerticalStairsRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS,
-                Ingredient.ofItems(Blocks.WAXED_OXIDIZED_COPPER))
-                .criterion(hasItem(Blocks.WAXED_OXIDIZED_COPPER), conditionsFromItem(Blocks.WAXED_OXIDIZED_COPPER))
+                Ingredient.ofItems(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS))
+                .criterion(hasItem(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS), conditionsFromItem(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE, 1)
@@ -958,6 +958,156 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .input(Blocks.WAXED_OXIDIZED_COPPER)
                 .criterion(hasItem(Blocks.WAXED_OXIDIZED_COPPER), conditionsFromItem(Blocks.WAXED_OXIDIZED_COPPER))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON)));
+
+        createTwoByTwoRecipe(EBBlocks.IRON_BRICKS, 1,
+                Ingredient.ofItems(Items.IRON_INGOT))
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.IRON_BRICKS)));
+
+        createStairsRecipe(EBBlocks.IRON_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.IRON_BRICKS))
+                .criterion(hasItem(EBBlocks.IRON_BRICKS), conditionsFromItem(EBBlocks.IRON_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.IRON_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.IRON_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.IRON_BRICKS))
+                .criterion(hasItem(EBBlocks.IRON_BRICKS), conditionsFromItem(EBBlocks.IRON_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.IRON_BRICK_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.IRON_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.IRON_BRICKS))
+                .criterion(hasItem(EBBlocks.IRON_BRICKS), conditionsFromItem(EBBlocks.IRON_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.IRON_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.IRON_BRICKS, Blocks.IRON_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.IRON_BRICK_STAIRS, EBBlocks.IRON_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.IRON_BRICK_SLAB, EBBlocks.IRON_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.IRON_BRICK_VERTICAL_STAIRS, EBBlocks.IRON_BRICKS, 1);
+
+        createTwoByTwoRecipe(EBBlocks.EMERALD_BRICKS, 1,
+                Ingredient.ofItems(Items.EMERALD))
+                .criterion(hasItem(Items.EMERALD), conditionsFromItem(Items.EMERALD))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.EMERALD_BRICKS)));
+
+        createStairsRecipe(EBBlocks.EMERALD_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.EMERALD_BRICKS))
+                .criterion(hasItem(EBBlocks.EMERALD_BRICKS), conditionsFromItem(EBBlocks.EMERALD_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.EMERALD_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.EMERALD_BRICKS))
+                .criterion(hasItem(EBBlocks.EMERALD_BRICKS), conditionsFromItem(EBBlocks.EMERALD_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.EMERALD_BRICK_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.EMERALD_BRICKS))
+                .criterion(hasItem(EBBlocks.EMERALD_BRICKS), conditionsFromItem(EBBlocks.EMERALD_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICKS, Blocks.EMERALD_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICK_STAIRS, EBBlocks.EMERALD_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICK_SLAB, EBBlocks.EMERALD_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS, EBBlocks.EMERALD_BRICKS, 1);
+
+        createTwoByTwoRecipe(EBBlocks.GOLD_BRICKS, 1,
+                Ingredient.ofItems(Items.GOLD_INGOT))
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GOLD_BRICKS)));
+
+        createStairsRecipe(EBBlocks.GOLD_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.GOLD_BRICKS))
+                .criterion(hasItem(EBBlocks.GOLD_BRICKS), conditionsFromItem(EBBlocks.GOLD_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GOLD_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GOLD_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.GOLD_BRICKS))
+                .criterion(hasItem(EBBlocks.GOLD_BRICKS), conditionsFromItem(EBBlocks.GOLD_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GOLD_BRICK_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.GOLD_BRICKS))
+                .criterion(hasItem(EBBlocks.GOLD_BRICKS), conditionsFromItem(EBBlocks.GOLD_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.GOLD_BRICKS, Blocks.GOLD_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.GOLD_BRICK_STAIRS, EBBlocks.GOLD_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.GOLD_BRICK_SLAB, EBBlocks.GOLD_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.GOLD_BRICK_VERTICAL_STAIRS, EBBlocks.GOLD_BRICKS, 1);
+
+        createTwoByTwoRecipe(EBBlocks.LAPIS_BRICKS, 1,
+                Ingredient.ofItems(Items.LAPIS_LAZULI))
+                .criterion(hasItem(Items.LAPIS_LAZULI), conditionsFromItem(Items.LAPIS_LAZULI))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.LAPIS_BRICKS)));
+
+        createStairsRecipe(EBBlocks.LAPIS_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.LAPIS_BRICKS))
+                .criterion(hasItem(EBBlocks.LAPIS_BRICKS), conditionsFromItem(EBBlocks.LAPIS_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.LAPIS_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAPIS_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.LAPIS_BRICKS))
+                .criterion(hasItem(EBBlocks.LAPIS_BRICKS), conditionsFromItem(EBBlocks.LAPIS_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.LAPIS_BRICK_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.LAPIS_BRICKS))
+                .criterion(hasItem(EBBlocks.LAPIS_BRICKS), conditionsFromItem(EBBlocks.LAPIS_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAPIS_BRICKS, Blocks.LAPIS_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAPIS_BRICK_STAIRS, EBBlocks.LAPIS_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAPIS_BRICK_SLAB, EBBlocks.LAPIS_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS, EBBlocks.LAPIS_BRICKS, 1);
+
+        createTwoByTwoRecipe(EBBlocks.DIAMOND_BRICKS, 1,
+                Ingredient.ofItems(Items.DIAMOND))
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DIAMOND_BRICKS)));
+
+        createStairsRecipe(EBBlocks.DIAMOND_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.DIAMOND_BRICKS))
+                .criterion(hasItem(EBBlocks.DIAMOND_BRICKS), conditionsFromItem(EBBlocks.DIAMOND_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DIAMOND_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIAMOND_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.DIAMOND_BRICKS))
+                .criterion(hasItem(EBBlocks.DIAMOND_BRICKS), conditionsFromItem(EBBlocks.DIAMOND_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DIAMOND_BRICK_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.DIAMOND_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.DIAMOND_BRICKS))
+                .criterion(hasItem(EBBlocks.DIAMOND_BRICKS), conditionsFromItem(EBBlocks.DIAMOND_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DIAMOND_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIAMOND_BRICKS, Blocks.DIAMOND_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIAMOND_BRICK_STAIRS, EBBlocks.DIAMOND_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIAMOND_BRICK_SLAB, EBBlocks.DIAMOND_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIAMOND_BRICK_VERTICAL_STAIRS, EBBlocks.DIAMOND_BRICKS, 1);
+
+        createTwoByTwoRecipe(EBBlocks.NETHERITE_BRICKS, 1,
+                Ingredient.ofItems(Items.NETHERITE_INGOT))
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.NETHERITE_BRICKS)));
+
+        createStairsRecipe(EBBlocks.NETHERITE_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.NETHERITE_BRICKS))
+                .criterion(hasItem(EBBlocks.NETHERITE_BRICKS), conditionsFromItem(EBBlocks.NETHERITE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.NETHERITE_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.NETHERITE_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.NETHERITE_BRICKS))
+                .criterion(hasItem(EBBlocks.NETHERITE_BRICKS), conditionsFromItem(EBBlocks.NETHERITE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.NETHERITE_BRICK_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.NETHERITE_BRICKS))
+                .criterion(hasItem(EBBlocks.NETHERITE_BRICKS), conditionsFromItem(EBBlocks.NETHERITE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.NETHERITE_BRICKS, Blocks.NETHERITE_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.NETHERITE_BRICK_STAIRS, EBBlocks.NETHERITE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.NETHERITE_BRICK_SLAB, EBBlocks.NETHERITE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS, EBBlocks.NETHERITE_BRICKS, 1);
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {

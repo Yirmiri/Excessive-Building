@@ -7,11 +7,11 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_waxed_copper_block": {
+    "has_waxed_copper_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:waxed_copper_block"
+            "items": "excessive_building:waxed_copper_bricks"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_waxed_copper_block"
+      "has_waxed_copper_bricks"
     ]
   ],
   "rewards": {

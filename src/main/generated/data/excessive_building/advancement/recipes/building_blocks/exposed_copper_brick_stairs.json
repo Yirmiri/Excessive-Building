@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_exposed_copper": {
+    "has_exposed_copper_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:exposed_copper"
+            "items": "excessive_building:exposed_copper_bricks"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_exposed_copper"
+      "has_exposed_copper_bricks"
     ]
   ],
   "rewards": {

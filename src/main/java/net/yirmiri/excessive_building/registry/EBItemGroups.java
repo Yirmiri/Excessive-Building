@@ -153,6 +153,36 @@ public class EBItemGroups {
 
                 entries.add(EBItems.ANCIENT_FRUIT);
 
+                entries.add(EBBlocks.IRON_BRICKS);
+                entries.add(EBBlocks.IRON_BRICK_STAIRS);
+                entries.add(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.IRON_BRICK_SLAB);
+
+                entries.add(EBBlocks.GOLD_BRICKS);
+                entries.add(EBBlocks.GOLD_BRICK_STAIRS);
+                entries.add(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.GOLD_BRICK_SLAB);
+
+                entries.add(EBBlocks.LAPIS_BRICKS);
+                entries.add(EBBlocks.LAPIS_BRICK_STAIRS);
+                entries.add(EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.LAPIS_BRICK_SLAB);
+
+                entries.add(EBBlocks.EMERALD_BRICKS);
+                entries.add(EBBlocks.EMERALD_BRICK_STAIRS);
+                entries.add(EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.EMERALD_BRICK_SLAB);
+
+                entries.add(EBBlocks.DIAMOND_BRICKS);
+                entries.add(EBBlocks.DIAMOND_BRICK_STAIRS);
+                entries.add(EBBlocks.DIAMOND_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.DIAMOND_BRICK_SLAB);
+
+                entries.add(EBItems.NETHERITE_BRICKS);
+                entries.add(EBItems.NETHERITE_BRICK_STAIRS);
+                entries.add(EBItems.NETHERITE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBItems.NETHERITE_BRICK_SLAB);
+
                 entries.add(EBBlocks.COPPER_BRICKS);
                 entries.add(EBBlocks.COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS);

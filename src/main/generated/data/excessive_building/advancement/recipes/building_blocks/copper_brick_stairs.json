@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper_block": {
+    "has_copper_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:copper_block"
+            "items": "excessive_building:copper_bricks"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_copper_block"
+      "has_copper_bricks"
     ]
   ],
   "rewards": {
