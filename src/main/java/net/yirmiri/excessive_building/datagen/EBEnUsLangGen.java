@@ -172,6 +172,14 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, "Waxed Oxidized Copper Brick Vertical Stairs");
         build.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB, "Waxed Oxidized Copper Slab");
         build.add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE, "Waxed Oxidized Copper Pressure Plate");
+        build.add(EBBlocks.COPPER_BUTTON, "Copper Button");
+        build.add(EBBlocks.EXPOSED_COPPER_BUTTON, "Exposed Copper Button");
+        build.add(EBBlocks.WEATHERED_COPPER_BUTTON, "Weathered Copper Button");
+        build.add(EBBlocks.OXIDIZED_COPPER_BUTTON, "Oxidized Copper Button");
+        build.add(EBBlocks.WAXED_COPPER_BUTTON, "Waxed Copper Button");
+        build.add(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON, "Waxed Exposed Copper Button");
+        build.add(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON, "Waxed Weathered Copper Button");
+        build.add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON, "Waxed Oxidized Copper Button");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

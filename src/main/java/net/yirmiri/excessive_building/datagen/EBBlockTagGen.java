@@ -35,6 +35,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendWoodenButtons();
         appendWoodenPressurePlates();
         appendPressurePlates();
+        appendButtons();
     }
 
     public void appendPressurePlates() {
@@ -47,6 +48,19 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE)
                 .add(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE)
                 .add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE)
+        ;
+    }
+
+    public void appendButtons() {
+        getOrCreateTagBuilder(BlockTags.BUTTONS)
+                .add(EBBlocks.COPPER_BUTTON)
+                .add(EBBlocks.EXPOSED_COPPER_BUTTON)
+                .add(EBBlocks.WEATHERED_COPPER_BUTTON)
+                .add(EBBlocks.OXIDIZED_COPPER_BUTTON)
+                .add(EBBlocks.WAXED_COPPER_BUTTON)
+                .add(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON)
+                .add(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON)
+                .add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON)
         ;
     }
 

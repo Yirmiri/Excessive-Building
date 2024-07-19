@@ -818,30 +818,146 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE, Blocks.WAXED_OXIDIZED_COPPER, 2);
     
-        createWaxedRecipe(EBBlocks.WAXED_COPPER_BRICKS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICKS.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_COPPER_BRICK_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_STAIRS.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_COPPER_BRICK_SLAB, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_SLAB.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS.asItem()));
+        createWaxedRecipe(EBBlocks.WAXED_COPPER_BRICKS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICKS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICKS), conditionsFromItem(EBBlocks.COPPER_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_BRICKS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_COPPER_BRICK_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_STAIRS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_STAIRS), conditionsFromItem(EBBlocks.COPPER_BRICK_STAIRS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_BRICK_STAIRS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_COPPER_BRICK_SLAB, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_SLAB.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_SLAB), conditionsFromItem(EBBlocks.COPPER_BRICK_SLAB))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_BRICK_SLAB) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS), conditionsFromItem(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICKS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICKS), conditionsFromItem(EBBlocks.COPPER_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_STAIRS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_STAIRS), conditionsFromItem(EBBlocks.COPPER_BRICK_STAIRS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_SLAB.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_SLAB), conditionsFromItem(EBBlocks.COPPER_BRICK_SLAB))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS), conditionsFromItem(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICKS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICKS), conditionsFromItem(EBBlocks.COPPER_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_STAIRS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_STAIRS), conditionsFromItem(EBBlocks.COPPER_BRICK_STAIRS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_SLAB.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_SLAB), conditionsFromItem(EBBlocks.COPPER_BRICK_SLAB))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS), conditionsFromItem(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICKS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICKS), conditionsFromItem(EBBlocks.COPPER_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_STAIRS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_STAIRS), conditionsFromItem(EBBlocks.COPPER_BRICK_STAIRS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_SLAB.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_SLAB), conditionsFromItem(EBBlocks.COPPER_BRICK_SLAB))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS), conditionsFromItem(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_COPPER_PRESSURE_PLATE, 1, Ingredient.ofItems(EBBlocks.COPPER_PRESSURE_PLATE.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_PRESSURE_PLATE), conditionsFromItem(EBBlocks.COPPER_PRESSURE_PLATE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_PRESSURE_PLATE) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE, 1, Ingredient.ofItems(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE.asItem()))
+                .criterion(hasItem(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE), conditionsFromItem(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE, 1, Ingredient.ofItems(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE.asItem()))
+                .criterion(hasItem(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE), conditionsFromItem(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE) + "_from_honeycomb"));
+        
+        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE, 1, Ingredient.ofItems(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE.asItem()))
+                .criterion(hasItem(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE), conditionsFromItem(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE) + "_from_honeycomb"));
 
-        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICKS.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_STAIRS.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_SLAB.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS.asItem()));
+        createWaxedRecipe(EBBlocks.WAXED_COPPER_BUTTON, 1, Ingredient.ofItems(EBBlocks.COPPER_BUTTON.asItem()))
+                .criterion(hasItem(EBBlocks.COPPER_BUTTON), conditionsFromItem(EBBlocks.COPPER_BUTTON))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_BUTTON) + "_from_honeycomb"));
 
-        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICKS.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_STAIRS.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_SLAB.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS.asItem()));
+        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON, 1, Ingredient.ofItems(EBBlocks.EXPOSED_COPPER_BUTTON.asItem()))
+                .criterion(hasItem(EBBlocks.EXPOSED_COPPER_BUTTON), conditionsFromItem(EBBlocks.EXPOSED_COPPER_BUTTON))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON) + "_from_honeycomb"));
 
-        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICKS.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_STAIRS.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_SLAB.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, 1, Ingredient.ofItems(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS.asItem()));
+        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON, 1, Ingredient.ofItems(EBBlocks.WEATHERED_COPPER_BUTTON.asItem()))
+                .criterion(hasItem(EBBlocks.WEATHERED_COPPER_BUTTON), conditionsFromItem(EBBlocks.WEATHERED_COPPER_BUTTON))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON) + "_from_honeycomb"));
 
-        createWaxedRecipe(EBBlocks.WAXED_COPPER_PRESSURE_PLATE, 1, Ingredient.ofItems(EBBlocks.COPPER_PRESSURE_PLATE.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE, 1, Ingredient.ofItems(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE, 1, Ingredient.ofItems(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE.asItem()));
-        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE, 1, Ingredient.ofItems(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE.asItem()));
+        createWaxedRecipe(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON, 1, Ingredient.ofItems(EBBlocks.OXIDIZED_COPPER_BUTTON.asItem()))
+                .criterion(hasItem(EBBlocks.OXIDIZED_COPPER_BUTTON), conditionsFromItem(EBBlocks.OXIDIZED_COPPER_BUTTON))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON) + "_from_honeycomb"));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, EBBlocks.WAXED_COPPER_BUTTON, Blocks.WAXED_COPPER_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, EBBlocks.WAXED_EXPOSED_COPPER_BUTTON, Blocks.WAXED_EXPOSED_COPPER, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, EBBlocks.WAXED_WEATHERED_COPPER_BUTTON, Blocks.WAXED_WEATHERED_COPPER, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.REDSTONE, EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON, Blocks.WAXED_OXIDIZED_COPPER, 4);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.COPPER_BUTTON, 1)
+                .input(Blocks.COPPER_BLOCK)
+                .criterion(hasItem(Blocks.COPPER_BLOCK), conditionsFromItem(Blocks.COPPER_BLOCK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.COPPER_BUTTON)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.EXPOSED_COPPER_BUTTON, 1)
+                .input(Blocks.EXPOSED_COPPER)
+                .criterion(hasItem(Blocks.EXPOSED_COPPER), conditionsFromItem(Blocks.EXPOSED_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.EXPOSED_COPPER_BUTTON)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.WEATHERED_COPPER_BUTTON, 1)
+                .input(Blocks.WEATHERED_COPPER)
+                .criterion(hasItem(Blocks.WEATHERED_COPPER), conditionsFromItem(Blocks.WEATHERED_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEATHERED_COPPER_BUTTON)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.OXIDIZED_COPPER_BUTTON, 1)
+                .input(Blocks.OXIDIZED_COPPER)
+                .criterion(hasItem(Blocks.OXIDIZED_COPPER), conditionsFromItem(Blocks.OXIDIZED_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OXIDIZED_COPPER_BUTTON)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.WAXED_COPPER_BUTTON, 1)
+                .input(Blocks.WAXED_COPPER_BLOCK)
+                .criterion(hasItem(Blocks.WAXED_COPPER_BLOCK), conditionsFromItem(Blocks.WAXED_COPPER_BLOCK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_COPPER_BUTTON)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.WAXED_EXPOSED_COPPER_BUTTON, 1)
+                .input(Blocks.WAXED_EXPOSED_COPPER)
+                .criterion(hasItem(Blocks.WAXED_EXPOSED_COPPER), conditionsFromItem(Blocks.WAXED_EXPOSED_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.WAXED_WEATHERED_COPPER_BUTTON, 1)
+                .input(Blocks.WAXED_WEATHERED_COPPER)
+                .criterion(hasItem(Blocks.WAXED_WEATHERED_COPPER), conditionsFromItem(Blocks.WAXED_WEATHERED_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON, 1)
+                .input(Blocks.WAXED_OXIDIZED_COPPER)
+                .criterion(hasItem(Blocks.WAXED_OXIDIZED_COPPER), conditionsFromItem(Blocks.WAXED_OXIDIZED_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON)));
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {

@@ -182,6 +182,14 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB, slabDrops(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB));
         addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
+        addDrop(EBBlocks.COPPER_BUTTON);
+        addDrop(EBBlocks.EXPOSED_COPPER_BUTTON);
+        addDrop(EBBlocks.WEATHERED_COPPER_BUTTON);
+        addDrop(EBBlocks.OXIDIZED_COPPER_BUTTON);
+        addDrop(EBBlocks.WAXED_COPPER_BUTTON);
+        addDrop(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON);
+        addDrop(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON);
+        addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
     }
 
     public LootTable.Builder ancientLeavesDrops(Block leaves, Block sapling, float... saplingChance) {

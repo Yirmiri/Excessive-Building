@@ -158,47 +158,55 @@ public class EBItemGroups {
                 entries.add(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.COPPER_BRICK_SLAB);
                 entries.add(EBBlocks.COPPER_PRESSURE_PLATE);
+                entries.add(EBBlocks.COPPER_BUTTON);
 
                 entries.add(EBBlocks.EXPOSED_COPPER_BRICKS);
                 entries.add(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.EXPOSED_COPPER_BRICK_SLAB);
                 entries.add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE);
+                entries.add(EBBlocks.EXPOSED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WEATHERED_COPPER_BRICKS);
                 entries.add(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WEATHERED_COPPER_BRICK_SLAB);
                 entries.add(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE);
+                entries.add(EBBlocks.WEATHERED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.OXIDIZED_COPPER_BRICKS);
                 entries.add(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB);
                 entries.add(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE);
+                entries.add(EBBlocks.OXIDIZED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WAXED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_COPPER_BRICK_SLAB);
                 entries.add(EBBlocks.WAXED_COPPER_PRESSURE_PLATE);
+                entries.add(EBBlocks.WAXED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS);
                 entries.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB);
                 entries.add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE);
+                entries.add(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS);
                 entries.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB);
                 entries.add(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE);
+                entries.add(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
+                entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
 
                 entries.add(EBItems.ANCIENT_POTTERY_SHERD);
                 entries.add(EBItems.BITTER_POTTERY_SHERD);

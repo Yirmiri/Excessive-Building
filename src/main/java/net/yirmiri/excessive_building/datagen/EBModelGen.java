@@ -144,18 +144,26 @@ public class EBModelGen extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool copper = generator.registerCubeAllModelTexturePool(Blocks.COPPER_BLOCK);
         copper.pressurePlate(EBBlocks.COPPER_PRESSURE_PLATE);
         copper.parented(EBBlocks.COPPER_PRESSURE_PLATE, EBBlocks.WAXED_COPPER_PRESSURE_PLATE);
+        copper.button(EBBlocks.COPPER_BUTTON);
+        copper.button(EBBlocks.WAXED_COPPER_BUTTON);
 
         BlockStateModelGenerator.BlockTexturePool exposedCopper = generator.registerCubeAllModelTexturePool(Blocks.EXPOSED_COPPER);
         exposedCopper.pressurePlate(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE);
         exposedCopper.parented(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE);
+        exposedCopper.button(EBBlocks.EXPOSED_COPPER_BUTTON);
+        exposedCopper.button(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON);
 
         BlockStateModelGenerator.BlockTexturePool weatheredCopper = generator.registerCubeAllModelTexturePool(Blocks.WEATHERED_COPPER);
         weatheredCopper.pressurePlate(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE);
         weatheredCopper.parented(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE);
+        weatheredCopper.button(EBBlocks.WEATHERED_COPPER_BUTTON);
+        weatheredCopper.button(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON);
 
         BlockStateModelGenerator.BlockTexturePool oxidizedCopper = generator.registerCubeAllModelTexturePool(Blocks.OXIDIZED_COPPER);
         oxidizedCopper.pressurePlate(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE);
         oxidizedCopper.parented(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
+        oxidizedCopper.button(EBBlocks.OXIDIZED_COPPER_BUTTON);
+        oxidizedCopper.button(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
 
         BlockStateModelGenerator.BlockTexturePool copperBricks = generator.registerCubeAllModelTexturePool(EBBlocks.COPPER_BRICKS);
         copperBricks.stairs(EBBlocks.COPPER_BRICK_STAIRS);
