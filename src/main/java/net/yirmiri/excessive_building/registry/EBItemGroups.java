@@ -7,6 +7,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
@@ -167,12 +168,46 @@ public class EBItemGroups {
                 entries.add(EBBlocks.FUCHSIA_SEA_GLASS_PANE);
                 entries.add(EBBlocks.ROSE_SEA_GLASS_PANE);
 
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.WHITE.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.LIGHT_GRAY.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.GRAY.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.BLACK.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.BROWN.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.RED.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.ORANGE.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.YELLOW.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.LIME.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.GREEN.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.CYAN.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.LIGHT_BLUE.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.BLUE.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.PURPLE.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.MAGENTA.getId()));
+                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.PINK.getId()));
+
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.WHITE.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.LIGHT_GRAY.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.GRAY.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.BLACK.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.BROWN.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.RED.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.ORANGE.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.YELLOW.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.LIME.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.GREEN.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.CYAN.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.LIGHT_BLUE.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.BLUE.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.PURPLE.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.MAGENTA.getId()));
+                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.PINK.getId()));
+                
                 entries.add(EBBlocks.BONE_BRICKS);
                 entries.add(EBBlocks.BONE_BRICK_STAIRS);
                 entries.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.BONE_BRICK_SLAB);
                 entries.add(EBBlocks.BONE_BRICK_WALL);
-
+                
                 entries.add(EBBlocks.IRON_BRICKS);
                 entries.add(EBBlocks.IRON_BRICK_STAIRS);
                 entries.add(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);

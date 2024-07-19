@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
@@ -274,6 +275,10 @@ public class EBModelGen extends FabricModelProvider {
         boneBricks.slab(EBBlocks.BONE_BRICK_SLAB);
         boneBricks.wall(EBBlocks.BONE_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.BONE_BRICK_VERTICAL_STAIRS, EBBlocks.BONE_BRICKS);
+
+        for (DyeColor colors : DyeColor.values()) {
+            generator.registerWoolAndCarpet(EBBlocks.getDyedKnittedWools(colors.getId()), EBBlocks.getDyedKnittedCarpets(colors.getId()));
+        }
     }
 
     @Override

@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.util.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.util.EBTags;
 
@@ -40,6 +41,39 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendNeedsDiamondTool();
         appendNeedsStoneTool();
         appendBeaconBaseBlocks();
+        appendDampensVibrations();
+        appendWoolCarpets();
+        appendWool();
+    }
+
+    public void appendDampensVibrations() {
+        getOrCreateTagBuilder(BlockTags.DAMPENS_VIBRATIONS)
+
+        ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(BlockTags.DAMPENS_VIBRATIONS).add(EBBlocks.getDyedKnittedWools(colors.getId()));
+        }
+    }
+
+    public void appendWool() {
+        getOrCreateTagBuilder(BlockTags.WOOL)
+
+        ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(BlockTags.WOOL).add(EBBlocks.getDyedKnittedWools(colors.getId()));
+        }
+    }
+
+    public void appendWoolCarpets() {
+        getOrCreateTagBuilder(BlockTags.WOOL_CARPETS)
+
+        ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(BlockTags.WOOL_CARPETS).add(EBBlocks.getDyedKnittedCarpets(colors.getId()));
+        }
     }
 
 //TODO: Move to seperate tag attached to a configuration

@@ -6,6 +6,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.*;
@@ -16,6 +17,8 @@ import net.yirmiri.excessive_building.block.sign.EBWallSignBlock;
 import net.yirmiri.excessive_building.util.EBBlockSetTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
 import net.yirmiri.excessive_building.worldgen.EBSaplingGenerators;
+
+import java.util.HashMap;
 
 public class EBBlocks {
 
@@ -298,6 +301,28 @@ public class EBBlocks {
     public static final Block WAXED_EXPOSED_COPPER_BUTTON = register("waxed_exposed_copper_button", new ButtonBlock(BlockSetType.COPPER, 20, EBProperties.BlockP.COPPER_BUTTON), true);
     public static final Block WAXED_WEATHERED_COPPER_BUTTON = register("waxed_weathered_copper_button", new ButtonBlock(BlockSetType.COPPER, 30, EBProperties.BlockP.COPPER_BUTTON), true);
     public static final Block WAXED_OXIDIZED_COPPER_BUTTON = register("waxed_oxidized_copper_button", new ButtonBlock(BlockSetType.COPPER, 40, EBProperties.BlockP.COPPER_BUTTON), true);
+
+    //KNITTED WOOL
+    public static final HashMap<DyeColor, Block> DYED_KNITTED_WOOL = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_KNITTED_CARPET = new HashMap<>();
+
+    public static Block getDyedKnittedWools(int colors) {
+        return DYED_KNITTED_WOOL.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedKnittedCarpets(int colors) {
+        return DYED_KNITTED_CARPET.get(DyeColor.byId(colors));
+    }
+
+    static {
+        for (DyeColor colors : DyeColor.values()) {
+            DYED_KNITTED_WOOL.put(colors, register(colors + "_knitted_wool", new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).mapColor(colors)), true));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            DYED_KNITTED_CARPET.put(colors, register(colors + "_knitted_carpet", new Block(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).mapColor(colors)), true));
+        }
+    }
 
     //SEA GLASS
     public static final Block SEA_GLASS = register("sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);

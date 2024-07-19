@@ -7,11 +7,13 @@ import net.minecraft.data.server.recipe.CraftingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.DyeItem;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
@@ -1221,11 +1223,24 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 Ingredient.ofItems(EBBlocks.BONE_BRICKS))
                 .criterion(hasItem(EBBlocks.BONE_BRICKS), conditionsFromItem(EBBlocks.BONE_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BONE_BRICK_WALL)));
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerCarpetRecipe(exporter, EBBlocks.getDyedKnittedCarpets(colors.getId()), EBBlocks.getDyedKnittedWools(colors.getId()));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createDyeRecipe(EBBlocks.getDyedKnittedCarpets(colors.getId()), 1, colors);
+        }
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {
         return ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, count)
                 .input(input).input(Ingredient.ofItems(Items.HONEYCOMB));
+    }
+
+    public static CraftingRecipeJsonBuilder createDyeRecipe(ItemConvertible output, int count, DyeColor color) {
+        return ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, count)
+                .input(DyeItem.byColor(color));
     }
 
     public static CraftingRecipeJsonBuilder createPaneRecipe(ItemConvertible output, int count, Ingredient input) {

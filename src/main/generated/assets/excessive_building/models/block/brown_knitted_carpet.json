@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "excessive_building:block/brown_knitted_wool"
+  }
+}

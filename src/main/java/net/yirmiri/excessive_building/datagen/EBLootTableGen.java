@@ -14,6 +14,7 @@ import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
 
@@ -231,6 +232,20 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.BONE_BRICK_SLAB, slabDrops(EBBlocks.BONE_BRICK_SLAB));
         addDrop(EBBlocks.BONE_BRICK_WALL);
+        addDyedKnittedWoolDrops();
+        addDyedKnittedCarpetDrops();
+    }
+
+    private void addDyedKnittedWoolDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(EBBlocks.getDyedKnittedWools(colors.getId()));
+        }
+    }
+
+    private void addDyedKnittedCarpetDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(EBBlocks.getDyedKnittedCarpets(colors.getId()));
+        }
     }
 
     public LootTable.Builder ancientLeavesDrops(Block leaves, Block sapling, float... saplingChance) {

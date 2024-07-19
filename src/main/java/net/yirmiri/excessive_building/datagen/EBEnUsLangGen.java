@@ -3,8 +3,10 @@ package net.yirmiri.excessive_building.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.util.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -15,6 +17,14 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup lookup, TranslationBuilder build) {
+        for (DyeColor colors : DyeColor.values()) {
+            String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
+                    "_", " "), "gray", "Gray"), "blue", "Blue"));
+
+            build.add(EBBlocks.getDyedKnittedWools(colors.getId()), dyeString + " Knitted Wool");
+            build.add(EBBlocks.getDyedKnittedCarpets(colors.getId()), dyeString + " Knitted Carpet");
+        }
+
         //BLOCKS
         build.add(EBBlocks.OAK_MOSAIC, "Oak Mosaic");
         build.add(EBBlocks.OAK_MOSAIC_STAIRS, "Oak Mosaic Stairs");
