@@ -15,6 +15,9 @@ public class EBItems {
     public static final Item ANCIENT_SIGN = register("ancient_sign", new SignItem(new Item.Settings().maxCount(16), EBBlocks.ANCIENT_SIGN, EBBlocks.ANCIENT_WALL_SIGN));
     public static final Item ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", new HangingSignItem(EBBlocks.ANCIENT_HANGING_SIGN, EBBlocks.ANCIENT_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
 
+    public static final Item GLOOM_SIGN = register("gloom_sign", new SignItem(new Item.Settings().maxCount(16), EBBlocks.GLOOM_SIGN, EBBlocks.GLOOM_WALL_SIGN));
+    public static final Item GLOOM_HANGING_SIGN = register("gloom_hanging_sign", new HangingSignItem(EBBlocks.GLOOM_HANGING_SIGN, EBBlocks.GLOOM_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
+
     //FOOD
     public static final Item ANCIENT_FRUIT = register("ancient_fruit", new Item(EBProperties.ItemP.ANCIENT_FRUIT));
 

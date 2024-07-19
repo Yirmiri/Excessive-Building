@@ -71,6 +71,27 @@
     "excessive_building:chiseled_mangrove_planks",
     "excessive_building:chiseled_bamboo_planks",
     "excessive_building:chiseled_crimson_planks",
-    "excessive_building:chiseled_warped_planks"
+    "excessive_building:chiseled_warped_planks",
+    "excessive_building:gloom_planks",
+    "excessive_building:gloom_stairs",
+    "excessive_building:gloom_slab",
+    "excessive_building:gloom_vertical_stairs",
+    "excessive_building:gloom_mosaic",
+    "excessive_building:gloom_mosaic_stairs",
+    "excessive_building:gloom_mosaic_slab",
+    "excessive_building:gloom_mosaic_vertical_stairs",
+    "excessive_building:gloom_log",
+    "excessive_building:gloom_wood",
+    "excessive_building:stripped_gloom_log",
+    "excessive_building:stripped_stripped_gloom_log_wood",
+    "excessive_building:gloom_door",
+    "excessive_building:gloom_trapdoor",
+    "excessive_building:gloom_button",
+    "excessive_building:gloom_pressure_plate",
+    "excessive_building:gloom_sign",
+    "excessive_building:gloom_wall_sign",
+    "excessive_building:gloom_hanging_sign",
+    "excessive_building:gloom_wall_hanging_sign",
+    "excessive_building:chiseled_gloom_planks"
   ]
 }

@@ -27,20 +27,90 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendLogs();
         appendLeaves();
         appendAncientLogs();
+        appendGloomLogs();
+        appendSigns();
+        appendWallSigns();
+        appendHangingSigns();
+        appendWallHangingSigns();
+        appendWoodenButtons();
+        appendWoodenPressurePlates();
+        appendPressurePlates();
+    }
+
+    public void appendPressurePlates() {
+        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
+                .add(EBBlocks.COPPER_PRESSURE_PLATE)
+                .add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE)
+                .add(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE)
+                .add(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE)
+                .add(EBBlocks.WAXED_COPPER_PRESSURE_PLATE)
+                .add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE)
+                .add(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE)
+                .add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE)
+        ;
+    }
+
+    public void appendWoodenPressurePlates() {
+        getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
+                .add(EBBlocks.ANCIENT_PRESSURE_PLATE)
+                .add(EBBlocks.GLOOM_PRESSURE_PLATE)
+        ;
+    }
+
+    public void appendWoodenButtons() {
+        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
+                .add(EBBlocks.ANCIENT_BUTTON)
+                .add(EBBlocks.GLOOM_BUTTON)
+        ;
+    }
+
+    public void appendSigns() {
+        getOrCreateTagBuilder(BlockTags.SIGNS)
+                .add(EBBlocks.ANCIENT_SIGN)
+                .add(EBBlocks.GLOOM_SIGN)
+        ;
+    }
+
+    public void appendWallSigns() {
+        getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
+                .add(EBBlocks.ANCIENT_WALL_SIGN)
+                .add(EBBlocks.GLOOM_WALL_SIGN)
+        ;
+    }
+
+    public void appendHangingSigns() {
+        getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
+                .add(EBBlocks.ANCIENT_HANGING_SIGN)
+                .add(EBBlocks.GLOOM_HANGING_SIGN)
+        ;
+    }
+
+    public void appendWallHangingSigns() {
+        getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
+                .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN)
+                .add(EBBlocks.GLOOM_WALL_HANGING_SIGN)
+        ;
     }
 
     public void appendLogs() {
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
-                .add(EBBlocks.ANCIENT_LOG)
-                .add(EBBlocks.STRIPPED_ANCIENT_LOG)
-                .add(EBBlocks.ANCIENT_WOOD)
-                .add(EBBlocks.STRIPPED_ANCIENT_WOOD)
+                .addTag(EBTags.Blocks.ANCIENT_LOGS)
+                .addTag(EBTags.Blocks.GLOOM_LOGS)
         ;
     }
 
     public void appendLeaves() {
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(EBBlocks.ANCIENT_SAPLING)
+        ;
+    }
+
+    public void appendGloomLogs() {
+        getOrCreateTagBuilder(EBTags.Blocks.GLOOM_LOGS)
+                .add(EBBlocks.GLOOM_LOG)
+                .add(EBBlocks.STRIPPED_GLOOM_LOG)
+                .add(EBBlocks.GLOOM_WOOD)
+                .add(EBBlocks.STRIPPED_GLOOM_WOOD)
         ;
     }
 
@@ -68,12 +138,14 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         public void appendFences() {
             getOrCreateTagBuilder(BlockTags.FENCES)
                     .add(EBBlocks.ANCIENT_FENCE)
+                    .add(EBBlocks.GLOOM_FENCE)
             ;
         }
 
         public void appendFenceGates() {
             getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                     .add(EBBlocks.ANCIENT_FENCE_GATE)
+                    .add(EBBlocks.GLOOM_FENCE_GATE)
             ;
         }
 
@@ -111,6 +183,46 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS)
                     .add(EBBlocks.BLACKSTONE_BRICK_WALL)
                     .add(EBBlocks.CRACKED_BLACKSTONE_BRICKS)
+                    .add(EBBlocks.COPPER_BRICKS)
+                    .add(EBBlocks.COPPER_BRICK_STAIRS)
+                    .add(EBBlocks.COPPER_BRICK_SLAB)
+                    .add(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.COPPER_PRESSURE_PLATE)
+                    .add(EBBlocks.EXPOSED_COPPER_BRICKS)
+                    .add(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS)
+                    .add(EBBlocks.EXPOSED_COPPER_BRICK_SLAB)
+                    .add(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE)
+                    .add(EBBlocks.WEATHERED_COPPER_BRICKS)
+                    .add(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS)
+                    .add(EBBlocks.WEATHERED_COPPER_BRICK_SLAB)
+                    .add(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE)
+                    .add(EBBlocks.EXPOSED_COPPER_BRICKS)
+                    .add(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS)
+                    .add(EBBlocks.EXPOSED_COPPER_BRICK_SLAB)
+                    .add(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE)
+                    .add(EBBlocks.WAXED_COPPER_BRICKS)
+                    .add(EBBlocks.WAXED_COPPER_BRICK_STAIRS)
+                    .add(EBBlocks.WAXED_COPPER_BRICK_SLAB)
+                    .add(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.WAXED_COPPER_PRESSURE_PLATE)
+                    .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS)
+                    .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS)
+                    .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB)
+                    .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE)
+                    .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS)
+                    .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS)
+                    .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB)
+                    .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE)
+                    .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS)
+                    .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS)
+                    .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB)
+                    .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE)
             ;
         }
 
@@ -184,8 +296,8 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.ANCIENT_WALL_SIGN)
                 .add(EBBlocks.ANCIENT_HANGING_SIGN)
                 .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN)
-
                 .add(EBBlocks.CHISELED_ANCIENT_PLANKS)
+                
                 .add(EBBlocks.CHISELED_OAK_PLANKS)
                 .add(EBBlocks.CHISELED_SPRUCE_PLANKS)
                 .add(EBBlocks.CHISELED_BIRCH_PLANKS)
@@ -196,6 +308,28 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.CHISELED_BAMBOO_PLANKS)
                 .add(EBBlocks.CHISELED_CRIMSON_PLANKS)
                 .add(EBBlocks.CHISELED_WARPED_PLANKS)
+
+                .add(EBBlocks.GLOOM_PLANKS)
+                .add(EBBlocks.GLOOM_STAIRS)
+                .add(EBBlocks.GLOOM_SLAB)
+                .add(EBBlocks.GLOOM_VERTICAL_STAIRS)
+                .add(EBBlocks.GLOOM_MOSAIC)
+                .add(EBBlocks.GLOOM_MOSAIC_STAIRS)
+                .add(EBBlocks.GLOOM_MOSAIC_SLAB)
+                .add(EBBlocks.GLOOM_MOSAIC_VERTICAL_STAIRS)
+                .add(EBBlocks.GLOOM_LOG)
+                .add(EBBlocks.GLOOM_WOOD)
+                .add(EBBlocks.STRIPPED_GLOOM_LOG)
+                .add(EBBlocks.STRIPPED_GLOOM_WOOD)
+                .add(EBBlocks.GLOOM_DOOR)
+                .add(EBBlocks.GLOOM_TRAPDOOR)
+                .add(EBBlocks.GLOOM_BUTTON)
+                .add(EBBlocks.GLOOM_PRESSURE_PLATE)
+                .add(EBBlocks.GLOOM_SIGN)
+                .add(EBBlocks.GLOOM_WALL_SIGN)
+                .add(EBBlocks.GLOOM_HANGING_SIGN)
+                .add(EBBlocks.GLOOM_WALL_HANGING_SIGN)
+                .add(EBBlocks.CHISELED_GLOOM_PLANKS)
         ;
     }
 }

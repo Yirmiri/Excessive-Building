@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "excessive_building:gloom_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:gloom_planks"
+  }
+}

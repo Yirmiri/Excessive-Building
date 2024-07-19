@@ -24,6 +24,8 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendDecoratedPotSherds();
         appendDecoratedPotIngredients();
         appendGlowRemovals();
+        appendAncientLogs();
+        appendGloomLogs();
     }
 
     public void appendMosaic() {
@@ -39,6 +41,32 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.CHERRY_MOSAIC.asItem())
                 .add(EBBlocks.CRIMSON_MOSAIC.asItem())
                 .add(EBBlocks.WARPED_MOSAIC.asItem())
+                .add(EBBlocks.ANCIENT_MOSAIC.asItem())
+                .add(EBBlocks.GLOOM_MOSAIC.asItem())
+        ;
+    }
+
+    public void appendGloomLogs() {
+        getOrCreateTagBuilder(EBTags.Items.GLOOM_LOGS)
+                .add(EBBlocks.GLOOM_LOG.asItem())
+                .add(EBBlocks.GLOOM_WOOD.asItem())
+                .add(EBBlocks.STRIPPED_GLOOM_LOG.asItem())
+                .add(EBBlocks.STRIPPED_GLOOM_WOOD.asItem())
+        ;
+    }
+
+    public void appendAncientLogs() {
+        getOrCreateTagBuilder(EBTags.Items.ANCIENT_LOGS)
+                .add(EBBlocks.ANCIENT_LOG.asItem())
+                .add(EBBlocks.ANCIENT_WOOD.asItem())
+                .add(EBBlocks.STRIPPED_ANCIENT_LOG.asItem())
+                .add(EBBlocks.STRIPPED_ANCIENT_WOOD.asItem())
+        ;
+    }
+
+    public void appendGlowRemovals() {
+        getOrCreateTagBuilder(EBTags.Items.GLOW_REMOVALS)
+                .add(Items.PAPER)
         ;
     }
 
@@ -51,6 +79,7 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
     public void appendPlanks() {
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(EBBlocks.ANCIENT_PLANKS.asItem())
+                .add(EBBlocks.GLOOM_PLANKS.asItem())
         ;
     }
 
@@ -107,12 +136,6 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBItems.IS_THAT_POTTERY_SHERD)
                 .add(EBItems.KOKOS_BUG_POTTERY_SHERD)
                 .add(EBItems.THIEF_POTTERY_SHERD)
-        ;
-    }
-
-    public void appendGlowRemovals() {
-        getOrCreateTagBuilder(EBTags.Items.GLOW_REMOVALS)
-                .add(Items.PAPER)
         ;
     }
 }

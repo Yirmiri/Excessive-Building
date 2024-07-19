@@ -1,12 +1,20 @@
-// 1.21	2024-07-17T13:22:51.5405459	Excessive Building/Tags for minecraft:block
-9a62cf718587e3b34ebf83290eed8487e700eeeb data\minecraft\tags\block\mineable\axe.json
-e05777f505cb8a218e6a221fa779322c5014b7db data\minecraft\tags\block\mineable\hoe.json
+// 1.21	2024-07-19T07:42:45.3914706	Excessive Building/Tags for minecraft:block
 538eeacbda9eb5530ca98af0369d0e4e67bc1d0e data\minecraft\tags\block\flower_pots.json
-ecc53e060230f69caffdb4ae26bd668560c24bb3 data\minecraft\tags\block\logs_that_burn.json
+9973d3c2d4c8d54df2f5e0f5fd6efa300f3971fd data\minecraft\tags\block\logs_that_burn.json
 ecc53e060230f69caffdb4ae26bd668560c24bb3 data\excessive_building\tags\block\ancient_logs.json
-af67ffc85b2896f8d2a80defb48b7466a43aee39 data\minecraft\tags\block\leaves.json
-15f232853523acd25853c58e0f94256933a1a194 data\minecraft\tags\block\fences.json
-99af194f5c52c9b4f9ed52f9b9d9875c8a9dc90d data\minecraft\tags\block\mineable\pickaxe.json
-419a9c03943ac97171b048feb819b0e35119cafb data\minecraft\tags\block\walls.json
+8db6b4a7158acaea6ee33acf3fd111b1f0760832 data\minecraft\tags\block\signs.json
 af67ffc85b2896f8d2a80defb48b7466a43aee39 data\minecraft\tags\block\saplings.json
-d11ee62b5054d22a7ae04b7d42261c098e598229 data\minecraft\tags\block\fence_gates.json
+e57c89144a6a859d23ae0190b7b4a0eb99343af5 data\minecraft\tags\block\wooden_pressure_plates.json
+6dd942d3b54ba1e9b4f4900ea217c449cfc9ebb3 data\minecraft\tags\block\mineable\axe.json
+e05777f505cb8a218e6a221fa779322c5014b7db data\minecraft\tags\block\mineable\hoe.json
+9bbc61ac96b94b83c813a0a90d2c2ca2185e87d1 data\minecraft\tags\block\wall_hanging_signs.json
+7bcac18564d69e2a786f88b3a8042ed7d312e4b2 data\excessive_building\tags\block\gloom_logs.json
+af67ffc85b2896f8d2a80defb48b7466a43aee39 data\minecraft\tags\block\leaves.json
+0fff8aee72a8ddb53110fd58e5b8b23fdf6aa3cf data\minecraft\tags\block\fences.json
+427f78feb0d78d72840d647aab5ff55fbdc2b4ee data\minecraft\tags\block\mineable\pickaxe.json
+419a9c03943ac97171b048feb819b0e35119cafb data\minecraft\tags\block\walls.json
+1fe6a4ab118fe40333e2c7473ec910c1ab776576 data\minecraft\tags\block\wooden_buttons.json
+4f3de040689e1c94cb012af78cc9328ab95eeb50 data\minecraft\tags\block\wall_signs.json
+9b5260d8d4b4c5c738d36535d900cad53faf4441 data\minecraft\tags\block\pressure_plates.json
+866d3f4a0c121ece9a0a91088a26e400911bd6b7 data\minecraft\tags\block\ceiling_hanging_signs.json
+c11c23b3b865ff694bb378540bd7c9197ddb4853 data\minecraft\tags\block\fence_gates.json

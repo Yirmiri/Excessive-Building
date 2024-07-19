@@ -5,8 +5,10 @@ package net.yirmiri.excessive_building.util;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.yirmiri.excessive_building.registry.EBBlocks;
+import static net.minecraft.block.ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE;
 
 public class EBRegistries {
     public static void registerRegistries() {
@@ -14,11 +16,64 @@ public class EBRegistries {
         registerCompostables();
         registerFuels();
         registerFlammables();
+        registerOxidizables();
+        registerWaxables();
+    }
+
+    public static void registerOxidizables() {
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_BRICKS, EBBlocks.EXPOSED_COPPER_BRICKS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BRICKS, EBBlocks.WEATHERED_COPPER_BRICKS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BRICKS, EBBlocks.OXIDIZED_COPPER_BRICKS);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_BRICK_STAIRS, EBBlocks.EXPOSED_COPPER_BRICK_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS, EBBlocks.WEATHERED_COPPER_BRICK_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS, EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_BRICK_SLAB, EBBlocks.EXPOSED_COPPER_BRICK_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BRICK_SLAB, EBBlocks.WEATHERED_COPPER_BRICK_SLAB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BRICK_SLAB, EBBlocks.OXIDIZED_COPPER_BRICK_SLAB);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_PRESSURE_PLATE, EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE, EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE, EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE);
+    }
+
+    public static void registerWaxables() {
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.COPPER_BRICKS, EBBlocks.WAXED_COPPER_BRICKS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.EXPOSED_COPPER_BRICKS, EBBlocks.WAXED_EXPOSED_COPPER_BRICKS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.WEATHERED_COPPER_BRICKS, EBBlocks.WAXED_WEATHERED_COPPER_BRICKS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.OXIDIZED_COPPER_BRICKS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.COPPER_BRICK_STAIRS, EBBlocks.WAXED_COPPER_BRICK_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS, EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.COPPER_BRICK_SLAB, EBBlocks.WAXED_COPPER_BRICK_SLAB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.EXPOSED_COPPER_BRICK_SLAB, EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.WEATHERED_COPPER_BRICK_SLAB, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.COPPER_PRESSURE_PLATE, EBBlocks.WAXED_COPPER_PRESSURE_PLATE);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
     }
 
     public static void registerStrippables() {
         StrippableBlockRegistry.register(EBBlocks.ANCIENT_LOG, EBBlocks.STRIPPED_ANCIENT_LOG);
         StrippableBlockRegistry.register(EBBlocks.ANCIENT_WOOD, EBBlocks.STRIPPED_ANCIENT_WOOD);
+        StrippableBlockRegistry.register(EBBlocks.GLOOM_LOG, EBBlocks.STRIPPED_GLOOM_LOG);
+        StrippableBlockRegistry.register(EBBlocks.GLOOM_WOOD, EBBlocks.STRIPPED_GLOOM_WOOD);
     }
 
     public static void registerFuels() {
@@ -73,9 +128,31 @@ public class EBRegistries {
         FuelRegistry.INSTANCE.add(EBBlocks.JUNGLE_MOSAIC_VERTICAL_STAIRS, 150);
 
         FuelRegistry.INSTANCE.add(EBBlocks.BAMBOO_MOSAIC_VERTICAL_STAIRS, 150);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.CHISELED_OAK_PLANKS, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHISELED_SPRUCE_PLANKS, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHISELED_BIRCH_PLANKS, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHISELED_JUNGLE_PLANKS, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHISELED_ACACIA_PLANKS, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHISELED_DARK_OAK_PLANKS, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHISELED_MANGROVE_PLANKS, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHISELED_CHERRY_PLANKS, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHISELED_BAMBOO_PLANKS, 150);
     }
 
+    //TODO: ANCIENT/GLOOM
+
     public static void registerFlammables() {
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_OAK_PLANKS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_SPRUCE_PLANKS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_BIRCH_PLANKS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_JUNGLE_PLANKS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_ACACIA_PLANKS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_DARK_OAK_PLANKS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_MANGROVE_PLANKS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_CHERRY_PLANKS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_BAMBOO_PLANKS, 20, 5);
+
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.OAK_VERTICAL_STAIRS, 20, 5);
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.SPRUCE_VERTICAL_STAIRS, 20, 5);
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.BIRCH_VERTICAL_STAIRS, 20, 5);
@@ -130,6 +207,6 @@ public class EBRegistries {
     }
 
     private static void registerCompostables() {
-        //ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.PLACEHOLDER.asItem(), 0.5f);
+        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.ANCIENT_SAPLING.asItem(), 0.85f);
     }
 }

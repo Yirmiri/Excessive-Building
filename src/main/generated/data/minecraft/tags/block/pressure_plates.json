@@ -1,0 +1,12 @@
+{
+  "values": [
+    "excessive_building:copper_pressure_plate",
+    "excessive_building:exposed_copper_pressure_plate",
+    "excessive_building:weathered_copper_pressure_plate",
+    "excessive_building:oxidized_copper_pressure_plate",
+    "excessive_building:waxed_copper_pressure_plate",
+    "excessive_building:waxed_exposed_copper_pressure_plate",
+    "excessive_building:waxed_weathered_copper_pressure_plate",
+    "excessive_building:waxed_oxidized_copper_pressure_plate"
+  ]
+}

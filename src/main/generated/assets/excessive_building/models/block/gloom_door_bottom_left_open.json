@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "excessive_building:block/gloom_door_bottom",
+    "top": "excessive_building:block/gloom_door_top"
+  }
+}

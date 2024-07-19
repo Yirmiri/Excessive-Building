@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:oxidized_copper"
+  },
+  "result": {
+    "count": 2,
+    "id": "excessive_building:oxidized_copper_pressure_plate"
+  }
+}

@@ -13,11 +13,15 @@ public class EBBlockEntities {
 
     public static final BlockEntityType<EBSignBlockEntity> EB_SIGN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             Identifier.of(ExcessiveBuilding.MOD_ID, "eb_sign"), FabricBlockEntityTypeBuilder.create(EBSignBlockEntity::new,
-                    EBBlocks.ANCIENT_SIGN, EBBlocks.ANCIENT_WALL_SIGN).build());
+                    EBBlocks.ANCIENT_SIGN, EBBlocks.ANCIENT_WALL_SIGN,
+                    EBBlocks.GLOOM_SIGN, EBBlocks.GLOOM_WALL_SIGN
+            ).build());
 
     public static final BlockEntityType<EBHangingSignBlockEntity> EB_HANGING_SIGN_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             Identifier.of(ExcessiveBuilding.MOD_ID, "eb_hanging_sign"), FabricBlockEntityTypeBuilder.create(EBHangingSignBlockEntity::new,
-                    EBBlocks.ANCIENT_HANGING_SIGN, EBBlocks.ANCIENT_WALL_HANGING_SIGN).build());
+                    EBBlocks.ANCIENT_HANGING_SIGN, EBBlocks.ANCIENT_WALL_HANGING_SIGN,
+                    EBBlocks.GLOOM_HANGING_SIGN, EBBlocks.GLOOM_WALL_HANGING_SIGN
+            ).build());
 
     public static void registerEBBlockEntities() {
     }
