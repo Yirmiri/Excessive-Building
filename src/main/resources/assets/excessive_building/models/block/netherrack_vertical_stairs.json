@@ -1,8 +1,0 @@
-{
-  "parent": "excessive_building:custom/vertical_stairs",
-  "textures": {
-    "0": "minecraft:block/netherrack",
-    "particle": "minecraft:block/netherrack"
-  },
-  "render_type": "solid"
-}

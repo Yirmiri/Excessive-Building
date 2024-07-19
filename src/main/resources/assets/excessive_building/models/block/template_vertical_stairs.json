@@ -1,7 +1,8 @@
 {
-	"credit": "Made with Blockbench",
+	"credit": "Made with Blockbench by Yirmiri",
 	"textures": {
-		"texture": "excessive_building:amiddle"
+		"texture": "excessive_building:amiddle",
+		"particle": "excessive_building:amiddle"
 	},
 	"elements": [
 		{

@@ -299,6 +299,20 @@ public class EBBlocks {
     public static final Block WAXED_WEATHERED_COPPER_BUTTON = register("waxed_weathered_copper_button", new ButtonBlock(BlockSetType.COPPER, 30, EBProperties.BlockP.COPPER_BUTTON), true);
     public static final Block WAXED_OXIDIZED_COPPER_BUTTON = register("waxed_oxidized_copper_button", new ButtonBlock(BlockSetType.COPPER, 40, EBProperties.BlockP.COPPER_BUTTON), true);
 
+    //SEA GLASS
+    public static final Block SEA_GLASS = register("sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block ROSE_SEA_GLASS = register("rose_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block AQUA_SEA_GLASS = register("aqua_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block VERDANT_SEA_GLASS = register("verdant_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block SCARLET_SEA_GLASS = register("scarlet_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block FUCHSIA_SEA_GLASS = register("fuchsia_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block SEA_GLASS_PANE = register("sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block ROSE_SEA_GLASS_PANE = register("rose_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block AQUA_SEA_GLASS_PANE = register("aqua_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block VERDANT_SEA_GLASS_PANE = register("verdant_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block SCARLET_SEA_GLASS_PANE = register("scarlet_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block FUCHSIA_SEA_GLASS_PANE = register("fuchsia_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
+
     //MISC
     public static final Block LOGO = register("logo", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 

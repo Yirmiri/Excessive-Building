@@ -153,6 +153,20 @@ public class EBItemGroups {
 
                 entries.add(EBItems.ANCIENT_FRUIT);
 
+                entries.add(EBBlocks.SEA_GLASS);
+                entries.add(EBBlocks.SCARLET_SEA_GLASS);
+                entries.add(EBBlocks.VERDANT_SEA_GLASS);
+                entries.add(EBBlocks.AQUA_SEA_GLASS);
+                entries.add(EBBlocks.FUCHSIA_SEA_GLASS);
+                entries.add(EBBlocks.ROSE_SEA_GLASS);
+
+                entries.add(EBBlocks.SEA_GLASS_PANE);
+                entries.add(EBBlocks.SCARLET_SEA_GLASS_PANE);
+                entries.add(EBBlocks.VERDANT_SEA_GLASS_PANE);
+                entries.add(EBBlocks.AQUA_SEA_GLASS_PANE);
+                entries.add(EBBlocks.FUCHSIA_SEA_GLASS_PANE);
+                entries.add(EBBlocks.ROSE_SEA_GLASS_PANE);
+
                 entries.add(EBBlocks.IRON_BRICKS);
                 entries.add(EBBlocks.IRON_BRICK_STAIRS);
                 entries.add(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);

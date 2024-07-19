@@ -204,6 +204,18 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.NETHERITE_BRICK_STAIRS, "Netherite Brick Stairs");
         build.add(EBBlocks.NETHERITE_BRICK_SLAB, "Netherite Brick Slab");
         build.add(EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS, "Netherite Brick Vertical Stairs");
+        build.add(EBBlocks.SEA_GLASS, "Sea Glass");
+        build.add(EBBlocks.VERDANT_SEA_GLASS, "Verdant Sea Glass");
+        build.add(EBBlocks.FUCHSIA_SEA_GLASS, "Fuchsia Sea Glass");
+        build.add(EBBlocks.AQUA_SEA_GLASS, "Aqua Sea Glass");
+        build.add(EBBlocks.SCARLET_SEA_GLASS, "Scarlet Sea Glass");
+        build.add(EBBlocks.ROSE_SEA_GLASS, "Rose Sea Glass");
+        build.add(EBBlocks.SEA_GLASS_PANE, "Sea Glass Pane");
+        build.add(EBBlocks.VERDANT_SEA_GLASS_PANE, "Verdant Sea Glass Pane");
+        build.add(EBBlocks.FUCHSIA_SEA_GLASS_PANE, "Fuchsia Sea Glass Pane");
+        build.add(EBBlocks.AQUA_SEA_GLASS_PANE, "Aqua Sea Glass Pane");
+        build.add(EBBlocks.SCARLET_SEA_GLASS_PANE, "Scarlet Sea Glass Pane");
+        build.add(EBBlocks.ROSE_SEA_GLASS_PANE, "Rose Sea Glass Pane");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

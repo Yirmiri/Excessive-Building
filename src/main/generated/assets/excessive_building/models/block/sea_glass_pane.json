@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:block/template_sea_glass_pane",
+  "textures": {
+    "particle": "excessive_building:block/sea_glass",
+    "texture": "excessive_building:block/sea_glass"
+  }
+}

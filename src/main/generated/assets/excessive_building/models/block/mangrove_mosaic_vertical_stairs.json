@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:block/template_vertical_stairs",
+  "textures": {
+    "particle": "excessive_building:block/mangrove_mosaic",
+    "texture": "excessive_building:block/mangrove_mosaic"
+  }
+}

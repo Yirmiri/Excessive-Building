@@ -35,6 +35,20 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_TRAPDOOR, RenderLayer.getCutout());
 
+        //TRANSLUCENT
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.SEA_GLASS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.VERDANT_SEA_GLASS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ROSE_SEA_GLASS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.AQUA_SEA_GLASS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.SCARLET_SEA_GLASS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.FUCHSIA_SEA_GLASS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.SEA_GLASS_PANE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.VERDANT_SEA_GLASS_PANE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ROSE_SEA_GLASS_PANE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.AQUA_SEA_GLASS_PANE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.SCARLET_SEA_GLASS_PANE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.FUCHSIA_SEA_GLASS_PANE, RenderLayer.getTranslucent());
+
         //PARTICLE
         ParticleFactoryRegistry.getInstance().register(EBParticles.ANCIENT_PARTICLE, FallingLeafParticle.Factory::new);
     }

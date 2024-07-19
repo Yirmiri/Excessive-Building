@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "@": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "@ @",
+    "#@#"
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:sea_glass"
+  }
+}

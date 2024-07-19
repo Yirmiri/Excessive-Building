@@ -1,10 +1,7 @@
 package net.yirmiri.excessive_building.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.data.DataOutput;
 import net.minecraft.data.server.tag.TagProvider;
-import net.minecraft.data.server.tag.vanilla.VanillaPaintingVariantTagProvider;
 import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;

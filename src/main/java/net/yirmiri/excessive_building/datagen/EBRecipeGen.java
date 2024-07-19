@@ -1108,11 +1108,114 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.NETHERITE_BRICK_STAIRS, EBBlocks.NETHERITE_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.NETHERITE_BRICK_SLAB, EBBlocks.NETHERITE_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS, EBBlocks.NETHERITE_BRICKS, 1);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SEA_GLASS, 4)
+                .input('#', Items.PRISMARINE_CRYSTALS).input('@', Blocks.GLASS.asItem())
+                .pattern("#@#")
+                .pattern("@ @")
+                .pattern("#@#")
+                .criterion(hasItem(Items.PRISMARINE_CRYSTALS), conditionsFromItem(Items.PRISMARINE_CRYSTALS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SEA_GLASS)));
+
+        createDyeEightRecipe(EBBlocks.SCARLET_SEA_GLASS, 8,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS), Ingredient.ofItems(Items.RED_DYE))
+                .criterion(hasItem(EBBlocks.SEA_GLASS), conditionsFromItem(EBBlocks.SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SCARLET_SEA_GLASS)));
+
+        createDyeEightRecipe(EBBlocks.VERDANT_SEA_GLASS, 8,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS), Ingredient.ofItems(Items.LIME_DYE))
+                .criterion(hasItem(EBBlocks.SEA_GLASS), conditionsFromItem(EBBlocks.SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.VERDANT_SEA_GLASS)));
+
+        createDyeEightRecipe(EBBlocks.ROSE_SEA_GLASS, 8,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS), Ingredient.ofItems(Items.PINK_DYE))
+                .criterion(hasItem(EBBlocks.SEA_GLASS), conditionsFromItem(EBBlocks.SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ROSE_SEA_GLASS)));
+
+        createDyeEightRecipe(EBBlocks.AQUA_SEA_GLASS, 8,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS), Ingredient.ofItems(Items.BLUE_DYE))
+                .criterion(hasItem(EBBlocks.SEA_GLASS), conditionsFromItem(EBBlocks.SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.AQUA_SEA_GLASS)));
+
+        createDyeEightRecipe(EBBlocks.FUCHSIA_SEA_GLASS, 8,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS), Ingredient.ofItems(Items.MAGENTA_DYE))
+                .criterion(hasItem(EBBlocks.SEA_GLASS), conditionsFromItem(EBBlocks.SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.FUCHSIA_SEA_GLASS)));
+
+        createPaneRecipe(EBBlocks.SEA_GLASS_PANE, 16,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS))
+                .criterion(hasItem(EBBlocks.SEA_GLASS), conditionsFromItem(EBBlocks.SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SEA_GLASS_PANE)));
+
+        createPaneRecipe(EBBlocks.SCARLET_SEA_GLASS_PANE, 16,
+                Ingredient.ofItems(EBBlocks.SCARLET_SEA_GLASS))
+                .criterion(hasItem(EBBlocks.SCARLET_SEA_GLASS), conditionsFromItem(EBBlocks.SCARLET_SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SCARLET_SEA_GLASS_PANE)));
+
+        createPaneRecipe(EBBlocks.FUCHSIA_SEA_GLASS_PANE, 16,
+                Ingredient.ofItems(EBBlocks.FUCHSIA_SEA_GLASS))
+                .criterion(hasItem(EBBlocks.FUCHSIA_SEA_GLASS), conditionsFromItem(EBBlocks.FUCHSIA_SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.FUCHSIA_SEA_GLASS_PANE)));
+
+        createPaneRecipe(EBBlocks.AQUA_SEA_GLASS_PANE, 16,
+                Ingredient.ofItems(EBBlocks.AQUA_SEA_GLASS))
+                .criterion(hasItem(EBBlocks.AQUA_SEA_GLASS), conditionsFromItem(EBBlocks.AQUA_SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.AQUA_SEA_GLASS_PANE)));
+
+        createPaneRecipe(EBBlocks.VERDANT_SEA_GLASS_PANE, 16,
+                Ingredient.ofItems(EBBlocks.VERDANT_SEA_GLASS))
+                .criterion(hasItem(EBBlocks.VERDANT_SEA_GLASS), conditionsFromItem(EBBlocks.VERDANT_SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.VERDANT_SEA_GLASS_PANE)));
+
+        createPaneRecipe(EBBlocks.ROSE_SEA_GLASS_PANE, 16,
+                Ingredient.ofItems(EBBlocks.ROSE_SEA_GLASS))
+                .criterion(hasItem(EBBlocks.ROSE_SEA_GLASS), conditionsFromItem(EBBlocks.ROSE_SEA_GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ROSE_SEA_GLASS_PANE)));
+
+        createDyeEightRecipe(EBBlocks.SCARLET_SEA_GLASS_PANE, 8,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS_PANE), Ingredient.ofItems(Items.RED_DYE))
+                .criterion(hasItem(EBBlocks.SEA_GLASS_PANE), conditionsFromItem(EBBlocks.SEA_GLASS_PANE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SCARLET_SEA_GLASS_PANE) + "_from_dye"));
+
+        createDyeEightRecipe(EBBlocks.VERDANT_SEA_GLASS_PANE, 8,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS_PANE), Ingredient.ofItems(Items.LIME_DYE))
+                .criterion(hasItem(EBBlocks.SEA_GLASS_PANE), conditionsFromItem(EBBlocks.SEA_GLASS_PANE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.VERDANT_SEA_GLASS_PANE) + "_from_dye"));
+
+        createDyeEightRecipe(EBBlocks.ROSE_SEA_GLASS_PANE, 8,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS_PANE), Ingredient.ofItems(Items.PINK_DYE))
+                .criterion(hasItem(EBBlocks.SEA_GLASS_PANE), conditionsFromItem(EBBlocks.SEA_GLASS_PANE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ROSE_SEA_GLASS_PANE) + "_from_dye"));
+
+        createDyeEightRecipe(EBBlocks.AQUA_SEA_GLASS_PANE, 8,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS_PANE), Ingredient.ofItems(Items.BLUE_DYE))
+                .criterion(hasItem(EBBlocks.SEA_GLASS_PANE), conditionsFromItem(EBBlocks.SEA_GLASS_PANE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.AQUA_SEA_GLASS_PANE) + "_from_dye"));
+
+        createDyeEightRecipe(EBBlocks.FUCHSIA_SEA_GLASS_PANE, 8,
+                Ingredient.ofItems(EBBlocks.SEA_GLASS_PANE), Ingredient.ofItems(Items.MAGENTA_DYE))
+                .criterion(hasItem(EBBlocks.SEA_GLASS_PANE), conditionsFromItem(EBBlocks.SEA_GLASS_PANE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.FUCHSIA_SEA_GLASS_PANE) + "_from_dye"));
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {
         return ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, count)
                 .input(input).input(Ingredient.ofItems(Items.HONEYCOMB));
+    }
+
+    public static CraftingRecipeJsonBuilder createPaneRecipe(ItemConvertible output, int count, Ingredient input) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, count)
+                .input('#', input)
+                .pattern("###")
+                .pattern("###");
+    }
+
+    public static CraftingRecipeJsonBuilder createDyeEightRecipe(ItemConvertible output, int count, Ingredient input, Ingredient input2) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, count)
+                .input('#', input).input('@', input2)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###");
     }
     
     public static CraftingRecipeJsonBuilder createVerticalStairsRecipe(ItemConvertible output, Ingredient input) {

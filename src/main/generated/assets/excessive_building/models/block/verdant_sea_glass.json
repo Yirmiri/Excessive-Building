@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "excessive_building:block/verdant_sea_glass"
+  }
+}

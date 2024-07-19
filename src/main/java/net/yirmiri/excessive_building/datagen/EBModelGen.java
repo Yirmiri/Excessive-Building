@@ -232,6 +232,42 @@ public class EBModelGen extends FabricModelProvider {
         netheriteBricks.stairs(EBBlocks.NETHERITE_BRICK_STAIRS);
         netheriteBricks.slab(EBBlocks.NETHERITE_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS, EBBlocks.NETHERITE_BRICKS);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.OAK_MOSAIC_VERTICAL_STAIRS, EBBlocks.OAK_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.SPRUCE_MOSAIC_VERTICAL_STAIRS, EBBlocks.SPRUCE_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BIRCH_MOSAIC_VERTICAL_STAIRS, EBBlocks.BIRCH_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.JUNGLE_MOSAIC_VERTICAL_STAIRS, EBBlocks.JUNGLE_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.ACACIA_MOSAIC_VERTICAL_STAIRS, EBBlocks.ACACIA_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.DARK_OAK_MOSAIC_VERTICAL_STAIRS, EBBlocks.DARK_OAK_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.MANGROVE_MOSAIC_VERTICAL_STAIRS, EBBlocks.MANGROVE_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.CHERRY_MOSAIC_VERTICAL_STAIRS, EBBlocks.CHERRY_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BAMBOO_MOSAIC_VERTICAL_STAIRS, Blocks.BAMBOO_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.CRIMSON_MOSAIC_VERTICAL_STAIRS, EBBlocks.CRIMSON_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WARPED_MOSAIC_VERTICAL_STAIRS, EBBlocks.WARPED_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS, EBBlocks.ANCIENT_MOSAIC);
+        EBModels.registerVerticalStairs(generator, EBBlocks.GLOOM_MOSAIC_VERTICAL_STAIRS, EBBlocks.GLOOM_MOSAIC);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.COBBLESTONE_BRICK_VERTICAL_STAIRS, EBBlocks.COBBLESTONE_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS, EBBlocks.COBBLED_DEEPSLATE_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.BLACKSTONE_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS, EBBlocks.MOSSY_COBBLESTONE_BRICKS);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.ANCIENT_VERTICAL_STAIRS, EBBlocks.ANCIENT_PLANKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.GLOOM_VERTICAL_STAIRS, EBBlocks.GLOOM_PLANKS);
+
+        generator.registerSimpleCubeAll(EBBlocks.SEA_GLASS);
+        generator.registerSimpleCubeAll(EBBlocks.VERDANT_SEA_GLASS);
+        generator.registerSimpleCubeAll(EBBlocks.ROSE_SEA_GLASS);
+        generator.registerSimpleCubeAll(EBBlocks.FUCHSIA_SEA_GLASS);
+        generator.registerSimpleCubeAll(EBBlocks.AQUA_SEA_GLASS);
+        generator.registerSimpleCubeAll(EBBlocks.SCARLET_SEA_GLASS);
+
+        EBModels.registerSeaGlassPane(generator, EBBlocks.SEA_GLASS_PANE, EBBlocks.SEA_GLASS);
+        EBModels.registerSeaGlassPane(generator, EBBlocks.VERDANT_SEA_GLASS_PANE, EBBlocks.VERDANT_SEA_GLASS);
+        EBModels.registerSeaGlassPane(generator, EBBlocks.ROSE_SEA_GLASS_PANE, EBBlocks.ROSE_SEA_GLASS);
+        EBModels.registerSeaGlassPane(generator, EBBlocks.FUCHSIA_SEA_GLASS_PANE, EBBlocks.FUCHSIA_SEA_GLASS);
+        EBModels.registerSeaGlassPane(generator, EBBlocks.AQUA_SEA_GLASS_PANE, EBBlocks.AQUA_SEA_GLASS);
+        EBModels.registerSeaGlassPane(generator, EBBlocks.SCARLET_SEA_GLASS_PANE, EBBlocks.SCARLET_SEA_GLASS);
     }
 
     @Override
@@ -267,7 +303,10 @@ public class EBModelGen extends FabricModelProvider {
 
     public static class EBModels {
         public static final Model VERTICAL_STAIRS = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_vertical_stairs")
-                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE);
+                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+
+        public static final Model SEA_GLASS_PANE = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_sea_glass_pane")
+                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
 
         public static void registerVerticalStairs(BlockStateModelGenerator generator, Block verticalStairs, Block texture) {
             Identifier model = VERTICAL_STAIRS.upload(verticalStairs, TextureMap.texture(texture), generator.modelCollector);
@@ -280,6 +319,19 @@ public class EBModelGen extends FabricModelProvider {
                             .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true))
                     .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
                             .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true))));
+        }
+
+            public static void registerSeaGlassPane(BlockStateModelGenerator generator, Block seaGlass, Block texture) {
+                Identifier model = SEA_GLASS_PANE.upload(seaGlass, TextureMap.texture(texture), generator.modelCollector);
+                generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(seaGlass).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
+                        .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                                .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, true))
+                        .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                                .put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, true))
+                        .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                                .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true))
+                        .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                                .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true))));
         }
     }
 }
