@@ -1,5 +1,10 @@
 {
   "values": [
+    "excessive_building:bone_bricks",
+    "excessive_building:bone_brick_stairs",
+    "excessive_building:bone_brick_slab",
+    "excessive_building:bone_brick_vertical_stairs",
+    "excessive_building:bone_brick_wall",
     "excessive_building:cobblestone_bricks",
     "excessive_building:cobblestone_brick_stairs",
     "excessive_building:cobblestone_brick_slab",

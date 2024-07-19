@@ -314,6 +314,12 @@ public class EBBlocks {
     public static final Block FUCHSIA_SEA_GLASS_PANE = register("fuchsia_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
 
     //MISC
+    public static final Block BONE_BRICKS = register("bone_bricks", new Block(EBProperties.BlockP.BONE), true);
+    public static final Block BONE_BRICK_STAIRS = register("bone_brick_stairs", new StairsBlock(BONE_BRICKS.getDefaultState(), EBProperties.BlockP.BONE), true);
+    public static final Block BONE_BRICK_SLAB = register("bone_brick_slab", new SlabBlock(EBProperties.BlockP.BONE), true);
+    public static final Block BONE_BRICK_VERTICAL_STAIRS = register("bone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BONE), true);
+    public static final Block BONE_BRICK_WALL = register("bone_brick_wall", new WallBlock(EBProperties.BlockP.BONE), true);
+
     public static final Block LOGO = register("logo", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
     private static Block register(String id, Block block, boolean registerItem) {

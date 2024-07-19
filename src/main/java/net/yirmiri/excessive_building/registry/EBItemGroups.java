@@ -167,6 +167,12 @@ public class EBItemGroups {
                 entries.add(EBBlocks.FUCHSIA_SEA_GLASS_PANE);
                 entries.add(EBBlocks.ROSE_SEA_GLASS_PANE);
 
+                entries.add(EBBlocks.BONE_BRICKS);
+                entries.add(EBBlocks.BONE_BRICK_STAIRS);
+                entries.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BONE_BRICK_SLAB);
+                entries.add(EBBlocks.BONE_BRICK_WALL);
+
                 entries.add(EBBlocks.IRON_BRICKS);
                 entries.add(EBBlocks.IRON_BRICK_STAIRS);
                 entries.add(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);

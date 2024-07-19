@@ -216,6 +216,11 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.AQUA_SEA_GLASS_PANE, "Aqua Sea Glass Pane");
         build.add(EBBlocks.SCARLET_SEA_GLASS_PANE, "Scarlet Sea Glass Pane");
         build.add(EBBlocks.ROSE_SEA_GLASS_PANE, "Rose Sea Glass Pane");
+        build.add(EBBlocks.BONE_BRICKS, "Bone Bricks");
+        build.add(EBBlocks.BONE_BRICK_STAIRS, "Bone Brick Stairs");
+        build.add(EBBlocks.BONE_BRICK_SLAB, "Bone Brick Slab");
+        build.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS, "Bone Brick Vertical Stairs");
+        build.add(EBBlocks.BONE_BRICK_WALL, "Bone Brick Wall");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

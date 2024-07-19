@@ -268,6 +268,12 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerSeaGlassPane(generator, EBBlocks.FUCHSIA_SEA_GLASS_PANE, EBBlocks.FUCHSIA_SEA_GLASS);
         EBModels.registerSeaGlassPane(generator, EBBlocks.AQUA_SEA_GLASS_PANE, EBBlocks.AQUA_SEA_GLASS);
         EBModels.registerSeaGlassPane(generator, EBBlocks.SCARLET_SEA_GLASS_PANE, EBBlocks.SCARLET_SEA_GLASS);
+
+        BlockStateModelGenerator.BlockTexturePool boneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.BONE_BRICKS);
+        boneBricks.stairs(EBBlocks.BONE_BRICK_STAIRS);
+        boneBricks.slab(EBBlocks.BONE_BRICK_SLAB);
+        boneBricks.wall(EBBlocks.BONE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BONE_BRICK_VERTICAL_STAIRS, EBBlocks.BONE_BRICKS);
     }
 
     @Override

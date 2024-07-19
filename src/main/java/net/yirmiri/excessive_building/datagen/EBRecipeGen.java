@@ -1196,6 +1196,31 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 Ingredient.ofItems(EBBlocks.SEA_GLASS_PANE), Ingredient.ofItems(Items.MAGENTA_DYE))
                 .criterion(hasItem(EBBlocks.SEA_GLASS_PANE), conditionsFromItem(EBBlocks.SEA_GLASS_PANE))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.FUCHSIA_SEA_GLASS_PANE) + "_from_dye"));
+
+        createTwoByTwoRecipe(EBBlocks.BONE_BRICKS, 4,
+                Ingredient.ofItems(Items.BONE_BLOCK))
+                .criterion(hasItem(Items.BONE_BLOCK), conditionsFromItem(Items.BONE_BLOCK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BONE_BRICKS)));
+
+        createStairsRecipe(EBBlocks.BONE_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.BONE_BRICKS))
+                .criterion(hasItem(EBBlocks.BONE_BRICKS), conditionsFromItem(EBBlocks.BONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BONE_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.BONE_BRICKS))
+                .criterion(hasItem(EBBlocks.BONE_BRICKS), conditionsFromItem(EBBlocks.BONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BONE_BRICK_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.BONE_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.BONE_BRICKS))
+                .criterion(hasItem(EBBlocks.BONE_BRICKS), conditionsFromItem(EBBlocks.BONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BONE_BRICK_VERTICAL_STAIRS)));
+
+        createPaneRecipe(EBBlocks.BONE_BRICK_WALL, 6,
+                Ingredient.ofItems(EBBlocks.BONE_BRICKS))
+                .criterion(hasItem(EBBlocks.BONE_BRICKS), conditionsFromItem(EBBlocks.BONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BONE_BRICK_WALL)));
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {

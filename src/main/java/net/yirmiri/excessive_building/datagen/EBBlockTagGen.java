@@ -284,11 +284,17 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)
                     .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)
                     .add(EBBlocks.BLACKSTONE_BRICK_WALL)
+                    .add(EBBlocks.BONE_BRICK_WALL)
             ;
         }
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.BONE_BRICKS)
+                    .add(EBBlocks.BONE_BRICK_STAIRS)
+                    .add(EBBlocks.BONE_BRICK_SLAB)
+                    .add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.BONE_BRICK_WALL)
                     .add(EBBlocks.COBBLESTONE_BRICKS)
                     .add(EBBlocks.COBBLESTONE_BRICK_STAIRS)
                     .add(EBBlocks.COBBLESTONE_BRICK_SLAB)

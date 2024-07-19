@@ -226,6 +226,11 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDropWithSilkTouch(EBBlocks.AQUA_SEA_GLASS_PANE);
         addDropWithSilkTouch(EBBlocks.SCARLET_SEA_GLASS_PANE);
         addDropWithSilkTouch(EBBlocks.FUCHSIA_SEA_GLASS_PANE);
+        addDrop(EBBlocks.BONE_BRICKS);
+        addDrop(EBBlocks.BONE_BRICK_STAIRS);
+        addDrop(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.BONE_BRICK_SLAB, slabDrops(EBBlocks.BONE_BRICK_SLAB));
+        addDrop(EBBlocks.BONE_BRICK_WALL);
     }
 
     public LootTable.Builder ancientLeavesDrops(Block leaves, Block sapling, float... saplingChance) {
