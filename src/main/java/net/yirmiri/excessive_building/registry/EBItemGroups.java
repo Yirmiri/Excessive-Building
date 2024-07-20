@@ -342,6 +342,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE);
                 entries.add(EBBlocks.OXIDIZED_COPPER_BUTTON);
 
+                entries.add(EBBlocks.WAXED_COPPER_BRICKS);
                 entries.add(EBBlocks.WAXED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_COPPER_BRICK_SLAB);
