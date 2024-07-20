@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "excessive_building:block/polished_soul_sandstone",
+    "side": "excessive_building:block/polished_soul_sandstone",
+    "top": "excessive_building:block/polished_soul_sandstone"
+  }
+}

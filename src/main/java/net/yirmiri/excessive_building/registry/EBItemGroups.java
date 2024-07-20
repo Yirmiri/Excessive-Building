@@ -202,6 +202,26 @@ public class EBItemGroups {
                 entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.MAGENTA.getId()));
                 entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.PINK.getId()));
 
+                entries.add(EBBlocks.POLISHED_SANDSTONE);
+                entries.add(EBBlocks.POLISHED_SANDSTONE_STAIRS);
+                entries.add(EBBlocks.POLISHED_SANDSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_SANDSTONE_SLAB);
+                entries.add(EBBlocks.POLISHED_SANDSTONE_WALL);
+                entries.add(EBBlocks.SANDSTONE_BRICKS);
+                entries.add(EBBlocks.SANDSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.SANDSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SANDSTONE_BRICK_SLAB);
+                entries.add(EBBlocks.SANDSTONE_BRICK_WALL);
+                entries.add(EBBlocks.SANDSTONE_TILES);
+                entries.add(EBBlocks.SANDSTONE_TILE_STAIRS);
+                entries.add(EBBlocks.SANDSTONE_TILE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SANDSTONE_TILE_SLAB);
+                entries.add(EBBlocks.SANDSTONE_TILE_WALL);
+                entries.add(EBBlocks.CHISELED_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.DECORATED_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.ENGRAVED_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.SANDSTONE_PILLAR);
+
                 entries.add(EBBlocks.SOUL_SANDSTONE);
                 entries.add(EBBlocks.SOUL_SANDSTONE_STAIRS);
                 entries.add(EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS);

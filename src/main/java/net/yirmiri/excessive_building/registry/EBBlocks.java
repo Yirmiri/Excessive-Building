@@ -356,6 +356,30 @@ public class EBBlocks {
 
     public static final Block SOUL_MAGMA_BLOCK = register("soul_magma_block", new SoulMagmaBlock(EBProperties.BlockP.SOUL_MAGMA), true);
 
+    //POLISHED SANDSTONE
+    public static final Block POLISHED_SANDSTONE = register("polished_soul_sandstone", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block POLISHED_SANDSTONE_STAIRS = register("polished_soul_sandstone_stairs", new StairsBlock(POLISHED_SANDSTONE.getDefaultState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block POLISHED_SANDSTONE_SLAB = register("polished_soul_sandstone_slab", new SlabBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block POLISHED_SANDSTONE_VERTICAL_STAIRS = register("polished_soul_sandstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block POLISHED_SANDSTONE_WALL = register("polished_soul_sandstone_wall", new WallBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+
+    public static final Block SANDSTONE_BRICKS = register("sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_BRICK_STAIRS = register("sandstone_brick_stairs", new StairsBlock(SANDSTONE_BRICKS.getDefaultState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_BRICK_SLAB = register("sandstone_brick_slab", new SlabBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_BRICK_VERTICAL_STAIRS = register("sandstone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_BRICK_WALL = register("sandstone_brick_wall", new WallBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+
+    public static final Block SANDSTONE_TILES = register("sandstone_tiles", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_TILE_STAIRS = register("sandstone_tile_stairs", new StairsBlock(SANDSTONE_TILES.getDefaultState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_TILE_SLAB = register("sandstone_tile_slab", new SlabBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_TILE_VERTICAL_STAIRS = register("sandstone_tile_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_TILE_WALL = register("sandstone_tile_wall", new WallBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+
+    public static final Block CHISELED_SANDSTONE_BRICKS = register("chiseled_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block ENGRAVED_SANDSTONE_BRICKS = register("engraved_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block DECORATED_SANDSTONE_BRICKS = register("decorated_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_PILLAR = register("sandstone_pillar", new PillarBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+
     //MISC
     public static final Block BONE_BRICKS = register("bone_bricks", new Block(EBProperties.BlockP.BONE), true);
     public static final Block BONE_BRICK_STAIRS = register("bone_brick_stairs", new StairsBlock(BONE_BRICKS.getDefaultState(), EBProperties.BlockP.BONE), true);

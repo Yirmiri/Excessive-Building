@@ -12,6 +12,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.yirmiri.excessive_building.block.AncientLeavesBlock;
+import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBSounds;
 import net.yirmiri.excessive_building.registry.EBStatusEffects;
 
@@ -53,6 +54,10 @@ public class EBProperties {
         public static final Block.Settings OXIDIZED_COPPER = FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER);
         public static final Block.Settings COPPER_BUTTON = FabricBlockSettings.copyOf(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE);
         public static final Block.Settings COPPER_PRESSURE_PLATE = FabricBlockSettings.copyOf(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE);
+
+        //POLISHED SANDSTONE
+        public static final Block.Settings POLISHED_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_SANDSTONE);
+        public static final Block.Settings POLISHED_RED_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_RED_SANDSTONE);
 
         //SOUL
         public static final Block.Settings SOUL_MAGMA = FabricBlockSettings.copyOf(Blocks.MAGMA_BLOCK).mapColor(MapColor.BROWN);

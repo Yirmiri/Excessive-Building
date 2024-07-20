@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/polished_soul_sandstone_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/polished_soul_sandstone"
+    },
+    "type=top": {
+      "model": "excessive_building:block/polished_soul_sandstone_slab_top"
+    }
+  }
+}

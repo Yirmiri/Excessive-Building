@@ -244,6 +244,25 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS, "Smooth Soul Sandstone Stairs");
         build.add(EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS, "Smooth Soul Sandstone Vertical Stairs");
         build.add(EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB, "Smooth Soul Sandstone Slab");
+        build.add(EBBlocks.POLISHED_SANDSTONE, "Polished Sandstone");
+        build.add(EBBlocks.POLISHED_SANDSTONE_STAIRS, "Polished Sandstone Stairs");
+        build.add(EBBlocks.POLISHED_SANDSTONE_VERTICAL_STAIRS, "Polished Sandstone Vertical Stairs");
+        build.add(EBBlocks.POLISHED_SANDSTONE_SLAB, "Polished Sandstone Slab");
+        build.add(EBBlocks.POLISHED_SANDSTONE_WALL, "Polished Sandstone Wall");
+        build.add(EBBlocks.SANDSTONE_BRICKS, "Sandstone Bricks");
+        build.add(EBBlocks.SANDSTONE_BRICK_STAIRS, "Sandstone Brick Stairs");
+        build.add(EBBlocks.SANDSTONE_BRICK_VERTICAL_STAIRS, "Sandstone Brick Vertical Stairs");
+        build.add(EBBlocks.SANDSTONE_BRICK_SLAB, "Sandstone Brick Slab");
+        build.add(EBBlocks.SANDSTONE_BRICK_WALL, "Sandstone Brick Wall");
+        build.add(EBBlocks.SANDSTONE_TILES, "Sandstone Tiles");
+        build.add(EBBlocks.SANDSTONE_TILE_STAIRS, "Sandstone Tile Stairs");
+        build.add(EBBlocks.SANDSTONE_TILE_VERTICAL_STAIRS, "Sandstone Tile Vertical Stairs");
+        build.add(EBBlocks.SANDSTONE_TILE_SLAB, "Sandstone Tile Slab");
+        build.add(EBBlocks.SANDSTONE_TILE_WALL, "Sandstone Tile Wall");
+        build.add(EBBlocks.CHISELED_SANDSTONE_BRICKS, "Chiseled Sandstone Bricks");
+        build.add(EBBlocks.DECORATED_SANDSTONE_BRICKS, "Decorated Sandstone Bricks");
+        build.add(EBBlocks.ENGRAVED_SANDSTONE_BRICKS, "Engraved Sandstone Bricks");
+        build.add(EBBlocks.SANDSTONE_PILLAR, "Sandstone Pillar");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
