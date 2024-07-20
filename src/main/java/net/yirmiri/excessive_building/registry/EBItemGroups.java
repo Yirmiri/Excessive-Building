@@ -201,14 +201,26 @@ public class EBItemGroups {
                 entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.PURPLE.getId()));
                 entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.MAGENTA.getId()));
                 entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.PINK.getId()));
-                
+
+                entries.add(EBBlocks.SOUL_SANDSTONE);
+                entries.add(EBBlocks.SOUL_SANDSTONE_STAIRS);
+                entries.add(EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SOUL_SANDSTONE_SLAB);
+                entries.add(EBBlocks.SOUL_SANDSTONE_WALL);
+                entries.add(EBBlocks.CHISELED_SOUL_SANDSTONE);
+                entries.add(EBBlocks.SMOOTH_SOUL_SANDSTONE);
+                entries.add(EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS);
+                entries.add(EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB);
+                entries.add(EBBlocks.CUT_SOUL_SANDSTONE);
+                entries.add(EBBlocks.CUT_SOUL_SANDSTONE_SLAB);
+                entries.add(EBBlocks.SOUL_MAGMA_BLOCK);
+
                 entries.add(EBBlocks.BONE_BRICKS);
                 entries.add(EBBlocks.BONE_BRICK_STAIRS);
                 entries.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.BONE_BRICK_SLAB);
                 entries.add(EBBlocks.BONE_BRICK_WALL);
-
-                entries.add(EBBlocks.SOUL_MAGMA_BLOCK);
                 
                 entries.add(EBBlocks.IRON_BRICKS);
                 entries.add(EBBlocks.IRON_BRICK_STAIRS);

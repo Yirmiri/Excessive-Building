@@ -19,6 +19,7 @@ import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
 import net.yirmiri.excessive_building.util.EBTags;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class EBRecipeGen extends FabricRecipeProvider {
@@ -1224,6 +1225,12 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(EBBlocks.BONE_BRICKS), conditionsFromItem(EBBlocks.BONE_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BONE_BRICK_WALL)));
 
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICKS, Blocks.BONE_BLOCK, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICK_STAIRS, EBBlocks.BONE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICK_SLAB, EBBlocks.BONE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICK_VERTICAL_STAIRS, EBBlocks.BONE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICK_WALL, EBBlocks.BONE_BRICKS, 1);
+
         for (DyeColor colors : DyeColor.values()) {
             offerCarpetRecipe(exporter, EBBlocks.getDyedKnittedCarpets(colors.getId()), EBBlocks.getDyedKnittedWools(colors.getId()));
         }
@@ -1233,11 +1240,83 @@ public class EBRecipeGen extends FabricRecipeProvider {
         }
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_MAGMA_BLOCK, 2)
-                .input('#', Blocks.SOUL_SOIL).input('@', Items.MAGMA_CREAM)
+                .input('#', EBBlocks.SOUL_SANDSTONE).input('@', Items.MAGMA_CREAM)
                 .pattern("@#")
                 .pattern("#@")
                 .criterion(hasItem(Items.MAGMA_CREAM), conditionsFromItem(Items.MAGMA_CREAM))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SOUL_MAGMA_BLOCK)));
+
+        createTwoByTwoRecipe(EBBlocks.SOUL_SANDSTONE, 1,
+                Ingredient.ofItems(Items.SOUL_SAND))
+                .criterion(hasItem(Items.SOUL_SAND), conditionsFromItem(Items.SOUL_SAND))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SOUL_SANDSTONE)));
+
+        createStairsRecipe(EBBlocks.SOUL_SANDSTONE_STAIRS,
+                Ingredient.ofItems(EBBlocks.SOUL_SANDSTONE))
+                .criterion(hasItem(EBBlocks.SOUL_SANDSTONE), conditionsFromItem(EBBlocks.SOUL_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SOUL_SANDSTONE_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_SLAB,
+                Ingredient.ofItems(EBBlocks.SOUL_SANDSTONE))
+                .criterion(hasItem(EBBlocks.SOUL_SANDSTONE), conditionsFromItem(EBBlocks.SOUL_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SOUL_SANDSTONE_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.SOUL_SANDSTONE))
+                .criterion(hasItem(EBBlocks.SOUL_SANDSTONE), conditionsFromItem(EBBlocks.SOUL_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS)));
+
+        createPaneRecipe(EBBlocks.SOUL_SANDSTONE_WALL, 6,
+                Ingredient.ofItems(EBBlocks.SOUL_SANDSTONE))
+                .criterion(hasItem(EBBlocks.SOUL_SANDSTONE), conditionsFromItem(EBBlocks.SOUL_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SOUL_SANDSTONE_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_STAIRS, EBBlocks.SOUL_SANDSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_SLAB, EBBlocks.SOUL_SANDSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS, EBBlocks.SOUL_SANDSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_WALL, EBBlocks.SOUL_SANDSTONE, 1);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHISELED_SOUL_SANDSTONE, EBBlocks.SOUL_SANDSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CUT_SOUL_SANDSTONE, EBBlocks.SOUL_SANDSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CUT_SOUL_SANDSTONE_SLAB, EBBlocks.CUT_SOUL_SANDSTONE, 2);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHISELED_SOUL_SANDSTONE, 1)
+                .input('#', EBBlocks.SOUL_SANDSTONE_SLAB)
+                .pattern("#")
+                .pattern("#")
+                .criterion(hasItem(EBBlocks.SOUL_SANDSTONE_SLAB), conditionsFromItem(EBBlocks.SOUL_SANDSTONE_SLAB))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHISELED_SOUL_SANDSTONE)));
+
+        createTwoByTwoRecipe(EBBlocks.CUT_SOUL_SANDSTONE, 4,
+                Ingredient.ofItems(EBBlocks.SOUL_SANDSTONE))
+                .criterion(hasItem(EBBlocks.SOUL_SANDSTONE), conditionsFromItem(EBBlocks.SOUL_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CUT_SOUL_SANDSTONE)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CUT_SOUL_SANDSTONE_SLAB,
+                Ingredient.ofItems(EBBlocks.CUT_SOUL_SANDSTONE))
+                .criterion(hasItem(EBBlocks.CUT_SOUL_SANDSTONE), conditionsFromItem(EBBlocks.CUT_SOUL_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CUT_SOUL_SANDSTONE_SLAB)));
+
+        offerSmelting(exporter, List.of(EBBlocks.SOUL_SANDSTONE), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_SOUL_SANDSTONE, 0.1F, 200, "smooth_soul_sandstone");
+
+        createStairsRecipe(EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS,
+                Ingredient.ofItems(EBBlocks.SMOOTH_SOUL_SANDSTONE))
+                .criterion(hasItem(EBBlocks.SMOOTH_SOUL_SANDSTONE), conditionsFromItem(EBBlocks.SMOOTH_SOUL_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB,
+                Ingredient.ofItems(EBBlocks.SMOOTH_SOUL_SANDSTONE))
+                .criterion(hasItem(EBBlocks.SMOOTH_SOUL_SANDSTONE), conditionsFromItem(EBBlocks.SMOOTH_SOUL_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.SMOOTH_SOUL_SANDSTONE))
+                .criterion(hasItem(EBBlocks.SMOOTH_SOUL_SANDSTONE), conditionsFromItem(EBBlocks.SMOOTH_SOUL_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS, EBBlocks.SMOOTH_SOUL_SANDSTONE, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB, EBBlocks.SMOOTH_SOUL_SANDSTONE, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS, EBBlocks.SMOOTH_SOUL_SANDSTONE, 1);
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {

@@ -2,6 +2,7 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
@@ -26,6 +27,25 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendGlowRemovals();
         appendAncientLogs();
         appendGloomLogs();
+        appendSoulFireBaseBlocks();
+    }
+
+    public void appendSoulFireBaseBlocks() {
+        getOrCreateTagBuilder(ItemTags.SOUL_FIRE_BASE_BLOCKS)
+                .add(EBBlocks.SOUL_MAGMA_BLOCK.asItem())
+                .add(EBBlocks.SOUL_SANDSTONE.asItem())
+                .add(EBBlocks.SOUL_SANDSTONE_STAIRS.asItem())
+                .add(EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS.asItem())
+                .add(EBBlocks.SOUL_SANDSTONE_SLAB.asItem())
+                .add(EBBlocks.SOUL_SANDSTONE_WALL.asItem())
+                .add(EBBlocks.CUT_SOUL_SANDSTONE_SLAB.asItem())
+                .add(EBBlocks.CUT_SOUL_SANDSTONE.asItem())
+                .add(EBBlocks.CHISELED_SOUL_SANDSTONE.asItem())
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE.asItem())
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS.asItem())
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS.asItem())
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB.asItem())
+        ;
     }
 
     public void appendMosaic() {

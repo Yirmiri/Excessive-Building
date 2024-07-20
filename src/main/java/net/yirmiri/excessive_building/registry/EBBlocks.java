@@ -339,6 +339,21 @@ public class EBBlocks {
     public static final Block FUCHSIA_SEA_GLASS_PANE = register("fuchsia_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
 
     //SOUL SANDSTONE
+    public static final Block SOUL_SANDSTONE = register("soul_sandstone", new Block(EBProperties.BlockP.SOUL_SANDSTONE), true);
+    public static final Block SOUL_SANDSTONE_STAIRS = register("soul_sandstone_stairs", new StairsBlock(SOUL_SANDSTONE.getDefaultState(), EBProperties.BlockP.SOUL_SANDSTONE), true);
+    public static final Block SOUL_SANDSTONE_SLAB = register("soul_sandstone_slab", new SlabBlock(EBProperties.BlockP.SOUL_SANDSTONE), true);
+    public static final Block SOUL_SANDSTONE_VERTICAL_STAIRS = register("soul_sandstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.SOUL_SANDSTONE), true);
+    public static final Block SOUL_SANDSTONE_WALL = register("soul_sandstone_wall", new WallBlock(EBProperties.BlockP.SOUL_SANDSTONE), true);
+
+    public static final Block CUT_SOUL_SANDSTONE = register("cut_soul_sandstone", new Block(EBProperties.BlockP.CUT_SOUL_SANDSTONE), true);
+    public static final Block CUT_SOUL_SANDSTONE_SLAB = register("cut_soul_sandstone_slab", new SlabBlock(EBProperties.BlockP.CUT_SOUL_SANDSTONE), true);
+    public static final Block CHISELED_SOUL_SANDSTONE = register("chiseled_soul_sandstone", new Block(EBProperties.BlockP.CUT_SOUL_SANDSTONE), true);
+
+    public static final Block SMOOTH_SOUL_SANDSTONE = register("smooth_soul_sandstone", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
+    public static final Block SMOOTH_SOUL_SANDSTONE_STAIRS = register("smooth_soul_sandstone_stairs", new StairsBlock(SMOOTH_SOUL_SANDSTONE.getDefaultState(), EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
+    public static final Block SMOOTH_SOUL_SANDSTONE_SLAB = register("smooth_soul_sandstone_slab", new SlabBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
+    public static final Block SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS = register("smooth_soul_sandstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
+
     public static final Block SOUL_MAGMA_BLOCK = register("soul_magma_block", new SoulMagmaBlock(EBProperties.BlockP.SOUL_MAGMA), true);
 
     //MISC

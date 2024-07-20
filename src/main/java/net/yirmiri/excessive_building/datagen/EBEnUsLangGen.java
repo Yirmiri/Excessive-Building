@@ -232,6 +232,18 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS, "Bone Brick Vertical Stairs");
         build.add(EBBlocks.BONE_BRICK_WALL, "Bone Brick Wall");
         build.add(EBBlocks.SOUL_MAGMA_BLOCK, "Soul Magma Block");
+        build.add(EBBlocks.SOUL_SANDSTONE, "Soul Sandstone");
+        build.add(EBBlocks.SOUL_SANDSTONE_STAIRS, "Soul Sandstone Stairs");
+        build.add(EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS, "Soul Sandstone Vertical Stairs");
+        build.add(EBBlocks.SOUL_SANDSTONE_SLAB, "Soul Sandstone Slab");
+        build.add(EBBlocks.SOUL_SANDSTONE_WALL, "Soul Sandstone Wall");
+        build.add(EBBlocks.CUT_SOUL_SANDSTONE, "Cut Soul Sandstone");
+        build.add(EBBlocks.CUT_SOUL_SANDSTONE_SLAB, "Cut Soul Sandstone Slab");
+        build.add(EBBlocks.CHISELED_SOUL_SANDSTONE, "Chiseled Soul Sandstone");
+        build.add(EBBlocks.SMOOTH_SOUL_SANDSTONE, "Smooth Soul Sandstone");
+        build.add(EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS, "Smooth Soul Sandstone Stairs");
+        build.add(EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS, "Smooth Soul Sandstone Vertical Stairs");
+        build.add(EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB, "Smooth Soul Sandstone Slab");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

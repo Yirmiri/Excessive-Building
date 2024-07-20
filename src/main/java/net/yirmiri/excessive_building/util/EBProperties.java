@@ -54,8 +54,13 @@ public class EBProperties {
         public static final Block.Settings COPPER_BUTTON = FabricBlockSettings.copyOf(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE);
         public static final Block.Settings COPPER_PRESSURE_PLATE = FabricBlockSettings.copyOf(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE);
 
+        //SOUL
+        public static final Block.Settings SOUL_MAGMA = FabricBlockSettings.copyOf(Blocks.MAGMA_BLOCK).mapColor(MapColor.BROWN);
+        public static final Block.Settings SOUL_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SANDSTONE).mapColor(MapColor.BROWN);
+        public static final Block.Settings CUT_SOUL_SANDSTONE = FabricBlockSettings.copyOf(Blocks.CUT_SANDSTONE).mapColor(MapColor.BROWN);
+        public static final Block.Settings SMOOTH_SOUL_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_SANDSTONE).mapColor(MapColor.BROWN);
+
         //MISC
-        public static final Block.Settings SOUL_MAGMA = FabricBlockSettings.copyOf(Blocks.MAGMA_BLOCK).mapColor(MapColor.SPRUCE_BROWN);
         public static final Block.Settings BONE = FabricBlockSettings.copyOf(Blocks.BONE_BLOCK);
         public static final Block.Settings INDESTRUCTIBLE = FabricBlockSettings.copyOf(Blocks.BEDROCK);
     }

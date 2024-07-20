@@ -1,6 +1,7 @@
-// 1.21	2024-07-19T13:53:30.9349416	Excessive Building/Tags for minecraft:item
+// 1.21	2024-07-20T12:46:24.0079062	Excessive Building/Tags for minecraft:item
 886e5e1db1abef8583882d996f8600275f839c37 data\excessive_building\tags\item\glow_removals.json
 d59daccf97972bb6f8fd061803196366ec6e3c44 data\excessive_building\tags\item\gloom_logs.json
+b1c89c659111a97e328fb9fcdc24cfa730e9657f data\minecraft\tags\item\soul_fire_base_blocks.json
 dbf07108c437f6f048248f06fc2ed6dd557d01cb data\minecraft\tags\item\decorated_pot_ingredients.json
 af67ffc85b2896f8d2a80defb48b7466a43aee39 data\minecraft\tags\item\saplings.json
 828586880a6c6a1fd3470b751acb95543b47e4c6 data\excessive_building\tags\item\mosaic.json

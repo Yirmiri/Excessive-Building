@@ -44,6 +44,44 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendDampensVibrations();
         appendWoolCarpets();
         appendWool();
+        appendSoulFireBaseBlocks();
+        appendSoulSpeedBlocks();
+    }
+
+    public void appendSoulSpeedBlocks() {
+        getOrCreateTagBuilder(BlockTags.SOUL_SPEED_BLOCKS)
+                .add(EBBlocks.SOUL_MAGMA_BLOCK)
+                .add(EBBlocks.SOUL_SANDSTONE)
+                .add(EBBlocks.SOUL_SANDSTONE_STAIRS)
+                .add(EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS)
+                .add(EBBlocks.SOUL_SANDSTONE_SLAB)
+                .add(EBBlocks.SOUL_SANDSTONE_WALL)
+                .add(EBBlocks.CUT_SOUL_SANDSTONE_SLAB)
+                .add(EBBlocks.CUT_SOUL_SANDSTONE)
+                .add(EBBlocks.CHISELED_SOUL_SANDSTONE)
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE)
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS)
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS)
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB)
+        ;
+    }
+
+    public void appendSoulFireBaseBlocks() {
+        getOrCreateTagBuilder(BlockTags.SOUL_FIRE_BASE_BLOCKS)
+                .add(EBBlocks.SOUL_MAGMA_BLOCK)
+                .add(EBBlocks.SOUL_SANDSTONE)
+                .add(EBBlocks.SOUL_SANDSTONE_STAIRS)
+                .add(EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS)
+                .add(EBBlocks.SOUL_SANDSTONE_SLAB)
+                .add(EBBlocks.SOUL_SANDSTONE_WALL)
+                .add(EBBlocks.CUT_SOUL_SANDSTONE_SLAB)
+                .add(EBBlocks.CUT_SOUL_SANDSTONE)
+                .add(EBBlocks.CHISELED_SOUL_SANDSTONE)
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE)
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS)
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS)
+                .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB)
+        ;
     }
 
     public void appendDampensVibrations() {
@@ -319,11 +357,20 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)
                     .add(EBBlocks.BLACKSTONE_BRICK_WALL)
                     .add(EBBlocks.BONE_BRICK_WALL)
+                    .add(EBBlocks.SOUL_SANDSTONE_WALL)
             ;
         }
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.SOUL_SANDSTONE)
+                    .add(EBBlocks.SOUL_SANDSTONE_STAIRS)
+                    .add(EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS)
+                    .add(EBBlocks.SOUL_SANDSTONE_SLAB)
+                    .add(EBBlocks.SOUL_SANDSTONE_WALL)
+                    .add(EBBlocks.CUT_SOUL_SANDSTONE_SLAB)
+                    .add(EBBlocks.CUT_SOUL_SANDSTONE)
+                    .add(EBBlocks.CHISELED_SOUL_SANDSTONE)
                     .add(EBBlocks.SOUL_MAGMA_BLOCK)
                     .add(EBBlocks.BONE_BRICKS)
                     .add(EBBlocks.BONE_BRICK_STAIRS)
@@ -425,6 +472,10 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.IRON_BRICK_STAIRS)
                     .add(EBBlocks.IRON_BRICK_SLAB)
                     .add(EBBlocks.IRON_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.SMOOTH_SOUL_SANDSTONE)
+                    .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS)
+                    .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS)
+                    .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB)
             ;
         }
 
