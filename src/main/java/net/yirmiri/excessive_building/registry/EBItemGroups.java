@@ -277,11 +277,12 @@ public class EBItemGroups {
                 
                 entries.add(EBBlocks.SOUL_MAGMA_BLOCK);
 
-                entries.add(EBBlocks.BONE_BRICKS);
-                entries.add(EBBlocks.BONE_BRICK_STAIRS);
-                entries.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
-                entries.add(EBBlocks.BONE_BRICK_SLAB);
-                entries.add(EBBlocks.BONE_BRICK_WALL);
+                //TODO: MAKE PRETTY ;W;
+//                entries.add(EBBlocks.BONE_BRICKS);
+//                entries.add(EBBlocks.BONE_BRICK_STAIRS);
+//                entries.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
+//                entries.add(EBBlocks.BONE_BRICK_SLAB);
+//                entries.add(EBBlocks.BONE_BRICK_WALL);
                 
                 entries.add(EBBlocks.IRON_BRICKS);
                 entries.add(EBBlocks.IRON_BRICK_STAIRS);
