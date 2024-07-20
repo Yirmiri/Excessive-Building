@@ -266,6 +266,44 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.DECORATED_SANDSTONE_BRICKS);
         addDrop(EBBlocks.ENGRAVED_SANDSTONE_BRICKS);
         addDrop(EBBlocks.SANDSTONE_PILLAR);
+        addDrop(EBBlocks.POLISHED_RED_SANDSTONE);
+        addDrop(EBBlocks.POLISHED_RED_SANDSTONE_STAIRS);
+        addDrop(EBBlocks.POLISHED_RED_SANDSTONE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.POLISHED_RED_SANDSTONE_SLAB, slabDrops(EBBlocks.POLISHED_RED_SANDSTONE_SLAB));
+        addDrop(EBBlocks.POLISHED_RED_SANDSTONE_WALL);
+        addDrop(EBBlocks.RED_SANDSTONE_BRICKS);
+        addDrop(EBBlocks.RED_SANDSTONE_BRICK_STAIRS);
+        addDrop(EBBlocks.RED_SANDSTONE_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.RED_SANDSTONE_BRICK_SLAB, slabDrops(EBBlocks.RED_SANDSTONE_BRICK_SLAB));
+        addDrop(EBBlocks.RED_SANDSTONE_BRICK_WALL);
+        addDrop(EBBlocks.RED_SANDSTONE_TILES);
+        addDrop(EBBlocks.RED_SANDSTONE_TILE_STAIRS);
+        addDrop(EBBlocks.RED_SANDSTONE_TILE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.RED_SANDSTONE_TILE_SLAB, slabDrops(EBBlocks.RED_SANDSTONE_TILE_SLAB));
+        addDrop(EBBlocks.RED_SANDSTONE_TILE_WALL);
+        addDrop(EBBlocks.CHISELED_RED_SANDSTONE_BRICKS);
+        addDrop(EBBlocks.DECORATED_RED_SANDSTONE_BRICKS);
+        addDrop(EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS);
+        addDrop(EBBlocks.RED_SANDSTONE_PILLAR);
+        addDrop(EBBlocks.POLISHED_SOUL_SANDSTONE);
+        addDrop(EBBlocks.POLISHED_SOUL_SANDSTONE_STAIRS);
+        addDrop(EBBlocks.POLISHED_SOUL_SANDSTONE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.POLISHED_SOUL_SANDSTONE_SLAB, slabDrops(EBBlocks.POLISHED_SOUL_SANDSTONE_SLAB));
+        addDrop(EBBlocks.POLISHED_SOUL_SANDSTONE_WALL);
+        addDrop(EBBlocks.SOUL_SANDSTONE_BRICKS);
+        addDrop(EBBlocks.SOUL_SANDSTONE_BRICK_STAIRS);
+        addDrop(EBBlocks.SOUL_SANDSTONE_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.SOUL_SANDSTONE_BRICK_SLAB, slabDrops(EBBlocks.SOUL_SANDSTONE_BRICK_SLAB));
+        addDrop(EBBlocks.SOUL_SANDSTONE_BRICK_WALL);
+        addDrop(EBBlocks.SOUL_SANDSTONE_TILES);
+        addDrop(EBBlocks.SOUL_SANDSTONE_TILE_STAIRS);
+        addDrop(EBBlocks.SOUL_SANDSTONE_TILE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.SOUL_SANDSTONE_TILE_SLAB, slabDrops(EBBlocks.SOUL_SANDSTONE_TILE_SLAB));
+        addDrop(EBBlocks.SOUL_SANDSTONE_TILE_WALL);
+        addDrop(EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS);
+        addDrop(EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS);
+        addDrop(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS);
+        addDrop(EBBlocks.SOUL_SANDSTONE_PILLAR);
     }
 
     private void addDyedKnittedWoolDrops() {

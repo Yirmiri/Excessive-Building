@@ -40,6 +40,10 @@ public class EBRegistries {
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_PRESSURE_PLATE, EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE, EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE, EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_BUTTON, EBBlocks.EXPOSED_COPPER_BUTTON);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BUTTON, EBBlocks.WEATHERED_COPPER_BUTTON);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BUTTON, EBBlocks.OXIDIZED_COPPER_BUTTON);
     }
 
     public static void registerWaxables() {
@@ -67,6 +71,11 @@ public class EBRegistries {
         OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE);
         OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE);
         OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_BUTTON, EBBlocks.WAXED_COPPER_BUTTON);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BUTTON, EBBlocks.WAXED_EXPOSED_COPPER_BUTTON);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BUTTON, EBBlocks.WAXED_WEATHERED_COPPER_BUTTON);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.OXIDIZED_COPPER_BUTTON, EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
     }
 
     public static void registerStrippables() {

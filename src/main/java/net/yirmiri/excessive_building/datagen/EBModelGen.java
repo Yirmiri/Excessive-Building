@@ -304,7 +304,49 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerSingleton(EBBlocks.DECORATED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
         generator.registerSingleton(EBBlocks.ENGRAVED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
 
-        generator.registerAxisRotated(EBBlocks.SANDSTONE_PILLAR, Identifier.of("aurynium:assets/textures/block/sandstone_pillar_top"));
+        BlockStateModelGenerator.BlockTexturePool polishedRedSandstone = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_RED_SANDSTONE);
+        polishedRedSandstone.stairs(EBBlocks.POLISHED_RED_SANDSTONE_STAIRS);
+        polishedRedSandstone.slab(EBBlocks.POLISHED_RED_SANDSTONE_SLAB);
+        polishedRedSandstone.wall(EBBlocks.POLISHED_RED_SANDSTONE_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_RED_SANDSTONE_VERTICAL_STAIRS, EBBlocks.POLISHED_RED_SANDSTONE);
+
+        BlockStateModelGenerator.BlockTexturePool sandstoneRedBricks = generator.registerCubeAllModelTexturePool(EBBlocks.RED_SANDSTONE_BRICKS);
+        sandstoneRedBricks.stairs(EBBlocks.RED_SANDSTONE_BRICK_STAIRS);
+        sandstoneRedBricks.slab(EBBlocks.RED_SANDSTONE_BRICK_SLAB);
+        sandstoneRedBricks.wall(EBBlocks.RED_SANDSTONE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.RED_SANDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.RED_SANDSTONE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool sandstoneRedTiles = generator.registerCubeAllModelTexturePool(EBBlocks.RED_SANDSTONE_TILES);
+        sandstoneRedTiles.stairs(EBBlocks.RED_SANDSTONE_TILE_STAIRS);
+        sandstoneRedTiles.slab(EBBlocks.RED_SANDSTONE_TILE_SLAB);
+        sandstoneRedTiles.wall(EBBlocks.RED_SANDSTONE_TILE_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.RED_SANDSTONE_TILE_VERTICAL_STAIRS, EBBlocks.RED_SANDSTONE_TILES);
+
+        generator.registerSingleton(EBBlocks.CHISELED_RED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
+        generator.registerSingleton(EBBlocks.DECORATED_RED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
+        generator.registerSingleton(EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
+
+        BlockStateModelGenerator.BlockTexturePool polishedSoulSandstone = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_SOUL_SANDSTONE);
+        polishedSoulSandstone.stairs(EBBlocks.POLISHED_SOUL_SANDSTONE_STAIRS);
+        polishedSoulSandstone.slab(EBBlocks.POLISHED_SOUL_SANDSTONE_SLAB);
+        polishedSoulSandstone.wall(EBBlocks.POLISHED_SOUL_SANDSTONE_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_SOUL_SANDSTONE_VERTICAL_STAIRS, EBBlocks.POLISHED_SOUL_SANDSTONE);
+
+        BlockStateModelGenerator.BlockTexturePool sandstoneSoulBricks = generator.registerCubeAllModelTexturePool(EBBlocks.SOUL_SANDSTONE_BRICKS);
+        sandstoneSoulBricks.stairs(EBBlocks.SOUL_SANDSTONE_BRICK_STAIRS);
+        sandstoneSoulBricks.slab(EBBlocks.SOUL_SANDSTONE_BRICK_SLAB);
+        sandstoneSoulBricks.wall(EBBlocks.SOUL_SANDSTONE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.SOUL_SANDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.SOUL_SANDSTONE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool sandstoneSoulTiles = generator.registerCubeAllModelTexturePool(EBBlocks.SOUL_SANDSTONE_TILES);
+        sandstoneSoulTiles.stairs(EBBlocks.SOUL_SANDSTONE_TILE_STAIRS);
+        sandstoneSoulTiles.slab(EBBlocks.SOUL_SANDSTONE_TILE_SLAB);
+        sandstoneSoulTiles.wall(EBBlocks.SOUL_SANDSTONE_TILE_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.SOUL_SANDSTONE_TILE_VERTICAL_STAIRS, EBBlocks.SOUL_SANDSTONE_TILES);
+
+        generator.registerSingleton(EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
+        generator.registerSingleton(EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
+        generator.registerSingleton(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
     }
 
     @Override

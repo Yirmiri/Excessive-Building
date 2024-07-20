@@ -222,6 +222,26 @@ public class EBItemGroups {
                 entries.add(EBBlocks.ENGRAVED_SANDSTONE_BRICKS);
                 entries.add(EBBlocks.SANDSTONE_PILLAR);
 
+                entries.add(EBBlocks.POLISHED_RED_SANDSTONE);
+                entries.add(EBBlocks.POLISHED_RED_SANDSTONE_STAIRS);
+                entries.add(EBBlocks.POLISHED_RED_SANDSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_RED_SANDSTONE_SLAB);
+                entries.add(EBBlocks.POLISHED_RED_SANDSTONE_WALL);
+                entries.add(EBBlocks.RED_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.RED_SANDSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.RED_SANDSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.RED_SANDSTONE_BRICK_SLAB);
+                entries.add(EBBlocks.RED_SANDSTONE_BRICK_WALL);
+                entries.add(EBBlocks.RED_SANDSTONE_TILES);
+                entries.add(EBBlocks.RED_SANDSTONE_TILE_STAIRS);
+                entries.add(EBBlocks.RED_SANDSTONE_TILE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.RED_SANDSTONE_TILE_SLAB);
+                entries.add(EBBlocks.RED_SANDSTONE_TILE_WALL);
+                entries.add(EBBlocks.CHISELED_RED_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.DECORATED_RED_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.RED_SANDSTONE_PILLAR);
+
                 entries.add(EBBlocks.SOUL_SANDSTONE);
                 entries.add(EBBlocks.SOUL_SANDSTONE_STAIRS);
                 entries.add(EBBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS);
@@ -234,6 +254,27 @@ public class EBItemGroups {
                 entries.add(EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB);
                 entries.add(EBBlocks.CUT_SOUL_SANDSTONE);
                 entries.add(EBBlocks.CUT_SOUL_SANDSTONE_SLAB);
+
+                entries.add(EBBlocks.POLISHED_SOUL_SANDSTONE);
+                entries.add(EBBlocks.POLISHED_SOUL_SANDSTONE_STAIRS);
+                entries.add(EBBlocks.POLISHED_SOUL_SANDSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_SOUL_SANDSTONE_SLAB);
+                entries.add(EBBlocks.POLISHED_SOUL_SANDSTONE_WALL);
+                entries.add(EBBlocks.SOUL_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.SOUL_SANDSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.SOUL_SANDSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SOUL_SANDSTONE_BRICK_SLAB);
+                entries.add(EBBlocks.SOUL_SANDSTONE_BRICK_WALL);
+                entries.add(EBBlocks.SOUL_SANDSTONE_TILES);
+                entries.add(EBBlocks.SOUL_SANDSTONE_TILE_STAIRS);
+                entries.add(EBBlocks.SOUL_SANDSTONE_TILE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SOUL_SANDSTONE_TILE_SLAB);
+                entries.add(EBBlocks.SOUL_SANDSTONE_TILE_WALL);
+                entries.add(EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS);
+                entries.add(EBBlocks.SOUL_SANDSTONE_PILLAR);
+                
                 entries.add(EBBlocks.SOUL_MAGMA_BLOCK);
 
                 entries.add(EBBlocks.BONE_BRICKS);

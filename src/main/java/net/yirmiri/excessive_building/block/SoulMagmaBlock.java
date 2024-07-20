@@ -55,13 +55,12 @@ public class SoulMagmaBlock extends MagmaBlock {
     protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (state.get(POWERED) && !world.isReceivingRedstonePower(pos)) {
             world.setBlockState(pos, state.cycle(POWERED), Block.NOTIFY_LISTENERS);
-            BubbleColumnBlock.update(world, pos.up(), state);
         }
+        BubbleColumnBlock.update(world, pos.up(), state);
     }
 
     @Override
-    protected BlockState getStateForNeighborUpdate(
-            BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    protected BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (direction == Direction.UP && neighborState.isOf(Blocks.WATER)) {
             world.scheduleBlockTick(pos, this, 20);
         }

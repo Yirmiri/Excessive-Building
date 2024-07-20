@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "excessive_building:block/sandstone_pillar_top",
+    "side": "excessive_building:block/sandstone_pillar"
+  }
+}
