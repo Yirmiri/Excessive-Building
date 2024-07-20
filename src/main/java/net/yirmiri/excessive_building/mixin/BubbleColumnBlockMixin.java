@@ -25,7 +25,7 @@ public abstract class BubbleColumnBlockMixin {
     }
 
     @Inject(method = "canPlaceAt", at = @At("HEAD"), cancellable = true)
-    public void canPlaceAt(BlockState state, WorldView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
+    private void canPlaceAt(BlockState state, WorldView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         BlockState below = world.getBlockState(pos.down());
         if (below.isOf(EBBlocks.SOUL_MAGMA_BLOCK)) {
             cir.setReturnValue(true);
