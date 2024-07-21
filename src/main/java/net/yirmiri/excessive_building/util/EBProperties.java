@@ -76,6 +76,9 @@ public class EBProperties {
 
         //DECORATIVES
         public static final Block.Settings WOODEN_MUG = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(0.5F).resistance(0F);
+        public static final Block.Settings GLASS_JAR = FabricBlockSettings.copyOf(Blocks.GLASS).strength(0.5F).resistance(0F).nonOpaque();
+        public static final Block.Settings FIRE_GLASS_JAR = FabricBlockSettings.copyOf(Blocks.GLASS).strength(0.5F).resistance(0F).lightLevel(15).nonOpaque();
+        public static final Block.Settings SOUL_FIRE_GLASS_JAR = FabricBlockSettings.copyOf(Blocks.GLASS).strength(0.5F).resistance(0F).lightLevel(7).nonOpaque();
 
         //MISC
         public static final Block.Settings BONE = FabricBlockSettings.copyOf(Blocks.BONE_BLOCK);

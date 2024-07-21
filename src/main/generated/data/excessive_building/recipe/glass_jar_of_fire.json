@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "excessive_building:glass_jar"
+    },
+    "@": {
+      "item": "minecraft:fire_charge"
+    }
+  },
+  "pattern": [
+    "#",
+    "@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:glass_jar_of_fire"
+  }
+}

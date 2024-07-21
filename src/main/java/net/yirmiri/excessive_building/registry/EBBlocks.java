@@ -459,6 +459,9 @@ public class EBBlocks {
 
     //DECORATIVES
     public static final Block WOODEN_MUG = register("wooden_mug", new WoodenMugBlock(EBProperties.BlockP.WOODEN_MUG), true);
+    public static final Block GLASS_JAR = register("glass_jar", new GlassJarBlock(EBProperties.BlockP.GLASS_JAR), true);
+    public static final Block GLASS_JAR_OF_FIRE = register("glass_jar_of_fire", new GlassJarBlock(EBProperties.BlockP.FIRE_GLASS_JAR), true);
+    public static final Block GLASS_JAR_OF_SOUL_FIRE = register("glass_jar_of_soul_fire", new GlassJarBlock(EBProperties.BlockP.SOUL_FIRE_GLASS_JAR), true);
 
     //MISC
     public static final Block BONE_BRICKS = register("bone_bricks", new Block(EBProperties.BlockP.BONE), true);

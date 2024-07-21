@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "excessive_building:block/glass_jar"
+    },
+    "hanging=true": {
+      "model": "excessive_building:block/glass_jar_hanging"
+    }
+  }
+}

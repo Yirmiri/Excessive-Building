@@ -31,12 +31,12 @@ public class WoodenMugBlock extends Block implements Waterloggable {
             Block.createCuboidShape(12, 2, 7, 14, 4, 9),
             Block.createCuboidShape(12, 6, 7, 14, 8, 9),
             Block.createCuboidShape(14, 2, 7, 16, 8, 9)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-    private static final VoxelShape SHAPE_EAST = Stream.of(
+    private static final VoxelShape SHAPE_WEST = Stream.of(
             Block.createCuboidShape(4, 0, 4, 12, 10, 12),
             Block.createCuboidShape(7, 2, 2, 9, 4, 4),
             Block.createCuboidShape(7, 6, 2, 9, 8, 4),
             Block.createCuboidShape(7, 2, 0, 9, 8, 2)).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
-    private static final VoxelShape SHAPE_WEST = Stream.of(
+    private static final VoxelShape SHAPE_EAST = Stream.of(
             Block.createCuboidShape(4, 0, 4, 12, 10, 12),
             Block.createCuboidShape(7, 2, 12, 9, 4, 14),
             Block.createCuboidShape(7, 6, 12, 9, 8, 14),

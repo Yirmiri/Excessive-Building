@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "furnished:block/glass_jar_of_soul_fire"
+    },
+    "hanging=true": {
+      "model": "furnished:block/glass_jar_of_soul_fire_hanging"
+    }
+  }
+}

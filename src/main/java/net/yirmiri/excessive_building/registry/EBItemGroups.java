@@ -398,6 +398,9 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WOODEN_MUG);
+                entries.add(EBBlocks.GLASS_JAR);
+                entries.add(EBBlocks.GLASS_JAR_OF_FIRE);
+                entries.add(EBBlocks.GLASS_JAR_OF_SOUL_FIRE);
 
                 entries.add(EBItems.ANCIENT_POTTERY_SHERD);
                 entries.add(EBItems.BITTER_POTTERY_SHERD);

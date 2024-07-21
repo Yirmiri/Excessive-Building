@@ -58,6 +58,9 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     public void appendDecoratives() {
         getOrCreateTagBuilder(EBTags.Blocks.DECORATIVES)
                 .add(EBBlocks.WOODEN_MUG)
+                .add(EBBlocks.GLASS_JAR)
+                .add(EBBlocks.GLASS_JAR_OF_FIRE)
+                .add(EBBlocks.GLASS_JAR_OF_SOUL_FIRE)
         ;
     }
 

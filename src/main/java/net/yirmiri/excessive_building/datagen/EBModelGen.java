@@ -451,13 +451,13 @@ public class EBModelGen extends FabricModelProvider {
             Identifier model = MUG.upload(mug, TextureMap.texture(mug), generator.modelCollector);
             generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(mug).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
                     .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, true))
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, false))
                     .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, true))
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, false))
                     .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true))
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, false))
                     .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true))));
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, false))));
         }
 
             public static void registerSeaGlassPane(BlockStateModelGenerator generator, Block seaGlass, Block texture) {

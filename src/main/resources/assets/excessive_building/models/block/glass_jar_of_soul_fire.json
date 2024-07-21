@@ -1,0 +1,8 @@
+{
+  "parent": "excessive_building:block/template_glass_jar",
+  "textures": {
+    "particle": "minecraft:block/glass",
+    "texture": "excessive_building:block/glass_jar",
+    "content": "excessive_building:block/glass_jar_soul_fire"
+  }
+}

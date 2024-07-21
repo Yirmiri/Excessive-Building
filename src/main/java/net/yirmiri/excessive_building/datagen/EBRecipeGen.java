@@ -8,6 +8,7 @@ import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.DyeItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -1763,6 +1764,28 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern(" ##")
                 .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WOODEN_MUG)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GLASS_JAR, 3)
+                .input('#', Items.GLASS)
+                .pattern("# #")
+                .pattern("###")
+                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLASS_JAR)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GLASS_JAR_OF_FIRE, 1)
+                .input('#', EBBlocks.GLASS_JAR).input('@', Items.FIRE_CHARGE)
+                .pattern("#")
+                .pattern("@")
+                .criterion(hasItem(EBBlocks.GLASS_JAR), conditionsFromItem(EBBlocks.GLASS_JAR))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLASS_JAR_OF_FIRE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GLASS_JAR_OF_SOUL_FIRE, 1)
+                .input('#', EBBlocks.GLASS_JAR).input('@', Items.FIRE_CHARGE).input('!', ItemTags.SOUL_FIRE_BASE_BLOCKS)
+                .pattern("#")
+                .pattern("@")
+                .pattern("!")
+                .criterion(hasItem(EBBlocks.GLASS_JAR), conditionsFromItem(EBBlocks.GLASS_JAR))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLASS_JAR_OF_SOUL_FIRE)));
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {
