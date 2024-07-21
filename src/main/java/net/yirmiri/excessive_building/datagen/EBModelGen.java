@@ -347,6 +347,19 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerSingleton(EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
         generator.registerSingleton(EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
         generator.registerSingleton(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
+
+        EBModels.registerLadder(generator, EBBlocks.SPRUCE_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.BIRCH_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.JUNGLE_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.ACACIA_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.DARK_OAK_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.MANGROVE_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.CHERRY_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.BAMBOO_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.CRIMSON_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.WARPED_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.GLOOM_LADDER);
+        EBModels.registerLadder(generator, EBBlocks.ANCIENT_LADDER);
     }
 
     @Override
@@ -378,6 +391,19 @@ public class EBModelGen extends FabricModelProvider {
         generator.register(EBItems.IS_THAT_POTTERY_SHERD, Models.GENERATED);
         generator.register(EBItems.KOKOS_BUG_POTTERY_SHERD, Models.GENERATED);
         generator.register(EBItems.THIEF_POTTERY_SHERD, Models.GENERATED);
+
+        generator.register(EBBlocks.SPRUCE_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.BIRCH_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.JUNGLE_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.ACACIA_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.DARK_OAK_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.MANGROVE_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.CHERRY_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.BAMBOO_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.CRIMSON_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.WARPED_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.ANCIENT_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.GLOOM_LADDER.asItem(), Models.GENERATED);
     }
 
     public static class EBModels {
@@ -385,6 +411,9 @@ public class EBModelGen extends FabricModelProvider {
                 .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
 
         public static final Model SEA_GLASS_PANE = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_sea_glass_pane")
+                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+
+        public static final Model LADDER = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_ladder")
                 .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
 
         public static void registerVerticalStairs(BlockStateModelGenerator generator, Block verticalStairs, Block texture) {
@@ -411,6 +440,19 @@ public class EBModelGen extends FabricModelProvider {
                                 .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true))
                         .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
                                 .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true))));
+        }
+
+        public static void registerLadder(BlockStateModelGenerator generator, Block ladder) {
+            Identifier model = LADDER.upload(ladder, TextureMap.texture(ladder), generator.modelCollector);
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ladder).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
+                    .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, true))
+                    .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, true))
+                    .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true))
+                    .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true))));
         }
     }
 }

@@ -301,6 +301,18 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS, "Decorated Soul Sandstone Bricks");
         build.add(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS, "Engraved Soul Sandstone Bricks");
         build.add(EBBlocks.SOUL_SANDSTONE_PILLAR, "Soul Sandstone Pillar");
+        build.add(EBBlocks.SPRUCE_LADDER, "Spruce Ladder");
+        build.add(EBBlocks.BIRCH_LADDER, "Birch Ladder");
+        build.add(EBBlocks.JUNGLE_LADDER, "Jungle Ladder");
+        build.add(EBBlocks.ACACIA_LADDER, "Acacia Ladder");
+        build.add(EBBlocks.DARK_OAK_LADDER, "Dark Oak Ladder");
+        build.add(EBBlocks.MANGROVE_LADDER, "Mangrove Ladder");
+        build.add(EBBlocks.CHERRY_LADDER, "Cherry Ladder");
+        build.add(EBBlocks.BAMBOO_LADDER, "Bamboo Ladder");
+        build.add(EBBlocks.CRIMSON_LADDER, "Crimson Ladder");
+        build.add(EBBlocks.WARPED_LADDER, "Warped Ladder");
+        build.add(EBBlocks.ANCIENT_LADDER, "Ancient Ladder");
+        build.add(EBBlocks.GLOOM_LADDER, "Gloom Ladder");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

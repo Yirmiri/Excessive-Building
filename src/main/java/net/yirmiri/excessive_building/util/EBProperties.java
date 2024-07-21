@@ -18,7 +18,7 @@ import net.yirmiri.excessive_building.registry.EBStatusEffects;
 
 public class EBProperties {
     public static class BlockP {
-        //WOOD
+        //WOODS
         public static final Block.Settings GENERIC_WOOD = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS);
         public static final Block.Settings CHERRY_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS);
         public static final Block.Settings BAMBOO_WOOD = FabricBlockSettings.copyOf(Blocks.BAMBOO_PLANKS);
@@ -27,7 +27,16 @@ public class EBProperties {
         public static final Block.Settings ANCIENT_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS).mapColor(MapColor.TERRACOTTA_WHITE);
         public static final Block.Settings GLOOM_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS).mapColor(MapColor.RAW_IRON_PINK);
 
-        //STONE
+        //LADDERS
+        public static final Block.Settings GENERIC_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
+        public static final Block.Settings CHERRY_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
+        public static final Block.Settings BAMBOO_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
+        public static final Block.Settings CRIMSON_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
+        public static final Block.Settings WARPED_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
+        public static final Block.Settings ANCIENT_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER).mapColor(MapColor.TERRACOTTA_WHITE);
+        public static final Block.Settings GLOOM_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER).mapColor(MapColor.RAW_IRON_PINK);
+
+        //STONES
         public static final Block.Settings COBBLESTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLESTONE).sounds(EBSounds.COBBLED_BRICKS);
         public static final Block.Settings COBBLED_DEEPSLATE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).sounds(EBSounds.COBBLED_BRICKS);
         public static final Block.Settings BLACKSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.BLACKSTONE).sounds(EBSounds.COBBLED_BRICKS);
@@ -47,7 +56,7 @@ public class EBProperties {
         public static final Block.Settings DIAMOND = FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK);
         public static final Block.Settings NETHERITE = FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK);
 
-        //COPPER
+        //COPPERS
         public static final Block.Settings COPPER = FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK);
         public static final Block.Settings EXPOSED_COPPER = FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER);
         public static final Block.Settings WEATHERED_COPPER = FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER);
@@ -55,11 +64,11 @@ public class EBProperties {
         public static final Block.Settings COPPER_BUTTON = FabricBlockSettings.copyOf(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE);
         public static final Block.Settings COPPER_PRESSURE_PLATE = FabricBlockSettings.copyOf(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE);
 
-        //POLISHED SANDSTONE
+        //POLISHED SANDSTONES
         public static final Block.Settings POLISHED_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_SANDSTONE);
         public static final Block.Settings POLISHED_RED_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_RED_SANDSTONE);
 
-        //SOUL
+        //SOULS
         public static final Block.Settings SOUL_MAGMA = FabricBlockSettings.copyOf(Blocks.MAGMA_BLOCK).mapColor(MapColor.BROWN);
         public static final Block.Settings SOUL_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SANDSTONE).mapColor(MapColor.BROWN);
         public static final Block.Settings CUT_SOUL_SANDSTONE = FabricBlockSettings.copyOf(Blocks.CUT_SANDSTONE).mapColor(MapColor.BROWN);

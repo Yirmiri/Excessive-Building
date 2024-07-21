@@ -1620,6 +1620,66 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_TILE_STAIRS, EBBlocks.SOUL_SANDSTONE_TILES, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_TILE_SLAB, EBBlocks.SOUL_SANDSTONE_TILES, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_TILE_VERTICAL_STAIRS, EBBlocks.SOUL_SANDSTONE_TILES, 1);
+
+        createLadderRecipe(EBBlocks.SPRUCE_LADDER,
+                Ingredient.ofItems(Blocks.SPRUCE_PLANKS))
+                .criterion(hasItem(Blocks.SPRUCE_PLANKS), conditionsFromItem(Blocks.SPRUCE_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SPRUCE_LADDER)));
+
+        createLadderRecipe(EBBlocks.BIRCH_LADDER,
+                Ingredient.ofItems(Blocks.BIRCH_PLANKS))
+                .criterion(hasItem(Blocks.BIRCH_PLANKS), conditionsFromItem(Blocks.BIRCH_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BIRCH_LADDER)));
+
+        createLadderRecipe(EBBlocks.JUNGLE_LADDER,
+                Ingredient.ofItems(Blocks.JUNGLE_PLANKS))
+                .criterion(hasItem(Blocks.JUNGLE_PLANKS), conditionsFromItem(Blocks.JUNGLE_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.JUNGLE_LADDER)));
+
+        createLadderRecipe(EBBlocks.ACACIA_LADDER,
+                Ingredient.ofItems(Blocks.ACACIA_PLANKS))
+                .criterion(hasItem(Blocks.ACACIA_PLANKS), conditionsFromItem(Blocks.ACACIA_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ACACIA_LADDER)));
+
+        createLadderRecipe(EBBlocks.DARK_OAK_LADDER,
+                Ingredient.ofItems(Blocks.DARK_OAK_PLANKS))
+                .criterion(hasItem(Blocks.DARK_OAK_PLANKS), conditionsFromItem(Blocks.DARK_OAK_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_OAK_LADDER)));
+
+        createLadderRecipe(EBBlocks.MANGROVE_LADDER,
+                Ingredient.ofItems(Blocks.MANGROVE_PLANKS))
+                .criterion(hasItem(Blocks.MANGROVE_PLANKS), conditionsFromItem(Blocks.MANGROVE_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MANGROVE_LADDER)));
+
+        createLadderRecipe(EBBlocks.CHERRY_LADDER,
+                Ingredient.ofItems(Blocks.CHERRY_PLANKS))
+                .criterion(hasItem(Blocks.CHERRY_PLANKS), conditionsFromItem(Blocks.CHERRY_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHERRY_LADDER)));
+
+        createLadderRecipe(EBBlocks.BAMBOO_LADDER,
+                Ingredient.ofItems(Blocks.BAMBOO_PLANKS))
+                .criterion(hasItem(Blocks.BAMBOO_PLANKS), conditionsFromItem(Blocks.BAMBOO_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BAMBOO_LADDER)));
+
+        createLadderRecipe(EBBlocks.CRIMSON_LADDER,
+                Ingredient.ofItems(Blocks.CRIMSON_PLANKS))
+                .criterion(hasItem(Blocks.CRIMSON_PLANKS), conditionsFromItem(Blocks.CRIMSON_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CRIMSON_LADDER)));
+
+        createLadderRecipe(EBBlocks.WARPED_LADDER,
+                Ingredient.ofItems(Blocks.WARPED_PLANKS))
+                .criterion(hasItem(Blocks.WARPED_PLANKS), conditionsFromItem(Blocks.WARPED_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WARPED_LADDER)));
+
+        createLadderRecipe(EBBlocks.ANCIENT_LADDER,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_LADDER)));
+
+        createLadderRecipe(EBBlocks.GLOOM_LADDER,
+                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
+                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_LADDER)));
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {
@@ -1637,6 +1697,14 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .input('#', input)
                 .pattern("###")
                 .pattern("###");
+    }
+
+    public static CraftingRecipeJsonBuilder createLadderRecipe(ItemConvertible output, Ingredient input) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, 8)
+                .input('#', Ingredient.ofItems(Items.STICK)).input('@', input)
+                .pattern("# #")
+                .pattern("#@#")
+                .pattern("# #");
     }
 
     public static CraftingRecipeJsonBuilder createDyeEightRecipe(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

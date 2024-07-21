@@ -46,6 +46,24 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendWool();
         appendSoulFireBaseBlocks();
         appendSoulSpeedBlocks();
+        appendClimbable();
+    }
+
+    public void appendClimbable() {
+        getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+                .add(EBBlocks.SPRUCE_LADDER)
+                .add(EBBlocks.BIRCH_LADDER)
+                .add(EBBlocks.JUNGLE_LADDER)
+                .add(EBBlocks.ACACIA_LADDER)
+                .add(EBBlocks.DARK_OAK_LADDER)
+                .add(EBBlocks.MANGROVE_LADDER)
+                .add(EBBlocks.CHERRY_LADDER)
+                .add(EBBlocks.BAMBOO_LADDER)
+                .add(EBBlocks.CRIMSON_LADDER)
+                .add(EBBlocks.WARPED_LADDER)
+                .add(EBBlocks.ANCIENT_LADDER)
+                .add(EBBlocks.GLOOM_LADDER)
+        ;
     }
 
     public void appendSoulSpeedBlocks() {

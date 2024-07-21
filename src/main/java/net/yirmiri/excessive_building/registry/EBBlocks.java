@@ -429,6 +429,20 @@ public class EBBlocks {
     public static final Block DECORATED_SOUL_SANDSTONE_BRICKS = register("decorated_soul_sandstone_bricks", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_PILLAR = register("soul_sandstone_pillar", new PillarBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
 
+    //LADDERS
+    public static final Block SPRUCE_LADDER = register("spruce_ladder", new LadderBlock(EBProperties.BlockP.GENERIC_LADDER), true);
+    public static final Block BIRCH_LADDER = register("birch_ladder", new LadderBlock(EBProperties.BlockP.GENERIC_LADDER), true);
+    public static final Block JUNGLE_LADDER = register("jungle_ladder", new LadderBlock(EBProperties.BlockP.GENERIC_LADDER), true);
+    public static final Block ACACIA_LADDER = register("acacia_ladder", new LadderBlock(EBProperties.BlockP.GENERIC_LADDER), true);
+    public static final Block DARK_OAK_LADDER = register("dark_oak_ladder", new LadderBlock(EBProperties.BlockP.GENERIC_LADDER), true);
+    public static final Block MANGROVE_LADDER = register("mangrove_ladder", new LadderBlock(EBProperties.BlockP.GENERIC_LADDER), true);
+    public static final Block CHERRY_LADDER = register("cherry_ladder", new LadderBlock(EBProperties.BlockP.CHERRY_LADDER), true);
+    public static final Block BAMBOO_LADDER = register("bamboo_ladder", new LadderBlock(EBProperties.BlockP.BAMBOO_LADDER), true);
+    public static final Block CRIMSON_LADDER = register("crimson_ladder", new LadderBlock(EBProperties.BlockP.CRIMSON_LADDER), true);
+    public static final Block WARPED_LADDER = register("warped_ladder", new LadderBlock(EBProperties.BlockP.WARPED_LADDER), true);
+    public static final Block ANCIENT_LADDER = register("ancient_ladder", new LadderBlock(EBProperties.BlockP.ANCIENT_LADDER), true);
+    public static final Block GLOOM_LADDER = register("gloom_ladder", new LadderBlock(EBProperties.BlockP.GLOOM_LADDER), true);
+    
     //MISC
     public static final Block BONE_BRICKS = register("bone_bricks", new Block(EBProperties.BlockP.BONE), true);
     public static final Block BONE_BRICK_STAIRS = register("bone_brick_stairs", new StairsBlock(BONE_BRICKS.getDefaultState(), EBProperties.BlockP.BONE), true);

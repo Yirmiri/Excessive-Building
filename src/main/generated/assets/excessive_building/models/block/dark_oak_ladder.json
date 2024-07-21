@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:block/template_ladder",
+  "textures": {
+    "particle": "excessive_building:block/dark_oak_ladder",
+    "texture": "excessive_building:block/dark_oak_ladder"
+  }
+}

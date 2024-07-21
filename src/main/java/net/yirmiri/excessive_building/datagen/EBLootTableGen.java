@@ -304,6 +304,18 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS);
         addDrop(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS);
         addDrop(EBBlocks.SOUL_SANDSTONE_PILLAR);
+        addDrop(EBBlocks.SPRUCE_LADDER);
+        addDrop(EBBlocks.BIRCH_LADDER);
+        addDrop(EBBlocks.JUNGLE_LADDER);
+        addDrop(EBBlocks.ACACIA_LADDER);
+        addDrop(EBBlocks.DARK_OAK_LADDER);
+        addDrop(EBBlocks.MANGROVE_LADDER);
+        addDrop(EBBlocks.BAMBOO_LADDER);
+        addDrop(EBBlocks.CRIMSON_LADDER);
+        addDrop(EBBlocks.WARPED_LADDER);
+        addDrop(EBBlocks.CHERRY_LADDER);
+        addDrop(EBBlocks.GLOOM_LADDER);
+        addDrop(EBBlocks.ANCIENT_LADDER);
     }
 
     private void addDyedKnittedWoolDrops() {
