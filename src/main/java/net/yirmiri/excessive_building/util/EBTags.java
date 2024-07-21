@@ -22,6 +22,7 @@ public class EBTags {
         public static final TagKey<Item> GLOW_REMOVALS = create("glow_removals");
         public static final TagKey<Item> ANCIENT_LOGS = create("ancient_logs");
         public static final TagKey<Item> GLOOM_LOGS = create("gloom_logs");
+        public static final TagKey<Item> CRAFTING_TABLES = create("crafting_tables");
 
         private static TagKey<Item> create(String id) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id));

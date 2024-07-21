@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "crafting_table",
   "key": {
     "#": {
       "item": "minecraft:oak_planks"
@@ -12,5 +11,6 @@
   ],
   "result": {
     "item": "minecraft:crafting_table"
-  }
+  },
+  "show_notification": true
 }

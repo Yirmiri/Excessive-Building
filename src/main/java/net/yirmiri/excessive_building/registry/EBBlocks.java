@@ -454,8 +454,8 @@ public class EBBlocks {
     public static final Block BAMBOO_CRAFTING_TABLE = register("bamboo_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.BAMBOO_WOOD), true);
     public static final Block CRIMSON_CRAFTING_TABLE = register("crimson_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.CRIMSON_WOOD), true);
     public static final Block WARPED_CRAFTING_TABLE = register("warped_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.WARPED_WOOD), true);
-    public static final Block ANCIENT_CRAFTING_TABLE = register("ancient_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block GLOOM_CRAFTING_TABLE = register("gloom_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block ANCIENT_CRAFTING_TABLE = register("ancient_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.CHERRY_WOOD), true);
+    public static final Block GLOOM_CRAFTING_TABLE = register("gloom_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.CHERRY_WOOD), true);
     
     //MISC
     public static final Block BONE_BRICKS = register("bone_bricks", new Block(EBProperties.BlockP.BONE), true);

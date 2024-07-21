@@ -1680,6 +1680,81 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
                 .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_LADDER)));
+
+        createLadderRecipe(Blocks.LADDER,
+                Ingredient.ofItems(Blocks.OAK_PLANKS))
+                .criterion(hasItem(Blocks.OAK_PLANKS), conditionsFromItem(Blocks.OAK_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(Blocks.LADDER)));
+
+        createTwoByTwoRecipe(EBBlocks.SPRUCE_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(Blocks.SPRUCE_PLANKS))
+                .criterion(hasItem(Blocks.SPRUCE_PLANKS), conditionsFromItem(Blocks.SPRUCE_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SPRUCE_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.WARPED_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(Blocks.WARPED_PLANKS))
+                .criterion(hasItem(Blocks.WARPED_PLANKS), conditionsFromItem(Blocks.WARPED_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WARPED_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.CRIMSON_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(Blocks.CRIMSON_PLANKS))
+                .criterion(hasItem(Blocks.CRIMSON_PLANKS), conditionsFromItem(Blocks.CRIMSON_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CRIMSON_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.BAMBOO_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(Blocks.BAMBOO_PLANKS))
+                .criterion(hasItem(Blocks.BAMBOO_PLANKS), conditionsFromItem(Blocks.BAMBOO_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BAMBOO_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.CHERRY_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(Blocks.CHERRY_PLANKS))
+                .criterion(hasItem(Blocks.CHERRY_PLANKS), conditionsFromItem(Blocks.CHERRY_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHERRY_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.MANGROVE_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(Blocks.MANGROVE_PLANKS))
+                .criterion(hasItem(Blocks.MANGROVE_PLANKS), conditionsFromItem(Blocks.MANGROVE_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MANGROVE_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.DARK_OAK_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(Blocks.DARK_OAK_PLANKS))
+                .criterion(hasItem(Blocks.DARK_OAK_PLANKS), conditionsFromItem(Blocks.DARK_OAK_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_OAK_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.ACACIA_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(Blocks.ACACIA_PLANKS))
+                .criterion(hasItem(Blocks.ACACIA_PLANKS), conditionsFromItem(Blocks.ACACIA_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ACACIA_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.JUNGLE_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(Blocks.JUNGLE_PLANKS))
+                .criterion(hasItem(Blocks.JUNGLE_PLANKS), conditionsFromItem(Blocks.JUNGLE_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.JUNGLE_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.BIRCH_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(Blocks.BIRCH_PLANKS))
+                .criterion(hasItem(Blocks.BIRCH_PLANKS), conditionsFromItem(Blocks.BIRCH_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BIRCH_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.ANCIENT_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
+                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_CRAFTING_TABLE)));
+
+        createTwoByTwoRecipe(EBBlocks.GLOOM_CRAFTING_TABLE, 1,
+                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
+                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_CRAFTING_TABLE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, Blocks.CRAFTER, 1)
+                .input('#', Items.IRON_INGOT).input('@', Items.REDSTONE).input('!', Items.DROPPER).input('$', EBTags.Items.CRAFTING_TABLES)
+                .pattern("###")
+                .pattern("#$#")
+                .pattern("@!@")
+                .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
+                .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
+                .criterion(hasItem(Items.DROPPER), conditionsFromItem(Items.DROPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(Blocks.CRAFTER)));
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {

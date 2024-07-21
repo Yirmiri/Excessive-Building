@@ -372,6 +372,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
 
         //MISC
         build.add("excessive_building.container.kiln", "Kiln");
+        build.add("pack.excessive_building.vanilla_retextures", "Vanilla Retextures");
 
         //ITEM GROUPS
         build.add("itemgroup.excessive_building", "Excessive Building");
