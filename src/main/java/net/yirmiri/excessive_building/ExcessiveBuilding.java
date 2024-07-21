@@ -25,5 +25,6 @@ public class ExcessiveBuilding implements ModInitializer {
 		EBPotions.registerEBPotions();
 		EBDecoratedPotPatterns.registerEBPotPatterns();
 		EBSounds.registerEBSounds();
+		EBPacks.registerPacks();
 	}
 }

@@ -313,6 +313,18 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.WARPED_LADDER, "Warped Ladder");
         build.add(EBBlocks.ANCIENT_LADDER, "Ancient Ladder");
         build.add(EBBlocks.GLOOM_LADDER, "Gloom Ladder");
+        build.add(EBBlocks.SPRUCE_CRAFTING_TABLE, "Spruce Crafting Table");
+        build.add(EBBlocks.BIRCH_CRAFTING_TABLE, "Birch Crafting Table");
+        build.add(EBBlocks.JUNGLE_CRAFTING_TABLE, "Jungle Crafting Table");
+        build.add(EBBlocks.ACACIA_CRAFTING_TABLE, "Acacia Crafting Table");
+        build.add(EBBlocks.DARK_OAK_CRAFTING_TABLE, "Dark Oak Crafting Table");
+        build.add(EBBlocks.MANGROVE_CRAFTING_TABLE, "Mangrove Crafting Table");
+        build.add(EBBlocks.CHERRY_CRAFTING_TABLE, "Cherry Crafting Table");
+        build.add(EBBlocks.BAMBOO_CRAFTING_TABLE, "Bamboo Crafting Table");
+        build.add(EBBlocks.CRIMSON_CRAFTING_TABLE, "Crimson Crafting Table");
+        build.add(EBBlocks.WARPED_CRAFTING_TABLE, "Warped Crafting Table");
+        build.add(EBBlocks.ANCIENT_CRAFTING_TABLE, "Ancient Crafting Table");
+        build.add(EBBlocks.GLOOM_CRAFTING_TABLE, "Gloom Crafting Table");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/crimson_planks",
+    "east": "excessive_building:block/crimson_crafting_table_side",
+    "north": "excessive_building:block/crimson_crafting_table_front",
+    "particle": "excessive_building:block/crimson_crafting_table_front",
+    "south": "excessive_building:block/crimson_crafting_table_side",
+    "up": "excessive_building:block/crimson_crafting_table_top",
+    "west": "excessive_building:block/crimson_crafting_table_front"
+  }
+}

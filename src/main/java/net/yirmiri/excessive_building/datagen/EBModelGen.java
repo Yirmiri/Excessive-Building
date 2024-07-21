@@ -360,6 +360,19 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerLadder(generator, EBBlocks.WARPED_LADDER);
         EBModels.registerLadder(generator, EBBlocks.GLOOM_LADDER);
         EBModels.registerLadder(generator, EBBlocks.ANCIENT_LADDER);
+
+        generator.registerCubeWithCustomTextures(EBBlocks.SPRUCE_CRAFTING_TABLE, Blocks.SPRUCE_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.BIRCH_CRAFTING_TABLE, Blocks.BIRCH_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.JUNGLE_CRAFTING_TABLE, Blocks.JUNGLE_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.ACACIA_CRAFTING_TABLE, Blocks.ACACIA_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.DARK_OAK_CRAFTING_TABLE, Blocks.DARK_OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.MANGROVE_CRAFTING_TABLE, Blocks.MANGROVE_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.CHERRY_CRAFTING_TABLE, Blocks.CHERRY_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.BAMBOO_CRAFTING_TABLE, Blocks.BAMBOO_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.CRIMSON_CRAFTING_TABLE, Blocks.CRIMSON_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.WARPED_CRAFTING_TABLE, Blocks.WARPED_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.ANCIENT_CRAFTING_TABLE, EBBlocks.ANCIENT_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.registerCubeWithCustomTextures(EBBlocks.GLOOM_CRAFTING_TABLE, EBBlocks.GLOOM_PLANKS, TextureMap::frontSideWithCustomBottom);
     }
 
     @Override

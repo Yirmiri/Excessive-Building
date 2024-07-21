@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/dark_oak_planks",
+    "east": "excessive_building:block/dark_oak_crafting_table_side",
+    "north": "excessive_building:block/dark_oak_crafting_table_front",
+    "particle": "excessive_building:block/dark_oak_crafting_table_front",
+    "south": "excessive_building:block/dark_oak_crafting_table_side",
+    "up": "excessive_building:block/dark_oak_crafting_table_top",
+    "west": "excessive_building:block/dark_oak_crafting_table_front"
+  }
+}
