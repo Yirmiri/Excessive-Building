@@ -464,11 +464,16 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.BLACKSTONE_BRICK_WALL)
                     .add(EBBlocks.BONE_BRICK_WALL)
                     .add(EBBlocks.SOUL_SANDSTONE_WALL)
+                    .add(EBBlocks.QUARTZ_BRICK_WALL)
             ;
         }
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.QUARTZ_BRICK_STAIRS)
+                    .add(EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.QUARTZ_BRICK_SLAB)
+                    .add(EBBlocks.QUARTZ_BRICK_WALL)
                     .add(EBBlocks.POLISHED_SANDSTONE)
                     .add(EBBlocks.POLISHED_SANDSTONE_STAIRS)
                     .add(EBBlocks.POLISHED_SANDSTONE_VERTICAL_STAIRS)

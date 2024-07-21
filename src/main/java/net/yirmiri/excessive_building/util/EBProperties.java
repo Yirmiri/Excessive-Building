@@ -18,6 +18,9 @@ import net.yirmiri.excessive_building.registry.EBStatusEffects;
 
 public class EBProperties {
     public static class BlockP {
+        //VANILLA ADDITIONS
+        public static final Block.Settings QUARTZ_BRICKS = FabricBlockSettings.copyOf(Blocks.QUARTZ_BRICKS);
+
         //WOODS
         public static final Block.Settings GENERIC_WOOD = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.WOOD);
         public static final Block.Settings CHERRY_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS).sounds(BlockSoundGroup.CHERRY_WOOD);

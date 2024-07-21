@@ -1,5 +1,9 @@
 {
   "values": [
+    "excessive_building:quartz_brick_stairs",
+    "excessive_building:quartz_brick_vertical_stairs",
+    "excessive_building:quartz_brick_slab",
+    "excessive_building:quartz_brick_wall",
     "excessive_building:polished_sandstone",
     "excessive_building:polished_sandstone_stairs",
     "excessive_building:polished_sandstone_vertical_stairs",

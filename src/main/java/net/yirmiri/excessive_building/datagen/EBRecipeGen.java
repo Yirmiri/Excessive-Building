@@ -1786,6 +1786,31 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("!")
                 .criterion(hasItem(EBBlocks.GLASS_JAR), conditionsFromItem(EBBlocks.GLASS_JAR))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLASS_JAR_OF_SOUL_FIRE)));
+
+        createStairsRecipe(EBBlocks.QUARTZ_BRICK_STAIRS,
+                Ingredient.ofItems(Blocks.QUARTZ_BRICKS))
+                .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.QUARTZ_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_SLAB,
+                Ingredient.ofItems(Blocks.QUARTZ_BRICKS))
+                .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.QUARTZ_BRICK_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.QUARTZ_BRICKS))
+                .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS)));
+
+        createPaneRecipe(EBBlocks.QUARTZ_BRICK_WALL, 6,
+                Ingredient.ofItems(Blocks.QUARTZ_BRICKS))
+                .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.QUARTZ_BRICK_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS, Blocks.QUARTZ_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS, 1);
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {

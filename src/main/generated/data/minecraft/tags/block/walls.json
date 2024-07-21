@@ -5,6 +5,7 @@
     "excessive_building:cobbled_deepslate_brick_wall",
     "excessive_building:blackstone_brick_wall",
     "excessive_building:bone_brick_wall",
-    "excessive_building:soul_sandstone_wall"
+    "excessive_building:soul_sandstone_wall",
+    "excessive_building:quartz_brick_wall"
   ]
 }

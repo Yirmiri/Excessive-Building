@@ -375,6 +375,12 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerCubeWithCustomTextures(EBBlocks.GLOOM_CRAFTING_TABLE, EBBlocks.GLOOM_PLANKS, TextureMap::frontSideWithCustomBottom);
 
         EBModels.registerMug(generator, EBBlocks.WOODEN_MUG);
+
+        BlockStateModelGenerator.BlockTexturePool quartzBricks = generator.registerCubeAllModelTexturePool(Blocks.QUARTZ_BRICKS);
+        quartzBricks.stairs(EBBlocks.QUARTZ_BRICK_STAIRS);
+        quartzBricks.slab(EBBlocks.QUARTZ_BRICK_SLAB);
+        quartzBricks.wall(EBBlocks.QUARTZ_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS, Blocks.QUARTZ_BRICKS);
     }
 
     @Override

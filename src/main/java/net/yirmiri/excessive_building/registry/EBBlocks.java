@@ -66,6 +66,12 @@ public class EBBlocks {
     public static final Block PURPUR_VERTICAL_STAIRS = register("purpur_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.PURPUR_BLOCK)), true);
     public static final Block END_STONE_BRICK_VERTICAL_STAIRS = register("end_stone_brick_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.END_STONE_BRICKS)), true);
 
+    //VANILLA ADDITIONS
+    public static final Block QUARTZ_BRICK_STAIRS = register("quartz_brick_stairs", new StairsBlock(Blocks.QUARTZ_BRICKS.getDefaultState(), EBProperties.BlockP.QUARTZ_BRICKS), true);
+    public static final Block QUARTZ_BRICK_SLAB = register("quartz_brick_slab", new SlabBlock(EBProperties.BlockP.QUARTZ_BRICKS), true);
+    public static final Block QUARTZ_BRICK_VERTICAL_STAIRS = register("quartz_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.QUARTZ_BRICKS), true);
+    public static final Block QUARTZ_BRICK_WALL = register("quartz_brick_wall", new WallBlock(EBProperties.BlockP.QUARTZ_BRICKS), true);
+
     //MOSAIC WOOD
     public static final Block OAK_MOSAIC = register("oak_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block OAK_MOSAIC_STAIRS = register("oak_mosaic_stairs", new StairsBlock(OAK_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);

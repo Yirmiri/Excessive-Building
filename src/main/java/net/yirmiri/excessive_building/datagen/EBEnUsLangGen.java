@@ -329,6 +329,10 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.GLASS_JAR, "Glass Jar");
         build.add(EBBlocks.GLASS_JAR_OF_FIRE, "Glass Jar of Fire");
         build.add(EBBlocks.GLASS_JAR_OF_SOUL_FIRE, "Glass Jar of Soul Fire");
+        build.add(EBBlocks.QUARTZ_BRICK_STAIRS, "Quartz Brick Stairs");
+        build.add(EBBlocks.QUARTZ_BRICK_SLAB, "Quartz Brick Slab");
+        build.add(EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS, "Quartz Brick Vertical Stairs");
+        build.add(EBBlocks.QUARTZ_BRICK_WALL, "Quartz Brick Wall");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
