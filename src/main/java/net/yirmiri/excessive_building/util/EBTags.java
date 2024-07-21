@@ -11,6 +11,7 @@ public class EBTags {
     public static class Blocks {
         public static final TagKey<Block> ANCIENT_LOGS = create("ancient_logs");
         public static final TagKey<Block> GLOOM_LOGS = create("gloom_logs");
+        public static final TagKey<Block> DECORATIVES = create("decoratives");
 
         private static TagKey<Block> create(String id) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id));

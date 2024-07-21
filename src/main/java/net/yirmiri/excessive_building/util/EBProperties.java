@@ -74,6 +74,9 @@ public class EBProperties {
         public static final Block.Settings CUT_SOUL_SANDSTONE = FabricBlockSettings.copyOf(Blocks.CUT_SANDSTONE).mapColor(MapColor.BROWN);
         public static final Block.Settings SMOOTH_SOUL_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_SANDSTONE).mapColor(MapColor.BROWN);
 
+        //DECORATIVES
+        public static final Block.Settings WOODEN_MUG = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(0.5F).resistance(0F);
+
         //MISC
         public static final Block.Settings BONE = FabricBlockSettings.copyOf(Blocks.BONE_BLOCK);
         public static final Block.Settings INDESTRUCTIBLE = FabricBlockSettings.copyOf(Blocks.BEDROCK);

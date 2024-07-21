@@ -373,6 +373,8 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerCubeWithCustomTextures(EBBlocks.WARPED_CRAFTING_TABLE, Blocks.WARPED_PLANKS, TextureMap::frontSideWithCustomBottom);
         generator.registerCubeWithCustomTextures(EBBlocks.ANCIENT_CRAFTING_TABLE, EBBlocks.ANCIENT_PLANKS, TextureMap::frontSideWithCustomBottom);
         generator.registerCubeWithCustomTextures(EBBlocks.GLOOM_CRAFTING_TABLE, EBBlocks.GLOOM_PLANKS, TextureMap::frontSideWithCustomBottom);
+
+        EBModels.registerMug(generator, EBBlocks.WOODEN_MUG);
     }
 
     @Override
@@ -429,9 +431,25 @@ public class EBModelGen extends FabricModelProvider {
         public static final Model LADDER = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_ladder")
                 .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
 
+        public static final Model MUG = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_mug")
+                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+
         public static void registerVerticalStairs(BlockStateModelGenerator generator, Block verticalStairs, Block texture) {
             Identifier model = VERTICAL_STAIRS.upload(verticalStairs, TextureMap.texture(texture), generator.modelCollector);
             generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(verticalStairs).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
+                    .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, true))
+                    .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, true))
+                    .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true))
+                    .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true))));
+        }
+
+        public static void registerMug(BlockStateModelGenerator generator, Block mug) {
+            Identifier model = MUG.upload(mug, TextureMap.texture(mug), generator.modelCollector);
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(mug).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
                     .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
                             .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, true))
                     .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, model)

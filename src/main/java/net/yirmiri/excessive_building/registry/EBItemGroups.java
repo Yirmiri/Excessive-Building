@@ -397,6 +397,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
 
+                entries.add(EBBlocks.WOODEN_MUG);
+
                 entries.add(EBItems.ANCIENT_POTTERY_SHERD);
                 entries.add(EBItems.BITTER_POTTERY_SHERD);
                 entries.add(EBItems.BOIN_POTTERY_SHERD);

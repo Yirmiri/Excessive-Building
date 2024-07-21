@@ -47,6 +47,18 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendSoulFireBaseBlocks();
         appendSoulSpeedBlocks();
         appendClimbable();
+        appendDecoratives();
+        appendWoodenFences();
+        appendWoodenDoors();
+        appendWoodenTrapdoors();
+        appendWoodenSlabs();
+        appendWoodenStairs();
+    }
+
+    public void appendDecoratives() {
+        getOrCreateTagBuilder(EBTags.Blocks.DECORATIVES)
+                .add(EBBlocks.WOODEN_MUG)
+        ;
     }
 
     public void appendClimbable() {
@@ -63,6 +75,41 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.WARPED_LADDER)
                 .add(EBBlocks.ANCIENT_LADDER)
                 .add(EBBlocks.GLOOM_LADDER)
+        ;
+    }
+
+    public void appendWoodenDoors() {
+        getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
+                .add(EBBlocks.ANCIENT_DOOR)
+                .add(EBBlocks.GLOOM_DOOR)
+        ;
+    }
+
+    public void appendWoodenFences() {
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+                .add(EBBlocks.ANCIENT_FENCE)
+                .add(EBBlocks.GLOOM_FENCE)
+        ;
+    }
+
+    public void appendWoodenStairs() {
+        getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
+                .add(EBBlocks.ANCIENT_STAIRS)
+                .add(EBBlocks.GLOOM_STAIRS)
+        ;
+    }
+
+    public void appendWoodenSlabs() {
+        getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
+                .add(EBBlocks.ANCIENT_SLAB)
+                .add(EBBlocks.GLOOM_SLAB)
+        ;
+    }
+
+    public void appendWoodenTrapdoors() {
+        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
+                .add(EBBlocks.ANCIENT_TRAPDOOR)
+                .add(EBBlocks.GLOOM_TRAPDOOR)
         ;
     }
 
@@ -562,6 +609,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
         public void appendAxeMineable() {
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(EBBlocks.WOODEN_MUG)
                 .add(EBBlocks.SPRUCE_CRAFTING_TABLE)
                 .add(EBBlocks.BIRCH_CRAFTING_TABLE)
                 .add(EBBlocks.JUNGLE_CRAFTING_TABLE)

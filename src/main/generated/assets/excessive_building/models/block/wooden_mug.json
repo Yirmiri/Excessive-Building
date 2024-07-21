@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:block/template_mug",
+  "textures": {
+    "particle": "excessive_building:block/wooden_mug",
+    "texture": "excessive_building:block/wooden_mug"
+  }
+}

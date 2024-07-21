@@ -13,6 +13,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.registry.EBBlocks;
@@ -1755,6 +1756,13 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
                 .criterion(hasItem(Items.DROPPER), conditionsFromItem(Items.DROPPER))
                 .offerTo(exporter, Identifier.of(getRecipeName(Blocks.CRAFTER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.WOODEN_MUG, 3)
+                .input('#', ItemTags.WOODEN_SLABS).input('@', Items.STICK)
+                .pattern("@##")
+                .pattern(" ##")
+                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WOODEN_MUG)));
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {
