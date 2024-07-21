@@ -4,6 +4,6 @@
     "particle": "minecraft:block/glass",
     "texture": "excessive_building:block/glass_jar",
     "content": "excessive_building:block/glass_jar_soul_fire",
-    "top": "excessive_building:glass_jar_chain"
+    "top": "excessive_building:block/glass_jar_chain"
   }
 }
