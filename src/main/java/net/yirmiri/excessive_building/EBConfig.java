@@ -81,12 +81,12 @@ public class EBConfig {
                 .defineInRange("strongReachingAmplifier", 4, 0, 255);
 
         SHORTENING_DURATION = BUILDER
-                .comment("How long should the shortening potion last in ticks? (default: 12000)")
-                .defineInRange("shorteningDuration", 12000, 0, 72000);
+                .comment("How long should the shortening potion last in ticks? (default: 6000)")
+                .defineInRange("shorteningDuration", 6000, 0, 72000);
 
         LONG_SHORTENING_DURATION = BUILDER
-                .comment("How long should the long shortening potion last in ticks? (default: 24000)")
-                .defineInRange("longShorteningDuration", 24000, 0, 72000);
+                .comment("How long should the long shortening potion last in ticks? (default: 12000)")
+                .defineInRange("longShorteningDuration", 12000, 0, 72000);
 
         SHORTENING_AMPLIFIER = BUILDER
                 .comment("What level of shortening should the shortening potion grant? (default: 1)")

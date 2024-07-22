@@ -1,8 +1,5 @@
 package net.yirmiri.excessive_building.util;
 
-//5: logs || 20: planks/carpet || 30: shelves || 60: wool
-//5: planks/logs || 20: shelves || 30: wool || 60: carpet
-
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
@@ -163,6 +160,8 @@ public class EBRegistries {
     //TODO: ANCIENT/GLOOM
 
     public static void registerFlammables() {
+        //5: logs || 20: planks/carpet || 30: shelves || 60: wool
+        //5: planks/logs || 20: shelves || 30: wool || 60: carpet
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_OAK_PLANKS, 20, 5);
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_SPRUCE_PLANKS, 20, 5);
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHISELED_BIRCH_PLANKS, 20, 5);
