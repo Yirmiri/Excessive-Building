@@ -5,6 +5,7 @@ import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -16,6 +17,7 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+import net.yirmiri.excessive_building.EBConfig;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
@@ -32,6 +34,11 @@ public class GlassJarBlock extends Block implements Waterloggable {
     public GlassJarBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(HANGING, Boolean.valueOf(false)).with(WATERLOGGED, Boolean.valueOf(false)));
+    }
+
+    @Override
+    public boolean isEnabled(FeatureSet enable) {
+        return EBConfig.ENABLE_DECORATIVES.get();
     }
 
     @Nullable @Override

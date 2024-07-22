@@ -2,12 +2,14 @@ package net.yirmiri.excessive_building.block;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CraftingTableBlock;
+import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
 import net.minecraft.text.Text;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.util.EBCraftingScreenHandler;
 
 public class EBCraftingTableBlock extends CraftingTableBlock {
@@ -15,6 +17,11 @@ public class EBCraftingTableBlock extends CraftingTableBlock {
 
     public EBCraftingTableBlock(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    public boolean isEnabled(FeatureSet enable) {
+        return EBConfig.ENABLE_CRAFTING_TABLE_VARIANTS.get();
     }
 
     @Override

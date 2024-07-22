@@ -11,7 +11,8 @@ base {
 }
 
 repositories {
-
+	maven { url = "https://cursemaven.com" }
+	maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" }
 }
 
 fabricApi {
@@ -29,6 +30,9 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	//Config API
+	modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${forge_config_api_version}"
 }
 
 processResources {

@@ -7,6 +7,7 @@ import net.minecraft.block.Waterloggable;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -19,6 +20,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.WorldAccess;
+import net.yirmiri.excessive_building.EBConfig;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
@@ -50,6 +52,11 @@ public class WoodenMugBlock extends Block implements Waterloggable {
     public WoodenMugBlock(Settings settings) {
         super(settings);
         setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH).with(WATERLOGGED, false));
+    }
+
+    @Override
+    public boolean isEnabled(FeatureSet enable) {
+        return EBConfig.ENABLE_DECORATIVES.get();
     }
 
     @Override

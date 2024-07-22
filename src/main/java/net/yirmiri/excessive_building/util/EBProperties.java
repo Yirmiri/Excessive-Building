@@ -11,6 +11,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
+import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.AncientLeavesBlock;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBSounds;
@@ -97,7 +98,8 @@ public class EBProperties {
         public static final Item.Settings NETHERITE = new Item.Settings().fireproof();
 
         public static class Food {
-            public static final FoodComponent ANCIENT_FRUIT = new FoodComponent.Builder().nutrition(4).saturationModifier(0.8F).statusEffect(new StatusEffectInstance(EBStatusEffects.REACHING, 600, 1), 1.0F).alwaysEdible().build();
+            public static final FoodComponent ANCIENT_FRUIT = new FoodComponent.Builder().nutrition(4).saturationModifier(0.8F)
+            .statusEffect(new StatusEffectInstance(EBStatusEffects.REACHING, EBConfig.ANCIENT_FRUIT_DURATION.get(), EBConfig.ANCIENT_FRUIT_AMPLIFIER.get()), 1.0F).alwaysEdible().build();
         }
     }
 }
