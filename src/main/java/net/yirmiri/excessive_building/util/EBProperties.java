@@ -85,7 +85,13 @@ public class EBProperties {
         public static final Block.Settings FIRE_GLASS_JAR = FabricBlockSettings.copyOf(Blocks.GLASS).strength(0.5F).resistance(0F).lightLevel(15).nonOpaque();
         public static final Block.Settings SOUL_FIRE_GLASS_JAR = FabricBlockSettings.copyOf(Blocks.GLASS).strength(0.5F).resistance(0F).lightLevel(7).nonOpaque();
 
+        //STONE VARIANTS
+        public static final Block.Settings POLISHED_GRANITE = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE);
+        public static final Block.Settings POLISHED_ANDESITE = FabricBlockSettings.copyOf(Blocks.POLISHED_ANDESITE);
+        public static final Block.Settings POLISHED_DIORITE = FabricBlockSettings.copyOf(Blocks.POLISHED_DIORITE);
+
         //MISC
+        public static final Block.Settings BRICKS = FabricBlockSettings.copyOf(Blocks.BRICKS);
         public static final Block.Settings BONE = FabricBlockSettings.copyOf(Blocks.BONE_BLOCK);
         public static final Block.Settings INDESTRUCTIBLE = FabricBlockSettings.copyOf(Blocks.BEDROCK);
     }

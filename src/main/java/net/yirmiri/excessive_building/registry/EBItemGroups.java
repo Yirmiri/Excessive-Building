@@ -186,6 +186,34 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BLACKSTONE_BRICK_SLAB);
                 entries.add(EBBlocks.BLACKSTONE_BRICK_WALL);
 
+                entries.add(EBBlocks.GRANITE_BRICKS);
+                entries.add(EBBlocks.GRANITE_BRICK_STAIRS);
+                entries.add(EBBlocks.GRANITE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.GRANITE_BRICK_SLAB);
+                entries.add(EBBlocks.GRANITE_BRICK_WALL);
+
+                entries.add(EBBlocks.DIORITE_BRICKS);
+                entries.add(EBBlocks.DIORITE_BRICK_STAIRS);
+                entries.add(EBBlocks.DIORITE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.DIORITE_BRICK_SLAB);
+                entries.add(EBBlocks.DIORITE_BRICK_WALL);
+                
+                entries.add(EBBlocks.ANDESITE_BRICKS);
+                entries.add(EBBlocks.ANDESITE_BRICK_STAIRS);
+                entries.add(EBBlocks.ANDESITE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.ANDESITE_BRICK_SLAB);
+                entries.add(EBBlocks.ANDESITE_BRICK_WALL);
+
+                entries.add(EBBlocks.CRACKED_BRICKS);
+                entries.add(EBBlocks.HERRINGBONE_BRICKS);
+                entries.add(EBBlocks.SMOOTH_BRICKS);
+                entries.add(EBBlocks.CRACKED_SMOOTH_BRICKS);
+                entries.add(EBBlocks.SMOOTH_BRICK_STAIRS);
+                entries.add(EBBlocks.SMOOTH_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SMOOTH_BRICK_SLAB);
+                entries.add(EBBlocks.SMOOTH_BRICK_WALL);
+                entries.add(EBBlocks.SMOOTH_HERRINGBONE_BRICKS);
+
                 entries.add(EBItems.ANCIENT_SIGN);
                 entries.add(EBItems.ANCIENT_HANGING_SIGN);
                 entries.add(EBItems.GLOOM_SIGN);

@@ -398,6 +398,30 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS, "Polished Tuff Vertical Stairs");
         build.add(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS, "Tuff Brick Vertical Stairs");
         build.add(EBBlocks.GLOOM_SEEDS, "Gloom Seeds");
+        build.add(EBBlocks.GRANITE_BRICKS, "Granite Bricks");
+        build.add(EBBlocks.GRANITE_BRICK_STAIRS, "Granite Brick Stairs");
+        build.add(EBBlocks.GRANITE_BRICK_VERTICAL_STAIRS, "Granite Brick Vertical Stairs");
+        build.add(EBBlocks.GRANITE_BRICK_SLAB, "Granite Brick Slab");
+        build.add(EBBlocks.GRANITE_BRICK_WALL, "Granite Brick Wall");
+        build.add(EBBlocks.DIORITE_BRICKS, "Diorite Bricks");
+        build.add(EBBlocks.DIORITE_BRICK_STAIRS, "Diorite Brick Stairs");
+        build.add(EBBlocks.DIORITE_BRICK_VERTICAL_STAIRS, "Diorite Brick Vertical Stairs");
+        build.add(EBBlocks.DIORITE_BRICK_SLAB, "Diorite Brick Slab");
+        build.add(EBBlocks.DIORITE_BRICK_WALL, "Diorite Brick Wall");
+        build.add(EBBlocks.ANDESITE_BRICKS, "Andesite Bricks");
+        build.add(EBBlocks.ANDESITE_BRICK_STAIRS, "Andesite Brick Stairs");
+        build.add(EBBlocks.ANDESITE_BRICK_VERTICAL_STAIRS, "Andesite Brick Vertical Stairs");
+        build.add(EBBlocks.ANDESITE_BRICK_SLAB, "Andesite Brick Slab");
+        build.add(EBBlocks.ANDESITE_BRICK_WALL, "Andesite Brick Wall");
+        build.add(EBBlocks.SMOOTH_BRICKS, "Smooth Bricks");
+        build.add(EBBlocks.SMOOTH_BRICK_STAIRS, "Smooth Brick Stairs");
+        build.add(EBBlocks.SMOOTH_BRICK_VERTICAL_STAIRS, "Smooth Brick Vertical Stairs");
+        build.add(EBBlocks.SMOOTH_BRICK_SLAB, "Smooth Brick Slab");
+        build.add(EBBlocks.SMOOTH_BRICK_WALL, "Smooth Brick Wall");
+        build.add(EBBlocks.HERRINGBONE_BRICKS, "Herringbone Bricks");
+        build.add(EBBlocks.SMOOTH_HERRINGBONE_BRICKS, "Smooth Herringbone Bricks");
+        build.add(EBBlocks.CRACKED_BRICKS, "Cracked Bricks");
+        build.add(EBBlocks.CRACKED_SMOOTH_BRICKS, "Cracked Smooth Bricks");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

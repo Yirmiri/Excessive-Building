@@ -518,6 +518,36 @@ public class EBBlocks {
     public static final Block GLASS_JAR_OF_FIRE = registerDeco("glass_jar_of_fire", new GlassJarBlock(EBProperties.BlockP.FIRE_GLASS_JAR), true);
     public static final Block GLASS_JAR_OF_SOUL_FIRE = registerDeco("glass_jar_of_soul_fire", new GlassJarBlock(EBProperties.BlockP.SOUL_FIRE_GLASS_JAR), true);
 
+    //STONE VARIANTS
+    public static final Block GRANITE_BRICKS = register("granite_bricks", new Block(EBProperties.BlockP.POLISHED_GRANITE), true);
+    public static final Block GRANITE_BRICK_STAIRS = register("granite_brick_stairs", new StairsBlock(GRANITE_BRICKS.getDefaultState(), EBProperties.BlockP.POLISHED_GRANITE), true);
+    public static final Block GRANITE_BRICK_SLAB = register("granite_brick_slab", new SlabBlock(EBProperties.BlockP.POLISHED_GRANITE), true);
+    public static final Block GRANITE_BRICK_VERTICAL_STAIRS = registerVStairs("granite_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_GRANITE), true);
+    public static final Block GRANITE_BRICK_WALL = register("granite_brick_wall", new WallBlock(EBProperties.BlockP.POLISHED_GRANITE), true);
+
+    public static final Block ANDESITE_BRICKS = register("andesite_bricks", new Block(EBProperties.BlockP.POLISHED_ANDESITE), true);
+    public static final Block ANDESITE_BRICK_STAIRS = register("andesite_brick_stairs", new StairsBlock(ANDESITE_BRICKS.getDefaultState(), EBProperties.BlockP.POLISHED_ANDESITE), true);
+    public static final Block ANDESITE_BRICK_SLAB = register("andesite_brick_slab", new SlabBlock(EBProperties.BlockP.POLISHED_ANDESITE), true);
+    public static final Block ANDESITE_BRICK_VERTICAL_STAIRS = registerVStairs("andesite_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_ANDESITE), true);
+    public static final Block ANDESITE_BRICK_WALL = register("andesite_brick_wall", new WallBlock(EBProperties.BlockP.POLISHED_ANDESITE), true);
+
+    public static final Block DIORITE_BRICKS = register("diorite_bricks", new Block(EBProperties.BlockP.POLISHED_DIORITE), true);
+    public static final Block DIORITE_BRICK_STAIRS = register("diorite_brick_stairs", new StairsBlock(DIORITE_BRICKS.getDefaultState(), EBProperties.BlockP.POLISHED_DIORITE), true);
+    public static final Block DIORITE_BRICK_SLAB = register("diorite_brick_slab", new SlabBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
+    public static final Block DIORITE_BRICK_VERTICAL_STAIRS = registerVStairs("diorite_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
+    public static final Block DIORITE_BRICK_WALL = register("diorite_brick_wall", new WallBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
+
+    //BRICKS
+    public static final Block SMOOTH_BRICKS = register("smooth_bricks", new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Block SMOOTH_BRICK_STAIRS = register("smooth_brick_stairs", new StairsBlock(SMOOTH_BRICKS.getDefaultState(), EBProperties.BlockP.BRICKS), true);
+    public static final Block SMOOTH_BRICK_SLAB = register("smooth_brick_slab", new SlabBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Block SMOOTH_BRICK_VERTICAL_STAIRS = registerVStairs("smooth_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Block SMOOTH_BRICK_WALL = register("smooth_brick_wall", new WallBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Block HERRINGBONE_BRICKS = register("herringbone_bricks", new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Block SMOOTH_HERRINGBONE_BRICKS = register("smooth_herringbone_bricks", new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Block CRACKED_SMOOTH_BRICKS = register("cracked_smooth_bricks", new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Block CRACKED_BRICKS = register("cracked_bricks", new Block(EBProperties.BlockP.BRICKS), true);
+
     //MISC
     public static final Block BONE_BRICKS = register("bone_bricks", new Block(EBProperties.BlockP.BONE), true);
     public static final Block BONE_BRICK_STAIRS = register("bone_brick_stairs", new StairsBlock(BONE_BRICKS.getDefaultState(), EBProperties.BlockP.BONE), true);
@@ -526,6 +556,9 @@ public class EBBlocks {
     public static final Block BONE_BRICK_WALL = register("bone_brick_wall", new WallBlock(EBProperties.BlockP.BONE), true);
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
+
+    //TODO: SHELF VARIANTS, BRIMSTONE, CRYSTAL BLOCKS, TILE BLOCKS, MIXED BRICKS, GLOOM TREE GENERATION, TERRACOTTA POTS, ROSES
+    //TODO: ASPHALT, NEW GRATES, CRYSTAL FIRE, SMOOTH STONE BLOCKS, CALCITE
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

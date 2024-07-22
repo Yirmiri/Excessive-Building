@@ -454,6 +454,35 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS, Blocks.OXIDIZED_CUT_COPPER);
 
         EBModels.registerTintableCrossWithoutItem(generator, EBBlocks.GLOOM_SEEDS, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        BlockStateModelGenerator.BlockTexturePool graniteBricks = generator.registerCubeAllModelTexturePool(EBBlocks.GRANITE_BRICKS);
+        graniteBricks.stairs(EBBlocks.GRANITE_BRICK_STAIRS);
+        graniteBricks.slab(EBBlocks.GRANITE_BRICK_SLAB);
+        graniteBricks.wall(EBBlocks.GRANITE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.GRANITE_BRICK_VERTICAL_STAIRS, EBBlocks.GRANITE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool dioriteBricks = generator.registerCubeAllModelTexturePool(EBBlocks.DIORITE_BRICKS);
+        dioriteBricks.stairs(EBBlocks.DIORITE_BRICK_STAIRS);
+        dioriteBricks.slab(EBBlocks.DIORITE_BRICK_SLAB);
+        dioriteBricks.wall(EBBlocks.DIORITE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.DIORITE_BRICK_VERTICAL_STAIRS, EBBlocks.DIORITE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool andesiteBricks = generator.registerCubeAllModelTexturePool(EBBlocks.ANDESITE_BRICKS);
+        andesiteBricks.stairs(EBBlocks.ANDESITE_BRICK_STAIRS);
+        andesiteBricks.slab(EBBlocks.ANDESITE_BRICK_SLAB);
+        andesiteBricks.wall(EBBlocks.ANDESITE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.ANDESITE_BRICK_VERTICAL_STAIRS, EBBlocks.ANDESITE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool smoothBricks = generator.registerCubeAllModelTexturePool(EBBlocks.SMOOTH_BRICKS);
+        smoothBricks.stairs(EBBlocks.SMOOTH_BRICK_STAIRS);
+        smoothBricks.slab(EBBlocks.SMOOTH_BRICK_SLAB);
+        smoothBricks.wall(EBBlocks.SMOOTH_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.SMOOTH_BRICK_VERTICAL_STAIRS, EBBlocks.SMOOTH_BRICKS);
+
+        generator.registerSimpleCubeAll(EBBlocks.HERRINGBONE_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.SMOOTH_HERRINGBONE_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_SMOOTH_BRICKS);
     }
 
     @Override
