@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.block;
+package net.yirmiri.excessive_building.block.configurable;
 
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SaplingGenerator;

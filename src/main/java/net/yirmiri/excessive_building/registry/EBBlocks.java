@@ -10,11 +10,12 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.*;
+import net.yirmiri.excessive_building.block.configurable.*;
 import net.yirmiri.excessive_building.block.sign.EBHangingSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBWallHangingSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBWallSignBlock;
-import net.yirmiri.excessive_building.item.*;
+import net.yirmiri.excessive_building.item.configurable.*;
 import net.yirmiri.excessive_building.util.EBBlockSetTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
 import net.yirmiri.excessive_building.worldgen.EBSaplingGenerators;
@@ -242,35 +243,35 @@ public class EBBlocks {
     public static final Block CRACKED_BLACKSTONE_BRICKS = register("cracked_blackstone_bricks", new Block(EBProperties.BlockP.BLACKSTONE_BRICKS), true);
 
     //RESOURCE
-    public static final Block GOLD_BRICKS = register("gold_bricks", new Block(EBProperties.BlockP.GOLD), true);
-    public static final Block GOLD_BRICK_STAIRS = register("gold_brick_stairs", new StairsBlock(GOLD_BRICKS.getDefaultState(), EBProperties.BlockP.GOLD), true);
-    public static final Block GOLD_BRICK_SLAB = register("gold_brick_slab", new SlabBlock(EBProperties.BlockP.GOLD), true);
-    public static final Block GOLD_BRICK_VERTICAL_STAIRS = registerVStairs("gold_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GOLD), true);
+    public static final Block GOLD_BRICKS = registerRB("gold_bricks", new ResourceBrickBlock(EBProperties.BlockP.GOLD), true);
+    public static final Block GOLD_BRICK_STAIRS = registerRB("gold_brick_stairs", new ResourceBrickStairsBlock(GOLD_BRICKS.getDefaultState(), EBProperties.BlockP.GOLD), true);
+    public static final Block GOLD_BRICK_SLAB = registerRB("gold_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.GOLD), true);
+    public static final Block GOLD_BRICK_VERTICAL_STAIRS = registerRBVStairs("gold_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.GOLD), true);
 
-    public static final Block IRON_BRICKS = register("iron_bricks", new Block(EBProperties.BlockP.IRON), true);
-    public static final Block IRON_BRICK_STAIRS = register("iron_brick_stairs", new StairsBlock(IRON_BRICKS.getDefaultState(), EBProperties.BlockP.IRON), true);
-    public static final Block IRON_BRICK_SLAB = register("iron_brick_slab", new SlabBlock(EBProperties.BlockP.IRON), true);
-    public static final Block IRON_BRICK_VERTICAL_STAIRS = registerVStairs("iron_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.IRON), true);
+    public static final Block IRON_BRICKS = registerRB("iron_bricks", new ResourceBrickBlock(EBProperties.BlockP.IRON), true);
+    public static final Block IRON_BRICK_STAIRS = registerRB("iron_brick_stairs", new ResourceBrickStairsBlock(IRON_BRICKS.getDefaultState(), EBProperties.BlockP.IRON), true);
+    public static final Block IRON_BRICK_SLAB = registerRB("iron_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.IRON), true);
+    public static final Block IRON_BRICK_VERTICAL_STAIRS = registerRBVStairs("iron_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.IRON), true);
 
-    public static final Block LAPIS_BRICKS = register("lapis_bricks", new Block(EBProperties.BlockP.LAPIS), true);
-    public static final Block LAPIS_BRICK_STAIRS = register("lapis_brick_stairs", new StairsBlock(LAPIS_BRICKS.getDefaultState(), EBProperties.BlockP.LAPIS), true);
-    public static final Block LAPIS_BRICK_SLAB = register("lapis_brick_slab", new SlabBlock(EBProperties.BlockP.LAPIS), true);
-    public static final Block LAPIS_BRICK_VERTICAL_STAIRS = registerVStairs("lapis_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.LAPIS), true);
+    public static final Block LAPIS_BRICKS = registerRB("lapis_bricks", new ResourceBrickBlock(EBProperties.BlockP.LAPIS), true);
+    public static final Block LAPIS_BRICK_STAIRS = registerRB("lapis_brick_stairs", new ResourceBrickStairsBlock(LAPIS_BRICKS.getDefaultState(), EBProperties.BlockP.LAPIS), true);
+    public static final Block LAPIS_BRICK_SLAB = registerRB("lapis_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.LAPIS), true);
+    public static final Block LAPIS_BRICK_VERTICAL_STAIRS = registerRBVStairs("lapis_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.LAPIS), true);
 
-    public static final Block EMERALD_BRICKS = register("emerald_bricks", new Block(EBProperties.BlockP.EMERALD), true);
-    public static final Block EMERALD_BRICK_STAIRS = register("emerald_brick_stairs", new StairsBlock(EMERALD_BRICKS.getDefaultState(), EBProperties.BlockP.EMERALD), true);
-    public static final Block EMERALD_BRICK_SLAB = register("emerald_brick_slab", new SlabBlock(EBProperties.BlockP.EMERALD), true);
-    public static final Block EMERALD_BRICK_VERTICAL_STAIRS = registerVStairs("emerald_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.EMERALD), true);
+    public static final Block EMERALD_BRICKS = registerRB("emerald_bricks", new ResourceBrickBlock(EBProperties.BlockP.EMERALD), true);
+    public static final Block EMERALD_BRICK_STAIRS = registerRB("emerald_brick_stairs", new ResourceBrickStairsBlock(EMERALD_BRICKS.getDefaultState(), EBProperties.BlockP.EMERALD), true);
+    public static final Block EMERALD_BRICK_SLAB = registerRB("emerald_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.EMERALD), true);
+    public static final Block EMERALD_BRICK_VERTICAL_STAIRS = registerRBVStairs("emerald_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.EMERALD), true);
 
-    public static final Block DIAMOND_BRICKS = register("diamond_bricks", new Block(EBProperties.BlockP.DIAMOND), true);
-    public static final Block DIAMOND_BRICK_STAIRS = register("diamond_brick_stairs", new StairsBlock(DIAMOND_BRICKS.getDefaultState(), EBProperties.BlockP.DIAMOND), true);
-    public static final Block DIAMOND_BRICK_SLAB = register("diamond_brick_slab", new SlabBlock(EBProperties.BlockP.DIAMOND), true);
-    public static final Block DIAMOND_BRICK_VERTICAL_STAIRS = registerVStairs("diamond_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.DIAMOND), true);
+    public static final Block DIAMOND_BRICKS = registerRB("diamond_bricks", new ResourceBrickBlock(EBProperties.BlockP.DIAMOND), true);
+    public static final Block DIAMOND_BRICK_STAIRS = registerRB("diamond_brick_stairs", new ResourceBrickStairsBlock(DIAMOND_BRICKS.getDefaultState(), EBProperties.BlockP.DIAMOND), true);
+    public static final Block DIAMOND_BRICK_SLAB = registerRB("diamond_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.DIAMOND), true);
+    public static final Block DIAMOND_BRICK_VERTICAL_STAIRS = registerRBVStairs("diamond_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.DIAMOND), true);
 
-    public static final Block NETHERITE_BRICKS = register("netherite_bricks", new Block(EBProperties.BlockP.NETHERITE), false);
-    public static final Block NETHERITE_BRICK_STAIRS = register("netherite_brick_stairs", new StairsBlock(NETHERITE_BRICKS.getDefaultState(), EBProperties.BlockP.NETHERITE), false);
-    public static final Block NETHERITE_BRICK_SLAB = register("netherite_brick_slab", new SlabBlock(EBProperties.BlockP.NETHERITE), false);
-    public static final Block NETHERITE_BRICK_VERTICAL_STAIRS = registerVStairs("netherite_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.NETHERITE), false);
+    public static final Block NETHERITE_BRICKS = registerRB("netherite_bricks", new ResourceBrickBlock(EBProperties.BlockP.NETHERITE), false);
+    public static final Block NETHERITE_BRICK_STAIRS = registerRB("netherite_brick_stairs", new ResourceBrickStairsBlock(NETHERITE_BRICKS.getDefaultState(), EBProperties.BlockP.NETHERITE), false);
+    public static final Block NETHERITE_BRICK_SLAB = registerRB("netherite_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.NETHERITE), false);
+    public static final Block NETHERITE_BRICK_VERTICAL_STAIRS = registerRBVStairs("netherite_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.NETHERITE), false);
 
     //COPPER - UNAFFECTED
     public static final Block COPPER_BRICKS = register("copper_bricks", new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, EBProperties.BlockP.COPPER), true);
@@ -538,6 +539,28 @@ public class EBBlocks {
     }
 
     //CONFIGURABLE BLOCKS
+    private static Block registerRB(String id, Block block, boolean registerItem) {
+        if (registerItem) {
+            registerRBBlockItem(id, block);
+        }
+        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+    }
+
+    private static Item registerRBBlockItem(String id, Block block) {
+        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new ResourceBrickBlockItem(block, new Item.Settings()));
+    }
+
+    private static Block registerRBVStairs(String id, Block block, boolean registerItem) {
+        if (registerItem) {
+            registerRBVStairsBlockItem(id, block);
+        }
+        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+    }
+
+    private static Item registerRBVStairsBlockItem(String id, Block block) {
+        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new ResourceBrickVerticalStairsBlockItem(block, new Item.Settings()));
+    }
+
     private static Block registerAncSapling(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerAncSaplingBlockItem(id, block);

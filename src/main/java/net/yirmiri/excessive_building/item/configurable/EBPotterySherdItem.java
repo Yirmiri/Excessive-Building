@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.item;
+package net.yirmiri.excessive_building.item.configurable;
 
 import net.minecraft.item.Item;
 import net.minecraft.resource.featuretoggle.FeatureSet;
