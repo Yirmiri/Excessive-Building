@@ -17,6 +17,7 @@ public class EBConfig {
     //BALANCE
     public static final ForgeConfigSpec.BooleanValue ENABLE_SOUL_MAGMA_COLUMN_TOGGLE;
     public static final ForgeConfigSpec.FloatValue ANCIENT_SAPLING_CHANCE;
+    public static final ForgeConfigSpec.FloatValue GLOOM_SEEDS_CHANCE;
     public static final ForgeConfigSpec.IntValue REACHING_DURATION;
     public static final ForgeConfigSpec.IntValue LONG_REACHING_DURATION;
     public static final ForgeConfigSpec.IntValue REACHING_AMPLIFIER;
@@ -68,6 +69,10 @@ public class EBConfig {
         ANCIENT_SAPLING_CHANCE = BUILDER
                 .comment("How rare should ancient saplings be? (default: 0.15 aka 15%)")
                 .defineInRange("ancientSaplingChance", 0.15F, 0F, 1.0F);
+
+        GLOOM_SEEDS_CHANCE = BUILDER
+                .comment("How rare should gloom seeds be? (default: 0.02 aka 2%)")
+                .defineInRange("ancientSaplingChance", 0.02F, 0F, 1.0F);
 
         REACHING_DURATION = BUILDER
                 .comment("How long should the reaching potion last in ticks? (default: 12000)")

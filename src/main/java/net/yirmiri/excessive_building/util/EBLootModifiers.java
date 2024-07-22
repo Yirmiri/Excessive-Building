@@ -16,12 +16,21 @@ public class EBLootModifiers {
     private static final Identifier SNIFFER_DIGGING = Identifier.ofVanilla("gameplay/sniffer_digging");
     private static final Identifier DESERT_PYRAMID = Identifier.ofVanilla("gameplay/archaeology/desert_pyramid");
     private static final Identifier DESERT_WELL = Identifier.ofVanilla("gameplay/archaeology/desert_well");
+    private static final Identifier TRAIL_RUINS_RARE = Identifier.ofVanilla("gameplay/archaeology/trail_ruins_rare");
 
     public static void modifyLoot() {
         LootTableEvents.MODIFY.register((resource, builder, id) -> {
             if (SNIFFER_DIGGING.equals(id) && EBConfig.ENABLE_ANCIENT_SAPLINGS.get()) { LootPool.Builder poolBuilder = LootPool.builder().conditionally
                             (RandomChanceLootCondition.builder(EBConfig.ANCIENT_SAPLING_CHANCE.get())).with(ItemEntry.builder(EBBlocks.ANCIENT_SAPLING))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 1)).build());
+                builder.pool(poolBuilder.build());
+            }
+        });
+
+        LootTableEvents.MODIFY.register((resource, builder, id) -> {
+            if (TRAIL_RUINS_RARE.equals(id)) { LootPool.Builder poolBuilder = LootPool.builder().conditionally
+                            (RandomChanceLootCondition.builder(EBConfig.GLOOM_SEEDS_CHANCE.get())).with(ItemEntry.builder(EBBlocks.GLOOM_SEEDS))
+                    .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 1)).build());
                 builder.pool(poolBuilder.build());
             }
         });
