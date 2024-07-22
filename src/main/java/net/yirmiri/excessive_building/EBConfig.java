@@ -15,6 +15,7 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_ANCIENT_SAPLINGS;
 
     //BALANCE
+    public static final ForgeConfigSpec.BooleanValue ENABLE_SOUL_MAGMA_COLUMN_TOGGLE;
     public static final ForgeConfigSpec.FloatValue ANCIENT_SAPLING_CHANCE;
     public static final ForgeConfigSpec.IntValue REACHING_DURATION;
     public static final ForgeConfigSpec.IntValue LONG_REACHING_DURATION;
@@ -59,6 +60,10 @@ public class EBConfig {
 
         //BALANCE CONFIGURATION
         BUILDER.push("Balance Configuration").comment("Configuration for features that may impact gameplay in a large way");
+
+        ENABLE_SOUL_MAGMA_COLUMN_TOGGLE = BUILDER
+                .comment("Should soul magma bubble columns be toggled with redstone? (default: true)")
+                .define("enableSoulMagmaColumnToggle", true);
 
         ANCIENT_SAPLING_CHANCE = BUILDER
                 .comment("How rare should ancient saplings be? (default: 0.15 aka 15%)")

@@ -5,6 +5,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BubbleColumnBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldView;
+import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.SoulMagmaBlock;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import org.spongepowered.asm.mixin.Mixin;
@@ -19,7 +20,7 @@ public abstract class BubbleColumnBlockMixin {
         if (state.isOf(EBBlocks.SOUL_MAGMA_BLOCK) && state.get(SoulMagmaBlock.POWERED) == Boolean.TRUE) {
             cir.setReturnValue(Blocks.BUBBLE_COLUMN.getDefaultState().with(BubbleColumnBlock.DRAG, false));
 
-        } else if (state.isOf(EBBlocks.SOUL_MAGMA_BLOCK) && state.get(SoulMagmaBlock.POWERED) == Boolean.FALSE) {
+        } else if (state.isOf(EBBlocks.SOUL_MAGMA_BLOCK) && state.get(SoulMagmaBlock.POWERED) == Boolean.FALSE && EBConfig.ENABLE_SOUL_MAGMA_COLUMN_TOGGLE.get()) {
             cir.setReturnValue(Blocks.BUBBLE_COLUMN.getDefaultState().with(BubbleColumnBlock.DRAG, true));
         }
     }
