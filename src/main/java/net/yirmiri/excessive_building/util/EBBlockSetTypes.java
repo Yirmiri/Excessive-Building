@@ -35,19 +35,6 @@ public class EBBlockSetTypes {
             SoundEvents.BLOCK_CHERRY_WOOD_BUTTON_CLICK_OFF,
             SoundEvents.BLOCK_CHERRY_WOOD_BUTTON_CLICK_ON));
 
-    public static final BlockSetType STEEL = EBBlockSetTypes.register(new BlockSetType("steel",
-            true, false, false, //hand, wind charge, arrows
-            BlockSetType.ActivationRule.MOBS,
-            BlockSoundGroup.METAL,
-            SoundEvents.BLOCK_IRON_DOOR_CLOSE,
-            SoundEvents.BLOCK_IRON_DOOR_OPEN,
-            SoundEvents.BLOCK_IRON_TRAPDOOR_CLOSE,
-            SoundEvents.BLOCK_IRON_TRAPDOOR_OPEN,
-            SoundEvents.BLOCK_METAL_PRESSURE_PLATE_CLICK_OFF,
-            SoundEvents.BLOCK_METAL_PRESSURE_PLATE_CLICK_ON,
-            SoundEvents.BLOCK_STONE_BUTTON_CLICK_OFF,
-            SoundEvents.BLOCK_STONE_BUTTON_CLICK_ON));
-
     private static BlockSetType register(BlockSetType type) {
         return type;
     }
