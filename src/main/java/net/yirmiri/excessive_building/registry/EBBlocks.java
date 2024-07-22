@@ -212,7 +212,7 @@ public class EBBlocks {
     public static final Block GLOOM_HANGING_SIGN = register("gloom_hanging_sign", new EBHangingSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
     public static final Block GLOOM_WALL_HANGING_SIGN = register("gloom_wall_hanging_sign", new EBWallHangingSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
 
-    public static final Block GLOOM_SEEDS = register("gloom_seeds", new SaplingBlock(EBSaplingGenerators.ANCIENT, EBProperties.BlockP.GLOOM_SEEDS), true);
+    public static final Block GLOOM_SEEDS = register("gloom_seeds", new SaplingBlock(EBSaplingGenerators.GLOOM, EBProperties.BlockP.GLOOM_SEEDS), true);
 
     //COBBLED BRICKS
     public static final Block COBBLESTONE_BRICKS = register("cobblestone_bricks", new Block(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
@@ -458,7 +458,6 @@ public class EBBlocks {
     public static final Block ENGRAVED_RED_SANDSTONE_BRICKS = register("engraved_red_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block DECORATED_RED_SANDSTONE_BRICKS = register("decorated_red_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block RED_SANDSTONE_PILLAR = register("red_sandstone_pillar", new PillarBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
-
 
     //SOUL POLISHED SANDSTONE
     public static final Block POLISHED_SOUL_SANDSTONE = register("polished_soul_sandstone", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
