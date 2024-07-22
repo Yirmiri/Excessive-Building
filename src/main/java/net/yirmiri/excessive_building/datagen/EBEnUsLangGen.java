@@ -23,6 +23,11 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
 
             build.add(EBBlocks.getDyedKnittedWools(colors.getId()), dyeString + " Knitted Wool");
             build.add(EBBlocks.getDyedKnittedCarpets(colors.getId()), dyeString + " Knitted Carpet");
+
+            build.add(EBBlocks.getDyedTerracottaTiles(colors.getId()), dyeString + " Terracotta Tiles");
+            build.add(EBBlocks.getDyedTerracottaTileStairs(colors.getId()), dyeString + " Terracotta Tile Stairs");
+            build.add(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()), dyeString + " Terracotta Tile Vertical Stairs");
+            build.add(EBBlocks.getDyedTerracottaTileSlab(colors.getId()), dyeString + " Terracotta Tile Slab");
         }
 
         //BLOCKS
@@ -333,6 +338,11 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.QUARTZ_BRICK_SLAB, "Quartz Brick Slab");
         build.add(EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS, "Quartz Brick Vertical Stairs");
         build.add(EBBlocks.QUARTZ_BRICK_WALL, "Quartz Brick Wall");
+        build.add(EBBlocks.CHISELED_CHERRY_PLANKS, "Chiseled Cherry Planks");
+        build.add(EBBlocks.TERRACOTTA_TILES, "Terracotta Tiles");
+        build.add(EBBlocks.TERRACOTTA_TILE_STAIRS, "Terracotta Tile Stairs");
+        build.add(EBBlocks.TERRACOTTA_TILE_SLAB, "Terracotta Tile Slab");
+        build.add(EBBlocks.TERRACOTTA_TILE_VERTICAL_STAIRS, "Terracotta Tile Vertical Stairs");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

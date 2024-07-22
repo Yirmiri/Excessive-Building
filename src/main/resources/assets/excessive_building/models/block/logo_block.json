@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "excessive_building:block/crimson_mosaic",
+    "east": "excessive_building:block/cobblestone_bricks",
+    "north": "excessive_building:block/alchemist_shelf",
+    "particle": "excessive_building:block/crimson_mosaic",
+    "south": "excessive_building:block/alchemist_shelf",
+    "up": "excessive_building:block/crimson_mosaic",
+    "west": "excessive_building:block/cobblestone_bricks"
+  }
+}

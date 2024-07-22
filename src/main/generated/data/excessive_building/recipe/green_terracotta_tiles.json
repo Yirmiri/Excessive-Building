@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:green_terracotta"
+    },
+    "@": {
+      "item": "minecraft:quartz_block"
+    }
+  },
+  "pattern": [
+    "@#",
+    "#@"
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:green_terracotta_tiles"
+  }
+}

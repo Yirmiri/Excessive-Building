@@ -336,6 +336,14 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.QUARTZ_BRICK_SLAB, slabDrops(EBBlocks.QUARTZ_BRICK_SLAB));
         addDrop(EBBlocks.QUARTZ_BRICK_WALL);
+        addTerracottaTileSlabDrops();
+        addTerracottaTileVerticalStairsDrops();
+        addTerracottaTilesDrops();
+        addTerracottaTileStairsDrops();
+        addDrop(EBBlocks.TERRACOTTA_TILES);
+        addDrop(EBBlocks.TERRACOTTA_TILE_STAIRS);
+        addDrop(EBBlocks.TERRACOTTA_TILE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.TERRACOTTA_TILE_SLAB, slabDrops(EBBlocks.TERRACOTTA_TILE_SLAB));
     }
 
     private void addDyedKnittedWoolDrops() {
@@ -347,6 +355,30 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
     private void addDyedKnittedCarpetDrops() {
         for (DyeColor colors : DyeColor.values()) {
             addDrop(EBBlocks.getDyedKnittedCarpets(colors.getId()));
+        }
+    }
+
+    private void addTerracottaTilesDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(EBBlocks.getDyedTerracottaTiles(colors.getId()));
+        }
+    }
+
+    private void addTerracottaTileStairsDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(EBBlocks.getDyedTerracottaTileStairs(colors.getId()));
+        }
+    }
+
+    private void addTerracottaTileVerticalStairsDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()));
+        }
+    }
+
+    private void addTerracottaTileSlabDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            addDrop(EBBlocks.getDyedTerracottaTileSlab(colors.getId()));
         }
     }
 

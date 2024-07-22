@@ -606,7 +606,18 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS)
                     .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS)
                     .add(EBBlocks.SMOOTH_SOUL_SANDSTONE_SLAB)
+                    .add(EBBlocks.TERRACOTTA_TILES)
+                    .add(EBBlocks.TERRACOTTA_TILE_STAIRS)
+                    .add(EBBlocks.TERRACOTTA_TILE_VERTICAL_STAIRS)
+                    .add(EBBlocks.TERRACOTTA_TILE_SLAB)
             ;
+
+            for (DyeColor colors : DyeColor.values()) {
+                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTiles(colors.getId()));
+                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTileStairs(colors.getId()));
+                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()));
+                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTileSlab(colors.getId()));
+            }
         }
 
         public void appendHoeMineable() {

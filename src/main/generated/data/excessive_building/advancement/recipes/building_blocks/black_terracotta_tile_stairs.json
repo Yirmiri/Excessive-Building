@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_black_terracotta_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:black_terracotta_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:black_terracotta_tile_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_black_terracotta_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:black_terracotta_tile_stairs"
+    ]
+  }
+}

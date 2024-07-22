@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:white_terracotta_tile_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_terracotta_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:white_terracotta_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white_terracotta_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:white_terracotta_tile_slab"
+    ]
+  }
+}

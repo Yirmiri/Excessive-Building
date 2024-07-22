@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:block/template_vertical_stairs",
+  "textures": {
+    "particle": "excessive_building:block/cyan_terracotta_tiles",
+    "texture": "excessive_building:block/cyan_terracotta_tiles"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "excessive_building:brown_terracotta_tiles"
+    }
+  },
+  "pattern": [
+    "###",
+    "## ",
+    "#  "
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:brown_terracotta_tile_vertical_stairs"
+  }
+}

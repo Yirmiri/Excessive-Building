@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/white_terracotta_tile_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/white_terracotta_tiles"
+    },
+    "type=top": {
+      "model": "excessive_building:block/white_terracotta_tile_slab_top"
+    }
+  }
+}

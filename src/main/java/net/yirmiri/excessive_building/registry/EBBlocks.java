@@ -323,10 +323,43 @@ public class EBBlocks {
     static {
         for (DyeColor colors : DyeColor.values()) {
             DYED_KNITTED_WOOL.put(colors, register(colors + "_knitted_wool", new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).mapColor(colors)), true));
-        }
-
-        for (DyeColor colors : DyeColor.values()) {
             DYED_KNITTED_CARPET.put(colors, register(colors + "_knitted_carpet", new Block(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).mapColor(colors)), true));
+        }
+    }
+
+    //TERRACOTTA TILES
+    public static final Block TERRACOTTA_TILES = register("terracotta_tiles", new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA)), true);
+    public static final Block TERRACOTTA_TILE_STAIRS = register("terracotta_tile_stairs", new StairsBlock(EBBlocks.TERRACOTTA_TILES.getDefaultState(), FabricBlockSettings.copyOf(Blocks.TERRACOTTA)), true);
+    public static final Block TERRACOTTA_TILE_VERTICAL_STAIRS = register("terracotta_tile_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA)), true);
+    public static final Block TERRACOTTA_TILE_SLAB = register("terracotta_tile_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA)), true);
+
+    public static final HashMap<DyeColor, Block> DYED_TERRACOTTA_TILES = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_TERRACOTTA_TILE_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_TERRACOTTA_TILE_VERTICAL_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_TERRACOTTA_TILE_SLAB = new HashMap<>();
+
+    public static Block getDyedTerracottaTiles(int colors) {
+        return DYED_TERRACOTTA_TILES.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedTerracottaTileStairs(int colors) {
+        return DYED_TERRACOTTA_TILE_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedTerracottaTileVerticalStairs(int colors) {
+        return DYED_TERRACOTTA_TILE_VERTICAL_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedTerracottaTileSlab(int colors) {
+        return DYED_TERRACOTTA_TILE_SLAB.get(DyeColor.byId(colors));
+    }
+
+    static {
+        for (DyeColor colors : DyeColor.values()) {
+            DYED_TERRACOTTA_TILES.put(colors, register(colors + "_terracotta_tiles", new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).mapColor(colors)), true));
+            DYED_TERRACOTTA_TILE_STAIRS.put(colors, register(colors + "_terracotta_tile_stairs", new StairsBlock(getDyedTerracottaTiles(colors.getId()).getDefaultState(), FabricBlockSettings.copyOf(Blocks.TERRACOTTA).mapColor(colors)), true));
+            DYED_TERRACOTTA_TILE_VERTICAL_STAIRS.put(colors, register(colors + "_terracotta_tile_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).mapColor(colors)), true));
+            DYED_TERRACOTTA_TILE_SLAB.put(colors, register(colors + "_terracotta_tile_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).mapColor(colors)), true));
         }
     }
 
@@ -476,7 +509,7 @@ public class EBBlocks {
     public static final Block BONE_BRICK_VERTICAL_STAIRS = register("bone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BONE), true);
     public static final Block BONE_BRICK_WALL = register("bone_brick_wall", new WallBlock(EBProperties.BlockP.BONE), true);
 
-    public static final Block LOGO = register("logo", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
+    public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

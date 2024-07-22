@@ -2,13 +2,13 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.CraftingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.DyeItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -1811,6 +1811,147 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS, Blocks.QUARTZ_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS, 1);
+
+        for (DyeColor colors : DyeColor.values()) {
+            createTerracottaDyingRecipe(EBBlocks.getDyedTerracottaTiles(colors.getId()), EBBlocks.TERRACOTTA_TILES, DyeItem.byColor(colors).getColor());
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedTerracottaTileStairs(colors.getId()), EBBlocks.getDyedTerracottaTiles(colors.getId()), 1);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedTerracottaTileSlab(colors.getId()), EBBlocks.getDyedTerracottaTiles(colors.getId()), 2);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()), EBBlocks.getDyedTerracottaTiles(colors.getId()), 1);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createStairsRecipe(EBBlocks.getDyedTerracottaTileStairs(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedTerracottaTiles(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedTerracottaTiles(colors.getId())), conditionsFromItem(EBBlocks.getDyedTerracottaTiles(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTileStairs(colors.getId()))));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedTerracottaTileSlab(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedTerracottaTiles(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedTerracottaTiles(colors.getId())), conditionsFromItem(EBBlocks.getDyedTerracottaTiles(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTileSlab(colors.getId()))));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createVerticalStairsRecipe(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedTerracottaTiles(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedTerracottaTiles(colors.getId())), conditionsFromItem(EBBlocks.getDyedTerracottaTiles(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()))));
+        }
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.TERRACOTTA_TILES, 4,
+                Ingredient.ofItems(Blocks.TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.TERRACOTTA), conditionsFromItem(Blocks.TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TERRACOTTA_TILES)));
+
+        createStairsRecipe(EBBlocks.TERRACOTTA_TILE_STAIRS,
+                Ingredient.ofItems(EBBlocks.TERRACOTTA_TILES))
+                .criterion(hasItem(EBBlocks.TERRACOTTA_TILES), conditionsFromItem(EBBlocks.TERRACOTTA_TILES))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TERRACOTTA_TILE_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.TERRACOTTA_TILE_SLAB,
+                Ingredient.ofItems(EBBlocks.TERRACOTTA_TILES))
+                .criterion(hasItem(EBBlocks.TERRACOTTA_TILES), conditionsFromItem(EBBlocks.TERRACOTTA_TILES))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TERRACOTTA_TILE_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.TERRACOTTA_TILE_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.TERRACOTTA_TILES))
+                .criterion(hasItem(EBBlocks.TERRACOTTA_TILES), conditionsFromItem(EBBlocks.TERRACOTTA_TILES))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TERRACOTTA_TILE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TERRACOTTA_TILE_STAIRS, EBBlocks.TERRACOTTA_TILES, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TERRACOTTA_TILE_SLAB, EBBlocks.TERRACOTTA_TILES, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TERRACOTTA_TILE_VERTICAL_STAIRS, EBBlocks.TERRACOTTA_TILES, 1);
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.WHITE.getId()), 4,
+                Ingredient.ofItems(Blocks.WHITE_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.WHITE_TERRACOTTA), conditionsFromItem(Blocks.WHITE_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.WHITE.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.LIGHT_GRAY.getId()), 4,
+                Ingredient.ofItems(Blocks.LIGHT_GRAY_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.LIGHT_GRAY_TERRACOTTA), conditionsFromItem(Blocks.LIGHT_GRAY_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.LIGHT_GRAY.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.GRAY.getId()), 4,
+                Ingredient.ofItems(Blocks.GRAY_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.GRAY_TERRACOTTA), conditionsFromItem(Blocks.GRAY_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.GRAY.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.BLACK.getId()), 4,
+                Ingredient.ofItems(Blocks.BLACK_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.BLACK_TERRACOTTA), conditionsFromItem(Blocks.BLACK_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.BLACK.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.BROWN.getId()), 4,
+                Ingredient.ofItems(Blocks.BROWN_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.BROWN_TERRACOTTA), conditionsFromItem(Blocks.BROWN_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.BROWN.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.RED.getId()), 4,
+                Ingredient.ofItems(Blocks.RED_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.RED_TERRACOTTA), conditionsFromItem(Blocks.RED_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.RED.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.ORANGE.getId()), 4,
+                Ingredient.ofItems(Blocks.ORANGE_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.ORANGE_TERRACOTTA), conditionsFromItem(Blocks.ORANGE_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.ORANGE.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.YELLOW.getId()), 4,
+                Ingredient.ofItems(Blocks.YELLOW_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.YELLOW_TERRACOTTA), conditionsFromItem(Blocks.YELLOW_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.YELLOW.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.LIME.getId()), 4,
+                Ingredient.ofItems(Blocks.LIME_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.LIME_TERRACOTTA), conditionsFromItem(Blocks.LIME_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.LIME.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.GREEN.getId()), 4,
+                Ingredient.ofItems(Blocks.GREEN_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.GREEN_TERRACOTTA), conditionsFromItem(Blocks.GREEN_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.GREEN.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.CYAN.getId()), 4,
+                Ingredient.ofItems(Blocks.CYAN_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.CYAN_TERRACOTTA), conditionsFromItem(Blocks.CYAN_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.CYAN.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.LIGHT_BLUE.getId()), 4,
+                Ingredient.ofItems(Blocks.LIGHT_BLUE_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.LIGHT_BLUE_TERRACOTTA), conditionsFromItem(Blocks.LIGHT_BLUE_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.LIGHT_BLUE.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.BLUE.getId()), 4,
+                Ingredient.ofItems(Blocks.BLUE_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.BLUE_TERRACOTTA), conditionsFromItem(Blocks.BLUE_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.BLUE.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.PURPLE.getId()), 4,
+                Ingredient.ofItems(Blocks.PURPLE_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.PURPLE_TERRACOTTA), conditionsFromItem(Blocks.PURPLE_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.PURPLE.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.MAGENTA.getId()), 4,
+                Ingredient.ofItems(Blocks.MAGENTA_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.MAGENTA_TERRACOTTA), conditionsFromItem(Blocks.MAGENTA_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.MAGENTA.getId()))));
+
+        createTwoByTwoCheckersMealRecipe(EBBlocks.getDyedTerracottaTiles(DyeColor.PINK.getId()), 4,
+                Ingredient.ofItems(Blocks.PINK_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.PINK_TERRACOTTA), conditionsFromItem(Blocks.PINK_TERRACOTTA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.PINK.getId()))));
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {
@@ -1845,6 +1986,14 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("#@#")
                 .pattern("###");
     }
+
+    public static CraftingRecipeJsonBuilder createTerracottaDyingRecipe(ItemConvertible output, Block input, DyeColor color) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 8)
+                .input('#', input).input('@', DyeItem.byColor(color))
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###");
+    }
     
     public static CraftingRecipeJsonBuilder createVerticalStairsRecipe(ItemConvertible output, Ingredient input) {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 4)
@@ -1859,6 +2008,13 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .input('#', input)
                 .pattern("##")
                 .pattern("##");
+    }
+
+    public static CraftingRecipeJsonBuilder createTwoByTwoCheckersMealRecipe(ItemConvertible output, int count, Ingredient input, Ingredient input2) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, count)
+                .input('#', input).input('@', input2)
+                .pattern("@#")
+                .pattern("#@");
     }
 
     public static CraftingRecipeJsonBuilder createTwoByTwoRecipe(ItemConvertible output, int count, Ingredient input) {

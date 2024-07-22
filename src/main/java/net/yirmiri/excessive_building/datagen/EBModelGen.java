@@ -381,6 +381,18 @@ public class EBModelGen extends FabricModelProvider {
         quartzBricks.slab(EBBlocks.QUARTZ_BRICK_SLAB);
         quartzBricks.wall(EBBlocks.QUARTZ_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS, Blocks.QUARTZ_BRICKS);
+
+        for (DyeColor colors : DyeColor.values()) {
+            BlockStateModelGenerator.BlockTexturePool dyedTerracottaTiles = generator.registerCubeAllModelTexturePool(EBBlocks.getDyedTerracottaTiles(colors.getId()));
+            dyedTerracottaTiles.stairs(EBBlocks.getDyedTerracottaTileStairs(colors.getId()));
+            dyedTerracottaTiles.slab(EBBlocks.getDyedTerracottaTileSlab(colors.getId()));
+            EBModels.registerVerticalStairs(generator, EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()), EBBlocks.getDyedTerracottaTiles(colors.getId()));
+        }
+
+        BlockStateModelGenerator.BlockTexturePool terracottaTiles = generator.registerCubeAllModelTexturePool(EBBlocks.TERRACOTTA_TILES);
+        terracottaTiles.stairs(EBBlocks.TERRACOTTA_TILE_STAIRS);
+        terracottaTiles.slab(EBBlocks.TERRACOTTA_TILE_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.TERRACOTTA_TILE_VERTICAL_STAIRS, EBBlocks.TERRACOTTA_TILES);
     }
 
     @Override
