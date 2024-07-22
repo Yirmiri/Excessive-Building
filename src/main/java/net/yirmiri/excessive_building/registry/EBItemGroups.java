@@ -2,15 +2,30 @@ package net.yirmiri.excessive_building.registry;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.NbtComponent;
+import net.minecraft.component.type.PotionContentsComponent;
+import net.minecraft.entity.decoration.painting.PaintingEntity;
+import net.minecraft.entity.decoration.painting.PaintingVariant;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.nbt.NbtElement;
+import net.minecraft.nbt.NbtOps;
 import net.minecraft.potion.Potion;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.registry.*;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.PaintingVariantTags;
+import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.text.Text;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.util.EBTags;
+
+import java.util.Comparator;
+import java.util.function.Predicate;
 
 public class EBItemGroups {
     public static ItemGroup EXCESSIVE_BUILDING = Registry.register(Registries.ITEM_GROUP, Identifier.of(ExcessiveBuilding.MOD_ID, "excessive_building"),
@@ -517,8 +532,79 @@ public class EBItemGroups {
                 entries.add(EBItems.TWINS_POTTERY_SHERD);
                 entries.add(EBItems.WRATHFUL_POTTERY_SHERD);
 
-                //TODO: All EB painting variants at the bottom
+                entries.add(EBBlocks.OAK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SPRUCE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BIRCH_VERTICAL_STAIRS);
+                entries.add(EBBlocks.JUNGLE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.ACACIA_VERTICAL_STAIRS);
+                entries.add(EBBlocks.DARK_OAK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.MANGROVE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.CHERRY_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BAMBOO_VERTICAL_STAIRS);
+                entries.add(EBBlocks.CRIMSON_VERTICAL_STAIRS);
+                entries.add(EBBlocks.WARPED_VERTICAL_STAIRS);
+                entries.add(EBBlocks.STONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.COBBLESTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.MOSSY_COBBLESTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.STONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.MOSSY_STONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.GRANITE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_GRANITE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.DIORITE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_DIORITE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.ANDESITE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_ANDESITE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_DEEPSLATE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.DEEPSLATE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.DEEPSLATE_TILE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.TUFF_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS);
+                entries.add(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SANDSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SMOOTH_SANDSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.RED_SANDSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.PRISMARINE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.PRISMARINE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.DARK_PRISMARINE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.NETHER_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.RED_NETHER_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BLACKSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_BLACKSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.END_STONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.PURPUR_VERTICAL_STAIRS);
+                entries.add(EBBlocks.QUARTZ_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
+                entries.add(EBBlocks.CUT_COPPER_VERTICAL_STAIRS);
+                entries.add(EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS);
+                entries.add(EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS);
+                entries.add(EBBlocks.OXIDIZED_CUT_COPPER_VERTICAL_STAIRS);
+                entries.add(EBBlocks.WAXED_CUT_COPPER_VERTICAL_STAIRS);
+                entries.add(EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS);
+                entries.add(EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS);
+                entries.add(EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS);
+
+                entries.add(Items.PAINTING);
+                ctx.lookup().getOptionalWrapper(RegistryKeys.PAINTING_VARIANT).ifPresent(registryWrapper -> addPaintings(entries, ctx.lookup(), registryWrapper,
+                        registryEntry -> registryEntry.isIn(EBTags.PaintingVariants.EB_PAINTINGS), ItemGroup.StackVisibility.PARENT_AND_SEARCH_TABS));
             }).build());
+
+    private static final Comparator<RegistryEntry<PaintingVariant>> PAINTING_VARIANT_COMPARATOR = Comparator.comparing(
+            RegistryEntry::value, Comparator.comparingInt(PaintingVariant::getArea).thenComparing(PaintingVariant::width)
+    );
+
+    private static void addPaintings(ItemGroup.Entries entries, RegistryWrapper.WrapperLookup registryLookup, RegistryWrapper.Impl<PaintingVariant> registryWrapper, Predicate<RegistryEntry<PaintingVariant>> filter, ItemGroup.StackVisibility stackVisibility) {
+        RegistryOps<NbtElement> registryOps = registryLookup.getOps(NbtOps.INSTANCE);
+        registryWrapper.streamEntries().filter(filter).sorted(PAINTING_VARIANT_COMPARATOR).forEach(paintingVariantEntry -> {
+                    NbtComponent nbtComponent = NbtComponent.DEFAULT.with(registryOps, PaintingEntity.VARIANT_MAP_CODEC, paintingVariantEntry).getOrThrow().apply(nbt -> nbt.putString("id", "minecraft:painting"));
+                    ItemStack itemStack = new ItemStack(Items.PAINTING);
+                    itemStack.set(DataComponentTypes.ENTITY_DATA, nbtComponent);
+                    entries.add(itemStack, stackVisibility);
+                });
+        }
 
     public static void registerEBItemGroups() {
     }

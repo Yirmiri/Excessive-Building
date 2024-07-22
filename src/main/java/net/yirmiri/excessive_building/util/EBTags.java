@@ -1,6 +1,7 @@
 package net.yirmiri.excessive_building.util;
 
 import net.minecraft.block.Block;
+import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
@@ -27,6 +28,14 @@ public class EBTags {
 
         private static TagKey<Item> create(String id) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id));
+        }
+    }
+
+    public static class PaintingVariants {
+        public static final TagKey<PaintingVariant> EB_PAINTINGS = create("eb_paintings");
+
+        private static TagKey<PaintingVariant> create(String id) {
+            return TagKey.of(RegistryKeys.PAINTING_VARIANT, Identifier.of(ExcessiveBuilding.MOD_ID, id));
         }
     }
 }

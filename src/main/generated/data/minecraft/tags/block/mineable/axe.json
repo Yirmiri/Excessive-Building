@@ -1,5 +1,16 @@
 {
   "values": [
+    "excessive_building:oak_vertical_stairs",
+    "excessive_building:spruce_vertical_stairs",
+    "excessive_building:birch_vertical_stairs",
+    "excessive_building:jungle_vertical_stairs",
+    "excessive_building:acacia_vertical_stairs",
+    "excessive_building:dark_oak_vertical_stairs",
+    "excessive_building:mangrove_vertical_stairs",
+    "excessive_building:cherry_vertical_stairs",
+    "excessive_building:bamboo_vertical_stairs",
+    "excessive_building:crimson_vertical_stairs",
+    "excessive_building:warped_vertical_stairs",
     "excessive_building:wooden_mug",
     "excessive_building:spruce_crafting_table",
     "excessive_building:birch_crafting_table",

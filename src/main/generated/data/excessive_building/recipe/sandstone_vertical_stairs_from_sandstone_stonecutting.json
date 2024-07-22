@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:sandstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "excessive_building:sandstone_vertical_stairs"
+  }
+}

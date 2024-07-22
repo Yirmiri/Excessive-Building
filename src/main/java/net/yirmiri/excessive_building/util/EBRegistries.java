@@ -8,6 +8,8 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.yirmiri.excessive_building.registry.EBBlocks;
+import net.yirmiri.excessive_building.registry.EBItems;
+
 import static net.minecraft.block.ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE;
 
 public class EBRegistries {
@@ -44,6 +46,10 @@ public class EBRegistries {
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_BUTTON, EBBlocks.EXPOSED_COPPER_BUTTON);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BUTTON, EBBlocks.WEATHERED_COPPER_BUTTON);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BUTTON, EBBlocks.OXIDIZED_COPPER_BUTTON);
+
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.CUT_COPPER_VERTICAL_STAIRS, EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS, EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS, EBBlocks.OXIDIZED_CUT_COPPER_VERTICAL_STAIRS);
     }
 
     public static void registerWaxables() {
@@ -76,6 +82,11 @@ public class EBRegistries {
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BUTTON, EBBlocks.WAXED_EXPOSED_COPPER_BUTTON);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BUTTON, EBBlocks.WAXED_WEATHERED_COPPER_BUTTON);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.OXIDIZED_COPPER_BUTTON, EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
+
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.CUT_COPPER_VERTICAL_STAIRS, EBBlocks.WAXED_CUT_COPPER_VERTICAL_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS, EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS, EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.OXIDIZED_CUT_COPPER_VERTICAL_STAIRS, EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS);
     }
 
     public static void registerStrippables() {
@@ -216,6 +227,9 @@ public class EBRegistries {
     }
 
     private static void registerCompostables() {
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.ANCIENT_SAPLING.asItem(), 0.85f);
+        //ANCIENT IS INCREASED BY +50%
+        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.ANCIENT_SAPLING.asItem(), 0.8f);
+        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.ANCIENT_LEAVES.asItem(), 0.8f);
+        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBItems.ANCIENT_FRUIT.asItem(), 1.0f);
     }
 }

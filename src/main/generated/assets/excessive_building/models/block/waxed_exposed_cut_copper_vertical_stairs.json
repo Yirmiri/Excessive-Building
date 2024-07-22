@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:block/template_vertical_stairs",
+  "textures": {
+    "particle": "minecraft:block/exposed_cut_copper",
+    "texture": "minecraft:block/exposed_cut_copper"
+  }
+}

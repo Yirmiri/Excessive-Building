@@ -31,6 +31,7 @@ public class EBRecipeGen extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
+        //TODO: MAKE ALL STONECUTTER RECIPES A LIST OF INGREDIENTS
         createTwoByTwoRecipe(EBBlocks.CHISELED_OAK_PLANKS, 2,
                 Ingredient.ofItems(Blocks.OAK_SLAB))
                 .criterion(hasItem(Blocks.OAK_SLAB), conditionsFromItem(Blocks.OAK_SLAB))
@@ -1952,6 +1953,363 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 Ingredient.ofItems(Blocks.PINK_TERRACOTTA), Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
                 .criterion(hasItem(Blocks.PINK_TERRACOTTA), conditionsFromItem(Blocks.PINK_TERRACOTTA))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(DyeColor.PINK.getId()))));
+
+        createVerticalStairsRecipe(EBBlocks.OAK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.OAK_PLANKS))
+                .criterion(hasItem(Blocks.OAK_PLANKS), conditionsFromItem(Blocks.OAK_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OAK_VERTICAL_STAIRS)));
+
+        createVerticalStairsRecipe(EBBlocks.SPRUCE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.SPRUCE_PLANKS))
+                .criterion(hasItem(Blocks.SPRUCE_PLANKS), conditionsFromItem(Blocks.SPRUCE_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SPRUCE_VERTICAL_STAIRS)));
+
+        createVerticalStairsRecipe(EBBlocks.BIRCH_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.BIRCH_PLANKS))
+                .criterion(hasItem(Blocks.BIRCH_PLANKS), conditionsFromItem(Blocks.BIRCH_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BIRCH_VERTICAL_STAIRS)));
+        
+        createVerticalStairsRecipe(EBBlocks.JUNGLE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.JUNGLE_PLANKS))
+                .criterion(hasItem(Blocks.JUNGLE_PLANKS), conditionsFromItem(Blocks.JUNGLE_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.JUNGLE_VERTICAL_STAIRS)));
+        
+        createVerticalStairsRecipe(EBBlocks.ACACIA_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.ACACIA_PLANKS))
+                .criterion(hasItem(Blocks.ACACIA_PLANKS), conditionsFromItem(Blocks.ACACIA_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ACACIA_VERTICAL_STAIRS)));
+        
+        createVerticalStairsRecipe(EBBlocks.DARK_OAK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.DARK_OAK_PLANKS))
+                .criterion(hasItem(Blocks.DARK_OAK_PLANKS), conditionsFromItem(Blocks.DARK_OAK_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_OAK_VERTICAL_STAIRS)));
+        
+        createVerticalStairsRecipe(EBBlocks.MANGROVE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.MANGROVE_PLANKS))
+                .criterion(hasItem(Blocks.MANGROVE_PLANKS), conditionsFromItem(Blocks.MANGROVE_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MANGROVE_VERTICAL_STAIRS)));
+        
+        createVerticalStairsRecipe(EBBlocks.CHERRY_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.CHERRY_PLANKS))
+                .criterion(hasItem(Blocks.CHERRY_PLANKS), conditionsFromItem(Blocks.CHERRY_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHERRY_VERTICAL_STAIRS)));
+        
+        createVerticalStairsRecipe(EBBlocks.BAMBOO_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.BAMBOO_PLANKS))
+                .criterion(hasItem(Blocks.BAMBOO_PLANKS), conditionsFromItem(Blocks.BAMBOO_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BAMBOO_VERTICAL_STAIRS)));
+        
+        createVerticalStairsRecipe(EBBlocks.CRIMSON_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.CRIMSON_PLANKS))
+                .criterion(hasItem(Blocks.CRIMSON_PLANKS), conditionsFromItem(Blocks.CRIMSON_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CRIMSON_VERTICAL_STAIRS)));
+        
+        createVerticalStairsRecipe(EBBlocks.WARPED_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.WARPED_PLANKS))
+                .criterion(hasItem(Blocks.WARPED_PLANKS), conditionsFromItem(Blocks.WARPED_PLANKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WARPED_VERTICAL_STAIRS)));
+        
+        createVerticalStairsRecipe(EBBlocks.STONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.STONE))
+                .criterion(hasItem(Blocks.STONE), conditionsFromItem(Blocks.STONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.STONE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.STONE_VERTICAL_STAIRS, Blocks.STONE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.COBBLESTONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.COBBLESTONE))
+                .criterion(hasItem(Blocks.COBBLESTONE), conditionsFromItem(Blocks.COBBLESTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.COBBLESTONE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.COBBLESTONE_VERTICAL_STAIRS, Blocks.COBBLESTONE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.MOSSY_COBBLESTONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.MOSSY_COBBLESTONE))
+                .criterion(hasItem(Blocks.MOSSY_COBBLESTONE), conditionsFromItem(Blocks.MOSSY_COBBLESTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MOSSY_COBBLESTONE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLESTONE_VERTICAL_STAIRS, Blocks.MOSSY_COBBLESTONE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.STONE_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.STONE_BRICKS))
+                .criterion(hasItem(Blocks.STONE_BRICKS), conditionsFromItem(Blocks.STONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.STONE_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.STONE_BRICK_VERTICAL_STAIRS, Blocks.STONE_BRICKS, 1);
+
+        createVerticalStairsRecipe(EBBlocks.MOSSY_STONE_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.MOSSY_STONE_BRICKS))
+                .criterion(hasItem(Blocks.MOSSY_STONE_BRICKS), conditionsFromItem(Blocks.MOSSY_STONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MOSSY_STONE_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_STONE_BRICK_VERTICAL_STAIRS, Blocks.MOSSY_STONE_BRICKS, 1);
+
+        createVerticalStairsRecipe(EBBlocks.COBBLED_DEEPSLATE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.COBBLED_DEEPSLATE))
+                .criterion(hasItem(Blocks.COBBLED_DEEPSLATE), conditionsFromItem(Blocks.COBBLED_DEEPSLATE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.COBBLED_DEEPSLATE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.COBBLED_DEEPSLATE_VERTICAL_STAIRS, Blocks.COBBLED_DEEPSLATE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.DEEPSLATE_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.DEEPSLATE_BRICKS))
+                .criterion(hasItem(Blocks.DEEPSLATE_BRICKS), conditionsFromItem(Blocks.DEEPSLATE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DEEPSLATE_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DEEPSLATE_BRICK_VERTICAL_STAIRS, Blocks.DEEPSLATE_BRICKS, 1);
+
+        createVerticalStairsRecipe(EBBlocks.DEEPSLATE_TILE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.DEEPSLATE_TILES))
+                .criterion(hasItem(Blocks.DEEPSLATE_TILES), conditionsFromItem(Blocks.DEEPSLATE_TILES))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DEEPSLATE_TILE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DEEPSLATE_TILE_VERTICAL_STAIRS, Blocks.DEEPSLATE_TILES, 1);
+
+        createVerticalStairsRecipe(EBBlocks.POLISHED_DEEPSLATE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.POLISHED_DEEPSLATE))
+                .criterion(hasItem(Blocks.POLISHED_DEEPSLATE), conditionsFromItem(Blocks.POLISHED_DEEPSLATE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_DEEPSLATE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_DEEPSLATE_VERTICAL_STAIRS, Blocks.POLISHED_DEEPSLATE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.QUARTZ_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.QUARTZ_BLOCK))
+                .criterion(hasItem(Blocks.QUARTZ_BLOCK), conditionsFromItem(Blocks.QUARTZ_BLOCK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.QUARTZ_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_VERTICAL_STAIRS, Blocks.QUARTZ_BLOCK, 1);
+
+        createVerticalStairsRecipe(EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.SMOOTH_QUARTZ))
+                .criterion(hasItem(Blocks.SMOOTH_QUARTZ), conditionsFromItem(Blocks.SMOOTH_QUARTZ))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS, Blocks.SMOOTH_QUARTZ, 1);
+
+        createVerticalStairsRecipe(EBBlocks.BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.BRICKS))
+                .criterion(hasItem(Blocks.BRICKS), conditionsFromItem(Blocks.BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BRICK_VERTICAL_STAIRS, Blocks.BRICKS, 1);
+
+        createVerticalStairsRecipe(EBBlocks.SANDSTONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.SANDSTONE))
+                .criterion(hasItem(Blocks.SANDSTONE), conditionsFromItem(Blocks.SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SANDSTONE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SANDSTONE_VERTICAL_STAIRS, Blocks.SANDSTONE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.RED_SANDSTONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.RED_SANDSTONE))
+                .criterion(hasItem(Blocks.RED_SANDSTONE), conditionsFromItem(Blocks.RED_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.RED_SANDSTONE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.RED_SANDSTONE_VERTICAL_STAIRS, Blocks.RED_SANDSTONE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.SMOOTH_SANDSTONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.SMOOTH_SANDSTONE))
+                .criterion(hasItem(Blocks.SMOOTH_SANDSTONE), conditionsFromItem(Blocks.SMOOTH_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SMOOTH_SANDSTONE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_SANDSTONE_VERTICAL_STAIRS, Blocks.SMOOTH_SANDSTONE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.SMOOTH_RED_SANDSTONE))
+                .criterion(hasItem(Blocks.SMOOTH_RED_SANDSTONE), conditionsFromItem(Blocks.SMOOTH_RED_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_RED_SANDSTONE_VERTICAL_STAIRS, Blocks.SMOOTH_RED_SANDSTONE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.BLACKSTONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.BLACKSTONE))
+                .criterion(hasItem(Blocks.BLACKSTONE), conditionsFromItem(Blocks.BLACKSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BLACKSTONE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLACKSTONE_VERTICAL_STAIRS, Blocks.BLACKSTONE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.POLISHED_BLACKSTONE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.POLISHED_BLACKSTONE))
+                .criterion(hasItem(Blocks.POLISHED_BLACKSTONE), conditionsFromItem(Blocks.POLISHED_BLACKSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_BLACKSTONE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_BLACKSTONE_VERTICAL_STAIRS, Blocks.POLISHED_BLACKSTONE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.POLISHED_BLACKSTONE_BRICKS))
+                .criterion(hasItem(Blocks.POLISHED_BLACKSTONE_BRICKS), conditionsFromItem(Blocks.POLISHED_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, Blocks.POLISHED_BLACKSTONE_BRICKS, 1);
+
+        createVerticalStairsRecipe(EBBlocks.NETHER_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.NETHER_BRICKS))
+                .criterion(hasItem(Blocks.NETHER_BRICKS), conditionsFromItem(Blocks.NETHER_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.NETHER_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.NETHER_BRICK_VERTICAL_STAIRS, Blocks.NETHER_BRICKS, 1);
+
+        createVerticalStairsRecipe(EBBlocks.RED_NETHER_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.RED_NETHER_BRICKS))
+                .criterion(hasItem(Blocks.RED_NETHER_BRICKS), conditionsFromItem(Blocks.RED_NETHER_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.RED_NETHER_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.RED_NETHER_BRICK_VERTICAL_STAIRS, Blocks.RED_NETHER_BRICKS, 1);
+
+        createVerticalStairsRecipe(EBBlocks.PRISMARINE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.PRISMARINE))
+                .criterion(hasItem(Blocks.PRISMARINE), conditionsFromItem(Blocks.PRISMARINE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.PRISMARINE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_VERTICAL_STAIRS, Blocks.PRISMARINE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.PRISMARINE_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.PRISMARINE_BRICKS))
+                .criterion(hasItem(Blocks.PRISMARINE_BRICKS), conditionsFromItem(Blocks.PRISMARINE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.PRISMARINE_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_BRICK_VERTICAL_STAIRS, Blocks.PRISMARINE_BRICKS, 1);
+
+        createVerticalStairsRecipe(EBBlocks.DARK_PRISMARINE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.DARK_PRISMARINE))
+                .criterion(hasItem(Blocks.DARK_PRISMARINE), conditionsFromItem(Blocks.DARK_PRISMARINE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_PRISMARINE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DARK_PRISMARINE_VERTICAL_STAIRS, Blocks.DARK_PRISMARINE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.ANDESITE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.ANDESITE))
+                .criterion(hasItem(Blocks.ANDESITE), conditionsFromItem(Blocks.ANDESITE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANDESITE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANDESITE_VERTICAL_STAIRS, Blocks.ANDESITE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.POLISHED_ANDESITE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.POLISHED_ANDESITE))
+                .criterion(hasItem(Blocks.POLISHED_ANDESITE), conditionsFromItem(Blocks.POLISHED_ANDESITE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_ANDESITE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ANDESITE_VERTICAL_STAIRS, Blocks.POLISHED_ANDESITE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.GRANITE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.GRANITE))
+                .criterion(hasItem(Blocks.GRANITE), conditionsFromItem(Blocks.GRANITE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GRANITE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.GRANITE_VERTICAL_STAIRS, Blocks.GRANITE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.POLISHED_GRANITE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.POLISHED_GRANITE))
+                .criterion(hasItem(Blocks.POLISHED_GRANITE), conditionsFromItem(Blocks.POLISHED_GRANITE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_GRANITE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_GRANITE_VERTICAL_STAIRS, Blocks.POLISHED_GRANITE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.DIORITE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.DIORITE))
+                .criterion(hasItem(Blocks.DIORITE), conditionsFromItem(Blocks.DIORITE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DIORITE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIORITE_VERTICAL_STAIRS, Blocks.DIORITE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.POLISHED_DIORITE_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.POLISHED_DIORITE))
+                .criterion(hasItem(Blocks.POLISHED_DIORITE), conditionsFromItem(Blocks.POLISHED_DIORITE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_DIORITE_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_DIORITE_VERTICAL_STAIRS, Blocks.POLISHED_DIORITE, 1);
+
+        createVerticalStairsRecipe(EBBlocks.END_STONE_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.END_STONE_BRICKS))
+                .criterion(hasItem(Blocks.END_STONE_BRICKS), conditionsFromItem(Blocks.END_STONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.END_STONE_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.END_STONE_BRICK_VERTICAL_STAIRS, Blocks.END_STONE_BRICKS, 1);
+
+        createVerticalStairsRecipe(EBBlocks.PURPUR_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.PURPUR_BLOCK))
+                .criterion(hasItem(Blocks.PURPUR_BLOCK), conditionsFromItem(Blocks.PURPUR_BLOCK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.PURPUR_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.PURPUR_VERTICAL_STAIRS, Blocks.PURPUR_BLOCK, 1);
+
+        createVerticalStairsRecipe(EBBlocks.CUT_COPPER_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.CUT_COPPER))
+                .criterion(hasItem(Blocks.CUT_COPPER), conditionsFromItem(Blocks.CUT_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CUT_COPPER_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CUT_COPPER_VERTICAL_STAIRS, Blocks.CUT_COPPER, 1);
+
+        createVerticalStairsRecipe(EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.EXPOSED_CUT_COPPER))
+                .criterion(hasItem(Blocks.EXPOSED_CUT_COPPER), conditionsFromItem(Blocks.EXPOSED_CUT_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS, Blocks.EXPOSED_CUT_COPPER, 1);
+
+        createVerticalStairsRecipe(EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.WEATHERED_CUT_COPPER))
+                .criterion(hasItem(Blocks.WEATHERED_CUT_COPPER), conditionsFromItem(Blocks.WEATHERED_CUT_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WEATHERED_CUT_COPPER, 1);
+
+        createVerticalStairsRecipe(EBBlocks.OXIDIZED_CUT_COPPER_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.OXIDIZED_CUT_COPPER))
+                .criterion(hasItem(Blocks.OXIDIZED_CUT_COPPER), conditionsFromItem(Blocks.OXIDIZED_CUT_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OXIDIZED_CUT_COPPER_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.OXIDIZED_CUT_COPPER_VERTICAL_STAIRS, Blocks.OXIDIZED_CUT_COPPER, 1);
+
+        createVerticalStairsRecipe(EBBlocks.WAXED_CUT_COPPER_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.WAXED_CUT_COPPER))
+                .criterion(hasItem(Blocks.WAXED_CUT_COPPER), conditionsFromItem(Blocks.WAXED_CUT_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_CUT_COPPER_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WAXED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WAXED_CUT_COPPER, 1);
+
+        createVerticalStairsRecipe(EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.WAXED_EXPOSED_CUT_COPPER))
+                .criterion(hasItem(Blocks.WAXED_EXPOSED_CUT_COPPER), conditionsFromItem(Blocks.WAXED_EXPOSED_CUT_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WAXED_EXPOSED_CUT_COPPER, 1);
+
+        createVerticalStairsRecipe(EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.WAXED_WEATHERED_CUT_COPPER))
+                .criterion(hasItem(Blocks.WAXED_WEATHERED_CUT_COPPER), conditionsFromItem(Blocks.WAXED_WEATHERED_CUT_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WAXED_WEATHERED_CUT_COPPER, 1);
+
+        createVerticalStairsRecipe(EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.WAXED_OXIDIZED_CUT_COPPER))
+                .criterion(hasItem(Blocks.WAXED_OXIDIZED_CUT_COPPER), conditionsFromItem(Blocks.WAXED_OXIDIZED_CUT_COPPER))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WAXED_OXIDIZED_CUT_COPPER, 1);
+
+        createVerticalStairsRecipe(EBBlocks.TUFF_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.TUFF))
+                .criterion(hasItem(Blocks.TUFF), conditionsFromItem(Blocks.TUFF))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TUFF_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_VERTICAL_STAIRS, Blocks.TUFF, 1);
+
+        createVerticalStairsRecipe(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.TUFF_BRICKS))
+                .criterion(hasItem(Blocks.TUFF_BRICKS), conditionsFromItem(Blocks.TUFF_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_BRICK_VERTICAL_STAIRS, Blocks.TUFF_BRICKS, 1);
+
+        createVerticalStairsRecipe(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.POLISHED_TUFF))
+                .criterion(hasItem(Blocks.POLISHED_TUFF), conditionsFromItem(Blocks.POLISHED_TUFF))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS, Blocks.POLISHED_TUFF, 1);
+
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {

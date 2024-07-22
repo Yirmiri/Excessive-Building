@@ -393,6 +393,65 @@ public class EBModelGen extends FabricModelProvider {
         terracottaTiles.stairs(EBBlocks.TERRACOTTA_TILE_STAIRS);
         terracottaTiles.slab(EBBlocks.TERRACOTTA_TILE_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.TERRACOTTA_TILE_VERTICAL_STAIRS, EBBlocks.TERRACOTTA_TILES);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.OAK_VERTICAL_STAIRS, Blocks.OAK_PLANKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.SPRUCE_VERTICAL_STAIRS, Blocks.SPRUCE_PLANKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.JUNGLE_VERTICAL_STAIRS, Blocks.JUNGLE_PLANKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.ACACIA_VERTICAL_STAIRS, Blocks.ACACIA_PLANKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.DARK_OAK_VERTICAL_STAIRS, Blocks.DARK_OAK_PLANKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.MANGROVE_VERTICAL_STAIRS, Blocks.MANGROVE_PLANKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.CHERRY_VERTICAL_STAIRS, Blocks.CHERRY_PLANKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BAMBOO_VERTICAL_STAIRS, Blocks.BAMBOO_PLANKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.CRIMSON_VERTICAL_STAIRS, Blocks.CRIMSON_PLANKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WARPED_VERTICAL_STAIRS, Blocks.WARPED_PLANKS);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.STONE_VERTICAL_STAIRS, Blocks.STONE);
+        EBModels.registerVerticalStairs(generator, EBBlocks.STONE_BRICK_VERTICAL_STAIRS, Blocks.STONE_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.MOSSY_STONE_BRICK_VERTICAL_STAIRS, Blocks.MOSSY_STONE_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.COBBLESTONE_VERTICAL_STAIRS, Blocks.COBBLESTONE);
+        EBModels.registerVerticalStairs(generator, EBBlocks.MOSSY_COBBLESTONE_VERTICAL_STAIRS, Blocks.MOSSY_COBBLESTONE);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.COBBLED_DEEPSLATE_VERTICAL_STAIRS, Blocks.COBBLED_DEEPSLATE);
+        EBModels.registerVerticalStairs(generator, EBBlocks.DEEPSLATE_BRICK_VERTICAL_STAIRS, Blocks.DEEPSLATE_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.DEEPSLATE_TILE_VERTICAL_STAIRS, Blocks.DEEPSLATE_TILES);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_DEEPSLATE_VERTICAL_STAIRS, Blocks.POLISHED_DEEPSLATE);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.BRICK_VERTICAL_STAIRS, Blocks.BRICKS);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_BLACKSTONE_VERTICAL_STAIRS, Blocks.POLISHED_BLACKSTONE);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, Blocks.POLISHED_BLACKSTONE_BRICKS);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.NETHER_BRICK_VERTICAL_STAIRS, Blocks.NETHER_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.RED_NETHER_BRICK_VERTICAL_STAIRS, Blocks.RED_NETHER_BRICKS);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.PRISMARINE_VERTICAL_STAIRS, Blocks.PRISMARINE);
+        EBModels.registerVerticalStairs(generator, EBBlocks.PRISMARINE_BRICK_VERTICAL_STAIRS, Blocks.PRISMARINE_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.DARK_PRISMARINE_VERTICAL_STAIRS, Blocks.DARK_PRISMARINE);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.ANDESITE_VERTICAL_STAIRS, Blocks.ANDESITE);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_ANDESITE_VERTICAL_STAIRS, Blocks.POLISHED_ANDESITE);
+        EBModels.registerVerticalStairs(generator, EBBlocks.GRANITE_VERTICAL_STAIRS, Blocks.GRANITE);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_GRANITE_VERTICAL_STAIRS, Blocks.POLISHED_GRANITE);
+        EBModels.registerVerticalStairs(generator, EBBlocks.DIORITE_VERTICAL_STAIRS, Blocks.DIORITE);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_DIORITE_VERTICAL_STAIRS, Blocks.POLISHED_DIORITE);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.END_STONE_BRICK_VERTICAL_STAIRS, Blocks.END_STONE_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.PURPUR_VERTICAL_STAIRS, Blocks.PURPUR_BLOCK);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BIRCH_VERTICAL_STAIRS, Blocks.BIRCH_PLANKS);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.TUFF_VERTICAL_STAIRS, Blocks.TUFF);
+        EBModels.registerVerticalStairs(generator, EBBlocks.TUFF_BRICK_VERTICAL_STAIRS, Blocks.TUFF_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS, Blocks.POLISHED_TUFF);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.CUT_COPPER_VERTICAL_STAIRS, Blocks.CUT_COPPER);
+        EBModels.registerVerticalStairs(generator, EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS, Blocks.EXPOSED_CUT_COPPER);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WEATHERED_CUT_COPPER);
+        EBModels.registerVerticalStairs(generator, EBBlocks.OXIDIZED_CUT_COPPER_VERTICAL_STAIRS, Blocks.OXIDIZED_CUT_COPPER);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_CUT_COPPER_VERTICAL_STAIRS, Blocks.CUT_COPPER);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS, Blocks.EXPOSED_CUT_COPPER);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WEATHERED_CUT_COPPER);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS, Blocks.OXIDIZED_CUT_COPPER);
     }
 
     @Override

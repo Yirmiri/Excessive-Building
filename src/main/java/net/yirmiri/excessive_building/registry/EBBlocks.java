@@ -22,7 +22,7 @@ import java.util.HashMap;
 
 public class EBBlocks {
 
-    //VANILLA VERTICAL STAIRS //TODO: CREATIVE TABS (flush out unused vertical stair data files), ADD 1.21 & COPPER VERTICAL SLABS
+    //VANILLA VERTICAL STAIRS //TODO: ADD THESE ENTIRELY AND ADD 1.21 & COPPER VERTICAL SLABS
     public static final Block OAK_VERTICAL_STAIRS = register("oak_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), true);
     public static final Block SPRUCE_VERTICAL_STAIRS = register("spruce_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.SPRUCE_PLANKS)), true);
     public static final Block BIRCH_VERTICAL_STAIRS = register("birch_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS)), true);
@@ -34,8 +34,10 @@ public class EBBlocks {
     public static final Block BAMBOO_VERTICAL_STAIRS = register("bamboo_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.BAMBOO_PLANKS)), true);
     public static final Block CRIMSON_VERTICAL_STAIRS = register("crimson_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.CRIMSON_PLANKS)), true);
     public static final Block WARPED_VERTICAL_STAIRS = register("warped_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.WARPED_PLANKS)), true);
+
     public static final Block STONE_VERTICAL_STAIRS = register("stone_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.STONE)), true);
     public static final Block COBBLESTONE_VERTICAL_STAIRS = register("cobblestone_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.COBBLESTONE)), true);
+    public static final Block MOSSY_COBBLESTONE_VERTICAL_STAIRS = register("mossy_cobblestone_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.MOSSY_COBBLESTONE)), true);
     public static final Block STONE_BRICK_VERTICAL_STAIRS = register("stone_brick_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.STONE_BRICKS)), true);
     public static final Block MOSSY_STONE_BRICK_VERTICAL_STAIRS = register("mossy_stone_brick_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.MOSSY_STONE_BRICKS)), true);
     public static final Block COBBLED_DEEPSLATE_VERTICAL_STAIRS = register("cobbled_deepslate_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.COBBLED_DEEPSLATE)), true);
@@ -65,6 +67,18 @@ public class EBBlocks {
     public static final Block POLISHED_DIORITE_VERTICAL_STAIRS = register("polished_diorite_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.POLISHED_DIORITE)), true);
     public static final Block PURPUR_VERTICAL_STAIRS = register("purpur_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.PURPUR_BLOCK)), true);
     public static final Block END_STONE_BRICK_VERTICAL_STAIRS = register("end_stone_brick_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.END_STONE_BRICKS)), true);
+
+    public static final Block CUT_COPPER_VERTICAL_STAIRS = register("cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copy(Blocks.CUT_COPPER)), true);
+    public static final Block EXPOSED_CUT_COPPER_VERTICAL_STAIRS = register("exposed_cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copy(Blocks.EXPOSED_CUT_COPPER)), true);
+    public static final Block WEATHERED_CUT_COPPER_VERTICAL_STAIRS = register("weathered_cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copy(Blocks.WEATHERED_CUT_COPPER)), true);
+    public static final Block OXIDIZED_CUT_COPPER_VERTICAL_STAIRS = register("oxidized_cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copy(Blocks.OXIDIZED_CUT_COPPER)), true);
+    public static final Block WAXED_CUT_COPPER_VERTICAL_STAIRS = register("waxed_cut_copper_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.WAXED_CUT_COPPER)), true);
+    public static final Block WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS = register("waxed_exposed_cut_copper_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.WAXED_EXPOSED_CUT_COPPER)), true);
+    public static final Block WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS = register("waxed_weathered_cut_copper_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.WAXED_WEATHERED_CUT_COPPER)), true);
+    public static final Block WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS = register("waxed_oxidized_cut_copper_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.WAXED_OXIDIZED_CUT_COPPER)), true);
+    public static final Block TUFF_VERTICAL_STAIRS = register("tuff_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.TUFF)), true);
+    public static final Block POLISHED_TUFF_VERTICAL_STAIRS = register("polished_tuff_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.POLISHED_TUFF)), true);
+    public static final Block TUFF_BRICK_VERTICAL_STAIRS = register("tuff_brick_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.TUFF_BRICKS)), true);
 
     //VANILLA ADDITIONS
     public static final Block QUARTZ_BRICK_STAIRS = register("quartz_brick_stairs", new StairsBlock(Blocks.QUARTZ_BRICKS.getDefaultState(), EBProperties.BlockP.QUARTZ_BRICKS), true);
