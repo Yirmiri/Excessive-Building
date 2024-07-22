@@ -2309,7 +2309,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS)));
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS, Blocks.POLISHED_TUFF, 1);
-
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {

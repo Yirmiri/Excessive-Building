@@ -397,6 +397,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.TUFF_VERTICAL_STAIRS, "Tuff Vertical Stairs");
         build.add(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS, "Polished Tuff Vertical Stairs");
         build.add(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS, "Tuff Brick Vertical Stairs");
+        build.add(EBBlocks.GLOOM_SEEDS, "Gloom Seeds");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

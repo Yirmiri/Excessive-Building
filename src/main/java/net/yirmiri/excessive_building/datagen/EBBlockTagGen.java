@@ -441,6 +441,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     public void appendSaplings() {
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
                 .add(EBBlocks.ANCIENT_SAPLING)
+                .add(EBBlocks.GLOOM_SEEDS)
         ;
     }
 

@@ -112,6 +112,7 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
     public void appendSaplings() {
         getOrCreateTagBuilder(ItemTags.SAPLINGS)
                 .add(EBBlocks.ANCIENT_SAPLING.asItem())
+                .add(EBBlocks.GLOOM_SEEDS.asItem())
         ;
     }
 

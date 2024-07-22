@@ -1,4 +1,4 @@
-// 1.21	2024-07-22T10:35:15.7506429	Excessive Building/Block Loot Tables
+// 1.21	2024-07-22T14:23:32.0289753	Excessive Building/Block Loot Tables
 952f9fd727f95ec66743d7b178886aa8fff93431 data\excessive_building\loot_table\blocks\red_nether_brick_vertical_stairs.json
 036fca6f46aef81f84e5e368c0292aecb94228fe data\excessive_building\loot_table\blocks\yellow_terracotta_tiles.json
 e63a9cb642f0eb652c0a61118c7fb298b0adbc44 data\excessive_building\loot_table\blocks\cobblestone_vertical_stairs.json
@@ -103,6 +103,7 @@ a4ac00245ede4ea38298fea83d451a196056e357 data\excessive_building\loot_table\bloc
 faf6a5e5958915806bb4c2615987f46026ce94a4 data\excessive_building\loot_table\blocks\waxed_exposed_copper_brick_vertical_stairs.json
 5a276bddc55a591dfc66f060cfec23edcdb4b359 data\excessive_building\loot_table\blocks\light_blue_terracotta_tile_slab.json
 ac88d3dd93bf80b5d9ef09fa0b65b187af106307 data\excessive_building\loot_table\blocks\andesite_vertical_stairs.json
+9ff3f524469ffb535c372a3772f4d7c246603a91 data\excessive_building\loot_table\blocks\gloom_seeds.json
 4ea6425aafa55437ddd06fb51a8d39c84c184d1d data\excessive_building\loot_table\blocks\waxed_exposed_copper_button.json
 f82fd37df01f03d8740457837092c20a51b14770 data\excessive_building\loot_table\blocks\mossy_cobblestone_brick_slab.json
 48ab6f146de87fcda497ae91156339c69d710a1f data\excessive_building\loot_table\blocks\dark_oak_ladder.json

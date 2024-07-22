@@ -182,7 +182,7 @@ public class EBBlocks {
     public static final Block ANCIENT_WALL_HANGING_SIGN = register("ancient_wall_hanging_sign", new EBWallHangingSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), false);
 
     public static final Block ANCIENT_LEAVES = register("ancient_leaves", new AncientLeavesBlock(EBProperties.BlockP.ANCIENT_LEAVES), true);
-    public static final Block ANCIENT_SAPLING = registerAncSapling("ancient_sapling", new SaplingBlock(EBSaplingGenerators.ANCIENT, EBProperties.BlockP.ANCIENT_SAPLING), true);
+    public static final Block ANCIENT_SAPLING = registerAncSapling("ancient_sapling", new AncientSaplingBlock(EBSaplingGenerators.ANCIENT, EBProperties.BlockP.ANCIENT_SAPLING), true);
     public static final Block POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", Blocks.createFlowerPotBlock(EBBlocks.ANCIENT_SAPLING), false);
 
     //GLOOM
@@ -211,6 +211,8 @@ public class EBBlocks {
     public static final Block GLOOM_WALL_SIGN = register("gloom_wall_sign", new EBWallSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
     public static final Block GLOOM_HANGING_SIGN = register("gloom_hanging_sign", new EBHangingSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
     public static final Block GLOOM_WALL_HANGING_SIGN = register("gloom_wall_hanging_sign", new EBWallHangingSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
+
+    public static final Block GLOOM_SEEDS = register("gloom_seeds", new SaplingBlock(EBSaplingGenerators.ANCIENT, EBProperties.BlockP.GLOOM_SEEDS), true);
 
     //COBBLED BRICKS
     public static final Block COBBLESTONE_BRICKS = register("cobblestone_bricks", new Block(EBProperties.BlockP.COBBLESTONE_BRICKS), true);

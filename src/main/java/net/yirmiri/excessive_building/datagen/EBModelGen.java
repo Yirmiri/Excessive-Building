@@ -452,6 +452,8 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS, Blocks.EXPOSED_CUT_COPPER);
         EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WEATHERED_CUT_COPPER);
         EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS, Blocks.OXIDIZED_CUT_COPPER);
+
+        EBModels.registerTintableCrossWithoutItem(generator, EBBlocks.GLOOM_SEEDS, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
@@ -496,6 +498,7 @@ public class EBModelGen extends FabricModelProvider {
         generator.register(EBBlocks.WARPED_LADDER.asItem(), Models.GENERATED);
         generator.register(EBBlocks.ANCIENT_LADDER.asItem(), Models.GENERATED);
         generator.register(EBBlocks.GLOOM_LADDER.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.GLOOM_SEEDS.asItem(), Models.GENERATED);
     }
 
     public static class EBModels {
@@ -510,6 +513,10 @@ public class EBModelGen extends FabricModelProvider {
 
         public static final Model MUG = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_mug")
                 .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+
+        public static void registerTintableCrossWithoutItem(BlockStateModelGenerator generator, Block block, BlockStateModelGenerator.TintType tintType) {
+            generator.registerTintableCrossBlockState(block, tintType);
+        }
 
         public static void registerVerticalStairs(BlockStateModelGenerator generator, Block verticalStairs, Block texture) {
             Identifier model = VERTICAL_STAIRS.upload(verticalStairs, TextureMap.texture(texture), generator.modelCollector);
