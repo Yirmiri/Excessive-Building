@@ -36,6 +36,7 @@ public class EBPaintingVariants {
 
     //CREATIVE
     public static final RegistryKey<PaintingVariant> REBELLIOUS = of("rebellious");
+    public static final RegistryKey<PaintingVariant> GOODIE_MALK = of("goodiemalk");
 
     public static void bootstrap(Registerable<PaintingVariant> registry) {
             register(registry, FORGOTTEN_KINGDOM, 2, 1);
@@ -65,6 +66,7 @@ public class EBPaintingVariants {
 
             //CREATIVE
             register(registry, REBELLIOUS, 8, 8);
+            register(registry, GOODIE_MALK, 4, 4);
     }
 
     private static void register(Registerable<PaintingVariant> registry, RegistryKey<PaintingVariant> key, int width, int height) {

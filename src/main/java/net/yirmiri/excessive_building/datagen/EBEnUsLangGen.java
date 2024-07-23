@@ -500,6 +500,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.evil_eye.title", "Evil Eye");
         build.add("painting.excessive_building.rebellious.title", "Rebellious");
         build.add("painting.excessive_building.catastrophes_before_the_calamity.title", "Catastrophes Before the Calamity");
+        build.add("painting.excessive_building.goodie_malk.title", "Goodie Malk");
 
         //PAINTING AUTHORS
         build.add("painting.excessive_building.forgotten_kingdom.author", "Yirmiri");
@@ -527,6 +528,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.evil_eye.author", "Yirmiri");
         build.add("painting.excessive_building.rebellious.author", "Rebel (the dog)");
         build.add("painting.excessive_building.catastrophes_before_the_calamity.author", "BackupCup");
+        build.add("painting.excessive_building.goodie_malk.author", "Goodie");
 
         //EFFECTS
         build.add("effect.excessive_building.reaching", "Reaching");
