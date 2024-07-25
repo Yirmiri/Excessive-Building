@@ -53,6 +53,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendWoodenTrapdoors();
         appendWoodenSlabs();
         appendWoodenStairs();
+        appendEnchantmentPowerProvider();
     }
 
     public void appendDecoratives() {
@@ -61,6 +62,23 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.GLASS_JAR)
                 .add(EBBlocks.GLASS_JAR_OF_FIRE)
                 .add(EBBlocks.GLASS_JAR_OF_SOUL_FIRE)
+        ;
+    }
+
+    public void appendEnchantmentPowerProvider() {
+        getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
+                .add(EBBlocks.SPRUCE_BOOKSHELF)
+                .add(EBBlocks.BIRCH_BOOKSHELF)
+                .add(EBBlocks.JUNGLE_BOOKSHELF)
+                .add(EBBlocks.ACACIA_BOOKSHELF)
+                .add(EBBlocks.DARK_OAK_BOOKSHELF)
+                .add(EBBlocks.MANGROVE_BOOKSHELF)
+                .add(EBBlocks.CHERRY_BOOKSHELF)
+                .add(EBBlocks.BAMBOO_BOOKSHELF)
+                .add(EBBlocks.CRIMSON_BOOKSHELF)
+                .add(EBBlocks.WARPED_BOOKSHELF)
+                .add(EBBlocks.GLOOM_BOOKSHELF)
+                .add(EBBlocks.ANCIENT_BOOKSHELF)
         ;
     }
 

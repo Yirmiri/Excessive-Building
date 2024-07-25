@@ -485,6 +485,19 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerSimpleCubeAll(EBBlocks.CRACKED_SMOOTH_BRICKS);
 
         generator.registerLantern(EBBlocks.REACHING_LANTERN);
+
+        EBModels.registerEBBookshelf(generator, EBBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.JUNGLE_BOOKSHELF, Blocks.JUNGLE_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.ACACIA_BOOKSHELF, Blocks.ACACIA_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.DARK_OAK_BOOKSHELF, Blocks.DARK_OAK_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.MANGROVE_BOOKSHELF, Blocks.MANGROVE_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.CHERRY_BOOKSHELF, Blocks.CHERRY_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.BAMBOO_BOOKSHELF, Blocks.BAMBOO_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.CRIMSON_BOOKSHELF, Blocks.CRIMSON_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.WARPED_BOOKSHELF, Blocks.WARPED_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.ANCIENT_BOOKSHELF, EBBlocks.ANCIENT_PLANKS);
+        EBModels.registerEBBookshelf(generator, EBBlocks.GLOOM_BOOKSHELF, EBBlocks.GLOOM_PLANKS);
     }
 
     @Override
@@ -544,6 +557,12 @@ public class EBModelGen extends FabricModelProvider {
 
         public static final Model MUG = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_mug")
                 .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+
+        private static void registerEBBookshelf(BlockStateModelGenerator generator, Block bookshelf, Block planks) {
+            TextureMap textureMap = TextureMap.sideEnd(TextureMap.getId(bookshelf), TextureMap.getId(planks));
+            Identifier identifier = Models.CUBE_COLUMN.upload(bookshelf, textureMap, generator.modelCollector);
+            generator.blockStateCollector.accept(generator.createSingletonBlockState(bookshelf, identifier));
+        }
 
         public static void registerTintableCrossWithoutItem(BlockStateModelGenerator generator, Block block, BlockStateModelGenerator.TintType tintType) {
             generator.registerTintableCrossBlockState(block, tintType);

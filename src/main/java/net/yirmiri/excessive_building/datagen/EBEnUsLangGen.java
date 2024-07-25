@@ -423,7 +423,19 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.CRACKED_BRICKS, "Cracked Bricks");
         build.add(EBBlocks.CRACKED_SMOOTH_BRICKS, "Cracked Smooth Bricks");
         build.add(EBBlocks.REACHING_LANTERN, "Reaching Lantern");
-
+        build.add(EBBlocks.SPRUCE_BOOKSHELF, "Spruce Bookshelf");
+        build.add(EBBlocks.BIRCH_BOOKSHELF, "Birch Bookshelf");
+        build.add(EBBlocks.JUNGLE_BOOKSHELF, "Jungle Bookshelf");
+        build.add(EBBlocks.ACACIA_BOOKSHELF, "Acacia Bookshelf");
+        build.add(EBBlocks.DARK_OAK_BOOKSHELF, "Dark Oak Bookshelf");
+        build.add(EBBlocks.MANGROVE_BOOKSHELF, "Mangrove Bookshelf");
+        build.add(EBBlocks.CHERRY_BOOKSHELF, "Cherry Bookshelf");
+        build.add(EBBlocks.BAMBOO_BOOKSHELF, "Bamboo Bookshelf");
+        build.add(EBBlocks.CRIMSON_BOOKSHELF, "Crimson Bookshelf");
+        build.add(EBBlocks.WARPED_BOOKSHELF, "Warped Bookshelf");
+        build.add(EBBlocks.ANCIENT_BOOKSHELF, "Ancient Bookshelf");
+        build.add(EBBlocks.GLOOM_BOOKSHELF, "Gloom Bookshelf");
+        
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
         build.add(EBItems.ANCIENT_HANGING_SIGN, "Ancient Hanging Sign");

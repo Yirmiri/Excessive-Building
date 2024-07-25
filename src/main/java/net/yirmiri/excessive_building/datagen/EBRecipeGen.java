@@ -2461,6 +2461,74 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("#")
                 .criterion(hasItem(EBItems.ANCIENT_FRUIT), conditionsFromItem(EBItems.ANCIENT_FRUIT))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.REACHING_LANTERN)));
+
+        createShelfBlock(EBBlocks.SPRUCE_BOOKSHELF, 1,
+                Ingredient.ofItems(Blocks.SPRUCE_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SPRUCE_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.BIRCH_BOOKSHELF, 1,
+                Ingredient.ofItems(Blocks.BIRCH_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BIRCH_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.JUNGLE_BOOKSHELF, 1,
+                Ingredient.ofItems(Blocks.JUNGLE_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.JUNGLE_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.ACACIA_BOOKSHELF, 1,
+                Ingredient.ofItems(Blocks.ACACIA_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ACACIA_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.DARK_OAK_BOOKSHELF, 1,
+                Ingredient.ofItems(Blocks.DARK_OAK_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_OAK_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.MANGROVE_BOOKSHELF, 1,
+                Ingredient.ofItems(Blocks.MANGROVE_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MANGROVE_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.CHERRY_BOOKSHELF, 1,
+                Ingredient.ofItems(Blocks.CHERRY_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHERRY_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.BAMBOO_BOOKSHELF, 1,
+                Ingredient.ofItems(Blocks.BAMBOO_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BAMBOO_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.CRIMSON_BOOKSHELF, 1,
+                Ingredient.ofItems(Blocks.CRIMSON_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CRIMSON_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.WARPED_BOOKSHELF, 1,
+                Ingredient.ofItems(Blocks.WARPED_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WARPED_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.ANCIENT_BOOKSHELF, 1,
+                Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_BOOKSHELF)));
+
+        createShelfBlock(EBBlocks.GLOOM_BOOKSHELF, 1,
+                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_BOOKSHELF)));
+    }
+
+    public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, output, count)
+                .input('#', input).input('@', input2)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###");
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {

@@ -512,6 +512,20 @@ public class EBBlocks {
     public static final Block ANCIENT_CRAFTING_TABLE = registerCT("ancient_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.CHERRY_WOOD), true);
     public static final Block GLOOM_CRAFTING_TABLE = registerCT("gloom_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.CHERRY_WOOD), true);
 
+    //BOOKSHELF
+    public static final Block SPRUCE_BOOKSHELF = registerBS("spruce_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block BIRCH_BOOKSHELF = registerBS("birch_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block JUNGLE_BOOKSHELF = registerBS("jungle_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block ACACIA_BOOKSHELF = registerBS("acacia_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block DARK_OAK_BOOKSHELF = registerBS("dark_oak_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block MANGROVE_BOOKSHELF = registerBS("mangrove_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block CHERRY_BOOKSHELF = registerBS("cherry_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
+    public static final Block BAMBOO_BOOKSHELF = registerBS("bamboo_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.BAMBOO_SHELF), true);
+    public static final Block CRIMSON_BOOKSHELF = registerBS("crimson_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.CRIMSON_SHELF), true);
+    public static final Block WARPED_BOOKSHELF = registerBS("warped_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.WARPED_SHELF), true);
+    public static final Block ANCIENT_BOOKSHELF = registerBS("ancient_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
+    public static final Block GLOOM_BOOKSHELF = registerBS("gloom_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
+
     //DECORATIVES
     public static final Block WOODEN_MUG = registerDeco("wooden_mug", new WoodenMugBlock(EBProperties.BlockP.WOODEN_MUG), true);
     public static final Block GLASS_JAR = registerDeco("glass_jar", new GlassJarBlock(EBProperties.BlockP.GLASS_JAR), true);
@@ -605,6 +619,17 @@ public class EBBlocks {
 
     private static Item registerAncSaplingBlockItem(String id, Block block) {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new AncientSaplingBlockItem(block, new Item.Settings()));
+    }
+
+    private static Block registerBS(String id, Block block, boolean registerItem) {
+        if (registerItem) {
+            registerBSBlockItem(id, block);
+        }
+        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+    }
+
+    private static Item registerBSBlockItem(String id, Block block) {
+        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new EBBookshelfBlockItem(block, new Item.Settings()));
     }
 
     private static Block registerCT(String id, Block block, boolean registerItem) {

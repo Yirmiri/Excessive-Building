@@ -31,6 +31,13 @@ public class EBProperties {
         public static final Block.Settings ANCIENT_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS).mapColor(MapColor.TERRACOTTA_WHITE).sounds(BlockSoundGroup.CHERRY_WOOD);
         public static final Block.Settings GLOOM_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS).mapColor(MapColor.RAW_IRON_PINK).sounds(BlockSoundGroup.CHERRY_WOOD);
 
+        //BOOKSHELVES
+        public static final Block.Settings GENERIC_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.WOOD);
+        public static final Block.Settings CHERRY_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.CHERRY_WOOD);
+        public static final Block.Settings BAMBOO_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.BAMBOO_WOOD);
+        public static final Block.Settings CRIMSON_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.NETHER_WOOD);
+        public static final Block.Settings WARPED_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.NETHER_WOOD);
+
         //LADDERS
         public static final Block.Settings GENERIC_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
         public static final Block.Settings CHERRY_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);

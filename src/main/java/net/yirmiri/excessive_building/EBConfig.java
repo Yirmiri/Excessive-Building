@@ -9,6 +9,8 @@ public class EBConfig {
     //CONTENT
     public static final ForgeConfigSpec.BooleanValue ENABLE_VERTICAL_STAIRS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_RESOURCE_BRICKS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_SHELF_VARIANTS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVE_SHELVES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_CRAFTING_TABLE_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_LADDER_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_POTTERY_SHERDS;
@@ -44,6 +46,14 @@ public class EBConfig {
         ENABLE_RESOURCE_BRICKS = BUILDER
                 .comment("Should blocks made out of resources (gold, diamond, etc) be enabled? (default: true)")
                 .define("enableResourceBricks", true);
+
+        ENABLE_SHELF_VARIANTS = BUILDER
+                .comment("Should shelf variants be enabled? (default: true)")
+                .define("enableShelfVariants", true);
+
+        ENABLE_DECORATIVE_SHELVES = BUILDER
+                .comment("Should decorative shelf variants be enabled? (default: true)")
+                .define("enableDecorativeShelves", true);
 
         ENABLE_CRAFTING_TABLE_VARIANTS = BUILDER
                 .comment("Should crafting table variants be enabled? (default: true)")

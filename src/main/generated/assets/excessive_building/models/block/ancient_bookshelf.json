@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "excessive_building:block/ancient_planks",
+    "side": "excessive_building:block/ancient_bookshelf"
+  }
+}
