@@ -533,6 +533,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
 
+                entries.add(EBBlocks.REACHING_LANTERN);
+
                 entries.add(EBBlocks.WOODEN_MUG);
                 entries.add(EBBlocks.GLASS_JAR);
                 entries.add(EBBlocks.GLASS_JAR_OF_FIRE);

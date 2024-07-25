@@ -23,8 +23,8 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(EBBlockSetTypes.EBWoodTypes.ANCIENT, TexturedRenderLayers.getSignTextureId(EBBlockSetTypes.EBWoodTypes.ANCIENT));
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(EBBlockSetTypes.EBWoodTypes.GLOOM, TexturedRenderLayers.getSignTextureId(EBBlockSetTypes.EBWoodTypes.GLOOM));
 
-        BlockEntityRendererFactories.register(EBBlockEntities.EB_SIGN_BLOCK_ENTITY, SignBlockEntityRenderer::new);
-        BlockEntityRendererFactories.register(EBBlockEntities.EB_HANGING_SIGN_BLOCK_ENTITY, HangingSignBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(EBBlockEntities.EB_SIGN, SignBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(EBBlockEntities.EB_HANGING_SIGN, HangingSignBlockEntityRenderer::new);
 
         //CUTOUT
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ANCIENT_LEAVES, RenderLayer.getCutout());
@@ -50,6 +50,7 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLASS_JAR_OF_FIRE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLASS_JAR_OF_SOUL_FIRE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_SEEDS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.REACHING_LANTERN, RenderLayer.getCutout());
 
         //TRANSLUCENT
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.SEA_GLASS, RenderLayer.getTranslucent());

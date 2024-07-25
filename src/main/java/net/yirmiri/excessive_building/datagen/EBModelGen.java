@@ -483,6 +483,8 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerSimpleCubeAll(EBBlocks.SMOOTH_HERRINGBONE_BRICKS);
         generator.registerSimpleCubeAll(EBBlocks.CRACKED_BRICKS);
         generator.registerSimpleCubeAll(EBBlocks.CRACKED_SMOOTH_BRICKS);
+
+        generator.registerLantern(EBBlocks.REACHING_LANTERN);
     }
 
     @Override

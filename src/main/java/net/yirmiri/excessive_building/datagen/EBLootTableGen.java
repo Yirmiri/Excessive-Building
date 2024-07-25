@@ -423,6 +423,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.CRACKED_SMOOTH_BRICKS);
         addDrop(EBBlocks.HERRINGBONE_BRICKS);
         addDrop(EBBlocks.SMOOTH_HERRINGBONE_BRICKS);
+        addDrop(EBBlocks.REACHING_LANTERN);
     }
 
     private void addDyedKnittedWoolDrops() {

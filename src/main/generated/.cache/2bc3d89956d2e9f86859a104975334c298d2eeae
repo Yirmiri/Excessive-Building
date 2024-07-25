@@ -1,4 +1,4 @@
-// 1.21	2024-07-22T21:27:08.7445929	Excessive Building/Block Loot Tables
+// 1.21	2024-07-25T15:44:54.1941456	Excessive Building/Block Loot Tables
 952f9fd727f95ec66743d7b178886aa8fff93431 data\excessive_building\loot_table\blocks\red_nether_brick_vertical_stairs.json
 036fca6f46aef81f84e5e368c0292aecb94228fe data\excessive_building\loot_table\blocks\yellow_terracotta_tiles.json
 e63a9cb642f0eb652c0a61118c7fb298b0adbc44 data\excessive_building\loot_table\blocks\cobblestone_vertical_stairs.json
@@ -61,6 +61,7 @@ edd098fc9a70eb776516699d489b3ba4c45c079f data\excessive_building\loot_table\bloc
 5992d16cccbbe3e23ca06c7020704e63ee96953e data\excessive_building\loot_table\blocks\cobbled_deepslate_brick_stairs.json
 d900a8076c1004492789ebb95df6dc76ba1da4a7 data\excessive_building\loot_table\blocks\crimson_mosaic_stairs.json
 b9fb5112bd3454c4630a92d0904a4bac90d68f73 data\excessive_building\loot_table\blocks\light_blue_terracotta_tiles.json
+28f9dcf8b5742deb17f796ce4249c912b5fdddb5 data\excessive_building\loot_table\blocks\reaching_lantern.json
 d8c045258fecfb51649ca7d95f344d92e07d6c10 data\excessive_building\loot_table\blocks\red_terracotta_tile_vertical_stairs.json
 833be4673449b900321fb9f3007574b9e5df58f5 data\excessive_building\loot_table\blocks\red_sandstone_vertical_stairs.json
 d5df36daa0ca60b8ab1948e2c9751c85f80a6985 data\excessive_building\loot_table\blocks\bamboo_ladder.json

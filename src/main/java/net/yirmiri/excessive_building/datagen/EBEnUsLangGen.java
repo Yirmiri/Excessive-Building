@@ -422,6 +422,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.SMOOTH_HERRINGBONE_BRICKS, "Smooth Herringbone Bricks");
         build.add(EBBlocks.CRACKED_BRICKS, "Cracked Bricks");
         build.add(EBBlocks.CRACKED_SMOOTH_BRICKS, "Cracked Smooth Bricks");
+        build.add(EBBlocks.REACHING_LANTERN, "Reaching Lantern");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

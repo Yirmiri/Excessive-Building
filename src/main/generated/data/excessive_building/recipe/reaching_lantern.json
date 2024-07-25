@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "excessive_building:ancient_fruit"
+    },
+    "@": {
+      "item": "minecraft:lantern"
+    }
+  },
+  "pattern": [
+    "#",
+    "@",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:reaching_lantern"
+  }
+}

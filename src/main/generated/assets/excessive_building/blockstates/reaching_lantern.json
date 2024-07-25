@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "excessive_building:block/reaching_lantern"
+    },
+    "hanging=true": {
+      "model": "excessive_building:block/reaching_lantern_hanging"
+    }
+  }
+}

@@ -2453,6 +2453,14 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("#")
                 .criterion(hasItem(EBBlocks.SMOOTH_BRICK_SLAB), conditionsFromItem(EBBlocks.SMOOTH_BRICK_SLAB))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SMOOTH_HERRINGBONE_BRICKS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.REACHING_LANTERN, 1)
+                .input('#', EBItems.ANCIENT_FRUIT).input('@', Items.LANTERN)
+                .pattern("#")
+                .pattern("@")
+                .pattern("#")
+                .criterion(hasItem(EBItems.ANCIENT_FRUIT), conditionsFromItem(EBItems.ANCIENT_FRUIT))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.REACHING_LANTERN)));
     }
 
     public static CraftingRecipeJsonBuilder createWaxedRecipe(ItemConvertible output, int count, Ingredient input) {

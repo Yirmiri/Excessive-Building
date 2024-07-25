@@ -19,6 +19,9 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_SOUL_MAGMA_COLUMN_TOGGLE;
     public static final ForgeConfigSpec.FloatValue ANCIENT_SAPLING_CHANCE;
     public static final ForgeConfigSpec.FloatValue GLOOM_SEEDS_CHANCE;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_REACHING_LANTERN_FUNCTIONALITY;
+    public static final ForgeConfigSpec.IntValue REACHING_LANTERN_AMPLIFIER;
+    public static final ForgeConfigSpec.IntValue REACHING_LANTERN_RANGE;
     public static final ForgeConfigSpec.IntValue REACHING_DURATION;
     public static final ForgeConfigSpec.IntValue LONG_REACHING_DURATION;
     public static final ForgeConfigSpec.IntValue REACHING_AMPLIFIER;
@@ -78,6 +81,18 @@ public class EBConfig {
         GLOOM_SEEDS_CHANCE = BUILDER
                 .comment("How rare should gloom seeds be? (default: 0.02 aka 2%)")
                 .defineInRange("ancientSaplingChance", 0.02F, 0F, 1.0F);
+
+        ENABLE_REACHING_LANTERN_FUNCTIONALITY = BUILDER
+                .comment("Should reaching lanterns grant nearby players the reaching effect? (default: true)")
+                .define("enableReachingLanternFunctionality", true);
+
+        REACHING_LANTERN_AMPLIFIER = BUILDER
+                .comment("What level of reaching should the reaching lantern grant? (default: 1)")
+                .defineInRange("reachingLanternAmplifier", 1, 0, 255);
+
+        REACHING_LANTERN_RANGE = BUILDER
+                .comment("How large should the reaching lantern's range be in blocks? (default: 8)")
+                .defineInRange("reachingLanternRange", 8, 0, 64);
 
         REACHING_DURATION = BUILDER
                 .comment("How long should the reaching potion last in ticks? (default: 12000)")

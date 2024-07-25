@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "@": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "# #",
+    "#@#",
+    "# #"
+  ],
+  "result": {
+    "count": 8,
+    "item": "minecraft:ladder"
+  },
+  "show_notification": true
+}
