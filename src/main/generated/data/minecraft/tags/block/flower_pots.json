@@ -1,5 +1,8 @@
 {
   "values": [
-    "excessive_building:potted_ancient_sapling"
+    "excessive_building:potted_ancient_sapling",
+    "excessive_building:potted_rose",
+    "excessive_building:potted_cyan_rose",
+    "excessive_building:potted_white_rose"
   ]
 }

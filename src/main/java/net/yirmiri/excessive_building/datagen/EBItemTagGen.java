@@ -28,6 +28,15 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendAncientLogs();
         appendGloomLogs();
         appendSoulFireBaseBlocks();
+        appendSmallFlowers();
+    }
+
+    public void appendSmallFlowers() {
+        getOrCreateTagBuilder(ItemTags.SMALL_FLOWERS)
+                .add(EBBlocks.ROSE.asItem())
+                .add(EBBlocks.CYAN_ROSE.asItem())
+                .add(EBBlocks.WHITE_ROSE.asItem())
+        ;
     }
 
     public void appendSoulFireBaseBlocks() {

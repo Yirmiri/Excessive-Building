@@ -31,7 +31,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-        //TODO: MAKE ALL STONECUTTER RECIPES A LIST OF INGREDIENTS
         createTwoByTwoRecipe(EBBlocks.CHISELED_OAK_PLANKS, 2,
                 Ingredient.ofItems(Blocks.OAK_SLAB))
                 .criterion(hasItem(Blocks.OAK_SLAB), conditionsFromItem(Blocks.OAK_SLAB))
@@ -2669,6 +2668,31 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ASPHALT_STAIRS, EBBlocks.ASPHALT, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ASPHALT_SLAB, EBBlocks.ASPHALT, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ASPHALT_VERTICAL_STAIRS, EBBlocks.ASPHALT, 1);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.IRON_GRATE, 4)
+                .input('#', Blocks.IRON_BLOCK)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .criterion(hasItem(Blocks.IRON_BLOCK), conditionsFromItem(Blocks.IRON_BLOCK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.IRON_GRATE)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.IRON_GRATE, Blocks.IRON_BLOCK, 4);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.RED_DYE, 1)
+                .input(EBBlocks.ROSE)
+                .criterion(hasItem(EBBlocks.ROSE), conditionsFromItem(EBBlocks.ROSE))
+                .offerTo(exporter, Identifier.of((getRecipeName(Items.RED_DYE) + "_from_rose")));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CYAN_DYE, 1)
+                .input(EBBlocks.CYAN_ROSE)
+                .criterion(hasItem(EBBlocks.CYAN_ROSE), conditionsFromItem(EBBlocks.CYAN_ROSE))
+                .offerTo(exporter, Identifier.of((getRecipeName(Items.CYAN_DYE) + "_from_cyan_rose")));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.WHITE_DYE, 1)
+                .input(EBBlocks.WHITE_ROSE)
+                .criterion(hasItem(EBBlocks.WHITE_ROSE), conditionsFromItem(EBBlocks.WHITE_ROSE))
+                .offerTo(exporter, Identifier.of((getRecipeName(Items.WHITE_DYE) + "_from_white_rose")));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

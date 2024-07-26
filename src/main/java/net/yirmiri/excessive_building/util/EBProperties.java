@@ -60,6 +60,11 @@ public class EBProperties {
         //SEA GLASS
         public static final Block.Settings SEA_GLASS = FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque();
 
+        //NATURE
+        public static final Block.Settings ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.RED);
+        public static final Block.Settings CYAN_ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.CYAN);
+        public static final Block.Settings WHITE_ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.WHITE);
+
         //RESOURCES
         public static final Block.Settings GOLD = FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK);
         public static final Block.Settings IRON = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK);
@@ -105,6 +110,7 @@ public class EBProperties {
         public static final Block.Settings BRIMSTONE_LAMP = FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).mapColor(MapColor.RED);
 
         //MISC
+        public static final Block.Settings IRON_GRATE = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE);
         public static final Block.Settings ASPHALT = FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK);
         public static final Block.Settings REACHING_LANTERN = FabricBlockSettings.copyOf(Blocks.SOUL_LANTERN);
         public static final Block.Settings BRICKS = FabricBlockSettings.copyOf(Blocks.BRICKS);

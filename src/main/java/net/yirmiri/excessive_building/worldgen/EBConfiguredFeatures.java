@@ -17,6 +17,9 @@ public class EBConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> ANCIENT_TREE = createKey("ancient_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GLOOM_TREE = createKey("gloom_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_BRIMSTONE = createKey("ore_brimstone");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_ROSE = createKey("patch_rose");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_CYAN_ROSE = createKey("patch_cyan_rose");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WHITE_ROSE = createKey("patch_white_rose");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> ctx) {
         RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);

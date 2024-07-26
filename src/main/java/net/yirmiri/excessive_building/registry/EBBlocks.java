@@ -2,6 +2,7 @@ package net.yirmiri.excessive_building.registry;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -594,7 +595,17 @@ public class EBBlocks {
     public static final Block ASPHALT_SLAB = registerAP("asphalt_slab", new AsphaltSlabBlock(EBProperties.BlockP.ASPHALT), true);
     public static final Block ASPHALT_VERTICAL_STAIRS = registerAPVStairs("asphalt_vertical_stairs", new AsphaltVerticalStairsBlock(EBProperties.BlockP.ASPHALT), true);
 
+    //NATURE
+    public static final Block ROSE = registerAP("rose", new FlowerBlock(StatusEffects.HEALTH_BOOST, 20, EBProperties.BlockP.ROSE), true);
+    public static final Block POTTED_ROSE = register("potted_rose", Blocks.createFlowerPotBlock(EBBlocks.ROSE), false);
+    public static final Block CYAN_ROSE = registerAP("cyan_rose", new FlowerBlock(StatusEffects.INVISIBILITY, 10, EBProperties.BlockP.CYAN_ROSE), true);
+    public static final Block POTTED_CYAN_ROSE = register("potted_cyan_rose", Blocks.createFlowerPotBlock(EBBlocks.CYAN_ROSE), false);
+    public static final Block WHITE_ROSE = registerAP("white_rose", new FlowerBlock(StatusEffects.LUCK, 30, EBProperties.BlockP.WHITE_ROSE), true);
+    public static final Block POTTED_WHITE_ROSE = register("potted_white_rose", Blocks.createFlowerPotBlock(EBBlocks.WHITE_ROSE), false);
+
     //MISC
+    public static final Block IRON_GRATE = registerAP("iron_grate", new GrateBlock(EBProperties.BlockP.IRON_GRATE), true);
+    
     public static final Block REACHING_LANTERN = register("reaching_lantern", new ReachingLanternBlock(EBProperties.BlockP.REACHING_LANTERN), true);
 
     public static final Block BONE_BRICKS = register("bone_bricks", new Block(EBProperties.BlockP.BONE), true);
@@ -605,7 +616,7 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO: SHELF VARIANTS, GLOOM TREE GENERATION, TERRACOTTA POTS, ROSES, GRATES, SMOOTH STONE BLOCKS, CALCITE
+    //TODO: SHELF VARIANTS, GLOOM TREE GENERATION, TERRACOTTA POTS, SMOOTH STONE BLOCKS, CALCITE, AZALEA LOTUS PARTICLE BLOCK BUT FOR OTHER BIOMES
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

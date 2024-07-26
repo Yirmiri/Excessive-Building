@@ -495,6 +495,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.IRON_BRICK_SLAB);
 
+                entries.add(EBBlocks.IRON_GRATE);
+
                 entries.add(EBBlocks.GOLD_BRICKS);
                 entries.add(EBBlocks.GOLD_BRICK_STAIRS);
                 entries.add(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS);
@@ -575,6 +577,10 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
+
+                entries.add(EBBlocks.ROSE);
+                entries.add(EBBlocks.CYAN_ROSE);
+                entries.add(EBBlocks.WHITE_ROSE);
 
                 entries.add(EBBlocks.REACHING_LANTERN);
 

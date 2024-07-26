@@ -54,6 +54,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendWoodenSlabs();
         appendWoodenStairs();
         appendEnchantmentPowerProvider();
+        appendSmallFlowers();
     }
 
     public void appendDecoratives() {
@@ -315,6 +316,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     public void appendNeedsStoneTool() {
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+                .add(EBBlocks.IRON_GRATE)
                 .add(EBBlocks.CUT_COPPER_VERTICAL_STAIRS)
                 .add(EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS)
                 .add(EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS)
@@ -465,8 +467,19 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         public void appendFlowerPots() {
             getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                     .add(EBBlocks.POTTED_ANCIENT_SAPLING)
+                    .add(EBBlocks.POTTED_ROSE)
+                    .add(EBBlocks.POTTED_CYAN_ROSE)
+                    .add(EBBlocks.POTTED_WHITE_ROSE)
             ;
         }
+
+    public void appendSmallFlowers() {
+        getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
+                .add(EBBlocks.ROSE)
+                .add(EBBlocks.CYAN_ROSE)
+                .add(EBBlocks.WHITE_ROSE)
+        ;
+    }
 
         public void appendFences() {
             getOrCreateTagBuilder(BlockTags.FENCES)
@@ -501,6 +514,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.IRON_GRATE)
                     .add(EBBlocks.ASPHALT)
                     .add(EBBlocks.ASPHALT_STAIRS)
                     .add(EBBlocks.ASPHALT_SLAB)

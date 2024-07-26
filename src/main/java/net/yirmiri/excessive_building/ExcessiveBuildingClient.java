@@ -51,8 +51,15 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLASS_JAR_OF_SOUL_FIRE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_SEEDS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.REACHING_LANTERN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ROSE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.POTTED_ROSE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.CYAN_ROSE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.POTTED_CYAN_ROSE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.WHITE_ROSE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.POTTED_WHITE_ROSE, RenderLayer.getCutout());
 
         //TRANSLUCENT
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.IRON_GRATE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.SEA_GLASS, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.VERDANT_SEA_GLASS, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ROSE_SEA_GLASS, RenderLayer.getTranslucent());

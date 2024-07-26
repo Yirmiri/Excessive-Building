@@ -459,6 +459,10 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.ASPHALT_STAIRS, "Asphalt Stairs");
         build.add(EBBlocks.ASPHALT_VERTICAL_STAIRS, "Asphalt Vertical Stairs");
         build.add(EBBlocks.ASPHALT_SLAB, "Asphalt Slab");
+        build.add(EBBlocks.IRON_GRATE, "Iron Grate");
+        build.add(EBBlocks.ROSE, "Rose");
+        build.add(EBBlocks.CYAN_ROSE, "Cyan Rose");
+        build.add(EBBlocks.WHITE_ROSE, "White Rose");
         
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

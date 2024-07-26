@@ -528,6 +528,12 @@ public class EBModelGen extends FabricModelProvider {
         asphalt.stairs(EBBlocks.ASPHALT_STAIRS);
         asphalt.slab(EBBlocks.ASPHALT_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.ASPHALT_VERTICAL_STAIRS, EBBlocks.ASPHALT);
+
+        generator.registerSimpleCubeAll(EBBlocks.IRON_GRATE);
+
+        generator.registerFlowerPotPlant(EBBlocks.ROSE, EBBlocks.POTTED_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        generator.registerFlowerPotPlant(EBBlocks.CYAN_ROSE, EBBlocks.POTTED_CYAN_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        generator.registerFlowerPotPlant(EBBlocks.WHITE_ROSE, EBBlocks.POTTED_WHITE_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
