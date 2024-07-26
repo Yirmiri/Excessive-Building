@@ -113,8 +113,8 @@ public class EBProperties {
 
         //MISC
         public static final Block.Settings MUD_BRICKS = FabricBlockSettings.copyOf(Blocks.MUD_BRICKS);
-        public static final Block.Settings IRON_GRATE = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE);
-        public static final Block.Settings GOLD_GRATE = FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE);
+        public static final Block.Settings IRON_GRATE = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never);
+        public static final Block.Settings GOLD_GRATE = FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never);
         public static final Block.Settings ASPHALT = FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK);
         public static final Block.Settings REACHING_LANTERN = FabricBlockSettings.copyOf(Blocks.SOUL_LANTERN);
         public static final Block.Settings BRICKS = FabricBlockSettings.copyOf(Blocks.BRICKS);

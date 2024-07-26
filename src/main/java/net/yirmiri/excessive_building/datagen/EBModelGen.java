@@ -546,6 +546,26 @@ public class EBModelGen extends FabricModelProvider {
         redstoneBricks.stairs(EBBlocks.REDSTONE_BRICK_STAIRS);
         redstoneBricks.slab(EBBlocks.REDSTONE_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.REDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.REDSTONE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool polishedStone = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_STONE);
+        polishedStone.stairs(EBBlocks.POLISHED_STONE_STAIRS);
+        polishedStone.slab(EBBlocks.POLISHED_STONE_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_STONE_VERTICAL_STAIRS, EBBlocks.POLISHED_STONE);
+
+        BlockStateModelGenerator.BlockTexturePool smoothStoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.SMOOTH_STONE_BRICKS);
+        smoothStoneBricks.stairs(EBBlocks.SMOOTH_STONE_BRICK_STAIRS);
+        smoothStoneBricks.slab(EBBlocks.SMOOTH_STONE_BRICK_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.SMOOTH_STONE_BRICK_VERTICAL_STAIRS, EBBlocks.SMOOTH_STONE_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_SMOOTH_STONE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool smoothStoneTiles = generator.registerCubeAllModelTexturePool(EBBlocks.SMOOTH_STONE_TILES);
+        smoothStoneTiles.stairs(EBBlocks.SMOOTH_STONE_TILE_STAIRS);
+        smoothStoneTiles.slab(EBBlocks.SMOOTH_STONE_TILE_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.SMOOTH_STONE_TILE_VERTICAL_STAIRS, EBBlocks.SMOOTH_STONE_TILES);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_SMOOTH_STONE_TILES);
+
+        generator.registerAxisRotated(EBBlocks.SMOOTH_STONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        generator.registerSimpleCubeAll(EBBlocks.CHISELED_SMOOTH_STONE_BRICKS);
     }
 
     @Override

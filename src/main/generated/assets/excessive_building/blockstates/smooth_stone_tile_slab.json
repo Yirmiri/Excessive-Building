@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/smooth_stone_tile_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/smooth_stone_tiles"
+    },
+    "type=top": {
+      "model": "excessive_building:block/smooth_stone_tile_slab_top"
+    }
+  }
+}
