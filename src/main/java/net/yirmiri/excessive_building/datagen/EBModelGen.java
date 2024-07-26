@@ -100,7 +100,7 @@ public class EBModelGen extends FabricModelProvider {
 
         generator.registerSimpleCubeAll(EBBlocks.ANCIENT_LEAVES);
         generator.registerDoor(EBBlocks.ANCIENT_DOOR);
-        generator.registerTrapdoor(EBBlocks.ANCIENT_TRAPDOOR);
+        generator.registerOrientableTrapdoor(EBBlocks.ANCIENT_TRAPDOOR);
 
         generator.registerLog(EBBlocks.ANCIENT_LOG).log(EBBlocks.ANCIENT_LOG).wood(EBBlocks.ANCIENT_WOOD);
         generator.registerLog(EBBlocks.STRIPPED_ANCIENT_LOG).log(EBBlocks.STRIPPED_ANCIENT_LOG).wood(EBBlocks.STRIPPED_ANCIENT_WOOD);
@@ -134,7 +134,7 @@ public class EBModelGen extends FabricModelProvider {
         gloomMosaic.slab(EBBlocks.GLOOM_MOSAIC_SLAB);
 
         generator.registerDoor(EBBlocks.GLOOM_DOOR);
-        generator.registerTrapdoor(EBBlocks.GLOOM_TRAPDOOR);
+        generator.registerOrientableTrapdoor(EBBlocks.GLOOM_TRAPDOOR);
 
         generator.registerLog(EBBlocks.GLOOM_LOG).log(EBBlocks.GLOOM_LOG).wood(EBBlocks.GLOOM_WOOD);
         generator.registerLog(EBBlocks.STRIPPED_GLOOM_LOG).log(EBBlocks.STRIPPED_GLOOM_LOG).wood(EBBlocks.STRIPPED_GLOOM_WOOD);

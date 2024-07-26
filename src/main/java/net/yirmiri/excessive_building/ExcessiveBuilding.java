@@ -37,5 +37,6 @@ public class ExcessiveBuilding implements ModInitializer {
 		EBPacks.registerPacks();
 		EBLootModifiers.modifyLoot();
 		EBPlacedFeatures.addBiomeModifiers();
+		EBTrades.registerTrades();
 	}
 }

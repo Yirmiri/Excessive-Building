@@ -2650,6 +2650,25 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("@#@")
                 .criterion(hasItem(EBBlocks.POLISHED_BRIMSTONE), conditionsFromItem(EBBlocks.POLISHED_BRIMSTONE))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BRIMSTONE_WINDOW)));
+
+        createStairsRecipe(EBBlocks.ASPHALT_STAIRS,
+                Ingredient.ofItems(EBBlocks.ASPHALT))
+                .criterion(hasItem(EBBlocks.ASPHALT), conditionsFromItem(EBBlocks.ASPHALT))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ASPHALT_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ASPHALT_SLAB,
+                Ingredient.ofItems(EBBlocks.ASPHALT))
+                .criterion(hasItem(EBBlocks.ASPHALT), conditionsFromItem(EBBlocks.ASPHALT))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ASPHALT_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.ASPHALT_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.ASPHALT))
+                .criterion(hasItem(EBBlocks.ASPHALT), conditionsFromItem(EBBlocks.ASPHALT))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ASPHALT_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ASPHALT_STAIRS, EBBlocks.ASPHALT, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ASPHALT_SLAB, EBBlocks.ASPHALT, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ASPHALT_VERTICAL_STAIRS, EBBlocks.ASPHALT, 1);
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

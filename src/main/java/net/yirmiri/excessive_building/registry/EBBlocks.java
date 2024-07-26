@@ -588,6 +588,12 @@ public class EBBlocks {
     public static final Block BRIMSTONE_LAMP = register("brimstone_lamp", new Block(EBProperties.BlockP.BRIMSTONE_LAMP), true);
     public static final Block BRIMSTONE_WINDOW = register("brimstone_window", new Block(EBProperties.BlockP.BRIMSTONE_LAMP), true);
 
+    //ASPHALT
+    public static final Block ASPHALT = registerAP("asphalt", new AsphaltBlock(EBProperties.BlockP.ASPHALT), true);
+    public static final Block ASPHALT_STAIRS = registerAP("asphalt_stairs", new AsphaltStairsBlock(ASPHALT.getDefaultState(), EBProperties.BlockP.ASPHALT), true);
+    public static final Block ASPHALT_SLAB = registerAP("asphalt_slab", new AsphaltSlabBlock(EBProperties.BlockP.ASPHALT), true);
+    public static final Block ASPHALT_VERTICAL_STAIRS = registerAPVStairs("asphalt_vertical_stairs", new AsphaltVerticalStairsBlock(EBProperties.BlockP.ASPHALT), true);
+
     //MISC
     public static final Block REACHING_LANTERN = register("reaching_lantern", new ReachingLanternBlock(EBProperties.BlockP.REACHING_LANTERN), true);
 
@@ -599,7 +605,7 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO: SHELF VARIANTS, BRIMSTONE, CRYSTAL BLOCKS, TILE BLOCKS, MIXED BRICKS, GLOOM TREE GENERATION, TERRACOTTA POTS, ROSES
+    //TODO: SHELF VARIANTS, CRYSTAL BLOCKS, TILE BLOCKS, MIXED BRICKS, GLOOM TREE GENERATION, TERRACOTTA POTS, ROSES
     //TODO: ASPHALT, NEW GRATES, CRYSTAL FIRE, SMOOTH STONE BLOCKS, CALCITE
 
     private static Block register(String id, Block block, boolean registerItem) {
@@ -614,6 +620,28 @@ public class EBBlocks {
     }
 
     //CONFIGURABLE BLOCKS
+    private static Block registerAP(String id, Block block, boolean registerItem) {
+        if (registerItem) {
+            registerAPBlockItem(id, block);
+        }
+        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+    }
+
+    private static Item registerAPBlockItem(String id, Block block) {
+        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new AsphaltBlockItem(block, new Item.Settings()));
+    }
+
+    private static Block registerAPVStairs(String id, Block block, boolean registerItem) {
+        if (registerItem) {
+            registerAPVStairsBlockItem(id, block);
+        }
+        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+    }
+
+    private static Item registerAPVStairsBlockItem(String id, Block block) {
+        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new AsphaltVerticalStairsBlockItem(block, new Item.Settings()));
+    }
+
     private static Block registerRB(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerRBBlockItem(id, block);

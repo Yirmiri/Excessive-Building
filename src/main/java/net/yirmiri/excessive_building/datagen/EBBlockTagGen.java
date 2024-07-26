@@ -501,6 +501,10 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.ASPHALT)
+                    .add(EBBlocks.ASPHALT_STAIRS)
+                    .add(EBBlocks.ASPHALT_SLAB)
+                    .add(EBBlocks.ASPHALT_VERTICAL_STAIRS)
                     .add(EBBlocks.BRIMSTONE_PILLAR)
                     .add(EBBlocks.POLISHED_BRIMSTONE)
                     .add(EBBlocks.POLISHED_BRIMSTONE_STAIRS)

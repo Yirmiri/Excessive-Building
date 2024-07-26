@@ -455,6 +455,10 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.BRIMSTONE_PILLAR, "Brimstone Pillar");
         build.add(EBBlocks.BRIMSTONE_WINDOW, "Brimstone Window");
         build.add(EBBlocks.BRIMSTONE_LAMP, "Brimstone Lamp");
+        build.add(EBBlocks.ASPHALT, "Asphalt");
+        build.add(EBBlocks.ASPHALT_STAIRS, "Asphalt Stairs");
+        build.add(EBBlocks.ASPHALT_VERTICAL_STAIRS, "Asphalt Vertical Stairs");
+        build.add(EBBlocks.ASPHALT_SLAB, "Asphalt Slab");
         
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

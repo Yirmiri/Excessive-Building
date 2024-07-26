@@ -7,6 +7,7 @@ public class EBConfig {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
     //CONTENT
+    public static final ForgeConfigSpec.BooleanValue ENABLE_ASPHALT;
     public static final ForgeConfigSpec.BooleanValue ENABLE_VERTICAL_STAIRS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_RESOURCE_BRICKS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_SHELF_VARIANTS;
@@ -38,6 +39,10 @@ public class EBConfig {
     static {
         //CONTENT TOGGLES
         BUILDER.push("Content Toggles").comment("Disabling these will make the corresponding feature unobtainable/unusable");
+
+        ENABLE_ASPHALT = BUILDER
+                .comment("Should asphalt be enabled? (default: true)")
+                .define("enableAsphalt", true);
 
         ENABLE_VERTICAL_STAIRS = BUILDER
                 .comment("Should vertical stairs be enabled? (default: true)")
