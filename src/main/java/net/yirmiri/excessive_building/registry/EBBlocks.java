@@ -340,7 +340,7 @@ public class EBBlocks {
     static {
         for (DyeColor colors : DyeColor.values()) {
             DYED_KNITTED_WOOL.put(colors, register(colors + "_knitted_wool", new Block(FabricBlockSettings.copyOf(Blocks.WHITE_WOOL).mapColor(colors)), true));
-            DYED_KNITTED_CARPET.put(colors, register(colors + "_knitted_carpet", new Block(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).mapColor(colors)), true));
+            DYED_KNITTED_CARPET.put(colors, register(colors + "_knitted_carpet", new CarpetBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).mapColor(colors)), true));
         }
     }
 
