@@ -438,6 +438,26 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         this.addDrop(EBBlocks.WARPED_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
         this.addDrop(EBBlocks.ANCIENT_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
         this.addDrop(EBBlocks.GLOOM_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.BRIMSTONE);
+        addDrop(EBBlocks.BRIMSTONE_STAIRS);
+        addDrop(EBBlocks.BRIMSTONE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.BRIMSTONE_SLAB);
+        addDrop(EBBlocks.BRIMSTONE_WALL);
+        addDrop(EBBlocks.POLISHED_BRIMSTONE);
+        addDrop(EBBlocks.POLISHED_BRIMSTONE_STAIRS);
+        addDrop(EBBlocks.POLISHED_BRIMSTONE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.POLISHED_BRIMSTONE_SLAB);
+        addDrop(EBBlocks.BRIMSTONE_BRICKS);
+        addDrop(EBBlocks.BRIMSTONE_BRICK_STAIRS);
+        addDrop(EBBlocks.BRIMSTONE_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.BRIMSTONE_BRICK_SLAB);
+        addDrop(EBBlocks.BRIMSTONE_TILES);
+        addDrop(EBBlocks.BRIMSTONE_TILE_STAIRS);
+        addDrop(EBBlocks.BRIMSTONE_TILE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.BRIMSTONE_TILE_SLAB);
+        addDrop(EBBlocks.BRIMSTONE_PILLAR);
+        addDrop(EBBlocks.BRIMSTONE_WINDOW);
+        addDrop(EBBlocks.BRIMSTONE_LAMP);
     }
 
     private void addDyedKnittedWoolDrops() {

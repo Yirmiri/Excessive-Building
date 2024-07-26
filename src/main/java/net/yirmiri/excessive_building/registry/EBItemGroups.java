@@ -227,6 +227,31 @@ public class EBItemGroups {
                 entries.add(EBBlocks.SMOOTH_BRICK_WALL);
                 entries.add(EBBlocks.SMOOTH_HERRINGBONE_BRICKS);
 
+                entries.add(EBBlocks.BRIMSTONE);
+                entries.add(EBBlocks.BRIMSTONE_STAIRS);
+                entries.add(EBBlocks.BRIMSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BRIMSTONE_SLAB);
+                entries.add(EBBlocks.BRIMSTONE_WALL);
+
+                entries.add(EBBlocks.POLISHED_BRIMSTONE);
+                entries.add(EBBlocks.POLISHED_BRIMSTONE_STAIRS);
+                entries.add(EBBlocks.POLISHED_BRIMSTONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_BRIMSTONE_SLAB);
+
+                entries.add(EBBlocks.BRIMSTONE_BRICKS);
+                entries.add(EBBlocks.BRIMSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.BRIMSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BRIMSTONE_BRICK_SLAB);
+
+                entries.add(EBBlocks.BRIMSTONE_TILES);
+                entries.add(EBBlocks.BRIMSTONE_TILE_STAIRS);
+                entries.add(EBBlocks.BRIMSTONE_TILE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BRIMSTONE_TILE_SLAB);
+
+                entries.add(EBBlocks.BRIMSTONE_PILLAR);
+                entries.add(EBBlocks.BRIMSTONE_LAMP);
+                entries.add(EBBlocks.BRIMSTONE_WINDOW);
+
                 entries.add(EBItems.ANCIENT_SIGN);
                 entries.add(EBItems.ANCIENT_HANGING_SIGN);
                 entries.add(EBItems.GLOOM_SIGN);

@@ -2,7 +2,12 @@ package net.yirmiri.excessive_building;
 
 import fuzs.forgeconfigapiport.fabric.api.forge.v4.ForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.registry.tag.BiomeTags;
+import net.minecraft.world.gen.GenerationStep;
 import net.neoforged.fml.config.ModConfig;
+import net.yirmiri.excessive_building.worldgen.EBPlacedFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import net.yirmiri.excessive_building.registry.*;
@@ -31,5 +36,6 @@ public class ExcessiveBuilding implements ModInitializer {
 		EBSounds.registerEBSounds();
 		EBPacks.registerPacks();
 		EBLootModifiers.modifyLoot();
+		EBPlacedFeatures.addBiomeModifiers();
 	}
 }

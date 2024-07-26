@@ -97,6 +97,13 @@ public class EBProperties {
         public static final Block.Settings POLISHED_ANDESITE = FabricBlockSettings.copyOf(Blocks.POLISHED_ANDESITE);
         public static final Block.Settings POLISHED_DIORITE = FabricBlockSettings.copyOf(Blocks.POLISHED_DIORITE);
 
+        //BRIMSTONE
+        public static final Block.Settings BRIMSTONE = FabricBlockSettings.copyOf(Blocks.GRANITE).sounds(BlockSoundGroup.DRIPSTONE_BLOCK).mapColor(MapColor.RED);
+        public static final Block.Settings POLISHED_BRIMSTONE = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE).sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.RED);
+        public static final Block.Settings BRIMSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.RED);
+        public static final Block.Settings BRIMSTONE_TILES = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE).sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.RED);
+        public static final Block.Settings BRIMSTONE_LAMP = FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).mapColor(MapColor.RED);
+
         //MISC
         public static final Block.Settings REACHING_LANTERN = FabricBlockSettings.copyOf(Blocks.SOUL_LANTERN);
         public static final Block.Settings BRICKS = FabricBlockSettings.copyOf(Blocks.BRICKS);

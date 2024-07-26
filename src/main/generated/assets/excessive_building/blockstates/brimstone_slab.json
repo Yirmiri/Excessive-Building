@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/brimstone_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/brimstone"
+    },
+    "type=top": {
+      "model": "excessive_building:block/brimstone_slab_top"
+    }
+  }
+}

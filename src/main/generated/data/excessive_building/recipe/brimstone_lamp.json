@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "excessive_building:polished_brimstone"
+    },
+    "@": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "pattern": [
+    "@#@",
+    "#@#",
+    "@#@"
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:brimstone_lamp"
+  }
+}

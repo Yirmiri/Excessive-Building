@@ -238,7 +238,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         }
     }
 
-//TODO: Move to seperate tag attached to a configuration
     public void appendBeaconBaseBlocks() {
         getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(EBBlocks.IRON_BRICKS)
@@ -496,11 +495,30 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.ANDESITE_BRICK_WALL)
                     .add(EBBlocks.GRANITE_BRICK_WALL)
                     .add(EBBlocks.SMOOTH_BRICK_WALL)
+                    .add(EBBlocks.BRIMSTONE_WALL)
             ;
         }
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.BRIMSTONE_PILLAR)
+                    .add(EBBlocks.POLISHED_BRIMSTONE)
+                    .add(EBBlocks.POLISHED_BRIMSTONE_STAIRS)
+                    .add(EBBlocks.POLISHED_BRIMSTONE_SLAB)
+                    .add(EBBlocks.POLISHED_BRIMSTONE_VERTICAL_STAIRS)
+                    .add(EBBlocks.BRIMSTONE_BRICKS)
+                    .add(EBBlocks.BRIMSTONE_BRICK_STAIRS)
+                    .add(EBBlocks.BRIMSTONE_BRICK_SLAB)
+                    .add(EBBlocks.BRIMSTONE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.BRIMSTONE_TILES)
+                    .add(EBBlocks.BRIMSTONE_TILE_STAIRS)
+                    .add(EBBlocks.BRIMSTONE_TILE_SLAB)
+                    .add(EBBlocks.BRIMSTONE_TILE_VERTICAL_STAIRS)
+                    .add(EBBlocks.BRIMSTONE)
+                    .add(EBBlocks.BRIMSTONE_STAIRS)
+                    .add(EBBlocks.BRIMSTONE_SLAB)
+                    .add(EBBlocks.BRIMSTONE_VERTICAL_STAIRS)
+                    .add(EBBlocks.BRIMSTONE_WALL)
                     .add(EBBlocks.REACHING_LANTERN)
                     .add(EBBlocks.SMOOTH_BRICKS)
                     .add(EBBlocks.SMOOTH_BRICK_STAIRS)

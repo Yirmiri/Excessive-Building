@@ -498,6 +498,31 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerEBBookshelf(generator, EBBlocks.WARPED_BOOKSHELF, Blocks.WARPED_PLANKS);
         EBModels.registerEBBookshelf(generator, EBBlocks.ANCIENT_BOOKSHELF, EBBlocks.ANCIENT_PLANKS);
         EBModels.registerEBBookshelf(generator, EBBlocks.GLOOM_BOOKSHELF, EBBlocks.GLOOM_PLANKS);
+
+        generator.registerSimpleCubeAll(EBBlocks.BRIMSTONE_WINDOW);
+        generator.registerSimpleCubeAll(EBBlocks.BRIMSTONE_LAMP);
+        generator.registerAxisRotated(EBBlocks.BRIMSTONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+
+        BlockStateModelGenerator.BlockTexturePool brimstone = generator.registerCubeAllModelTexturePool(EBBlocks.BRIMSTONE);
+        brimstone.stairs(EBBlocks.BRIMSTONE_STAIRS);
+        brimstone.slab(EBBlocks.BRIMSTONE_SLAB);
+        brimstone.wall(EBBlocks.BRIMSTONE_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BRIMSTONE_VERTICAL_STAIRS, EBBlocks.BRIMSTONE);
+
+        BlockStateModelGenerator.BlockTexturePool brimstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.BRIMSTONE_BRICKS);
+        brimstoneBricks.stairs(EBBlocks.BRIMSTONE_BRICK_STAIRS);
+        brimstoneBricks.slab(EBBlocks.BRIMSTONE_BRICK_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BRIMSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.BRIMSTONE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool brimstoneTiles = generator.registerCubeAllModelTexturePool(EBBlocks.BRIMSTONE_TILES);
+        brimstoneTiles.stairs(EBBlocks.BRIMSTONE_TILE_STAIRS);
+        brimstoneTiles.slab(EBBlocks.BRIMSTONE_TILE_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BRIMSTONE_TILE_VERTICAL_STAIRS, EBBlocks.BRIMSTONE_TILES);
+
+        BlockStateModelGenerator.BlockTexturePool polishedBrimstone = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_BRIMSTONE);
+        polishedBrimstone.stairs(EBBlocks.POLISHED_BRIMSTONE_STAIRS);
+        polishedBrimstone.slab(EBBlocks.POLISHED_BRIMSTONE_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_BRIMSTONE_VERTICAL_STAIRS, EBBlocks.POLISHED_BRIMSTONE);
     }
 
     @Override

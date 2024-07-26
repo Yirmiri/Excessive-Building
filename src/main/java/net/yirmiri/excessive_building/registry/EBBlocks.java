@@ -562,6 +562,32 @@ public class EBBlocks {
     public static final Block CRACKED_SMOOTH_BRICKS = register("cracked_smooth_bricks", new Block(EBProperties.BlockP.BRICKS), true);
     public static final Block CRACKED_BRICKS = register("cracked_bricks", new Block(EBProperties.BlockP.BRICKS), true);
 
+    //BRIMSTONE
+    public static final Block BRIMSTONE = register("brimstone", new Block(EBProperties.BlockP.BRIMSTONE), true);
+    public static final Block BRIMSTONE_STAIRS = register("brimstone_stairs", new StairsBlock(BRIMSTONE.getDefaultState(), EBProperties.BlockP.BRIMSTONE), true);
+    public static final Block BRIMSTONE_SLAB = register("brimstone_slab", new SlabBlock(EBProperties.BlockP.BRIMSTONE), true);
+    public static final Block BRIMSTONE_VERTICAL_STAIRS = registerVStairs("brimstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BRIMSTONE), true);
+    public static final Block BRIMSTONE_WALL = register("brimstone_wall", new WallBlock(EBProperties.BlockP.BRIMSTONE), true);
+
+    public static final Block POLISHED_BRIMSTONE = register("polished_brimstone", new Block(EBProperties.BlockP.POLISHED_BRIMSTONE), true);
+    public static final Block POLISHED_BRIMSTONE_STAIRS = register("polished_brimstone_stairs", new StairsBlock(POLISHED_BRIMSTONE.getDefaultState(), EBProperties.BlockP.POLISHED_BRIMSTONE), true);
+    public static final Block POLISHED_BRIMSTONE_SLAB = register("polished_brimstone_slab", new SlabBlock(EBProperties.BlockP.POLISHED_BRIMSTONE), true);
+    public static final Block POLISHED_BRIMSTONE_VERTICAL_STAIRS = registerVStairs("polished_brimstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_BRIMSTONE), true);
+
+    public static final Block BRIMSTONE_BRICKS = register("brimstone_bricks", new Block(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Block BRIMSTONE_BRICK_STAIRS = register("brimstone_brick_stairs", new StairsBlock(BRIMSTONE_BRICKS.getDefaultState(), EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Block BRIMSTONE_BRICK_SLAB = register("brimstone_brick_slab", new SlabBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Block BRIMSTONE_BRICK_VERTICAL_STAIRS = registerVStairs("brimstone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+
+    public static final Block BRIMSTONE_TILES = register("brimstone_tiles", new Block(EBProperties.BlockP.BRIMSTONE_TILES), true);
+    public static final Block BRIMSTONE_TILE_STAIRS = register("brimstone_tile_stairs", new StairsBlock(BRIMSTONE_TILES.getDefaultState(), EBProperties.BlockP.BRIMSTONE_TILES), true);
+    public static final Block BRIMSTONE_TILE_SLAB = register("brimstone_tile_slab", new SlabBlock(EBProperties.BlockP.BRIMSTONE_TILES), true);
+    public static final Block BRIMSTONE_TILE_VERTICAL_STAIRS = registerVStairs("brimstone_tile_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BRIMSTONE_TILES), true);
+
+    public static final Block BRIMSTONE_PILLAR = register("brimstone_pillar", new PillarBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Block BRIMSTONE_LAMP = register("brimstone_lamp", new Block(EBProperties.BlockP.BRIMSTONE_LAMP), true);
+    public static final Block BRIMSTONE_WINDOW = register("brimstone_window", new Block(EBProperties.BlockP.BRIMSTONE_LAMP), true);
+
     //MISC
     public static final Block REACHING_LANTERN = register("reaching_lantern", new ReachingLanternBlock(EBProperties.BlockP.REACHING_LANTERN), true);
 

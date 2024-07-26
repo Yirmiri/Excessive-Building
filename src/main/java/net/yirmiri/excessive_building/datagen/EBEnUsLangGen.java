@@ -435,6 +435,26 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.WARPED_BOOKSHELF, "Warped Bookshelf");
         build.add(EBBlocks.ANCIENT_BOOKSHELF, "Ancient Bookshelf");
         build.add(EBBlocks.GLOOM_BOOKSHELF, "Gloom Bookshelf");
+        build.add(EBBlocks.BRIMSTONE, "Brimstone");
+        build.add(EBBlocks.BRIMSTONE_STAIRS, "Brimstone Stairs");
+        build.add(EBBlocks.BRIMSTONE_VERTICAL_STAIRS, "Brimstone Vertical Stairs");
+        build.add(EBBlocks.BRIMSTONE_SLAB, "Brimstone Slab");
+        build.add(EBBlocks.BRIMSTONE_WALL, "Brimstone Wall");
+        build.add(EBBlocks.BRIMSTONE_BRICKS, "Brimstone Bricks");
+        build.add(EBBlocks.BRIMSTONE_BRICK_STAIRS, "Brimstone Brick Stairs");
+        build.add(EBBlocks.BRIMSTONE_BRICK_VERTICAL_STAIRS, "Brimstone Brick Vertical Stairs");
+        build.add(EBBlocks.BRIMSTONE_BRICK_SLAB, "Brimstone Brick Slab");
+        build.add(EBBlocks.BRIMSTONE_TILES, "Brimstone Tiles");
+        build.add(EBBlocks.BRIMSTONE_TILE_STAIRS, "Brimstone Tile Stairs");
+        build.add(EBBlocks.BRIMSTONE_TILE_VERTICAL_STAIRS, "Brimstone Tile Vertical Stairs");
+        build.add(EBBlocks.BRIMSTONE_TILE_SLAB, "Brimstone Tile Slab");
+        build.add(EBBlocks.POLISHED_BRIMSTONE, "Polished Brimstone");
+        build.add(EBBlocks.POLISHED_BRIMSTONE_STAIRS, "Polished Brimstone Stairs");
+        build.add(EBBlocks.POLISHED_BRIMSTONE_VERTICAL_STAIRS, "Polished Brimstone Vertical Stairs");
+        build.add(EBBlocks.POLISHED_BRIMSTONE_SLAB, "Polished Brimstone Slab");
+        build.add(EBBlocks.BRIMSTONE_PILLAR, "Brimstone Pillar");
+        build.add(EBBlocks.BRIMSTONE_WINDOW, "Brimstone Window");
+        build.add(EBBlocks.BRIMSTONE_LAMP, "Brimstone Lamp");
         
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

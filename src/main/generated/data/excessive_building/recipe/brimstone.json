@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:netherrack"
+    },
+    "@": {
+      "item": "minecraft:basalt"
+    }
+  },
+  "pattern": [
+    "@#",
+    "#@"
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:brimstone"
+  }
+}

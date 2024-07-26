@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_brimstone_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:polished_brimstone_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:brimstone_pillar"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_brimstone_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:brimstone_pillar"
+    ]
+  }
+}

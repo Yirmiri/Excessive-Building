@@ -10,6 +10,7 @@
     "excessive_building:diorite_brick_wall",
     "excessive_building:andesite_brick_wall",
     "excessive_building:granite_brick_wall",
-    "excessive_building:smooth_brick_wall"
+    "excessive_building:smooth_brick_wall",
+    "excessive_building:brimstone_wall"
   ]
 }
