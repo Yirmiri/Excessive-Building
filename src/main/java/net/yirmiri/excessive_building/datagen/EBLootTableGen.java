@@ -470,6 +470,31 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addPottedPlantDrops(EBBlocks.POTTED_CYAN_ROSE);
         addPottedPlantDrops(EBBlocks.POTTED_WHITE_ROSE);
         addDrop(EBBlocks.GOLD_GRATE);
+        addDrop(EBBlocks.CRACKED_BRIMSTONE_BRICKS);
+        addDrop(EBBlocks.CRACKED_GRANITE_BRICKS);
+        addDrop(EBBlocks.CRACKED_ANDESITE_BRICKS);
+        addDrop(EBBlocks.CRACKED_DIORITE_BRICKS);
+        addDrop(EBBlocks.CRACKED_MUD_BRICKS);
+        addDrop(EBBlocks.POLISHED_STONE);
+        addDrop(EBBlocks.POLISHED_STONE_STAIRS);
+        addDrop(EBBlocks.POLISHED_STONE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.POLISHED_STONE_SLAB);
+        addDrop(EBBlocks.SMOOTH_STONE_BRICKS);
+        addDrop(EBBlocks.CRACKED_SMOOTH_STONE_BRICKS);
+        addDrop(EBBlocks.SMOOTH_STONE_BRICK_STAIRS);
+        addDrop(EBBlocks.SMOOTH_STONE_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.SMOOTH_STONE_BRICK_SLAB);
+        addDrop(EBBlocks.SMOOTH_STONE_TILES);
+        addDrop(EBBlocks.CRACKED_SMOOTH_STONE_TILES);
+        addDrop(EBBlocks.SMOOTH_STONE_TILE_STAIRS);
+        addDrop(EBBlocks.SMOOTH_STONE_TILE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.SMOOTH_STONE_TILE_SLAB);
+        addDrop(EBBlocks.SMOOTH_STONE_PILLAR);
+        addDrop(EBBlocks.CHISELED_SMOOTH_STONE_BRICKS);
+        addDrop(EBBlocks.REDSTONE_BRICKS);
+        addDrop(EBBlocks.REDSTONE_BRICK_STAIRS);
+        addDrop(EBBlocks.REDSTONE_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.REDSTONE_BRICK_SLAB);
     }
 
     private void addDyedKnittedWoolDrops() {

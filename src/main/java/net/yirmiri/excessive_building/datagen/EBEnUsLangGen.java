@@ -441,6 +441,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.BRIMSTONE_SLAB, "Brimstone Slab");
         build.add(EBBlocks.BRIMSTONE_WALL, "Brimstone Wall");
         build.add(EBBlocks.BRIMSTONE_BRICKS, "Brimstone Bricks");
+        build.add(EBBlocks.CRACKED_BRIMSTONE_BRICKS, "Cracked Brimstone Bricks");
         build.add(EBBlocks.BRIMSTONE_BRICK_STAIRS, "Brimstone Brick Stairs");
         build.add(EBBlocks.BRIMSTONE_BRICK_VERTICAL_STAIRS, "Brimstone Brick Vertical Stairs");
         build.add(EBBlocks.BRIMSTONE_BRICK_SLAB, "Brimstone Brick Slab");
@@ -464,6 +465,30 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.CYAN_ROSE, "Cyan Rose");
         build.add(EBBlocks.WHITE_ROSE, "White Rose");
         build.add(EBBlocks.GOLD_GRATE, "Gold Grate");
+        build.add(EBBlocks.CRACKED_GRANITE_BRICKS, "Cracked Granite Bricks");
+        build.add(EBBlocks.CRACKED_ANDESITE_BRICKS, "Cracked Andesite Bricks");
+        build.add(EBBlocks.CRACKED_DIORITE_BRICKS, "Cracked Diorite Bricks");
+        build.add(EBBlocks.CRACKED_MUD_BRICKS, "Cracked Mud Bricks");
+        build.add(EBBlocks.SMOOTH_STONE_BRICKS, "Smooth Stone Bricks");
+        build.add(EBBlocks.CRACKED_SMOOTH_STONE_BRICKS, "Cracked Smooth Stone Bricks");
+        build.add(EBBlocks.SMOOTH_STONE_BRICK_STAIRS, "Smooth Stone Brick Stairs");
+        build.add(EBBlocks.SMOOTH_STONE_BRICK_VERTICAL_STAIRS, "Smooth Stone Brick Vertical Stairs");
+        build.add(EBBlocks.SMOOTH_STONE_BRICK_SLAB, "Smooth Stone Brick Slab");
+        build.add(EBBlocks.SMOOTH_STONE_TILES, "Smooth Stone Tiles");
+        build.add(EBBlocks.CRACKED_SMOOTH_STONE_TILES, "Cracked Smooth Stone Tiles");
+        build.add(EBBlocks.SMOOTH_STONE_TILE_STAIRS, "Smooth Stone Tile Stairs");
+        build.add(EBBlocks.SMOOTH_STONE_TILE_VERTICAL_STAIRS, "Smooth Stone Tile Vertical Stairs");
+        build.add(EBBlocks.SMOOTH_STONE_TILE_SLAB, "Smooth Stone Tile Slab");
+        build.add(EBBlocks.SMOOTH_STONE_PILLAR, "Smooth Stone Pillar");
+        build.add(EBBlocks.CHISELED_SMOOTH_STONE_BRICKS, "Chiseled Smooth Stone Bricks");
+        build.add(EBBlocks.POLISHED_STONE, "Polished Stone");
+        build.add(EBBlocks.POLISHED_STONE_STAIRS, "Polished Stone Stairs");
+        build.add(EBBlocks.POLISHED_STONE_VERTICAL_STAIRS, "Polished Stone Vertical Stairs");
+        build.add(EBBlocks.POLISHED_STONE_SLAB, "Polished Stone Slab");
+        build.add(EBBlocks.REDSTONE_BRICKS, "Redstone Bricks");
+        build.add(EBBlocks.REDSTONE_BRICK_STAIRS, "Redstone Brick Stairs");
+        build.add(EBBlocks.REDSTONE_BRICK_VERTICAL_STAIRS, "Redstone Brick Vertical Stairs");
+        build.add(EBBlocks.REDSTONE_BRICK_SLAB, "Redstone Brick Slab");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

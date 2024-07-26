@@ -535,6 +535,17 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerFlowerPotPlant(EBBlocks.ROSE, EBBlocks.POTTED_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
         generator.registerFlowerPotPlant(EBBlocks.CYAN_ROSE, EBBlocks.POTTED_CYAN_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
         generator.registerFlowerPotPlant(EBBlocks.WHITE_ROSE, EBBlocks.POTTED_WHITE_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_DIORITE_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_MUD_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_GRANITE_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_BRIMSTONE_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_ANDESITE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool redstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.REDSTONE_BRICKS);
+        redstoneBricks.stairs(EBBlocks.REDSTONE_BRICK_STAIRS);
+        redstoneBricks.slab(EBBlocks.REDSTONE_BRICK_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.REDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.REDSTONE_BRICKS);
     }
 
     @Override

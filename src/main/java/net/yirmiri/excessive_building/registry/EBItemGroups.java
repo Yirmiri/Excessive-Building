@@ -172,6 +172,11 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WARPED_CRAFTING_TABLE);
                 entries.add(EBBlocks.WARPED_LADDER);
 
+                entries.add(EBBlocks.POLISHED_STONE);
+                entries.add(EBBlocks.POLISHED_STONE_STAIRS);
+                entries.add(EBBlocks.POLISHED_STONE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.POLISHED_STONE_SLAB);
+
                 entries.add(EBBlocks.COBBLESTONE_BRICKS);
                 entries.add(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
                 entries.add(EBBlocks.COBBLESTONE_BRICK_STAIRS);
@@ -185,37 +190,39 @@ public class EBItemGroups {
                 entries.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB);
                 entries.add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL);
 
-                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
-                entries.add(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
-                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
-                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS);
-                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB);
-                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
-
-                entries.add(EBBlocks.BLACKSTONE_BRICKS);
-                entries.add(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
-                entries.add(EBBlocks.BLACKSTONE_BRICK_STAIRS);
-                entries.add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS);
-                entries.add(EBBlocks.BLACKSTONE_BRICK_SLAB);
-                entries.add(EBBlocks.BLACKSTONE_BRICK_WALL);
+                entries.add(EBBlocks.SMOOTH_STONE_BRICKS);
+                entries.add(EBBlocks.CRACKED_SMOOTH_STONE_BRICKS);
+                entries.add(EBBlocks.SMOOTH_STONE_BRICK_STAIRS);
+                entries.add(EBBlocks.SMOOTH_STONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.SMOOTH_STONE_BRICK_SLAB);
 
                 entries.add(EBBlocks.GRANITE_BRICKS);
+                entries.add(EBBlocks.CRACKED_GRANITE_BRICKS);
                 entries.add(EBBlocks.GRANITE_BRICK_STAIRS);
                 entries.add(EBBlocks.GRANITE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.GRANITE_BRICK_SLAB);
                 entries.add(EBBlocks.GRANITE_BRICK_WALL);
 
                 entries.add(EBBlocks.DIORITE_BRICKS);
+                entries.add(EBBlocks.CRACKED_DIORITE_BRICKS);
                 entries.add(EBBlocks.DIORITE_BRICK_STAIRS);
                 entries.add(EBBlocks.DIORITE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.DIORITE_BRICK_SLAB);
                 entries.add(EBBlocks.DIORITE_BRICK_WALL);
-                
+
                 entries.add(EBBlocks.ANDESITE_BRICKS);
+                entries.add(EBBlocks.CRACKED_ANDESITE_BRICKS);
                 entries.add(EBBlocks.ANDESITE_BRICK_STAIRS);
                 entries.add(EBBlocks.ANDESITE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.ANDESITE_BRICK_SLAB);
                 entries.add(EBBlocks.ANDESITE_BRICK_WALL);
+
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
+                entries.add(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB);
+                entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
 
                 entries.add(EBBlocks.CRACKED_BRICKS);
                 entries.add(EBBlocks.HERRINGBONE_BRICKS);
@@ -226,6 +233,13 @@ public class EBItemGroups {
                 entries.add(EBBlocks.SMOOTH_BRICK_SLAB);
                 entries.add(EBBlocks.SMOOTH_BRICK_WALL);
                 entries.add(EBBlocks.SMOOTH_HERRINGBONE_BRICKS);
+
+                entries.add(EBBlocks.BLACKSTONE_BRICKS);
+                entries.add(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
+                entries.add(EBBlocks.BLACKSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BLACKSTONE_BRICK_SLAB);
+                entries.add(EBBlocks.BLACKSTONE_BRICK_WALL);
 
                 entries.add(EBBlocks.BRIMSTONE);
                 entries.add(EBBlocks.BRIMSTONE_STAIRS);
@@ -239,6 +253,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.POLISHED_BRIMSTONE_SLAB);
 
                 entries.add(EBBlocks.BRIMSTONE_BRICKS);
+                entries.add(EBBlocks.CRACKED_BRIMSTONE_BRICKS);
                 entries.add(EBBlocks.BRIMSTONE_BRICK_STAIRS);
                 entries.add(EBBlocks.BRIMSTONE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.BRIMSTONE_BRICK_SLAB);
@@ -477,6 +492,8 @@ public class EBItemGroups {
                 
                 entries.add(EBBlocks.SOUL_MAGMA_BLOCK);
 
+                entries.add(EBBlocks.CRACKED_MUD_BRICKS);
+
                 //TODO: MAKE PRETTY ;W;
 //                entries.add(EBBlocks.BONE_BRICKS);
 //                entries.add(EBBlocks.BONE_BRICK_STAIRS);
@@ -504,15 +521,20 @@ public class EBItemGroups {
 
                 entries.add(EBBlocks.GOLD_GRATE);
 
-                entries.add(EBBlocks.LAPIS_BRICKS);
-                entries.add(EBBlocks.LAPIS_BRICK_STAIRS);
-                entries.add(EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS);
-                entries.add(EBBlocks.LAPIS_BRICK_SLAB);
+                entries.add(EBBlocks.REDSTONE_BRICKS);
+                entries.add(EBBlocks.REDSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.REDSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.REDSTONE_BRICK_SLAB);
 
                 entries.add(EBBlocks.EMERALD_BRICKS);
                 entries.add(EBBlocks.EMERALD_BRICK_STAIRS);
                 entries.add(EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.EMERALD_BRICK_SLAB);
+
+                entries.add(EBBlocks.LAPIS_BRICKS);
+                entries.add(EBBlocks.LAPIS_BRICK_STAIRS);
+                entries.add(EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.LAPIS_BRICK_SLAB);
 
                 entries.add(EBBlocks.DIAMOND_BRICKS);
                 entries.add(EBBlocks.DIAMOND_BRICK_STAIRS);

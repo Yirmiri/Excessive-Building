@@ -51,6 +51,7 @@ public class EBProperties {
         public static final Block.Settings COBBLESTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLESTONE).sounds(EBSounds.COBBLED_BRICKS);
         public static final Block.Settings COBBLED_DEEPSLATE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).sounds(EBSounds.COBBLED_BRICKS);
         public static final Block.Settings BLACKSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.BLACKSTONE).sounds(EBSounds.COBBLED_BRICKS);
+        public static final Block.Settings SMOOTH_STONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_STONE);
 
         //NATURE
         public static final Block.Settings ANCIENT_LEAVES = FabricBlockSettings.of().luminance(state -> AncientLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
@@ -72,6 +73,7 @@ public class EBProperties {
         public static final Block.Settings LAPIS = FabricBlockSettings.copyOf(Blocks.LAPIS_BLOCK);
         public static final Block.Settings DIAMOND = FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK);
         public static final Block.Settings NETHERITE = FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK);
+        public static final Block.Settings REDSTONE = FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK);
 
         //COPPERS
         public static final Block.Settings COPPER = FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK);
@@ -110,6 +112,7 @@ public class EBProperties {
         public static final Block.Settings BRIMSTONE_LAMP = FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).mapColor(MapColor.RED);
 
         //MISC
+        public static final Block.Settings MUD_BRICKS = FabricBlockSettings.copyOf(Blocks.MUD_BRICKS);
         public static final Block.Settings IRON_GRATE = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE);
         public static final Block.Settings GOLD_GRATE = FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE);
         public static final Block.Settings ASPHALT = FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK);
