@@ -669,9 +669,9 @@
   "tooltip.block.interact": "Upon Interaction:",
   "tooltip.block.interact_glow_removals": "Interact with Paper:",
   "tooltip.block.interact_soil": "Interact with Soil:",
-  "tooltip.block.interact_sugar": "Interact with Sugar:",
   "tooltip.block.soul_magma": "Creates a Lifting Bubble Column",
-  "tooltip.block.swift": "Increases Movement Speed",
   "tooltip.block.variant": "Cycles Block Variants:",
-  "tooltip.block.when_powered": "When Powered by Redstone:"
+  "tooltip.block.when_powered": "When Powered by Redstone:",
+  "tooltip.block.player_nearby": "When Player is Nearby:",
+  "tooltip.block.increases_block_reach": "Increases Interaction Reach"
 }

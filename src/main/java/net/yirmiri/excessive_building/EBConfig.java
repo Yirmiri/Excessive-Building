@@ -15,8 +15,10 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_CRAFTING_TABLE_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_LADDER_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_POTTERY_SHERDS;
+    //public static final ForgeConfigSpec.BooleanValue ENABLE_TERRACOTTA_POTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_ANCIENT_SAPLINGS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_TOOLTIPS;
 
     //BALANCE
     public static final ForgeConfigSpec.BooleanValue ENABLE_SOUL_MAGMA_COLUMN_TOGGLE;
@@ -72,6 +74,10 @@ public class EBConfig {
                 .comment("Should Excessive Building's pottery sherds be enabled? (default: true)")
                 .define("enablePotterySherds", true);
 
+//        ENABLE_TERRACOTTA_POTS = BUILDER
+//                .comment("Should terracotta pots be enabled? (default: true)")
+//                .define("enableTerracottaPots", true);
+
         ENABLE_DECORATIVES = BUILDER
                 .comment("Should small decoration blocks (jars, mugs, etc) be enabled? (default: true)")
                 .define("enableDecoratives", true);
@@ -79,6 +85,10 @@ public class EBConfig {
         ENABLE_ANCIENT_SAPLINGS = BUILDER
                 .comment("Should ancient saplings be enabled (and to extension their content)? (default: true)")
                 .define("enableAncientSaplings", true);
+
+        ENABLE_CUSTOM_TOOLTIPS = BUILDER
+                .comment("Should Excessive Building items with special interactions have custom tooltips? (default: true)")
+                .define("enableCustomTooltips", true);
 
         BUILDER.pop();
 

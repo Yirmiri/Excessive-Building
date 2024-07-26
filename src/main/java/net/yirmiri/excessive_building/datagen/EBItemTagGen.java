@@ -30,6 +30,13 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendSoulFireBaseBlocks();
         appendSmallFlowers();
         appendPiglinLoved();
+        appendSoils();
+    }
+
+    public void appendSoils() {
+        getOrCreateTagBuilder(EBTags.Items.SOILS)
+                .add(Items.DIRT)
+        ;
     }
 
     public void appendPiglinLoved() {

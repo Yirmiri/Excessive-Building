@@ -8,11 +8,16 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.screen.ScreenTexts;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -25,6 +30,8 @@ import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.entity.ReachingLanternBlockEntity;
 import net.yirmiri.excessive_building.registry.EBBlockEntities;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ReachingLanternBlock extends BlockWithEntity implements BlockEntityProvider, Waterloggable {
     public static final MapCodec<ReachingLanternBlock> CODEC = createCodec(ReachingLanternBlock::new);
@@ -49,6 +56,16 @@ public class ReachingLanternBlock extends BlockWithEntity implements BlockEntity
     @Override
     protected MapCodec<? extends BlockWithEntity> getCodec() {
         return CODEC;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get() && EBConfig.REACHING_LANTERN_RANGE.get() != 0 && !EBConfig.ENABLE_REACHING_LANTERN_FUNCTIONALITY.get()) {
+            super.appendTooltip(stack, context, tooltip, options);
+            tooltip.add(ScreenTexts.EMPTY);
+            tooltip.add(Text.translatable("tooltip.block.player_nearby").formatted(Formatting.GRAY));
+            tooltip.add(ScreenTexts.space().append(Text.translatable("tooltip.block.increases_block_reach").formatted(Formatting.BLUE)));
+        }
     }
 
     @Nullable @Override

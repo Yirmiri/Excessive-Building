@@ -3,17 +3,26 @@ package net.yirmiri.excessive_building.block;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.screen.ScreenTexts;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import net.yirmiri.excessive_building.EBConfig;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class SoulMagmaBlock extends MagmaBlock {
     public static final BooleanProperty POWERED = Properties.POWERED;
@@ -21,6 +30,16 @@ public class SoulMagmaBlock extends MagmaBlock {
     public SoulMagmaBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.getDefaultState().with(POWERED, Boolean.valueOf(false)));
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
+            super.appendTooltip(stack, context, tooltip, options);
+            tooltip.add(ScreenTexts.EMPTY);
+            tooltip.add(Text.translatable("tooltip.block.when_powered").formatted(Formatting.GRAY));
+            tooltip.add(ScreenTexts.space().append(Text.translatable("tooltip.block.soul_magma").formatted(Formatting.BLUE)));
+        }
     }
 
     @Override
