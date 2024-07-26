@@ -55,6 +55,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendWoodenStairs();
         appendEnchantmentPowerProvider();
         appendSmallFlowers();
+        appendGuardedByPiglins();
     }
 
     public void appendDecoratives() {
@@ -288,8 +289,28 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         ;
     }
 
+    public void appendGuardedByPiglins() {
+        getOrCreateTagBuilder(BlockTags.GUARDED_BY_PIGLINS)
+                .add(EBBlocks.GOLD_BRICKS)
+                .add(EBBlocks.GOLD_BRICK_STAIRS)
+                .add(EBBlocks.GOLD_BRICK_SLAB)
+                .add(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS)
+                .add(EBBlocks.GOLD_GRATE)
+        ;
+    }
+
+    public void appendNeedsDiamondTool() {
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(EBBlocks.NETHERITE_BRICKS)
+                .add(EBBlocks.NETHERITE_BRICK_STAIRS)
+                .add(EBBlocks.NETHERITE_BRICK_SLAB)
+                .add(EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS)
+        ;
+    }
+
     public void appendNeedsIronTool() {
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(EBBlocks.GOLD_GRATE)
                 .add(EBBlocks.GOLD_BRICKS)
                 .add(EBBlocks.GOLD_BRICK_STAIRS)
                 .add(EBBlocks.GOLD_BRICK_SLAB)
@@ -302,15 +323,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.EMERALD_BRICK_STAIRS)
                 .add(EBBlocks.EMERALD_BRICK_SLAB)
                 .add(EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS)
-        ;
-    }
-
-    public void appendNeedsDiamondTool() {
-        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(EBBlocks.NETHERITE_BRICKS)
-                .add(EBBlocks.NETHERITE_BRICK_STAIRS)
-                .add(EBBlocks.NETHERITE_BRICK_SLAB)
-                .add(EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS)
         ;
     }
 
@@ -514,6 +526,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.GOLD_GRATE)
                     .add(EBBlocks.IRON_GRATE)
                     .add(EBBlocks.ASPHALT)
                     .add(EBBlocks.ASPHALT_STAIRS)

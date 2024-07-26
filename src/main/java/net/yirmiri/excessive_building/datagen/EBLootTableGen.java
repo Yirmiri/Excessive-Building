@@ -469,6 +469,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addPottedPlantDrops(EBBlocks.POTTED_ROSE);
         addPottedPlantDrops(EBBlocks.POTTED_CYAN_ROSE);
         addPottedPlantDrops(EBBlocks.POTTED_WHITE_ROSE);
+        addDrop(EBBlocks.GOLD_GRATE);
     }
 
     private void addDyedKnittedWoolDrops() {

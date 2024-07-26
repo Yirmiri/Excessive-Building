@@ -605,6 +605,7 @@ public class EBBlocks {
 
     //MISC
     public static final Block IRON_GRATE = registerAP("iron_grate", new GrateBlock(EBProperties.BlockP.IRON_GRATE), true);
+    public static final Block GOLD_GRATE = registerAP("gold_grate", new GrateBlock(EBProperties.BlockP.GOLD_GRATE), true);
     
     public static final Block REACHING_LANTERN = register("reaching_lantern", new ReachingLanternBlock(EBProperties.BlockP.REACHING_LANTERN), true);
 
@@ -616,7 +617,7 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO: SHELF VARIANTS, GLOOM TREE GENERATION, TERRACOTTA POTS, SMOOTH STONE BLOCKS, CALCITE, AZALEA LOTUS PARTICLE BLOCK BUT FOR OTHER BIOMES
+    //TODO: SHELF VARIANTS, GLOOM TREE GENERATION, TERRACOTTA POTS, SMOOTH STONE BLOCKS, CALCITE, AZALEA LOTUS PARTICLE BLOCK BUT FOR OTHER BIOMES, MOSS PASTE
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

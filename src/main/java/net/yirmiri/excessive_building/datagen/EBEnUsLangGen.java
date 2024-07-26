@@ -463,7 +463,8 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.ROSE, "Rose");
         build.add(EBBlocks.CYAN_ROSE, "Cyan Rose");
         build.add(EBBlocks.WHITE_ROSE, "White Rose");
-        
+        build.add(EBBlocks.GOLD_GRATE, "Gold Grate");
+
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
         build.add(EBItems.ANCIENT_HANGING_SIGN, "Ancient Hanging Sign");

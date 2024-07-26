@@ -29,6 +29,17 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendGloomLogs();
         appendSoulFireBaseBlocks();
         appendSmallFlowers();
+        appendPiglinLoved();
+    }
+
+    public void appendPiglinLoved() {
+        getOrCreateTagBuilder(ItemTags.PIGLIN_LOVED)
+                .add(EBBlocks.GOLD_GRATE.asItem())
+                .add(EBBlocks.GOLD_BRICKS.asItem())
+                .add(EBBlocks.GOLD_BRICK_STAIRS.asItem())
+                .add(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS.asItem())
+                .add(EBBlocks.GOLD_BRICK_SLAB.asItem())
+        ;
     }
 
     public void appendSmallFlowers() {

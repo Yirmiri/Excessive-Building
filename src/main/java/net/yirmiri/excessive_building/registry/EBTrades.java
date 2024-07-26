@@ -14,5 +14,5 @@ public class EBTrades {
                 factories.add((entity, random) -> new TradeOffer(
                         new TradedItem(Items.EMERALD, 4), new ItemStack(EBBlocks.ASPHALT, 24), 16, 30, 0.05f));
         });
-    }
+    } //TODO: ADD MORE TRADES + CONFIG
 }

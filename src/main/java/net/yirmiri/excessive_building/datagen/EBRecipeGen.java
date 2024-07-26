@@ -2693,6 +2693,16 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .input(EBBlocks.WHITE_ROSE)
                 .criterion(hasItem(EBBlocks.WHITE_ROSE), conditionsFromItem(EBBlocks.WHITE_ROSE))
                 .offerTo(exporter, Identifier.of((getRecipeName(Items.WHITE_DYE) + "_from_white_rose")));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GOLD_GRATE, 4)
+                .input('#', Blocks.GOLD_BLOCK)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern(" # ")
+                .criterion(hasItem(Blocks.GOLD_BLOCK), conditionsFromItem(Blocks.GOLD_BLOCK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GOLD_GRATE)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.GOLD_GRATE, Blocks.GOLD_BLOCK, 4);
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

@@ -502,6 +502,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.GOLD_BRICK_SLAB);
 
+                entries.add(EBBlocks.GOLD_GRATE);
+
                 entries.add(EBBlocks.LAPIS_BRICKS);
                 entries.add(EBBlocks.LAPIS_BRICK_STAIRS);
                 entries.add(EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS);
