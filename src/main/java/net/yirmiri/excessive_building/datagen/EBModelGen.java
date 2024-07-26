@@ -566,6 +566,110 @@ public class EBModelGen extends FabricModelProvider {
 
         generator.registerAxisRotated(EBBlocks.SMOOTH_STONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
         generator.registerSimpleCubeAll(EBBlocks.CHISELED_SMOOTH_STONE_BRICKS);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.OAK_DECORATIVE_SHELF, "0", EBBlocks.OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.OAK_DECORATIVE_SHELF, "1", EBBlocks.OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.OAK_DECORATIVE_SHELF, "2", EBBlocks.OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.OAK_DECORATIVE_SHELF, "3", EBBlocks.OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.OAK_DECORATIVE_SHELF, "4", EBBlocks.OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.OAK_DECORATIVE_SHELF, "5", EBBlocks.OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.OAK_DECORATIVE_SHELF, "6", EBBlocks.OAK_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.WARPED_DECORATIVE_SHELF, "0", EBBlocks.WARPED_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.WARPED_DECORATIVE_SHELF, "1", EBBlocks.WARPED_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.WARPED_DECORATIVE_SHELF, "2", EBBlocks.WARPED_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.WARPED_DECORATIVE_SHELF, "3", EBBlocks.WARPED_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.WARPED_DECORATIVE_SHELF, "4", EBBlocks.WARPED_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.WARPED_DECORATIVE_SHELF, "5", EBBlocks.WARPED_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.WARPED_DECORATIVE_SHELF, "6", EBBlocks.WARPED_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CRIMSON_DECORATIVE_SHELF, "0", EBBlocks.CRIMSON_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CRIMSON_DECORATIVE_SHELF, "1", EBBlocks.CRIMSON_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CRIMSON_DECORATIVE_SHELF, "2", EBBlocks.CRIMSON_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CRIMSON_DECORATIVE_SHELF, "3", EBBlocks.CRIMSON_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CRIMSON_DECORATIVE_SHELF, "4", EBBlocks.CRIMSON_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CRIMSON_DECORATIVE_SHELF, "5", EBBlocks.CRIMSON_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CRIMSON_DECORATIVE_SHELF, "6", EBBlocks.CRIMSON_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BAMBOO_DECORATIVE_SHELF, "0", Blocks.BAMBOO_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BAMBOO_DECORATIVE_SHELF, "1", Blocks.BAMBOO_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BAMBOO_DECORATIVE_SHELF, "2", Blocks.BAMBOO_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BAMBOO_DECORATIVE_SHELF, "3", Blocks.BAMBOO_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BAMBOO_DECORATIVE_SHELF, "4", Blocks.BAMBOO_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BAMBOO_DECORATIVE_SHELF, "5", Blocks.BAMBOO_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BAMBOO_DECORATIVE_SHELF, "6", Blocks.BAMBOO_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CHERRY_DECORATIVE_SHELF, "0", EBBlocks.CHERRY_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CHERRY_DECORATIVE_SHELF, "1", EBBlocks.CHERRY_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CHERRY_DECORATIVE_SHELF, "2", EBBlocks.CHERRY_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CHERRY_DECORATIVE_SHELF, "3", EBBlocks.CHERRY_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CHERRY_DECORATIVE_SHELF, "4", EBBlocks.CHERRY_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CHERRY_DECORATIVE_SHELF, "5", EBBlocks.CHERRY_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.CHERRY_DECORATIVE_SHELF, "6", EBBlocks.CHERRY_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.MANGROVE_DECORATIVE_SHELF, "0", EBBlocks.MANGROVE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.MANGROVE_DECORATIVE_SHELF, "1", EBBlocks.MANGROVE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.MANGROVE_DECORATIVE_SHELF, "2", EBBlocks.MANGROVE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.MANGROVE_DECORATIVE_SHELF, "3", EBBlocks.MANGROVE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.MANGROVE_DECORATIVE_SHELF, "4", EBBlocks.MANGROVE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.MANGROVE_DECORATIVE_SHELF, "5", EBBlocks.MANGROVE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.MANGROVE_DECORATIVE_SHELF, "6", EBBlocks.MANGROVE_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.DARK_OAK_DECORATIVE_SHELF, "0", EBBlocks.DARK_OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.DARK_OAK_DECORATIVE_SHELF, "1", EBBlocks.DARK_OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.DARK_OAK_DECORATIVE_SHELF, "2", EBBlocks.DARK_OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.DARK_OAK_DECORATIVE_SHELF, "3", EBBlocks.DARK_OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.DARK_OAK_DECORATIVE_SHELF, "4", EBBlocks.DARK_OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.DARK_OAK_DECORATIVE_SHELF, "5", EBBlocks.DARK_OAK_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.DARK_OAK_DECORATIVE_SHELF, "6", EBBlocks.DARK_OAK_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ACACIA_DECORATIVE_SHELF, "0", EBBlocks.ACACIA_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ACACIA_DECORATIVE_SHELF, "1", EBBlocks.ACACIA_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ACACIA_DECORATIVE_SHELF, "2", EBBlocks.ACACIA_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ACACIA_DECORATIVE_SHELF, "3", EBBlocks.ACACIA_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ACACIA_DECORATIVE_SHELF, "4", EBBlocks.ACACIA_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ACACIA_DECORATIVE_SHELF, "5", EBBlocks.ACACIA_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ACACIA_DECORATIVE_SHELF, "6", EBBlocks.ACACIA_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.JUNGLE_DECORATIVE_SHELF, "0", EBBlocks.JUNGLE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.JUNGLE_DECORATIVE_SHELF, "1", EBBlocks.JUNGLE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.JUNGLE_DECORATIVE_SHELF, "2", EBBlocks.JUNGLE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.JUNGLE_DECORATIVE_SHELF, "3", EBBlocks.JUNGLE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.JUNGLE_DECORATIVE_SHELF, "4", EBBlocks.JUNGLE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.JUNGLE_DECORATIVE_SHELF, "5", EBBlocks.JUNGLE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.JUNGLE_DECORATIVE_SHELF, "6", EBBlocks.JUNGLE_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BIRCH_DECORATIVE_SHELF, "0", EBBlocks.BIRCH_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BIRCH_DECORATIVE_SHELF, "1", EBBlocks.BIRCH_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BIRCH_DECORATIVE_SHELF, "2", EBBlocks.BIRCH_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BIRCH_DECORATIVE_SHELF, "3", EBBlocks.BIRCH_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BIRCH_DECORATIVE_SHELF, "4", EBBlocks.BIRCH_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BIRCH_DECORATIVE_SHELF, "5", EBBlocks.BIRCH_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.BIRCH_DECORATIVE_SHELF, "6", EBBlocks.BIRCH_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.SPRUCE_DECORATIVE_SHELF, "0", EBBlocks.SPRUCE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.SPRUCE_DECORATIVE_SHELF, "1", EBBlocks.SPRUCE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.SPRUCE_DECORATIVE_SHELF, "2", EBBlocks.SPRUCE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.SPRUCE_DECORATIVE_SHELF, "3", EBBlocks.SPRUCE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.SPRUCE_DECORATIVE_SHELF, "4", EBBlocks.SPRUCE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.SPRUCE_DECORATIVE_SHELF, "5", EBBlocks.SPRUCE_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.SPRUCE_DECORATIVE_SHELF, "6", EBBlocks.SPRUCE_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ANCIENT_DECORATIVE_SHELF, "0", EBBlocks.ANCIENT_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ANCIENT_DECORATIVE_SHELF, "1", EBBlocks.ANCIENT_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ANCIENT_DECORATIVE_SHELF, "2", EBBlocks.ANCIENT_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ANCIENT_DECORATIVE_SHELF, "3", EBBlocks.ANCIENT_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ANCIENT_DECORATIVE_SHELF, "4", EBBlocks.ANCIENT_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ANCIENT_DECORATIVE_SHELF, "5", EBBlocks.ANCIENT_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.ANCIENT_DECORATIVE_SHELF, "6", EBBlocks.ANCIENT_MOSAIC);
+
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "0", EBBlocks.GLOOM_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "1", EBBlocks.GLOOM_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "2", EBBlocks.GLOOM_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "3", EBBlocks.GLOOM_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "4", EBBlocks.GLOOM_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "5", EBBlocks.GLOOM_MOSAIC);
+        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "6", EBBlocks.GLOOM_MOSAIC);
     }
 
     @Override
@@ -630,6 +734,11 @@ public class EBModelGen extends FabricModelProvider {
             TextureMap textureMap = TextureMap.sideEnd(TextureMap.getId(bookshelf), TextureMap.getId(planks));
             Identifier identifier = Models.CUBE_COLUMN.upload(bookshelf, textureMap, generator.modelCollector);
             generator.blockStateCollector.accept(generator.createSingletonBlockState(bookshelf, identifier));
+        }
+
+        private static void registerDecorativeShelfModel(BlockStateModelGenerator generator, Block bookshelf, String variant, Block planks) {
+            TextureMap textureMap = TextureMap.sideEnd(TextureMap.getSubId(bookshelf, variant), TextureMap.getId(planks));
+            Identifier identifier = Models.CUBE_COLUMN.upload(bookshelf, variant, textureMap, generator.modelCollector);
         }
 
         public static void registerTintableCrossWithoutItem(BlockStateModelGenerator generator, Block block, BlockStateModelGenerator.TintType tintType) {

@@ -495,6 +495,19 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.REDSTONE_BRICK_STAIRS);
         addDrop(EBBlocks.REDSTONE_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.REDSTONE_BRICK_SLAB);
+        addDrop(EBBlocks.OAK_DECORATIVE_SHELF);
+        addDrop(EBBlocks.SPRUCE_DECORATIVE_SHELF);
+        addDrop(EBBlocks.BIRCH_DECORATIVE_SHELF);
+        addDrop(EBBlocks.JUNGLE_DECORATIVE_SHELF);
+        addDrop(EBBlocks.ACACIA_DECORATIVE_SHELF);
+        addDrop(EBBlocks.DARK_OAK_DECORATIVE_SHELF);
+        addDrop(EBBlocks.MANGROVE_DECORATIVE_SHELF);
+        addDrop(EBBlocks.BAMBOO_DECORATIVE_SHELF);
+        addDrop(EBBlocks.CHERRY_DECORATIVE_SHELF);
+        addDrop(EBBlocks.CRIMSON_DECORATIVE_SHELF);
+        addDrop(EBBlocks.WARPED_DECORATIVE_SHELF);
+        addDrop(EBBlocks.ANCIENT_DECORATIVE_SHELF);
+        addDrop(EBBlocks.GLOOM_DECORATIVE_SHELF);
     }
 
     private void addDyedKnittedWoolDrops() {

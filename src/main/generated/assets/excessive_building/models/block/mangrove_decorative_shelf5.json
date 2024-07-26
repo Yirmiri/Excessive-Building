@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "excessive_building:block/mangrove_mosaic",
+    "side": "excessive_building:block/mangrove_decorative_shelf5"
+  }
+}

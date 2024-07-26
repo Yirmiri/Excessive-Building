@@ -81,6 +81,18 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.WARPED_BOOKSHELF)
                 .add(EBBlocks.GLOOM_BOOKSHELF)
                 .add(EBBlocks.ANCIENT_BOOKSHELF)
+                .add(EBBlocks.OAK_DECORATIVE_SHELF)
+                .add(EBBlocks.SPRUCE_DECORATIVE_SHELF)
+                .add(EBBlocks.BIRCH_DECORATIVE_SHELF)
+                .add(EBBlocks.JUNGLE_DECORATIVE_SHELF)
+                .add(EBBlocks.ACACIA_DECORATIVE_SHELF)
+                .add(EBBlocks.DARK_OAK_DECORATIVE_SHELF)
+                .add(EBBlocks.MANGROVE_DECORATIVE_SHELF)
+                .add(EBBlocks.BAMBOO_DECORATIVE_SHELF)
+                .add(EBBlocks.CRIMSON_DECORATIVE_SHELF)
+                .add(EBBlocks.WARPED_DECORATIVE_SHELF)
+                .add(EBBlocks.GLOOM_DECORATIVE_SHELF)
+                .add(EBBlocks.ANCIENT_DECORATIVE_SHELF)
         ;
     }
 
@@ -882,7 +894,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.WARPED_MOSAIC_SLAB)
                 .add(EBBlocks.WARPED_MOSAIC_VERTICAL_STAIRS)
                 .add(EBBlocks.BAMBOO_MOSAIC_VERTICAL_STAIRS)
-
                 .add(EBBlocks.ANCIENT_PLANKS)
                 .add(EBBlocks.ANCIENT_STAIRS)
                 .add(EBBlocks.ANCIENT_SLAB)
@@ -904,7 +915,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.ANCIENT_HANGING_SIGN)
                 .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN)
                 .add(EBBlocks.CHISELED_ANCIENT_PLANKS)
-                
                 .add(EBBlocks.CHISELED_OAK_PLANKS)
                 .add(EBBlocks.CHISELED_SPRUCE_PLANKS)
                 .add(EBBlocks.CHISELED_BIRCH_PLANKS)
@@ -915,7 +925,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.CHISELED_BAMBOO_PLANKS)
                 .add(EBBlocks.CHISELED_CRIMSON_PLANKS)
                 .add(EBBlocks.CHISELED_WARPED_PLANKS)
-
                 .add(EBBlocks.GLOOM_PLANKS)
                 .add(EBBlocks.GLOOM_STAIRS)
                 .add(EBBlocks.GLOOM_SLAB)
@@ -937,6 +946,29 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.GLOOM_HANGING_SIGN)
                 .add(EBBlocks.GLOOM_WALL_HANGING_SIGN)
                 .add(EBBlocks.CHISELED_GLOOM_PLANKS)
+                .add(EBBlocks.OAK_DECORATIVE_SHELF)
+                .add(EBBlocks.SPRUCE_DECORATIVE_SHELF)
+                .add(EBBlocks.BIRCH_DECORATIVE_SHELF)
+                .add(EBBlocks.JUNGLE_DECORATIVE_SHELF)
+                .add(EBBlocks.ACACIA_DECORATIVE_SHELF)
+                .add(EBBlocks.DARK_OAK_DECORATIVE_SHELF)
+                .add(EBBlocks.MANGROVE_DECORATIVE_SHELF)
+                .add(EBBlocks.BAMBOO_DECORATIVE_SHELF)
+                .add(EBBlocks.CRIMSON_DECORATIVE_SHELF)
+                .add(EBBlocks.WARPED_DECORATIVE_SHELF)
+                .add(EBBlocks.GLOOM_DECORATIVE_SHELF)
+                .add(EBBlocks.ANCIENT_DECORATIVE_SHELF)
+                .add(EBBlocks.SPRUCE_BOOKSHELF)
+                .add(EBBlocks.BIRCH_BOOKSHELF)
+                .add(EBBlocks.JUNGLE_BOOKSHELF)
+                .add(EBBlocks.ACACIA_BOOKSHELF)
+                .add(EBBlocks.DARK_OAK_BOOKSHELF)
+                .add(EBBlocks.MANGROVE_BOOKSHELF)
+                .add(EBBlocks.BAMBOO_BOOKSHELF)
+                .add(EBBlocks.CRIMSON_BOOKSHELF)
+                .add(EBBlocks.WARPED_BOOKSHELF)
+                .add(EBBlocks.GLOOM_BOOKSHELF)
+                .add(EBBlocks.ANCIENT_BOOKSHELF)
         ;
     }
 }

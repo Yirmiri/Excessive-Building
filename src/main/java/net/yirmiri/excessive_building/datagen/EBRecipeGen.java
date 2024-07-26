@@ -2829,6 +2829,71 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.REDSTONE_BRICK_STAIRS, EBBlocks.REDSTONE_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.REDSTONE_BRICK_SLAB, EBBlocks.REDSTONE_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.REDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.REDSTONE_BRICKS, 1);
+
+        createShelfBlock(EBBlocks.OAK_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.OAK_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OAK_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.SPRUCE_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.SPRUCE_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SPRUCE_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.BIRCH_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.BIRCH_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BIRCH_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.JUNGLE_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.JUNGLE_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.JUNGLE_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.ACACIA_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.ACACIA_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ACACIA_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.DARK_OAK_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.DARK_OAK_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_OAK_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.MANGROVE_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.MANGROVE_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MANGROVE_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.CHERRY_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.CHERRY_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHERRY_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.BAMBOO_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(Blocks.BAMBOO_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BAMBOO_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.CRIMSON_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.CRIMSON_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CRIMSON_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.WARPED_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.WARPED_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WARPED_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.ANCIENT_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.ANCIENT_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_DECORATIVE_SHELF)));
+
+        createShelfBlock(EBBlocks.GLOOM_DECORATIVE_SHELF, 1,
+                Ingredient.ofItems(EBBlocks.GLOOM_MOSAIC), Ingredient.ofItems(Items.BOOK))
+                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_DECORATIVE_SHELF)));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

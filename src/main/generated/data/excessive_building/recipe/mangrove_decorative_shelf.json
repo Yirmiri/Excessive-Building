@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "excessive_building:mangrove_mosaic"
+    },
+    "@": {
+      "item": "minecraft:book"
+    }
+  },
+  "pattern": [
+    "###",
+    "@@@",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:mangrove_decorative_shelf"
+  }
+}

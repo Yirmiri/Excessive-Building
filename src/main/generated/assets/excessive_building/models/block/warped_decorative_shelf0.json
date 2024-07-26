@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "excessive_building:block/warped_mosaic",
+    "side": "excessive_building:block/warped_decorative_shelf0"
+  }
+}

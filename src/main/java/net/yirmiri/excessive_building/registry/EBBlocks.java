@@ -534,6 +534,21 @@ public class EBBlocks {
     public static final Block ANCIENT_BOOKSHELF = registerBS("ancient_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
     public static final Block GLOOM_BOOKSHELF = registerBS("gloom_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
 
+    //DECORATIVE SHELF
+    public static final Block OAK_DECORATIVE_SHELF = registerDS("oak_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block SPRUCE_DECORATIVE_SHELF = registerDS("spruce_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block BIRCH_DECORATIVE_SHELF = registerDS("birch_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block JUNGLE_DECORATIVE_SHELF = registerDS("jungle_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block ACACIA_DECORATIVE_SHELF = registerDS("acacia_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block DARK_OAK_DECORATIVE_SHELF = registerDS("dark_oak_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block MANGROVE_DECORATIVE_SHELF = registerDS("mangrove_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
+    public static final Block CHERRY_DECORATIVE_SHELF = registerDS("cherry_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
+    public static final Block BAMBOO_DECORATIVE_SHELF = registerDS("bamboo_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.BAMBOO_SHELF), true);
+    public static final Block CRIMSON_DECORATIVE_SHELF = registerDS("crimson_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.CRIMSON_SHELF), true);
+    public static final Block WARPED_DECORATIVE_SHELF = registerDS("warped_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.WARPED_SHELF), true);
+    public static final Block ANCIENT_DECORATIVE_SHELF = registerDS("ancient_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
+    public static final Block GLOOM_DECORATIVE_SHELF = registerDS("gloom_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
+    
     //DECORATIVES
     public static final Block WOODEN_MUG = registerDeco("wooden_mug", new WoodenMugBlock(EBProperties.BlockP.WOODEN_MUG), true);
     public static final Block GLASS_JAR = registerDeco("glass_jar", new GlassJarBlock(EBProperties.BlockP.GLASS_JAR), true);
@@ -649,9 +664,7 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO IMPORTANT: SHELF VARIANTS
-
-    //TODO 3.1.1: CALCITE BLOCKSET, PARTICLE CANDLES, MOSS PASTE, PEDESTALS, IMPROVED GLOOM TREE GENERATION, DYED TERRACOTTA POTS, GLOOM CRYSTALS
+    //TODO 3.1.1: CALCITE BLOCKSET, PARTICLE CANDLES, MOSS PASTE, PEDESTALS, IMPROVED GLOOM TREE GENERATION, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES)
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {
@@ -718,6 +731,17 @@ public class EBBlocks {
 
     private static Item registerAncSaplingBlockItem(String id, Block block) {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new AncientSaplingBlockItem(block, new Item.Settings()));
+    }
+
+    private static Block registerDS(String id, Block block, boolean registerItem) {
+        if (registerItem) {
+            registerDSBlockItem(id, block);
+        }
+        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+    }
+
+    private static Item registerDSBlockItem(String id, Block block) {
+        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new DecorativeShelfBlockItem(block, new Item.Settings()));
     }
 
     private static Block registerBS(String id, Block block, boolean registerItem) {

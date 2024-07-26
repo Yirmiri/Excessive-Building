@@ -489,6 +489,19 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.REDSTONE_BRICK_STAIRS, "Redstone Brick Stairs");
         build.add(EBBlocks.REDSTONE_BRICK_VERTICAL_STAIRS, "Redstone Brick Vertical Stairs");
         build.add(EBBlocks.REDSTONE_BRICK_SLAB, "Redstone Brick Slab");
+        build.add(EBBlocks.OAK_DECORATIVE_SHELF, "Oak Decorative Shelf");
+        build.add(EBBlocks.SPRUCE_DECORATIVE_SHELF, "Spruce Decorative Shelf");
+        build.add(EBBlocks.BIRCH_DECORATIVE_SHELF, "Birch Decorative Shelf");
+        build.add(EBBlocks.JUNGLE_DECORATIVE_SHELF, "Jungle Decorative Shelf");
+        build.add(EBBlocks.ACACIA_DECORATIVE_SHELF, "Acacia Decorative Shelf");
+        build.add(EBBlocks.DARK_OAK_DECORATIVE_SHELF, "Dark Oak Decorative Shelf");
+        build.add(EBBlocks.MANGROVE_DECORATIVE_SHELF, "Mangrove Decorative Shelf");
+        build.add(EBBlocks.CHERRY_DECORATIVE_SHELF, "Cherry Decorative Shelf");
+        build.add(EBBlocks.BAMBOO_DECORATIVE_SHELF, "Bamboo Decorative Shelf");
+        build.add(EBBlocks.CRIMSON_DECORATIVE_SHELF, "Crimson Decorative Shelf");
+        build.add(EBBlocks.WARPED_DECORATIVE_SHELF, "Warped Decorative Shelf");
+        build.add(EBBlocks.ANCIENT_DECORATIVE_SHELF, "Ancient Decorative Shelf");
+        build.add(EBBlocks.GLOOM_DECORATIVE_SHELF, "Gloom Decorative Shelf");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

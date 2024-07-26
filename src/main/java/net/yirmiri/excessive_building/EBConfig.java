@@ -59,7 +59,7 @@ public class EBConfig {
                 .define("enableShelfVariants", true);
 
         ENABLE_DECORATIVE_SHELVES = BUILDER
-                .comment("Should decorative shelf variants be enabled? (default: true)")
+                .comment("Should decorative shelf blocks be enabled? (default: true)")
                 .define("enableDecorativeShelves", true);
 
         ENABLE_CRAFTING_TABLE_VARIANTS = BUILDER

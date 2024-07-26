@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "excessive_building:crimson_mosaic"
+    },
+    "@": {
+      "item": "minecraft:book"
+    }
+  },
+  "pattern": [
+    "###",
+    "@@@",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:crimson_decorative_shelf"
+  }
+}

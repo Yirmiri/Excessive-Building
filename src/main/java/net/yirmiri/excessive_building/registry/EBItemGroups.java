@@ -36,6 +36,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.OAK_MOSAIC_SLAB);
                 entries.add(EBBlocks.CHISELED_OAK_PLANKS);
                 entries.add(Blocks.BOOKSHELF);
+                entries.add(EBBlocks.OAK_DECORATIVE_SHELF);
                 entries.add(Blocks.CRAFTING_TABLE);
                 entries.add(Blocks.LADDER);
 
@@ -45,6 +46,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.SPRUCE_MOSAIC_SLAB);
                 entries.add(EBBlocks.CHISELED_SPRUCE_PLANKS);
                 entries.add(EBBlocks.SPRUCE_BOOKSHELF);
+                entries.add(EBBlocks.SPRUCE_DECORATIVE_SHELF);
                 entries.add(EBBlocks.SPRUCE_CRAFTING_TABLE);
                 entries.add(EBBlocks.SPRUCE_LADDER);
 
@@ -54,6 +56,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BIRCH_MOSAIC_SLAB);
                 entries.add(EBBlocks.CHISELED_BIRCH_PLANKS);
                 entries.add(EBBlocks.BIRCH_BOOKSHELF);
+                entries.add(EBBlocks.BIRCH_DECORATIVE_SHELF);
                 entries.add(EBBlocks.BIRCH_CRAFTING_TABLE);
                 entries.add(EBBlocks.BIRCH_LADDER);
 
@@ -63,6 +66,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.JUNGLE_MOSAIC_SLAB);
                 entries.add(EBBlocks.CHISELED_JUNGLE_PLANKS);
                 entries.add(EBBlocks.JUNGLE_BOOKSHELF);
+                entries.add(EBBlocks.JUNGLE_DECORATIVE_SHELF);
                 entries.add(EBBlocks.JUNGLE_CRAFTING_TABLE);
                 entries.add(EBBlocks.JUNGLE_LADDER);
 
@@ -72,6 +76,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.ACACIA_MOSAIC_SLAB);
                 entries.add(EBBlocks.CHISELED_ACACIA_PLANKS);
                 entries.add(EBBlocks.ACACIA_BOOKSHELF);
+                entries.add(EBBlocks.ACACIA_DECORATIVE_SHELF);
                 entries.add(EBBlocks.ACACIA_CRAFTING_TABLE);
                 entries.add(EBBlocks.ACACIA_LADDER);
 
@@ -81,6 +86,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.DARK_OAK_MOSAIC_SLAB);
                 entries.add(EBBlocks.CHISELED_DARK_OAK_PLANKS);
                 entries.add(EBBlocks.DARK_OAK_BOOKSHELF);
+                entries.add(EBBlocks.DARK_OAK_DECORATIVE_SHELF);
                 entries.add(EBBlocks.DARK_OAK_CRAFTING_TABLE);
                 entries.add(EBBlocks.DARK_OAK_LADDER);
 
@@ -90,6 +96,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.MANGROVE_MOSAIC_SLAB);
                 entries.add(EBBlocks.CHISELED_MANGROVE_PLANKS);
                 entries.add(EBBlocks.MANGROVE_BOOKSHELF);
+                entries.add(EBBlocks.MANGROVE_DECORATIVE_SHELF);
                 entries.add(EBBlocks.MANGROVE_CRAFTING_TABLE);
                 entries.add(EBBlocks.MANGROVE_LADDER);
 
@@ -99,6 +106,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.CHERRY_MOSAIC_SLAB);
                 entries.add(EBBlocks.CHISELED_CHERRY_PLANKS);
                 entries.add(EBBlocks.CHERRY_BOOKSHELF);
+                entries.add(EBBlocks.CHERRY_DECORATIVE_SHELF);
                 entries.add(EBBlocks.CHERRY_CRAFTING_TABLE);
                 entries.add(EBBlocks.CHERRY_LADDER);
 
@@ -122,6 +130,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.ANCIENT_PRESSURE_PLATE);
                 entries.add(EBBlocks.ANCIENT_BUTTON);
                 entries.add(EBBlocks.ANCIENT_BOOKSHELF);
+                entries.add(EBBlocks.ANCIENT_DECORATIVE_SHELF);
                 entries.add(EBBlocks.ANCIENT_CRAFTING_TABLE);
                 entries.add(EBBlocks.ANCIENT_LADDER);
 
@@ -145,12 +154,14 @@ public class EBItemGroups {
                 entries.add(EBBlocks.GLOOM_PRESSURE_PLATE);
                 entries.add(EBBlocks.GLOOM_BUTTON);
                 entries.add(EBBlocks.GLOOM_BOOKSHELF);
+                entries.add(EBBlocks.GLOOM_DECORATIVE_SHELF);
                 entries.add(EBBlocks.GLOOM_CRAFTING_TABLE);
                 entries.add(EBBlocks.GLOOM_LADDER);
 
                 entries.add(EBBlocks.BAMBOO_MOSAIC_VERTICAL_STAIRS);
                 entries.add(EBBlocks.CHISELED_BAMBOO_PLANKS);
                 entries.add(EBBlocks.BAMBOO_BOOKSHELF);
+                entries.add(EBBlocks.BAMBOO_DECORATIVE_SHELF);
                 entries.add(EBBlocks.BAMBOO_CRAFTING_TABLE);
                 entries.add(EBBlocks.BAMBOO_LADDER);
 
@@ -160,6 +171,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.CRIMSON_MOSAIC_SLAB);
                 entries.add(EBBlocks.CHISELED_CRIMSON_PLANKS);
                 entries.add(EBBlocks.CRIMSON_BOOKSHELF);
+                entries.add(EBBlocks.CRIMSON_DECORATIVE_SHELF);
                 entries.add(EBBlocks.CRIMSON_CRAFTING_TABLE);
                 entries.add(EBBlocks.CRIMSON_LADDER);
 
@@ -169,6 +181,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WARPED_MOSAIC_SLAB);
                 entries.add(EBBlocks.CHISELED_WARPED_PLANKS);
                 entries.add(EBBlocks.WARPED_BOOKSHELF);
+                entries.add(EBBlocks.WARPED_DECORATIVE_SHELF);
                 entries.add(EBBlocks.WARPED_CRAFTING_TABLE);
                 entries.add(EBBlocks.WARPED_LADDER);
 

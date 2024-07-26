@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "excessive_building:block/cherry_mosaic",
+    "side": "excessive_building:block/cherry_decorative_shelf6"
+  }
+}
