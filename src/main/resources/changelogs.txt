@@ -4,7 +4,7 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release v3.0.2 Fabric-1.21
+Version Release v3.1.0 Fabric-1.21
 Major Update
 
 •   Ported to Fabric 1.21
