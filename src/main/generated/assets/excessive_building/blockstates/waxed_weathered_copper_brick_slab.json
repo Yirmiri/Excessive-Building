@@ -1,7 +1,13 @@
 {
   "variants": {
-    "": {
+    "type=bottom": {
       "model": "excessive_building:block/weathered_copper_brick_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/weathered_copper_bricks"
+    },
+    "type=top": {
+      "model": "excessive_building:block/weathered_copper_brick_slab_top"
     }
   }
 }

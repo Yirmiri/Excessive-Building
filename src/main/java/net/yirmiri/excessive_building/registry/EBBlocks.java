@@ -176,8 +176,8 @@ public class EBBlocks {
 
     public static final Block ANCIENT_FENCE = register("ancient_fence", new FenceBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
     public static final Block ANCIENT_FENCE_GATE = register("ancient_fence_gate", new FenceGateBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block ANCIENT_DOOR = register("ancient_door", new DoorBlock(EBBlockSetTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block ANCIENT_TRAPDOOR = register("ancient_trapdoor", new TrapdoorBlock(EBBlockSetTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block ANCIENT_DOOR = register("ancient_door", new DoorBlock(EBBlockSetTypes.ANCIENT, EBProperties.BlockP.ANCIENT_DOOR), true);
+    public static final Block ANCIENT_TRAPDOOR = register("ancient_trapdoor", new TrapdoorBlock(EBBlockSetTypes.ANCIENT, EBProperties.BlockP.ANCIENT_TRAPDOOR), true);
     public static final Block ANCIENT_PRESSURE_PLATE = register("ancient_pressure_plate", new PressurePlateBlock(EBBlockSetTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), true);
     public static final Block ANCIENT_BUTTON = register("ancient_button", new ButtonBlock(EBBlockSetTypes.ANCIENT, 30, EBProperties.BlockP.ANCIENT_WOOD), true);
     public static final Block ANCIENT_SIGN = register("ancient_sign", new EBSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), false);
@@ -207,8 +207,8 @@ public class EBBlocks {
 
     public static final Block GLOOM_FENCE = register("gloom_fence", new FenceBlock(EBProperties.BlockP.GLOOM_WOOD), true);
     public static final Block GLOOM_FENCE_GATE = register("gloom_fence_gate", new FenceGateBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_DOOR = register("gloom_door", new DoorBlock(EBBlockSetTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_TRAPDOOR = register("gloom_trapdoor", new TrapdoorBlock(EBBlockSetTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block GLOOM_DOOR = register("gloom_door", new DoorBlock(EBBlockSetTypes.GLOOM, EBProperties.BlockP.GLOOM_DOOR), true);
+    public static final Block GLOOM_TRAPDOOR = register("gloom_trapdoor", new TrapdoorBlock(EBBlockSetTypes.GLOOM, EBProperties.BlockP.GLOOM_TRAPDOOR), true);
     public static final Block GLOOM_PRESSURE_PLATE = register("gloom_pressure_plate", new PressurePlateBlock(EBBlockSetTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), true);
     public static final Block GLOOM_BUTTON = register("gloom_button", new ButtonBlock(EBBlockSetTypes.GLOOM, 30, EBProperties.BlockP.GLOOM_WOOD), true);
     public static final Block GLOOM_SIGN = register("gloom_sign", new EBSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
