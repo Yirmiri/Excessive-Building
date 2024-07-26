@@ -494,12 +494,11 @@ public class EBItemGroups {
 
                 entries.add(EBBlocks.CRACKED_MUD_BRICKS);
 
-                //TODO: MAKE PRETTY ;W;
-//                entries.add(EBBlocks.BONE_BRICKS);
-//                entries.add(EBBlocks.BONE_BRICK_STAIRS);
-//                entries.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
-//                entries.add(EBBlocks.BONE_BRICK_SLAB);
-//                entries.add(EBBlocks.BONE_BRICK_WALL);
+                entries.add(EBBlocks.BONE_BRICKS);
+                entries.add(EBBlocks.BONE_BRICK_STAIRS);
+                entries.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.BONE_BRICK_SLAB);
+                entries.add(EBBlocks.BONE_BRICK_WALL);
 
                 entries.add(Blocks.QUARTZ_BRICKS);
                 entries.add(EBBlocks.QUARTZ_BRICK_STAIRS);
