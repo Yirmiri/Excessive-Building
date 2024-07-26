@@ -605,8 +605,7 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO: SHELF VARIANTS, CRYSTAL BLOCKS, TILE BLOCKS, MIXED BRICKS, GLOOM TREE GENERATION, TERRACOTTA POTS, ROSES
-    //TODO: ASPHALT, NEW GRATES, CRYSTAL FIRE, SMOOTH STONE BLOCKS, CALCITE
+    //TODO: SHELF VARIANTS, GLOOM TREE GENERATION, TERRACOTTA POTS, ROSES, GRATES, SMOOTH STONE BLOCKS, CALCITE
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

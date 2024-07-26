@@ -523,6 +523,11 @@ public class EBModelGen extends FabricModelProvider {
         polishedBrimstone.stairs(EBBlocks.POLISHED_BRIMSTONE_STAIRS);
         polishedBrimstone.slab(EBBlocks.POLISHED_BRIMSTONE_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_BRIMSTONE_VERTICAL_STAIRS, EBBlocks.POLISHED_BRIMSTONE);
+
+        BlockStateModelGenerator.BlockTexturePool asphalt = generator.registerCubeAllModelTexturePool(EBBlocks.ASPHALT);
+        asphalt.stairs(EBBlocks.ASPHALT_STAIRS);
+        asphalt.slab(EBBlocks.ASPHALT_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.ASPHALT_VERTICAL_STAIRS, EBBlocks.ASPHALT);
     }
 
     @Override

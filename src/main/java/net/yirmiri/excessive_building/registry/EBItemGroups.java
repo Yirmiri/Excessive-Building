@@ -252,6 +252,11 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BRIMSTONE_LAMP);
                 entries.add(EBBlocks.BRIMSTONE_WINDOW);
 
+                entries.add(EBBlocks.ASPHALT);
+                entries.add(EBBlocks.ASPHALT_STAIRS);
+                entries.add(EBBlocks.ASPHALT_VERTICAL_STAIRS);
+                entries.add(EBBlocks.ASPHALT_SLAB);
+
                 entries.add(EBItems.ANCIENT_SIGN);
                 entries.add(EBItems.ANCIENT_HANGING_SIGN);
                 entries.add(EBItems.GLOOM_SIGN);
