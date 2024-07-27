@@ -56,6 +56,14 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendEnchantmentPowerProvider();
         appendSmallFlowers();
         appendGuardedByPiglins();
+        appendCandles();
+    }
+
+    public void appendCandles() {
+        getOrCreateTagBuilder(BlockTags.CANDLES)
+                .add(EBBlocks.WEEPING_CANDLE)
+                .add(EBBlocks.TWISTING_CANDLE)
+        ;
     }
 
     public void appendDecoratives() {

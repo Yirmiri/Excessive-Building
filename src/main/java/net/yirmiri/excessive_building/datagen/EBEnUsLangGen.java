@@ -502,6 +502,8 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.WARPED_DECORATIVE_SHELF, "Warped Decorative Shelf");
         build.add(EBBlocks.ANCIENT_DECORATIVE_SHELF, "Ancient Decorative Shelf");
         build.add(EBBlocks.GLOOM_DECORATIVE_SHELF, "Gloom Decorative Shelf");
+        build.add(EBBlocks.WEEPING_CANDLE, "Weeping Candle");
+        build.add(EBBlocks.TWISTING_CANDLE, "Twisting Candle");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

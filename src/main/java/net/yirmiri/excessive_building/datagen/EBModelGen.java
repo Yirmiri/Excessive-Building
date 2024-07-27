@@ -670,6 +670,9 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "4", EBBlocks.GLOOM_MOSAIC);
         EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "5", EBBlocks.GLOOM_MOSAIC);
         EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "6", EBBlocks.GLOOM_MOSAIC);
+
+        EBModels.registerParticleCandle(generator, EBBlocks.WEEPING_CANDLE);
+        EBModels.registerParticleCandle(generator, EBBlocks.TWISTING_CANDLE);
     }
 
     @Override
@@ -715,6 +718,8 @@ public class EBModelGen extends FabricModelProvider {
         generator.register(EBBlocks.ANCIENT_LADDER.asItem(), Models.GENERATED);
         generator.register(EBBlocks.GLOOM_LADDER.asItem(), Models.GENERATED);
         generator.register(EBBlocks.GLOOM_SEEDS.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.WEEPING_CANDLE.asItem(), Models.GENERATED);
+        generator.register(EBBlocks.TWISTING_CANDLE.asItem(), Models.GENERATED);
     }
 
     public static class EBModels {
@@ -730,10 +735,21 @@ public class EBModelGen extends FabricModelProvider {
         public static final Model MUG = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_mug")
                 .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
 
+        public static final Model PARTICLE_CANDLE = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_particle_candle")
+                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+
+        public static void registerParticleCandle(BlockStateModelGenerator generator, Block particleCandle) {
+            TextureMap textureMap = TextureMap.all(TextureMap.getId(particleCandle));
+            TextureMap textureMapLit = TextureMap.all(TextureMap.getSubId(particleCandle, "_lit"));
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(particleCandle).coordinate(BlockStateVariantMap.create(Properties.LIT)
+            .register(Boolean.FALSE, BlockStateVariant.create().put(VariantSettings.MODEL, PARTICLE_CANDLE.upload(particleCandle, textureMap, generator.modelCollector)))
+            .register(Boolean.TRUE, BlockStateVariant.create().put(VariantSettings.MODEL, PARTICLE_CANDLE.uploadWithoutVariant(particleCandle, "_lit", textureMapLit, generator.modelCollector)))));
+        }
+
         private static void registerEBBookshelf(BlockStateModelGenerator generator, Block bookshelf, Block planks) {
             TextureMap textureMap = TextureMap.sideEnd(TextureMap.getId(bookshelf), TextureMap.getId(planks));
-            Identifier identifier = Models.CUBE_COLUMN.upload(bookshelf, textureMap, generator.modelCollector);
-            generator.blockStateCollector.accept(generator.createSingletonBlockState(bookshelf, identifier));
+            Identifier model = Models.CUBE_COLUMN.upload(bookshelf, textureMap, generator.modelCollector);
+            generator.blockStateCollector.accept(generator.createSingletonBlockState(bookshelf, model));
         }
 
         private static void registerDecorativeShelfModel(BlockStateModelGenerator generator, Block bookshelf, String variant, Block planks) {

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "excessive_building:block/weeping_candle"
+    },
+    "lit=true": {
+      "model": "excessive_building:block/weeping_candle_lit"
+    }
+  }
+}

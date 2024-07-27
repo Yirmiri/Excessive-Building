@@ -1,19 +1,15 @@
 package net.yirmiri.excessive_building.util;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.MapColor;
+import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.AncientLeavesBlock;
-import net.yirmiri.excessive_building.registry.EBBlocks;
+import net.yirmiri.excessive_building.block.ParticleCandleBlock;
 import net.yirmiri.excessive_building.registry.EBSounds;
 import net.yirmiri.excessive_building.registry.EBStatusEffects;
 
@@ -118,6 +114,7 @@ public class EBProperties {
         public static final Block.Settings BRIMSTONE_LAMP = FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).mapColor(MapColor.RED);
 
         //MISC
+        public static final Block.Settings PARTICLE_CANDLE = FabricBlockSettings.copyOf(Blocks.CANDLE).luminance(ParticleCandleBlock.STATE_TO_LUMINANCE);
         public static final Block.Settings MUD_BRICKS = FabricBlockSettings.copyOf(Blocks.MUD_BRICKS);
         public static final Block.Settings IRON_GRATE = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never);
         public static final Block.Settings GOLD_GRATE = FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never);

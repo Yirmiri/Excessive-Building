@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:block/template_particle_candle",
+  "textures": {
+    "particle": "excessive_building:block/weeping_candle_lit",
+    "texture": "excessive_building:block/weeping_candle_lit"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "minecraft:warped_fungus"
+    },
+    "#": {
+      "item": "minecraft:honeycomb"
+    },
+    "@": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "@",
+    "!",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:twisting_candle"
+  }
+}

@@ -1,10 +1,11 @@
-// 1.21	2024-07-26T19:32:23.8750569	Excessive Building/Tags for minecraft:block
+// 1.21	2024-07-27T13:13:41.6693036	Excessive Building/Tags for minecraft:block
 9973d3c2d4c8d54df2f5e0f5fd6efa300f3971fd data\minecraft\tags\block\logs_that_burn.json
 1419a0b00f417fbc1bbff44f7a3bfbb4252413fa data\minecraft\tags\block\wooden_stairs.json
 ecc53e060230f69caffdb4ae26bd668560c24bb3 data\excessive_building\tags\block\ancient_logs.json
 14b95a3cb68c8ea58148e1d9e244c01c22ca2bb7 data\excessive_building\tags\block\decoratives.json
 8eed79d7f0a363657f1d30da123fbc6405c34003 data\minecraft\tags\block\climbable.json
 4ba5a0fc3161fe290f44f101deb39e765bb25287 data\minecraft\tags\block\enchantment_power_provider.json
+56f333f3f6c6b6faa76e74cfd16f9afa91366b34 data\minecraft\tags\block\candles.json
 d317db704525634aea35ced79306dc006e2fc76e data\minecraft\tags\block\soul_fire_base_blocks.json
 e05777f505cb8a218e6a221fa779322c5014b7db data\minecraft\tags\block\mineable\hoe.json
 1de28e4537a6300880f3f4ceb5d83fb067f98b0b data\minecraft\tags\block\guarded_by_piglins.json

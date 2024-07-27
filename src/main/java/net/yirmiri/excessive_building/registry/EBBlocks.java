@@ -5,6 +5,7 @@ import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.DyeColor;
@@ -651,6 +652,9 @@ public class EBBlocks {
     public static final Block POTTED_WHITE_ROSE = register("potted_white_rose", Blocks.createFlowerPotBlock(EBBlocks.WHITE_ROSE), false);
 
     //MISC
+    public static final Block WEEPING_CANDLE = registerAP("weeping_candle", new ParticleCandleBlock(ParticleTypes.CRIMSON_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
+    public static final Block TWISTING_CANDLE = registerAP("twisting_candle", new ParticleCandleBlock(ParticleTypes.WARPED_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
+
     public static final Block IRON_GRATE = registerAP("iron_grate", new GrateBlock(EBProperties.BlockP.IRON_GRATE), true);
     public static final Block GOLD_GRATE = registerAP("gold_grate", new GrateBlock(EBProperties.BlockP.GOLD_GRATE), true);
     

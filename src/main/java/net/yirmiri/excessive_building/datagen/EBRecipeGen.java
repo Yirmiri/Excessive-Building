@@ -2894,6 +2894,22 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 Ingredient.ofItems(EBBlocks.GLOOM_MOSAIC), Ingredient.ofItems(Items.BOOK))
                 .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_DECORATIVE_SHELF)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.WEEPING_CANDLE, 1)
+                .input('#', Items.HONEYCOMB).input('@', Items.STRING).input('!', Items.CRIMSON_FUNGUS)
+                .pattern("@")
+                .pattern("!")
+                .pattern("#")
+                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEEPING_CANDLE)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.TWISTING_CANDLE, 1)
+                .input('#', Items.HONEYCOMB).input('@', Items.STRING).input('!', Items.WARPED_FUNGUS)
+                .pattern("@")
+                .pattern("!")
+                .pattern("#")
+                .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TWISTING_CANDLE)));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {
