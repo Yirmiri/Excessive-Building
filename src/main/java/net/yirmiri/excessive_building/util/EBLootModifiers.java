@@ -30,6 +30,14 @@ public class EBLootModifiers {
         });
 
         LootTableEvents.MODIFY.register((resource, builder, id) -> {
+            if (TRAIL_RUINS_RARE.equals(id) && EBConfig.ENABLE_GLOOM_SEEDS.get()) { LootPool.Builder poolBuilder = LootPool.builder().conditionally
+                            (RandomChanceLootCondition.builder(EBConfig.GLOOM_SEEDS_CHANCE.get())).with(ItemEntry.builder(EBBlocks.GLOOM_SEEDS))
+                    .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 1)).build());
+                builder.pool(poolBuilder.build());
+            }
+        });
+
+        LootTableEvents.MODIFY.register((resource, builder, id) -> {
             if (DESERT_PYRAMID.equals(id) && EBConfig.ENABLE_POTTERY_SHERDS.get()) { LootPool.Builder poolBuilder = LootPool.builder().conditionally
                             (RandomChanceLootCondition.builder(0.125F)).with(ItemEntry.builder(EBItems.IS_THAT_POTTERY_SHERD))
                     .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 1)).build());
@@ -224,14 +232,6 @@ public class EBLootModifiers {
         LootTableEvents.MODIFY.register((resource, builder, id) -> {
             if (TRAIL_RUINS_RARE.equals(id)) { LootPool.Builder poolBuilder = LootPool.builder().conditionally
                             (RandomChanceLootCondition.builder(0.083F)).with(ItemEntry.builder(EBItems.POTTERY_POTTERY_SHERD))
-                    .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 1)).build());
-                builder.pool(poolBuilder.build());
-            }
-        });
-
-        LootTableEvents.MODIFY.register((resource, builder, id) -> {
-            if (TRAIL_RUINS_RARE.equals(id)) { LootPool.Builder poolBuilder = LootPool.builder().conditionally
-                            (RandomChanceLootCondition.builder(EBConfig.GLOOM_SEEDS_CHANCE.get())).with(ItemEntry.builder(EBBlocks.GLOOM_SEEDS))
                     .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1, 1)).build());
                 builder.pool(poolBuilder.build());
             }

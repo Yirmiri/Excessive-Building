@@ -8,7 +8,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.yirmiri.excessive_building.EBConfig;
-import net.yirmiri.excessive_building.block.AncientLeavesBlock;
+import net.yirmiri.excessive_building.block.GlowingLeavesBlock;
 import net.yirmiri.excessive_building.block.ParticleCandleBlock;
 import net.yirmiri.excessive_building.registry.EBSounds;
 import net.yirmiri.excessive_building.registry.EBStatusEffects;
@@ -57,9 +57,11 @@ public class EBProperties {
         public static final Block.Settings TUFF_TILES = FabricBlockSettings.copyOf(Blocks.TUFF_BRICKS);
 
         //NATURE
-        public static final Block.Settings ANCIENT_LEAVES = FabricBlockSettings.of().luminance(state -> AncientLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
-        public static final Block.Settings ANCIENT_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).luminance(state -> 5);
+        public static final Block.Settings GLOWING_LEAVES = FabricBlockSettings.of().luminance(state -> GlowingLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
+        public static final Block.Settings GLOWING_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).luminance(state -> 5);
         public static final Block.Settings GLOOM_SEEDS = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).sounds(BlockSoundGroup.ROOTS);
+        public static final Block.Settings GLOOM_LEAVES = FabricBlockSettings.copyOf(Blocks.CHERRY_LEAVES);
+        public static final Block.Settings GLOOM_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING);
 
         //SEA GLASS
         public static final Block.Settings SEA_GLASS = FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque();

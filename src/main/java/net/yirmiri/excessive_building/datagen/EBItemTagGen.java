@@ -31,6 +31,22 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendSmallFlowers();
         appendPiglinLoved();
         appendSoils();
+        appendLeaves();
+        appendSnifferFood();
+    }
+
+    public void appendSnifferFood() {
+        getOrCreateTagBuilder(ItemTags.SNIFFER_FOOD)
+                .add(EBBlocks.GLOOM_SEEDS.asItem())
+                .add(EBItems.ANCIENT_FRUIT)
+        ;
+    }
+
+    public void appendLeaves() {
+        getOrCreateTagBuilder(ItemTags.LEAVES)
+                .add(EBBlocks.GLOOM_LEAVES.asItem())
+                .add(EBBlocks.ANCIENT_LEAVES.asItem())
+        ;
     }
 
     public void appendSoils() {
@@ -142,6 +158,7 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.SAPLINGS)
                 .add(EBBlocks.ANCIENT_SAPLING.asItem())
                 .add(EBBlocks.GLOOM_SEEDS.asItem())
+                .add(EBBlocks.GLOOM_SAPLING.asItem())
         ;
     }
 

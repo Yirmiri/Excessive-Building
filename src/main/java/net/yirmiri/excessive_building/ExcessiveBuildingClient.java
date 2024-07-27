@@ -59,6 +59,8 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.POTTED_WHITE_ROSE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.WEEPING_CANDLE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.TWISTING_CANDLE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_SAPLING, RenderLayer.getCutout());
 
         //TRANSLUCENT
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.IRON_GRATE, RenderLayer.getTranslucent());
@@ -78,5 +80,6 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
 
         //PARTICLE
         ParticleFactoryRegistry.getInstance().register(EBParticles.ANCIENT_PARTICLE, FallingLeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(EBParticles.GLOOM_PARTICLE, FallingLeafParticle.Factory::new);
     }
 }

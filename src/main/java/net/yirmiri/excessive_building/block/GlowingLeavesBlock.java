@@ -7,6 +7,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleUtil;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.sound.SoundCategory;
@@ -23,17 +24,16 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.yirmiri.excessive_building.EBConfig;
-import net.yirmiri.excessive_building.registry.EBParticles;
 import net.yirmiri.excessive_building.util.EBTags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class AncientLeavesBlock extends LeavesBlock {
+public class GlowingLeavesBlock extends FloweringLeavesBlock {
     public static final BooleanProperty GLOWING = BooleanProperty.of("glowing");
 
-    public AncientLeavesBlock(Settings settings) {
-        super(settings);
+    public GlowingLeavesBlock(ParticleEffect type, Settings settings) {
+        super(type, settings);
         setDefaultState(stateManager.getDefaultState().with(GLOWING, true));
     }
 
@@ -75,17 +75,5 @@ public class AncientLeavesBlock extends LeavesBlock {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(GLOWING, DISTANCE, PERSISTENT, WATERLOGGED);
-    }
-
-    @Override
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        super.randomDisplayTick(state, world, pos, random);
-        if (random.nextInt(10) == 0) {
-            BlockPos blockPos = pos.down();
-            BlockState blockState = world.getBlockState(blockPos);
-            if (!isFaceFullSquare(blockState.getCollisionShape(world, blockPos), Direction.UP)) {
-                ParticleUtil.spawnParticle(world, pos, random, EBParticles.ANCIENT_PARTICLE);
-            }
-        }
     }
 }

@@ -13,7 +13,6 @@ public class ExcessiveBuildingDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-
 		pack.addProvider(EBEnUsLangGen::new);
 		pack.addProvider(EBLootTableGen::new);
 		pack.addProvider(EBRecipeGen::new);
@@ -22,6 +21,7 @@ public class ExcessiveBuildingDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(EBItemTagGen::new);
 		pack.addProvider(EBPaintingTagGen::new);
 		pack.addProvider(EBWorldGenGen::new);
+		pack.addProvider(EBAdvancementGen::new);
 	}
 
 	@Override

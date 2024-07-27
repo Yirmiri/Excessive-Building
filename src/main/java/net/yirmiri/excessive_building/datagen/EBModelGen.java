@@ -679,6 +679,9 @@ public class EBModelGen extends FabricModelProvider {
         tuffTiles.slab(EBBlocks.TUFF_TILE_SLAB);
         tuffTiles.wall(EBBlocks.TUFF_TILE_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.TUFF_TILE_VERTICAL_STAIRS, EBBlocks.TUFF_TILES);
+
+        generator.registerSimpleCubeAll(EBBlocks.GLOOM_LEAVES);
+        generator.registerFlowerPotPlant(EBBlocks.GLOOM_SAPLING, EBBlocks.POTTED_GLOOM_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

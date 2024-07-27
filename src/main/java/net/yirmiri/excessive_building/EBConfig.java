@@ -19,6 +19,7 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_PARTICLE_CANDLES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_ANCIENT_SAPLINGS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_GLOOM_SEEDS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_TOOLTIPS;
 
     //BALANCE
@@ -90,6 +91,10 @@ public class EBConfig {
         ENABLE_ANCIENT_SAPLINGS = BUILDER
                 .comment("Should ancient saplings be enabled (and to extension their content)? (default: true)")
                 .define("enableAncientSaplings", true);
+
+        ENABLE_GLOOM_SEEDS = BUILDER
+                .comment("Should gloom seeds be enabled (and to extension their content)? (default: true)")
+                .define("enableGloomSeeds", true);
 
         ENABLE_CUSTOM_TOOLTIPS = BUILDER
                 .comment("Should Excessive Building items with special interactions have custom tooltips? (default: true)")

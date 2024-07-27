@@ -1,0 +1,33 @@
+{
+  "parent": "excessive_building:obtain_ancient_sapling",
+  "criteria": {
+    "gloom_seeds": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:gloom_seeds",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.excessive_building.place_gloom_seeds.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "excessive_building:gloom_seeds"
+    },
+    "title": {
+      "translate": "advancement.excessive_building.place_gloom_seeds"
+    }
+  },
+  "requirements": [
+    [
+      "gloom_seeds"
+    ]
+  ]
+}

@@ -509,6 +509,8 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.TUFF_TILE_VERTICAL_STAIRS, "Tuff Tile Vertical Stairs");
         build.add(EBBlocks.TUFF_TILE_SLAB, "Tuff Tile Slab");
         build.add(EBBlocks.TUFF_TILE_WALL, "Tuff Tile Wall");
+        build.add(EBBlocks.GLOOM_LEAVES, "Gloom Leaves");
+        build.add(EBBlocks.GLOOM_SAPLING, "Gloom Sapling");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
@@ -541,6 +543,19 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBItems.IS_THAT_POTTERY_SHERD, "Is That Pottery Sherd");
         build.add(EBItems.KOKOS_BUG_POTTERY_SHERD, "Kokos Bug Pottery Sherd");
         build.add(EBItems.THIEF_POTTERY_SHERD, "Thief Pottery Sherd");
+
+        //ADVANCEMENTS
+        build.add("advancement.excessive_building.excessive_building", "Excessive Building");
+        build.add("advancement.excessive_building.excessive_building.description", "The world is your canvas so pick up your blocks and paint the world with creation!");
+
+        build.add("advancement.excessive_building.obtain_ancient_sapling", "No Sound No Memory");
+        build.add("advancement.excessive_building.obtain_ancient_sapling.description", "Have a Sniffer sniff out an Ancient Sapling an obtain it");
+
+        build.add("advancement.excessive_building.eat_ancient_fruit", "Hey What's The Expiration Date?");
+        build.add("advancement.excessive_building.eat_ancient_fruit.description", "Feed on an ancient fruit and discover its magical capabilities");
+
+        build.add("advancement.excessive_building.place_gloom_seeds", "Ancient Mystery");
+        build.add("advancement.excessive_building.place_gloom_seeds.description", "Plant the seeds of a once prospering tree");
 
         //TOOLTIPS
         build.add("tooltip.block.interact", "Upon Interaction:");

@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "breh": {
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "excessive_building:textures/block/cobblestone_bricks.png",
+    "description": {
+      "translate": "advancement.excessive_building.excessive_building.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "excessive_building:logo_block"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancement.excessive_building.excessive_building"
+    }
+  },
+  "requirements": [
+    [
+      "breh"
+    ]
+  ]
+}

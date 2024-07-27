@@ -7,10 +7,28 @@ Literally just a secret .txt file of every single update's changelog
 Version Release v3.1.1 Fabric-1.21
 Small Update
 
-  Additions
-•   Added particle candles, currently there are only two that being Weeping & Twisting candles.
-These candles produce particles in an area around them similar to spore blossoms.
-•   Added tuff tiles blockset
+  Particle Candles
+•   These candles produce particles in an area around them similar to Spore Blossoms.
+•   Currently there are two variants that being Weeping & Twisting Candles.
+
+  Advancements
+•   Excessive Building, a root advancement for all Excessive Building advancements.
+•   No Sound No Memory, obtain an Ancient Sapling.
+•   Hey What's The Expiration Date?, consume an Ancient Fruit.
+•   Ancient Mystery, plant Gloom Seeds.
+
+  Misc Additions
+•   Added Gloom Leaves & Gloom Saplings
+•   Added Tuff Tiles blockset
+•   Added config to disable Gloom Seeds
+
+  Changes
+•   Improved Gloom Tree generation
+•   Ancient Fruit & Gloom Seeds can now be fed to Sniffers
+
+  Fixes
+•   Fixed Ancient Saplings being in the "leaves" block tag rather than Ancient Leaves
+•   Added Excessive's leaves blocks to the "leaves" item tag
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

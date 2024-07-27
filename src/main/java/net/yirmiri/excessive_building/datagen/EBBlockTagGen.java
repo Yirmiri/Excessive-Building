@@ -471,7 +471,8 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     public void appendLeaves() {
         getOrCreateTagBuilder(BlockTags.LEAVES)
-                .add(EBBlocks.ANCIENT_SAPLING)
+                .add(EBBlocks.ANCIENT_LEAVES)
+                .add(EBBlocks.GLOOM_LEAVES)
         ;
     }
 
@@ -497,6 +498,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
                 .add(EBBlocks.ANCIENT_SAPLING)
                 .add(EBBlocks.GLOOM_SEEDS)
+                .add(EBBlocks.GLOOM_SAPLING)
         ;
     }
 
@@ -506,6 +508,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.POTTED_ROSE)
                     .add(EBBlocks.POTTED_CYAN_ROSE)
                     .add(EBBlocks.POTTED_WHITE_ROSE)
+                    .add(EBBlocks.POTTED_GLOOM_SAPLING)
             ;
         }
 
@@ -826,6 +829,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         public void appendHoeMineable() {
             getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                     .add(EBBlocks.ANCIENT_LEAVES)
+                    .add(EBBlocks.GLOOM_LEAVES)
             ;
         }
 

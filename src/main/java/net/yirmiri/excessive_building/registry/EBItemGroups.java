@@ -291,8 +291,10 @@ public class EBItemGroups {
                 entries.add(EBItems.GLOOM_HANGING_SIGN);
 
                 entries.add(EBBlocks.ANCIENT_LEAVES);
+                entries.add(EBBlocks.GLOOM_LEAVES);
 
                 entries.add(EBBlocks.ANCIENT_SAPLING);
+                entries.add(EBBlocks.GLOOM_SAPLING);
                 entries.add(EBBlocks.GLOOM_SEEDS);
 
                 entries.add(EBItems.ANCIENT_FRUIT);
