@@ -510,6 +510,11 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.GLOOM_DECORATIVE_SHELF);
         addDrop(EBBlocks.WEEPING_CANDLE);
         addDrop(EBBlocks.TWISTING_CANDLE);
+        addDrop(EBBlocks.TUFF_TILES);
+        addDrop(EBBlocks.TUFF_TILE_STAIRS);
+        addDrop(EBBlocks.TUFF_TILE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.TUFF_TILE_SLAB);
+        addDrop(EBBlocks.TUFF_TILE_WALL);
     }
 
     private void addDyedKnittedWoolDrops() {

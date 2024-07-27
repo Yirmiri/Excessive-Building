@@ -36,6 +36,8 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
     public void appendSoils() {
         getOrCreateTagBuilder(EBTags.Items.SOILS)
                 .add(Items.DIRT)
+                .add(Items.ROOTED_DIRT)
+                .add(Items.COARSE_DIRT)
         ;
     }
 

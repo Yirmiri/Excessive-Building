@@ -673,6 +673,12 @@ public class EBModelGen extends FabricModelProvider {
 
         EBModels.registerParticleCandle(generator, EBBlocks.WEEPING_CANDLE);
         EBModels.registerParticleCandle(generator, EBBlocks.TWISTING_CANDLE);
+
+        BlockStateModelGenerator.BlockTexturePool tuffTiles = generator.registerCubeAllModelTexturePool(EBBlocks.TUFF_TILES);
+        tuffTiles.stairs(EBBlocks.TUFF_TILE_STAIRS);
+        tuffTiles.slab(EBBlocks.TUFF_TILE_SLAB);
+        tuffTiles.wall(EBBlocks.TUFF_TILE_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.TUFF_TILE_VERTICAL_STAIRS, EBBlocks.TUFF_TILES);
     }
 
     @Override

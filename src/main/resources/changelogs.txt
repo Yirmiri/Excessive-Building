@@ -4,6 +4,16 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.1.1 Fabric-1.21
+Small Update
+
+  Additions
+•   Added particle candles, currently there are only two that being Weeping & Twisting candles.
+These candles produce particles in an area around them similar to spore blossoms.
+•   Added tuff tiles blockset
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.1.0 Fabric-1.21
 Major Update
 

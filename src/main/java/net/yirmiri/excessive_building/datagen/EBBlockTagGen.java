@@ -545,11 +545,17 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.GRANITE_BRICK_WALL)
                     .add(EBBlocks.SMOOTH_BRICK_WALL)
                     .add(EBBlocks.BRIMSTONE_WALL)
+                    .add(EBBlocks.TUFF_TILE_WALL)
             ;
         }
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.TUFF_TILES)
+                    .add(EBBlocks.TUFF_TILE_STAIRS)
+                    .add(EBBlocks.TUFF_TILE_SLAB)
+                    .add(EBBlocks.TUFF_TILE_VERTICAL_STAIRS)
+                    .add(EBBlocks.TUFF_TILE_WALL)
                     .add(EBBlocks.CRACKED_SMOOTH_STONE_BRICKS)
                     .add(EBBlocks.CRACKED_SMOOTH_STONE_TILES)
                     .add(EBBlocks.SMOOTH_STONE_BRICKS)

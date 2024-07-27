@@ -91,6 +91,12 @@ public class EBBlocks {
 
     public static final Block CRACKED_MUD_BRICKS = register("cracked_mud_bricks", new Block(EBProperties.BlockP.MUD_BRICKS), true);
 
+    public static final Block TUFF_TILES = register("tuff_tiles", new Block(EBProperties.BlockP.TUFF_TILES), true);
+    public static final Block TUFF_TILE_STAIRS = register("tuff_tile_stairs", new StairsBlock(TUFF_TILES.getDefaultState(), EBProperties.BlockP.TUFF_TILES), true);
+    public static final Block TUFF_TILE_SLAB = register("tuff_tile_slab", new SlabBlock(EBProperties.BlockP.TUFF_TILES), true);
+    public static final Block TUFF_TILE_VERTICAL_STAIRS = registerVStairs("tuff_tile_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.TUFF_TILES), true);
+    public static final Block TUFF_TILE_WALL = register("tuff_tile_wall", new WallBlock(EBProperties.BlockP.TUFF_TILES), true);
+
     //MOSAIC WOOD
     public static final Block OAK_MOSAIC = register("oak_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block OAK_MOSAIC_STAIRS = register("oak_mosaic_stairs", new StairsBlock(OAK_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
@@ -668,7 +674,7 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO 3.1.1: CALCITE BLOCKSET, PARTICLE CANDLES, MOSS PASTE, PEDESTALS, IMPROVED GLOOM TREE GENERATION, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES)
+    //TODO 3.1.1: CALCITE BLOCKSET, MOSS PASTE, PEDESTALS, IMPROVED GLOOM TREE GENERATION, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES)
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

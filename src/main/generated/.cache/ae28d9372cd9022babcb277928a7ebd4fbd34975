@@ -1,4 +1,4 @@
-// 1.21	2024-07-27T13:13:41.6693036	Excessive Building/Tags for minecraft:block
+// 1.21	2024-07-27T13:38:56.7173753	Excessive Building/Tags for minecraft:block
 9973d3c2d4c8d54df2f5e0f5fd6efa300f3971fd data\minecraft\tags\block\logs_that_burn.json
 1419a0b00f417fbc1bbff44f7a3bfbb4252413fa data\minecraft\tags\block\wooden_stairs.json
 ecc53e060230f69caffdb4ae26bd668560c24bb3 data\excessive_building\tags\block\ancient_logs.json
@@ -12,7 +12,7 @@ e05777f505cb8a218e6a221fa779322c5014b7db data\minecraft\tags\block\mineable\hoe.
 7bcac18564d69e2a786f88b3a8042ed7d312e4b2 data\excessive_building\tags\block\gloom_logs.json
 2bed8225eaf38bcbfc8ee2a7f98c6a40f3641ee1 data\minecraft\tags\block\wool.json
 af67ffc85b2896f8d2a80defb48b7466a43aee39 data\minecraft\tags\block\leaves.json
-5218b4a62f48e00f7ece786237d91e381a71914e data\minecraft\tags\block\walls.json
+7ca985bf17b96799d4c6b287c82806ca4621c6e4 data\minecraft\tags\block\walls.json
 9d9c917140b43e9beef925dba6a969817ee2d057 data\minecraft\tags\block\needs_stone_tool.json
 866d3f4a0c121ece9a0a91088a26e400911bd6b7 data\minecraft\tags\block\ceiling_hanging_signs.json
 d48a33ad6f25342ce148e9ae1ce9d6609c846dad data\minecraft\tags\block\small_flowers.json
@@ -29,8 +29,8 @@ c2fc2096a180907a255fdff8110dd1a8b38634bd data\minecraft\tags\block\mineable\axe.
 0fff8aee72a8ddb53110fd58e5b8b23fdf6aa3cf data\minecraft\tags\block\wooden_fences.json
 6086237a037f627ddd47ab3efeb1796595ad4827 data\minecraft\tags\block\wooden_trapdoors.json
 0fff8aee72a8ddb53110fd58e5b8b23fdf6aa3cf data\minecraft\tags\block\fences.json
-ed1652b70fb779876686e8b72b3b42d2f170a5e2 data\minecraft\tags\block\mineable\pickaxe.json
 d317db704525634aea35ced79306dc006e2fc76e data\minecraft\tags\block\soul_speed_blocks.json
+e53804cee2b95564132f07f8bf19c16bd610c727 data\minecraft\tags\block\mineable\pickaxe.json
 1fe6a4ab118fe40333e2c7473ec910c1ab776576 data\minecraft\tags\block\wooden_buttons.json
 fbbc1aba952163427c11fa0c2e3af5d3ac4a36d4 data\minecraft\tags\block\needs_iron_tool.json
 4f3de040689e1c94cb012af78cc9328ab95eeb50 data\minecraft\tags\block\wall_signs.json

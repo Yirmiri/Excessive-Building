@@ -54,6 +54,7 @@ public class EBProperties {
         public static final Block.Settings COBBLED_DEEPSLATE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).sounds(EBSounds.COBBLED_BRICKS);
         public static final Block.Settings BLACKSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.BLACKSTONE).sounds(EBSounds.COBBLED_BRICKS);
         public static final Block.Settings SMOOTH_STONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_STONE);
+        public static final Block.Settings TUFF_TILES = FabricBlockSettings.copyOf(Blocks.TUFF_BRICKS);
 
         //NATURE
         public static final Block.Settings ANCIENT_LEAVES = FabricBlockSettings.of().luminance(state -> AncientLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);

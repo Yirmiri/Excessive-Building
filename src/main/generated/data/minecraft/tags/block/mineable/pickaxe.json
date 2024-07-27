@@ -1,5 +1,10 @@
 {
   "values": [
+    "excessive_building:tuff_tiles",
+    "excessive_building:tuff_tile_stairs",
+    "excessive_building:tuff_tile_slab",
+    "excessive_building:tuff_tile_vertical_stairs",
+    "excessive_building:tuff_tile_wall",
     "excessive_building:cracked_smooth_stone_bricks",
     "excessive_building:cracked_smooth_stone_tiles",
     "excessive_building:smooth_stone_bricks",

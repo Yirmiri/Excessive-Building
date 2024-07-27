@@ -2910,6 +2910,37 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("#")
                 .criterion(hasItem(Items.HONEYCOMB), conditionsFromItem(Items.HONEYCOMB))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TWISTING_CANDLE)));
+
+        createTwoByTwoRecipe(EBBlocks.TUFF_TILES, 4,
+                Ingredient.ofItems(Blocks.TUFF_BRICKS))
+                .criterion(hasItem(Blocks.TUFF_BRICKS), conditionsFromItem(Blocks.TUFF_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TUFF_TILES)));
+
+        createStairsRecipe(EBBlocks.TUFF_TILE_STAIRS,
+                Ingredient.ofItems(EBBlocks.TUFF_TILES))
+                .criterion(hasItem(EBBlocks.TUFF_TILES), conditionsFromItem(EBBlocks.TUFF_TILES))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TUFF_TILE_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_TILE_SLAB,
+                Ingredient.ofItems(EBBlocks.TUFF_TILES))
+                .criterion(hasItem(EBBlocks.TUFF_TILES), conditionsFromItem(EBBlocks.TUFF_TILES))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TUFF_TILE_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.TUFF_TILE_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.TUFF_TILES))
+                .criterion(hasItem(EBBlocks.TUFF_TILES), conditionsFromItem(EBBlocks.TUFF_TILES))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TUFF_TILE_VERTICAL_STAIRS)));
+
+        createPaneRecipe(EBBlocks.TUFF_TILE_WALL, 6,
+                Ingredient.ofItems(EBBlocks.TUFF_TILES))
+                .criterion(hasItem(EBBlocks.TUFF_TILES), conditionsFromItem(EBBlocks.TUFF_TILES))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TUFF_TILE_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_TILES, Blocks.TUFF_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_TILE_STAIRS, EBBlocks.TUFF_TILES, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_TILE_SLAB, EBBlocks.TUFF_TILES, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_TILE_VERTICAL_STAIRS, EBBlocks.TUFF_TILES, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_TILE_WALL, EBBlocks.TUFF_TILES, 1);
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {
