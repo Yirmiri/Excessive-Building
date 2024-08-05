@@ -546,7 +546,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
 
         //ADVANCEMENTS
         build.add("advancement.excessive_building.excessive_building", "Excessive Building");
-        build.add("advancement.excessive_building.excessive_building.description", "The world is your canvas so pick up your blocks and paint the world with creation!");
+        build.add("advancement.excessive_building.excessive_building.description", "The world is your canvas so pick up some blocks and paint the world with creations!");
 
         build.add("advancement.excessive_building.obtain_ancient_sapling", "No Sound No Memory");
         build.add("advancement.excessive_building.obtain_ancient_sapling.description", "Have a Sniffer sniff out an Ancient Sapling an obtain it");

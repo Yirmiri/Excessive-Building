@@ -2,6 +2,7 @@ package net.yirmiri.excessive_building.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -48,7 +49,7 @@ public class DecorativeShelfBlock extends Block {
 
     @Override @NotNull
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (!world.isClient) {
+        if (!world.isClient && !player.hasStackEquipped(EquipmentSlot.MAINHAND)) {
             world.setBlockState(pos, state.cycle(VARIANT));
             world.playSound(null, pos, SoundEvents.BLOCK_CHISELED_BOOKSHELF_PLACE, SoundCategory.BLOCKS, 1, 1);
         } else {
