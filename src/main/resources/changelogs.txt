@@ -27,8 +27,10 @@ Small Update
 •   Ancient Fruit & Gloom Seeds can now be fed to Sniffers
 
   Fixes
+•   Fixed the "Beacon of the Desert (Trimmed) painting appearing stretched in game"
 •   Fixed Ancient Saplings being in the "leaves" block tag rather than Ancient Leaves
 •   Added Excessive's leaves blocks to the "leaves" item tag
+•   Fixed contributor capes
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
