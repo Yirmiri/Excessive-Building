@@ -12,6 +12,6 @@ public class ResourceBrickVerticalStairsBlockItem extends VerticalStairsBlockIte
 
     @Override
     public boolean isEnabled(FeatureSet enable) {
-        return EBConfig.ENABLE_RESOURCE_BRICKS.get();
+        return EBConfig.ENABLE_RESOURCE_BRICKS.get() && EBConfig.ENABLE_VERTICAL_STAIRS.get();
     }
 }

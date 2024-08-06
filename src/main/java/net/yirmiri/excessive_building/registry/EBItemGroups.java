@@ -208,6 +208,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.SMOOTH_STONE_BRICK_STAIRS);
                 entries.add(EBBlocks.SMOOTH_STONE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.SMOOTH_STONE_BRICK_SLAB);
+                entries.add(EBBlocks.SMOOTH_STONE_PILLAR);
 
                 entries.add(EBBlocks.GRANITE_BRICKS);
                 entries.add(EBBlocks.CRACKED_GRANITE_BRICKS);
