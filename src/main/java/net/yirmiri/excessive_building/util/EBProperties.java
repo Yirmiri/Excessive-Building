@@ -55,6 +55,8 @@ public class EBProperties {
         public static final Block.Settings BLACKSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.BLACKSTONE).sounds(EBSounds.COBBLED_BRICKS);
         public static final Block.Settings SMOOTH_STONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_STONE);
         public static final Block.Settings TUFF_TILES = FabricBlockSettings.copyOf(Blocks.TUFF_BRICKS);
+        public static final Block.Settings ALMENTRA = FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.PACKED_MUD);
+        public static final Block.Settings ALMENTRA_BRICKS = FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.MUD_BRICKS);
 
         //NATURE
         public static final Block.Settings GLOWING_LEAVES = FabricBlockSettings.of().luminance(state -> GlowingLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
@@ -70,6 +72,7 @@ public class EBProperties {
         public static final Block.Settings ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.RED);
         public static final Block.Settings CYAN_ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.CYAN);
         public static final Block.Settings WHITE_ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.WHITE);
+        public static final Block.Settings MOSS_PASTE = FabricBlockSettings.copyOf(Blocks.GLOW_LICHEN).mapColor(MapColor.GREEN).sounds(BlockSoundGroup.AZALEA_LEAVES).lightLevel(0);
 
         //RESOURCES
         public static final Block.Settings GOLD = FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK);

@@ -1,0 +1,258 @@
+{
+  "parent": "excessive_building:excessive_building",
+  "criteria": {
+    "almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "black_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:black_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "blue_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:blue_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "brown_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:brown_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "cyan_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:cyan_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "gray_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:gray_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "green_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:green_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "light_blue_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:light_blue_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "light_gray_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:light_gray_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "lime_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:lime_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "magenta_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:magenta_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "orange_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:orange_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "pink_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:pink_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "purple_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:purple_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "red_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:red_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "white_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:white_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "yellow_almentra_statue": {
+      "conditions": {
+        "location": [
+          {
+            "block": "excessive_building:yellow_almentra_statue",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.excessive_building.place_all_almentra_statues.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "excessive_building:lime_almentra_statue"
+    },
+    "title": {
+      "translate": "advancement.excessive_building.place_all_almentra_statues"
+    }
+  },
+  "requirements": [
+    [
+      "white_almentra_statue"
+    ],
+    [
+      "light_gray_almentra_statue"
+    ],
+    [
+      "gray_almentra_statue"
+    ],
+    [
+      "black_almentra_statue"
+    ],
+    [
+      "brown_almentra_statue"
+    ],
+    [
+      "red_almentra_statue"
+    ],
+    [
+      "orange_almentra_statue"
+    ],
+    [
+      "yellow_almentra_statue"
+    ],
+    [
+      "lime_almentra_statue"
+    ],
+    [
+      "green_almentra_statue"
+    ],
+    [
+      "cyan_almentra_statue"
+    ],
+    [
+      "light_blue_almentra_statue"
+    ],
+    [
+      "blue_almentra_statue"
+    ],
+    [
+      "purple_almentra_statue"
+    ],
+    [
+      "magenta_almentra_statue"
+    ],
+    [
+      "pink_almentra_statue"
+    ],
+    [
+      "almentra_statue"
+    ]
+  ]
+}

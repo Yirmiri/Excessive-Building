@@ -15,7 +15,7 @@ public class AsphaltVerticalStairsBlock extends VerticalStairsBlock {
 
     @Override
     public boolean isEnabled(FeatureSet enable) {
-        return EBConfig.ENABLE_ASPHALT.get();
+        return EBConfig.ENABLE_ASPHALT.get() && EBConfig.ENABLE_VERTICAL_STAIRS.get();
     }
 
     @Override

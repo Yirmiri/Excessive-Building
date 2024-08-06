@@ -2,16 +2,16 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "excessive_building:lime_almentra_statue_stand",
-		"1": "excessive_building:lime_almentra_statue",
-		"particle": "excessive_building:lime_almentra_statue_stand"
+		"0": "excessive_building:block/lime_almentra_statue_stand",
+		"1": "excessive_building:block/lime_almentra_statue",
+		"particle": "excessive_building:block/lime_almentra_statue_stand"
 	},
 	"elements": [
 		{
 			"name": "base",
 			"from": [2, 0, 2],
 			"to": [14, 2, 14],
-			"rotation": {"angle": 0, "axis": "y", "origin": [2, 0, 2]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
 			"faces": {
 				"north": {"uv": [6, 0, 12, 1], "texture": "#0"},
 				"east": {"uv": [6, 1, 12, 2], "texture": "#0"},
@@ -25,7 +25,7 @@
 			"name": "top",
 			"from": [6, 2, 6],
 			"to": [10, 6, 10],
-			"rotation": {"angle": 0, "axis": "y", "origin": [6, 2, 6]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
 			"faces": {
 				"north": {"uv": [6, 4, 8, 6], "texture": "#0"},
 				"east": {"uv": [6, 4, 8, 6], "texture": "#0"},
@@ -62,9 +62,9 @@
 			}
 		},
 		{
-			"from": [4, 3, 5],
-			"to": [7, 6, 8],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [4, 3, 5]},
+			"from": [8.5, 3, 4.75],
+			"to": [11.5, 6, 7.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8.5, 3, 4.75]},
 			"faces": {
 				"north": {"uv": [8, 10, 9.5, 11.5], "texture": "#1"},
 				"east": {"uv": [9.5, 10, 8, 11.5], "texture": "#1"},
@@ -75,9 +75,9 @@
 			}
 		},
 		{
-			"from": [9, 3, 3.75],
-			"to": [12, 6, 6.75],
-			"rotation": {"angle": -22.5, "axis": "y", "origin": [9, 3, 3.75]},
+			"from": [4.5, 3, 8.25],
+			"to": [7.5, 6, 11.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.5, 3, 11.25]},
 			"faces": {
 				"north": {"uv": [8, 10, 9.5, 11.5], "texture": "#1"},
 				"east": {"uv": [9.5, 10, 8, 11.5], "texture": "#1"},
@@ -88,9 +88,9 @@
 			}
 		},
 		{
-			"from": [4, 3, 9.25],
-			"to": [7, 6, 12.25],
-			"rotation": {"angle": -22.5, "axis": "y", "origin": [7, 3, 12.25]},
+			"from": [4.5, 3, 4.75],
+			"to": [7.5, 6, 7.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4.5, 3, 4.75]},
 			"faces": {
 				"north": {"uv": [8, 10, 9.5, 11.5], "texture": "#1"},
 				"east": {"uv": [9.5, 10, 8, 11.5], "texture": "#1"},
@@ -101,9 +101,9 @@
 			}
 		},
 		{
-			"from": [9, 3, 8],
-			"to": [12, 6, 11],
-			"rotation": {"angle": 22.5, "axis": "y", "origin": [12, 3, 11]},
+			"from": [8.5, 3, 8.25],
+			"to": [11.5, 6, 11.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11.5, 3, 11.25]},
 			"faces": {
 				"north": {"uv": [8, 10, 9.5, 11.5], "texture": "#1"},
 				"east": {"uv": [9.5, 10, 8, 11.5], "texture": "#1"},
@@ -155,11 +155,11 @@
 			"color": 0,
 			"children": [0, 1]
 		},
-		2,
-		3,
-		4,
-		5,
-		6,
-		7
+		{
+			"name": "statue",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [2, 3, 4, 5, 6, 7]
+		}
 	]
 }

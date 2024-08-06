@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/pink_almentra_brick_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/pink_almentra_bricks"
+    },
+    "type=top": {
+      "model": "excessive_building:block/pink_almentra_brick_slab_top"
+    }
+  }
+}

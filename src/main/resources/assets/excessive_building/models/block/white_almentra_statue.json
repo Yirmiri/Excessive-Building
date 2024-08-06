@@ -2,16 +2,16 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "excessive_building:white_almentra_statue_stand",
-		"1": "excessive_building:white_almentra_statue",
-		"particle": "excessive_building:white_almentra_statue_stand"
+		"0": "excessive_building:block/white_almentra_statue_stand",
+		"1": "excessive_building:block/white_almentra_statue",
+		"particle": "excessive_building:block/white_almentra_statue_stand"
 	},
 	"elements": [
 		{
 			"name": "base",
 			"from": [2, 0, 2],
 			"to": [14, 2, 14],
-			"rotation": {"angle": 0, "axis": "y", "origin": [2, 0, 2]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
 			"faces": {
 				"north": {"uv": [6, 0, 12, 1], "texture": "#0"},
 				"east": {"uv": [6, 1, 12, 2], "texture": "#0"},
@@ -25,7 +25,7 @@
 			"name": "top",
 			"from": [6, 2, 6],
 			"to": [10, 6, 10],
-			"rotation": {"angle": 0, "axis": "y", "origin": [6, 2, 6]},
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
 			"faces": {
 				"north": {"uv": [6, 4, 8, 6], "texture": "#0"},
 				"east": {"uv": [6, 4, 8, 6], "texture": "#0"},
@@ -103,7 +103,11 @@
 			"color": 0,
 			"children": [0, 1]
 		},
-		2,
-		3
+		{
+			"name": "heart",
+			"origin": [8, 3, 5],
+			"color": 0,
+			"children": [2, 3]
+		}
 	]
 }

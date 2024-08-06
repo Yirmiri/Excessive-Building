@@ -4,8 +4,14 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release v3.1.1 Fabric-1.21
+Version Release v3.2.0 Fabric-1.21
 Small Update
+
+  Almentra
+•   Generates high up in mountain biomes
+•   Can be dyed any of the 16 colors (has a base variant)
+•   Can be turned into polished or brick forms (which also have dyed variants)
+•   Can be turned into a statue at a stonecutter, each statue has a unique model and can be placed in cardinal and diagonal directions
 
   Particle Candles
 •   These candles produce particles in an area around them similar to Spore Blossoms.
@@ -18,11 +24,16 @@ Small Update
 •   Ancient Mystery, plant Gloom Seeds.
 
   Misc Additions
+•   Added Moss paste, works similar to glow lichen
 •   Added Gloom Leaves & Gloom Saplings
 •   Added Tuff Tiles blockset
 •   Added config to disable Gloom Seeds
+•   Base terracotta tiles can now be dyed to create dyed variants
+•   Any knitted wools can now be dyed to create dyed variants
+•   Added ru_ru translations (thanks to @bricker_man)
 
   Changes
+•   Changed the rotation of the held vertical stairs item model to better show how it will place
 •   Improved Gloom Tree generation
 •   Ancient Fruit & Gloom Seeds can now be fed to Sniffers
 
@@ -33,6 +44,7 @@ Small Update
 •   Fixed smooth stone pillars missing their texture
 •   Fixed Ancient Saplings being in the "leaves" block tag rather than Ancient Leaves
 •   Added Excessive's leaves blocks to the "leaves" item tag
+•   Fixed knitted wool being uncraftable
 •   Fixed contributor capes
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

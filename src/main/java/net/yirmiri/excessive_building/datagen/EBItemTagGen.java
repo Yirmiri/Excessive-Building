@@ -5,7 +5,9 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.util.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
 import net.yirmiri.excessive_building.util.EBTags;
@@ -33,6 +35,28 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendSoils();
         appendLeaves();
         appendSnifferFood();
+        appendKnittedWools();
+        appendKnittedCarpets();
+    }
+
+    public void appendKnittedWools() {
+        getOrCreateTagBuilder(EBTags.Items.KNITTED_WOOL)
+
+        ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(EBTags.Items.KNITTED_WOOL).add(EBBlocks.getDyedKnittedWools(colors.getId()).asItem());
+        }
+    }
+
+    public void appendKnittedCarpets() {
+        getOrCreateTagBuilder(EBTags.Items.KNITTED_CARPET)
+
+        ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(EBTags.Items.KNITTED_CARPET).add(EBBlocks.getDyedKnittedCarpets(colors.getId()).asItem());
+        }
     }
 
     public void appendSnifferFood() {

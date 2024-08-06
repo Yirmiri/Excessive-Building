@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.registry.EBBlocks;
@@ -64,5 +65,30 @@ public class EBAdvancementGen extends FabricAdvancementProvider {
                         true, true, false)).criterion("gloom_seeds",
                         ItemCriterion.Conditions.createPlacedBlock(EBBlocks.GLOOM_SEEDS))
                 .build(consumer, ExcessiveBuilding.MOD_ID + ":place_gloom_seeds");
+
+        AdvancementEntry PLACE_ALL_ALMENTRA_STATUES = Advancement.Builder.createUntelemetered().parent(EXCESSIVE_BUILDING)
+                .display(new AdvancementDisplay(new ItemStack(EBBlocks.getDyedAlmentraStatues(DyeColor.LIME.getId())),
+                        Text.translatable("advancement.excessive_building.place_all_almentra_statues"),
+                        Text.translatable("advancement.excessive_building.place_all_almentra_statues.description"),
+                        Optional.empty(), AdvancementFrame.GOAL,
+                        true, true, false))
+                .criterion("white_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.WHITE.getId())))
+                .criterion("light_gray_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.LIGHT_GRAY.getId())))
+                .criterion("gray_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.GRAY.getId())))
+                .criterion("black_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.BLACK.getId())))
+                .criterion("brown_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.BROWN.getId())))
+                .criterion("red_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.RED.getId())))
+                .criterion("orange_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.ORANGE.getId())))
+                .criterion("yellow_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.YELLOW.getId())))
+                .criterion("lime_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.LIME.getId())))
+                .criterion("green_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.GREEN.getId())))
+                .criterion("cyan_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.CYAN.getId())))
+                .criterion("light_blue_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.LIGHT_BLUE.getId())))
+                .criterion("blue_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.BLUE.getId())))
+                .criterion("purple_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.PURPLE.getId())))
+                .criterion("magenta_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.MAGENTA.getId())))
+                .criterion("pink_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.PINK.getId())))
+                .criterion("almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.ALMENTRA_STATUE))
+                .build(consumer, ExcessiveBuilding.MOD_ID + ":place_all_almentra_statues");
     }
 }

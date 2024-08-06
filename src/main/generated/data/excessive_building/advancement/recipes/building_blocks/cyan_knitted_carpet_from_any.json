@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cyan_knitted_carpet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:cyan_knitted_carpet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cyan_knitted_carpet_from_any"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cyan_knitted_carpet"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cyan_knitted_carpet_from_any"
+    ]
+  }
+}

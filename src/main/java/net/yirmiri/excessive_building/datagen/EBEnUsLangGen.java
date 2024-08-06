@@ -28,6 +28,23 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
             build.add(EBBlocks.getDyedTerracottaTileStairs(colors.getId()), dyeString + " Terracotta Tile Stairs");
             build.add(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()), dyeString + " Terracotta Tile Vertical Stairs");
             build.add(EBBlocks.getDyedTerracottaTileSlab(colors.getId()), dyeString + " Terracotta Tile Slab");
+
+            build.add(EBBlocks.getDyedAlmentraStatues(colors.getId()), dyeString + " Almentra Statue");
+
+            build.add(EBBlocks.getDyedAlmentra(colors.getId()), dyeString + " Almentra");
+            build.add(EBBlocks.getDyedAlmentraStairs(colors.getId()), dyeString + " Almentra Stairs");
+            build.add(EBBlocks.getDyedAlmentraVerticalStairs(colors.getId()), dyeString + " Almentra Vertical Stairs");
+            build.add(EBBlocks.getDyedAlmentraSlab(colors.getId()), dyeString + " Almentra Slab");
+
+            build.add(EBBlocks.getDyedPolishedAlmentra(colors.getId()), dyeString + " Polished Almentra");
+            build.add(EBBlocks.getDyedPolishedAlmentraStairs(colors.getId()), dyeString + " Polished Almentra Stairs");
+            build.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(colors.getId()), dyeString + " Polished Almentra Vertical Stairs");
+            build.add(EBBlocks.getDyedPolishedAlmentraSlab(colors.getId()), dyeString + " Polished Almentra Slab");
+
+            build.add(EBBlocks.getDyedAlmentraBricks(colors.getId()), dyeString + " Almentra Bricks");
+            build.add(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()), dyeString + " Almentra Brick Stairs");
+            build.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(colors.getId()), dyeString + " Almentra Brick Vertical Stairs");
+            build.add(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()), dyeString + " Almentra Brick Slab");
         }
 
         //BLOCKS
@@ -511,6 +528,20 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.TUFF_TILE_WALL, "Tuff Tile Wall");
         build.add(EBBlocks.GLOOM_LEAVES, "Gloom Leaves");
         build.add(EBBlocks.GLOOM_SAPLING, "Gloom Sapling");
+        build.add(EBBlocks.ALMENTRA_STATUE, "Almentra Statue");
+        build.add(EBBlocks.ALMENTRA, "Almentra");
+        build.add(EBBlocks.ALMENTRA_STAIRS, "Almentra Stairs");
+        build.add(EBBlocks.ALMENTRA_VERTICAL_STAIRS, "Almentra Vertical Stairs");
+        build.add(EBBlocks.ALMENTRA_SLAB, "Almentra Slab");
+        build.add(EBBlocks.POLISHED_ALMENTRA, "Polished Almentra");
+        build.add(EBBlocks.POLISHED_ALMENTRA_STAIRS, "Polished Almentra Stairs");
+        build.add(EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS, "Polished Almentra Vertical Stairs");
+        build.add(EBBlocks.POLISHED_ALMENTRA_SLAB, "Polished Almentra Slab");
+        build.add(EBBlocks.ALMENTRA_BRICKS, "Almentra Bricks");
+        build.add(EBBlocks.ALMENTRA_BRICK_STAIRS, "Almentra Brick Stairs");
+        build.add(EBBlocks.ALMENTRA_BRICK_VERTICAL_STAIRS, "Almentra Brick Vertical Stairs");
+        build.add(EBBlocks.ALMENTRA_BRICK_SLAB, "Almentra Brick Slab");
+        build.add(EBBlocks.MOSS_PASTE, "Moss Paste");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
@@ -556,6 +587,9 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
 
         build.add("advancement.excessive_building.place_gloom_seeds", "Ancient Mystery");
         build.add("advancement.excessive_building.place_gloom_seeds.description", "Plant the seeds of a once prospering tree");
+
+        build.add("advancement.excessive_building.place_all_almentra_statues", "Double §kRorrRef §rRainbow");
+        build.add("advancement.excessive_building.place_all_almentra_statues.description", "Place all almentra statue variants");
 
         //TOOLTIPS
         build.add("tooltip.block.interact", "Upon Interaction:");

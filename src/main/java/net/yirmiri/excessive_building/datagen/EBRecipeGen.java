@@ -15,6 +15,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.registry.EBBlocks;
@@ -1237,10 +1238,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
             offerCarpetRecipe(exporter, EBBlocks.getDyedKnittedCarpets(colors.getId()), EBBlocks.getDyedKnittedWools(colors.getId()));
         }
 
-        for (DyeColor colors : DyeColor.values()) {
-            createDyeRecipe(EBBlocks.getDyedKnittedCarpets(colors.getId()), 1, colors);
-        }
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_MAGMA_BLOCK, 2)
                 .input('#', EBBlocks.SOUL_SANDSTONE).input('@', Items.MAGMA_CREAM)
                 .pattern("@#")
@@ -1811,10 +1808,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS, Blocks.QUARTZ_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.QUARTZ_BRICK_WALL, Blocks.QUARTZ_BRICKS, 1);
-
-        for (DyeColor colors : DyeColor.values()) {
-            createTerracottaDyingRecipe(EBBlocks.getDyedTerracottaTiles(colors.getId()), EBBlocks.TERRACOTTA_TILES, DyeItem.byColor(colors).getColor());
-        }
 
         for (DyeColor colors : DyeColor.values()) {
             offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedTerracottaTileStairs(colors.getId()), EBBlocks.getDyedTerracottaTiles(colors.getId()), 1);
@@ -2941,6 +2934,290 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_TILE_SLAB, EBBlocks.TUFF_TILES, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_TILE_VERTICAL_STAIRS, EBBlocks.TUFF_TILES, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_TILE_WALL, EBBlocks.TUFF_TILES, 1);
+
+        createStairsRecipe(EBBlocks.ALMENTRA_STAIRS,
+                Ingredient.ofItems(EBBlocks.ALMENTRA))
+                .criterion(hasItem(EBBlocks.ALMENTRA), conditionsFromItem(EBBlocks.ALMENTRA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ALMENTRA_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_SLAB,
+                Ingredient.ofItems(EBBlocks.ALMENTRA))
+                .criterion(hasItem(EBBlocks.ALMENTRA), conditionsFromItem(EBBlocks.ALMENTRA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ALMENTRA_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.ALMENTRA_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.ALMENTRA))
+                .criterion(hasItem(EBBlocks.ALMENTRA), conditionsFromItem(EBBlocks.ALMENTRA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ALMENTRA_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_STAIRS, EBBlocks.ALMENTRA, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_SLAB, EBBlocks.ALMENTRA, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_VERTICAL_STAIRS, EBBlocks.ALMENTRA, 1);
+
+        createFourForFourWendysMealRecipe(EBBlocks.POLISHED_ALMENTRA,
+                Ingredient.ofItems(EBBlocks.ALMENTRA))
+                .criterion(hasItem(EBBlocks.ALMENTRA), conditionsFromItem(EBBlocks.ALMENTRA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_ALMENTRA)));
+        
+        createStairsRecipe(EBBlocks.POLISHED_ALMENTRA_STAIRS,
+                Ingredient.ofItems(EBBlocks.POLISHED_ALMENTRA))
+                .criterion(hasItem(EBBlocks.POLISHED_ALMENTRA), conditionsFromItem(EBBlocks.POLISHED_ALMENTRA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_ALMENTRA_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ALMENTRA_SLAB,
+                Ingredient.ofItems(EBBlocks.POLISHED_ALMENTRA))
+                .criterion(hasItem(EBBlocks.POLISHED_ALMENTRA), conditionsFromItem(EBBlocks.POLISHED_ALMENTRA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_ALMENTRA_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.POLISHED_ALMENTRA))
+                .criterion(hasItem(EBBlocks.POLISHED_ALMENTRA), conditionsFromItem(EBBlocks.POLISHED_ALMENTRA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ALMENTRA, EBBlocks.ALMENTRA, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ALMENTRA_STAIRS, EBBlocks.POLISHED_ALMENTRA, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ALMENTRA_SLAB, EBBlocks.POLISHED_ALMENTRA, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS, EBBlocks.POLISHED_ALMENTRA, 1);
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedPolishedAlmentra(colors.getId()), EBBlocks.getDyedAlmentra(colors.getId()), 1);
+        }
+        
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedPolishedAlmentraStairs(colors.getId()), EBBlocks.getDyedPolishedAlmentra(colors.getId()), 1);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedPolishedAlmentraSlab(colors.getId()), EBBlocks.getDyedPolishedAlmentra(colors.getId()), 2);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedPolishedAlmentraVerticalStairs(colors.getId()), EBBlocks.getDyedPolishedAlmentra(colors.getId()), 1);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createFourForFourWendysMealRecipe(EBBlocks.getDyedPolishedAlmentra(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedAlmentra(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentra(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedPolishedAlmentra(colors.getId()))));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createStairsRecipe(EBBlocks.getDyedPolishedAlmentraStairs(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedPolishedAlmentra(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedPolishedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedPolishedAlmentra(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedPolishedAlmentraStairs(colors.getId()))));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedPolishedAlmentraSlab(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedPolishedAlmentra(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedPolishedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedPolishedAlmentra(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedPolishedAlmentraSlab(colors.getId()))));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createVerticalStairsRecipe(EBBlocks.getDyedPolishedAlmentraVerticalStairs(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedPolishedAlmentra(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedPolishedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedPolishedAlmentra(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedPolishedAlmentraVerticalStairs(colors.getId()))));
+        }
+
+        createFourForFourWendysMealRecipe(EBBlocks.ALMENTRA_BRICKS,
+                Ingredient.ofItems(EBBlocks.POLISHED_ALMENTRA))
+                .criterion(hasItem(EBBlocks.POLISHED_ALMENTRA), conditionsFromItem(EBBlocks.POLISHED_ALMENTRA))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ALMENTRA_BRICKS)));
+
+        createStairsRecipe(EBBlocks.ALMENTRA_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.ALMENTRA_BRICKS))
+                .criterion(hasItem(EBBlocks.ALMENTRA_BRICKS), conditionsFromItem(EBBlocks.ALMENTRA_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ALMENTRA_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.ALMENTRA_BRICKS))
+                .criterion(hasItem(EBBlocks.ALMENTRA_BRICKS), conditionsFromItem(EBBlocks.ALMENTRA_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ALMENTRA_BRICK_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.ALMENTRA_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.ALMENTRA_BRICKS))
+                .criterion(hasItem(EBBlocks.ALMENTRA_BRICKS), conditionsFromItem(EBBlocks.ALMENTRA_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ALMENTRA_BRICK_VERTICAL_STAIRS)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_BRICKS, EBBlocks.POLISHED_ALMENTRA, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_BRICK_STAIRS, EBBlocks.ALMENTRA_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_BRICK_SLAB, EBBlocks.ALMENTRA_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_BRICK_VERTICAL_STAIRS, EBBlocks.ALMENTRA_BRICKS, 1);
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraBricks(colors.getId()), EBBlocks.getDyedPolishedAlmentra(colors.getId()), 1);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraBrickStairs(colors.getId()), EBBlocks.getDyedAlmentraBricks(colors.getId()), 1);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraBrickSlab(colors.getId()), EBBlocks.getDyedAlmentraBricks(colors.getId()), 2);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraBrickVerticalStairs(colors.getId()), EBBlocks.getDyedAlmentraBricks(colors.getId()), 1);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createFourForFourWendysMealRecipe(EBBlocks.getDyedAlmentraBricks(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedPolishedAlmentra(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedPolishedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedPolishedAlmentra(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedAlmentraBricks(colors.getId()))));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createStairsRecipe(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedAlmentraBricks(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedAlmentraBricks(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentraBricks(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()))));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraBrickSlab(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedAlmentraBricks(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedAlmentraBricks(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentraBricks(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()))));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createVerticalStairsRecipe(EBBlocks.getDyedAlmentraBrickVerticalStairs(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedAlmentraBricks(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedAlmentraBricks(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentraBricks(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedAlmentraBrickVerticalStairs(colors.getId()))));
+        }
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_STATUE, EBBlocks.POLISHED_ALMENTRA, 1);
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraStatues(colors.getId()), EBBlocks.getDyedPolishedAlmentra(colors.getId()), 1);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createBlockEightDyingRecipe(EBBlocks.getDyedTerracottaTiles(colors.getId()), EBBlocks.TERRACOTTA_TILES, DyeItem.byColor(colors).getColor())
+            .criterion(hasItem(EBBlocks.getDyedTerracottaTiles(colors.getId())), conditionsFromItem(EBBlocks.getDyedTerracottaTiles(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaTiles(colors.getId())) + "_from_base"));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createBlockEightDyingRecipe(EBBlocks.getDyedAlmentra(colors.getId()), EBBlocks.ALMENTRA, DyeItem.byColor(colors).getColor())
+            .criterion(hasItem(EBBlocks.getDyedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentra(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedAlmentra(colors.getId())) + "_from_base"));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createBlockEightDyingRecipe(EBBlocks.getDyedPolishedAlmentra(colors.getId()), EBBlocks.POLISHED_ALMENTRA, DyeItem.byColor(colors).getColor())
+                    .criterion(hasItem(EBBlocks.getDyedPolishedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedPolishedAlmentra(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedPolishedAlmentra(colors.getId())) + "_from_base"));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createBlockEightDyingRecipe(EBBlocks.getDyedAlmentraBricks(colors.getId()), EBBlocks.ALMENTRA_BRICKS, DyeItem.byColor(colors).getColor())
+                    .criterion(hasItem(EBBlocks.getDyedAlmentraBricks(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentraBricks(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedAlmentraBricks(colors.getId())) + "_from_base"));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createBlockEightDyingTagRecipe(EBBlocks.getDyedKnittedWools(colors.getId()), EBTags.Items.KNITTED_WOOL, DyeItem.byColor(colors).getColor())
+                    .criterion(hasItem(EBBlocks.getDyedKnittedWools(colors.getId())), conditionsFromItem(EBBlocks.getDyedKnittedWools(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(colors.getId())) + "_from_any"));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createBlockEightDyingTagRecipe(EBBlocks.getDyedKnittedCarpets(colors.getId()), EBTags.Items.KNITTED_CARPET, DyeItem.byColor(colors).getColor())
+                    .criterion(hasItem(EBBlocks.getDyedKnittedCarpets(colors.getId())), conditionsFromItem(EBBlocks.getDyedKnittedCarpets(colors.getId())))
+                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedCarpets(colors.getId())) + "_from_any"));
+        }
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.WHITE.getId()),
+                Ingredient.ofItems(Items.WHITE_WOOL))
+                .criterion(hasItem(Items.WHITE_WOOL), conditionsFromItem(Items.WHITE_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.WHITE.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.BLACK.getId()),
+                Ingredient.ofItems(Items.BLACK_WOOL))
+                .criterion(hasItem(Items.BLACK_WOOL), conditionsFromItem(Items.BLACK_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.BLACK.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.PINK.getId()),
+                Ingredient.ofItems(Items.PINK_WOOL))
+                .criterion(hasItem(Items.PINK_WOOL), conditionsFromItem(Items.PINK_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.PINK.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.MAGENTA.getId()),
+                Ingredient.ofItems(Items.MAGENTA_WOOL))
+                .criterion(hasItem(Items.MAGENTA_WOOL), conditionsFromItem(Items.MAGENTA_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.MAGENTA.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.PURPLE.getId()),
+                Ingredient.ofItems(Items.PURPLE_WOOL))
+                .criterion(hasItem(Items.PURPLE_WOOL), conditionsFromItem(Items.PURPLE_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.PURPLE.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.BLUE.getId()),
+                Ingredient.ofItems(Items.BLUE_WOOL))
+                .criterion(hasItem(Items.BLUE_WOOL), conditionsFromItem(Items.BLUE_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.BLUE.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.LIGHT_BLUE.getId()),
+                Ingredient.ofItems(Items.LIGHT_BLUE_WOOL))
+                .criterion(hasItem(Items.LIGHT_BLUE_WOOL), conditionsFromItem(Items.LIGHT_BLUE_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.LIGHT_BLUE.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.CYAN.getId()),
+                Ingredient.ofItems(Items.CYAN_WOOL))
+                .criterion(hasItem(Items.CYAN_WOOL), conditionsFromItem(Items.CYAN_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.CYAN.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.GREEN.getId()),
+                Ingredient.ofItems(Items.GREEN_WOOL))
+                .criterion(hasItem(Items.GREEN_WOOL), conditionsFromItem(Items.GREEN_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.GREEN.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.LIME.getId()),
+                Ingredient.ofItems(Items.LIME_WOOL))
+                .criterion(hasItem(Items.LIME_WOOL), conditionsFromItem(Items.LIME_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.LIME.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.YELLOW.getId()),
+                Ingredient.ofItems(Items.YELLOW_WOOL))
+                .criterion(hasItem(Items.YELLOW_WOOL), conditionsFromItem(Items.YELLOW_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.YELLOW.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.ORANGE.getId()),
+                Ingredient.ofItems(Items.ORANGE_WOOL))
+                .criterion(hasItem(Items.ORANGE_WOOL), conditionsFromItem(Items.ORANGE_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.ORANGE.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.RED.getId()),
+                Ingredient.ofItems(Items.RED_WOOL))
+                .criterion(hasItem(Items.RED_WOOL), conditionsFromItem(Items.RED_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.RED.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.BROWN.getId()),
+                Ingredient.ofItems(Items.BROWN_WOOL))
+                .criterion(hasItem(Items.BROWN_WOOL), conditionsFromItem(Items.BROWN_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.BROWN.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.GRAY.getId()),
+                Ingredient.ofItems(Items.GRAY_WOOL))
+                .criterion(hasItem(Items.GRAY_WOOL), conditionsFromItem(Items.GRAY_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.GRAY.getId()))));
+
+        createFourForFourWendysMealRecipe(EBBlocks.getDyedKnittedWools(DyeColor.LIGHT_GRAY.getId()),
+                Ingredient.ofItems(Items.LIGHT_GRAY_WOOL))
+                .criterion(hasItem(Items.LIGHT_GRAY_WOOL), conditionsFromItem(Items.LIGHT_GRAY_WOOL))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedKnittedWools(DyeColor.LIGHT_GRAY.getId()))));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.MOSS_PASTE, 4)
+                .input(Blocks.MOSS_BLOCK)
+                .criterion(hasItem(Blocks.MOSS_BLOCK), conditionsFromItem(Blocks.MOSS_BLOCK))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.MOSS_PASTE))));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {
@@ -2984,7 +3261,15 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("###");
     }
 
-    public static CraftingRecipeJsonBuilder createTerracottaDyingRecipe(ItemConvertible output, Block input, DyeColor color) {
+    public static CraftingRecipeJsonBuilder createBlockEightDyingTagRecipe(ItemConvertible output, TagKey input, DyeColor color) {
+        return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 8)
+                .input('#', input).input('@', DyeItem.byColor(color))
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###");
+    }
+
+    public static CraftingRecipeJsonBuilder createBlockEightDyingRecipe(ItemConvertible output, Block input, DyeColor color) {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 8)
                 .input('#', input).input('@', DyeItem.byColor(color))
                 .pattern("###")

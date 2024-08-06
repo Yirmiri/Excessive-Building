@@ -10,6 +10,7 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.block.AlmentraStatueBlock;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
 
@@ -682,6 +683,53 @@ public class EBModelGen extends FabricModelProvider {
 
         generator.registerSimpleCubeAll(EBBlocks.GLOOM_LEAVES);
         generator.registerFlowerPotPlant(EBBlocks.GLOOM_SAPLING, EBBlocks.POTTED_GLOOM_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        EBModels.registerAlmentraStatueState(generator, EBBlocks.ALMENTRA_STATUE, Identifier.of(ExcessiveBuilding.MOD_ID, "block/almentra_statue"),
+                Identifier.of(ExcessiveBuilding.MOD_ID, "block/almentra_statue_diagonal"));
+
+        for (DyeColor colors : DyeColor.values()) {
+            EBModels.registerAlmentraStatueState(generator, EBBlocks.getDyedAlmentraStatues(colors.getId()),
+                    Identifier.of(ExcessiveBuilding.MOD_ID, "block/" + colors.getName() + "_almentra_statue"),
+                    Identifier.of(ExcessiveBuilding.MOD_ID, "block/" + colors.getName() + "_almentra_statue_diagonal"));
+        }
+
+        BlockStateModelGenerator.BlockTexturePool almentra = generator.registerCubeAllModelTexturePool(EBBlocks.ALMENTRA);
+        almentra.stairs(EBBlocks.ALMENTRA_STAIRS);
+        almentra.slab(EBBlocks.ALMENTRA_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.ALMENTRA_VERTICAL_STAIRS, EBBlocks.ALMENTRA);
+
+        BlockStateModelGenerator.BlockTexturePool polishedAlmentra = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_ALMENTRA);
+        polishedAlmentra.stairs(EBBlocks.POLISHED_ALMENTRA_STAIRS);
+        polishedAlmentra.slab(EBBlocks.POLISHED_ALMENTRA_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS, EBBlocks.POLISHED_ALMENTRA);
+
+        BlockStateModelGenerator.BlockTexturePool almentraBricks = generator.registerCubeAllModelTexturePool(EBBlocks.ALMENTRA_BRICKS);
+        almentraBricks.stairs(EBBlocks.ALMENTRA_BRICK_STAIRS);
+        almentraBricks.slab(EBBlocks.ALMENTRA_BRICK_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.ALMENTRA_BRICK_VERTICAL_STAIRS, EBBlocks.ALMENTRA_BRICKS);
+
+        for (DyeColor colors : DyeColor.values()) {
+            BlockStateModelGenerator.BlockTexturePool dyedAlmentra = generator.registerCubeAllModelTexturePool(EBBlocks.getDyedAlmentra(colors.getId()));
+            dyedAlmentra.stairs(EBBlocks.getDyedAlmentraStairs(colors.getId()));
+            dyedAlmentra.slab(EBBlocks.getDyedAlmentraSlab(colors.getId()));
+            EBModels.registerVerticalStairs(generator, EBBlocks.getDyedAlmentraVerticalStairs(colors.getId()), EBBlocks.getDyedAlmentra(colors.getId()));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            BlockStateModelGenerator.BlockTexturePool dyedPolishedAlmentra = generator.registerCubeAllModelTexturePool(EBBlocks.getDyedPolishedAlmentra(colors.getId()));
+            dyedPolishedAlmentra.stairs(EBBlocks.getDyedPolishedAlmentraStairs(colors.getId()));
+            dyedPolishedAlmentra.slab(EBBlocks.getDyedPolishedAlmentraSlab(colors.getId()));
+            EBModels.registerVerticalStairs(generator, EBBlocks.getDyedPolishedAlmentraVerticalStairs(colors.getId()), EBBlocks.getDyedPolishedAlmentra(colors.getId()));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            BlockStateModelGenerator.BlockTexturePool dyedAlmentraBricks = generator.registerCubeAllModelTexturePool(EBBlocks.getDyedAlmentraBricks(colors.getId()));
+            dyedAlmentraBricks.stairs(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()));
+            dyedAlmentraBricks.slab(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()));
+            EBModels.registerVerticalStairs(generator, EBBlocks.getDyedAlmentraBrickVerticalStairs(colors.getId()), EBBlocks.getDyedAlmentraBricks(colors.getId()));
+        }
+
+        generator.registerWallPlant(EBBlocks.MOSS_PASTE);
     }
 
     @Override
@@ -746,6 +794,58 @@ public class EBModelGen extends FabricModelProvider {
 
         public static final Model PARTICLE_CANDLE = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_particle_candle")
                 .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+
+        public static void registerAlmentraStatueState(BlockStateModelGenerator generator, Block statue, Identifier model, Identifier diagonalModel) {
+            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(statue).coordinate(BlockStateVariantMap.create(AlmentraStatueBlock.ROTATION)
+                    .register(0, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R0))
+
+                    .register(1, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R0))
+
+                    .register(2, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R0))
+
+                    .register(3, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R0))
+
+                    .register(4, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+
+                    .register(5, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+
+                    .register(6, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+
+                    .register(7, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R90))
+
+                    .register(8, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                    .register(9, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                    .register(10, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                    .register(11, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R180))
+
+                    .register(12, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+
+                    .register(13, BlockStateVariant.create().put(VariantSettings.MODEL, model)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+
+                    .register(14, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+
+                    .register(15, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
+                            .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+            ));
+        }
 
         public static void registerParticleCandle(BlockStateModelGenerator generator, Block particleCandle) {
             TextureMap textureMap = TextureMap.all(TextureMap.getId(particleCandle));

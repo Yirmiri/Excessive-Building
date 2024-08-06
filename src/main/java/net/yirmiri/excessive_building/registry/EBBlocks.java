@@ -398,6 +398,121 @@ public class EBBlocks {
         }
     }
 
+    //ALMENTRA STATUES
+    public static final Block ALMENTRA_STATUE = register("almentra_statue", new AlmentraStatueBlock(EBProperties.BlockP.ALMENTRA), true);
+
+    public static final HashMap<DyeColor, Block> DYED_ALMENTRA_STATUE = new HashMap<>();
+
+    public static Block getDyedAlmentraStatues(int colors) {
+        return DYED_ALMENTRA_STATUE.get(DyeColor.byId(colors));
+    }
+
+    static {
+        for (DyeColor colors : DyeColor.values()) {
+            DYED_ALMENTRA_STATUE.put(colors, register(colors + "_almentra_statue", new AlmentraStatueBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+        }
+    }
+
+    //ALMENTRA
+    public static final Block ALMENTRA = register("almentra", new Block(EBProperties.BlockP.ALMENTRA), true);
+    public static final Block ALMENTRA_STAIRS = register("almentra_stairs", new StairsBlock(EBBlocks.ALMENTRA.getDefaultState(), EBProperties.BlockP.ALMENTRA), true);
+    public static final Block ALMENTRA_VERTICAL_STAIRS = registerVStairs("almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA), true);
+    public static final Block ALMENTRA_SLAB = register("almentra_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA), true);
+
+    public static final HashMap<DyeColor, Block> DYED_ALMENTRA = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_ALMENTRA_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_ALMENTRA_VERTICAL_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_ALMENTRA_SLAB = new HashMap<>();
+
+    public static Block getDyedAlmentra(int colors) {
+        return DYED_ALMENTRA.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedAlmentraStairs(int colors) {
+        return DYED_ALMENTRA_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedAlmentraVerticalStairs(int colors) {
+        return DYED_ALMENTRA_VERTICAL_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedAlmentraSlab(int colors) {
+        return DYED_ALMENTRA_SLAB.get(DyeColor.byId(colors));
+    }
+
+    //POLISHED ALMENTRA
+    public static final Block POLISHED_ALMENTRA = register("polished_almentra", new Block(EBProperties.BlockP.ALMENTRA), true);
+    public static final Block POLISHED_ALMENTRA_STAIRS = register("polished_almentra_stairs", new StairsBlock(EBBlocks.POLISHED_ALMENTRA.getDefaultState(), EBProperties.BlockP.ALMENTRA), true);
+    public static final Block POLISHED_ALMENTRA_VERTICAL_STAIRS = registerVStairs("polished_almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA), true);
+    public static final Block POLISHED_ALMENTRA_SLAB = register("polished_almentra_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA), true);
+
+    public static final HashMap<DyeColor, Block> DYED_POLISHED_ALMENTRA = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_POLISHED_ALMENTRA_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_POLISHED_ALMENTRA_VERTICAL_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_POLISHED_ALMENTRA_SLAB = new HashMap<>();
+
+    public static Block getDyedPolishedAlmentra(int colors) {
+        return DYED_POLISHED_ALMENTRA.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedPolishedAlmentraStairs(int colors) {
+        return DYED_POLISHED_ALMENTRA_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedPolishedAlmentraVerticalStairs(int colors) {
+        return DYED_POLISHED_ALMENTRA_VERTICAL_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedPolishedAlmentraSlab(int colors) {
+        return DYED_POLISHED_ALMENTRA_SLAB.get(DyeColor.byId(colors));
+    }
+
+    //ALMENTRA BRICKS
+    public static final Block ALMENTRA_BRICKS = register("almentra_bricks", new Block(EBProperties.BlockP.ALMENTRA_BRICKS), true);
+    public static final Block ALMENTRA_BRICK_STAIRS = register("almentra_brick_stairs", new StairsBlock(EBBlocks.ALMENTRA_BRICKS.getDefaultState(), EBProperties.BlockP.ALMENTRA_BRICKS), true);
+    public static final Block ALMENTRA_BRICK_VERTICAL_STAIRS = registerVStairs("almentra_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA_BRICKS), true);
+    public static final Block ALMENTRA_BRICK_SLAB = register("almentra_brick_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA_BRICKS), true);
+
+    public static final HashMap<DyeColor, Block> DYED_ALMENTRA_BRICKS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_ALMENTRA_BRICK_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_ALMENTRA_BRICK_VERTICAL_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Block> DYED_ALMENTRA_BRICK_SLAB = new HashMap<>();
+
+    public static Block getDyedAlmentraBricks(int colors) {
+        return DYED_ALMENTRA_BRICKS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedAlmentraBrickStairs(int colors) {
+        return DYED_ALMENTRA_BRICK_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedAlmentraBrickVerticalStairs(int colors) {
+        return DYED_ALMENTRA_BRICK_VERTICAL_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Block getDyedAlmentraBrickSlab(int colors) {
+        return DYED_ALMENTRA_BRICK_SLAB.get(DyeColor.byId(colors));
+    }
+
+    static {
+        for (DyeColor colors : DyeColor.values()) {
+            DYED_ALMENTRA.put(colors, register(colors + "_almentra", new Block(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+            DYED_ALMENTRA_STAIRS.put(colors, register(colors + "_almentra_stairs", new StairsBlock(getDyedAlmentra(colors.getId()).getDefaultState(), EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+            DYED_ALMENTRA_VERTICAL_STAIRS.put(colors, registerVStairs(colors + "_almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+            DYED_ALMENTRA_SLAB.put(colors, register(colors + "_almentra_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+
+            DYED_POLISHED_ALMENTRA.put(colors, register(colors + "_polished_almentra", new Block(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+            DYED_POLISHED_ALMENTRA_STAIRS.put(colors, register(colors + "_polished_almentra_stairs", new StairsBlock(getDyedPolishedAlmentra(colors.getId()).getDefaultState(), EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+            DYED_POLISHED_ALMENTRA_VERTICAL_STAIRS.put(colors, registerVStairs(colors + "_polished_almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+            DYED_POLISHED_ALMENTRA_SLAB.put(colors, register(colors + "_polished_almentra_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+
+            DYED_ALMENTRA_BRICKS.put(colors, register(colors + "_almentra_bricks", new Block(EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
+            DYED_ALMENTRA_BRICK_STAIRS.put(colors, register(colors + "_almentra_brick_stairs", new StairsBlock(getDyedAlmentraBricks(colors.getId()).getDefaultState(), EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
+            DYED_ALMENTRA_BRICK_VERTICAL_STAIRS.put(colors, registerVStairs(colors + "_almentra_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
+            DYED_ALMENTRA_BRICK_SLAB.put(colors, register(colors + "_almentra_brick_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
+        }
+    }
+
     //SEA GLASS
     public static final Block SEA_GLASS = register("sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
     public static final Block ROSE_SEA_GLASS = register("rose_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
@@ -659,6 +774,7 @@ public class EBBlocks {
     public static final Block POTTED_CYAN_ROSE = register("potted_cyan_rose", Blocks.createFlowerPotBlock(EBBlocks.CYAN_ROSE), false);
     public static final Block WHITE_ROSE = registerAP("white_rose", new FlowerBlock(StatusEffects.LUCK, 30, EBProperties.BlockP.WHITE_ROSE), true);
     public static final Block POTTED_WHITE_ROSE = register("potted_white_rose", Blocks.createFlowerPotBlock(EBBlocks.WHITE_ROSE), false);
+    public static final Block MOSS_PASTE = registerAP("moss_paste", new GlowLichenBlock(EBProperties.BlockP.MOSS_PASTE), true);
 
     //MISC
     public static final Block WEEPING_CANDLE = registerAP("weeping_candle", new ParticleCandleBlock(ParticleTypes.CRIMSON_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
@@ -677,7 +793,7 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO 3.1.1: CALCITE BLOCKSET, MOSS PASTE, PEDESTALS, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES)
+    //TODO 3.2.1: CALCITE BLOCKSET, PEDESTALS, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES)
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

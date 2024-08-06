@@ -20,12 +20,16 @@ public class EBConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_ROSE = createKey("patch_rose");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_CYAN_ROSE = createKey("patch_cyan_rose");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_WHITE_ROSE = createKey("patch_white_rose");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_ALMENTRA = createKey("ore_almentra");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> ctx) {
+        RuleTest overworldReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_OVERWORLD);
         RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
 
+        List<OreFeatureConfig.Target> oreAlmentra = List.of(OreFeatureConfig.createTarget(overworldReplaceables, EBBlocks.ALMENTRA.getDefaultState()));
         List<OreFeatureConfig.Target> oreBrimstone = List.of(OreFeatureConfig.createTarget(netherReplaceables, EBBlocks.BRIMSTONE.getDefaultState()));
 
+        register(ctx, ORE_ALMENTRA, Feature.ORE, new OreFeatureConfig(oreAlmentra, 48));
         register(ctx, ORE_BRIMSTONE, Feature.ORE, new OreFeatureConfig(oreBrimstone, 48));
     }
 

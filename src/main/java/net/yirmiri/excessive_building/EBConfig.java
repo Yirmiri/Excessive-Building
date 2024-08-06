@@ -23,6 +23,7 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_TOOLTIPS;
 
     //BALANCE
+    public static final ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_SOUL_MAGMA_COLUMN_TOGGLE;
     public static final ForgeConfigSpec.FloatValue ANCIENT_SAPLING_CHANCE;
     public static final ForgeConfigSpec.FloatValue GLOOM_SEEDS_CHANCE;
@@ -105,6 +106,10 @@ public class EBConfig {
 
         //BALANCE CONFIGURATION
         BUILDER.push("Balance Configuration").comment("Configuration for features that may impact gameplay in a large way");
+
+        ENABLE_EB_VILLAGER_TRADES = BUILDER
+                .comment("Should Excessive Building add new trade offers to villagers? (default: true)")
+                .define("enableEBVillagerTrades", true);
 
         ENABLE_SOUL_MAGMA_COLUMN_TOGGLE = BUILDER
                 .comment("Should soul magma bubble columns be toggled with redstone? (default: true)")

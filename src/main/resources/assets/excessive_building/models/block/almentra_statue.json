@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "excessive_building:almentra_statue_stand",
-		"1": "excessive_building:almentra_statue",
-		"particle": "excessive_building:almentra_statue_stand"
+		"0": "excessive_building:block/almentra_statue_stand",
+		"1": "excessive_building:block/almentra_statue",
+		"particle": "excessive_building:block/polished_almentra"
 	},
 	"elements": [
 		{

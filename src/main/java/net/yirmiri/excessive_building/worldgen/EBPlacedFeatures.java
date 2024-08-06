@@ -23,9 +23,13 @@ public class EBPlacedFeatures {
     public static final RegistryKey<PlacedFeature> PATCH_ROSE = createKey("patch_rose");
     public static final RegistryKey<PlacedFeature> PATCH_CYAN_ROSE = createKey("patch_cyan_rose");
     public static final RegistryKey<PlacedFeature> PATCH_WHITE_ROSE = createKey("patch_white_rose");
+    public static final RegistryKey<PlacedFeature> ORE_ALMENTRA = createKey("ore_almentra");
 
     public static void bootstrap(Registerable<PlacedFeature> ctx) {
         var configuredFeatureRegistryEntryLookup = ctx.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+
+        register(ctx, ORE_ALMENTRA, configuredFeatureRegistryEntryLookup.getOrThrow(EBConfiguredFeatures.ORE_ALMENTRA),
+                PlacementModifiers.modifiersWithCount(6, HeightRangePlacementModifier.uniform(YOffset.fixed(24), YOffset.fixed(128))));
 
         register(ctx, ORE_BRIMSTONE, configuredFeatureRegistryEntryLookup.getOrThrow(EBConfiguredFeatures.ORE_BRIMSTONE),
                 PlacementModifiers.modifiersWithCount(4, HeightRangePlacementModifier.uniform(YOffset.fixed(16), YOffset.fixed(108))));
@@ -36,6 +40,7 @@ public class EBPlacedFeatures {
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_ROSE);
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Feature.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_WHITE_ROSE);
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_CYAN_ROSE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Feature.UNDERGROUND_ORES, EBPlacedFeatures.ORE_ALMENTRA);
     }
 
     public static RegistryKey<PlacedFeature> createKey(String id) {

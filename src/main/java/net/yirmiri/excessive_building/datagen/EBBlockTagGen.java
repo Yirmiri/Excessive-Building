@@ -57,6 +57,13 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendSmallFlowers();
         appendGuardedByPiglins();
         appendCandles();
+        appendReplaceable();
+    }
+
+    public void appendReplaceable() {
+        getOrCreateTagBuilder(BlockTags.REPLACEABLE)
+                .add(EBBlocks.MOSS_PASTE)
+        ;
     }
 
     public void appendCandles() {
@@ -554,6 +561,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.ALMENTRA_STATUE)
                     .add(EBBlocks.TUFF_TILES)
                     .add(EBBlocks.TUFF_TILE_STAIRS)
                     .add(EBBlocks.TUFF_TILE_SLAB)
@@ -823,6 +831,10 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTileStairs(colors.getId()));
                 getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()));
                 getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTileSlab(colors.getId()));
+                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedAlmentraStatues(colors.getId()));
+                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedAlmentra(colors.getId()));
+                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedPolishedAlmentra(colors.getId()));
+                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedAlmentraBricks(colors.getId()));
             }
         }
 
