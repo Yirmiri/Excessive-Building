@@ -793,7 +793,7 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO 3.2.1: CALCITE BLOCKSET, PEDESTALS, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES)
+    //TODO: CALCITE BLOCKSET, PEDESTALS, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES), BRAZIERS
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {
