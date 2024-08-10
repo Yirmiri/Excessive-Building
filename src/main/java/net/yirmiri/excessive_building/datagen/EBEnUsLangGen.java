@@ -637,6 +637,9 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.rebellious.title", "Rebellious");
         build.add("painting.excessive_building.catastrophes_before_the_calamity.title", "Catastrophes Before the Calamity");
         build.add("painting.excessive_building.goodie_malk.title", "Goodie Malk");
+        build.add("painting.excessive_building.endless.title", "Endless");
+        build.add("painting.excessive_building.za_hando.title", "Za Hando");
+        build.add("painting.excessive_building.isaac_we_love_you.title", "Isaac We Love You");
 
         //PAINTING AUTHORS
         build.add("painting.excessive_building.forgotten_kingdom.author", "Yirmiri");
@@ -665,6 +668,9 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.rebellious.author", "Rebel (the dog)");
         build.add("painting.excessive_building.catastrophes_before_the_calamity.author", "BackupCup");
         build.add("painting.excessive_building.goodie_malk.author", "Goodie");
+        build.add("painting.excessive_building.endless.author", "Milkyfur");
+        build.add("painting.excessive_building.za_hando.author", "Milkyfur");
+        build.add("painting.excessive_building.isaac_we_love_you.author", "Milkyfur");
 
         //EFFECTS
         build.add("effect.excessive_building.reaching", "Reaching");

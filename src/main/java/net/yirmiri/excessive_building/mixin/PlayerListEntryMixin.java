@@ -42,6 +42,7 @@ public abstract class PlayerListEntryMixin {
             case "4bc0a7a9-497a-4aa1-a5af-cee312f94b01" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/rebellious.png");
             case "7a6a8c68-8b73-47f6-b08f-0dde5f1848dd" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/fudge_sundae.png");
             case "8429992e-eba7-4dc9-a0b9-f941a55a5fb4" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/shiny_pearl.png");
+            case "66a11b55-08c2-4765-b618-3071dc222b64" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/cotton_candy.png");
         }
 
         if (texture != null) {
