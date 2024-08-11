@@ -29,6 +29,6 @@ public class EBBlockEntities {
                     EBBlocks.REACHING_LANTERN
             ).build());
 
-    public static void registerEBBlockEntities() {
+    public static void loadBlockEntities() {
     }
 }

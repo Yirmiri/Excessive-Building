@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "excessive_building:copper_bricks"
+      "item": "minecraft:copper_block"
     }
   },
   "pattern": [

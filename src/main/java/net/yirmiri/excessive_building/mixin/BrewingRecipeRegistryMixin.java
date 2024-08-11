@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(BrewingRecipeRegistry.class)
-public class BrewingRecipeRegistryMixin {
+public abstract class BrewingRecipeRegistryMixin {
     @Inject(method = "registerDefaults", at = @At("TAIL"))
     private static void registerDefaults(BrewingRecipeRegistry.Builder builder, CallbackInfo ci) {
         builder.registerPotionRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT, EBPotions.REACHING);

@@ -24,7 +24,7 @@ public class EBTrades {
     public static final float LOW_PRICE_MULTIPLIER = 0.05F;
     public static final float HIGH_PRICE_MULTIPLIER = 0.2F;
 
-    public static void registerTrades() {
+    public static void loadTrades() {
         if (EBConfig.ENABLE_EB_VILLAGER_TRADES.get()) {
             TradeOfferHelper.registerVillagerOffers(VillagerProfession.MASON, 5,
                     factories -> {

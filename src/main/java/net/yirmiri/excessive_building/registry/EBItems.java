@@ -58,6 +58,6 @@ public class EBItems {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), item);
     }
 
-    public static void registerEBItems() {
+    public static void loadItems() {
     }
 }

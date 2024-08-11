@@ -1,4 +1,4 @@
-// 1.21	2024-08-10T07:36:12.9867527	Excessive Building/Tags for minecraft:block
+// 1.21	2024-08-11T09:43:19.2913356	Excessive Building/Tags for minecraft:block
 9973d3c2d4c8d54df2f5e0f5fd6efa300f3971fd data\minecraft\tags\block\logs_that_burn.json
 1419a0b00f417fbc1bbff44f7a3bfbb4252413fa data\minecraft\tags\block\wooden_stairs.json
 ecc53e060230f69caffdb4ae26bd668560c24bb3 data\excessive_building\tags\block\ancient_logs.json
@@ -30,8 +30,8 @@ c2fc2096a180907a255fdff8110dd1a8b38634bd data\minecraft\tags\block\mineable\axe.
 0fff8aee72a8ddb53110fd58e5b8b23fdf6aa3cf data\minecraft\tags\block\wooden_fences.json
 6086237a037f627ddd47ab3efeb1796595ad4827 data\minecraft\tags\block\wooden_trapdoors.json
 0fff8aee72a8ddb53110fd58e5b8b23fdf6aa3cf data\minecraft\tags\block\fences.json
-d732139cdfbcab9ae66a1dcc8783bfe0d6b4bc66 data\minecraft\tags\block\mineable\pickaxe.json
 d317db704525634aea35ced79306dc006e2fc76e data\minecraft\tags\block\soul_speed_blocks.json
+90f1a18a16de8c00bb7019929f1aca9ee513d7c1 data\minecraft\tags\block\mineable\pickaxe.json
 1fe6a4ab118fe40333e2c7473ec910c1ab776576 data\minecraft\tags\block\wooden_buttons.json
 fbbc1aba952163427c11fa0c2e3af5d3ac4a36d4 data\minecraft\tags\block\needs_iron_tool.json
 4f3de040689e1c94cb012af78cc9328ab95eeb50 data\minecraft\tags\block\wall_signs.json

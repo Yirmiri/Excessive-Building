@@ -2,10 +2,6 @@ package net.yirmiri.excessive_building;
 
 import fuzs.forgeconfigapiport.fabric.api.forge.v4.ForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.minecraft.registry.tag.BiomeTags;
-import net.minecraft.world.gen.GenerationStep;
 import net.neoforged.fml.config.ModConfig;
 import net.yirmiri.excessive_building.worldgen.EBPlacedFeatures;
 import org.slf4j.Logger;
@@ -24,19 +20,19 @@ public class ExcessiveBuilding implements ModInitializer {
 	public void onInitialize() {
 		ForgeConfigRegistry.INSTANCE.register(MOD_ID, ModConfig.Type.COMMON, EBConfig.COMMON, "excessive_building-config.toml");
 
-		EBBlocks.registerEBBlocks();
-		EBRegistries.registerRegistries();
-		EBItemGroups.registerEBItemGroups();
-		EBBlockEntities.registerEBBlockEntities();
-		EBParticles.registerEBParticles();
-		EBItems.registerEBItems();
-		EBStatusEffects.registerEBEffects();
-		EBPotions.registerEBPotions();
-		EBDecoratedPotPatterns.registerEBPotPatterns();
-		EBSounds.registerEBSounds();
-		EBPacks.registerPacks();
+		EBBlocks.loadBlocks();
+		EBRegistries.loadRegistries();
+		EBItemGroups.loadItemGroups();
+		EBBlockEntities.loadBlockEntities();
+		EBParticles.loadParticles();
+		EBItems.loadItems();
+		EBStatusEffects.loadEffects();
+		EBPotions.loadPotions();
+		EBDecoratedPotPatterns.loadPotteryPatterns();
+		EBSounds.loadSounds();
+		EBPacks.loadPacks();
 		EBLootModifiers.modifyLoot();
 		EBPlacedFeatures.addBiomeModifiers();
-		EBTrades.registerTrades();
+		EBTrades.loadTrades();
 	}
 }

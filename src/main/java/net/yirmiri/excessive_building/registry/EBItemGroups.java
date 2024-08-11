@@ -997,6 +997,6 @@ public class EBItemGroups {
                 });
         }
 
-    public static void registerEBItemGroups() {
+    public static void loadItemGroups() {
     }
 }

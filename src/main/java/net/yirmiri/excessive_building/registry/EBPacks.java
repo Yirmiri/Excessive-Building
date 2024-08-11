@@ -11,7 +11,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 import java.util.Optional;
 
 public class EBPacks {
-    public static void registerPacks() {
+    public static void loadPacks() {
         Optional<ModContainer> container = FabricLoader.getInstance().getModContainer(ExcessiveBuilding.MOD_ID);
         ResourceManagerHelper.registerBuiltinResourcePack(Identifier.of(ExcessiveBuilding.MOD_ID, "vanilla_retextures"), container.get(),
                 Text.translatable("pack." + ExcessiveBuilding.MOD_ID + ".vanilla_retextures"), ResourcePackActivationType.DEFAULT_ENABLED);

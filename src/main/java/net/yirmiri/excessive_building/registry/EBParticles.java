@@ -11,7 +11,7 @@ public class EBParticles {
     public static final SimpleParticleType ANCIENT_PARTICLE = FabricParticleTypes.simple();
     public static final SimpleParticleType GLOOM_PARTICLE = FabricParticleTypes.simple();
 
-    public static void registerEBParticles() {
+    public static void loadParticles() {
         Registry.register(Registries.PARTICLE_TYPE, Identifier.of(ExcessiveBuilding.MOD_ID, "ancient_particle"), ANCIENT_PARTICLE);
         Registry.register(Registries.PARTICLE_TYPE, Identifier.of(ExcessiveBuilding.MOD_ID, "gloom_particle"), GLOOM_PARTICLE);
     }

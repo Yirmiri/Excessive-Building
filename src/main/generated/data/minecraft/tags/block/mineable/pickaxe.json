@@ -1,6 +1,18 @@
 {
   "values": [
     "excessive_building:almentra_statue",
+    "excessive_building:almentra",
+    "excessive_building:almentra_stairs",
+    "excessive_building:almentra_vertical_stairs",
+    "excessive_building:almentra_slab",
+    "excessive_building:almentra_bricks",
+    "excessive_building:almentra_brick_stairs",
+    "excessive_building:almentra_brick_vertical_stairs",
+    "excessive_building:almentra_brick_slab",
+    "excessive_building:polished_almentra",
+    "excessive_building:polished_almentra_stairs",
+    "excessive_building:polished_almentra_vertical_stairs",
+    "excessive_building:polished_almentra_slab",
     "excessive_building:tuff_tiles",
     "excessive_building:tuff_tile_stairs",
     "excessive_building:tuff_tile_slab",

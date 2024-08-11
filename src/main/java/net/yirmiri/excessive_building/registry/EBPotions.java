@@ -28,6 +28,6 @@ public class EBPotions {
     public static final RegistryEntry<Potion> STRONG_SHORTENING = Registry.registerReference(Registries.POTION, Identifier.of(ExcessiveBuilding.MOD_ID, "strong_shortening_potion"),
             new Potion(new StatusEffectInstance(EBStatusEffects.SHORTENING, EBConfig.SHORTENING_DURATION.get(), EBConfig.STRONG_REACHING_AMPLIFIER.get())));
 
-    public static void registerEBPotions() {
+    public static void loadPotions() {
     }
 }

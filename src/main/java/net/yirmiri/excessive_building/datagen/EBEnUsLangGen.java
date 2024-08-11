@@ -708,8 +708,5 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("item.minecraft.splash_potion.effect.strong_shortening_potion", "Splash Potion of Shortening");
         build.add("item.minecraft.lingering_potion.effect.strong_shortening_potion", "Lingering Potion of Shortening");
         build.add("item.minecraft.tipped_arrow.effect.strong_shortening_potion", "Arrow of Shortening");
-
-        //YAPPING TOOLTIPS [COMPAT]
-        //TODO: ADD
     }
 }

@@ -23,6 +23,6 @@ public class EBSounds {
         return Registry.register(Registries.SOUND_EVENT, Identifier.of(ExcessiveBuilding.MOD_ID, id), SoundEvent.of(Identifier.of(ExcessiveBuilding.MOD_ID, id)));
     }
 
-    public static void registerEBSounds() {
+    public static void loadSounds() {
     }
 }

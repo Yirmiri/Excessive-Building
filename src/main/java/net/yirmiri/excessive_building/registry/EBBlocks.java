@@ -939,6 +939,6 @@ public class EBBlocks {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new DecorationBlockItem(block, new Item.Settings()));
     }
 
-    public static void registerEBBlocks() {
+    public static void loadBlocks() {
     }
 }

@@ -3,6 +3,7 @@ package net.yirmiri.excessive_building.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
@@ -511,7 +512,19 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         leavesDrops(EBBlocks.GLOOM_LEAVES, EBBlocks.GLOOM_SAPLING);
         addDrop(EBBlocks.ALMENTRA_STATUE);
         addDyedBlockDrops();
-        addDrop(EBBlocks.MOSS_PASTE);
+        addDrop(EBBlocks.MOSS_PASTE, block -> multifaceGrowthDrops(block, WITH_SHEARS));
+        addDrop(EBBlocks.ALMENTRA);
+        addDrop(EBBlocks.ALMENTRA_STAIRS);
+        addDrop(EBBlocks.ALMENTRA_VERTICAL_STAIRS);
+        addDrop(EBBlocks.ALMENTRA_SLAB);
+        addDrop(EBBlocks.ALMENTRA_BRICKS);
+        addDrop(EBBlocks.ALMENTRA_BRICK_STAIRS);
+        addDrop(EBBlocks.ALMENTRA_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.ALMENTRA_BRICK_SLAB);
+        addDrop(EBBlocks.POLISHED_ALMENTRA);
+        addDrop(EBBlocks.POLISHED_ALMENTRA_STAIRS);
+        addDrop(EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS);
+        addDrop(EBBlocks.POLISHED_ALMENTRA_SLAB);
     }
 
     private void addDyedBlockDrops() {

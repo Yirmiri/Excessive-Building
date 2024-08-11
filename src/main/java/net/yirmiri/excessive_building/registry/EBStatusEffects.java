@@ -19,6 +19,6 @@ public class EBStatusEffects {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(ExcessiveBuilding.MOD_ID, id), statusEffect);
     }
 
-    public static void registerEBEffects() {
+    public static void loadEffects() {
     }
 }

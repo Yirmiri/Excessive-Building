@@ -95,6 +95,6 @@ public class EBDecoratedPotPatterns {
         return Registry.register(Registries.DECORATED_POT_PATTERN, key, new DecoratedPotPattern(Identifier.of(ExcessiveBuilding.MOD_ID, id)));
     }
 
-    public static void registerEBPotPatterns() {
+    public static void loadPotteryPatterns() {
     }
 }

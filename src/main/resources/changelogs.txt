@@ -8,6 +8,22 @@ Version Release v3.2.2 Fabric/Quilt-1.21
 
   Misc Additions
 •   Added the "Endless", "Za Hando", and "Isaac We Love You" paintings
+•   More of Excessive Building's items can be composted
+•   More of Excessive Building's blocks can burn
+•   More of Excessive Building's items can be used as furnace fuel
+
+  Changes
+•   Moss paste now requires shears to obtain
+•   Copper bricks (and oxidized variants) now grant 4 blocks upon stonecutting a copper block
+•   Furnace fuel times are now accurate to vanilla items
+
+  Fixes
+•   Fixed an issue that caused loot modifiers to not function which caused many items to be unobtainable
+•   Fixed an issue that caused copper bricks to be made from copper bricks instead of copper blocks
+•   Fixed an issue that caused moss paste to always drop one item (even when multiple are placed on a block)
+•   Fixed an issue that caused base almentra blocks to not destroy with a pickaxe
+•   Fixed an issue that caused almentra to not drop upon destroying it
+•   Fixed missing texture particles on black and light gray almentra statues
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
