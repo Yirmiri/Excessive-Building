@@ -111,7 +111,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.ANCIENT_WOOD);
         addDrop(EBBlocks.STRIPPED_ANCIENT_LOG);
         addDrop(EBBlocks.STRIPPED_ANCIENT_WOOD);
-        EBLeavesDrops(EBBlocks.ANCIENT_LEAVES, EBBlocks.ANCIENT_SAPLING, EBItems.ANCIENT_FRUIT);
         addDrop(EBBlocks.ANCIENT_SAPLING);
         addPottedPlantDrops(EBBlocks.POTTED_ANCIENT_SAPLING);
         addDrop(EBBlocks.CHISELED_ANCIENT_PLANKS);
@@ -525,6 +524,31 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.POLISHED_ALMENTRA_STAIRS);
         addDrop(EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS);
         addDrop(EBBlocks.POLISHED_ALMENTRA_SLAB);
+        ancientLeavesDrops(EBBlocks.ANCIENT_LEAVES, EBBlocks.ANCIENT_SAPLING);
+        addDrop(EBBlocks.SPRUCE_CHEST);
+        addDrop(EBBlocks.BIRCH_CHEST);
+        addDrop(EBBlocks.JUNGLE_CHEST);
+        addDrop(EBBlocks.ACACIA_CHEST);
+        addDrop(EBBlocks.DARK_OAK_CHEST);
+        addDrop(EBBlocks.MANGROVE_CHEST);
+        addDrop(EBBlocks.CHERRY_CHEST);
+        addDrop(EBBlocks.BAMBOO_CHEST);
+        addDrop(EBBlocks.CRIMSON_CHEST);
+        addDrop(EBBlocks.WARPED_CHEST);
+        addDrop(EBBlocks.ANCIENT_CHEST);
+        addDrop(EBBlocks.GLOOM_CHEST);
+        addDrop(EBBlocks.TRAPPED_SPRUCE_CHEST);
+        addDrop(EBBlocks.TRAPPED_BIRCH_CHEST);
+        addDrop(EBBlocks.TRAPPED_JUNGLE_CHEST);
+        addDrop(EBBlocks.TRAPPED_ACACIA_CHEST);
+        addDrop(EBBlocks.TRAPPED_DARK_OAK_CHEST);
+        addDrop(EBBlocks.TRAPPED_MANGROVE_CHEST);
+        addDrop(EBBlocks.TRAPPED_CHERRY_CHEST);
+        addDrop(EBBlocks.TRAPPED_BAMBOO_CHEST);
+        addDrop(EBBlocks.TRAPPED_CRIMSON_CHEST);
+        addDrop(EBBlocks.TRAPPED_WARPED_CHEST);
+        addDrop(EBBlocks.TRAPPED_ANCIENT_CHEST);
+        addDrop(EBBlocks.TRAPPED_GLOOM_CHEST);
     }
 
     private void addDyedBlockDrops() {
@@ -551,15 +575,17 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         }
     }
 
-    public LootTable.Builder EBLeavesDrops(Block leaves, Block sapling, Item specialDrop, float... saplingChance) {
+    public LootTable.Builder ancientLeavesDrops(Block leaves, Block sapling, float... saplingChance) {
         RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
         return this.leavesDrops(leaves, sapling, saplingChance)
-                .pool(LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1.0F))
-                        .conditionally(this.createWithoutShearsOrSilkTouchCondition()).with(
-                                ((LeafEntry.Builder) this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(specialDrop)))
-                                        .conditionally(TableBonusLootCondition.builder(impl.getOrThrow(Enchantments.FORTUNE), 0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F))
-                        )
+                .pool(
+                        LootPool.builder()
+                                .rolls(ConstantLootNumberProvider.create(1.0F))
+                                .conditionally(this.createWithoutShearsOrSilkTouchCondition())
+                                .with(
+                                        ((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(EBItems.ANCIENT_FRUIT)))
+                                                .conditionally(TableBonusLootCondition.builder(impl.getOrThrow(Enchantments.FORTUNE), 0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F))
+                                )
                 );
     }
 }

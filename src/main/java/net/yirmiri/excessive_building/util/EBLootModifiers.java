@@ -1,6 +1,7 @@
 package net.yirmiri.excessive_building.util;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
@@ -13,6 +14,7 @@ import net.yirmiri.excessive_building.registry.EBItems;
 
 public class EBLootModifiers {
     //MINECRAFT
+    public static final Identifier PLAYER = Identifier.ofVanilla("entities/player");
     public static final Identifier SNIFFER_DIGGING = Identifier.ofVanilla("gameplay/sniffer_digging");
     public static final Identifier TRAIL_RUINS_RARE = Identifier.ofVanilla("gameplay/archaeology/trail_ruins_rare");
     public static final Identifier DESERT_PYRAMID = Identifier.ofVanilla("gameplay/archaeology/desert_pyramid");
@@ -27,7 +29,6 @@ public class EBLootModifiers {
 
     public static void modifyLoot() {
         LootTableEvents.MODIFY.register((key, builder, source, manager) -> {
-
             if (SNIFFER_DIGGING.equals(key.getValue()) && EBConfig.ENABLE_ANCIENT_SAPLINGS.get()) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .conditionally(RandomChanceLootCondition.builder(EBConfig.ANCIENT_SAPLING_CHANCE.get()))

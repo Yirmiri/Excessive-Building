@@ -542,6 +542,30 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.ALMENTRA_BRICK_VERTICAL_STAIRS, "Almentra Brick Vertical Stairs");
         build.add(EBBlocks.ALMENTRA_BRICK_SLAB, "Almentra Brick Slab");
         build.add(EBBlocks.MOSS_PASTE, "Moss Paste");
+        build.add(EBBlocks.SPRUCE_CHEST, "Spruce Chest");
+        build.add(EBBlocks.BIRCH_CHEST, "Birch Chest");
+        build.add(EBBlocks.JUNGLE_CHEST, "Jungle Chest");
+        build.add(EBBlocks.ACACIA_CHEST, "Acacia Chest");
+        build.add(EBBlocks.DARK_OAK_CHEST, "Dark Oak Chest");
+        build.add(EBBlocks.MANGROVE_CHEST, "Mangrove Chest");
+        build.add(EBBlocks.CHERRY_CHEST, "Cherry Chest");
+        build.add(EBBlocks.BAMBOO_CHEST, "Bamboo Chest");
+        build.add(EBBlocks.CRIMSON_CHEST, "Crimson Chest");
+        build.add(EBBlocks.WARPED_CHEST, "Warped Chest");
+        build.add(EBBlocks.ANCIENT_CHEST, "Ancient Chest");
+        build.add(EBBlocks.GLOOM_CHEST, "Gloom Chest");
+        build.add(EBBlocks.TRAPPED_SPRUCE_CHEST, "Trapped Spruce Chest");
+        build.add(EBBlocks.TRAPPED_BIRCH_CHEST, "Trapped Birch Chest");
+        build.add(EBBlocks.TRAPPED_JUNGLE_CHEST, "Trapped Jungle Chest");
+        build.add(EBBlocks.TRAPPED_ACACIA_CHEST, "Trapped Acacia Chest");
+        build.add(EBBlocks.TRAPPED_DARK_OAK_CHEST, "Trapped Dark Oak Chest");
+        build.add(EBBlocks.TRAPPED_MANGROVE_CHEST, "Trapped Mangrove Chest");
+        build.add(EBBlocks.TRAPPED_CHERRY_CHEST, "Trapped Cherry Chest");
+        build.add(EBBlocks.TRAPPED_BAMBOO_CHEST, "Trapped Bamboo Chest");
+        build.add(EBBlocks.TRAPPED_CRIMSON_CHEST, "Trapped Crimson Chest");
+        build.add(EBBlocks.TRAPPED_WARPED_CHEST, "Trapped Warped Chest");
+        build.add(EBBlocks.TRAPPED_ANCIENT_CHEST, "Trapped Ancient Chest");
+        build.add(EBBlocks.TRAPPED_GLOOM_CHEST, "Trapped Gloom Chest");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

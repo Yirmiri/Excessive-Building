@@ -5,13 +5,13 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.block.entity.HangingSignBlockEntityRenderer;
 import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
-import net.minecraft.item.Items;
+import net.yirmiri.excessive_building.block.entity.EBChestBlockEntityRenderer;
+import net.yirmiri.excessive_building.block.entity.EBTrappedChestBlockEntityRenderer;
 import net.yirmiri.excessive_building.particle.FallingLeafParticle;
 import net.yirmiri.excessive_building.registry.EBBlockEntities;
 import net.yirmiri.excessive_building.registry.EBBlocks;
@@ -22,11 +22,15 @@ import net.yirmiri.excessive_building.util.EBBlockSetTypes;
 public class ExcessiveBuildingClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        //SIGNS
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(EBBlockSetTypes.EBWoodTypes.ANCIENT, TexturedRenderLayers.getSignTextureId(EBBlockSetTypes.EBWoodTypes.ANCIENT));
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(EBBlockSetTypes.EBWoodTypes.GLOOM, TexturedRenderLayers.getSignTextureId(EBBlockSetTypes.EBWoodTypes.GLOOM));
 
+        //ENTITIES
         BlockEntityRendererFactories.register(EBBlockEntities.EB_SIGN, SignBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(EBBlockEntities.EB_HANGING_SIGN, HangingSignBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(EBBlockEntities.EB_CHEST, EBChestBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(EBBlockEntities.EB_TRAPPED_CHEST, EBTrappedChestBlockEntityRenderer::new);
 
         //CUTOUT
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ANCIENT_LEAVES, RenderLayer.getCutout());

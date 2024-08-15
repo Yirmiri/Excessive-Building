@@ -730,6 +730,42 @@ public class EBModelGen extends FabricModelProvider {
         }
 
         generator.registerWallPlant(EBBlocks.MOSS_PASTE);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("spruce_chest"), 
+                Blocks.SPRUCE_PLANKS).includeWithoutItem(EBBlocks.SPRUCE_CHEST, EBBlocks.TRAPPED_SPRUCE_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("birch_chest"),
+                Blocks.BIRCH_PLANKS).includeWithoutItem(EBBlocks.BIRCH_CHEST, EBBlocks.TRAPPED_BIRCH_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("jungle_chest"),
+                Blocks.JUNGLE_PLANKS).includeWithoutItem(EBBlocks.JUNGLE_CHEST, EBBlocks.TRAPPED_JUNGLE_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("acacia_chest"),
+                Blocks.ACACIA_PLANKS).includeWithoutItem(EBBlocks.ACACIA_CHEST, EBBlocks.TRAPPED_ACACIA_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("dark_oak_chest"),
+                Blocks.DARK_OAK_PLANKS).includeWithoutItem(EBBlocks.DARK_OAK_CHEST, EBBlocks.TRAPPED_DARK_OAK_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("mangrove_chest"),
+                Blocks.MANGROVE_PLANKS).includeWithoutItem(EBBlocks.MANGROVE_CHEST, EBBlocks.TRAPPED_MANGROVE_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("cherry_chest"),
+                Blocks.CHERRY_PLANKS).includeWithoutItem(EBBlocks.CHERRY_CHEST, EBBlocks.TRAPPED_CHERRY_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("bamboo_chest"),
+                Blocks.BAMBOO_PLANKS).includeWithoutItem(EBBlocks.BAMBOO_CHEST, EBBlocks.TRAPPED_BAMBOO_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("crimson_chest"),
+                Blocks.CRIMSON_PLANKS).includeWithoutItem(EBBlocks.CRIMSON_CHEST, EBBlocks.TRAPPED_CRIMSON_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("warped_chest"),
+                Blocks.WARPED_PLANKS).includeWithoutItem(EBBlocks.WARPED_CHEST, EBBlocks.TRAPPED_WARPED_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("ancient_chest"),
+                EBBlocks.ANCIENT_PLANKS).includeWithoutItem(EBBlocks.ANCIENT_CHEST, EBBlocks.TRAPPED_ANCIENT_CHEST);
+
+        generator.registerBuiltin(EBModels.getEBNamespacedBlock("gloom_chest"),
+                EBBlocks.GLOOM_PLANKS).includeWithoutItem(EBBlocks.GLOOM_CHEST, EBBlocks.TRAPPED_GLOOM_CHEST);
     }
 
     @Override
@@ -780,6 +816,11 @@ public class EBModelGen extends FabricModelProvider {
     }
 
     public static class EBModels {
+        @Deprecated
+        public static Identifier getEBNamespacedBlock(String id) {
+            return Identifier.of(ExcessiveBuilding.MOD_ID, "block/" + id);
+        }
+        
         public static final Model VERTICAL_STAIRS = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_vertical_stairs")
                 .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
 

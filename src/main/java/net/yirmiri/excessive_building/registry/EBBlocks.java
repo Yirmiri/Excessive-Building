@@ -2,6 +2,7 @@ package net.yirmiri.excessive_building.registry;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -631,6 +632,34 @@ public class EBBlocks {
     public static final Block ANCIENT_LADDER = registerLadder("ancient_ladder", new EBLadderBlock(EBProperties.BlockP.ANCIENT_LADDER), true);
     public static final Block GLOOM_LADDER = registerLadder("gloom_ladder", new EBLadderBlock(EBProperties.BlockP.GLOOM_LADDER), true);
 
+    //CHESTS
+    public static final Block SPRUCE_CHEST = registerCV("spruce_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, "spruce", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block BIRCH_CHEST = registerCV("birch_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, "birch", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block JUNGLE_CHEST = registerCV("jungle_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, "jungle", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block ACACIA_CHEST = registerCV("acacia_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, "acacia", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block DARK_OAK_CHEST = registerCV("dark_oak_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, "dark_oak", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block MANGROVE_CHEST = registerCV("mangrove_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, "mangrove", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block CHERRY_CHEST = registerCV("cherry_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, "cherry", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block BAMBOO_CHEST = registerCV("bamboo_chest", new EBChestBlock(EBProperties.BlockP.BAMBOO_WOOD, "bamboo", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block CRIMSON_CHEST = registerCV("crimson_chest", new EBChestBlock(EBProperties.BlockP.CRIMSON_WOOD, "crimson", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block WARPED_CHEST = registerCV("warped_chest", new EBChestBlock(EBProperties.BlockP.WARPED_WOOD, "warped", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block ANCIENT_CHEST = registerCV("ancient_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, "ancient", () -> EBBlockEntities.EB_CHEST), true);
+    public static final Block GLOOM_CHEST = registerCV("gloom_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, "gloom", () -> EBBlockEntities.EB_CHEST), true);
+
+    //TRAPPED CHESTS
+    public static final Block TRAPPED_SPRUCE_CHEST = registerCV("trapped_spruce_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, "trapped_spruce", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_BIRCH_CHEST = registerCV("trapped_birch_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, "trapped_birch", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_JUNGLE_CHEST = registerCV("trapped_jungle_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, "trapped_jungle", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_ACACIA_CHEST = registerCV("trapped_acacia_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, "trapped_acacia", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_DARK_OAK_CHEST = registerCV("trapped_dark_oak_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, "trapped_dark_oak", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_MANGROVE_CHEST = registerCV("trapped_mangrove_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, "trapped_mangrove", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_CHERRY_CHEST = registerCV("trapped_cherry_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, "trapped_cherry", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_BAMBOO_CHEST = registerCV("trapped_bamboo_chest", new EBTrappedChestBlock(EBProperties.BlockP.BAMBOO_WOOD, "trapped_bamboo", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_CRIMSON_CHEST = registerCV("trapped_crimson_chest", new EBTrappedChestBlock(EBProperties.BlockP.CRIMSON_WOOD, "trapped_crimson", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_WARPED_CHEST = registerCV("trapped_warped_chest", new EBTrappedChestBlock(EBProperties.BlockP.WARPED_WOOD, "trapped_warped", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_ANCIENT_CHEST = registerCV("trapped_ancient_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, "trapped_ancient", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+    public static final Block TRAPPED_GLOOM_CHEST = registerCV("trapped_gloom_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, "trapped_gloom", () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+
     //CRAFTING TABLES
     public static final Block SPRUCE_CRAFTING_TABLE = registerCT("spruce_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block BIRCH_CRAFTING_TABLE = registerCT("birch_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.GENERIC_WOOD), true);
@@ -893,6 +922,17 @@ public class EBBlocks {
 
     private static Item registerBSBlockItem(String id, Block block) {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new EBBookshelfBlockItem(block, new Item.Settings()));
+    }
+
+    private static Block registerCV(String id, Block block, boolean registerItem) {
+        if (registerItem) {
+            registerregisterCVBlockItem(id, block);
+        }
+        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+    }
+
+    private static Item registerregisterCVBlockItem(String id, Block block) {
+        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new EBChestBlockItem(block, new Item.Settings()));
     }
 
     private static Block registerCT(String id, Block block, boolean registerItem) {

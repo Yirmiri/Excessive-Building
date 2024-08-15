@@ -13,6 +13,7 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_SHELF_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVE_SHELVES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_CRAFTING_TABLE_VARIANTS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_CHEST_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_LADDER_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_POTTERY_SHERDS;
     //public static final ForgeConfigSpec.BooleanValue ENABLE_TERRACOTTA_POTS;
@@ -69,6 +70,10 @@ public class EBConfig {
         ENABLE_CRAFTING_TABLE_VARIANTS = BUILDER
                 .comment("Should crafting table variants be enabled? (default: true)")
                 .define("enableCraftingTableVariants", true);
+
+        ENABLE_CHEST_VARIANTS = BUILDER
+                .comment("Should chest variants be enabled? (default: true)")
+                .define("enableChestVariants", true);
 
         ENABLE_LADDER_VARIANTS = BUILDER
                 .comment("Should ladder variants be enabled? (default: true)")
