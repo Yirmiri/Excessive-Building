@@ -3387,6 +3387,27 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(EBBlocks.GLOOM_CHEST), conditionsFromItem(EBBlocks.GLOOM_CHEST))
                 .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
                 .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_GLOOM_CHEST))));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SANDSTONE_PILLAR, 2)
+                .input('#', EBBlocks.POLISHED_SANDSTONE)
+                .pattern("#")
+                .pattern("#")
+                .criterion(hasItem(EBBlocks.POLISHED_SANDSTONE), conditionsFromItem(EBBlocks.POLISHED_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SANDSTONE_PILLAR)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.RED_SANDSTONE_PILLAR, 2)
+                .input('#', EBBlocks.POLISHED_RED_SANDSTONE)
+                .pattern("#")
+                .pattern("#")
+                .criterion(hasItem(EBBlocks.POLISHED_RED_SANDSTONE), conditionsFromItem(EBBlocks.POLISHED_RED_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.RED_SANDSTONE_PILLAR)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_PILLAR, 2)
+                .input('#', EBBlocks.POLISHED_SOUL_SANDSTONE)
+                .pattern("#")
+                .pattern("#")
+                .criterion(hasItem(EBBlocks.POLISHED_SOUL_SANDSTONE), conditionsFromItem(EBBlocks.POLISHED_SOUL_SANDSTONE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SOUL_SANDSTONE_PILLAR)));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

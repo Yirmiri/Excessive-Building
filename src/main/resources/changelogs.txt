@@ -13,6 +13,7 @@ Version Release v3.2.3 Fabric/Quilt-1.21(.1)
   Fixes
 •   Fixed ancient leaves not dropping anything
 •   Fixed missing texture particle on some almentra statues
+•   Fixed an issue that caused sandstone pillars to be uncraftable via the crafting table
 •   Russian translations should now properly work (@BrickerMoss)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
