@@ -566,6 +566,19 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.TRAPPED_WARPED_CHEST, "Trapped Warped Chest");
         build.add(EBBlocks.TRAPPED_ANCIENT_CHEST, "Trapped Ancient Chest");
         build.add(EBBlocks.TRAPPED_GLOOM_CHEST, "Trapped Gloom Chest");
+        build.add(EBBlocks.PAPER_BLOCK, "Paper Block");
+        build.add(EBBlocks.THIN_PAPER_BLOCK, "Thin Paper Block");
+        build.add(EBBlocks.THIN_DIAGONAL_PAPER_BLOCK, "Thin Diagonal Paper Block");
+        build.add(EBBlocks.THIN_DIVIDED_PAPER_BLOCK, "Thin Divided Paper Block");
+        build.add(EBBlocks.THIN_PAPER_STAIRS, "Thin Paper Stairs");
+        build.add(EBBlocks.THIN_PAPER_VERTICAL_STAIRS, "Thin Paper Vertical Stairs");
+        build.add(EBBlocks.THIN_PAPER_SLAB, "Thin Paper Slab");
+        build.add(EBBlocks.THICK_PAPER_BLOCK, "Thick Paper Block");
+        build.add(EBBlocks.THICK_DIAGONAL_PAPER_BLOCK, "Thick Diagonal Paper Block");
+        build.add(EBBlocks.THICK_DIVIDED_PAPER_BLOCK, "Thick Divided Paper Block");
+        build.add(EBBlocks.THICK_PAPER_STAIRS, "Thick Paper Stairs");
+        build.add(EBBlocks.THICK_PAPER_VERTICAL_STAIRS, "Thick Paper Vertical Stairs");
+        build.add(EBBlocks.THICK_PAPER_SLAB, "Thick Paper Slab");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
@@ -664,6 +677,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.endless.title", "Endless");
         build.add("painting.excessive_building.za_hando.title", "Za Hando");
         build.add("painting.excessive_building.isaac_we_love_you.title", "Isaac We Love You");
+        build.add("painting.excessive_building.terrain.title", "terrain.png");
 
         //PAINTING AUTHORS
         build.add("painting.excessive_building.forgotten_kingdom.author", "Yirmiri");
@@ -695,6 +709,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.endless.author", "Milkyfur");
         build.add("painting.excessive_building.za_hando.author", "Milkyfur");
         build.add("painting.excessive_building.isaac_we_love_you.author", "Milkyfur");
+        build.add("painting.excessive_building.terrain.author", "Yirmiri");
 
         //EFFECTS
         build.add("effect.excessive_building.reaching", "Reaching");

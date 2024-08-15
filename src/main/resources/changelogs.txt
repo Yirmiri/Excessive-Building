@@ -7,13 +7,18 @@ Literally just a secret .txt file of every single update's changelog
 Version Release v3.2.3 Fabric/Quilt-1.21(.1)
 
   Misc Additions
+•   Added thin and thick paper blocks
 •   Added new variants for chests and trapped chests (can be configured)
+•   Added the "Terrain" painting
 •   Added an "Oak" prefix to Chest and Trapped Chest blocks (via built in pack so it can be toggled)
 
   Fixes
+•   Fixed an issue that caused configuration to disable more than what it specified
 •   Fixed ancient leaves not dropping anything
+•   Fixed some slabs only dropping 1 slab when double
 •   Fixed missing texture particle on some almentra statues
 •   Fixed an issue that caused sandstone pillars to be uncraftable via the crafting table
+•   Fixed tuff tiles being missing from the creative inventory
 •   Russian translations should now properly work (@BrickerMoss)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

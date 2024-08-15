@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "excessive_building:block/thin_diagonal_paper_block_west",
+      "uvlock": true
+    },
+    "facing=south": {
+      "model": "excessive_building:block/thin_diagonal_paper_block_east",
+      "uvlock": true
+    },
+    "facing=west": {
+      "model": "excessive_building:block/thin_diagonal_paper_block_west",
+      "uvlock": true
+    },
+    "facing=east": {
+      "model": "excessive_building:block/thin_diagonal_paper_block_east",
+      "uvlock": true
+    }
+  }
+}

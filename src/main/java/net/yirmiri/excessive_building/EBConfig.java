@@ -16,7 +16,6 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_CHEST_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_LADDER_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_POTTERY_SHERDS;
-    //public static final ForgeConfigSpec.BooleanValue ENABLE_TERRACOTTA_POTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_PARTICLE_CANDLES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_ANCIENT_SAPLINGS;
@@ -82,10 +81,6 @@ public class EBConfig {
         ENABLE_POTTERY_SHERDS = BUILDER
                 .comment("Should Excessive Building's pottery sherds be enabled? (default: true)")
                 .define("enablePotterySherds", true);
-
-//        ENABLE_TERRACOTTA_POTS = BUILDER
-//                .comment("Should terracotta pots be enabled? (default: true)")
-//                .define("enableTerracottaPots", true);
 
         ENABLE_PARTICLE_CANDLES = BUILDER
                 .comment("Should candles that produce particles when lit be enabled? (default: true)")

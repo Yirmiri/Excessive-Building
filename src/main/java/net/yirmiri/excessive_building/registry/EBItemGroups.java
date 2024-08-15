@@ -206,6 +206,20 @@ public class EBItemGroups {
                 entries.add(EBBlocks.TRAPPED_WARPED_CHEST);
                 entries.add(EBBlocks.WARPED_LADDER);
 
+                entries.add(EBBlocks.PAPER_BLOCK);
+                entries.add(EBBlocks.THIN_PAPER_BLOCK);
+                entries.add(EBBlocks.THIN_DIAGONAL_PAPER_BLOCK);
+                entries.add(EBBlocks.THIN_DIVIDED_PAPER_BLOCK);
+                entries.add(EBBlocks.THIN_PAPER_STAIRS);
+                entries.add(EBBlocks.THIN_PAPER_VERTICAL_STAIRS);
+                entries.add(EBBlocks.THIN_PAPER_SLAB);
+                entries.add(EBBlocks.THICK_PAPER_BLOCK);
+                entries.add(EBBlocks.THICK_DIAGONAL_PAPER_BLOCK);
+                entries.add(EBBlocks.THICK_DIVIDED_PAPER_BLOCK);
+                entries.add(EBBlocks.THICK_PAPER_STAIRS);
+                entries.add(EBBlocks.THICK_PAPER_VERTICAL_STAIRS);
+                entries.add(EBBlocks.THICK_PAPER_SLAB);
+
                 entries.add(EBBlocks.POLISHED_STONE);
                 entries.add(EBBlocks.POLISHED_STONE_STAIRS);
                 entries.add(EBBlocks.POLISHED_STONE_VERTICAL_STAIRS);
@@ -301,6 +315,12 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BRIMSTONE_PILLAR);
                 entries.add(EBBlocks.BRIMSTONE_LAMP);
                 entries.add(EBBlocks.BRIMSTONE_WINDOW);
+
+                entries.add(EBBlocks.TUFF_TILES);
+                entries.add(EBBlocks.TUFF_TILE_STAIRS);
+                entries.add(EBBlocks.TUFF_TILE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.TUFF_TILE_SLAB);
+                entries.add(EBBlocks.TUFF_TILE_WALL);
 
                 entries.add(EBBlocks.ASPHALT);
                 entries.add(EBBlocks.ASPHALT_STAIRS);

@@ -797,20 +797,37 @@ public class EBBlocks {
     public static final Block ASPHALT_VERTICAL_STAIRS = registerAPVStairs("asphalt_vertical_stairs", new AsphaltVerticalStairsBlock(EBProperties.BlockP.ASPHALT), true);
 
     //NATURE
-    public static final Block ROSE = registerAP("rose", new FlowerBlock(StatusEffects.HEALTH_BOOST, 20, EBProperties.BlockP.ROSE), true);
+    public static final Block ROSE = register("rose", new FlowerBlock(StatusEffects.HEALTH_BOOST, 20, EBProperties.BlockP.ROSE), true);
     public static final Block POTTED_ROSE = register("potted_rose", Blocks.createFlowerPotBlock(EBBlocks.ROSE), false);
-    public static final Block CYAN_ROSE = registerAP("cyan_rose", new FlowerBlock(StatusEffects.INVISIBILITY, 10, EBProperties.BlockP.CYAN_ROSE), true);
+    public static final Block CYAN_ROSE = register("cyan_rose", new FlowerBlock(StatusEffects.INVISIBILITY, 10, EBProperties.BlockP.CYAN_ROSE), true);
     public static final Block POTTED_CYAN_ROSE = register("potted_cyan_rose", Blocks.createFlowerPotBlock(EBBlocks.CYAN_ROSE), false);
-    public static final Block WHITE_ROSE = registerAP("white_rose", new FlowerBlock(StatusEffects.LUCK, 30, EBProperties.BlockP.WHITE_ROSE), true);
+    public static final Block WHITE_ROSE = register("white_rose", new FlowerBlock(StatusEffects.LUCK, 30, EBProperties.BlockP.WHITE_ROSE), true);
     public static final Block POTTED_WHITE_ROSE = register("potted_white_rose", Blocks.createFlowerPotBlock(EBBlocks.WHITE_ROSE), false);
-    public static final Block MOSS_PASTE = registerAP("moss_paste", new GlowLichenBlock(EBProperties.BlockP.MOSS_PASTE), true);
+    public static final Block MOSS_PASTE = register("moss_paste", new GlowLichenBlock(EBProperties.BlockP.MOSS_PASTE), true);
+
+    //PAPER
+    public static final Block PAPER_BLOCK = register("paper_block", new Block(EBProperties.BlockP.PAPER), true);
+
+    public static final Block THIN_PAPER_BLOCK = register("thin_paper_block", new Block(EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_PAPER_STAIRS = register("thin_paper_stairs", new StairsBlock(THIN_PAPER_BLOCK.getDefaultState(), EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_PAPER_SLAB = register("thin_paper_slab", new SlabBlock(EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_PAPER_VERTICAL_STAIRS = registerVStairs("thin_paper_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_DIVIDED_PAPER_BLOCK = register("thin_divided_paper_block", new Block(EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_DIAGONAL_PAPER_BLOCK = register("thin_diagonal_paper_block", new EBHorizontalFacingBlock(EBProperties.BlockP.PAPER), true);
+
+    public static final Block THICK_PAPER_BLOCK = register("thick_paper_block", new Block(EBProperties.BlockP.PAPER), true);
+    public static final Block THICK_PAPER_STAIRS = register("thick_paper_stairs", new StairsBlock(THICK_PAPER_BLOCK.getDefaultState(), EBProperties.BlockP.PAPER), true);
+    public static final Block THICK_PAPER_SLAB = register("thick_paper_slab", new SlabBlock(EBProperties.BlockP.PAPER), true);
+    public static final Block THICK_PAPER_VERTICAL_STAIRS = registerVStairs("thick_paper_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.PAPER), true);
+    public static final Block THICK_DIVIDED_PAPER_BLOCK = register("thick_divided_paper_block", new Block(EBProperties.BlockP.PAPER), true);
+    public static final Block THICK_DIAGONAL_PAPER_BLOCK = register("thick_diagonal_paper_block", new EBHorizontalFacingBlock(EBProperties.BlockP.PAPER), true);
 
     //MISC
-    public static final Block WEEPING_CANDLE = registerAP("weeping_candle", new ParticleCandleBlock(ParticleTypes.CRIMSON_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
-    public static final Block TWISTING_CANDLE = registerAP("twisting_candle", new ParticleCandleBlock(ParticleTypes.WARPED_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
+    public static final Block WEEPING_CANDLE = register("weeping_candle", new ParticleCandleBlock(ParticleTypes.CRIMSON_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
+    public static final Block TWISTING_CANDLE = register("twisting_candle", new ParticleCandleBlock(ParticleTypes.WARPED_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
 
-    public static final Block IRON_GRATE = registerAP("iron_grate", new GrateBlock(EBProperties.BlockP.IRON_GRATE), true);
-    public static final Block GOLD_GRATE = registerAP("gold_grate", new GrateBlock(EBProperties.BlockP.GOLD_GRATE), true);
+    public static final Block IRON_GRATE = register("iron_grate", new GrateBlock(EBProperties.BlockP.IRON_GRATE), true);
+    public static final Block GOLD_GRATE = register("gold_grate", new GrateBlock(EBProperties.BlockP.GOLD_GRATE), true);
     
     public static final Block REACHING_LANTERN = register("reaching_lantern", new ReachingLanternBlock(EBProperties.BlockP.REACHING_LANTERN), true);
 
@@ -822,7 +839,7 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO: CALCITE BLOCKSET, PEDESTALS, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES), BRAZIERS
+    //TODO: CALCITE BLOCKSET, PEDESTALS, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES), BRAZIERS, DYEABLE PAPER BLOCKS
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

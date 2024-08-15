@@ -36,6 +36,7 @@ public class EBPaintingVariants {
     public static final RegistryKey<PaintingVariant> ENDLESS = of("endless");
     public static final RegistryKey<PaintingVariant> ZA_HANDO = of("za_hando");
     public static final RegistryKey<PaintingVariant> ISAAC_WE_LOVE_YOU = of("isaac_we_love_you");
+    public static final RegistryKey<PaintingVariant> TERRAIN = of("terrain");
 
     //CREATIVE
     public static final RegistryKey<PaintingVariant> REBELLIOUS = of("rebellious");
@@ -69,6 +70,7 @@ public class EBPaintingVariants {
             register(registry, ENDLESS, 8, 8);
             register(registry, ZA_HANDO, 1, 1);
             register(registry, ISAAC_WE_LOVE_YOU, 2, 2);
+            register(registry, TERRAIN, 3, 3);
 
             //CREATIVE
             register(registry, REBELLIOUS, 8, 8);

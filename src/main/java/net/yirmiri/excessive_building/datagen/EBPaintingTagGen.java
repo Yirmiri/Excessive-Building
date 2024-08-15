@@ -46,6 +46,7 @@ public class EBPaintingTagGen extends TagProvider<PaintingVariant> {
                 .add(EBPaintingVariants.ENDLESS)
                 .add(EBPaintingVariants.ISAAC_WE_LOVE_YOU)
                 .add(EBPaintingVariants.ZA_HANDO)
+                .add(EBPaintingVariants.TERRAIN)
         ;
 
         this.getOrCreateTagBuilder(EBTags.PaintingVariants.EB_PAINTINGS)
@@ -76,6 +77,7 @@ public class EBPaintingTagGen extends TagProvider<PaintingVariant> {
                 .add(EBPaintingVariants.ENDLESS)
                 .add(EBPaintingVariants.ISAAC_WE_LOVE_YOU)
                 .add(EBPaintingVariants.ZA_HANDO)
+                .add(EBPaintingVariants.TERRAIN)
         ;
     }
 }

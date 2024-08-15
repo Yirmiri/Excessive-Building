@@ -130,6 +130,7 @@ public class EBProperties {
         public static final Block.Settings BONE = FabricBlockSettings.copyOf(Blocks.BONE_BLOCK);
         public static final Block.Settings INDESTRUCTIBLE = FabricBlockSettings.copyOf(Blocks.BEDROCK);
         public static final Block.Settings TERRACOTTA_POT = FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT_SHATTER);
+        public static final Block.Settings PAPER = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.WOOL);
     }
 
     public static class ItemP {

@@ -766,6 +766,20 @@ public class EBModelGen extends FabricModelProvider {
 
         generator.registerBuiltin(EBModels.getEBNamespacedBlock("gloom_chest"),
                 EBBlocks.GLOOM_PLANKS).includeWithoutItem(EBBlocks.GLOOM_CHEST, EBBlocks.TRAPPED_GLOOM_CHEST);
+
+        generator.registerCubeAllModelTexturePool(EBBlocks.PAPER_BLOCK);
+        
+        BlockStateModelGenerator.BlockTexturePool thinPaper = generator.registerCubeAllModelTexturePool(EBBlocks.THIN_PAPER_BLOCK);
+        thinPaper.stairs(EBBlocks.THIN_PAPER_STAIRS);
+        thinPaper.slab(EBBlocks.THIN_PAPER_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.THIN_PAPER_VERTICAL_STAIRS, EBBlocks.THIN_PAPER_BLOCK);
+        generator.registerCubeAllModelTexturePool(EBBlocks.THIN_DIVIDED_PAPER_BLOCK);
+
+        BlockStateModelGenerator.BlockTexturePool thickPaper = generator.registerCubeAllModelTexturePool(EBBlocks.THICK_PAPER_BLOCK);
+        thickPaper.stairs(EBBlocks.THICK_PAPER_STAIRS);
+        thickPaper.slab(EBBlocks.THICK_PAPER_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.THICK_PAPER_VERTICAL_STAIRS, EBBlocks.THICK_PAPER_BLOCK);
+        generator.registerCubeAllModelTexturePool(EBBlocks.THICK_DIVIDED_PAPER_BLOCK);
     }
 
     @Override
@@ -838,53 +852,22 @@ public class EBModelGen extends FabricModelProvider {
 
         public static void registerAlmentraStatueState(BlockStateModelGenerator generator, Block statue, Identifier model, Identifier diagonalModel) {
             generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(statue).coordinate(BlockStateVariantMap.create(AlmentraStatueBlock.ROTATION)
-                    .register(0, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R0))
-
-                    .register(1, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R0))
-
-                    .register(2, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R0))
-
-                    .register(3, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R0))
-
-                    .register(4, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R90))
-
-                    .register(5, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R90))
-
-                    .register(6, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R90))
-
-                    .register(7, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R90))
-
-                    .register(8, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R180))
-
-                    .register(9, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R180))
-
-                    .register(10, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R180))
-
-                    .register(11, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R180))
-
-                    .register(12, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R270))
-
-                    .register(13, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R270))
-
-                    .register(14, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R270))
-
-                    .register(15, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                    .register(0, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R0))
+                    .register(1, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R0))
+                    .register(2, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R0))
+                    .register(3, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R0))
+                    .register(4, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                    .register(5, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                    .register(6, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                    .register(7, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
+                    .register(8, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                    .register(9, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                    .register(10, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                    .register(11, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
+                    .register(12, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                    .register(13, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                    .register(14, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+                    .register(15, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
             ));
         }
 

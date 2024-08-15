@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "@": {
+      "item": "excessive_building:paper_block"
+    }
+  },
+  "pattern": [
+    "@#@",
+    "#@#",
+    "@#@"
+  ],
+  "result": {
+    "count": 5,
+    "id": "excessive_building:thin_paper_block"
+  }
+}

@@ -1,5 +1,18 @@
 {
   "values": [
+    "excessive_building:paper_block",
+    "excessive_building:thin_paper_block",
+    "excessive_building:thin_divided_paper_block",
+    "excessive_building:thin_diagonal_paper_block",
+    "excessive_building:thin_paper_stairs",
+    "excessive_building:thin_paper_vertical_stairs",
+    "excessive_building:thin_paper_slab",
+    "excessive_building:thick_paper_block",
+    "excessive_building:thick_divided_paper_block",
+    "excessive_building:thick_diagonal_paper_block",
+    "excessive_building:thick_paper_stairs",
+    "excessive_building:thick_paper_vertical_stairs",
+    "excessive_building:thick_paper_slab",
     "excessive_building:spruce_chest",
     "excessive_building:birch_chest",
     "excessive_building:jungle_chest",
