@@ -485,8 +485,6 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerSimpleCubeAll(EBBlocks.CRACKED_BRICKS);
         generator.registerSimpleCubeAll(EBBlocks.CRACKED_SMOOTH_BRICKS);
 
-        generator.registerLantern(EBBlocks.REACHING_LANTERN);
-
         EBModels.registerEBBookshelf(generator, EBBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
         EBModels.registerEBBookshelf(generator, EBBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);
         EBModels.registerEBBookshelf(generator, EBBlocks.JUNGLE_BOOKSHELF, Blocks.JUNGLE_PLANKS);

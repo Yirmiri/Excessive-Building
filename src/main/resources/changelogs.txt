@@ -12,6 +12,10 @@ Version Release v3.2.3 Fabric/Quilt-1.21(.1)
 •   Added the "Terrain" painting
 •   Added an "Oak" prefix to Chest and Trapped Chest blocks (via built in pack so it can be toggled)
 
+  Changes
+•   Updated the texture and model of reaching lanterns
+•   Updated the recipe for reaching lanterns
+
   Fixes
 •   Fixed an issue that caused configuration to disable more than what it specified
 •   Fixed ancient leaves not dropping anything
@@ -19,6 +23,7 @@ Version Release v3.2.3 Fabric/Quilt-1.21(.1)
 •   Fixed missing texture particle on some almentra statues
 •   Fixed an issue that caused sandstone pillars to be uncraftable via the crafting table
 •   Fixed tuff tiles being missing from the creative inventory
+•   Fixed missing translations for reaching lanterns
 •   Russian translations should now properly work (@BrickerMoss)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

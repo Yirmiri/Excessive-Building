@@ -56,7 +56,6 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLASS_JAR_OF_FIRE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLASS_JAR_OF_SOUL_FIRE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_SEEDS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.REACHING_LANTERN, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ROSE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.POTTED_ROSE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.CYAN_ROSE, RenderLayer.getCutout());
@@ -85,6 +84,7 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.AQUA_SEA_GLASS_PANE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.SCARLET_SEA_GLASS_PANE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.FUCHSIA_SEA_GLASS_PANE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.REACHING_LANTERN, RenderLayer.getTranslucent());
 
         //PARTICLE
         ParticleFactoryRegistry.getInstance().register(EBParticles.ANCIENT_PARTICLE, FallingLeafParticle.Factory::new);

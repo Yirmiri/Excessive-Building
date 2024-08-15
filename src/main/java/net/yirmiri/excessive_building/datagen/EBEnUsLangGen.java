@@ -639,6 +639,8 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("tooltip.block.glow_removal", "Removes it's Glow");
         build.add("tooltip.block.when_powered", "When Powered by Redstone:");
         build.add("tooltip.block.soul_magma", "Creates a Lifting Bubble Column");
+        build.add("tooltip.block.player_nearby", "When Nearby:");
+        build.add("tooltip.block.increases_block_reach", "Increases Interaction Reach");
 
         //MISC
         build.add("excessive_building.container.kiln", "Kiln");

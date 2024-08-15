@@ -2,17 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "!": {
+      "item": "minecraft:amethyst_shard"
+    },
     "#": {
-      "item": "excessive_building:ancient_fruit"
+      "item": "minecraft:iron_ingot"
     },
     "@": {
-      "item": "minecraft:lantern"
+      "item": "excessive_building:ancient_fruit"
     }
   },
   "pattern": [
-    "#",
-    "@",
-    "#"
+    "###",
+    "!@!",
+    "!!!"
   ],
   "result": {
     "count": 1,

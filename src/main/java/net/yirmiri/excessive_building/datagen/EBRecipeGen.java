@@ -2449,10 +2449,10 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SMOOTH_HERRINGBONE_BRICKS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.REACHING_LANTERN, 1)
-                .input('#', EBItems.ANCIENT_FRUIT).input('@', Items.LANTERN)
-                .pattern("#")
-                .pattern("@")
-                .pattern("#")
+                .input('@', EBItems.ANCIENT_FRUIT).input('#', Items.IRON_INGOT).input('!', Items.AMETHYST_SHARD)
+                .pattern("###")
+                .pattern("!@!")
+                .pattern("!!!")
                 .criterion(hasItem(EBItems.ANCIENT_FRUIT), conditionsFromItem(EBItems.ANCIENT_FRUIT))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.REACHING_LANTERN)));
 

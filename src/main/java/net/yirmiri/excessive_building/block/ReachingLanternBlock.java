@@ -18,6 +18,7 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -32,21 +33,24 @@ import net.yirmiri.excessive_building.registry.EBBlockEntities;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ReachingLanternBlock extends BlockWithEntity implements BlockEntityProvider, Waterloggable {
     public static final MapCodec<ReachingLanternBlock> CODEC = createCodec(ReachingLanternBlock::new);
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final BooleanProperty HANGING = Properties.HANGING;
 
-    protected static final VoxelShape STANDING_SHAPE = VoxelShapes.union(
-            Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 7.0, 11.0),
-            Block.createCuboidShape(6.0, 7.0, 6.0, 10.0, 9.0, 10.0)
-    );
+    protected static final VoxelShape STANDING_SHAPE = Stream.of(
+            Block.createCuboidShape(5.5, 0.33, 5.5, 10.5, 5.33, 10.5),
+            Block.createCuboidShape(5, 6.33, 5, 11, 8.33, 11),
+            Block.createCuboidShape(7, 5.33, 7, 9, 6.33, 9)
+    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
-    protected static final VoxelShape HANGING_SHAPE = VoxelShapes.union(
-            Block.createCuboidShape(5.0, 1.0, 5.0, 11.0, 8.0, 11.0),
-            Block.createCuboidShape(6.0, 8.0, 6.0, 10.0, 10.0, 10.0)
-    );
+    protected static final VoxelShape HANGING_SHAPE = Stream.of(
+            Block.createCuboidShape(5.5, 4, 5.5, 10.5, 9, 10.5),
+            Block.createCuboidShape(5, 10, 5, 11, 12, 11),
+            Block.createCuboidShape(7, 9, 7, 9, 10, 9)
+    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
     public ReachingLanternBlock(Settings settings) {
         super(settings);
