@@ -1,7 +1,6 @@
 package net.yirmiri.excessive_building.util;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
@@ -14,13 +13,12 @@ import net.yirmiri.excessive_building.registry.EBItems;
 
 public class EBLootModifiers {
     //MINECRAFT
-    public static final Identifier PLAYER = Identifier.ofVanilla("entities/player");
     public static final Identifier SNIFFER_DIGGING = Identifier.ofVanilla("gameplay/sniffer_digging");
-    public static final Identifier TRAIL_RUINS_RARE = Identifier.ofVanilla("gameplay/archaeology/trail_ruins_rare");
-    public static final Identifier DESERT_PYRAMID = Identifier.ofVanilla("gameplay/archaeology/desert_pyramid");
-    public static final Identifier DESERT_WELL = Identifier.ofVanilla("gameplay/archaeology/desert_well");
-    public static final Identifier OCEAN_RUIN_COLD = Identifier.ofVanilla("gameplay/archaeology/ocean_ruin_cold");
-    public static final Identifier OCEAN_RUIN_WARM = Identifier.ofVanilla("gameplay/archaeology/ocean_ruin_warm");
+    public static final Identifier TRAIL_RUINS_RARE = Identifier.ofVanilla("archaeology/trail_ruins_rare");
+    public static final Identifier DESERT_PYRAMID = Identifier.ofVanilla("archaeology/desert_pyramid");
+    public static final Identifier DESERT_WELL = Identifier.ofVanilla("archaeology/desert_well");
+    public static final Identifier OCEAN_RUIN_COLD = Identifier.ofVanilla("archaeology/ocean_ruin_cold");
+    public static final Identifier OCEAN_RUIN_WARM = Identifier.ofVanilla("archaeology/ocean_ruin_warm");
 
     public static float trailRuinsRareSherdChance = 0.083F; //8.3%
     public static float desertPyramidSherdChance = 0.125F; //12.5%

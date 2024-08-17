@@ -18,6 +18,7 @@ Version Release v3.2.3 Fabric/Quilt-1.21(.1)
 •   Updated the recipe for reaching lanterns
 
   Fixes
+•   Fixed an issue that caused custom sherds and gloom seeds to not appear from loot tables
 •   Fixed an issue that caused configuration to disable more than what it specified
 •   Fixed ancient leaves not dropping anything
 •   Fixed some slabs only dropping 1 slab when double
