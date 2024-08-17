@@ -3,7 +3,10 @@ package net.yirmiri.excessive_building.block.entity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.ChestBlockEntity;
+import net.minecraft.block.entity.EnderChestBlockEntity;
+import net.minecraft.block.entity.TrappedChestBlockEntity;
 import net.minecraft.block.enums.ChestType;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.RenderLayer;
@@ -21,6 +24,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.RotationAxis;
 import net.minecraft.world.World;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.block.EBChestBlock;
 
 import java.util.Calendar;
 
@@ -41,21 +45,21 @@ public class EBChestBlockEntityRenderer extends ChestBlockEntityRenderer<EBChest
         super(ctx);
         Calendar calendar = Calendar.getInstance();
         if (calendar.get(2) + 1 == 12 && calendar.get(5) >= 24 && calendar.get(5) <= 26) {
-            this.christmas = true;
+            christmas = true;
         }
 
         ModelPart modelPart = ctx.getLayerModelPart(EntityModelLayers.CHEST);
-        this.singleChestBase = modelPart.getChild("bottom");
-        this.singleChestLid = modelPart.getChild("lid");
-        this.singleChestLatch = modelPart.getChild("lock");
+        singleChestBase = modelPart.getChild("bottom");
+        singleChestLid = modelPart.getChild("lid");
+        singleChestLatch = modelPart.getChild("lock");
         ModelPart modelPart2 = ctx.getLayerModelPart(EntityModelLayers.DOUBLE_CHEST_LEFT);
-        this.doubleChestLeftBase = modelPart2.getChild("bottom");
-        this.doubleChestLeftLid = modelPart2.getChild("lid");
-        this.doubleChestLeftLatch = modelPart2.getChild("lock");
+        doubleChestLeftBase = modelPart2.getChild("bottom");
+        doubleChestLeftLid = modelPart2.getChild("lid");
+        doubleChestLeftLatch = modelPart2.getChild("lock");
         ModelPart modelPart3 = ctx.getLayerModelPart(EntityModelLayers.DOUBLE_CHEST_RIGHT);
-        this.doubleChestRightBase = modelPart3.getChild("bottom");
-        this.doubleChestRightLid = modelPart3.getChild("lid");
-        this.doubleChestRightLatch = modelPart3.getChild("lock");
+        doubleChestRightBase = modelPart3.getChild("bottom");
+        doubleChestRightLid = modelPart3.getChild("lid");
+        doubleChestRightLatch = modelPart3.getChild("lock");
     }
 
     public static SpriteIdentifier createChestTextureId(String path) {
@@ -63,23 +67,21 @@ public class EBChestBlockEntityRenderer extends ChestBlockEntityRenderer<EBChest
     }
 
     private static SpriteIdentifier getChestTextureId(ChestType type, SpriteIdentifier single, SpriteIdentifier left, SpriteIdentifier right) {
-        switch (type) {
-            case LEFT:
-                return left;
-            case RIGHT:
-                return right;
-            case SINGLE:
-            default:
-                return single;
-        }
+        return switch (type) {
+            case LEFT -> left;
+            case RIGHT -> right;
+            default -> single;
+        };
     }
 
-    private SpriteIdentifier getChestTextureId(EBChestBlockEntity entity, ChestType chestType) {
+    private SpriteIdentifier getChestTexture(EBChestBlockEntity entity, ChestType chestType, WoodType woodType) {
         if (christmas) {
             return TexturedRenderLayers.getChestTextureId(entity, chestType, true);
         } else {
-            return getChestTextureId(chestType, createChestTextureId(EBChestBlockEntity.getVariant() + "_left"),
-                    createChestTextureId(EBChestBlockEntity.getVariant() + "_right"), createChestTextureId(EBChestBlockEntity.getVariant()));
+            return getChestTextureId(chestType,
+                    createChestTextureId(woodType.name()),
+                    createChestTextureId(woodType.name() + "_left"),
+                    createChestTextureId(woodType.name() + "_right"));
         }
     }
 
@@ -89,6 +91,7 @@ public class EBChestBlockEntityRenderer extends ChestBlockEntityRenderer<EBChest
         boolean bl = world != null;
         BlockState blockState = bl ? entity.getCachedState() : Blocks.CHEST.getDefaultState().with(ChestBlock.FACING, Direction.SOUTH);
         ChestType chestType = blockState.contains(ChestBlock.CHEST_TYPE) ? blockState.get(ChestBlock.CHEST_TYPE) : ChestType.SINGLE;
+        WoodType woodType = EBChestBlock.getType(blockState.getBlock());
         if (blockState.getBlock() instanceof AbstractChestBlock<?> abstractChestBlock) {
             boolean bl2 = chestType != ChestType.SINGLE;
             matrices.push();
@@ -107,16 +110,16 @@ public class EBChestBlockEntityRenderer extends ChestBlockEntityRenderer<EBChest
             g = 1.0F - g;
             g = 1.0F - g * g * g;
             int i = propertySource.apply(new LightmapCoordinatesRetriever<>()).applyAsInt(light);
-            SpriteIdentifier spriteIdentifier = this.getChestTextureId(entity, chestType);
+            SpriteIdentifier spriteIdentifier = getChestTexture(entity, chestType, woodType);
             VertexConsumer vertexConsumer = spriteIdentifier.getVertexConsumer(vertexConsumers, RenderLayer::getEntityCutout);
             if (bl2) {
                 if (chestType == ChestType.LEFT) {
-                    this.render(matrices, vertexConsumer, this.doubleChestLeftLid, this.doubleChestLeftLatch, this.doubleChestLeftBase, g, i, overlay);
+                    render(matrices, vertexConsumer, doubleChestLeftLid, doubleChestLeftLatch, doubleChestLeftBase, g, i, overlay);
                 } else {
-                    this.render(matrices, vertexConsumer, this.doubleChestRightLid, this.doubleChestRightLatch, this.doubleChestRightBase, g, i, overlay);
+                    render(matrices, vertexConsumer, doubleChestRightLid, doubleChestRightLatch, doubleChestRightBase, g, i, overlay);
                 }
             } else {
-                this.render(matrices, vertexConsumer, this.singleChestLid, this.singleChestLatch, this.singleChestBase, g, i, overlay);
+                render(matrices, vertexConsumer, singleChestLid, singleChestLatch, singleChestBase, g, i, overlay);
             }
 
             matrices.pop();

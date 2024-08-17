@@ -562,6 +562,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.THICK_PAPER_STAIRS);
         addDrop(EBBlocks.THICK_PAPER_VERTICAL_STAIRS);
         addDrop(EBBlocks.THICK_PAPER_SLAB, EBBlocks.THICK_PAPER_SLAB);
+        addDrop(EBBlocks.AMETHYST_LAMP);
     }
 
     private void addDyedBlockDrops() {

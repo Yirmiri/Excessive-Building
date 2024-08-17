@@ -936,6 +936,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WHITE_ROSE);
                 entries.add(EBBlocks.MOSS_PASTE);
 
+                entries.add(EBBlocks.AMETHYST_LAMP);
                 entries.add(EBBlocks.REACHING_LANTERN);
                 entries.add(EBBlocks.WEEPING_CANDLE);
                 entries.add(EBBlocks.TWISTING_CANDLE);

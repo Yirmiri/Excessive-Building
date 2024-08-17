@@ -1,4 +1,4 @@
-// 1.21	2024-08-15T16:19:12.1878321	Excessive Building/Block Loot Tables
+// 1.21	2024-08-17T15:57:38.8741333	Excessive Building/Block Loot Tables
 c96f77f942fae41eee7e23c591438cdabe83ef29 data\excessive_building\loot_table\blocks\orange_almentra_statue.json
 a3ca100494cff082f18fd0e700a43438b27d7cb9 data\excessive_building\loot_table\blocks\magenta_almentra_brick_stairs.json
 3c06cb2d1f4209b22bee6be5b0a2c464361cff51 data\excessive_building\loot_table\blocks\yellow_almentra_slab.json
@@ -604,6 +604,7 @@ fb58ef74d33d96f87bcc548fb34ceed57f14ac7e data\excessive_building\loot_table\bloc
 8f24cc580011e7545d4cdbc41cfa9d50c50bcdfa data\excessive_building\loot_table\blocks\purple_almentra_brick_stairs.json
 4b15c16d5771167f12f21d2de35e90bbed51fe68 data\excessive_building\loot_table\blocks\terracotta_tile_stairs.json
 bdedb08de0aa9ba8c3032f50cb2ef852a4fdad2a data\excessive_building\loot_table\blocks\purple_knitted_wool.json
+3df69fb1d31967d6c115de330bafc59b7c4612b9 data\excessive_building\loot_table\blocks\amethyst_lamp.json
 4b3a2a03d2ac49df3703210a3ba0a65376b7a218 data\excessive_building\loot_table\blocks\smooth_soul_sandstone_vertical_stairs.json
 d298555e6573313ef23f67565fd8de9f8bf97866 data\excessive_building\loot_table\blocks\weathered_cut_copper_vertical_stairs.json
 c9128d517100e257f292686f1d82b527d81bba54 data\excessive_building\loot_table\blocks\red_sandstone_tile_vertical_stairs.json

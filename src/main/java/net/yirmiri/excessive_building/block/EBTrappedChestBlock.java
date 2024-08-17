@@ -1,6 +1,7 @@
 package net.yirmiri.excessive_building.block;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.block.WoodType;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.ChestBlockEntity;
@@ -18,9 +19,8 @@ import net.yirmiri.excessive_building.block.entity.EBTrappedChestBlockEntity;
 import java.util.function.Supplier;
 
 public class EBTrappedChestBlock extends EBChestBlock {
-    public EBTrappedChestBlock(Settings settings, String type, Supplier<BlockEntityType<? extends ChestBlockEntity>> supplier) {
+    public EBTrappedChestBlock(Settings settings, WoodType type, Supplier<BlockEntityType<? extends ChestBlockEntity>> supplier) {
         super(settings, type, supplier);
-        EBChestBlock.type = type;
     }
 
     protected Stat<Identifier> getOpenStat() {

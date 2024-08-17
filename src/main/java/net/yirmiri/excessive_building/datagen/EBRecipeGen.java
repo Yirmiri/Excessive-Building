@@ -3495,6 +3495,14 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("@#@")
                 .criterion(hasItem(EBBlocks.THICK_PAPER_BLOCK), conditionsFromItem(EBBlocks.THICK_PAPER_BLOCK))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.THICK_DIVIDED_PAPER_BLOCK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.AMETHYST_LAMP, 2)
+                .input('#', Items.AMETHYST_SHARD).input('@', Items.IRON_INGOT).input('!', Items.IRON_NUGGET)
+                .pattern("@!@")
+                .pattern("###")
+                .pattern("@!@")
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.AMETHYST_LAMP)));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

@@ -1,7 +1,9 @@
 package net.yirmiri.excessive_building.block;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ChestBlock;
+import net.minecraft.block.WoodType;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.ChestBlockEntity;
@@ -13,11 +15,11 @@ import net.yirmiri.excessive_building.block.entity.EBChestBlockEntity;
 import java.util.function.Supplier;
 
 public class EBChestBlock extends ChestBlock {
-    public static String type;
+    private final WoodType type;
 
-    public EBChestBlock(Settings settings, String type, Supplier<BlockEntityType<? extends ChestBlockEntity>> supplier) {
+    public EBChestBlock(Settings settings, WoodType type, Supplier<BlockEntityType<? extends ChestBlockEntity>> supplier) {
         super(settings, supplier);
-        EBChestBlock.type = type;
+        this.type = type;
     }
 
     @Override
@@ -30,7 +32,17 @@ public class EBChestBlock extends ChestBlock {
         return EBConfig.ENABLE_CHEST_VARIANTS.get();
     }
 
-    public static String getType() {
-        return EBChestBlock.type;
+    public WoodType getType() {
+        return this.type;
+    }
+
+    public static WoodType getType(Block block) {
+        WoodType type;
+        if (block instanceof EBChestBlock) {
+            type = ((EBChestBlock)block).getType();
+        } else {
+            type = WoodType.OAK;
+        }
+        return type;
     }
 }

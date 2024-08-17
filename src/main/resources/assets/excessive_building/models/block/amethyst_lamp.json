@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "excessive_building:block/amethyst_lamp_top",
+    "east": "excessive_building:block/amethyst_lamp",
+    "north": "excessive_building:block/amethyst_lamp",
+    "particle": "excessive_building:block/amethyst_lamp",
+    "south": "excessive_building:block/amethyst_lamp",
+    "up": "excessive_building:block/amethyst_lamp_top",
+    "west": "excessive_building:block/amethyst_lamp"
+  }
+}

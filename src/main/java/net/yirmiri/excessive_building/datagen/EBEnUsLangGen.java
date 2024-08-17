@@ -579,6 +579,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.THICK_PAPER_STAIRS, "Thick Paper Stairs");
         build.add(EBBlocks.THICK_PAPER_VERTICAL_STAIRS, "Thick Paper Vertical Stairs");
         build.add(EBBlocks.THICK_PAPER_SLAB, "Thick Paper Slab");
+        build.add(EBBlocks.AMETHYST_LAMP, "Amethyst Lamp");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
