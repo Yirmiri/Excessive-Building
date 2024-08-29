@@ -3230,165 +3230,165 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
                 .offerTo(exporter, Identifier.of(getRecipeName(Items.BUNDLE)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_CHEST, 1)
-                .input('#', Items.SPRUCE_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.SPRUCE_PLANKS), conditionsFromItem(Items.SPRUCE_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SPRUCE_CHEST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_CHEST, 1)
-                .input('#', Items.CRIMSON_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.CRIMSON_PLANKS), conditionsFromItem(Items.CRIMSON_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CRIMSON_CHEST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.WARPED_CHEST, 1)
-                .input('#', Items.WARPED_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.WARPED_PLANKS), conditionsFromItem(Items.WARPED_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WARPED_CHEST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_CHEST, 1)
-                .input('#', Items.CHERRY_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.CHERRY_PLANKS), conditionsFromItem(Items.CHERRY_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHERRY_CHEST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_CHEST, 1)
-                .input('#', Items.MANGROVE_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.MANGROVE_PLANKS), conditionsFromItem(Items.MANGROVE_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MANGROVE_CHEST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_CHEST, 1)
-                .input('#', Items.DARK_OAK_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.DARK_OAK_PLANKS), conditionsFromItem(Items.DARK_OAK_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_OAK_CHEST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_CHEST, 1)
-                .input('#', Items.ACACIA_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.ACACIA_PLANKS), conditionsFromItem(Items.ACACIA_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ACACIA_CHEST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_CHEST, 1)
-                .input('#', Items.JUNGLE_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.JUNGLE_PLANKS), conditionsFromItem(Items.JUNGLE_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.JUNGLE_CHEST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_CHEST, 1)
-                .input('#', Items.BIRCH_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.BIRCH_PLANKS), conditionsFromItem(Items.BIRCH_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BIRCH_CHEST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_CHEST, 1)
-                .input('#', EBBlocks.ANCIENT_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_CHEST)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GLOOM_CHEST, 1)
-                .input('#', EBBlocks.GLOOM_PLANKS)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_CHEST)));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_SPRUCE_CHEST, 1)
-                .input(EBBlocks.SPRUCE_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.SPRUCE_CHEST), conditionsFromItem(EBBlocks.SPRUCE_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_SPRUCE_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_BIRCH_CHEST, 1)
-                .input(EBBlocks.BIRCH_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.BIRCH_CHEST), conditionsFromItem(EBBlocks.BIRCH_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_BIRCH_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_JUNGLE_CHEST, 1)
-                .input(EBBlocks.JUNGLE_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.JUNGLE_CHEST), conditionsFromItem(EBBlocks.JUNGLE_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_JUNGLE_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_ACACIA_CHEST, 1)
-                .input(EBBlocks.ACACIA_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.ACACIA_CHEST), conditionsFromItem(EBBlocks.ACACIA_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_ACACIA_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_DARK_OAK_CHEST, 1)
-                .input(EBBlocks.DARK_OAK_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.DARK_OAK_CHEST), conditionsFromItem(EBBlocks.DARK_OAK_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_DARK_OAK_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_MANGROVE_CHEST, 1)
-                .input(EBBlocks.MANGROVE_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.MANGROVE_CHEST), conditionsFromItem(EBBlocks.MANGROVE_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_MANGROVE_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_CHERRY_CHEST, 1)
-                .input(EBBlocks.CHERRY_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.CHERRY_CHEST), conditionsFromItem(EBBlocks.CHERRY_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_CHERRY_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_BAMBOO_CHEST, 1)
-                .input(EBBlocks.BAMBOO_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.BAMBOO_CHEST), conditionsFromItem(EBBlocks.BAMBOO_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_BAMBOO_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_WARPED_CHEST, 1)
-                .input(EBBlocks.WARPED_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.WARPED_CHEST), conditionsFromItem(EBBlocks.WARPED_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_WARPED_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_CRIMSON_CHEST, 1)
-                .input(EBBlocks.CRIMSON_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.CRIMSON_CHEST), conditionsFromItem(EBBlocks.CRIMSON_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_CRIMSON_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_ANCIENT_CHEST, 1)
-                .input(EBBlocks.ANCIENT_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.ANCIENT_CHEST), conditionsFromItem(EBBlocks.ANCIENT_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_ANCIENT_CHEST))));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_GLOOM_CHEST, 1)
-                .input(EBBlocks.GLOOM_CHEST).input(Items.TRIPWIRE_HOOK)
-                .criterion(hasItem(EBBlocks.GLOOM_CHEST), conditionsFromItem(EBBlocks.GLOOM_CHEST))
-                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_GLOOM_CHEST))));
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_CHEST, 1)
+//                .input('#', Items.SPRUCE_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(Items.SPRUCE_PLANKS), conditionsFromItem(Items.SPRUCE_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SPRUCE_CHEST)));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_CHEST, 1)
+//                .input('#', Items.CRIMSON_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(Items.CRIMSON_PLANKS), conditionsFromItem(Items.CRIMSON_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CRIMSON_CHEST)));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.WARPED_CHEST, 1)
+//                .input('#', Items.WARPED_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(Items.WARPED_PLANKS), conditionsFromItem(Items.WARPED_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WARPED_CHEST)));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_CHEST, 1)
+//                .input('#', Items.CHERRY_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(Items.CHERRY_PLANKS), conditionsFromItem(Items.CHERRY_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHERRY_CHEST)));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_CHEST, 1)
+//                .input('#', Items.MANGROVE_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(Items.MANGROVE_PLANKS), conditionsFromItem(Items.MANGROVE_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MANGROVE_CHEST)));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_CHEST, 1)
+//                .input('#', Items.DARK_OAK_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(Items.DARK_OAK_PLANKS), conditionsFromItem(Items.DARK_OAK_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_OAK_CHEST)));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_CHEST, 1)
+//                .input('#', Items.ACACIA_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(Items.ACACIA_PLANKS), conditionsFromItem(Items.ACACIA_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ACACIA_CHEST)));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_CHEST, 1)
+//                .input('#', Items.JUNGLE_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(Items.JUNGLE_PLANKS), conditionsFromItem(Items.JUNGLE_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.JUNGLE_CHEST)));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_CHEST, 1)
+//                .input('#', Items.BIRCH_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(Items.BIRCH_PLANKS), conditionsFromItem(Items.BIRCH_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BIRCH_CHEST)));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_CHEST, 1)
+//                .input('#', EBBlocks.ANCIENT_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_CHEST)));
+//
+//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GLOOM_CHEST, 1)
+//                .input('#', EBBlocks.GLOOM_PLANKS)
+//                .pattern("###")
+//                .pattern("# #")
+//                .pattern("###")
+//                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_CHEST)));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_SPRUCE_CHEST, 1)
+//                .input(EBBlocks.SPRUCE_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.SPRUCE_CHEST), conditionsFromItem(EBBlocks.SPRUCE_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_SPRUCE_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_BIRCH_CHEST, 1)
+//                .input(EBBlocks.BIRCH_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.BIRCH_CHEST), conditionsFromItem(EBBlocks.BIRCH_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_BIRCH_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_JUNGLE_CHEST, 1)
+//                .input(EBBlocks.JUNGLE_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.JUNGLE_CHEST), conditionsFromItem(EBBlocks.JUNGLE_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_JUNGLE_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_ACACIA_CHEST, 1)
+//                .input(EBBlocks.ACACIA_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.ACACIA_CHEST), conditionsFromItem(EBBlocks.ACACIA_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_ACACIA_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_DARK_OAK_CHEST, 1)
+//                .input(EBBlocks.DARK_OAK_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.DARK_OAK_CHEST), conditionsFromItem(EBBlocks.DARK_OAK_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_DARK_OAK_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_MANGROVE_CHEST, 1)
+//                .input(EBBlocks.MANGROVE_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.MANGROVE_CHEST), conditionsFromItem(EBBlocks.MANGROVE_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_MANGROVE_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_CHERRY_CHEST, 1)
+//                .input(EBBlocks.CHERRY_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.CHERRY_CHEST), conditionsFromItem(EBBlocks.CHERRY_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_CHERRY_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_BAMBOO_CHEST, 1)
+//                .input(EBBlocks.BAMBOO_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.BAMBOO_CHEST), conditionsFromItem(EBBlocks.BAMBOO_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_BAMBOO_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_WARPED_CHEST, 1)
+//                .input(EBBlocks.WARPED_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.WARPED_CHEST), conditionsFromItem(EBBlocks.WARPED_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_WARPED_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_CRIMSON_CHEST, 1)
+//                .input(EBBlocks.CRIMSON_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.CRIMSON_CHEST), conditionsFromItem(EBBlocks.CRIMSON_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_CRIMSON_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_ANCIENT_CHEST, 1)
+//                .input(EBBlocks.ANCIENT_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.ANCIENT_CHEST), conditionsFromItem(EBBlocks.ANCIENT_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_ANCIENT_CHEST))));
+//
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_GLOOM_CHEST, 1)
+//                .input(EBBlocks.GLOOM_CHEST).input(Items.TRIPWIRE_HOOK)
+//                .criterion(hasItem(EBBlocks.GLOOM_CHEST), conditionsFromItem(EBBlocks.GLOOM_CHEST))
+//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
+//                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TRAPPED_GLOOM_CHEST))));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SANDSTONE_PILLAR, 2)
                 .input('#', EBBlocks.POLISHED_SANDSTONE)

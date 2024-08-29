@@ -633,32 +633,32 @@ public class EBBlocks {
     public static final Block GLOOM_LADDER = registerLadder("gloom_ladder", new EBLadderBlock(EBProperties.BlockP.GLOOM_LADDER), true);
 
     //CHESTS
-    public static final Block SPRUCE_CHEST = registerCV("spruce_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.SPRUCE, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block BIRCH_CHEST = registerCV("birch_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.BIRCH, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block JUNGLE_CHEST = registerCV("jungle_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.JUNGLE, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block ACACIA_CHEST = registerCV("acacia_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.ACACIA, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block DARK_OAK_CHEST = registerCV("dark_oak_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.DARK_OAK, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block MANGROVE_CHEST = registerCV("mangrove_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.MANGROVE, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block CHERRY_CHEST = registerCV("cherry_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, WoodType.CHERRY, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block BAMBOO_CHEST = registerCV("bamboo_chest", new EBChestBlock(EBProperties.BlockP.BAMBOO_WOOD, WoodType.BAMBOO, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block CRIMSON_CHEST = registerCV("crimson_chest", new EBChestBlock(EBProperties.BlockP.CRIMSON_WOOD, WoodType.CRIMSON, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block WARPED_CHEST = registerCV("warped_chest", new EBChestBlock(EBProperties.BlockP.WARPED_WOOD, WoodType.WARPED, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block ANCIENT_CHEST = registerCV("ancient_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.ANCIENT, () -> EBBlockEntities.EB_CHEST), true);
-    public static final Block GLOOM_CHEST = registerCV("gloom_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.GLOOM, () -> EBBlockEntities.EB_CHEST), true);
-
-    //TRAPPED CHESTS
-    public static final Block TRAPPED_SPRUCE_CHEST = registerCV("trapped_spruce_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.SPRUCE, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_BIRCH_CHEST = registerCV("trapped_birch_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.BIRCH, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_JUNGLE_CHEST = registerCV("trapped_jungle_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.JUNGLE, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_ACACIA_CHEST = registerCV("trapped_acacia_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.ACACIA, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_DARK_OAK_CHEST = registerCV("trapped_dark_oak_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.DARK_OAK, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_MANGROVE_CHEST = registerCV("trapped_mangrove_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.MANGROVE, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_CHERRY_CHEST = registerCV("trapped_cherry_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, WoodType.CHERRY, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_BAMBOO_CHEST = registerCV("trapped_bamboo_chest", new EBTrappedChestBlock(EBProperties.BlockP.BAMBOO_WOOD, WoodType.BAMBOO, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_CRIMSON_CHEST = registerCV("trapped_crimson_chest", new EBTrappedChestBlock(EBProperties.BlockP.CRIMSON_WOOD, WoodType.CRIMSON, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_WARPED_CHEST = registerCV("trapped_warped_chest", new EBTrappedChestBlock(EBProperties.BlockP.WARPED_WOOD, WoodType.WARPED, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_ANCIENT_CHEST = registerCV("trapped_ancient_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.ANCIENT, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-    public static final Block TRAPPED_GLOOM_CHEST = registerCV("trapped_gloom_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.GLOOM, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block SPRUCE_CHEST = registerCV("spruce_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.SPRUCE, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block BIRCH_CHEST = registerCV("birch_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.BIRCH, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block JUNGLE_CHEST = registerCV("jungle_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.JUNGLE, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block ACACIA_CHEST = registerCV("acacia_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.ACACIA, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block DARK_OAK_CHEST = registerCV("dark_oak_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.DARK_OAK, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block MANGROVE_CHEST = registerCV("mangrove_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.MANGROVE, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block CHERRY_CHEST = registerCV("cherry_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, WoodType.CHERRY, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block BAMBOO_CHEST = registerCV("bamboo_chest", new EBChestBlock(EBProperties.BlockP.BAMBOO_WOOD, WoodType.BAMBOO, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block CRIMSON_CHEST = registerCV("crimson_chest", new EBChestBlock(EBProperties.BlockP.CRIMSON_WOOD, WoodType.CRIMSON, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block WARPED_CHEST = registerCV("warped_chest", new EBChestBlock(EBProperties.BlockP.WARPED_WOOD, WoodType.WARPED, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block ANCIENT_CHEST = registerCV("ancient_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.ANCIENT, () -> EBBlockEntities.EB_CHEST), true);
+//    public static final Block GLOOM_CHEST = registerCV("gloom_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.GLOOM, () -> EBBlockEntities.EB_CHEST), true);
+//
+//    //TRAPPED CHESTS
+//    public static final Block TRAPPED_SPRUCE_CHEST = registerCV("trapped_spruce_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.SPRUCE, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_BIRCH_CHEST = registerCV("trapped_birch_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.BIRCH, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_JUNGLE_CHEST = registerCV("trapped_jungle_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.JUNGLE, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_ACACIA_CHEST = registerCV("trapped_acacia_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.ACACIA, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_DARK_OAK_CHEST = registerCV("trapped_dark_oak_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.DARK_OAK, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_MANGROVE_CHEST = registerCV("trapped_mangrove_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.MANGROVE, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_CHERRY_CHEST = registerCV("trapped_cherry_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, WoodType.CHERRY, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_BAMBOO_CHEST = registerCV("trapped_bamboo_chest", new EBTrappedChestBlock(EBProperties.BlockP.BAMBOO_WOOD, WoodType.BAMBOO, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_CRIMSON_CHEST = registerCV("trapped_crimson_chest", new EBTrappedChestBlock(EBProperties.BlockP.CRIMSON_WOOD, WoodType.CRIMSON, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_WARPED_CHEST = registerCV("trapped_warped_chest", new EBTrappedChestBlock(EBProperties.BlockP.WARPED_WOOD, WoodType.WARPED, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_ANCIENT_CHEST = registerCV("trapped_ancient_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.ANCIENT, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
+//    public static final Block TRAPPED_GLOOM_CHEST = registerCV("trapped_gloom_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.GLOOM, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
 
     //CRAFTING TABLES
     public static final Block SPRUCE_CRAFTING_TABLE = registerCT("spruce_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.GENERIC_WOOD), true);

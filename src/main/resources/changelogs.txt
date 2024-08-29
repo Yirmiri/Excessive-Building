@@ -9,7 +9,6 @@ Version Release v3.2.3 Fabric/Quilt-1.21(.1)
   Misc Additions
 •   Added amethyst lamps
 •   Added thin and thick paper blocks
-•   Added new variants for chests and trapped chests (can be configured)
 •   Added the "Terrain" painting
 •   Added an "Oak" prefix to Chest and Trapped Chest blocks (via built in pack so it can be toggled)
 

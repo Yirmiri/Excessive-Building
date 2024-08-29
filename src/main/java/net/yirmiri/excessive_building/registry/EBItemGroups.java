@@ -45,8 +45,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.SPRUCE_BOOKSHELF);
                 entries.add(EBBlocks.SPRUCE_DECORATIVE_SHELF);
                 entries.add(EBBlocks.SPRUCE_CRAFTING_TABLE);
-                entries.add(EBBlocks.SPRUCE_CHEST);
-                entries.add(EBBlocks.TRAPPED_SPRUCE_CHEST);
+                //entries.add(EBBlocks.SPRUCE_CHEST);
+                //entries.add(EBBlocks.TRAPPED_SPRUCE_CHEST);
                 entries.add(EBBlocks.SPRUCE_LADDER);
 
                 entries.add(EBBlocks.BIRCH_MOSAIC);
@@ -57,8 +57,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BIRCH_BOOKSHELF);
                 entries.add(EBBlocks.BIRCH_DECORATIVE_SHELF);
                 entries.add(EBBlocks.BIRCH_CRAFTING_TABLE);
-                entries.add(EBBlocks.BIRCH_CHEST);
-                entries.add(EBBlocks.TRAPPED_BIRCH_CHEST);
+                //entries.add(EBBlocks.BIRCH_CHEST);
+                //entries.add(EBBlocks.TRAPPED_BIRCH_CHEST);
                 entries.add(EBBlocks.BIRCH_LADDER);
 
                 entries.add(EBBlocks.JUNGLE_MOSAIC);
@@ -69,8 +69,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.JUNGLE_BOOKSHELF);
                 entries.add(EBBlocks.JUNGLE_DECORATIVE_SHELF);
                 entries.add(EBBlocks.JUNGLE_CRAFTING_TABLE);
-                entries.add(EBBlocks.JUNGLE_CHEST);
-                entries.add(EBBlocks.TRAPPED_JUNGLE_CHEST);
+                //entries.add(EBBlocks.JUNGLE_CHEST);
+                //entries.add(EBBlocks.TRAPPED_JUNGLE_CHEST);
                 entries.add(EBBlocks.JUNGLE_LADDER);
 
                 entries.add(EBBlocks.ACACIA_MOSAIC);
@@ -81,8 +81,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.ACACIA_BOOKSHELF);
                 entries.add(EBBlocks.ACACIA_DECORATIVE_SHELF);
                 entries.add(EBBlocks.ACACIA_CRAFTING_TABLE);
-                entries.add(EBBlocks.ACACIA_CHEST);
-                entries.add(EBBlocks.TRAPPED_ACACIA_CHEST);
+                //entries.add(EBBlocks.ACACIA_CHEST);
+                //entries.add(EBBlocks.TRAPPED_ACACIA_CHEST);
                 entries.add(EBBlocks.ACACIA_LADDER);
 
                 entries.add(EBBlocks.DARK_OAK_MOSAIC);
@@ -93,8 +93,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.DARK_OAK_BOOKSHELF);
                 entries.add(EBBlocks.DARK_OAK_DECORATIVE_SHELF);
                 entries.add(EBBlocks.DARK_OAK_CRAFTING_TABLE);
-                entries.add(EBBlocks.DARK_OAK_CHEST);
-                entries.add(EBBlocks.TRAPPED_DARK_OAK_CHEST);
+                //entries.add(EBBlocks.DARK_OAK_CHEST);
+                //entries.add(EBBlocks.TRAPPED_DARK_OAK_CHEST);
                 entries.add(EBBlocks.DARK_OAK_LADDER);
 
                 entries.add(EBBlocks.MANGROVE_MOSAIC);
@@ -105,8 +105,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.MANGROVE_BOOKSHELF);
                 entries.add(EBBlocks.MANGROVE_DECORATIVE_SHELF);
                 entries.add(EBBlocks.MANGROVE_CRAFTING_TABLE);
-                entries.add(EBBlocks.MANGROVE_CHEST);
-                entries.add(EBBlocks.TRAPPED_MANGROVE_CHEST);
+                //entries.add(EBBlocks.MANGROVE_CHEST);
+                //entries.add(EBBlocks.TRAPPED_MANGROVE_CHEST);
                 entries.add(EBBlocks.MANGROVE_LADDER);
 
                 entries.add(EBBlocks.CHERRY_MOSAIC);
@@ -117,8 +117,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.CHERRY_BOOKSHELF);
                 entries.add(EBBlocks.CHERRY_DECORATIVE_SHELF);
                 entries.add(EBBlocks.CHERRY_CRAFTING_TABLE);
-                entries.add(EBBlocks.CHERRY_CHEST);
-                entries.add(EBBlocks.TRAPPED_CHERRY_CHEST);
+                //entries.add(EBBlocks.CHERRY_CHEST);
+                //entries.add(EBBlocks.TRAPPED_CHERRY_CHEST);
                 entries.add(EBBlocks.CHERRY_LADDER);
 
                 entries.add(EBBlocks.ANCIENT_LOG);
@@ -143,8 +143,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.ANCIENT_BOOKSHELF);
                 entries.add(EBBlocks.ANCIENT_DECORATIVE_SHELF);
                 entries.add(EBBlocks.ANCIENT_CRAFTING_TABLE);
-                entries.add(EBBlocks.ANCIENT_CHEST);
-                entries.add(EBBlocks.TRAPPED_ANCIENT_CHEST);
+                //entries.add(EBBlocks.ANCIENT_CHEST);
+                //entries.add(EBBlocks.TRAPPED_ANCIENT_CHEST);
                 entries.add(EBBlocks.ANCIENT_LADDER);
 
                 entries.add(EBBlocks.GLOOM_LOG);
@@ -169,8 +169,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.GLOOM_BOOKSHELF);
                 entries.add(EBBlocks.GLOOM_DECORATIVE_SHELF);
                 entries.add(EBBlocks.GLOOM_CRAFTING_TABLE);
-                entries.add(EBBlocks.GLOOM_CHEST);
-                entries.add(EBBlocks.TRAPPED_GLOOM_CHEST);
+                //entries.add(EBBlocks.GLOOM_CHEST);
+                //entries.add(EBBlocks.TRAPPED_GLOOM_CHEST);
                 entries.add(EBBlocks.GLOOM_LADDER);
 
                 entries.add(EBBlocks.BAMBOO_MOSAIC_VERTICAL_STAIRS);
@@ -178,8 +178,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BAMBOO_BOOKSHELF);
                 entries.add(EBBlocks.BAMBOO_DECORATIVE_SHELF);
                 entries.add(EBBlocks.BAMBOO_CRAFTING_TABLE);
-                entries.add(EBBlocks.BAMBOO_CHEST);
-                entries.add(EBBlocks.TRAPPED_BAMBOO_CHEST);
+                //entries.add(EBBlocks.BAMBOO_CHEST);
+                //entries.add(EBBlocks.TRAPPED_BAMBOO_CHEST);
                 entries.add(EBBlocks.BAMBOO_LADDER);
 
                 entries.add(EBBlocks.CRIMSON_MOSAIC);
@@ -190,8 +190,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.CRIMSON_BOOKSHELF);
                 entries.add(EBBlocks.CRIMSON_DECORATIVE_SHELF);
                 entries.add(EBBlocks.CRIMSON_CRAFTING_TABLE);
-                entries.add(EBBlocks.CRIMSON_CHEST);
-                entries.add(EBBlocks.TRAPPED_CRIMSON_CHEST);
+                //entries.add(EBBlocks.CRIMSON_CHEST);
+                //entries.add(EBBlocks.TRAPPED_CRIMSON_CHEST);
                 entries.add(EBBlocks.CRIMSON_LADDER);
 
                 entries.add(EBBlocks.WARPED_MOSAIC);
@@ -202,8 +202,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WARPED_BOOKSHELF);
                 entries.add(EBBlocks.WARPED_DECORATIVE_SHELF);
                 entries.add(EBBlocks.WARPED_CRAFTING_TABLE);
-                entries.add(EBBlocks.WARPED_CHEST);
-                entries.add(EBBlocks.TRAPPED_WARPED_CHEST);
+                //entries.add(EBBlocks.WARPED_CHEST);
+                //entries.add(EBBlocks.TRAPPED_WARPED_CHEST);
                 entries.add(EBBlocks.WARPED_LADDER);
 
                 entries.add(EBBlocks.PAPER_BLOCK);
