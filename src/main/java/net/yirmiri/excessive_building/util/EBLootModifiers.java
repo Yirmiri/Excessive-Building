@@ -24,7 +24,7 @@ public class EBLootModifiers {
     public static float desertPyramidSherdChance = 0.125F; //12.5%
     public static float desertWellSherdChance = 0.25F; //25%
     public static float oceanRuinSherdChance = 0.067F; //6.7%
-
+//TODO: FIX LOOT MODIFIERS
     public static void modifyLoot() {
         LootTableEvents.MODIFY.register((key, builder, source, manager) -> {
             if (SNIFFER_DIGGING.equals(key.getValue()) && EBConfig.ENABLE_ANCIENT_SAPLINGS.get()) {

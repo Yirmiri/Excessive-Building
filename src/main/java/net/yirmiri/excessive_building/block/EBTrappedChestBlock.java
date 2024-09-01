@@ -32,10 +32,10 @@ public class EBTrappedChestBlock extends EBChestBlock {
         return new EBTrappedChestBlockEntity(pos, state);
     }
 
-    @Override
-    public boolean isEnabled(FeatureSet enable) {
-        return EBConfig.ENABLE_CHEST_VARIANTS.get();
-    }
+//    @Override
+//    public boolean isEnabled(FeatureSet enable) {
+//        return EBConfig.ENABLE_CHEST_VARIANTS.get();
+//    }
 
     protected boolean emitsRedstonePower(BlockState state) {
         return true;

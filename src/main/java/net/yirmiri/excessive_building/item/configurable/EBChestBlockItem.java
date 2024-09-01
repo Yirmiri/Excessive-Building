@@ -10,8 +10,8 @@ public class EBChestBlockItem extends BlockItem {
         super(block, settings);
     }
 
-    @Override
-    public boolean isEnabled(FeatureSet enable) {
-        return EBConfig.ENABLE_CHEST_VARIANTS.get();
-    }
+//    @Override
+//    public boolean isEnabled(FeatureSet enable) {
+//        return EBConfig.ENABLE_CHEST_VARIANTS.get();
+//    }
 }

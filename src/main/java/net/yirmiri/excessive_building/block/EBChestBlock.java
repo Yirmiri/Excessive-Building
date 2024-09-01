@@ -27,10 +27,10 @@ public class EBChestBlock extends ChestBlock {
         return new EBChestBlockEntity(pos, state);
     }
 
-    @Override
-    public boolean isEnabled(FeatureSet enable) {
-        return EBConfig.ENABLE_CHEST_VARIANTS.get();
-    }
+//    @Override
+//    public boolean isEnabled(FeatureSet enable) {
+//        return EBConfig.ENABLE_CHEST_VARIANTS.get();
+//    }
 
     public WoodType getType() {
         return this.type;
