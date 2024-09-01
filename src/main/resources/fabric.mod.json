@@ -3,7 +3,7 @@
 	"id": "excessive_building",
 	"version": "${version}",
 	"name": "Excessive Building",
-	"description": "Excessive Building is a building mod designed to enchance the building experience of users while still aiming to keep consistent with Minecraft's style.",
+	"description": "Excessive Building is a mod designed to enchance the building experience while maintaining Minecraft's style.",
 	"authors": [
 		"Yirmiri"
 	],
