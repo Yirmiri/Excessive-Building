@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "excessive_building:magenta_terracotta_tiles"
+  },
+  "result": "excessive_building:magenta_terracotta_tile_slab"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:diamond_block"
+  },
+  "result": "excessive_building:diamond_bricks"
+}

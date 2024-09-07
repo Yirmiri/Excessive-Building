@@ -1,6 +1,5 @@
 package net.yirmiri.excessive_building.block.configurable;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -11,20 +10,13 @@ public class RedstoneResourceBrickBlock extends ResourceBrickBlock {
         super(settings);
     }
 
-    public static final MapCodec<RedstoneResourceBrickBlock> CODEC = createCodec(RedstoneResourceBrickBlock::new);
-
     @Override
-    public MapCodec<RedstoneResourceBrickBlock> getCodec() {
-        return CODEC;
-    }
-
-    @Override
-    protected boolean emitsRedstonePower(BlockState state) {
+    public boolean emitsRedstonePower(BlockState state) {
         return true;
     }
 
     @Override
-    protected int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
+    public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return 15;
     }
 }

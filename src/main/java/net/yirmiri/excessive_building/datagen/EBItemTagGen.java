@@ -2,6 +2,7 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
@@ -37,6 +38,7 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendSnifferFood();
         appendKnittedWools();
         appendKnittedCarpets();
+        appendCraftingTables();
     }
 
     public void appendKnittedWools() {
@@ -73,6 +75,24 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         ;
     }
 
+    public void appendCraftingTables() {
+        getOrCreateTagBuilder(EBTags.Items.CRAFTING_TABLES)
+                .add(Blocks.CRAFTING_TABLE.asItem())
+                .add(EBBlocks.SPRUCE_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.BIRCH_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.JUNGLE_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.ACACIA_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.DARK_OAK_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.MANGROVE_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.BAMBOO_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.CHERRY_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.CRIMSON_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.WARPED_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.ANCIENT_CRAFTING_TABLE.asItem())
+                .add(EBBlocks.GLOOM_CRAFTING_TABLE.asItem())
+        ;
+    }
+
     public void appendSoils() {
         getOrCreateTagBuilder(EBTags.Items.SOILS)
                 .add(Items.DIRT)
@@ -83,7 +103,6 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
 
     public void appendPiglinLoved() {
         getOrCreateTagBuilder(ItemTags.PIGLIN_LOVED)
-                .add(EBBlocks.GOLD_GRATE.asItem())
                 .add(EBBlocks.GOLD_BRICKS.asItem())
                 .add(EBBlocks.GOLD_BRICK_STAIRS.asItem())
                 .add(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS.asItem())

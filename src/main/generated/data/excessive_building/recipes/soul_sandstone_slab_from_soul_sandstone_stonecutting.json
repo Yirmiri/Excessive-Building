@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "excessive_building:soul_sandstone"
+  },
+  "result": "excessive_building:soul_sandstone_slab"
+}

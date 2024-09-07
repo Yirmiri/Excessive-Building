@@ -4,9 +4,14 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.item.Items;
+import net.minecraft.potion.Potions;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
+import net.yirmiri.excessive_building.registry.EBPotions;
+
+import static net.yirmiri.excessive_building.mixin.BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe;
 
 import static net.minecraft.block.ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE;
 
@@ -18,6 +23,19 @@ public class EBRegistries {
         registerFlammables();
         registerOxidizables();
         registerWaxables();
+        registerBrewingRecipes();
+    }
+
+    private static void registerBrewingRecipes() {
+        invokeRegisterPotionRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT, EBPotions.HASTY);
+        invokeRegisterPotionRecipe(EBPotions.HASTY, Items.REDSTONE, EBPotions.LONG_HASTY);
+        invokeRegisterPotionRecipe(EBPotions.HASTY, Items.GLOWSTONE_DUST, EBPotions.STRONG_HASTY);
+
+        invokeRegisterPotionRecipe(EBPotions.HASTY, Items.FERMENTED_SPIDER_EYE, EBPotions.FATIGUED);
+        invokeRegisterPotionRecipe(EBPotions.FATIGUED, Items.REDSTONE, EBPotions.LONG_FATIGUED);
+        invokeRegisterPotionRecipe(EBPotions.FATIGUED, Items.GLOWSTONE_DUST, EBPotions.STRONG_FATIGUED);
+        invokeRegisterPotionRecipe(EBPotions.LONG_HASTY, Items.FERMENTED_SPIDER_EYE, EBPotions.LONG_FATIGUED);
+        invokeRegisterPotionRecipe(EBPotions.STRONG_HASTY, Items.FERMENTED_SPIDER_EYE, EBPotions.STRONG_FATIGUED);
     }
 
     public static void registerOxidizables() {
@@ -36,14 +54,6 @@ public class EBRegistries {
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
-
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_PRESSURE_PLATE, EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE, EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE, EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE);
-
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_BUTTON, EBBlocks.EXPOSED_COPPER_BUTTON);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BUTTON, EBBlocks.WEATHERED_COPPER_BUTTON);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BUTTON, EBBlocks.OXIDIZED_COPPER_BUTTON);
 
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.CUT_COPPER_VERTICAL_STAIRS, EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS, EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS);
@@ -70,16 +80,6 @@ public class EBRegistries {
         OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
         OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
         OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
-
-        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.COPPER_PRESSURE_PLATE, EBBlocks.WAXED_COPPER_PRESSURE_PLATE);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE);
-        OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE, EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
-
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.COPPER_BUTTON, EBBlocks.WAXED_COPPER_BUTTON);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.EXPOSED_COPPER_BUTTON, EBBlocks.WAXED_EXPOSED_COPPER_BUTTON);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.WEATHERED_COPPER_BUTTON, EBBlocks.WAXED_WEATHERED_COPPER_BUTTON);
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(EBBlocks.OXIDIZED_COPPER_BUTTON, EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
 
         OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.CUT_COPPER_VERTICAL_STAIRS, EBBlocks.WAXED_CUT_COPPER_VERTICAL_STAIRS);
         OxidizableBlocksRegistry.registerWaxableBlockPair(EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS, EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS);

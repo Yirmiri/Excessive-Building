@@ -1,6 +1,7 @@
 package net.yirmiri.excessive_building.block;
 
 import net.minecraft.block.*;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.fluid.FluidState;
@@ -13,8 +14,8 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -47,7 +48,7 @@ public class ParticleCandleBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
         return SHAPE;
     }
 
@@ -86,17 +87,17 @@ public class ParticleCandleBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (stack.isEmpty() && player.getAbilities().allowModifyWorld && state.get(LIT)) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (!player.hasStackEquipped(EquipmentSlot.MAINHAND) && player.getAbilities().allowModifyWorld && state.get(LIT)) {
             extinguish(player, state, world, pos);
-            return ItemActionResult.success(world.isClient);
+            return ActionResult.success(world.isClient);
         } else {
-            return super.onUseWithItem(stack, state, world, pos, player, hand, hit);
+            return super.onUse(state, world, pos, player, hand, hit);
         }
     }
 
     @Override
-    protected BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
@@ -105,7 +106,7 @@ public class ParticleCandleBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected FluidState getFluidState(BlockState state) {
+    public FluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
@@ -132,7 +133,7 @@ public class ParticleCandleBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected void onProjectileHit(World world, BlockState state, BlockHitResult hit, ProjectileEntity projectile) {
+    public void onProjectileHit(World world, BlockState state, BlockHitResult hit, ProjectileEntity projectile) {
         if (!world.isClient && projectile.isOnFire() && this.isNotLit(state)) {
             setLit(world, state, hit.getBlockPos(), true);
         }
@@ -143,7 +144,7 @@ public class ParticleCandleBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         return Block.sideCoversSmallSquare(world, pos.down(), Direction.UP);
     }
 
@@ -155,15 +156,6 @@ public class ParticleCandleBlock extends Block implements Waterloggable {
     }
 
     private static void setLit(WorldAccess world, BlockState state, BlockPos pos, boolean lit) {
-        world.setBlockState(pos, state.with(LIT, Boolean.valueOf(lit)), Block.NOTIFY_ALL_AND_REDRAW);
-    }
-
-    @Override
-    protected void onExploded(BlockState state, World world, BlockPos pos, Explosion explosion, BiConsumer<ItemStack, BlockPos> stackMerger) {
-        if (explosion.canTriggerBlocks() && state.get(LIT)) {
-            extinguish(null, state, world, pos);
-        }
-
-        super.onExploded(state, world, pos, explosion, stackMerger);
+        world.setBlockState(pos, state.with(LIT, lit), 11);
     }
 }

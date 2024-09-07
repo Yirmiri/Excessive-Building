@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "excessive_building:red_sandstone_bricks"
+  },
+  "result": "excessive_building:chiseled_red_sandstone_bricks"
+}

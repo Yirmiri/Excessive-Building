@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "excessive_building:smooth_stone_tiles"
+  },
+  "result": "excessive_building:smooth_stone_tile_slab"
+}

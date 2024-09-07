@@ -11,20 +11,13 @@ public class RedstoneResourceBrickVerticalStairsBlock extends ResourceBrickVerti
         super(settings);
     }
 
-    public static final MapCodec<RedstoneResourceBrickVerticalStairsBlock> CODEC = createCodec(RedstoneResourceBrickVerticalStairsBlock::new);
-
     @Override
-    public MapCodec<RedstoneResourceBrickVerticalStairsBlock> getCodec() {
-        return CODEC;
-    }
-
-    @Override
-    protected boolean emitsRedstonePower(BlockState state) {
+    public boolean emitsRedstonePower(BlockState state) {
         return true;
     }
 
     @Override
-    protected int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
+    public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return 15;
     }
 }

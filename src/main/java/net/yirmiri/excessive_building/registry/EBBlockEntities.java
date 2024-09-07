@@ -22,11 +22,6 @@ public class EBBlockEntities {
                     EBBlocks.GLOOM_HANGING_SIGN, EBBlocks.GLOOM_WALL_HANGING_SIGN
             ).build());
 
-    public static final BlockEntityType<ReachingLanternBlockEntity> REACHING_LANTERN = Registry.register(Registries.BLOCK_ENTITY_TYPE,
-            Identifier.of(ExcessiveBuilding.MOD_ID, "reaching_lantern"), FabricBlockEntityTypeBuilder.create(ReachingLanternBlockEntity::new,
-                    EBBlocks.REACHING_LANTERN
-            ).build());
-
     public static final BlockEntityType<EBChestBlockEntity> EB_CHEST = Registry.register(Registries.BLOCK_ENTITY_TYPE,
             Identifier.of(ExcessiveBuilding.MOD_ID, "eb_chest"), FabricBlockEntityTypeBuilder.create(EBChestBlockEntity::new//,
 //                    EBBlocks.SPRUCE_CHEST, EBBlocks.BIRCH_CHEST, EBBlocks.JUNGLE_CHEST, EBBlocks.ACACIA_CHEST, EBBlocks.DARK_OAK_CHEST,

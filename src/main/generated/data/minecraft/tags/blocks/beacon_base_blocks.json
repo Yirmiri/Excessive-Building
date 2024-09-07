@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "excessive_building:iron_bricks",
+    "excessive_building:iron_brick_stairs",
+    "excessive_building:iron_brick_vertical_stairs",
+    "excessive_building:gold_bricks",
+    "excessive_building:gold_brick_stairs",
+    "excessive_building:gold_brick_vertical_stairs",
+    "excessive_building:lapis_bricks",
+    "excessive_building:lapis_brick_stairs",
+    "excessive_building:lapis_brick_vertical_stairs",
+    "excessive_building:emerald_bricks",
+    "excessive_building:emerald_brick_stairs",
+    "excessive_building:emerald_brick_vertical_stairs",
+    "excessive_building:diamond_bricks",
+    "excessive_building:diamond_brick_stairs",
+    "excessive_building:diamond_brick_vertical_stairs",
+    "excessive_building:netherite_bricks",
+    "excessive_building:netherite_brick_stairs",
+    "excessive_building:netherite_brick_vertical_stairs"
+  ]
+}

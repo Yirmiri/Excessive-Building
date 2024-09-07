@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "excessive_building:knitted_carpet"
+    },
+    "@": {
+      "item": "minecraft:light_blue_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "excessive_building:light_blue_knitted_carpet"
+  },
+  "show_notification": true
+}

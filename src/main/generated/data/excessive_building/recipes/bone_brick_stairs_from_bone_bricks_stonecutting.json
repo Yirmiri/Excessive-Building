@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "excessive_building:bone_bricks"
+  },
+  "result": "excessive_building:bone_brick_stairs"
+}

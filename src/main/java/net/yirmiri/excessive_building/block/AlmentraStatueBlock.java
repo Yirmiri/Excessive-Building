@@ -65,12 +65,12 @@ public class AlmentraStatueBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected BlockState rotate(BlockState state, BlockRotation rotation) {
+    public BlockState rotate(BlockState state, BlockRotation rotation) {
         return state.with(ROTATION, Integer.valueOf(rotation.rotate(state.get(ROTATION), MAX_ROTATIONS)));
     }
 
     @Override
-    protected BlockState mirror(BlockState state, BlockMirror mirror) {
+    public BlockState mirror(BlockState state, BlockMirror mirror) {
         return state.with(ROTATION, Integer.valueOf(mirror.mirror(state.get(ROTATION), MAX_ROTATIONS)));
     }
 
@@ -81,10 +81,5 @@ public class AlmentraStatueBlock extends Block implements Waterloggable {
         }
 
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
-    }
-
-    @Override
-    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
-        return false;
     }
 }

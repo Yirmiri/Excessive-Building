@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:birch_planks"
+    },
+    "@": {
+      "item": "minecraft:book"
+    }
+  },
+  "pattern": [
+    "###",
+    "@@@",
+    "###"
+  ],
+  "result": {
+    "item": "excessive_building:birch_bookshelf"
+  },
+  "show_notification": true
+}

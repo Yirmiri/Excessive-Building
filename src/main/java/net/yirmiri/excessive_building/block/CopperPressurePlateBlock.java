@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.block;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockSetType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.PressurePlateBlock;
@@ -11,8 +12,8 @@ import net.minecraft.world.World;
 public class CopperPressurePlateBlock extends PressurePlateBlock {
     private final int ticks;
 
-    public CopperPressurePlateBlock(BlockSetType type, Settings settings, int ticks) {
-        super(type, settings);
+    public CopperPressurePlateBlock(PressurePlateBlock.ActivationRule rule, AbstractBlock.Settings settings, BlockSetType type, int ticks) {
+        super(rule, settings, type);
         this.ticks = ticks;
     }
 
@@ -28,8 +29,8 @@ public class CopperPressurePlateBlock extends PressurePlateBlock {
 
     @Override
     protected int getRedstoneOutput(World world, BlockPos pos) {
-        Class<? extends Entity> class_ = switch (OxidizablePressurePlateBlock.ActivationRule.PLAYER) {
-            case OxidizablePressurePlateBlock.ActivationRule.PLAYER -> PlayerEntity.class;
+        Class<? extends Entity> class_ = switch (CopperPressurePlateBlock.ActivationRule.PLAYER) {
+            case PLAYER -> PlayerEntity.class;
         };
         return getEntityCount(world, BOX.offset(pos), class_) > 0 ? 15 : 0;
     }

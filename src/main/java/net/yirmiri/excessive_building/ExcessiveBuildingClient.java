@@ -70,8 +70,6 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.MOSS_PASTE, RenderLayer.getCutout());
 
         //TRANSLUCENT
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.IRON_GRATE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GOLD_GRATE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.SEA_GLASS, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.VERDANT_SEA_GLASS, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ROSE_SEA_GLASS, RenderLayer.getTranslucent());

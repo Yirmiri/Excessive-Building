@@ -10,8 +10,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBBlockSetTypes {
     public static final BlockSetType ANCIENT = EBBlockSetTypes.register(new BlockSetType("ancient",
-            true, true, true, //hand, wind charge, arrows
-            BlockSetType.ActivationRule.EVERYTHING,
+            true, //hand
             BlockSoundGroup.CHERRY_WOOD,
             SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE,
             SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN,
@@ -23,8 +22,7 @@ public class EBBlockSetTypes {
             SoundEvents.BLOCK_CHERRY_WOOD_BUTTON_CLICK_ON));
 
     public static final BlockSetType GLOOM = EBBlockSetTypes.register(new BlockSetType("gloom",
-            true, true, true, //hand, wind charge, arrows
-            BlockSetType.ActivationRule.EVERYTHING,
+            true, //hand
             BlockSoundGroup.CHERRY_WOOD,
             SoundEvents.BLOCK_CHERRY_WOOD_DOOR_CLOSE,
             SoundEvents.BLOCK_CHERRY_WOOD_DOOR_OPEN,

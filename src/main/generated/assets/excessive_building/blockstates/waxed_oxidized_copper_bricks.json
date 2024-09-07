@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "excessive_building:block/oxidized_copper_bricks"
+      "model": "excessive_building:block/waxed_oxidized_copper_bricks"
     }
   }
 }

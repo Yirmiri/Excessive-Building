@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:acacia_planks"
+    },
+    "@": {
+      "item": "minecraft:book"
+    }
+  },
+  "pattern": [
+    "###",
+    "@@@",
+    "###"
+  ],
+  "result": {
+    "item": "excessive_building:acacia_bookshelf"
+  },
+  "show_notification": true
+}

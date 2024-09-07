@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "excessive_building:blue_almentra_bricks"
+  },
+  "result": "excessive_building:blue_almentra_brick_stairs"
+}

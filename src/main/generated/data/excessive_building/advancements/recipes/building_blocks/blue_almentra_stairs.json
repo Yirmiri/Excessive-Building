@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_almentra": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "excessive_building:blue_almentra"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "excessive_building:blue_almentra_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_blue_almentra",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "excessive_building:blue_almentra_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

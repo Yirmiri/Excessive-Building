@@ -2,11 +2,10 @@ package net.yirmiri.excessive_building.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.sound.SoundCategory;
@@ -16,11 +15,14 @@ import net.minecraft.state.property.IntProperty;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.yirmiri.excessive_building.EBConfig;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
@@ -38,7 +40,7 @@ public class DecorativeShelfBlock extends Block {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, @Nullable BlockView context, List<Text> tooltip, TooltipContext options) {
         if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
             super.appendTooltip(stack, context, tooltip, options);
             tooltip.add(ScreenTexts.EMPTY);
@@ -48,10 +50,11 @@ public class DecorativeShelfBlock extends Block {
     }
 
     @Override @NotNull
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient && !player.hasStackEquipped(EquipmentSlot.MAINHAND)) {
             world.setBlockState(pos, state.cycle(VARIANT));
             world.playSound(null, pos, SoundEvents.BLOCK_CHISELED_BOOKSHELF_PLACE, SoundCategory.BLOCKS, 1, 1);
+            player.swingHand(hand);
         } else {
             return ActionResult.PASS;
         }

@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "net.yirmiri.excessive_building.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
     "BrewingRecipeRegistryMixin",
     "BubbleColumnBlockMixin",
@@ -11,6 +11,6 @@
     "defaultRequire": 1
   },
   "client": [
-    "PlayerListEntryMixin"
+    "AbstractClientPlayerMixin"
   ]
 }

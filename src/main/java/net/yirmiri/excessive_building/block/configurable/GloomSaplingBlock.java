@@ -1,7 +1,7 @@
 package net.yirmiri.excessive_building.block.configurable;
 
 import net.minecraft.block.SaplingBlock;
-import net.minecraft.block.SaplingGenerator;
+import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.yirmiri.excessive_building.EBConfig;
 

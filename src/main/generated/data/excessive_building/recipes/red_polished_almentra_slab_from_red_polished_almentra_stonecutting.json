@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "excessive_building:red_polished_almentra"
+  },
+  "result": "excessive_building:red_polished_almentra_slab"
+}

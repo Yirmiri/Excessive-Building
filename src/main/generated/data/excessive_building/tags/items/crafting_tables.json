@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:crafting_table",
+    "excessive_building:spruce_crafting_table",
+    "excessive_building:birch_crafting_table",
+    "excessive_building:jungle_crafting_table",
+    "excessive_building:acacia_crafting_table",
+    "excessive_building:dark_oak_crafting_table",
+    "excessive_building:mangrove_crafting_table",
+    "excessive_building:bamboo_crafting_table",
+    "excessive_building:cherry_crafting_table",
+    "excessive_building:crimson_crafting_table",
+    "excessive_building:warped_crafting_table",
+    "excessive_building:ancient_crafting_table",
+    "excessive_building:gloom_crafting_table"
+  ]
+}

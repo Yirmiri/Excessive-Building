@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "excessive_building:spruce_ladder",
+    "excessive_building:birch_ladder",
+    "excessive_building:jungle_ladder",
+    "excessive_building:acacia_ladder",
+    "excessive_building:dark_oak_ladder",
+    "excessive_building:mangrove_ladder",
+    "excessive_building:cherry_ladder",
+    "excessive_building:bamboo_ladder",
+    "excessive_building:crimson_ladder",
+    "excessive_building:warped_ladder",
+    "excessive_building:ancient_ladder",
+    "excessive_building:gloom_ladder"
+  ]
+}

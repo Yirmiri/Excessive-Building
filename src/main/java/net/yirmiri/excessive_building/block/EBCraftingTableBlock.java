@@ -25,7 +25,7 @@ public class EBCraftingTableBlock extends CraftingTableBlock {
     }
 
     @Override
-    protected NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
+    public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
         return new SimpleNamedScreenHandlerFactory(
                 (syncId, inventory, player) -> new EBCraftingScreenHandler(syncId, inventory, ScreenHandlerContext.create(world, pos), this), TITLE
         );

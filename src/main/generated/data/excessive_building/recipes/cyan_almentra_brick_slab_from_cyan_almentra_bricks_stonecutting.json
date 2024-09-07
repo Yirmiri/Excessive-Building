@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "excessive_building:cyan_almentra_bricks"
+  },
+  "result": "excessive_building:cyan_almentra_brick_slab"
+}

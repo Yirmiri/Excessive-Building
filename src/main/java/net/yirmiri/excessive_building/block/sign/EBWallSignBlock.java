@@ -9,7 +9,7 @@ import net.yirmiri.excessive_building.block.entity.EBSignBlockEntity;
 
 public class EBWallSignBlock extends WallSignBlock {
     public EBWallSignBlock(WoodType woodType, Settings settings) {
-        super(woodType, settings);
+        super(settings, woodType);
     }
 
     @Override

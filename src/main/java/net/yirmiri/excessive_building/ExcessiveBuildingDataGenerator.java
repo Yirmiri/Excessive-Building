@@ -19,14 +19,11 @@ public class ExcessiveBuildingDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(EBModelGen::new);
 		pack.addProvider(EBBlockTagGen::new);
 		pack.addProvider(EBItemTagGen::new);
-		pack.addProvider(EBPaintingTagGen::new);
 		pack.addProvider(EBWorldGenGen::new);
-		pack.addProvider(EBAdvancementGen::new);
 	}
 
 	@Override
 	public void buildRegistry(RegistryBuilder builder) {
-		builder.addRegistry(RegistryKeys.PAINTING_VARIANT, EBPaintingVariants::bootstrap);
 		builder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, EBConfiguredFeatures::bootstrap);
 		builder.addRegistry(RegistryKeys.PLACED_FEATURE, EBPlacedFeatures::bootstrap);
 	}

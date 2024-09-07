@@ -144,54 +144,38 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerHangingSign(EBBlocks.STRIPPED_GLOOM_LOG, EBBlocks.GLOOM_HANGING_SIGN, EBBlocks.GLOOM_WALL_HANGING_SIGN);
 
         BlockStateModelGenerator.BlockTexturePool copper = generator.registerCubeAllModelTexturePool(Blocks.COPPER_BLOCK);
-        copper.pressurePlate(EBBlocks.COPPER_PRESSURE_PLATE);
-        copper.pressurePlate(EBBlocks.WAXED_COPPER_PRESSURE_PLATE);
-        copper.button(EBBlocks.COPPER_BUTTON);
-        copper.button(EBBlocks.WAXED_COPPER_BUTTON);
 
         BlockStateModelGenerator.BlockTexturePool exposedCopper = generator.registerCubeAllModelTexturePool(Blocks.EXPOSED_COPPER);
-        exposedCopper.pressurePlate(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE);
-        exposedCopper.pressurePlate(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE);
-        exposedCopper.button(EBBlocks.EXPOSED_COPPER_BUTTON);
-        exposedCopper.button(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON);
 
         BlockStateModelGenerator.BlockTexturePool weatheredCopper = generator.registerCubeAllModelTexturePool(Blocks.WEATHERED_COPPER);
-        weatheredCopper.pressurePlate(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE);
-        weatheredCopper.pressurePlate(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE);
-        weatheredCopper.button(EBBlocks.WEATHERED_COPPER_BUTTON);
-        weatheredCopper.button(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON);
 
         BlockStateModelGenerator.BlockTexturePool oxidizedCopper = generator.registerCubeAllModelTexturePool(Blocks.OXIDIZED_COPPER);
-        oxidizedCopper.pressurePlate(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE);
-        oxidizedCopper.pressurePlate(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
-        oxidizedCopper.button(EBBlocks.OXIDIZED_COPPER_BUTTON);
-        oxidizedCopper.button(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
 
         BlockStateModelGenerator.BlockTexturePool copperBricks = generator.registerCubeAllModelTexturePool(EBBlocks.COPPER_BRICKS);
         copperBricks.stairs(EBBlocks.COPPER_BRICK_STAIRS);
         copperBricks.slab(EBBlocks.COPPER_BRICK_SLAB);
-        copperBricks.parented(EBBlocks.COPPER_BRICKS, EBBlocks.WAXED_COPPER_BRICKS);
+        generator.registerCubeAllModelTexturePool(EBBlocks.WAXED_COPPER_BRICKS);
         copperBricks.stairs(EBBlocks.WAXED_COPPER_BRICK_STAIRS);
         copperBricks.slab(EBBlocks.WAXED_COPPER_BRICK_SLAB);
 
         BlockStateModelGenerator.BlockTexturePool exposedCopperBricks = generator.registerCubeAllModelTexturePool(EBBlocks.EXPOSED_COPPER_BRICKS);
         exposedCopperBricks.stairs(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS);
         exposedCopperBricks.slab(EBBlocks.EXPOSED_COPPER_BRICK_SLAB);
-        exposedCopperBricks.parented(EBBlocks.EXPOSED_COPPER_BRICKS, EBBlocks.WAXED_EXPOSED_COPPER_BRICKS);
+        generator.registerCubeAllModelTexturePool(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS);
         exposedCopperBricks.stairs(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS);
         exposedCopperBricks.slab(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB);
 
         BlockStateModelGenerator.BlockTexturePool weatheredCopperBricks = generator.registerCubeAllModelTexturePool(EBBlocks.WEATHERED_COPPER_BRICKS);
         weatheredCopperBricks.stairs(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS);
         weatheredCopperBricks.slab(EBBlocks.WEATHERED_COPPER_BRICK_SLAB);
-        weatheredCopperBricks.parented(EBBlocks.WEATHERED_COPPER_BRICKS, EBBlocks.WAXED_WEATHERED_COPPER_BRICKS);
+        generator.registerCubeAllModelTexturePool(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS);
         weatheredCopperBricks.stairs(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS);
         weatheredCopperBricks.slab(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB);
 
         BlockStateModelGenerator.BlockTexturePool oxidizedCopperBricks = generator.registerCubeAllModelTexturePool(EBBlocks.OXIDIZED_COPPER_BRICKS);
         oxidizedCopperBricks.stairs(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS);
         oxidizedCopperBricks.slab(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB);
-        oxidizedCopperBricks.parented(EBBlocks.OXIDIZED_COPPER_BRICKS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS);
+        generator.registerCubeAllModelTexturePool(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS);
         oxidizedCopperBricks.stairs(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS);
         oxidizedCopperBricks.slab(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB);
 
@@ -200,10 +184,10 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WEATHERED_COPPER_BRICKS);
         EBModels.registerVerticalStairs(generator, EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.OXIDIZED_COPPER_BRICKS);
 
-        generator.registerParented(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS);
-        generator.registerParented(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
-        generator.registerParented(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
-        generator.registerParented(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.COPPER_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.EXPOSED_COPPER_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WEATHERED_COPPER_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.OXIDIZED_COPPER_BRICKS);
 
         BlockStateModelGenerator.BlockTexturePool ironBricks = generator.registerCubeAllModelTexturePool(EBBlocks.IRON_BRICKS);
         ironBricks.stairs(EBBlocks.IRON_BRICK_STAIRS);
@@ -440,10 +424,6 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.PURPUR_VERTICAL_STAIRS, Blocks.PURPUR_BLOCK);
         EBModels.registerVerticalStairs(generator, EBBlocks.BIRCH_VERTICAL_STAIRS, Blocks.BIRCH_PLANKS);
 
-        EBModels.registerVerticalStairs(generator, EBBlocks.TUFF_VERTICAL_STAIRS, Blocks.TUFF);
-        EBModels.registerVerticalStairs(generator, EBBlocks.TUFF_BRICK_VERTICAL_STAIRS, Blocks.TUFF_BRICKS);
-        EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS, Blocks.POLISHED_TUFF);
-
         EBModels.registerVerticalStairs(generator, EBBlocks.CUT_COPPER_VERTICAL_STAIRS, Blocks.CUT_COPPER);
         EBModels.registerVerticalStairs(generator, EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS, Blocks.EXPOSED_CUT_COPPER);
         EBModels.registerVerticalStairs(generator, EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WEATHERED_CUT_COPPER);
@@ -527,9 +507,6 @@ public class EBModelGen extends FabricModelProvider {
         asphalt.stairs(EBBlocks.ASPHALT_STAIRS);
         asphalt.slab(EBBlocks.ASPHALT_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.ASPHALT_VERTICAL_STAIRS, EBBlocks.ASPHALT);
-
-        generator.registerSimpleCubeAll(EBBlocks.IRON_GRATE);
-        generator.registerSimpleCubeAll(EBBlocks.GOLD_GRATE);
 
         generator.registerFlowerPotPlant(EBBlocks.ROSE, EBBlocks.POTTED_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
         generator.registerFlowerPotPlant(EBBlocks.CYAN_ROSE, EBBlocks.POTTED_CYAN_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -672,12 +649,6 @@ public class EBModelGen extends FabricModelProvider {
 
         EBModels.registerParticleCandle(generator, EBBlocks.WEEPING_CANDLE);
         EBModels.registerParticleCandle(generator, EBBlocks.TWISTING_CANDLE);
-
-        BlockStateModelGenerator.BlockTexturePool tuffTiles = generator.registerCubeAllModelTexturePool(EBBlocks.TUFF_TILES);
-        tuffTiles.stairs(EBBlocks.TUFF_TILE_STAIRS);
-        tuffTiles.slab(EBBlocks.TUFF_TILE_SLAB);
-        tuffTiles.wall(EBBlocks.TUFF_TILE_WALL);
-        EBModels.registerVerticalStairs(generator, EBBlocks.TUFF_TILE_VERTICAL_STAIRS, EBBlocks.TUFF_TILES);
 
         generator.registerSimpleCubeAll(EBBlocks.GLOOM_LEAVES);
         generator.registerFlowerPotPlant(EBBlocks.GLOOM_SAPLING, EBBlocks.POTTED_GLOOM_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);

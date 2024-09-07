@@ -58,7 +58,7 @@ public class GlassJarBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 
@@ -68,7 +68,7 @@ public class GlassJarBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         Direction direction = attachedDirection(state).getOpposite();
         return Block.sideCoversSmallSquare(world, pos.offset(direction), direction.getOpposite());
     }
@@ -78,7 +78,7 @@ public class GlassJarBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected BlockState getStateForNeighborUpdate(
+    public BlockState getStateForNeighborUpdate(
             BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos
     ) {
         if (state.get(WATERLOGGED)) {
@@ -91,12 +91,7 @@ public class GlassJarBlock extends Block implements Waterloggable {
     }
 
     @Override
-    protected FluidState getFluidState(BlockState state) {
+    public FluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
-    }
-
-    @Override
-    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
-        return false;
     }
 }

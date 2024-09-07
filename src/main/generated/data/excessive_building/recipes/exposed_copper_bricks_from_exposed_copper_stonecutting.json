@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "minecraft:exposed_copper"
+  },
+  "result": "excessive_building:exposed_copper_bricks"
+}

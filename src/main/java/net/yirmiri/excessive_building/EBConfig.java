@@ -25,17 +25,14 @@ public class EBConfig {
     //BALANCE
     public static final ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_SOUL_MAGMA_COLUMN_TOGGLE;
-    public static final ForgeConfigSpec.BooleanValue ENABLE_REACHING_LANTERN_FUNCTIONALITY;
-    public static final ForgeConfigSpec.IntValue REACHING_LANTERN_AMPLIFIER;
-    public static final ForgeConfigSpec.IntValue REACHING_LANTERN_RANGE;
-    public static final ForgeConfigSpec.IntValue REACHING_DURATION;
-    public static final ForgeConfigSpec.IntValue LONG_REACHING_DURATION;
-    public static final ForgeConfigSpec.IntValue REACHING_AMPLIFIER;
-    public static final ForgeConfigSpec.IntValue STRONG_REACHING_AMPLIFIER;
-    public static final ForgeConfigSpec.IntValue SHORTENING_DURATION;
-    public static final ForgeConfigSpec.IntValue LONG_SHORTENING_DURATION;
-    public static final ForgeConfigSpec.IntValue SHORTENING_AMPLIFIER;
-    public static final ForgeConfigSpec.IntValue STRONG_SHORTENING_AMPLIFIER;
+    public static final ForgeConfigSpec.IntValue HASTY_DURATION;
+    public static final ForgeConfigSpec.IntValue LONG_HASTY_DURATION;
+    public static final ForgeConfigSpec.IntValue HASTY_AMPLIFIER;
+    public static final ForgeConfigSpec.IntValue STRONG_HASTY_AMPLIFIER;
+    public static final ForgeConfigSpec.IntValue FATIGUED_DURATION;
+    public static final ForgeConfigSpec.IntValue LONG_FATIGUED_DURATION;
+    public static final ForgeConfigSpec.IntValue FATIGUED_AMPLIFIER;
+    public static final ForgeConfigSpec.IntValue STRONG_FATIGUED_AMPLIFIER;
     public static final ForgeConfigSpec.IntValue ANCIENT_FRUIT_DURATION;
     public static final ForgeConfigSpec.IntValue ANCIENT_FRUIT_AMPLIFIER;
 
@@ -113,56 +110,44 @@ public class EBConfig {
                 .comment("Should soul magma bubble columns be toggled with redstone? (default: true)")
                 .define("enableSoulMagmaColumnToggle", true);
 
-        ENABLE_REACHING_LANTERN_FUNCTIONALITY = BUILDER
-                .comment("Should reaching lanterns grant nearby players the reaching effect? (default: true)")
-                .define("enableReachingLanternFunctionality", true);
+        HASTY_DURATION = BUILDER
+                .comment("How long should the hasty potion last in ticks? (default: 6000)")
+                .defineInRange("hastyDuration", 6000, 0, 72000);
 
-        REACHING_LANTERN_AMPLIFIER = BUILDER
-                .comment("What level of reaching should the reaching lantern grant? (default: 1)")
-                .defineInRange("reachingLanternAmplifier", 1, 0, 255);
+        LONG_HASTY_DURATION = BUILDER
+                .comment("How long should the long hasty potion last in ticks? (default: 12000)")
+                .defineInRange("longHastyDuration", 12000, 0, 72000);
 
-        REACHING_LANTERN_RANGE = BUILDER
-                .comment("How large should the reaching lantern's range be in blocks? (default: 8)")
-                .defineInRange("reachingLanternRange", 8, 0, 64);
+        HASTY_AMPLIFIER = BUILDER
+                .comment("What level of haste should the reaching potion grant? (default: 0)")
+                .defineInRange("hastyAmplifier", 0, 0, 255);
 
-        REACHING_DURATION = BUILDER
-                .comment("How long should the reaching potion last in ticks? (default: 12000)")
-                .defineInRange("reachingDuration", 12000, 0, 72000);
+        STRONG_HASTY_AMPLIFIER = BUILDER
+                .comment("What level of haste should the strong hasty potion grant? (default: 1)")
+                .defineInRange("strongHastyAmplifier", 1, 0, 255);
 
-        LONG_REACHING_DURATION = BUILDER
-                .comment("How long should the long reaching potion last in ticks? (default: 24000)")
-                .defineInRange("longReachingDuration", 24000, 0, 72000);
+        FATIGUED_DURATION = BUILDER
+                .comment("How long should the fatigued potion last in ticks? (default: 3000)")
+                .defineInRange("fatiguedDuration", 3000, 0, 72000);
 
-        REACHING_AMPLIFIER = BUILDER
-                .comment("What level of reaching should the reaching potion grant? (default: 2)")
-                .defineInRange("reachingAmplifier", 2, 0, 255);
+        LONG_FATIGUED_DURATION = BUILDER
+                .comment("How long should the long fatigued potion last in ticks? (default: 6000)")
+                .defineInRange("longFatiguedDuration", 6000, 0, 72000);
 
-        STRONG_REACHING_AMPLIFIER = BUILDER
-                .comment("What level of reaching should the strong reaching potion grant? (default: 4)")
-                .defineInRange("strongReachingAmplifier", 4, 0, 255);
+        FATIGUED_AMPLIFIER = BUILDER
+                .comment("What level of mining fatigue should the fatigued potion grant? (default: 0)")
+                .defineInRange("fatiguedAmplifier", 0, 0, 255);
 
-        SHORTENING_DURATION = BUILDER
-                .comment("How long should the shortening potion last in ticks? (default: 6000)")
-                .defineInRange("shorteningDuration", 6000, 0, 72000);
-
-        LONG_SHORTENING_DURATION = BUILDER
-                .comment("How long should the long shortening potion last in ticks? (default: 12000)")
-                .defineInRange("longShorteningDuration", 12000, 0, 72000);
-
-        SHORTENING_AMPLIFIER = BUILDER
-                .comment("What level of shortening should the shortening potion grant? (default: 1)")
-                .defineInRange("shorteningAmplifier", 1, 0, 255);
-
-        STRONG_SHORTENING_AMPLIFIER = BUILDER
-                .comment("What level of shortening should the strong shortening potion grant? (default: 2)")
-                .defineInRange("strongShorteningAmplifier", 2, 0, 255);
+        STRONG_FATIGUED_AMPLIFIER = BUILDER
+                .comment("What level of mining fatigue should the strong fatigued potion grant? (default: 1)")
+                .defineInRange("strongFatiguedAmplifier", 1, 0, 255);
 
         ANCIENT_FRUIT_DURATION = BUILDER
-                .comment("How long should the ancient fruit's reaching last in ticks? (default: 600)")
+                .comment("How long should the ancient fruit's haste last in ticks? (default: 600)")
                 .defineInRange("ancientFruitDuration", 600, 0, 72000);
 
         ANCIENT_FRUIT_AMPLIFIER = BUILDER
-                .comment("What level of reaching should the ancient fruit grant? (default: 1)")
+                .comment("What level of haste should the ancient fruit grant? (default: 1)")
                 .defineInRange("ancientFruitAmplifier", 1, 0, 255);
 
         COMMON = BUILDER.build();

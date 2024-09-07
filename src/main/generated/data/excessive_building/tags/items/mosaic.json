@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bamboo_mosaic",
+    "excessive_building:oak_mosaic",
+    "excessive_building:spruce_mosaic",
+    "excessive_building:birch_mosaic",
+    "excessive_building:jungle_mosaic",
+    "excessive_building:acacia_mosaic",
+    "excessive_building:dark_oak_mosaic",
+    "excessive_building:mangrove_mosaic",
+    "excessive_building:cherry_mosaic",
+    "excessive_building:crimson_mosaic",
+    "excessive_building:warped_mosaic",
+    "excessive_building:ancient_mosaic",
+    "excessive_building:gloom_mosaic"
+  ]
+}

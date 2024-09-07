@@ -24,7 +24,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class EBLootTableGen extends FabricBlockLootTableProvider {
     public EBLootTableGen(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
-        super(output, future);
+        super(output);
     }
 
     @Override
@@ -148,50 +148,34 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.COPPER_BRICK_STAIRS);
         addDrop(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.COPPER_BRICK_SLAB, slabDrops(EBBlocks.COPPER_BRICK_SLAB));
-        addDrop(EBBlocks.COPPER_PRESSURE_PLATE);
         addDrop(EBBlocks.EXPOSED_COPPER_BRICKS);
         addDrop(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS);
         addDrop(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.EXPOSED_COPPER_BRICK_SLAB, slabDrops(EBBlocks.EXPOSED_COPPER_BRICK_SLAB));
-        addDrop(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE);
         addDrop(EBBlocks.WEATHERED_COPPER_BRICKS);
         addDrop(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS);
         addDrop(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.WEATHERED_COPPER_BRICK_SLAB, slabDrops(EBBlocks.WEATHERED_COPPER_BRICK_SLAB));
-        addDrop(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE);
         addDrop(EBBlocks.OXIDIZED_COPPER_BRICKS);
         addDrop(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS);
         addDrop(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB, slabDrops(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB));
-        addDrop(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE);
         addDrop(EBBlocks.WAXED_COPPER_BRICKS);
         addDrop(EBBlocks.WAXED_COPPER_BRICK_STAIRS);
         addDrop(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.WAXED_COPPER_BRICK_SLAB, slabDrops(EBBlocks.WAXED_COPPER_BRICK_SLAB));
-        addDrop(EBBlocks.WAXED_COPPER_PRESSURE_PLATE);
         addDrop(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS);
         addDrop(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS);
         addDrop(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB, slabDrops(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB));
-        addDrop(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE);
         addDrop(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS);
         addDrop(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS);
         addDrop(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB, slabDrops(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB));
-        addDrop(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE);
         addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS);
         addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS);
         addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB, slabDrops(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB));
-        addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
-        addDrop(EBBlocks.COPPER_BUTTON);
-        addDrop(EBBlocks.EXPOSED_COPPER_BUTTON);
-        addDrop(EBBlocks.WEATHERED_COPPER_BUTTON);
-        addDrop(EBBlocks.OXIDIZED_COPPER_BUTTON);
-        addDrop(EBBlocks.WAXED_COPPER_BUTTON);
-        addDrop(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON);
-        addDrop(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON);
-        addDrop(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
         addDrop(EBBlocks.IRON_BRICKS);
         addDrop(EBBlocks.IRON_BRICK_STAIRS);
         addDrop(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);
@@ -390,9 +374,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS);
         addDrop(EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS);
         addDrop(EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS);
-        addDrop(EBBlocks.TUFF_VERTICAL_STAIRS);
-        addDrop(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS);
-        addDrop(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.GLOOM_SEEDS);
         addDrop(EBBlocks.GRANITE_BRICKS);
         addDrop(EBBlocks.GRANITE_BRICK_STAIRS);
@@ -455,14 +436,12 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.ASPHALT_STAIRS);
         addDrop(EBBlocks.ASPHALT_VERTICAL_STAIRS);
         addDrop(EBBlocks.ASPHALT_SLAB, EBBlocks.ASPHALT_SLAB);
-        addDrop(EBBlocks.IRON_GRATE);
         addDrop(EBBlocks.ROSE);
         addDrop(EBBlocks.CYAN_ROSE);
         addDrop(EBBlocks.WHITE_ROSE);
         addPottedPlantDrops(EBBlocks.POTTED_ROSE);
         addPottedPlantDrops(EBBlocks.POTTED_CYAN_ROSE);
         addPottedPlantDrops(EBBlocks.POTTED_WHITE_ROSE);
-        addDrop(EBBlocks.GOLD_GRATE);
         addDrop(EBBlocks.CRACKED_BRIMSTONE_BRICKS);
         addDrop(EBBlocks.CRACKED_GRANITE_BRICKS);
         addDrop(EBBlocks.CRACKED_ANDESITE_BRICKS);
@@ -503,11 +482,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.GLOOM_DECORATIVE_SHELF);
         addDrop(EBBlocks.WEEPING_CANDLE);
         addDrop(EBBlocks.TWISTING_CANDLE);
-        addDrop(EBBlocks.TUFF_TILES);
-        addDrop(EBBlocks.TUFF_TILE_STAIRS);
-        addDrop(EBBlocks.TUFF_TILE_VERTICAL_STAIRS);
-        addDrop(EBBlocks.TUFF_TILE_SLAB, EBBlocks.TUFF_TILE_SLAB);
-        addDrop(EBBlocks.TUFF_TILE_WALL);
         leavesDrops(EBBlocks.GLOOM_LEAVES, EBBlocks.GLOOM_SAPLING);
         addDrop(EBBlocks.ALMENTRA_STATUE);
         addDyedBlockDrops();
@@ -589,17 +563,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         }
     }
 
-    public LootTable.Builder ancientLeavesDrops(Block leaves, Block sapling, float... saplingChance) {
-        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
-        return this.leavesDrops(leaves, sapling, saplingChance)
-                .pool(
-                        LootPool.builder()
-                                .rolls(ConstantLootNumberProvider.create(1.0F))
-                                .conditionally(this.createWithoutShearsOrSilkTouchCondition())
-                                .with(
-                                        ((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(EBItems.ANCIENT_FRUIT)))
-                                                .conditionally(TableBonusLootCondition.builder(impl.getOrThrow(Enchantments.FORTUNE), 0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F))
-                                )
-                );
+    public LootTable.Builder ancientLeavesDrops(Block leaves, Block drop, float... chance) {
+        return this.leavesDrops(leaves, drop, chance).pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS).with(((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(EBItems.ANCIENT_FRUIT))).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, new float[]{0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F}))));
     }
 }

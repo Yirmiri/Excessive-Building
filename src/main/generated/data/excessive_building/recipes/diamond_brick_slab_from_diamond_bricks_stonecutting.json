@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "excessive_building:diamond_bricks"
+  },
+  "result": "excessive_building:diamond_brick_slab"
+}

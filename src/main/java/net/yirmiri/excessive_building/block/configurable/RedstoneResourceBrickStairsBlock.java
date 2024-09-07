@@ -11,12 +11,12 @@ public class RedstoneResourceBrickStairsBlock extends ResourceBrickStairsBlock {
     }
 
     @Override
-    protected boolean emitsRedstonePower(BlockState state) {
+    public boolean emitsRedstonePower(BlockState state) {
         return true;
     }
 
     @Override
-    protected int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
+    public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return 15;
     }
 }

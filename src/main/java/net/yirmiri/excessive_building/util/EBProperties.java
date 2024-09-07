@@ -3,15 +3,15 @@ package net.yirmiri.excessive_building.util;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.GlowingLeavesBlock;
 import net.yirmiri.excessive_building.block.ParticleCandleBlock;
 import net.yirmiri.excessive_building.registry.EBSounds;
-import net.yirmiri.excessive_building.registry.EBStatusEffects;
 
 public class EBProperties {
     public static class BlockP {
@@ -54,9 +54,8 @@ public class EBProperties {
         public static final Block.Settings COBBLED_DEEPSLATE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).sounds(EBSounds.COBBLED_BRICKS);
         public static final Block.Settings BLACKSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.BLACKSTONE).sounds(EBSounds.COBBLED_BRICKS);
         public static final Block.Settings SMOOTH_STONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_STONE);
-        public static final Block.Settings TUFF_TILES = FabricBlockSettings.copyOf(Blocks.TUFF_BRICKS);
-        public static final Block.Settings ALMENTRA = FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.PACKED_MUD);
-        public static final Block.Settings ALMENTRA_BRICKS = FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.MUD_BRICKS);
+        public static final Block.Settings ALMENTRA = FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK).sounds(BlockSoundGroup.DRIPSTONE_BLOCK).mapColor(MapColor.BROWN);
+        public static final Block.Settings ALMENTRA_BRICKS = FabricBlockSettings.copyOf(Blocks.DEEPSLATE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.BROWN);
 
         //NATURE
         public static final Block.Settings GLOWING_LEAVES = FabricBlockSettings.of().luminance(state -> GlowingLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
@@ -88,8 +87,6 @@ public class EBProperties {
         public static final Block.Settings EXPOSED_COPPER = FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER);
         public static final Block.Settings WEATHERED_COPPER = FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER);
         public static final Block.Settings OXIDIZED_COPPER = FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER);
-        public static final Block.Settings COPPER_BUTTON = FabricBlockSettings.copyOf(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE);
-        public static final Block.Settings COPPER_PRESSURE_PLATE = FabricBlockSettings.copyOf(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE);
 
         //POLISHED SANDSTONES
         public static final Block.Settings POLISHED_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_SANDSTONE);
@@ -122,8 +119,6 @@ public class EBProperties {
         //MISC
         public static final Block.Settings PARTICLE_CANDLE = FabricBlockSettings.copyOf(Blocks.CANDLE).luminance(ParticleCandleBlock.STATE_TO_LUMINANCE);
         public static final Block.Settings MUD_BRICKS = FabricBlockSettings.copyOf(Blocks.MUD_BRICKS);
-        public static final Block.Settings IRON_GRATE = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never);
-        public static final Block.Settings GOLD_GRATE = FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).sounds(BlockSoundGroup.COPPER_GRATE).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never);
         public static final Block.Settings ASPHALT = FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK);
         public static final Block.Settings REACHING_LANTERN = FabricBlockSettings.copyOf(Blocks.SOUL_LANTERN);
         public static final Block.Settings BRICKS = FabricBlockSettings.copyOf(Blocks.BRICKS);
@@ -143,8 +138,9 @@ public class EBProperties {
         public static final Item.Settings NETHERITE = new Item.Settings().fireproof();
 
         public static class Food {
-            public static final FoodComponent ANCIENT_FRUIT = new FoodComponent.Builder().nutrition(4).saturationModifier(0.8F)
-            .statusEffect(new StatusEffectInstance(EBStatusEffects.REACHING, EBConfig.ANCIENT_FRUIT_DURATION.get(), EBConfig.ANCIENT_FRUIT_AMPLIFIER.get()), 1.0F).alwaysEdible().build();
+            public static final FoodComponent ANCIENT_FRUIT = new FoodComponent.Builder().hunger(4).saturationModifier(0.8F).alwaysEdible()
+            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, EBConfig.ANCIENT_FRUIT_DURATION.get(),
+                    EBConfig.ANCIENT_FRUIT_AMPLIFIER.get()), 1.0F).build();
         }
     }
 }

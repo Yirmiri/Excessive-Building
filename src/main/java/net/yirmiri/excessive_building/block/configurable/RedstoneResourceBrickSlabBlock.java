@@ -11,20 +11,13 @@ public class RedstoneResourceBrickSlabBlock extends ResourceBrickSlabBlock {
         super(settings);
     }
 
-    public static final MapCodec<RedstoneResourceBrickSlabBlock> CODEC = createCodec(RedstoneResourceBrickSlabBlock::new);
-
     @Override
-    public MapCodec<RedstoneResourceBrickSlabBlock> getCodec() {
-        return CODEC;
-    }
-
-    @Override
-    protected boolean emitsRedstonePower(BlockState state) {
+    public boolean emitsRedstonePower(BlockState state) {
         return true;
     }
 
     @Override
-    protected int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
+    public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return 15;
     }
 }

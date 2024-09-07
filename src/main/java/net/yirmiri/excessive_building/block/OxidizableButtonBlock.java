@@ -8,18 +8,18 @@ import net.minecraft.util.math.random.Random;
 public class OxidizableButtonBlock extends ButtonBlock implements Oxidizable {
     private final Oxidizable.OxidationLevel oxidationLevel;
 
-    public OxidizableButtonBlock(Oxidizable.OxidationLevel oxidationLevel, BlockSetType blockSetType, int pressTicks, Settings settings) {
-        super(blockSetType, pressTicks, settings);
+    public OxidizableButtonBlock(Oxidizable.OxidationLevel oxidationLevel, Settings settings, BlockSetType blockSetType, int pressTicks, boolean wooden) {
+        super(settings, blockSetType, pressTicks, wooden);
         this.oxidationLevel = oxidationLevel;
     }
 
     @Override
-    protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         this.tickDegradation(state, world, pos, random);
     }
 
     @Override
-    protected boolean hasRandomTicks(BlockState state) {
+    public boolean hasRandomTicks(BlockState state) {
         return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
     }
 

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "excessive_building:ancient_planks"
+    }
+  ],
+  "result": {
+    "item": "excessive_building:ancient_button"
+  }
+}

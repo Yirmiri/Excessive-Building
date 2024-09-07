@@ -1,8 +1,9 @@
 package net.yirmiri.excessive_building;
 
-import fuzs.forgeconfigapiport.fabric.api.forge.v4.ForgeConfigRegistry;
+import fuzs.forgeconfigapiport.api.config.v2.ForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
-import net.neoforged.fml.config.ModConfig;
+import net.minecraftforge.fml.config.ModConfig;
+import net.yirmiri.excessive_building.util.EBPaintingVariants;
 import net.yirmiri.excessive_building.worldgen.EBPlacedFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +27,6 @@ public class ExcessiveBuilding implements ModInitializer {
 		EBBlockEntities.loadBlockEntities();
 		EBParticles.loadParticles();
 		EBItems.loadItems();
-		EBStatusEffects.loadEffects();
 		EBPotions.loadPotions();
 		EBDecoratedPotPatterns.loadPotteryPatterns();
 		EBSounds.loadSounds();
@@ -34,5 +34,6 @@ public class ExcessiveBuilding implements ModInitializer {
 		EBLootModifiers.replaceLoot();
 		EBPlacedFeatures.addBiomeModifiers();
 		EBTrades.loadTrades();
+		EBPaintingVariants.loadEBPaintings();
 	}
 }

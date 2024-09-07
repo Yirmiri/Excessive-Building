@@ -37,15 +37,15 @@ public class EBTrappedChestBlock extends EBChestBlock {
 //        return EBConfig.ENABLE_CHEST_VARIANTS.get();
 //    }
 
-    protected boolean emitsRedstonePower(BlockState state) {
+    public boolean emitsRedstonePower(BlockState state) {
         return true;
     }
 
-    protected int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
+    public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return MathHelper.clamp(ChestBlockEntity.getPlayersLookingInChestCount(world, pos), 0, 15);
     }
 
-    protected int getStrongRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
+    public int getStrongRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return direction == Direction.UP ? state.getWeakRedstonePower(world, pos, direction) : 0;
     }
 }

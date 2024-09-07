@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:stone"
+    },
+    "@": {
+      "item": "minecraft:smooth_stone"
+    }
+  },
+  "pattern": [
+    "@#",
+    "#@"
+  ],
+  "result": {
+    "count": 4,
+    "item": "excessive_building:polished_stone"
+  },
+  "show_notification": true
+}

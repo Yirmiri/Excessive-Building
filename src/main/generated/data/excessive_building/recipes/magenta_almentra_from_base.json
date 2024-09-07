@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "excessive_building:almentra"
+    },
+    "@": {
+      "item": "minecraft:magenta_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "item": "excessive_building:magenta_almentra"
+  },
+  "show_notification": true
+}

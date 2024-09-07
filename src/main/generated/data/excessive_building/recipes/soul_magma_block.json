@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "excessive_building:soul_sandstone"
+    },
+    "@": {
+      "item": "minecraft:magma_cream"
+    }
+  },
+  "pattern": [
+    "@#",
+    "#@"
+  ],
+  "result": {
+    "count": 2,
+    "item": "excessive_building:soul_magma_block"
+  },
+  "show_notification": true
+}

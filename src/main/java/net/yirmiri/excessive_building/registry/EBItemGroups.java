@@ -2,25 +2,13 @@ package net.yirmiri.excessive_building.registry;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.NbtComponent;
-import net.minecraft.entity.decoration.painting.PaintingEntity;
-import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.nbt.NbtElement;
-import net.minecraft.nbt.NbtOps;
 import net.minecraft.registry.*;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.util.EBTags;
-
-import java.util.Comparator;
-import java.util.function.Predicate;
 
 public class EBItemGroups {
     public static ItemGroup EXCESSIVE_BUILDING = Registry.register(Registries.ITEM_GROUP, Identifier.of(ExcessiveBuilding.MOD_ID, "excessive_building"),
@@ -315,12 +303,6 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BRIMSTONE_PILLAR);
                 entries.add(EBBlocks.BRIMSTONE_LAMP);
                 entries.add(EBBlocks.BRIMSTONE_WINDOW);
-
-                entries.add(EBBlocks.TUFF_TILES);
-                entries.add(EBBlocks.TUFF_TILE_STAIRS);
-                entries.add(EBBlocks.TUFF_TILE_VERTICAL_STAIRS);
-                entries.add(EBBlocks.TUFF_TILE_SLAB);
-                entries.add(EBBlocks.TUFF_TILE_WALL);
 
                 entries.add(EBBlocks.ASPHALT);
                 entries.add(EBBlocks.ASPHALT_STAIRS);
@@ -841,14 +823,10 @@ public class EBItemGroups {
                 entries.add(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.IRON_BRICK_SLAB);
 
-                entries.add(EBBlocks.IRON_GRATE);
-
                 entries.add(EBBlocks.GOLD_BRICKS);
                 entries.add(EBBlocks.GOLD_BRICK_STAIRS);
                 entries.add(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.GOLD_BRICK_SLAB);
-
-                entries.add(EBBlocks.GOLD_GRATE);
 
                 entries.add(EBBlocks.REDSTONE_BRICKS);
                 entries.add(EBBlocks.REDSTONE_BRICK_STAIRS);
@@ -879,57 +857,41 @@ public class EBItemGroups {
                 entries.add(EBBlocks.COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.COPPER_BRICK_SLAB);
-                entries.add(EBBlocks.COPPER_PRESSURE_PLATE);
-                entries.add(EBBlocks.COPPER_BUTTON);
 
                 entries.add(EBBlocks.EXPOSED_COPPER_BRICKS);
                 entries.add(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.EXPOSED_COPPER_BRICK_SLAB);
-                entries.add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE);
-                entries.add(EBBlocks.EXPOSED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WEATHERED_COPPER_BRICKS);
                 entries.add(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WEATHERED_COPPER_BRICK_SLAB);
-                entries.add(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE);
-                entries.add(EBBlocks.WEATHERED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.OXIDIZED_COPPER_BRICKS);
                 entries.add(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB);
-                entries.add(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE);
-                entries.add(EBBlocks.OXIDIZED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WAXED_COPPER_BRICKS);
                 entries.add(EBBlocks.WAXED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_COPPER_BRICK_SLAB);
-                entries.add(EBBlocks.WAXED_COPPER_PRESSURE_PLATE);
-                entries.add(EBBlocks.WAXED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS);
                 entries.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB);
-                entries.add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE);
-                entries.add(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS);
                 entries.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB);
-                entries.add(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE);
-                entries.add(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB);
-                entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE);
-                entries.add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON);
 
                 entries.add(EBBlocks.ROSE);
                 entries.add(EBBlocks.CYAN_ROSE);
@@ -996,9 +958,6 @@ public class EBItemGroups {
                 entries.add(EBBlocks.POLISHED_DEEPSLATE_VERTICAL_STAIRS);
                 entries.add(EBBlocks.DEEPSLATE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.DEEPSLATE_TILE_VERTICAL_STAIRS);
-                entries.add(EBBlocks.TUFF_VERTICAL_STAIRS);
-                entries.add(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS);
-                entries.add(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.SANDSTONE_VERTICAL_STAIRS);
                 entries.add(EBBlocks.SMOOTH_SANDSTONE_VERTICAL_STAIRS);
@@ -1024,25 +983,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS);
                 entries.add(EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS);
-
-                entries.add(Items.PAINTING);
-                ctx.lookup().getOptionalWrapper(RegistryKeys.PAINTING_VARIANT).ifPresent(registryWrapper -> addPaintings(entries, ctx.lookup(), registryWrapper,
-                        registryEntry -> registryEntry.isIn(EBTags.PaintingVariants.EB_PAINTINGS), ItemGroup.StackVisibility.PARENT_AND_SEARCH_TABS));
             }).build());
-
-    private static final Comparator<RegistryEntry<PaintingVariant>> PAINTING_VARIANT_COMPARATOR = Comparator.comparing(
-            RegistryEntry::value, Comparator.comparingInt(PaintingVariant::getArea).thenComparing(PaintingVariant::width)
-    );
-
-    private static void addPaintings(ItemGroup.Entries entries, RegistryWrapper.WrapperLookup registryLookup, RegistryWrapper.Impl<PaintingVariant> registryWrapper, Predicate<RegistryEntry<PaintingVariant>> filter, ItemGroup.StackVisibility stackVisibility) {
-        RegistryOps<NbtElement> registryOps = registryLookup.getOps(NbtOps.INSTANCE);
-        registryWrapper.streamEntries().filter(filter).sorted(PAINTING_VARIANT_COMPARATOR).forEach(paintingVariantEntry -> {
-                    NbtComponent nbtComponent = NbtComponent.DEFAULT.with(registryOps, PaintingEntity.VARIANT_MAP_CODEC, paintingVariantEntry).getOrThrow().apply(nbt -> nbt.putString("id", "minecraft:painting"));
-                    ItemStack itemStack = new ItemStack(Items.PAINTING);
-                    itemStack.set(DataComponentTypes.ENTITY_DATA, nbtComponent);
-                    entries.add(itemStack, stackVisibility);
-                });
-        }
 
     public static void loadItemGroups() {
     }

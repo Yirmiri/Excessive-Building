@@ -35,8 +35,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendWallHangingSigns();
         appendWoodenButtons();
         appendWoodenPressurePlates();
-        appendPressurePlates();
-        appendButtons();
         appendNeedsIronTool();
         appendNeedsDiamondTool();
         appendNeedsStoneTool();
@@ -290,39 +288,12 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         ;
     }
 
-    public void appendPressurePlates() {
-        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
-                .add(EBBlocks.COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.WAXED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE)
-        ;
-    }
-
-    public void appendButtons() {
-        getOrCreateTagBuilder(BlockTags.BUTTONS)
-                .add(EBBlocks.COPPER_BUTTON)
-                .add(EBBlocks.EXPOSED_COPPER_BUTTON)
-                .add(EBBlocks.WEATHERED_COPPER_BUTTON)
-                .add(EBBlocks.OXIDIZED_COPPER_BUTTON)
-                .add(EBBlocks.WAXED_COPPER_BUTTON)
-                .add(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON)
-                .add(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON)
-                .add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON)
-        ;
-    }
-
     public void appendGuardedByPiglins() {
         getOrCreateTagBuilder(BlockTags.GUARDED_BY_PIGLINS)
                 .add(EBBlocks.GOLD_BRICKS)
                 .add(EBBlocks.GOLD_BRICK_STAIRS)
                 .add(EBBlocks.GOLD_BRICK_SLAB)
                 .add(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.GOLD_GRATE)
         ;
     }
 
@@ -337,7 +308,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     public void appendNeedsIronTool() {
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(EBBlocks.GOLD_GRATE)
                 .add(EBBlocks.GOLD_BRICKS)
                 .add(EBBlocks.GOLD_BRICK_STAIRS)
                 .add(EBBlocks.GOLD_BRICK_SLAB)
@@ -359,7 +329,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     public void appendNeedsStoneTool() {
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
-                .add(EBBlocks.IRON_GRATE)
                 .add(EBBlocks.CUT_COPPER_VERTICAL_STAIRS)
                 .add(EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS)
                 .add(EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS)
@@ -380,50 +349,34 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.COPPER_BRICK_STAIRS)
                 .add(EBBlocks.COPPER_BRICK_SLAB)
                 .add(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.COPPER_PRESSURE_PLATE)
                 .add(EBBlocks.EXPOSED_COPPER_BRICKS)
                 .add(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS)
                 .add(EBBlocks.EXPOSED_COPPER_BRICK_SLAB)
                 .add(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE)
                 .add(EBBlocks.WEATHERED_COPPER_BRICKS)
                 .add(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS)
                 .add(EBBlocks.WEATHERED_COPPER_BRICK_SLAB)
                 .add(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE)
                 .add(EBBlocks.EXPOSED_COPPER_BRICKS)
                 .add(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS)
                 .add(EBBlocks.EXPOSED_COPPER_BRICK_SLAB)
                 .add(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE)
                 .add(EBBlocks.WAXED_COPPER_BRICKS)
                 .add(EBBlocks.WAXED_COPPER_BRICK_STAIRS)
                 .add(EBBlocks.WAXED_COPPER_BRICK_SLAB)
                 .add(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.WAXED_COPPER_PRESSURE_PLATE)
                 .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS)
                 .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS)
                 .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB)
                 .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE)
                 .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS)
                 .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS)
                 .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB)
                 .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE)
                 .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS)
                 .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS)
                 .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB)
                 .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)
-                .add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.WAXED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE)
-                .add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE)
         ;
     }
 
@@ -555,7 +508,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.GRANITE_BRICK_WALL)
                     .add(EBBlocks.SMOOTH_BRICK_WALL)
                     .add(EBBlocks.BRIMSTONE_WALL)
-                    .add(EBBlocks.TUFF_TILE_WALL)
             ;
         }
 
@@ -574,11 +526,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.POLISHED_ALMENTRA_STAIRS)
                     .add(EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS)
                     .add(EBBlocks.POLISHED_ALMENTRA_SLAB)
-                    .add(EBBlocks.TUFF_TILES)
-                    .add(EBBlocks.TUFF_TILE_STAIRS)
-                    .add(EBBlocks.TUFF_TILE_SLAB)
-                    .add(EBBlocks.TUFF_TILE_VERTICAL_STAIRS)
-                    .add(EBBlocks.TUFF_TILE_WALL)
                     .add(EBBlocks.CRACKED_SMOOTH_STONE_BRICKS)
                     .add(EBBlocks.CRACKED_SMOOTH_STONE_TILES)
                     .add(EBBlocks.SMOOTH_STONE_BRICKS)
@@ -600,8 +547,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.CRACKED_GRANITE_BRICKS)
                     .add(EBBlocks.CRACKED_DIORITE_BRICKS)
                     .add(EBBlocks.CRACKED_MUD_BRICKS)
-                    .add(EBBlocks.GOLD_GRATE)
-                    .add(EBBlocks.IRON_GRATE)
                     .add(EBBlocks.ASPHALT)
                     .add(EBBlocks.ASPHALT_STAIRS)
                     .add(EBBlocks.ASPHALT_SLAB)
@@ -713,50 +658,34 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.COPPER_BRICK_STAIRS)
                     .add(EBBlocks.COPPER_BRICK_SLAB)
                     .add(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS)
-                    .add(EBBlocks.COPPER_PRESSURE_PLATE)
                     .add(EBBlocks.EXPOSED_COPPER_BRICKS)
                     .add(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS)
                     .add(EBBlocks.EXPOSED_COPPER_BRICK_SLAB)
                     .add(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)
-                    .add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE)
                     .add(EBBlocks.WEATHERED_COPPER_BRICKS)
                     .add(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS)
                     .add(EBBlocks.WEATHERED_COPPER_BRICK_SLAB)
                     .add(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS)
-                    .add(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE)
                     .add(EBBlocks.OXIDIZED_COPPER_BRICKS)
                     .add(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS)
                     .add(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB)
                     .add(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS)
-                    .add(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE)
                     .add(EBBlocks.WAXED_COPPER_BRICKS)
                     .add(EBBlocks.WAXED_COPPER_BRICK_STAIRS)
                     .add(EBBlocks.WAXED_COPPER_BRICK_SLAB)
                     .add(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS)
-                    .add(EBBlocks.WAXED_COPPER_PRESSURE_PLATE)
                     .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS)
                     .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS)
                     .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB)
                     .add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS)
-                    .add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE)
                     .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS)
                     .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS)
                     .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB)
                     .add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS)
-                    .add(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE)
                     .add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS)
                     .add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS)
                     .add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB)
                     .add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS)
-                    .add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE)
-                    .add(EBBlocks.COPPER_BUTTON)
-                    .add(EBBlocks.EXPOSED_COPPER_BUTTON)
-                    .add(EBBlocks.WEATHERED_COPPER_BUTTON)
-                    .add(EBBlocks.OXIDIZED_COPPER_BUTTON)
-                    .add(EBBlocks.WAXED_COPPER_BUTTON)
-                    .add(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON)
-                    .add(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON)
-                    .add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON)
                     .add(EBBlocks.REDSTONE_BRICKS)
                     .add(EBBlocks.REDSTONE_BRICK_STAIRS)
                     .add(EBBlocks.REDSTONE_BRICK_SLAB)
@@ -833,9 +762,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS)
                     .add(EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS)
                     .add(EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS)
-                    .add(EBBlocks.TUFF_VERTICAL_STAIRS)
-                    .add(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS)
-                    .add(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS)
             ;
 
             for (DyeColor colors : DyeColor.values()) {

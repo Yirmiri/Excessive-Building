@@ -12,11 +12,11 @@ import java.util.concurrent.CompletableFuture;
 
 public class EBEnUsLangGen extends FabricLanguageProvider {
     public EBEnUsLangGen(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
-        super(dataOutput, registryLookup);
+        super(dataOutput);
     }
 
     @Override
-    public void generateTranslations(RegistryWrapper.WrapperLookup lookup, TranslationBuilder build) {
+    public void generateTranslations(TranslationBuilder build) {
         for (DyeColor colors : DyeColor.values()) {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
@@ -168,50 +168,34 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.COPPER_BRICK_STAIRS, "Copper Stairs");
         build.add(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS, "Copper Brick Vertical Stairs");
         build.add(EBBlocks.COPPER_BRICK_SLAB, "Copper Slab");
-        build.add(EBBlocks.COPPER_PRESSURE_PLATE, "Copper Pressure Plate");
         build.add(EBBlocks.EXPOSED_COPPER_BRICKS, "Exposed Copper Bricks");
         build.add(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS, "Exposed Copper Stairs");
         build.add(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, "Exposed Copper Brick Vertical Stairs");
         build.add(EBBlocks.EXPOSED_COPPER_BRICK_SLAB, "Exposed Copper Slab");
-        build.add(EBBlocks.EXPOSED_COPPER_PRESSURE_PLATE, "Exposed Copper Pressure Plate");
         build.add(EBBlocks.WEATHERED_COPPER_BRICKS, "Weathered Copper Bricks");
         build.add(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS, "Weathered Copper Stairs");
         build.add(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, "Weathered Copper Brick Vertical Stairs");
         build.add(EBBlocks.WEATHERED_COPPER_BRICK_SLAB, "Weathered Copper Slab");
-        build.add(EBBlocks.WEATHERED_COPPER_PRESSURE_PLATE, "Weathered Copper Pressure Plate");
         build.add(EBBlocks.OXIDIZED_COPPER_BRICKS, "Oxidized Copper Bricks");
         build.add(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS, "Oxidized Copper Stairs");
         build.add(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, "Oxidized Copper Brick Vertical Stairs");
         build.add(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB, "Oxidized Copper Slab");
-        build.add(EBBlocks.OXIDIZED_COPPER_PRESSURE_PLATE, "Oxidized Copper Pressure Plate");
         build.add(EBBlocks.WAXED_COPPER_BRICKS, "Waxed Copper Bricks");
         build.add(EBBlocks.WAXED_COPPER_BRICK_STAIRS, "Waxed Copper Stairs");
         build.add(EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS, "Waxed Copper Brick Vertical Stairs");
         build.add(EBBlocks.WAXED_COPPER_BRICK_SLAB, "Waxed Copper Slab");
-        build.add(EBBlocks.WAXED_COPPER_PRESSURE_PLATE, "Waxed Copper Pressure Plate");
         build.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS, "Waxed Exposed Copper Bricks");
         build.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS, "Waxed Exposed Copper Stairs");
         build.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, "Waxed Exposed Copper Brick Vertical Stairs");
         build.add(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB, "Waxed Exposed Copper Slab");
-        build.add(EBBlocks.WAXED_EXPOSED_COPPER_PRESSURE_PLATE, "Waxed Exposed Copper Pressure Plate");
         build.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS, "Waxed Weathered Copper Bricks");
         build.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS, "Waxed Weathered Copper Stairs");
         build.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, "Waxed Weathered Copper Brick Vertical Stairs");
         build.add(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB, "Waxed Weathered Copper Slab");
-        build.add(EBBlocks.WAXED_WEATHERED_COPPER_PRESSURE_PLATE, "Waxed Weathered Copper Pressure Plate");
         build.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS, "Waxed Oxidized Copper Bricks");
         build.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS, "Waxed Oxidized Copper Stairs");
         build.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, "Waxed Oxidized Copper Brick Vertical Stairs");
         build.add(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB, "Waxed Oxidized Copper Slab");
-        build.add(EBBlocks.WAXED_OXIDIZED_COPPER_PRESSURE_PLATE, "Waxed Oxidized Copper Pressure Plate");
-        build.add(EBBlocks.COPPER_BUTTON, "Copper Button");
-        build.add(EBBlocks.EXPOSED_COPPER_BUTTON, "Exposed Copper Button");
-        build.add(EBBlocks.WEATHERED_COPPER_BUTTON, "Weathered Copper Button");
-        build.add(EBBlocks.OXIDIZED_COPPER_BUTTON, "Oxidized Copper Button");
-        build.add(EBBlocks.WAXED_COPPER_BUTTON, "Waxed Copper Button");
-        build.add(EBBlocks.WAXED_EXPOSED_COPPER_BUTTON, "Waxed Exposed Copper Button");
-        build.add(EBBlocks.WAXED_WEATHERED_COPPER_BUTTON, "Waxed Weathered Copper Button");
-        build.add(EBBlocks.WAXED_OXIDIZED_COPPER_BUTTON, "Waxed Oxidized Copper Button");
         build.add(EBBlocks.IRON_BRICKS, "Iron Bricks");
         build.add(EBBlocks.IRON_BRICK_STAIRS, "Iron Brick Stairs");
         build.add(EBBlocks.IRON_BRICK_SLAB, "Iron Brick Slab");
@@ -411,9 +395,6 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS, "Waxed Exposed Cut Copper Vertical Stairs");
         build.add(EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS, "Waxed Weathered Cut Copper Vertical Stairs");
         build.add(EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS, "Waxed Oxidized Cut Copper Vertical Stairs");
-        build.add(EBBlocks.TUFF_VERTICAL_STAIRS, "Tuff Vertical Stairs");
-        build.add(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS, "Polished Tuff Vertical Stairs");
-        build.add(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS, "Tuff Brick Vertical Stairs");
         build.add(EBBlocks.GLOOM_SEEDS, "Gloom Seeds");
         build.add(EBBlocks.GRANITE_BRICKS, "Granite Bricks");
         build.add(EBBlocks.GRANITE_BRICK_STAIRS, "Granite Brick Stairs");
@@ -477,11 +458,9 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.ASPHALT_STAIRS, "Asphalt Stairs");
         build.add(EBBlocks.ASPHALT_VERTICAL_STAIRS, "Asphalt Vertical Stairs");
         build.add(EBBlocks.ASPHALT_SLAB, "Asphalt Slab");
-        build.add(EBBlocks.IRON_GRATE, "Iron Grate");
         build.add(EBBlocks.ROSE, "Rose");
         build.add(EBBlocks.CYAN_ROSE, "Cyan Rose");
         build.add(EBBlocks.WHITE_ROSE, "White Rose");
-        build.add(EBBlocks.GOLD_GRATE, "Gold Grate");
         build.add(EBBlocks.CRACKED_GRANITE_BRICKS, "Cracked Granite Bricks");
         build.add(EBBlocks.CRACKED_ANDESITE_BRICKS, "Cracked Andesite Bricks");
         build.add(EBBlocks.CRACKED_DIORITE_BRICKS, "Cracked Diorite Bricks");
@@ -521,11 +500,6 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.GLOOM_DECORATIVE_SHELF, "Gloom Decorative Shelf");
         build.add(EBBlocks.WEEPING_CANDLE, "Weeping Candle");
         build.add(EBBlocks.TWISTING_CANDLE, "Twisting Candle");
-        build.add(EBBlocks.TUFF_TILES, "Tuff Tiles");
-        build.add(EBBlocks.TUFF_TILE_STAIRS, "Tuff Tile Stairs");
-        build.add(EBBlocks.TUFF_TILE_VERTICAL_STAIRS, "Tuff Tile Vertical Stairs");
-        build.add(EBBlocks.TUFF_TILE_SLAB, "Tuff Tile Slab");
-        build.add(EBBlocks.TUFF_TILE_WALL, "Tuff Tile Wall");
         build.add(EBBlocks.GLOOM_LEAVES, "Gloom Leaves");
         build.add(EBBlocks.GLOOM_SAPLING, "Gloom Sapling");
         build.add(EBBlocks.ALMENTRA_STATUE, "Almentra Statue");
@@ -715,40 +689,34 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.terrain.author", "Yirmiri");
 
         //EFFECTS
-        build.add("effect.excessive_building.reaching", "Reaching");
-        build.add("effect.excessive_building.reaching.description", "Increases the interaction reach of the user, this does not affect attack reach.");
+        build.add("item.minecraft.potion.effect.hasty_potion", "Potion of Hasty");
+        build.add("item.minecraft.splash_potion.effect.hasty_potion", "Splash Potion of Hasty");
+        build.add("item.minecraft.lingering_potion.effect.hasty_potion", "Lingering Potion of Hasty");
+        build.add("item.minecraft.tipped_arrow.effect.hasty_potion", "Arrow of Hasty");
 
-        build.add("item.minecraft.potion.effect.reaching_potion", "Potion of Reaching");
-        build.add("item.minecraft.splash_potion.effect.reaching_potion", "Splash Potion of Reaching");
-        build.add("item.minecraft.lingering_potion.effect.reaching_potion", "Lingering Potion of Reaching");
-        build.add("item.minecraft.tipped_arrow.effect.reaching_potion", "Arrow of Reaching");
+        build.add("item.minecraft.potion.effect.long_hasty_potion", "Potion of Hasty");
+        build.add("item.minecraft.splash_potion.effect.long_hasty_potion", "Splash Potion of Hasty");
+        build.add("item.minecraft.lingering_potion.effect.long_hasty_potion", "Lingering Potion of Hasty");
+        build.add("item.minecraft.tipped_arrow.effect.long_hasty_potion", "Arrow of Hasty");
 
-        build.add("item.minecraft.potion.effect.long_reaching_potion", "Potion of Reaching");
-        build.add("item.minecraft.splash_potion.effect.long_reaching_potion", "Splash Potion of Reaching");
-        build.add("item.minecraft.lingering_potion.effect.long_reaching_potion", "Lingering Potion of Reaching");
-        build.add("item.minecraft.tipped_arrow.effect.long_reaching_potion", "Arrow of Reaching");
+        build.add("item.minecraft.potion.effect.strong_hasty_potion", "Potion of Hasty");
+        build.add("item.minecraft.splash_potion.effect.strong_hasty_potion", "Splash Potion of Hasty");
+        build.add("item.minecraft.lingering_potion.effect.strong_hasty_potion", "Lingering Potion of Hasty");
+        build.add("item.minecraft.tipped_arrow.effect.strong_hasty_potion", "Arrow of Hasty");
 
-        build.add("item.minecraft.potion.effect.strong_reaching_potion", "Potion of Reaching");
-        build.add("item.minecraft.splash_potion.effect.strong_reaching_potion", "Splash Potion of Reaching");
-        build.add("item.minecraft.lingering_potion.effect.strong_reaching_potion", "Lingering Potion of Reaching");
-        build.add("item.minecraft.tipped_arrow.effect.strong_reaching_potion", "Arrow of Reaching");
+        build.add("item.minecraft.potion.effect.fatigued_potion", "Potion of Fatigued");
+        build.add("item.minecraft.splash_potion.effect.fatigued_potion", "Splash Potion of Fatigued");
+        build.add("item.minecraft.lingering_potion.effect.fatigued_potion", "Lingering Potion of Fatigued");
+        build.add("item.minecraft.tipped_arrow.effect.fatigued_potion", "Arrow of Fatigued");
 
-        build.add("effect.excessive_building.shortening", "Shortening");
-        build.add("effect.excessive_building.shortening.description", "Decreases the interaction reach of the user, this does not affect attack reach.");
+        build.add("item.minecraft.potion.effect.long_fatigued_potion", "Potion of Fatigued");
+        build.add("item.minecraft.splash_potion.effect.long_fatigued_potion", "Splash Potion of Fatigued");
+        build.add("item.minecraft.lingering_potion.effect.long_fatigued_potion", "Lingering Potion of Fatigued");
+        build.add("item.minecraft.tipped_arrow.effect.long_fatigued_potion", "Arrow of Fatigued");
 
-        build.add("item.minecraft.potion.effect.shortening_potion", "Potion of Shortening");
-        build.add("item.minecraft.splash_potion.effect.shortening_potion", "Splash Potion of Shortening");
-        build.add("item.minecraft.lingering_potion.effect.shortening_potion", "Lingering Potion of Shortening");
-        build.add("item.minecraft.tipped_arrow.effect.shortening_potion", "Arrow of Shortening");
-
-        build.add("item.minecraft.potion.effect.long_shortening_potion", "Potion of Shortening");
-        build.add("item.minecraft.splash_potion.effect.long_shortening_potion", "Splash Potion of Shortening");
-        build.add("item.minecraft.lingering_potion.effect.long_shortening_potion", "Lingering Potion of Shortening");
-        build.add("item.minecraft.tipped_arrow.effect.long_shortening_potion", "Arrow of Shortening");
-
-        build.add("item.minecraft.potion.effect.strong_shortening_potion", "Potion of Shortening");
-        build.add("item.minecraft.splash_potion.effect.strong_shortening_potion", "Splash Potion of Shortening");
-        build.add("item.minecraft.lingering_potion.effect.strong_shortening_potion", "Lingering Potion of Shortening");
-        build.add("item.minecraft.tipped_arrow.effect.strong_shortening_potion", "Arrow of Shortening");
+        build.add("item.minecraft.potion.effect.strong_fatigued_potion", "Potion of Fatigued");
+        build.add("item.minecraft.splash_potion.effect.strong_fatigued_potion", "Splash Potion of Fatigued");
+        build.add("item.minecraft.lingering_potion.effect.strong_fatigued_potion", "Lingering Potion of Fatigued");
+        build.add("item.minecraft.tipped_arrow.effect.strong_fatigued_potion", "Arrow of Fatigued");
     }
 }

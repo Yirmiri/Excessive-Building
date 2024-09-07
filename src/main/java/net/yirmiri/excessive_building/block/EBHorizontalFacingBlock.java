@@ -16,16 +16,9 @@ import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
 public class EBHorizontalFacingBlock extends HorizontalFacingBlock {
-    public static final MapCodec<EBHorizontalFacingBlock> CODEC = createCodec(EBHorizontalFacingBlock::new);
-
     public EBHorizontalFacingBlock(Settings settings) {
         super(settings);
         setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
-    }
-
-    @Override
-    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
-        return CODEC;
     }
 
     @Nullable @Override

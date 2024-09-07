@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "excessive_building:gray_terracotta_tiles"
+  },
+  "result": "excessive_building:gray_terracotta_tile_stairs"
+}

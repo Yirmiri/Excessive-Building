@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brown_knitted_carpet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "excessive_building:brown_knitted_carpet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "excessive_building:brown_knitted_carpet_from_any"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_brown_knitted_carpet",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "excessive_building:brown_knitted_carpet_from_any"
+    ]
+  },
+  "sends_telemetry_event": false
+}
