@@ -4,7 +4,7 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release v3.2.3 Fabric/Quilt-1.21(.1)
+Version Release v3.2.3 Fabric/NeoForge/Quilt-1.21(.1)
 
   Misc Additions
 •   Added amethyst lamps
@@ -16,6 +16,7 @@ Version Release v3.2.3 Fabric/Quilt-1.21(.1)
 •   Updated the texture of almentra and the polished variants (bricks and statues at a later date)
 •   Updated the texture and model of reaching lanterns
 •   Updated the recipe for reaching lanterns
+•   Update description of the mod
 
   Fixes
 •   Fixed an issue that caused custom sherds and gloom seeds to not appear from loot tables
