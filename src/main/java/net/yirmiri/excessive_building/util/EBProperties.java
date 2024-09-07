@@ -55,8 +55,9 @@ public class EBProperties {
         public static final Block.Settings BLACKSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.BLACKSTONE).sounds(EBSounds.COBBLED_BRICKS);
         public static final Block.Settings SMOOTH_STONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_STONE);
         public static final Block.Settings TUFF_TILES = FabricBlockSettings.copyOf(Blocks.TUFF_BRICKS);
-        public static final Block.Settings ALMENTRA = FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.PACKED_MUD);
-        public static final Block.Settings ALMENTRA_BRICKS = FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.MUD_BRICKS);
+        public static final Block.Settings ALMENTRA = FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK).mapColor(MapColor.BROWN);
+        public static final Block.Settings POLISHED_ALMENTRA = FabricBlockSettings.copyOf(Blocks.POLISHED_DEEPSLATE).mapColor(MapColor.BROWN);
+        public static final Block.Settings ALMENTRA_BRICKS = FabricBlockSettings.copyOf(Blocks.DEEPSLATE_BRICKS).mapColor(MapColor.BROWN);
 
         //NATURE
         public static final Block.Settings GLOWING_LEAVES = FabricBlockSettings.of().luminance(state -> GlowingLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);

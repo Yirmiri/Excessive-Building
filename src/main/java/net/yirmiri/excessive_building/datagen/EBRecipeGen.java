@@ -3503,6 +3503,39 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("@!@")
                 .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.AMETHYST_LAMP)));
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraStairs(colors.getId()), EBBlocks.getDyedAlmentra(colors.getId()), 1);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraSlab(colors.getId()), EBBlocks.getDyedAlmentra(colors.getId()), 2);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraVerticalStairs(colors.getId()), EBBlocks.getDyedAlmentra(colors.getId()), 1);
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createStairsRecipe(EBBlocks.getDyedAlmentraStairs(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedAlmentra(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentra(colors.getId())))
+                    .offerTo(exporter, getRecipeName(EBBlocks.getDyedAlmentraStairs(colors.getId())));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraSlab(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedAlmentra(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentra(colors.getId())))
+                    .offerTo(exporter, getRecipeName(EBBlocks.getDyedAlmentraSlab(colors.getId())));
+        }
+
+        for (DyeColor colors : DyeColor.values()) {
+            createVerticalStairsRecipe(EBBlocks.getDyedAlmentraVerticalStairs(colors.getId()),
+                    Ingredient.ofItems(EBBlocks.getDyedAlmentra(colors.getId())))
+                    .criterion(hasItem(EBBlocks.getDyedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentra(colors.getId())))
+                    .offerTo(exporter, getRecipeName(EBBlocks.getDyedAlmentraVerticalStairs(colors.getId())));
+        }
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {
