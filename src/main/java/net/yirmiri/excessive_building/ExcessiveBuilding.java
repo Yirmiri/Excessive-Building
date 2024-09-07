@@ -31,7 +31,7 @@ public class ExcessiveBuilding implements ModInitializer {
 		EBDecoratedPotPatterns.loadPotteryPatterns();
 		EBSounds.loadSounds();
 		EBPacks.loadPacks();
-		EBLootModifiers.modifyLoot();
+		EBLootModifiers.replaceLoot();
 		EBPlacedFeatures.addBiomeModifiers();
 		EBTrades.loadTrades();
 	}

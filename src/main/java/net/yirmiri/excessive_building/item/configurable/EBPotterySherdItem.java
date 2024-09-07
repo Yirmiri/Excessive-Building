@@ -11,6 +11,6 @@ public class EBPotterySherdItem extends Item {
 
     @Override
     public boolean isEnabled(FeatureSet enable) {
-        return EBConfig.ENABLE_POTTERY_SHERDS.get();
+        return EBConfig.ENABLE_EB_POTTERY_SHERDS.get();
     }
 }

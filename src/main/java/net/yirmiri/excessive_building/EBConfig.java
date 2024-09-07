@@ -15,7 +15,7 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_CRAFTING_TABLE_VARIANTS;
     //public static final ForgeConfigSpec.BooleanValue ENABLE_CHEST_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_LADDER_VARIANTS;
-    public static final ForgeConfigSpec.BooleanValue ENABLE_POTTERY_SHERDS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_EB_POTTERY_SHERDS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_PARTICLE_CANDLES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_ANCIENT_SAPLINGS;
@@ -25,8 +25,6 @@ public class EBConfig {
     //BALANCE
     public static final ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_SOUL_MAGMA_COLUMN_TOGGLE;
-    public static final ForgeConfigSpec.FloatValue ANCIENT_SAPLING_CHANCE;
-    public static final ForgeConfigSpec.FloatValue GLOOM_SEEDS_CHANCE;
     public static final ForgeConfigSpec.BooleanValue ENABLE_REACHING_LANTERN_FUNCTIONALITY;
     public static final ForgeConfigSpec.IntValue REACHING_LANTERN_AMPLIFIER;
     public static final ForgeConfigSpec.IntValue REACHING_LANTERN_RANGE;
@@ -78,12 +76,12 @@ public class EBConfig {
                 .comment("Should ladder variants be enabled? (default: true)")
                 .define("enableLadderVariants", true);
 
-        ENABLE_POTTERY_SHERDS = BUILDER
+        ENABLE_EB_POTTERY_SHERDS = BUILDER
                 .comment("Should Excessive Building's pottery sherds be enabled? (default: true)")
-                .define("enablePotterySherds", true);
+                .define("enableEBPotterySherds", true);
 
         ENABLE_PARTICLE_CANDLES = BUILDER
-                .comment("Should candles that produce particles when lit be enabled? (default: true)")
+                .comment("Should new candles that produce particles when lit be enabled? (default: true)")
                 .define("enableParticleCandles", true);
 
         ENABLE_DECORATIVES = BUILDER
@@ -114,14 +112,6 @@ public class EBConfig {
         ENABLE_SOUL_MAGMA_COLUMN_TOGGLE = BUILDER
                 .comment("Should soul magma bubble columns be toggled with redstone? (default: true)")
                 .define("enableSoulMagmaColumnToggle", true);
-
-        ANCIENT_SAPLING_CHANCE = BUILDER
-                .comment("How rare should ancient saplings be? (default: 0.15 aka 15%)")
-                .defineInRange("ancientSaplingChance", 0.15F, 0F, 1.0F);
-
-        GLOOM_SEEDS_CHANCE = BUILDER
-                .comment("How rare should gloom seeds be? (default: 0.02 aka 2%)")
-                .defineInRange("ancientSaplingChance", 0.02F, 0F, 1.0F);
 
         ENABLE_REACHING_LANTERN_FUNCTIONALITY = BUILDER
                 .comment("Should reaching lanterns grant nearby players the reaching effect? (default: true)")

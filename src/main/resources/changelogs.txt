@@ -16,7 +16,9 @@ Version Release v3.2.3 Fabric/NeoForge/Quilt-1.21(.1)
 •   Updated the texture of almentra and the polished variants (bricks and statues at a later date)
 •   Updated the texture and model of reaching lanterns
 •   Updated the recipe for reaching lanterns
-•   Update description of the mod
+•   Updated wording of some configuration options to help convey what they do better
+•   Updated description of the mod
+•   Removed chance configuration for ancient saplings and gloom seeds (you can just disable them if you don't like them)
 
   Fixes
 •   Fixed an issue that caused custom sherds and gloom seeds to not appear from loot tables
@@ -28,6 +30,12 @@ Version Release v3.2.3 Fabric/NeoForge/Quilt-1.21(.1)
 •   Fixed tuff tiles being missing from the creative inventory
 •   Fixed missing translations for reaching lanterns
 •   Russian translations should now properly work (@BrickerMoss)
+
+  Notes :P
+•   I did want to improve/redo the concept of gloom trees this update but didn't have time as I wanted to releasean updated version of 1.20.1's port before
+I drop it entirely since the current state of the mod on that version is rather embarrassing. I plan to fuse the idea of gloom trees with how fiery crystals
+worked back on the old version of the mod, so stay tuned for lighting blocks! Expect custom tree generation and a new way to obtain them aswell.
+•   I think it would be nice to inform you on the state/ideas I have for the mod with each changelog like this- even if its very little :>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
