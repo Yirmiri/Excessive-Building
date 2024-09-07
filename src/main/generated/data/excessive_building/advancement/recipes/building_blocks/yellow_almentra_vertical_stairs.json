@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:yellow_almentra_vertical_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_almentra": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:yellow_almentra"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_almentra"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:yellow_almentra_vertical_stairs"
+    ]
+  }
+}
