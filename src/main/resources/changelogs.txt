@@ -13,6 +13,7 @@ Version Release v3.2.3 Fabric/Quilt-1.21(.1)
 •   Added an "Oak" prefix to Chest and Trapped Chest blocks (via built in pack so it can be toggled)
 
   Changes
+•   Updated the texture of almentra and the polished variants (bricks and statues at a later date)
 •   Updated the texture and model of reaching lanterns
 •   Updated the recipe for reaching lanterns
 
