@@ -28,6 +28,7 @@ public abstract class PlayerListEntryMixin {
         switch (playerUUID) {
             case "1cedf927-5c8f-4650-95e9-808fc8f94d00", "bd35c402-fa9c-4d00-afe6-b4ed9ebe90c4" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/azurune.png");
             case "2913d971-a58d-4566-8706-b4fb5eacb954" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/redeyevain.png");
+            case "d1dac9fe-3ef0-4ea8-997b-b7cdd6a92131" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/robor.png");
             case "9778ff53-d83d-4233-8fa6-8aab7b89c4c0" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/beetroot.png");
             case "c12df14d-24ed-4247-84e8-e10c111237df" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/demonheart.png");
             case "416fc916-69cc-4b3c-8c5e-a39a5acb6981" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/accursed.png");

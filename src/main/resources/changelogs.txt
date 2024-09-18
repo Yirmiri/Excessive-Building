@@ -4,7 +4,20 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release v3.2.3 Fabric/Quilt-1.20.1/1.21(.1)
+Version Release v3.2.4 Fabric/Quilt-1.21(1.)/1.20.1
+
+  Misc Additions
+•   Added uk_ua translations (@unroman)
+
+  Changes
+•   Updated the texture of almentra bricks
+•   Updated the texture of almentra statues
+•   Updated the models for orange almentra statue
+•   Updated contributor capes
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release v3.2.3 Fabric/Quilt-1.21(1.)/1.20.1
 
   Misc Additions
 •   Added amethyst lamps
