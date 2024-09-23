@@ -19,6 +19,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.EBConfig;
 import org.jetbrains.annotations.Nullable;
 
@@ -34,7 +35,7 @@ public class SoulMagmaBlock extends MagmaBlock {
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
+        if (EBClientConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
             super.appendTooltip(stack, context, tooltip, options);
             tooltip.add(ScreenTexts.EMPTY);
             tooltip.add(Text.translatable("tooltip.block.when_powered").formatted(Formatting.GRAY));

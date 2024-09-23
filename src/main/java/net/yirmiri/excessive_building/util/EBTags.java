@@ -13,6 +13,7 @@ public class EBTags {
         public static final TagKey<Block> ANCIENT_LOGS = create("ancient_logs");
         public static final TagKey<Block> GLOOM_LOGS = create("gloom_logs");
         public static final TagKey<Block> DECORATIVES = create("decoratives");
+        public static final TagKey<Block> HAMMER_MINEABLE = create("hammer_mineable");
 
         private static TagKey<Block> create(String id) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id));
@@ -28,6 +29,9 @@ public class EBTags {
         public static final TagKey<Item> SOILS = create("soils");
         public static final TagKey<Item> KNITTED_WOOL = create("knitted_wool");
         public static final TagKey<Item> KNITTED_CARPET = create("knitted_carpet");
+        public static final TagKey<Item> HAMMER_REPAIRABLE = create("hammer_repairable");
+        public static final TagKey<Item> EB_HAMMERS = create("eb_hammers");
+        public static final TagKey<Item> HAMMERABLE_TOOLTIP = create("hammerable_tooltip");
 
         private static TagKey<Item> create(String id) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id));

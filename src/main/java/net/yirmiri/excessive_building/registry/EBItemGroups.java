@@ -33,8 +33,8 @@ public class EBItemGroups {
                 entries.add(Blocks.BOOKSHELF);
                 entries.add(EBBlocks.OAK_DECORATIVE_SHELF);
                 entries.add(Blocks.CRAFTING_TABLE);
-                entries.add(Blocks.CHEST);
-                entries.add(Blocks.TRAPPED_CHEST);
+                //entries.add(Blocks.CHEST);
+                //entries.add(Blocks.TRAPPED_CHEST);
                 entries.add(Blocks.LADDER);
 
                 entries.add(EBBlocks.SPRUCE_MOSAIC);
@@ -273,6 +273,18 @@ public class EBItemGroups {
                 entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB);
                 entries.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
 
+                entries.add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS);
+                entries.add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_STAIRS);
+                entries.add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_SLAB);
+                entries.add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_WALL);
+
+                entries.add(EBBlocks.MOSSY_DEEPSLATE_BRICKS);
+                entries.add(EBBlocks.MOSSY_DEEPSLATE_BRICK_STAIRS);
+                entries.add(EBBlocks.MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.MOSSY_DEEPSLATE_BRICK_SLAB);
+                entries.add(EBBlocks.MOSSY_DEEPSLATE_BRICK_WALL);
+
                 entries.add(EBBlocks.CRACKED_BRICKS);
                 entries.add(EBBlocks.HERRINGBONE_BRICKS);
                 entries.add(EBBlocks.SMOOTH_BRICKS);
@@ -289,6 +301,30 @@ public class EBItemGroups {
                 entries.add(EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.BLACKSTONE_BRICK_SLAB);
                 entries.add(EBBlocks.BLACKSTONE_BRICK_WALL);
+
+                entries.add(EBBlocks.WEEPING_BLACKSTONE_BRICKS);
+                entries.add(EBBlocks.WEEPING_BLACKSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.WEEPING_BLACKSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.WEEPING_BLACKSTONE_BRICK_SLAB);
+                entries.add(EBBlocks.WEEPING_BLACKSTONE_BRICK_WALL);
+
+                entries.add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS);
+                entries.add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB);
+                entries.add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL);
+
+                entries.add(EBBlocks.TWISTING_BLACKSTONE_BRICKS);
+                entries.add(EBBlocks.TWISTING_BLACKSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.TWISTING_BLACKSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.TWISTING_BLACKSTONE_BRICK_SLAB);
+                entries.add(EBBlocks.TWISTING_BLACKSTONE_BRICK_WALL);
+
+                entries.add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS);
+                entries.add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS);
+                entries.add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB);
+                entries.add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL);
 
                 entries.add(EBBlocks.BRIMSTONE);
                 entries.add(EBBlocks.BRIMSTONE_STAIRS);
@@ -824,6 +860,8 @@ public class EBItemGroups {
 
                 entries.add(EBBlocks.CRACKED_MUD_BRICKS);
 
+                entries.add(EBBlocks.ARMADILLO_SCUTE_BLOCK);
+
                 entries.add(EBBlocks.BONE_BRICKS);
                 entries.add(EBBlocks.BONE_BRICK_STAIRS);
                 entries.add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
@@ -945,6 +983,8 @@ public class EBItemGroups {
                 entries.add(EBBlocks.GLASS_JAR);
                 entries.add(EBBlocks.GLASS_JAR_OF_FIRE);
                 entries.add(EBBlocks.GLASS_JAR_OF_SOUL_FIRE);
+
+                entries.add(EBItems.HAMMER);
 
                 entries.add(EBItems.ANCIENT_POTTERY_SHERD);
                 entries.add(EBItems.BITTER_POTTERY_SHERD);

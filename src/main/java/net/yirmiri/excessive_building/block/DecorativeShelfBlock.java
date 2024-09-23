@@ -19,6 +19,7 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.EBConfig;
 import org.jetbrains.annotations.NotNull;
 
@@ -39,7 +40,7 @@ public class DecorativeShelfBlock extends Block {
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
+        if (EBClientConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
             super.appendTooltip(stack, context, tooltip, options);
             tooltip.add(ScreenTexts.EMPTY);
             tooltip.add(Text.translatable("tooltip.block.interact").formatted(Formatting.GRAY));

@@ -7,6 +7,7 @@ public class EBConfig {
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
     //CONTENT
+    public static final ForgeConfigSpec.BooleanValue ENABLE_HAMMERS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_ASPHALT;
     public static final ForgeConfigSpec.BooleanValue ENABLE_VERTICAL_STAIRS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_RESOURCE_BRICKS;
@@ -20,7 +21,6 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_ANCIENT_SAPLINGS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_GLOOM_SEEDS;
-    public static final ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_TOOLTIPS;
 
     //BALANCE
     public static final ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
@@ -43,6 +43,10 @@ public class EBConfig {
         //CONTENT TOGGLES
         BUILDER.push("Content Toggles");
         BUILDER.comment("Disabling these will make the corresponding feature unobtainable/unusable");
+
+        ENABLE_HAMMERS = BUILDER
+                .comment("Should hammers be enabled? This tool can create new block variants and destroy some blocks faster. (default: true)")
+                .define("enableHammers", true);
 
         ENABLE_ASPHALT = BUILDER
                 .comment("Should asphalt be enabled? (default: true)")
@@ -95,10 +99,6 @@ public class EBConfig {
         ENABLE_GLOOM_SEEDS = BUILDER
                 .comment("Should gloom seeds be enabled (and to extension their content)? (default: true)")
                 .define("enableGloomSeeds", true);
-
-        ENABLE_CUSTOM_TOOLTIPS = BUILDER
-                .comment("Should Excessive Building items with special interactions have custom tooltips? (default: true)")
-                .define("enableCustomTooltips", true);
 
         BUILDER.pop();
 

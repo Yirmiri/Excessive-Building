@@ -73,19 +73,7 @@ public class EBModelGen extends FabricModelProvider {
         mossyCobblestoneBricks.slab(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB);
         mossyCobblestoneBricks.wall(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL);
 
-        BlockStateModelGenerator.BlockTexturePool cobbledDeepslateBricks = generator.registerCubeAllModelTexturePool(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
-        cobbledDeepslateBricks.stairs(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
-        cobbledDeepslateBricks.slab(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB);
-        cobbledDeepslateBricks.wall(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
-
-        BlockStateModelGenerator.BlockTexturePool blackstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.BLACKSTONE_BRICKS);
-        blackstoneBricks.stairs(EBBlocks.BLACKSTONE_BRICK_STAIRS);
-        blackstoneBricks.slab(EBBlocks.BLACKSTONE_BRICK_SLAB);
-        blackstoneBricks.wall(EBBlocks.BLACKSTONE_BRICK_WALL);
-
         generator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
 
         BlockStateModelGenerator.BlockTexturePool ancientPlanks = generator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_PLANKS);
         ancientPlanks.stairs(EBBlocks.ANCIENT_STAIRS);
@@ -778,6 +766,57 @@ public class EBModelGen extends FabricModelProvider {
         thickPaper.slab(EBBlocks.THICK_PAPER_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.THICK_PAPER_VERTICAL_STAIRS, EBBlocks.THICK_PAPER_BLOCK);
         generator.registerCubeAllModelTexturePool(EBBlocks.THICK_DIVIDED_PAPER_BLOCK);
+
+        BlockStateModelGenerator.BlockTexturePool cobbledDeepslateBricks = generator.registerCubeAllModelTexturePool(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
+        cobbledDeepslateBricks.stairs(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
+        cobbledDeepslateBricks.slab(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB);
+        cobbledDeepslateBricks.wall(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
+
+        BlockStateModelGenerator.BlockTexturePool blackstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.BLACKSTONE_BRICKS);
+        blackstoneBricks.stairs(EBBlocks.BLACKSTONE_BRICK_STAIRS);
+        blackstoneBricks.slab(EBBlocks.BLACKSTONE_BRICK_SLAB);
+        blackstoneBricks.wall(EBBlocks.BLACKSTONE_BRICK_WALL);
+
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
+        generator.registerSimpleCubeAll(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool mossyCobbledDeepslateBricks = generator.registerCubeAllModelTexturePool(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS);
+        mossyCobbledDeepslateBricks.stairs(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_STAIRS);
+        mossyCobbledDeepslateBricks.slab(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_SLAB);
+        mossyCobbledDeepslateBricks.wall(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool weepingBlackstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.WEEPING_BLACKSTONE_BRICKS);
+        weepingBlackstoneBricks.stairs(EBBlocks.WEEPING_BLACKSTONE_BRICK_STAIRS);
+        weepingBlackstoneBricks.slab(EBBlocks.WEEPING_BLACKSTONE_BRICK_SLAB);
+        weepingBlackstoneBricks.wall(EBBlocks.WEEPING_BLACKSTONE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WEEPING_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.WEEPING_BLACKSTONE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool twistingBlackstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.TWISTING_BLACKSTONE_BRICKS);
+        twistingBlackstoneBricks.stairs(EBBlocks.TWISTING_BLACKSTONE_BRICK_STAIRS);
+        twistingBlackstoneBricks.slab(EBBlocks.TWISTING_BLACKSTONE_BRICK_SLAB);
+        twistingBlackstoneBricks.wall(EBBlocks.TWISTING_BLACKSTONE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.TWISTING_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.TWISTING_BLACKSTONE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool mossyDeepslateBricks = generator.registerCubeAllModelTexturePool(EBBlocks.MOSSY_DEEPSLATE_BRICKS);
+        mossyDeepslateBricks.stairs(EBBlocks.MOSSY_DEEPSLATE_BRICK_STAIRS);
+        mossyDeepslateBricks.slab(EBBlocks.MOSSY_DEEPSLATE_BRICK_SLAB);
+        mossyDeepslateBricks.wall(EBBlocks.MOSSY_DEEPSLATE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS, EBBlocks.MOSSY_DEEPSLATE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool weepingPolishedBlackstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS);
+        weepingPolishedBlackstoneBricks.stairs(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS);
+        weepingPolishedBlackstoneBricks.slab(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB);
+        weepingPolishedBlackstoneBricks.wall(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool twistingPolishedBlackstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS);
+        twistingPolishedBlackstoneBricks.stairs(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS);
+        twistingPolishedBlackstoneBricks.slab(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB);
+        twistingPolishedBlackstoneBricks.wall(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL);
+        EBModels.registerVerticalStairs(generator, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS);
+
+        generator.registerCubeAllModelTexturePool(EBBlocks.ARMADILLO_SCUTE_BLOCK);
     }
 
     @Override
@@ -785,6 +824,8 @@ public class EBModelGen extends FabricModelProvider {
         generator.register(EBItems.ANCIENT_FRUIT, Models.GENERATED);
         generator.register(EBItems.ANCIENT_SIGN, Models.GENERATED);
         generator.register(EBItems.GLOOM_SIGN, Models.GENERATED);
+
+        generator.register(EBItems.HAMMER, Models.HANDHELD);
 
         generator.register(EBItems.ROYALTY_POTTERY_SHERD, Models.GENERATED);
         generator.register(EBItems.ANCIENT_POTTERY_SHERD, Models.GENERATED);

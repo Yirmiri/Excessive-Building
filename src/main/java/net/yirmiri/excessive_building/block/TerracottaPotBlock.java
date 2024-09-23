@@ -28,6 +28,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.util.EBTags;
 import org.jetbrains.annotations.NotNull;
@@ -53,7 +54,7 @@ public class TerracottaPotBlock extends Block implements Waterloggable {
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
+        if (EBClientConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
             super.appendTooltip(stack, context, tooltip, options);
             tooltip.add(ScreenTexts.EMPTY);
             tooltip.add(Text.translatable("tooltip.block.interact_soil").formatted(Formatting.GRAY));

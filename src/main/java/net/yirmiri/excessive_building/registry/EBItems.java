@@ -3,16 +3,21 @@ package net.yirmiri.excessive_building.registry;
 import net.minecraft.item.HangingSignItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.item.HammerItem;
 import net.yirmiri.excessive_building.item.configurable.EBPotterySherdItem;
 import net.yirmiri.excessive_building.item.configurable.ResourceBrickBlockItem;
 import net.yirmiri.excessive_building.item.configurable.ResourceBrickVerticalStairsBlockItem;
 import net.yirmiri.excessive_building.util.EBProperties;
 
 public class EBItems {
+    //UTILITIES
+    public static final Item HAMMER = register("hammer", new HammerItem(ToolMaterials.IRON, EBProperties.ItemP.HAMMER));
+
     //BLOCK ITEMS
     public static final Item NETHERITE_BRICKS = register("netherite_bricks", new ResourceBrickBlockItem(EBBlocks.NETHERITE_BRICKS, EBProperties.ItemP.NETHERITE));
     public static final Item NETHERITE_BRICK_STAIRS = register("netherite_brick_stairs", new ResourceBrickBlockItem(EBBlocks.NETHERITE_BRICK_STAIRS, EBProperties.ItemP.NETHERITE));

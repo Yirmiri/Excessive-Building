@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:weeping_vines"
+    },
+    {
+      "item": "minecraft:polished_blackstone_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:weeping_polished_blackstone_bricks"
+  }
+}

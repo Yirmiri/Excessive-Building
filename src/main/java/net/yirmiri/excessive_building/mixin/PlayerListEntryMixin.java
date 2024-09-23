@@ -4,6 +4,7 @@ import com.mojang.authlib.GameProfile;
 import net.minecraft.client.network.PlayerListEntry;
 import net.minecraft.client.util.SkinTextures;
 import net.minecraft.util.Identifier;
+import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -46,7 +47,7 @@ public abstract class PlayerListEntryMixin {
             case "66a11b55-08c2-4765-b618-3071dc222b64" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/cotton_candy.png");
         }
 
-        if (texture != null) {
+        if (texture != null && EBClientConfig.ENABLE_CONTRIBUTOR_CAPES.get()) {
             SkinTextures textures = texturesSupplier.get();
             cir.setReturnValue(new SkinTextures(textures.texture(), textures.textureUrl(), texture, texture, textures.model(), textures.secure()));
         }

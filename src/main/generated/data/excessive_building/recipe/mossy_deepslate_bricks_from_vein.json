@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:sculk_vein"
+    },
+    {
+      "item": "minecraft:deepslate_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:mossy_deepslate_bricks"
+  }
+}

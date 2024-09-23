@@ -4,16 +4,37 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release v3.2.4 Fabric/Quilt-1.21(1.)/1.20.1
+Version Release v3.3.0 Fabric/Quilt-1.21(1.)/1.20.1
+
+  Hammer
+•   The hammer is a new tool created using amethyst and can mine many blocks that normally don't have a tool assigned to them
+•   The hammer can also be used to "hammer" various blocks into new states such as squishing bricks to be smaller
+•   Hammered states can be switched back and forth just by right clicking the block again
+•   The hammer is also how almentra statues are obtained which is via hammering a polished almentra block
+•   Hammers can be enabled/disabled via the config (on by default)
 
   Misc Additions
 •   Added uk_ua translations (@unroman)
+•   Added mossy variants for deepslate bricks, polished blackstone bricks, cobbled deepslate bricks, and blackstone bricks
+•   Mossy cobblestone bricks now have an additional recipe that uses moss blocks or vines
+•   Added armadillo scute blocks (as part of losing a bet -_-)
+•   Moved custom tooltips to a client configuration aswell as adding a configuration for disabling contributor capes
 
   Changes
 •   Updated the texture of almentra bricks
 •   Updated the texture of almentra statues
 •   Updated the models for orange almentra statue
+•   Removed recipes for almentra statues (now obtained via hammering polished almentra)
+•   Removed chests from the Excessive Building creative tab
 •   Updated contributor capes
+
+  Fixes
+•   Fixed an issue that caused mossy cobblestone brick slabs to drop normal cobblestone brick slabs
+
+  Note
+•   I know I've said it a few times in the past but I really need to focus on new things, so for now this will be the last "content" update for a while.
+I will maintain the mod for the latest Minecraft version and am in the thoughts of moving the mod over to MultiLoader but for now enjoy this.
+I am happy with the state the mod is and I think it is time to finally let it rest.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

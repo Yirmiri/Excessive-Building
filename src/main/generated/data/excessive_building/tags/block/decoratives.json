@@ -3,6 +3,23 @@
     "excessive_building:wooden_mug",
     "excessive_building:glass_jar",
     "excessive_building:glass_jar_of_fire",
-    "excessive_building:glass_jar_of_soul_fire"
+    "excessive_building:glass_jar_of_soul_fire",
+    "excessive_building:almentra_statue",
+    "excessive_building:white_almentra_statue",
+    "excessive_building:orange_almentra_statue",
+    "excessive_building:magenta_almentra_statue",
+    "excessive_building:light_blue_almentra_statue",
+    "excessive_building:yellow_almentra_statue",
+    "excessive_building:lime_almentra_statue",
+    "excessive_building:pink_almentra_statue",
+    "excessive_building:gray_almentra_statue",
+    "excessive_building:light_gray_almentra_statue",
+    "excessive_building:cyan_almentra_statue",
+    "excessive_building:purple_almentra_statue",
+    "excessive_building:blue_almentra_statue",
+    "excessive_building:brown_almentra_statue",
+    "excessive_building:green_almentra_statue",
+    "excessive_building:red_almentra_statue",
+    "excessive_building:black_almentra_statue"
   ]
 }

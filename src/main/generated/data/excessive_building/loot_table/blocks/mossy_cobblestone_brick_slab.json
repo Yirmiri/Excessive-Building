@@ -11,7 +11,7 @@
               "add": false,
               "conditions": [
                 {
-                  "block": "excessive_building:cobblestone_brick_slab",
+                  "block": "excessive_building:mossy_cobblestone_brick_slab",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "type": "double"
@@ -25,7 +25,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "excessive_building:cobblestone_brick_slab"
+          "name": "excessive_building:mossy_cobblestone_brick_slab"
         }
       ],
       "rolls": 1.0

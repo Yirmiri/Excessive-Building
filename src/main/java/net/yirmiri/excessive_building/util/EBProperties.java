@@ -58,6 +58,8 @@ public class EBProperties {
         public static final Block.Settings ALMENTRA = FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK).mapColor(MapColor.BROWN);
         public static final Block.Settings POLISHED_ALMENTRA = FabricBlockSettings.copyOf(Blocks.POLISHED_DEEPSLATE).mapColor(MapColor.BROWN);
         public static final Block.Settings ALMENTRA_BRICKS = FabricBlockSettings.copyOf(Blocks.DEEPSLATE_BRICKS).mapColor(MapColor.BROWN);
+        public static final Block.Settings DEEPSLATE_BRICKS = FabricBlockSettings.copyOf(Blocks.DEEPSLATE_BRICKS);
+        public static final Block.Settings POLISHED_BLACKSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BRICKS);
 
         //NATURE
         public static final Block.Settings GLOWING_LEAVES = FabricBlockSettings.of().luminance(state -> GlowingLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
@@ -133,9 +135,13 @@ public class EBProperties {
         public static final Block.Settings TERRACOTTA_POT = FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT_SHATTER);
         public static final Block.Settings PAPER = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.WOOL);
         public static final Block.Settings LAMP = FabricBlockSettings.copyOf(Blocks.SEA_LANTERN);
+        public static final Block.Settings ARMADILLO_SCUTE_BLOCK = FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.CORAL);
     }
 
     public static class ItemP {
+        //UTILITIES
+        public static final Item.Settings HAMMER = new Item.Settings().maxCount(1).maxDamage(781);
+
         //FOOD
         public static final Item.Settings ANCIENT_FRUIT = new Item.Settings().food(Food.ANCIENT_FRUIT);
 

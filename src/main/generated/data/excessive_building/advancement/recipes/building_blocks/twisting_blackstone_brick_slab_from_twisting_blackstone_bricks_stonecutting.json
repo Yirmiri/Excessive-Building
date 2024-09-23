@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:twisting_blackstone_brick_slab_from_twisting_blackstone_bricks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_twisting_blackstone_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:twisting_blackstone_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_twisting_blackstone_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:twisting_blackstone_brick_slab_from_twisting_blackstone_bricks_stonecutting"
+    ]
+  }
+}

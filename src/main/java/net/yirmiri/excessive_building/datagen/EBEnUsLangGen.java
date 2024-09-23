@@ -6,6 +6,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
+import net.yirmiri.excessive_building.util.EBStats;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.concurrent.CompletableFuture;
@@ -580,6 +581,37 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.THICK_PAPER_VERTICAL_STAIRS, "Thick Paper Vertical Stairs");
         build.add(EBBlocks.THICK_PAPER_SLAB, "Thick Paper Slab");
         build.add(EBBlocks.AMETHYST_LAMP, "Amethyst Lamp");
+        build.add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS, "Mossy Cobbled Deepslate Bricks");
+        build.add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_STAIRS, "Mossy Cobbled Deepslate Brick Stairs");
+        build.add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_SLAB, "Mossy Cobbled Deepslate Brick Slab");
+        build.add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS, "Mossy Cobbled Deepslate Brick Vertical Stairs");
+        build.add(EBBlocks.WEEPING_BLACKSTONE_BRICKS, "Weeping Blackstone Bricks");
+        build.add(EBBlocks.WEEPING_BLACKSTONE_BRICK_STAIRS, "Weeping Blackstone Brick Stairs");
+        build.add(EBBlocks.WEEPING_BLACKSTONE_BRICK_SLAB, "Weeping Blackstone Brick Slab");
+        build.add(EBBlocks.WEEPING_BLACKSTONE_BRICK_VERTICAL_STAIRS, "Weeping Blackstone Brick Vertical Stairs");
+        build.add(EBBlocks.TWISTING_BLACKSTONE_BRICKS, "Twisting Blackstone Bricks");
+        build.add(EBBlocks.TWISTING_BLACKSTONE_BRICK_STAIRS, "Twisting Blackstone Brick Stairs");
+        build.add(EBBlocks.TWISTING_BLACKSTONE_BRICK_SLAB, "Twisting Blackstone Brick Slab");
+        build.add(EBBlocks.TWISTING_BLACKSTONE_BRICK_VERTICAL_STAIRS, "Twisting Blackstone Brick Vertical Stairs");
+        build.add(EBBlocks.MOSSY_DEEPSLATE_BRICKS, "Mossy Deepslate Bricks");
+        build.add(EBBlocks.MOSSY_DEEPSLATE_BRICK_STAIRS, "Mossy Deepslate Brick Stairs");
+        build.add(EBBlocks.MOSSY_DEEPSLATE_BRICK_SLAB, "Mossy Deepslate Brick Slab");
+        build.add(EBBlocks.MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS, "Mossy Deepslate Brick Vertical Stairs");
+        build.add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS, "Weeping Polished Blackstone Bricks");
+        build.add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS, "Weeping Polished Blackstone Brick Stairs");
+        build.add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB, "Weeping Polished Blackstone Brick Slab");
+        build.add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, "Weeping Polished Blackstone Brick Vertical Stairs");
+        build.add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, "Twisting Polished Blackstone Bricks");
+        build.add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS, "Twisting Polished Blackstone Brick Stairs");
+        build.add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB, "Twisting Polished Blackstone Brick Slab");
+        build.add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, "Twisting Polished Blackstone Brick Vertical Stairs");
+        build.add(EBBlocks.ARMADILLO_SCUTE_BLOCK, "Armadillo Scute Block");
+        build.add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_WALL, "Mossy Cobbled Deepslate Brick Wall");
+        build.add(EBBlocks.MOSSY_DEEPSLATE_BRICK_WALL, "Mossy Deepslate Brick Wall");
+        build.add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL, "Weeping Polished Blackstone Brick Wall");
+        build.add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL, "Twisting Polished Blackstone Brick Wall");
+        build.add(EBBlocks.WEEPING_BLACKSTONE_BRICK_WALL, "Weeping Blackstone Brick Wall");
+        build.add(EBBlocks.TWISTING_BLACKSTONE_BRICK_WALL, "Twisting Blackstone Brick Wall");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
@@ -587,6 +619,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBItems.ANCIENT_FRUIT, "Ancient Fruit");
         build.add(EBItems.GLOOM_SIGN, "Gloom Sign");
         build.add(EBItems.GLOOM_HANGING_SIGN, "Gloom Hanging Sign");
+        build.add(EBItems.HAMMER, "Hammer");
 
         //SHERDS
         build.add(EBItems.ROYALTY_POTTERY_SHERD, "Royalty Pottery Sherd");
@@ -629,6 +662,9 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("advancement.excessive_building.place_all_almentra_statues", "Double §kRorrRef §rRainbow");
         build.add("advancement.excessive_building.place_all_almentra_statues.description", "Place all almentra statue variants");
 
+        build.add("advancement.excessive_building.use_hammer", "Hammer Time!");
+        build.add("advancement.excessive_building.use_hammer.description", "Use a hammer to transform the look of a block");
+
         //TOOLTIPS
         build.add("tooltip.block.interact", "Upon Interaction:");
         build.add("tooltip.block.variant", "Cycles Block Variants:");
@@ -642,10 +678,13 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("tooltip.block.soul_magma", "Creates a Lifting Bubble Column");
         build.add("tooltip.block.player_nearby", "When Nearby:");
         build.add("tooltip.block.increases_block_reach", "Increases Interaction Reach");
+        build.add("tooltip.item.hammer.desc", "Can Change The Variants of Some Blocks");
+        build.add("tooltip.item.hammerable", "Can be hammered");
 
         //MISC
         build.add("excessive_building.container.kiln", "Kiln");
         build.add("pack.excessive_building.vanilla_retextures", "Vanilla Retextures");
+        build.add(EBStats.BLOCKS_HAMMERED, "Blocks Hammered");
 
         //ITEM GROUPS
         build.add("itemgroup.excessive_building", "Excessive Building");

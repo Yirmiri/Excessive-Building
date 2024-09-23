@@ -23,6 +23,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
+import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.util.EBTags;
 import org.jetbrains.annotations.NotNull;
@@ -39,7 +40,7 @@ public class GlowingLeavesBlock extends FloweringLeavesBlock {
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
+        if (EBClientConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
             super.appendTooltip(stack, context, tooltip, options);
             tooltip.add(ScreenTexts.EMPTY);
             tooltip.add(Text.translatable("tooltip.block.interact_glow_removals").formatted(Formatting.GRAY));

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/twisting_polished_blackstone_brick_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/twisting_polished_blackstone_bricks"
+    },
+    "type=top": {
+      "model": "excessive_building:block/twisting_polished_blackstone_brick_slab_top"
+    }
+  }
+}

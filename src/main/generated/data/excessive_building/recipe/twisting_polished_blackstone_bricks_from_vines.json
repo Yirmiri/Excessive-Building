@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:twisting_vines"
+    },
+    {
+      "item": "minecraft:polished_blackstone_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:twisting_polished_blackstone_bricks"
+  }
+}

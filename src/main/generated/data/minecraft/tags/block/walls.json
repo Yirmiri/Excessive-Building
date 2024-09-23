@@ -12,6 +12,12 @@
     "excessive_building:granite_brick_wall",
     "excessive_building:smooth_brick_wall",
     "excessive_building:brimstone_wall",
-    "excessive_building:tuff_tile_wall"
+    "excessive_building:tuff_tile_wall",
+    "excessive_building:mossy_cobbled_deepslate_brick_wall",
+    "excessive_building:mossy_deepslate_brick_wall",
+    "excessive_building:weeping_blackstone_brick_wall",
+    "excessive_building:weeping_polished_blackstone_brick_wall",
+    "excessive_building:twisting_blackstone_brick_wall",
+    "excessive_building:twisting_polished_blackstone_brick_wall"
   ]
 }

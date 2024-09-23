@@ -37,6 +37,59 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendSnifferFood();
         appendKnittedWools();
         appendKnittedCarpets();
+        appendHammerRepairable();
+        appendEBHammers();
+        appendHammerableTooltip();
+        appendMiningEnchantable();
+        appendVanishingEnchantable();
+        appendDurabilityEnchantable();
+        appendMiningLootEnchantable();
+    }
+
+    public void appendHammerableTooltip() {
+        getOrCreateTagBuilder(EBTags.Items.HAMMERABLE_TOOLTIP)
+                .add(EBBlocks.POLISHED_ALMENTRA.asItem())
+        ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(EBTags.Items.HAMMERABLE_TOOLTIP).add(EBBlocks.getDyedPolishedAlmentra(colors.getId()).asItem());
+        }
+    }
+
+    public void appendMiningLootEnchantable() {
+        getOrCreateTagBuilder(ItemTags.MINING_LOOT_ENCHANTABLE)
+                .add(EBItems.HAMMER)
+        ;
+    }
+
+    public void appendMiningEnchantable() {
+        getOrCreateTagBuilder(ItemTags.MINING_ENCHANTABLE)
+                .add(EBItems.HAMMER)
+        ;
+    }
+
+    public void appendDurabilityEnchantable() {
+        getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(EBItems.HAMMER)
+        ;
+    }
+
+    public void appendVanishingEnchantable() {
+        getOrCreateTagBuilder(ItemTags.VANISHING_ENCHANTABLE)
+                .add(EBItems.HAMMER)
+        ;
+    }
+
+    public void appendEBHammers() {
+        getOrCreateTagBuilder(EBTags.Items.EB_HAMMERS)
+                .add(EBItems.HAMMER)
+        ;
+    }
+
+    public void appendHammerRepairable() {
+        getOrCreateTagBuilder(EBTags.Items.HAMMER_REPAIRABLE)
+                .add(Items.AMETHYST_SHARD)
+        ;
     }
 
     public void appendKnittedWools() {

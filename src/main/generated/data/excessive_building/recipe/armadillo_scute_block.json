@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "@": {
+      "item": "minecraft:armadillo_scute"
+    }
+  },
+  "pattern": [
+    "@@",
+    "@@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:armadillo_scute_block"
+  }
+}

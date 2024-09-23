@@ -3094,12 +3094,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                     .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedAlmentraBrickVerticalStairs(colors.getId()))));
         }
 
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_STATUE, EBBlocks.POLISHED_ALMENTRA, 1);
-
-        for (DyeColor colors : DyeColor.values()) {
-            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraStatues(colors.getId()), EBBlocks.getDyedPolishedAlmentra(colors.getId()), 1);
-        }
-
         for (DyeColor colors : DyeColor.values()) {
             createBlockEightDyingRecipe(EBBlocks.getDyedTerracottaTiles(colors.getId()), EBBlocks.TERRACOTTA_TILES, DyeItem.byColor(colors).getColor())
             .criterion(hasItem(EBBlocks.getDyedTerracottaTiles(colors.getId())), conditionsFromItem(EBBlocks.getDyedTerracottaTiles(colors.getId())))
@@ -3536,6 +3530,162 @@ public class EBRecipeGen extends FabricRecipeProvider {
                     .criterion(hasItem(EBBlocks.getDyedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentra(colors.getId())))
                     .offerTo(exporter, getRecipeName(EBBlocks.getDyedAlmentraVerticalStairs(colors.getId())));
         }
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLESTONE_BRICKS, 1)
+                .input(Blocks.MOSS_BLOCK).input(EBBlocks.COBBLESTONE_BRICKS)
+                .criterion(hasItem(Blocks.MOSS_BLOCK), conditionsFromItem(Blocks.MOSS_BLOCK))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.MOSSY_COBBLESTONE_BRICKS) + "_from_moss")));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLESTONE_BRICKS, 1)
+                .input(Blocks.VINE).input(EBBlocks.COBBLESTONE_BRICKS)
+                .criterion(hasItem(Blocks.VINE), conditionsFromItem(Blocks.VINE))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.MOSSY_COBBLESTONE_BRICKS) + "_from_vine")));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, EBItems.HAMMER, 1)
+                .input('#', Items.AMETHYST_SHARD).input('@', Items.GOLD_INGOT).input('!', Items.STICK)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern(" ! ")
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBItems.HAMMER)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS, 1)
+                .input(Blocks.SCULK).input(EBBlocks.COBBLED_DEEPSLATE_BRICKS)
+                .criterion(hasItem(Blocks.SCULK), conditionsFromItem(Blocks.SCULK))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS) + "_from_sculk")));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS, 1)
+                .input(Blocks.SCULK_VEIN).input(EBBlocks.COBBLED_DEEPSLATE_BRICKS)
+                .criterion(hasItem(Blocks.SCULK_VEIN), conditionsFromItem(Blocks.SCULK_VEIN))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS) + "_from_vein")));
+
+        createStairsRecipe(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS))
+                .criterion(hasItem(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS), conditionsFromItem(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS))
+                .criterion(hasItem(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS), conditionsFromItem(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_SLAB)));
+        
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_STAIRS, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_SLAB, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS, 1);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_DEEPSLATE_BRICKS, 1)
+                .input(Blocks.SCULK).input(Blocks.DEEPSLATE_BRICKS)
+                .criterion(hasItem(Blocks.SCULK), conditionsFromItem(Blocks.SCULK))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.MOSSY_DEEPSLATE_BRICKS) + "_from_sculk")));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_DEEPSLATE_BRICKS, 1)
+                .input(Blocks.SCULK_VEIN).input(Blocks.DEEPSLATE_BRICKS)
+                .criterion(hasItem(Blocks.SCULK_VEIN), conditionsFromItem(Blocks.SCULK_VEIN))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.MOSSY_DEEPSLATE_BRICKS) + "_from_vein")));
+
+        createStairsRecipe(EBBlocks.MOSSY_DEEPSLATE_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.MOSSY_DEEPSLATE_BRICKS))
+                .criterion(hasItem(EBBlocks.MOSSY_DEEPSLATE_BRICKS), conditionsFromItem(EBBlocks.MOSSY_DEEPSLATE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MOSSY_DEEPSLATE_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_DEEPSLATE_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.MOSSY_DEEPSLATE_BRICKS))
+                .criterion(hasItem(EBBlocks.MOSSY_DEEPSLATE_BRICKS), conditionsFromItem(EBBlocks.MOSSY_DEEPSLATE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MOSSY_DEEPSLATE_BRICK_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_DEEPSLATE_BRICK_STAIRS, EBBlocks.MOSSY_DEEPSLATE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_DEEPSLATE_BRICK_SLAB, EBBlocks.MOSSY_DEEPSLATE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS, EBBlocks.MOSSY_DEEPSLATE_BRICKS, 1);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_BLACKSTONE_BRICKS, 1)
+                .input(Blocks.WEEPING_VINES).input(EBBlocks.BLACKSTONE_BRICKS)
+                .criterion(hasItem(Blocks.WEEPING_VINES), conditionsFromItem(Blocks.WEEPING_VINES))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.WEEPING_BLACKSTONE_BRICKS) + "_from_vines")));
+
+        createStairsRecipe(EBBlocks.WEEPING_BLACKSTONE_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.WEEPING_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.WEEPING_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.WEEPING_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEEPING_BLACKSTONE_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_BLACKSTONE_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.WEEPING_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.WEEPING_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.WEEPING_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEEPING_BLACKSTONE_BRICK_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_BLACKSTONE_BRICK_STAIRS, EBBlocks.WEEPING_BLACKSTONE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_BLACKSTONE_BRICK_SLAB, EBBlocks.WEEPING_BLACKSTONE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.WEEPING_BLACKSTONE_BRICKS, 1);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS, 1)
+                .input(Blocks.WEEPING_VINES).input(Blocks.POLISHED_BLACKSTONE_BRICKS)
+                .criterion(hasItem(Blocks.WEEPING_VINES), conditionsFromItem(Blocks.WEEPING_VINES))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS) + "_from_vines")));
+
+        createStairsRecipe(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS, 1);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_BLACKSTONE_BRICKS, 1)
+                .input(Blocks.TWISTING_VINES).input(EBBlocks.BLACKSTONE_BRICKS)
+                .criterion(hasItem(Blocks.TWISTING_VINES), conditionsFromItem(Blocks.TWISTING_VINES))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TWISTING_BLACKSTONE_BRICKS) + "_from_vines")));
+
+        createStairsRecipe(EBBlocks.TWISTING_BLACKSTONE_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.TWISTING_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.TWISTING_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.TWISTING_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TWISTING_BLACKSTONE_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_BLACKSTONE_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.TWISTING_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.TWISTING_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.TWISTING_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TWISTING_BLACKSTONE_BRICK_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_BLACKSTONE_BRICK_STAIRS, EBBlocks.TWISTING_BLACKSTONE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_BLACKSTONE_BRICK_SLAB, EBBlocks.TWISTING_BLACKSTONE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.TWISTING_BLACKSTONE_BRICKS, 1);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, 1)
+                .input(Blocks.TWISTING_VINES).input(Blocks.POLISHED_BLACKSTONE_BRICKS)
+                .criterion(hasItem(Blocks.TWISTING_VINES), conditionsFromItem(Blocks.TWISTING_VINES))
+                .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS) + "_from_vines")));
+
+        createStairsRecipe(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS,
+                Ingredient.ofItems(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB,
+                Ingredient.ofItems(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, 1);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, 1);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ARMADILLO_SCUTE_BLOCK, 1)
+                .input('@', Items.ARMADILLO_SCUTE)
+                .pattern("@@")
+                .pattern("@@")
+                .criterion(hasItem(Items.ARMADILLO_SCUTE), conditionsFromItem(Items.ARMADILLO_SCUTE))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ARMADILLO_SCUTE_BLOCK)));
+
+//        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_STATUE, EBBlocks.POLISHED_ALMENTRA, 1);
+//
+//        for (DyeColor colors : DyeColor.values()) {
+//            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraStatues(colors.getId()), EBBlocks.getDyedPolishedAlmentra(colors.getId()), 1);
+//        }
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

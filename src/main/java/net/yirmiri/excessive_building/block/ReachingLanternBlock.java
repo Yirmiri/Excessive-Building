@@ -27,6 +27,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.entity.ReachingLanternBlockEntity;
 import net.yirmiri.excessive_building.registry.EBBlockEntities;
@@ -64,7 +65,7 @@ public class ReachingLanternBlock extends BlockWithEntity implements BlockEntity
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get() && EBConfig.REACHING_LANTERN_RANGE.get() != 0 && EBConfig.ENABLE_REACHING_LANTERN_FUNCTIONALITY.get()) {
+        if (EBClientConfig.ENABLE_CUSTOM_TOOLTIPS.get() && EBConfig.REACHING_LANTERN_RANGE.get() != 0 && EBConfig.ENABLE_REACHING_LANTERN_FUNCTIONALITY.get()) {
             super.appendTooltip(stack, context, tooltip, options);
             tooltip.add(ScreenTexts.EMPTY);
             tooltip.add(Text.translatable("tooltip.block.player_nearby").formatted(Formatting.GRAY));

@@ -2,6 +2,7 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.DyeColor;
@@ -58,6 +59,75 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendGuardedByPiglins();
         appendCandles();
         appendReplaceable();
+        appendHammerMineable();
+    }
+
+    public void appendHammerMineable() {
+        getOrCreateTagBuilder(EBTags.Blocks.HAMMER_MINEABLE)
+                .add(Blocks.GLASS)
+                .add(Blocks.GLASS_PANE)
+                .add(Blocks.RED_STAINED_GLASS)
+                .add(Blocks.RED_STAINED_GLASS_PANE)
+                .add(Blocks.ORANGE_STAINED_GLASS)
+                .add(Blocks.ORANGE_STAINED_GLASS_PANE)
+                .add(Blocks.YELLOW_STAINED_GLASS)
+                .add(Blocks.YELLOW_STAINED_GLASS_PANE)
+                .add(Blocks.LIME_STAINED_GLASS)
+                .add(Blocks.LIME_STAINED_GLASS_PANE)
+                .add(Blocks.GREEN_STAINED_GLASS)
+                .add(Blocks.GREEN_STAINED_GLASS_PANE)
+                .add(Blocks.CYAN_STAINED_GLASS)
+                .add(Blocks.CYAN_STAINED_GLASS_PANE)
+                .add(Blocks.LIGHT_BLUE_STAINED_GLASS)
+                .add(Blocks.LIGHT_BLUE_STAINED_GLASS_PANE)
+                .add(Blocks.BLUE_STAINED_GLASS)
+                .add(Blocks.BLUE_STAINED_GLASS_PANE)
+                .add(Blocks.PURPLE_STAINED_GLASS)
+                .add(Blocks.PURPLE_STAINED_GLASS_PANE)
+                .add(Blocks.MAGENTA_STAINED_GLASS)
+                .add(Blocks.MAGENTA_STAINED_GLASS_PANE)
+                .add(Blocks.PINK_STAINED_GLASS)
+                .add(Blocks.PINK_STAINED_GLASS_PANE)
+                .add(Blocks.BLACK_STAINED_GLASS)
+                .add(Blocks.BLACK_STAINED_GLASS_PANE)
+                .add(Blocks.WHITE_STAINED_GLASS)
+                .add(Blocks.WHITE_STAINED_GLASS_PANE)
+                .add(Blocks.LIGHT_GRAY_STAINED_GLASS)
+                .add(Blocks.LIGHT_GRAY_STAINED_GLASS_PANE)
+                .add(Blocks.GRAY_STAINED_GLASS)
+                .add(Blocks.GRAY_STAINED_GLASS_PANE)
+                .add(Blocks.BROWN_STAINED_GLASS)
+                .add(Blocks.BROWN_STAINED_GLASS_PANE)
+                .add(Blocks.TINTED_GLASS)
+                .add(EBBlocks.SEA_GLASS)
+                .add(EBBlocks.SEA_GLASS_PANE)
+                .add(EBBlocks.SCARLET_SEA_GLASS)
+                .add(EBBlocks.SCARLET_SEA_GLASS_PANE)
+                .add(EBBlocks.VERDANT_SEA_GLASS)
+                .add(EBBlocks.VERDANT_SEA_GLASS_PANE)
+                .add(EBBlocks.ROSE_SEA_GLASS)
+                .add(EBBlocks.ROSE_SEA_GLASS_PANE)
+                .add(EBBlocks.AQUA_SEA_GLASS)
+                .add(EBBlocks.AQUA_SEA_GLASS_PANE)
+                .add(EBBlocks.FUCHSIA_SEA_GLASS)
+                .add(EBBlocks.FUCHSIA_SEA_GLASS_PANE)
+                .add(Blocks.ICE)
+                .add(Blocks.FROSTED_ICE)
+                .add(Blocks.BLUE_ICE)
+                .add(Blocks.PACKED_ICE)
+                .add(Blocks.REINFORCED_DEEPSLATE)
+                .add(Blocks.VAULT)
+                .add(Blocks.TRIAL_SPAWNER)
+                .add(EBBlocks.WOODEN_MUG)
+                .add(EBBlocks.GLASS_JAR)
+                .add(EBBlocks.GLASS_JAR_OF_FIRE)
+                .add(EBBlocks.GLASS_JAR_OF_SOUL_FIRE)
+                .add(EBBlocks.ALMENTRA_STATUE)
+        ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(EBTags.Blocks.HAMMER_MINEABLE).add(EBBlocks.getDyedAlmentraStatues(colors.getId()));
+        }
     }
 
     public void appendReplaceable() {
@@ -79,7 +149,12 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.GLASS_JAR)
                 .add(EBBlocks.GLASS_JAR_OF_FIRE)
                 .add(EBBlocks.GLASS_JAR_OF_SOUL_FIRE)
+                .add(EBBlocks.ALMENTRA_STATUE)
         ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(EBTags.Blocks.DECORATIVES).add(EBBlocks.getDyedAlmentraStatues(colors.getId()));
+        }
     }
 
     public void appendEnchantmentPowerProvider() {
@@ -556,11 +631,18 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.SMOOTH_BRICK_WALL)
                     .add(EBBlocks.BRIMSTONE_WALL)
                     .add(EBBlocks.TUFF_TILE_WALL)
+                    .add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_WALL)
+                    .add(EBBlocks.MOSSY_DEEPSLATE_BRICK_WALL)
+                    .add(EBBlocks.WEEPING_BLACKSTONE_BRICK_WALL)
+                    .add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL)
+                    .add(EBBlocks.TWISTING_BLACKSTONE_BRICK_WALL)
+                    .add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL)
             ;
         }
 
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                    .add(EBBlocks.ARMADILLO_SCUTE_BLOCK)
                     .add(EBBlocks.ALMENTRA_STATUE)
                     .add(EBBlocks.ALMENTRA)
                     .add(EBBlocks.ALMENTRA_STAIRS)
@@ -836,6 +918,36 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.TUFF_VERTICAL_STAIRS)
                     .add(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS)
                     .add(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS)
+                    .add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_STAIRS)
+                    .add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_SLAB)
+                    .add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_WALL)
+                    .add(EBBlocks.WEEPING_BLACKSTONE_BRICKS)
+                    .add(EBBlocks.WEEPING_BLACKSTONE_BRICK_STAIRS)
+                    .add(EBBlocks.WEEPING_BLACKSTONE_BRICK_SLAB)
+                    .add(EBBlocks.WEEPING_BLACKSTONE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.WEEPING_BLACKSTONE_BRICK_WALL)
+                    .add(EBBlocks.TWISTING_BLACKSTONE_BRICKS)
+                    .add(EBBlocks.TWISTING_BLACKSTONE_BRICK_STAIRS)
+                    .add(EBBlocks.TWISTING_BLACKSTONE_BRICK_SLAB)
+                    .add(EBBlocks.TWISTING_BLACKSTONE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.TWISTING_BLACKSTONE_BRICK_WALL)
+                    .add(EBBlocks.MOSSY_DEEPSLATE_BRICKS)
+                    .add(EBBlocks.MOSSY_DEEPSLATE_BRICK_STAIRS)
+                    .add(EBBlocks.MOSSY_DEEPSLATE_BRICK_SLAB)
+                    .add(EBBlocks.MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.MOSSY_DEEPSLATE_BRICK_WALL)
+                    .add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS)
+                    .add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS)
+                    .add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB)
+                    .add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL)
+                    .add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS)
+                    .add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS)
+                    .add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB)
+                    .add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS)
+                    .add(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL)
             ;
 
             for (DyeColor colors : DyeColor.values()) {
