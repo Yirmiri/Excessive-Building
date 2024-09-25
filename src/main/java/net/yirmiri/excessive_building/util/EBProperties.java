@@ -6,14 +6,20 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Item;
+import net.minecraft.item.ShovelItem;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.property.IntProperty;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.GlowingLeavesBlock;
 import net.yirmiri.excessive_building.block.ParticleCandleBlock;
+import net.yirmiri.excessive_building.item.HammerItem;
 import net.yirmiri.excessive_building.registry.EBSounds;
 import net.yirmiri.excessive_building.registry.EBStatusEffects;
 
 public class EBProperties {
+    public static final int MAX_ROTATIONS = 15;
+    public static final IntProperty ROTATION = IntProperty.of("rotation", 0, MAX_ROTATIONS);
+
     public static class BlockP {
         //VANILLA ADDITIONS
         public static final Block.Settings QUARTZ_BRICKS = FabricBlockSettings.copyOf(Blocks.QUARTZ_BRICKS);
@@ -140,7 +146,7 @@ public class EBProperties {
 
     public static class ItemP {
         //UTILITIES
-        public static final Item.Settings HAMMER = new Item.Settings().maxCount(1).maxDamage(781);
+        public static final Item.Settings HAMMER = new Item.Settings().maxCount(1).maxDamage(781).attributeModifiers(HammerItem.createAttributeModifiers());
 
         //FOOD
         public static final Item.Settings ANCIENT_FRUIT = new Item.Settings().food(Food.ANCIENT_FRUIT);

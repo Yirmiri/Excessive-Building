@@ -14,7 +14,6 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.DyeColor;
@@ -3420,14 +3419,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(EBBlocks.PAPER_BLOCK), conditionsFromItem(EBBlocks.PAPER_BLOCK))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.THIN_PAPER_BLOCK)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.THICK_PAPER_BLOCK, 5)
-                .input('#', ItemTags.PLANKS).input('@', EBBlocks.PAPER_BLOCK)
-                .pattern("#@#")
-                .pattern("@@@")
-                .pattern("#@#")
-                .criterion(hasItem(EBBlocks.PAPER_BLOCK), conditionsFromItem(EBBlocks.PAPER_BLOCK))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.THICK_PAPER_BLOCK)));
-
         createStairsRecipe(EBBlocks.THIN_PAPER_STAIRS,
                 Ingredient.ofItems(EBBlocks.THIN_PAPER_BLOCK))
                 .criterion(hasItem(EBBlocks.THIN_PAPER_BLOCK), conditionsFromItem(EBBlocks.THIN_PAPER_BLOCK))
@@ -3473,22 +3464,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("@#@")
                 .criterion(hasItem(EBBlocks.THIN_PAPER_BLOCK), conditionsFromItem(EBBlocks.THIN_PAPER_BLOCK))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.THIN_DIVIDED_PAPER_BLOCK)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.THICK_DIAGONAL_PAPER_BLOCK, 6)
-                .input('#', ItemTags.PLANKS).input('@', EBBlocks.THICK_PAPER_BLOCK)
-                .pattern("@@#")
-                .pattern("@#@")
-                .pattern("#@@")
-                .criterion(hasItem(EBBlocks.THICK_PAPER_BLOCK), conditionsFromItem(EBBlocks.THICK_PAPER_BLOCK))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.THICK_DIAGONAL_PAPER_BLOCK)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.THICK_DIVIDED_PAPER_BLOCK, 6)
-                .input('#', ItemTags.PLANKS).input('@', EBBlocks.THICK_PAPER_BLOCK)
-                .pattern("@#@")
-                .pattern("@#@")
-                .pattern("@#@")
-                .criterion(hasItem(EBBlocks.THICK_PAPER_BLOCK), conditionsFromItem(EBBlocks.THICK_PAPER_BLOCK))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.THICK_DIVIDED_PAPER_BLOCK)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.AMETHYST_LAMP, 2)
                 .input('#', Items.AMETHYST_SHARD).input('@', Items.IRON_INGOT).input('!', Items.IRON_NUGGET)
@@ -3680,12 +3655,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("@@")
                 .criterion(hasItem(Items.ARMADILLO_SCUTE), conditionsFromItem(Items.ARMADILLO_SCUTE))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ARMADILLO_SCUTE_BLOCK)));
-
-//        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_STATUE, EBBlocks.POLISHED_ALMENTRA, 1);
-//
-//        for (DyeColor colors : DyeColor.values()) {
-//            offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraStatues(colors.getId()), EBBlocks.getDyedPolishedAlmentra(colors.getId()), 1);
-//        }
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

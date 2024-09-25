@@ -1,6 +1,12 @@
 {
   "values": [
     "excessive_building:polished_almentra",
+    "excessive_building:thin_paper_block",
+    "excessive_building:thin_paper_stairs",
+    "excessive_building:thin_paper_slab",
+    "excessive_building:thin_paper_vertical_stairs",
+    "excessive_building:thin_diagonal_paper_block",
+    "excessive_building:thin_divided_paper_block",
     "excessive_building:white_polished_almentra",
     "excessive_building:orange_polished_almentra",
     "excessive_building:magenta_polished_almentra",

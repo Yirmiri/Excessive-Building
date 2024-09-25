@@ -5,9 +5,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.IntProperty;
-import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
@@ -18,28 +15,22 @@ import net.yirmiri.excessive_building.util.EBTags;
 import net.yirmiri.excessive_building.util.EBUtils;
 
 public class HammerableStairsBlock extends StairsBlock {
-    public static int maxVariants;
-    public static final IntProperty VARIANT = IntProperty.of("variant", 0, maxVariants);
+    protected final Block block;
 
-    public HammerableStairsBlock(int maxVariants, BlockState baseBlockState, Settings settings) {
+    public HammerableStairsBlock(Block block, BlockState baseBlockState, Settings settings) {
         super(baseBlockState, settings);
-        HammerableBlock.maxVariants = maxVariants;
+        this.block = block;
     }
 
     @Override
     public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
+        BlockState stateToReplaceWith = block.getStateWithProperties(world.getBlockState(pos));
         if (stackHand.isIn(EBTags.Items.EB_HAMMERS) && EBConfig.ENABLE_HAMMERS.get()) {
-            world.setBlockState(pos, state.cycle(VARIANT));
+            world.setBlockState(pos, stateToReplaceWith);
             EBUtils.hammerUsed(world, pos, state, hand, player);
-            player.sendMessage(Text.translatable("hammer." + this.getTranslationKey() + ".variant_" + state.get(VARIANT)), true);
             return ItemActionResult.SUCCESS;
         }
         return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
-    }
-
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(VARIANT, FACING, HALF, WATERLOGGED, SHAPE);
     }
 }

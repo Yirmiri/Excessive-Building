@@ -49,6 +49,12 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
     public void appendHammerableTooltip() {
         getOrCreateTagBuilder(EBTags.Items.HAMMERABLE_TOOLTIP)
                 .add(EBBlocks.POLISHED_ALMENTRA.asItem())
+                .add(EBBlocks.THIN_PAPER_BLOCK.asItem())
+                .add(EBBlocks.THIN_PAPER_STAIRS.asItem())
+                .add(EBBlocks.THIN_PAPER_SLAB.asItem())
+                .add(EBBlocks.THIN_PAPER_VERTICAL_STAIRS.asItem())
+                .add(EBBlocks.THIN_DIAGONAL_PAPER_BLOCK.asItem())
+                .add(EBBlocks.THIN_DIVIDED_PAPER_BLOCK.asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

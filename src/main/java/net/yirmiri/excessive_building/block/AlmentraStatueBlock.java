@@ -21,11 +21,12 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.util.EBProperties;
 import org.jetbrains.annotations.Nullable;
 
 public class AlmentraStatueBlock extends Block implements Waterloggable {
-    private static final int MAX_ROTATIONS = 15;
-    public static final IntProperty ROTATION = IntProperty.of("rotation", 0, MAX_ROTATIONS);
+    private static final int MAX_ROTATIONS = EBProperties.MAX_ROTATIONS;
+    public static final IntProperty ROTATION = EBProperties.ROTATION;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     private static final VoxelShape SHAPE = VoxelShapes.combineAndSimplify(

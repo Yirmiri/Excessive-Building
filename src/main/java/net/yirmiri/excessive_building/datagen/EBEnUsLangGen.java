@@ -679,7 +679,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("tooltip.block.player_nearby", "When Nearby:");
         build.add("tooltip.block.increases_block_reach", "Increases Interaction Reach");
         build.add("tooltip.item.hammer.desc", "Can Change The Variants of Some Blocks");
-        build.add("tooltip.item.hammerable", "Can be hammered");
+        build.add("tooltip.excessive_building.hammerable", "Can be hammered");
 
         //MISC
         build.add("excessive_building.container.kiln", "Kiln");

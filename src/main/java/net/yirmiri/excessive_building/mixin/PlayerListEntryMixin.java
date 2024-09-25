@@ -21,7 +21,7 @@ public abstract class PlayerListEntryMixin {
     @Shadow public abstract GameProfile getProfile();
     @Shadow @Final private Supplier<SkinTextures> texturesSupplier;
 
-    @Inject(at = @At("HEAD"), method = "getSkinTextures", cancellable = true)
+    @Inject(method = "getSkinTextures", at = @At("HEAD"), cancellable = true)
     public void capeTexture(CallbackInfoReturnable<SkinTextures> cir) {
         Identifier texture = null;
         String playerUUID = getProfile().getId().toString();

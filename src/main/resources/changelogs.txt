@@ -18,13 +18,15 @@ Version Release v3.3.0 Fabric/Quilt-1.21(1.)/1.20.1
 •   Added mossy variants for deepslate bricks, polished blackstone bricks, cobbled deepslate bricks, and blackstone bricks
 •   Mossy cobblestone bricks now have an additional recipe that uses moss blocks or vines
 •   Added armadillo scute blocks (as part of losing a bet -_-)
-•   Moved custom tooltips to a client configuration aswell as adding a configuration for disabling contributor capes
+•   Moved custom tooltips to a client configuration
+•   Added two client configurations for disabling contributor capes and hammerable block tooltips
 
   Changes
 •   Updated the texture of almentra bricks
 •   Updated the texture of almentra statues
+•   Updated the colors of lime, pink, and brown almentra
 •   Updated the models for orange almentra statue
-•   Removed recipes for almentra statues (now obtained via hammering polished almentra)
+•   Removed recipes for many blocks such as almentra statues or thick paper walls as these are obtained via the hammer now
 •   Removed chests from the Excessive Building creative tab
 •   Updated contributor capes
 

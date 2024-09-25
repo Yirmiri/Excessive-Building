@@ -8,6 +8,7 @@ public class EBClientConfig {
 
     //CLIENT
     public static final ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_TOOLTIPS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_HAMMERABLE_TOOLTIPS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_CONTRIBUTOR_CAPES;
 
     static {
@@ -18,6 +19,10 @@ public class EBClientConfig {
         ENABLE_CUSTOM_TOOLTIPS = BUILDER
                 .comment("Should Excessive Building items with special interactions have custom tooltips? (default: true)")
                 .define("enableCustomTooltips", true);
+
+        ENABLE_HAMMERABLE_TOOLTIPS = BUILDER
+                .comment("Should blocks that can be hammered display an informational tooltip? (default: true)")
+                .define("enableHammerableTooltips", true);
 
         ENABLE_CONTRIBUTOR_CAPES = BUILDER
                 .comment("Should Excessive Building display contributor capes? (default: true)")

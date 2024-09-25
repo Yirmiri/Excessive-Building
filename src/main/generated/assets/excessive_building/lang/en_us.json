@@ -987,6 +987,6 @@
   "tooltip.block.swift": "Increases Movement Speed",
   "tooltip.block.variant": "Cycles Block Variants:",
   "tooltip.block.when_powered": "When Powered by Redstone:",
-  "tooltip.item.hammer.desc": "Can Change The Variants of Some Blocks",
-  "tooltip.item.hammerable": "Can be hammered"
+  "tooltip.excessive_building.hammerable": "Can be hammered",
+  "tooltip.item.hammer.desc": "Can Change The Variants of Some Blocks"
 }

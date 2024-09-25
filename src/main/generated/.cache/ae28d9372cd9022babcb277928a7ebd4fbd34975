@@ -1,4 +1,4 @@
-// 1.21	2024-09-23T01:57:53.3020761	Excessive Building/Tags for minecraft:block
+// 1.21	2024-09-25T02:28:57.4553583	Excessive Building/Tags for minecraft:block
 9973d3c2d4c8d54df2f5e0f5fd6efa300f3971fd data\minecraft\tags\block\logs_that_burn.json
 1419a0b00f417fbc1bbff44f7a3bfbb4252413fa data\minecraft\tags\block\wooden_stairs.json
 ecc53e060230f69caffdb4ae26bd668560c24bb3 data\excessive_building\tags\block\ancient_logs.json
@@ -36,8 +36,8 @@ d317db704525634aea35ced79306dc006e2fc76e data\minecraft\tags\block\soul_speed_bl
 1fe6a4ab118fe40333e2c7473ec910c1ab776576 data\minecraft\tags\block\wooden_buttons.json
 fbbc1aba952163427c11fa0c2e3af5d3ac4a36d4 data\minecraft\tags\block\needs_iron_tool.json
 4f3de040689e1c94cb012af78cc9328ab95eeb50 data\minecraft\tags\block\wall_signs.json
-a262ac69e9e8ff403eb28ea0af2ade105bd9a91f data\minecraft\tags\block\buttons.json
 2bed8225eaf38bcbfc8ee2a7f98c6a40f3641ee1 data\minecraft\tags\block\dampens_vibrations.json
+a262ac69e9e8ff403eb28ea0af2ade105bd9a91f data\minecraft\tags\block\buttons.json
 9b5260d8d4b4c5c738d36535d900cad53faf4441 data\minecraft\tags\block\pressure_plates.json
 c11c23b3b865ff694bb378540bd7c9197ddb4853 data\minecraft\tags\block\fence_gates.json
 d089b855022ec04610e5f7011e10a6657a22c4ba data\minecraft\tags\block\wool_carpets.json
