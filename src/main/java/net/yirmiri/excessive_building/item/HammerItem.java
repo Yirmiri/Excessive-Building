@@ -1,21 +1,47 @@
 package net.yirmiri.excessive_building.item;
 
+import com.google.common.base.Supplier;
+import com.google.common.base.Suppliers;
+import com.google.common.collect.BiMap;
+import com.google.common.collect.ImmutableBiMap;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.screen.ScreenTexts;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RotationPropertyHelper;
+import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
 import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.registry.EBBlocks;
+import net.yirmiri.excessive_building.util.EBProperties;
+import net.yirmiri.excessive_building.util.EBStats;
 import net.yirmiri.excessive_building.util.EBTags;
+import net.yirmiri.excessive_building.util.EBUtils;
+import org.spongepowered.asm.mixin.Unique;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 public class HammerItem extends MiningToolItem {
     public static final Identifier BASE_ATTACK_DAMAGE_MODIFIER_ID = Identifier.ofVanilla("base_attack_damage");
@@ -47,6 +73,47 @@ public class HammerItem extends MiningToolItem {
                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, new EntityAttributeModifier(BASE_KNOCKBACK_MODIFIER_ID, atk_kb, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
                .add(EntityAttributes.PLAYER_ENTITY_INTERACTION_RANGE, new EntityAttributeModifier(BASE_ENTITY_INTERACTION_MODIFIER_ID, atk_reach, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND).build();
 
+    }
+
+    public static final Supplier<ImmutableBiMap<Object, Object>> HAMMERING_MAP = Suppliers.memoize(() -> {
+        return ImmutableBiMap.builder().put(Blocks.BAMBOO_MOSAIC, EBBlocks.BAMBOO_BOARDS)
+                .put(Blocks.BAMBOO_MOSAIC_STAIRS, EBBlocks.BAMBOO_BOARD_STAIRS)
+                .put(Blocks.BAMBOO_MOSAIC_SLAB, EBBlocks.BAMBOO_BOARD_SLAB)
+                .build();
+    });
+
+    public static Optional<BlockState> getHammeredState(BlockState state) {
+        return Optional.ofNullable((Block)((BiMap<Object, Object>)HAMMERING_MAP.get()).get(state.getBlock())).map((block) -> {
+            return block.getStateWithProperties(state);
+        });
+    }
+
+    @Override
+    public ActionResult useOnBlock(ItemUsageContext context) {
+        PlayerEntity player = context.getPlayer();
+        Hand hand = player.getActiveHand();
+        ItemStack stackHand = player.getStackInHand(hand);
+        World world = context.getWorld();
+        BlockPos pos = context.getBlockPos();
+        BlockState state = world.getBlockState(pos);
+        if (stackHand.isIn(EBTags.Items.EB_HAMMERS) && EBConfig.ENABLE_HAMMERS.get() && player instanceof ServerPlayerEntity) {
+            return getHammeredState(state).map((state2) -> {
+                world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.BLOCKS, 0.5F, 1.0F, false);
+                world.addBlockBreakParticles(pos, state);
+                player.incrementStat(EBStats.BLOCKS_HAMMERED);
+                if (hand == Hand.MAIN_HAND) {
+                    stackHand.damage(1, player, EquipmentSlot.MAINHAND);
+                } else if (hand == Hand.OFF_HAND) {
+                    stackHand.damage(1, player, EquipmentSlot.OFFHAND);
+                }
+                world.setBlockState(pos, state2, 11);
+                world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, state2));
+                world.syncWorldEvent(player, 3003, pos, 0);
+                return ActionResult.success(world.isClient);
+            }).orElse(ActionResult.PASS);
+        }
+
+        return super.useOnBlock(context);
     }
 
     public int getEnchantability() {

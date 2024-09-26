@@ -1370,18 +1370,11 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(EBBlocks.SANDSTONE_BRICK_SLAB), conditionsFromItem(EBBlocks.SANDSTONE_BRICK_SLAB))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHISELED_SANDSTONE_BRICKS)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ENGRAVED_SANDSTONE_BRICKS, 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DECORATED_SANDSTONE_BRICKS, 2)
                 .input('#', EBBlocks.CHISELED_SANDSTONE_BRICKS)
                 .pattern("#")
                 .pattern("#")
                 .criterion(hasItem(EBBlocks.CHISELED_SANDSTONE_BRICKS), conditionsFromItem(EBBlocks.CHISELED_SANDSTONE_BRICKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ENGRAVED_SANDSTONE_BRICKS)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DECORATED_SANDSTONE_BRICKS, 2)
-                .input('#', EBBlocks.ENGRAVED_SANDSTONE_BRICKS)
-                .pattern("#")
-                .pattern("#")
-                .criterion(hasItem(EBBlocks.ENGRAVED_SANDSTONE_BRICKS), conditionsFromItem(EBBlocks.ENGRAVED_SANDSTONE_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DECORATED_SANDSTONE_BRICKS)));
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SANDSTONE_BRICKS, EBBlocks.POLISHED_SANDSTONE, 1);
@@ -1390,7 +1383,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SANDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.SANDSTONE_BRICKS, 1);
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DECORATED_SANDSTONE_BRICKS, EBBlocks.SANDSTONE_BRICKS, 1);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ENGRAVED_SANDSTONE_BRICKS, EBBlocks.SANDSTONE_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHISELED_SANDSTONE_BRICKS, EBBlocks.SANDSTONE_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SANDSTONE_PILLAR, EBBlocks.SANDSTONE_BRICKS, 1);
 
@@ -1471,18 +1463,11 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(EBBlocks.RED_SANDSTONE_BRICK_SLAB), conditionsFromItem(EBBlocks.RED_SANDSTONE_BRICK_SLAB))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHISELED_RED_SANDSTONE_BRICKS)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS, 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DECORATED_RED_SANDSTONE_BRICKS, 2)
                 .input('#', EBBlocks.CHISELED_RED_SANDSTONE_BRICKS)
                 .pattern("#")
                 .pattern("#")
                 .criterion(hasItem(EBBlocks.CHISELED_RED_SANDSTONE_BRICKS), conditionsFromItem(EBBlocks.CHISELED_RED_SANDSTONE_BRICKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DECORATED_RED_SANDSTONE_BRICKS, 2)
-                .input('#', EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS)
-                .pattern("#")
-                .pattern("#")
-                .criterion(hasItem(EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS), conditionsFromItem(EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DECORATED_RED_SANDSTONE_BRICKS)));
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.RED_SANDSTONE_BRICKS, EBBlocks.POLISHED_RED_SANDSTONE, 1);
@@ -1491,7 +1476,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.RED_SANDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.RED_SANDSTONE_BRICKS, 1);
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DECORATED_RED_SANDSTONE_BRICKS, EBBlocks.RED_SANDSTONE_BRICKS, 1);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS, EBBlocks.RED_SANDSTONE_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHISELED_RED_SANDSTONE_BRICKS, EBBlocks.RED_SANDSTONE_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.RED_SANDSTONE_PILLAR, EBBlocks.RED_SANDSTONE_BRICKS, 1);
 
@@ -1572,18 +1556,11 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(EBBlocks.SOUL_SANDSTONE_BRICK_SLAB), conditionsFromItem(EBBlocks.SOUL_SANDSTONE_BRICK_SLAB))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS, 2)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS, 2)
                 .input('#', EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS)
                 .pattern("#")
                 .pattern("#")
                 .criterion(hasItem(EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS), conditionsFromItem(EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS, 2)
-                .input('#', EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS)
-                .pattern("#")
-                .pattern("#")
-                .criterion(hasItem(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS), conditionsFromItem(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS)));
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_BRICKS, EBBlocks.POLISHED_SOUL_SANDSTONE, 1);
@@ -1592,7 +1569,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.SOUL_SANDSTONE_BRICKS, 1);
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS, EBBlocks.SOUL_SANDSTONE_BRICKS, 1);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS, EBBlocks.SOUL_SANDSTONE_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS, EBBlocks.SOUL_SANDSTONE_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_PILLAR, EBBlocks.SOUL_SANDSTONE_BRICKS, 1);
 

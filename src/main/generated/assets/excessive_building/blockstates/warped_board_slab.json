@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/warped_board_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/warped_boards"
+    },
+    "type=top": {
+      "model": "excessive_building:block/warped_board_slab_top"
+    }
+  }
+}

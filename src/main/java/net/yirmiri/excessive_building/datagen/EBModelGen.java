@@ -817,6 +817,71 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS);
 
         generator.registerCubeAllModelTexturePool(EBBlocks.ARMADILLO_SCUTE_BLOCK);
+
+        BlockStateModelGenerator.BlockTexturePool oakBoard = generator.registerCubeAllModelTexturePool(EBBlocks.OAK_BOARDS);
+        oakBoard.stairs(EBBlocks.OAK_BOARD_STAIRS);
+        oakBoard.slab(EBBlocks.OAK_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.OAK_BOARD_VERTICAL_STAIRS, EBBlocks.OAK_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool spruceBoard = generator.registerCubeAllModelTexturePool(EBBlocks.SPRUCE_BOARDS);
+        spruceBoard.stairs(EBBlocks.SPRUCE_BOARD_STAIRS);
+        spruceBoard.slab(EBBlocks.SPRUCE_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.SPRUCE_BOARD_VERTICAL_STAIRS, EBBlocks.SPRUCE_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool birchBoard = generator.registerCubeAllModelTexturePool(EBBlocks.BIRCH_BOARDS);
+        birchBoard.stairs(EBBlocks.BIRCH_BOARD_STAIRS);
+        birchBoard.slab(EBBlocks.BIRCH_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BIRCH_BOARD_VERTICAL_STAIRS, EBBlocks.BIRCH_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool jungleBoard = generator.registerCubeAllModelTexturePool(EBBlocks.JUNGLE_BOARDS);
+        jungleBoard.stairs(EBBlocks.JUNGLE_BOARD_STAIRS);
+        jungleBoard.slab(EBBlocks.JUNGLE_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.JUNGLE_BOARD_VERTICAL_STAIRS, EBBlocks.JUNGLE_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool acaciaBoard = generator.registerCubeAllModelTexturePool(EBBlocks.ACACIA_BOARDS);
+        acaciaBoard.stairs(EBBlocks.ACACIA_BOARD_STAIRS);
+        acaciaBoard.slab(EBBlocks.ACACIA_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.ACACIA_BOARD_VERTICAL_STAIRS, EBBlocks.ACACIA_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool darkOakBoard = generator.registerCubeAllModelTexturePool(EBBlocks.DARK_OAK_BOARDS);
+        darkOakBoard.stairs(EBBlocks.DARK_OAK_BOARD_STAIRS);
+        darkOakBoard.slab(EBBlocks.DARK_OAK_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.DARK_OAK_BOARD_VERTICAL_STAIRS, EBBlocks.DARK_OAK_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool mangroveBoard = generator.registerCubeAllModelTexturePool(EBBlocks.MANGROVE_BOARDS);
+        mangroveBoard.stairs(EBBlocks.MANGROVE_BOARD_STAIRS);
+        mangroveBoard.slab(EBBlocks.MANGROVE_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.MANGROVE_BOARD_VERTICAL_STAIRS, EBBlocks.MANGROVE_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool cherryBoard = generator.registerCubeAllModelTexturePool(EBBlocks.CHERRY_BOARDS);
+        cherryBoard.stairs(EBBlocks.CHERRY_BOARD_STAIRS);
+        cherryBoard.slab(EBBlocks.CHERRY_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.CHERRY_BOARD_VERTICAL_STAIRS, EBBlocks.CHERRY_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool crimsonBoard = generator.registerCubeAllModelTexturePool(EBBlocks.CRIMSON_BOARDS);
+        crimsonBoard.stairs(EBBlocks.CRIMSON_BOARD_STAIRS);
+        crimsonBoard.slab(EBBlocks.CRIMSON_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.CRIMSON_BOARD_VERTICAL_STAIRS, EBBlocks.CRIMSON_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool warpedBoard = generator.registerCubeAllModelTexturePool(EBBlocks.WARPED_BOARDS);
+        warpedBoard.stairs(EBBlocks.WARPED_BOARD_STAIRS);
+        warpedBoard.slab(EBBlocks.WARPED_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WARPED_BOARD_VERTICAL_STAIRS, EBBlocks.WARPED_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool bambooBoard = generator.registerCubeAllModelTexturePool(EBBlocks.BAMBOO_BOARDS);
+        bambooBoard.stairs(EBBlocks.BAMBOO_BOARD_STAIRS);
+        bambooBoard.slab(EBBlocks.BAMBOO_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.BAMBOO_BOARD_VERTICAL_STAIRS, EBBlocks.BAMBOO_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool ancientBoard = generator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_BOARDS);
+        ancientBoard.stairs(EBBlocks.ANCIENT_BOARD_STAIRS);
+        ancientBoard.slab(EBBlocks.ANCIENT_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.ANCIENT_BOARD_VERTICAL_STAIRS, EBBlocks.ANCIENT_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool gloomBoard = generator.registerCubeAllModelTexturePool(EBBlocks.GLOOM_BOARDS);
+        gloomBoard.stairs(EBBlocks.GLOOM_BOARD_STAIRS);
+        gloomBoard.slab(EBBlocks.GLOOM_BOARD_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.GLOOM_BOARD_VERTICAL_STAIRS, EBBlocks.GLOOM_BOARDS);
     }
 
     @Override

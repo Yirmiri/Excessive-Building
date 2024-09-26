@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_engraved_red_sandstone_bricks": {
+    "has_chiseled_red_sandstone_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "excessive_building:engraved_red_sandstone_bricks"
+            "items": "excessive_building:chiseled_red_sandstone_bricks"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_engraved_red_sandstone_bricks"
+      "has_chiseled_red_sandstone_bricks"
     ]
   ],
   "rewards": {

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/bamboo_boards",
+    "side": "excessive_building:block/bamboo_boards",
+    "top": "excessive_building:block/bamboo_boards"
+  }
+}

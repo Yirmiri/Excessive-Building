@@ -24,6 +24,7 @@ Version Release v3.3.0 Fabric/Quilt-1.21(1.)/1.20.1
   Changes
 •   Updated the texture of almentra bricks
 •   Updated the texture of almentra statues
+•   Updated the texture of ancient leaves
 •   Updated the colors of lime, pink, and brown almentra
 •   Updated the models for orange almentra statue
 •   Removed recipes for many blocks such as almentra statues or thick paper walls as these are obtained via the hammer now

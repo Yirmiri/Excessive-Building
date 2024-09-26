@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/birch_board_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/birch_boards"
+    },
+    "type=top": {
+      "model": "excessive_building:block/birch_board_slab_top"
+    }
+  }
+}
