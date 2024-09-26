@@ -3625,12 +3625,257 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, 1);
 
+        createStairsRecipe(EBBlocks.OAK_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.OAK_BOARDS))
+                .criterion(hasItem(EBBlocks.OAK_BOARDS), conditionsFromItem(EBBlocks.OAK_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OAK_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.OAK_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.OAK_BOARDS))
+                .criterion(hasItem(EBBlocks.OAK_BOARDS), conditionsFromItem(EBBlocks.OAK_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OAK_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.OAK_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.OAK_BOARDS))
+                .criterion(hasItem(EBBlocks.OAK_BOARDS), conditionsFromItem(EBBlocks.OAK_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.OAK_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.SPRUCE_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.SPRUCE_BOARDS))
+                .criterion(hasItem(EBBlocks.SPRUCE_BOARDS), conditionsFromItem(EBBlocks.SPRUCE_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SPRUCE_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SPRUCE_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.SPRUCE_BOARDS))
+                .criterion(hasItem(EBBlocks.SPRUCE_BOARDS), conditionsFromItem(EBBlocks.SPRUCE_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SPRUCE_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.SPRUCE_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.SPRUCE_BOARDS))
+                .criterion(hasItem(EBBlocks.SPRUCE_BOARDS), conditionsFromItem(EBBlocks.SPRUCE_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SPRUCE_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.BIRCH_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.BIRCH_BOARDS))
+                .criterion(hasItem(EBBlocks.BIRCH_BOARDS), conditionsFromItem(EBBlocks.BIRCH_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BIRCH_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BIRCH_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.BIRCH_BOARDS))
+                .criterion(hasItem(EBBlocks.BIRCH_BOARDS), conditionsFromItem(EBBlocks.BIRCH_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BIRCH_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.BIRCH_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.BIRCH_BOARDS))
+                .criterion(hasItem(EBBlocks.BIRCH_BOARDS), conditionsFromItem(EBBlocks.BIRCH_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BIRCH_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.JUNGLE_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.JUNGLE_BOARDS))
+                .criterion(hasItem(EBBlocks.JUNGLE_BOARDS), conditionsFromItem(EBBlocks.JUNGLE_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.JUNGLE_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.JUNGLE_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.JUNGLE_BOARDS))
+                .criterion(hasItem(EBBlocks.JUNGLE_BOARDS), conditionsFromItem(EBBlocks.JUNGLE_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.JUNGLE_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.JUNGLE_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.JUNGLE_BOARDS))
+                .criterion(hasItem(EBBlocks.JUNGLE_BOARDS), conditionsFromItem(EBBlocks.JUNGLE_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.JUNGLE_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.ACACIA_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.ACACIA_BOARDS))
+                .criterion(hasItem(EBBlocks.ACACIA_BOARDS), conditionsFromItem(EBBlocks.ACACIA_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ACACIA_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ACACIA_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.ACACIA_BOARDS))
+                .criterion(hasItem(EBBlocks.ACACIA_BOARDS), conditionsFromItem(EBBlocks.ACACIA_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ACACIA_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.ACACIA_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.ACACIA_BOARDS))
+                .criterion(hasItem(EBBlocks.ACACIA_BOARDS), conditionsFromItem(EBBlocks.ACACIA_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ACACIA_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.DARK_OAK_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.DARK_OAK_BOARDS))
+                .criterion(hasItem(EBBlocks.DARK_OAK_BOARDS), conditionsFromItem(EBBlocks.DARK_OAK_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_OAK_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DARK_OAK_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.DARK_OAK_BOARDS))
+                .criterion(hasItem(EBBlocks.DARK_OAK_BOARDS), conditionsFromItem(EBBlocks.DARK_OAK_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_OAK_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.DARK_OAK_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.DARK_OAK_BOARDS))
+                .criterion(hasItem(EBBlocks.DARK_OAK_BOARDS), conditionsFromItem(EBBlocks.DARK_OAK_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.DARK_OAK_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.MANGROVE_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.MANGROVE_BOARDS))
+                .criterion(hasItem(EBBlocks.MANGROVE_BOARDS), conditionsFromItem(EBBlocks.MANGROVE_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MANGROVE_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MANGROVE_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.MANGROVE_BOARDS))
+                .criterion(hasItem(EBBlocks.MANGROVE_BOARDS), conditionsFromItem(EBBlocks.MANGROVE_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MANGROVE_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.MANGROVE_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.MANGROVE_BOARDS))
+                .criterion(hasItem(EBBlocks.MANGROVE_BOARDS), conditionsFromItem(EBBlocks.MANGROVE_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MANGROVE_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.CHERRY_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.CHERRY_BOARDS))
+                .criterion(hasItem(EBBlocks.CHERRY_BOARDS), conditionsFromItem(EBBlocks.CHERRY_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHERRY_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHERRY_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.CHERRY_BOARDS))
+                .criterion(hasItem(EBBlocks.CHERRY_BOARDS), conditionsFromItem(EBBlocks.CHERRY_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHERRY_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.CHERRY_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.CHERRY_BOARDS))
+                .criterion(hasItem(EBBlocks.CHERRY_BOARDS), conditionsFromItem(EBBlocks.CHERRY_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHERRY_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.BAMBOO_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.BAMBOO_BOARDS))
+                .criterion(hasItem(EBBlocks.BAMBOO_BOARDS), conditionsFromItem(EBBlocks.BAMBOO_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BAMBOO_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BAMBOO_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.BAMBOO_BOARDS))
+                .criterion(hasItem(EBBlocks.BAMBOO_BOARDS), conditionsFromItem(EBBlocks.BAMBOO_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BAMBOO_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.BAMBOO_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.BAMBOO_BOARDS))
+                .criterion(hasItem(EBBlocks.BAMBOO_BOARDS), conditionsFromItem(EBBlocks.BAMBOO_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BAMBOO_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.CRIMSON_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.CRIMSON_BOARDS))
+                .criterion(hasItem(EBBlocks.CRIMSON_BOARDS), conditionsFromItem(EBBlocks.CRIMSON_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CRIMSON_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRIMSON_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.CRIMSON_BOARDS))
+                .criterion(hasItem(EBBlocks.CRIMSON_BOARDS), conditionsFromItem(EBBlocks.CRIMSON_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CRIMSON_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.CRIMSON_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.CRIMSON_BOARDS))
+                .criterion(hasItem(EBBlocks.CRIMSON_BOARDS), conditionsFromItem(EBBlocks.CRIMSON_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CRIMSON_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.WARPED_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.WARPED_BOARDS))
+                .criterion(hasItem(EBBlocks.WARPED_BOARDS), conditionsFromItem(EBBlocks.WARPED_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WARPED_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WARPED_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.WARPED_BOARDS))
+                .criterion(hasItem(EBBlocks.WARPED_BOARDS), conditionsFromItem(EBBlocks.WARPED_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WARPED_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.WARPED_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.WARPED_BOARDS))
+                .criterion(hasItem(EBBlocks.WARPED_BOARDS), conditionsFromItem(EBBlocks.WARPED_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WARPED_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.ANCIENT_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.ANCIENT_BOARDS))
+                .criterion(hasItem(EBBlocks.ANCIENT_BOARDS), conditionsFromItem(EBBlocks.ANCIENT_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.ANCIENT_BOARDS))
+                .criterion(hasItem(EBBlocks.ANCIENT_BOARDS), conditionsFromItem(EBBlocks.ANCIENT_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.ANCIENT_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.ANCIENT_BOARDS))
+                .criterion(hasItem(EBBlocks.ANCIENT_BOARDS), conditionsFromItem(EBBlocks.ANCIENT_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ANCIENT_BOARD_VERTICAL_STAIRS)));
+
+        createStairsRecipe(EBBlocks.GLOOM_BOARD_STAIRS,
+                Ingredient.ofItems(EBBlocks.GLOOM_BOARDS))
+                .criterion(hasItem(EBBlocks.GLOOM_BOARDS), conditionsFromItem(EBBlocks.GLOOM_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_BOARD_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GLOOM_BOARD_SLAB,
+                Ingredient.ofItems(EBBlocks.GLOOM_BOARDS))
+                .criterion(hasItem(EBBlocks.GLOOM_BOARDS), conditionsFromItem(EBBlocks.GLOOM_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_BOARD_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.GLOOM_BOARD_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.GLOOM_BOARDS))
+                .criterion(hasItem(EBBlocks.GLOOM_BOARDS), conditionsFromItem(EBBlocks.GLOOM_BOARDS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GLOOM_BOARD_VERTICAL_STAIRS)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ARMADILLO_SCUTE_BLOCK, 1)
                 .input('@', Items.ARMADILLO_SCUTE)
                 .pattern("@@")
                 .pattern("@@")
                 .criterion(hasItem(Items.ARMADILLO_SCUTE), conditionsFromItem(Items.ARMADILLO_SCUTE))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ARMADILLO_SCUTE_BLOCK)));
+
+        createStairsRecipe(EBBlocks.ARMADILLO_SCUTE_STAIRS,
+                Ingredient.ofItems(EBBlocks.ARMADILLO_SCUTE_BLOCK))
+                .criterion(hasItem(EBBlocks.ARMADILLO_SCUTE_BLOCK), conditionsFromItem(EBBlocks.ARMADILLO_SCUTE_BLOCK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ARMADILLO_SCUTE_STAIRS)));
+
+        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ARMADILLO_SCUTE_SLAB,
+                Ingredient.ofItems(EBBlocks.ARMADILLO_SCUTE_BLOCK))
+                .criterion(hasItem(EBBlocks.ARMADILLO_SCUTE_BLOCK), conditionsFromItem(EBBlocks.ARMADILLO_SCUTE_BLOCK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ARMADILLO_SCUTE_SLAB)));
+
+        createVerticalStairsRecipe(EBBlocks.ARMADILLO_SCUTE_VERTICAL_STAIRS,
+                Ingredient.ofItems(EBBlocks.ARMADILLO_SCUTE_BLOCK))
+                .criterion(hasItem(EBBlocks.ARMADILLO_SCUTE_BLOCK), conditionsFromItem(EBBlocks.ARMADILLO_SCUTE_BLOCK))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.ARMADILLO_SCUTE_VERTICAL_STAIRS)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.WICKED_JACK_O_LANTERN, 1)
+                .input(EBBlocks.WICKED_CARVED_PUMPKIN).input(Blocks.TORCH)
+                .criterion(hasItem(EBBlocks.WICKED_CARVED_PUMPKIN), conditionsFromItem(EBBlocks.WICKED_CARVED_PUMPKIN))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WICKED_JACK_O_LANTERN)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GRUMPY_JACK_O_LANTERN, 1)
+                .input(EBBlocks.GRUMPY_CARVED_PUMPKIN).input(Blocks.TORCH)
+                .criterion(hasItem(EBBlocks.GRUMPY_CARVED_PUMPKIN), conditionsFromItem(EBBlocks.GRUMPY_CARVED_PUMPKIN))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GRUMPY_JACK_O_LANTERN)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.CHEERFUL_JACK_O_LANTERN, 1)
+                .input(EBBlocks.CHEERFUL_CARVED_PUMPKIN).input(Blocks.TORCH)
+                .criterion(hasItem(EBBlocks.CHEERFUL_CARVED_PUMPKIN), conditionsFromItem(EBBlocks.CHEERFUL_CARVED_PUMPKIN))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHEERFUL_JACK_O_LANTERN)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.WICKED_SOUL_JACK_O_LANTERN, 1)
+                .input(EBBlocks.WICKED_CARVED_PUMPKIN).input(Blocks.SOUL_TORCH)
+                .criterion(hasItem(EBBlocks.WICKED_CARVED_PUMPKIN), conditionsFromItem(EBBlocks.WICKED_CARVED_PUMPKIN))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WICKED_SOUL_JACK_O_LANTERN)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN, 1)
+                .input(EBBlocks.GRUMPY_CARVED_PUMPKIN).input(Blocks.SOUL_TORCH)
+                .criterion(hasItem(EBBlocks.GRUMPY_CARVED_PUMPKIN), conditionsFromItem(EBBlocks.GRUMPY_CARVED_PUMPKIN))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN, 1)
+                .input(EBBlocks.CHEERFUL_CARVED_PUMPKIN).input(Blocks.SOUL_TORCH)
+                .criterion(hasItem(EBBlocks.CHEERFUL_CARVED_PUMPKIN), conditionsFromItem(EBBlocks.CHEERFUL_CARVED_PUMPKIN))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.SOUL_JACK_O_LANTERN, 1)
+                .input(Blocks.CARVED_PUMPKIN).input(Blocks.SOUL_TORCH)
+                .criterion(hasItem(Blocks.CARVED_PUMPKIN), conditionsFromItem(Blocks.CARVED_PUMPKIN))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.SOUL_JACK_O_LANTERN)));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

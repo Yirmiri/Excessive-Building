@@ -111,6 +111,18 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.GLOOM_MOSAIC_STAIRS.asItem())
                 .add(EBBlocks.GLOOM_MOSAIC_SLAB.asItem())
                 .add(EBBlocks.GLOOM_MOSAIC_VERTICAL_STAIRS.asItem())
+                .add(Blocks.CARVED_PUMPKIN.asItem())
+                .add(Blocks.JACK_O_LANTERN.asItem())
+                .add(EBBlocks.CHEERFUL_CARVED_PUMPKIN.asItem())
+                .add(EBBlocks.GRUMPY_CARVED_PUMPKIN.asItem())
+                .add(EBBlocks.WICKED_CARVED_PUMPKIN.asItem())
+                .add(EBBlocks.CHEERFUL_JACK_O_LANTERN.asItem())
+                .add(EBBlocks.GRUMPY_JACK_O_LANTERN.asItem())
+                .add(EBBlocks.WICKED_JACK_O_LANTERN.asItem())
+                .add(EBBlocks.SOUL_JACK_O_LANTERN.asItem())
+                .add(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN.asItem())
+                .add(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN.asItem())
+                .add(EBBlocks.WICKED_SOUL_JACK_O_LANTERN.asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/armadillo_scute_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/armadillo_scute_block"
+    },
+    "type=top": {
+      "model": "excessive_building:block/armadillo_scute_slab_top"
+    }
+  }
+}

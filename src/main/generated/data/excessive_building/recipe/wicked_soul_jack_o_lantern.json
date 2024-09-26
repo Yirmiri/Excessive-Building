@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "excessive_building:wicked_carved_pumpkin"
+    },
+    {
+      "item": "minecraft:soul_torch"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:wicked_soul_jack_o_lantern"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_spruce_boards": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:spruce_boards"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:spruce_board_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_spruce_boards"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:spruce_board_slab"
+    ]
+  }
+}

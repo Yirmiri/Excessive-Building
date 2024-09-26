@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_jungle_boards": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:jungle_boards"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:jungle_board_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_jungle_boards"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:jungle_board_stairs"
+    ]
+  }
+}

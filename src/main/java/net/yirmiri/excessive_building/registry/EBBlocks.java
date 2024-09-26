@@ -921,6 +921,19 @@ public class EBBlocks {
     public static final Block THIN_DIAGONAL_PAPER_BLOCK = register("thin_diagonal_paper_block", new HammerableHorizontalBlock(THICK_DIAGONAL_PAPER_BLOCK, EBProperties.BlockP.PAPER), true);
 
     //MISC
+    public static final Block GRUMPY_CARVED_PUMPKIN = register("grumpy_carved_pumpkin", new HammerableCarvedPumpkinBlock(Blocks.CARVED_PUMPKIN, EBProperties.BlockP.PUMPKIN, true), true);
+    public static final Block CHEERFUL_CARVED_PUMPKIN = register("cheerful_carved_pumpkin", new HammerableCarvedPumpkinBlock(EBBlocks.GRUMPY_CARVED_PUMPKIN, EBProperties.BlockP.PUMPKIN, true), true);
+    public static final Block WICKED_CARVED_PUMPKIN = register("wicked_carved_pumpkin", new HammerableCarvedPumpkinBlock(EBBlocks.CHEERFUL_CARVED_PUMPKIN, EBProperties.BlockP.PUMPKIN, true), true);
+
+    public static final Block GRUMPY_JACK_O_LANTERN = register("grumpy_jack_o_lantern", new HammerableCarvedPumpkinBlock(Blocks.JACK_O_LANTERN, EBProperties.BlockP.JACK_O, false), true);
+    public static final Block CHEERFUL_JACK_O_LANTERN = register("cheerful_jack_o_lantern", new HammerableCarvedPumpkinBlock(EBBlocks.GRUMPY_JACK_O_LANTERN, EBProperties.BlockP.JACK_O, false), true);
+    public static final Block WICKED_JACK_O_LANTERN = register("wicked_jack_o_lantern", new HammerableCarvedPumpkinBlock(EBBlocks.CHEERFUL_JACK_O_LANTERN, EBProperties.BlockP.JACK_O, false), true);
+
+    public static final Block SOUL_JACK_O_LANTERN = register("soul_jack_o_lantern", new EBCarvedPumpkinBlock(EBProperties.BlockP.SOUL_JACK_O, false), true);
+    public static final Block GRUMPY_SOUL_JACK_O_LANTERN = register("grumpy_soul_jack_o_lantern", new HammerableCarvedPumpkinBlock(EBBlocks.SOUL_JACK_O_LANTERN, EBProperties.BlockP.SOUL_JACK_O, false), true);
+    public static final Block CHEERFUL_SOUL_JACK_O_LANTERN = register("cheerful_soul_jack_o_lantern", new HammerableCarvedPumpkinBlock(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN, EBProperties.BlockP.SOUL_JACK_O, false), true);
+    public static final Block WICKED_SOUL_JACK_O_LANTERN = register("wicked_soul_jack_o_lantern", new HammerableCarvedPumpkinBlock(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN, EBProperties.BlockP.SOUL_JACK_O, false), true);
+
     public static final Block WEEPING_CANDLE = register("weeping_candle", new ParticleCandleBlock(ParticleTypes.CRIMSON_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
     public static final Block TWISTING_CANDLE = register("twisting_candle", new ParticleCandleBlock(ParticleTypes.WARPED_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
 
@@ -928,7 +941,10 @@ public class EBBlocks {
     public static final Block GOLD_GRATE = register("gold_grate", new GrateBlock(EBProperties.BlockP.GOLD_GRATE), true);
 
     public static final Block ARMADILLO_SCUTE_BLOCK = register("armadillo_scute_block", new Block(EBProperties.BlockP.ARMADILLO_SCUTE_BLOCK), true);
-    
+    public static final Block ARMADILLO_SCUTE_STAIRS = register("armadillo_scute_stairs", new StairsBlock(ARMADILLO_SCUTE_BLOCK.getDefaultState(), EBProperties.BlockP.ARMADILLO_SCUTE_BLOCK), true);
+    public static final Block ARMADILLO_SCUTE_SLAB = register("armadillo_scute_slab", new SlabBlock(EBProperties.BlockP.ARMADILLO_SCUTE_BLOCK), true);
+    public static final Block ARMADILLO_SCUTE_VERTICAL_STAIRS = registerVStairs("armadillo_scute_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ARMADILLO_SCUTE_BLOCK), true);
+
     public static final Block REACHING_LANTERN = register("reaching_lantern", new ReachingLanternBlock(EBProperties.BlockP.REACHING_LANTERN), true);
     public static final Block AMETHYST_LAMP = register("amethyst_lamp", new Block(EBProperties.BlockP.LAMP), true);
 

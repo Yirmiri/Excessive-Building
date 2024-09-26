@@ -60,6 +60,22 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendCandles();
         appendReplaceable();
         appendHammerMineable();
+        appendCarvedPumpkins();
+    }
+
+    public void appendCarvedPumpkins() {
+        getOrCreateTagBuilder(EBTags.Blocks.CARVED_PUMPKINS)
+                .add(EBBlocks.WICKED_CARVED_PUMPKIN)
+                .add(EBBlocks.GRUMPY_CARVED_PUMPKIN)
+                .add(EBBlocks.CHEERFUL_CARVED_PUMPKIN)
+                .add(EBBlocks.WICKED_JACK_O_LANTERN)
+                .add(EBBlocks.GRUMPY_JACK_O_LANTERN)
+                .add(EBBlocks.CHEERFUL_JACK_O_LANTERN)
+                .add(EBBlocks.WICKED_SOUL_JACK_O_LANTERN)
+                .add(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN)
+                .add(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN)
+                .add(EBBlocks.SOUL_JACK_O_LANTERN)
+        ;
     }
 
     public void appendHammerMineable() {
@@ -643,6 +659,9 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         public void appendPickaxeMineable() {
             getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                     .add(EBBlocks.ARMADILLO_SCUTE_BLOCK)
+                    .add(EBBlocks.ARMADILLO_SCUTE_STAIRS)
+                    .add(EBBlocks.ARMADILLO_SCUTE_VERTICAL_STAIRS)
+                    .add(EBBlocks.ARMADILLO_SCUTE_SLAB)
                     .add(EBBlocks.ALMENTRA_STATUE)
                     .add(EBBlocks.ALMENTRA)
                     .add(EBBlocks.ALMENTRA_STAIRS)
@@ -971,6 +990,16 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
         public void appendAxeMineable() {
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+                .add(EBBlocks.CHEERFUL_CARVED_PUMPKIN)
+                .add(EBBlocks.GRUMPY_CARVED_PUMPKIN)
+                .add(EBBlocks.WICKED_CARVED_PUMPKIN)
+                .add(EBBlocks.CHEERFUL_JACK_O_LANTERN)
+                .add(EBBlocks.GRUMPY_JACK_O_LANTERN)
+                .add(EBBlocks.WICKED_JACK_O_LANTERN)
+                .add(EBBlocks.SOUL_JACK_O_LANTERN)
+                .add(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN)
+                .add(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN)
+                .add(EBBlocks.WICKED_SOUL_JACK_O_LANTERN)
                 .add(EBBlocks.OAK_BOARDS)
                 .add(EBBlocks.OAK_BOARD_STAIRS)
                 .add(EBBlocks.OAK_BOARD_SLAB)

@@ -640,6 +640,19 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.GLOOM_BOARD_STAIRS);
         addDrop(EBBlocks.GLOOM_BOARD_SLAB, slabDrops(EBBlocks.GLOOM_BOARD_SLAB));
         addDrop(EBBlocks.GLOOM_BOARD_VERTICAL_STAIRS);
+        addDrop(EBBlocks.ARMADILLO_SCUTE_STAIRS);
+        addDrop(EBBlocks.ARMADILLO_SCUTE_SLAB, slabDrops(EBBlocks.ARMADILLO_SCUTE_SLAB));
+        addDrop(EBBlocks.ARMADILLO_SCUTE_VERTICAL_STAIRS);
+        addDrop(EBBlocks.GRUMPY_CARVED_PUMPKIN);
+        addDrop(EBBlocks.CHEERFUL_CARVED_PUMPKIN);
+        addDrop(EBBlocks.WICKED_CARVED_PUMPKIN);
+        addDrop(EBBlocks.GRUMPY_JACK_O_LANTERN);
+        addDrop(EBBlocks.WICKED_JACK_O_LANTERN);
+        addDrop(EBBlocks.CHEERFUL_JACK_O_LANTERN);
+        addDrop(EBBlocks.SOUL_JACK_O_LANTERN);
+        addDrop(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN);
+        addDrop(EBBlocks.WICKED_SOUL_JACK_O_LANTERN);
+        addDrop(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN);
     }
 
     private void addDyedBlockDrops() {

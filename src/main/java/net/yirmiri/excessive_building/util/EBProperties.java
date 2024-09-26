@@ -142,6 +142,9 @@ public class EBProperties {
         public static final Block.Settings PAPER = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.WOOL);
         public static final Block.Settings LAMP = FabricBlockSettings.copyOf(Blocks.SEA_LANTERN);
         public static final Block.Settings ARMADILLO_SCUTE_BLOCK = FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.CORAL);
+        public static final Block.Settings PUMPKIN = FabricBlockSettings.copyOf(Blocks.CARVED_PUMPKIN);
+        public static final Block.Settings JACK_O = FabricBlockSettings.copyOf(Blocks.JACK_O_LANTERN);
+        public static final Block.Settings SOUL_JACK_O = FabricBlockSettings.copyOf(Blocks.JACK_O_LANTERN).lightLevel(7);
     }
 
     public static class ItemP {

@@ -816,8 +816,6 @@ public class EBModelGen extends FabricModelProvider {
         twistingPolishedBlackstoneBricks.wall(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS);
 
-        generator.registerCubeAllModelTexturePool(EBBlocks.ARMADILLO_SCUTE_BLOCK);
-
         BlockStateModelGenerator.BlockTexturePool oakBoard = generator.registerCubeAllModelTexturePool(EBBlocks.OAK_BOARDS);
         oakBoard.stairs(EBBlocks.OAK_BOARD_STAIRS);
         oakBoard.slab(EBBlocks.OAK_BOARD_SLAB);
@@ -882,6 +880,26 @@ public class EBModelGen extends FabricModelProvider {
         gloomBoard.stairs(EBBlocks.GLOOM_BOARD_STAIRS);
         gloomBoard.slab(EBBlocks.GLOOM_BOARD_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.GLOOM_BOARD_VERTICAL_STAIRS, EBBlocks.GLOOM_BOARDS);
+
+        BlockStateModelGenerator.BlockTexturePool armadilloScute = generator.registerCubeAllModelTexturePool(EBBlocks.ARMADILLO_SCUTE_BLOCK);
+        armadilloScute.stairs(EBBlocks.ARMADILLO_SCUTE_STAIRS);
+        armadilloScute.slab(EBBlocks.ARMADILLO_SCUTE_SLAB);
+        EBModels.registerVerticalStairs(generator, EBBlocks.ARMADILLO_SCUTE_VERTICAL_STAIRS, EBBlocks.ARMADILLO_SCUTE_BLOCK);
+
+        TextureMap pumpkinTexture = TextureMap.sideEnd(Blocks.PUMPKIN);
+        generator.registerNorthDefaultHorizontalRotatable(EBBlocks.WICKED_CARVED_PUMPKIN, pumpkinTexture);
+        generator.registerNorthDefaultHorizontalRotatable(EBBlocks.WICKED_JACK_O_LANTERN, pumpkinTexture);
+
+        generator.registerNorthDefaultHorizontalRotatable(EBBlocks.GRUMPY_CARVED_PUMPKIN, pumpkinTexture);
+        generator.registerNorthDefaultHorizontalRotatable(EBBlocks.GRUMPY_JACK_O_LANTERN, pumpkinTexture);
+
+        generator.registerNorthDefaultHorizontalRotatable(EBBlocks.CHEERFUL_CARVED_PUMPKIN, pumpkinTexture);
+        generator.registerNorthDefaultHorizontalRotatable(EBBlocks.CHEERFUL_JACK_O_LANTERN, pumpkinTexture);
+
+        generator.registerNorthDefaultHorizontalRotatable(EBBlocks.SOUL_JACK_O_LANTERN, pumpkinTexture);
+        generator.registerNorthDefaultHorizontalRotatable(EBBlocks.WICKED_SOUL_JACK_O_LANTERN, pumpkinTexture);
+        generator.registerNorthDefaultHorizontalRotatable(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN, pumpkinTexture);
+        generator.registerNorthDefaultHorizontalRotatable(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN, pumpkinTexture);
     }
 
     @Override

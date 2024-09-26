@@ -664,6 +664,19 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.GLOOM_BOARD_STAIRS, "Gloom Board Stairs");
         build.add(EBBlocks.GLOOM_BOARD_SLAB, "Gloom Board Slab");
         build.add(EBBlocks.GLOOM_BOARD_VERTICAL_STAIRS, "Gloom Board Vertical Stairs");
+        build.add(EBBlocks.ARMADILLO_SCUTE_STAIRS, "Armadillo Scute Stairs");
+        build.add(EBBlocks.ARMADILLO_SCUTE_SLAB, "Armadillo Scute Slab");
+        build.add(EBBlocks.ARMADILLO_SCUTE_VERTICAL_STAIRS, "Armadillo Scute Vertical Stairs");
+        build.add(EBBlocks.CHEERFUL_CARVED_PUMPKIN, "Carved Pumpkin");
+        build.add(EBBlocks.WICKED_CARVED_PUMPKIN, "Carved Pumpkin");
+        build.add(EBBlocks.GRUMPY_CARVED_PUMPKIN, "Carved Pumpkin");
+        build.add(EBBlocks.CHEERFUL_JACK_O_LANTERN, "Jack O' Lantern");
+        build.add(EBBlocks.GRUMPY_JACK_O_LANTERN, "Jack O' Lantern");
+        build.add(EBBlocks.WICKED_JACK_O_LANTERN, "Jack O' Lantern");
+        build.add(EBBlocks.SOUL_JACK_O_LANTERN, "Soul Jack O' Lantern");
+        build.add(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN, "Soul Jack O' Lantern");
+        build.add(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN, "Soul Jack O' Lantern");
+        build.add(EBBlocks.WICKED_SOUL_JACK_O_LANTERN, "Soul Jack O' Lantern");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

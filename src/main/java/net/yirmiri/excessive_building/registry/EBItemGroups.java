@@ -25,6 +25,8 @@ import java.util.function.Predicate;
 public class EBItemGroups {
     public static ItemGroup EXCESSIVE_BUILDING = Registry.register(Registries.ITEM_GROUP, Identifier.of(ExcessiveBuilding.MOD_ID, "excessive_building"),
             FabricItemGroup.builder().icon(() -> new ItemStack(EBBlocks.LOGO_BLOCK)).displayName(Text.translatable("itemgroup.excessive_building")).entries((ctx, entries) -> {
+                entries.add(EBItems.HAMMER);
+
                 entries.add(EBBlocks.OAK_MOSAIC);
                 entries.add(EBBlocks.OAK_BOARDS);
                 entries.add(EBBlocks.OAK_MOSAIC_STAIRS);
@@ -829,6 +831,11 @@ public class EBItemGroups {
                 entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.MAGENTA.getId()));
                 entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.PINK.getId()));
 
+                entries.add(EBBlocks.ARMADILLO_SCUTE_BLOCK);
+                entries.add(EBBlocks.ARMADILLO_SCUTE_STAIRS);
+                entries.add(EBBlocks.ARMADILLO_SCUTE_VERTICAL_STAIRS);
+                entries.add(EBBlocks.ARMADILLO_SCUTE_SLAB);
+
                 entries.add(EBBlocks.POLISHED_SANDSTONE);
                 entries.add(EBBlocks.POLISHED_SANDSTONE_STAIRS);
                 entries.add(EBBlocks.POLISHED_SANDSTONE_VERTICAL_STAIRS);
@@ -905,8 +912,6 @@ public class EBItemGroups {
                 entries.add(EBBlocks.SOUL_MAGMA_BLOCK);
 
                 entries.add(EBBlocks.CRACKED_MUD_BRICKS);
-
-                entries.add(EBBlocks.ARMADILLO_SCUTE_BLOCK);
 
                 entries.add(EBBlocks.BONE_BRICKS);
                 entries.add(EBBlocks.BONE_BRICK_STAIRS);
@@ -1030,7 +1035,22 @@ public class EBItemGroups {
                 entries.add(EBBlocks.GLASS_JAR_OF_FIRE);
                 entries.add(EBBlocks.GLASS_JAR_OF_SOUL_FIRE);
 
-                entries.add(EBItems.HAMMER);
+                entries.add(Blocks.PUMPKIN);
+
+                entries.add(Blocks.CARVED_PUMPKIN);
+                entries.add(EBBlocks.WICKED_CARVED_PUMPKIN);
+                entries.add(EBBlocks.CHEERFUL_CARVED_PUMPKIN);
+                entries.add(EBBlocks.GRUMPY_CARVED_PUMPKIN);
+
+                entries.add(Blocks.JACK_O_LANTERN);
+                entries.add(EBBlocks.WICKED_JACK_O_LANTERN);
+                entries.add(EBBlocks.CHEERFUL_JACK_O_LANTERN);
+                entries.add(EBBlocks.GRUMPY_JACK_O_LANTERN);
+
+                entries.add(EBBlocks.SOUL_JACK_O_LANTERN);
+                entries.add(EBBlocks.WICKED_SOUL_JACK_O_LANTERN);
+                entries.add(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN);
+                entries.add(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN);
 
                 entries.add(EBItems.ANCIENT_POTTERY_SHERD);
                 entries.add(EBItems.BITTER_POTTERY_SHERD);

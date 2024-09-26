@@ -1,6 +1,9 @@
 {
   "values": [
     "excessive_building:armadillo_scute_block",
+    "excessive_building:armadillo_scute_stairs",
+    "excessive_building:armadillo_scute_vertical_stairs",
+    "excessive_building:armadillo_scute_slab",
     "excessive_building:almentra_statue",
     "excessive_building:almentra",
     "excessive_building:almentra_stairs",

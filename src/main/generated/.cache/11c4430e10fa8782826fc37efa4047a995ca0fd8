@@ -1,4 +1,4 @@
-// 1.21	2024-09-25T23:11:58.8335015	Excessive Building/Tags for minecraft:item
+// 1.21	2024-09-26T05:41:09.9952849	Excessive Building/Tags for minecraft:item
 886e5e1db1abef8583882d996f8600275f839c37 data\excessive_building\tags\item\glow_removals.json
 d59daccf97972bb6f8fd061803196366ec6e3c44 data\excessive_building\tags\item\gloom_logs.json
 05675316f525437e0cf8e4076ab7f5dd8033cea9 data\minecraft\tags\item\enchantable\vanishing.json
@@ -21,4 +21,4 @@ dbf07108c437f6f048248f06fc2ed6dd557d01cb data\minecraft\tags\item\decorated_pot_
 3ecb1c1170f3f42ef334561ebf624bda9dae826f data\minecraft\tags\item\saplings.json
 e16dd0216b65049658bf81ff05bc00cb45041d92 data\excessive_building\tags\item\ancient_logs.json
 3ebe6ccfbaf30f307e1385b7c95c6393b6e42c2f data\minecraft\tags\item\piglin_loved.json
-e3dc9f153104a5d603e156c0c054ae9db6dbae87 data\excessive_building\tags\item\hammerable_tooltip.json
+4b7ff3dc34dcaf772d413038e066518fc4b11a23 data\excessive_building\tags\item\hammerable_tooltip.json

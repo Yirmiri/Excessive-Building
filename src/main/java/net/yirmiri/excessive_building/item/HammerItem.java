@@ -31,7 +31,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.EBConfig;
-import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.util.EBStats;
 import net.yirmiri.excessive_building.util.EBTags;
@@ -52,6 +51,9 @@ public class HammerItem extends MiningToolItem {
             .put(Blocks.BAMBOO_MOSAIC, EBBlocks.BAMBOO_BOARDS)
             .put(Blocks.BAMBOO_MOSAIC_STAIRS, EBBlocks.BAMBOO_BOARD_STAIRS)
             .put(Blocks.BAMBOO_MOSAIC_SLAB, EBBlocks.BAMBOO_BOARD_SLAB)
+            .put(Blocks.CARVED_PUMPKIN, EBBlocks.WICKED_CARVED_PUMPKIN)
+            .put(Blocks.JACK_O_LANTERN, EBBlocks.WICKED_JACK_O_LANTERN)
+            .put(EBBlocks.SOUL_JACK_O_LANTERN, EBBlocks.WICKED_SOUL_JACK_O_LANTERN)
             .build());
 
     public static Optional<BlockState> getHammeredState(BlockState state) {

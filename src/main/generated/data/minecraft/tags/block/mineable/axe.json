@@ -1,5 +1,15 @@
 {
   "values": [
+    "excessive_building:cheerful_carved_pumpkin",
+    "excessive_building:grumpy_carved_pumpkin",
+    "excessive_building:wicked_carved_pumpkin",
+    "excessive_building:cheerful_jack_o_lantern",
+    "excessive_building:grumpy_jack_o_lantern",
+    "excessive_building:wicked_jack_o_lantern",
+    "excessive_building:soul_jack_o_lantern",
+    "excessive_building:cheerful_soul_jack_o_lantern",
+    "excessive_building:grumpy_soul_jack_o_lantern",
+    "excessive_building:wicked_soul_jack_o_lantern",
     "excessive_building:oak_boards",
     "excessive_building:oak_board_stairs",
     "excessive_building:oak_board_slab",
