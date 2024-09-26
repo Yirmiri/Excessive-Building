@@ -23,6 +23,7 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_GLOOM_SEEDS;
 
     //BALANCE
+    public static final ForgeConfigSpec.BooleanValue ENABLE_HAMMER_AS_WEAPON;
     public static final ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_SOUL_MAGMA_COLUMN_TOGGLE;
     public static final ForgeConfigSpec.BooleanValue ENABLE_REACHING_LANTERN_FUNCTIONALITY;
@@ -104,6 +105,10 @@ public class EBConfig {
 
         //BALANCE CONFIGURATION
         BUILDER.push("Balance Configuration").comment("Configuration for features that may impact gameplay in a large way");
+
+        ENABLE_HAMMER_AS_WEAPON = BUILDER
+                .comment("Should the hammer have weapon like abilities? Increased knockback based on movement speed and increased damage. (default: true)")
+                .define("enableHammerAsWeapon", true);
 
         ENABLE_EB_VILLAGER_TRADES = BUILDER
                 .comment("Should Excessive Building add new trade offers to villagers? (default: true)")

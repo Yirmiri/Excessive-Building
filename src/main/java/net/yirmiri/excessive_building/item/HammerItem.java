@@ -10,6 +10,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
@@ -30,6 +31,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.util.EBStats;
 import net.yirmiri.excessive_building.util.EBTags;
@@ -41,7 +43,6 @@ public class HammerItem extends MiningToolItem {
     public static final Identifier BASE_ATTACK_DAMAGE_MODIFIER_ID = Identifier.ofVanilla("base_attack_damage");
     public static final Identifier BASE_ATTACK_SPEED_MODIFIER_ID = Identifier.ofVanilla("base_attack_speed");
     public static final Identifier BASE_ENTITY_INTERACTION_MODIFIER_ID = Identifier.ofVanilla("base_entity_interaction");
-    public static final Identifier BASE_KNOCKBACK_MODIFIER_ID = Identifier.ofVanilla("base_knockback");
 
     public HammerItem(ToolMaterial material, Item.Settings settings) {
         super(material, EBTags.Blocks.HAMMER_MINEABLE, settings);
@@ -98,19 +99,32 @@ public class HammerItem extends MiningToolItem {
     }
 
     public static AttributeModifiersComponent createAttributeModifiers() {
-        float damage = 6.0F;
+        float damage = 5.0F;
         float atk_speed = -3.4F;
         float atk_reach = -1.5F;
-        float atk_kb = 1.5F;
-        return AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(BASE_ATTACK_DAMAGE_MODIFIER_ID, damage, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
-                .add(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(BASE_ATTACK_SPEED_MODIFIER_ID, atk_speed, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
-                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, new EntityAttributeModifier(BASE_KNOCKBACK_MODIFIER_ID, atk_kb, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
-                .add(EntityAttributes.PLAYER_ENTITY_INTERACTION_RANGE, new EntityAttributeModifier(BASE_ENTITY_INTERACTION_MODIFIER_ID, atk_reach, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND).build();
+        if (EBConfig.ENABLE_HAMMER_AS_WEAPON.get()) {
+            return AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(BASE_ATTACK_DAMAGE_MODIFIER_ID, damage, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
+                    .add(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(BASE_ATTACK_SPEED_MODIFIER_ID, atk_speed, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
+                    .add(EntityAttributes.PLAYER_ENTITY_INTERACTION_RANGE, new EntityAttributeModifier(BASE_ENTITY_INTERACTION_MODIFIER_ID, atk_reach, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND).build();
+        } else {
+            return AttributeModifiersComponent.builder().add(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(BASE_ATTACK_SPEED_MODIFIER_ID, atk_speed, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND).build();
+        }
+    }
 
+    @Override
+    public void postDamageEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        int stack_damage = EBConfig.ENABLE_HAMMER_AS_WEAPON.get() ? 1 : 2;
+        stack.damage(stack_damage, attacker, EquipmentSlot.MAINHAND);
+        if (EBConfig.ENABLE_HAMMER_AS_WEAPON.get()) {
+            target.takeKnockback(0.5F + attacker.getMovementSpeed(), attacker.getX() - target.getX(), attacker.getZ() - target.getZ());
+            if (attacker.getMovementSpeed() < 0.5F) {
+                attacker.playSound(SoundEvents.ITEM_MACE_SMASH_GROUND, 1.0F, 1.0F);
+            }
+        }
     }
 
     public int getEnchantability() {
-        return 10;
+        return 12;
     }
 
     @Override
