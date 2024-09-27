@@ -38,8 +38,9 @@ public class EBConfig {
 
     static {
         //CONTENT TOGGLES
-        BUILDER.push("Content Toggles");
-        BUILDER.comment("Disabling these will make the corresponding feature unobtainable/unusable");
+        BUILDER.push("Excessive Building Config");
+
+        BUILDER.push("Content Toggles").comment("Disabling these will make the corresponding feature unobtainable/unusable");
 
         ENABLE_ASPHALT = BUILDER
                 .comment("Should asphalt be enabled? (default: true)")

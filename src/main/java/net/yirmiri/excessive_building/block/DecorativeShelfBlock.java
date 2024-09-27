@@ -51,14 +51,14 @@ public class DecorativeShelfBlock extends Block {
 
     @Override @NotNull
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient && !player.hasStackEquipped(EquipmentSlot.MAINHAND)) {
-            world.setBlockState(pos, state.cycle(VARIANT));
-            world.playSound(null, pos, SoundEvents.BLOCK_CHISELED_BOOKSHELF_PLACE, SoundCategory.BLOCKS, 1, 1);
-            player.swingHand(hand);
-        } else {
-            return ActionResult.PASS;
+        if (!world.isClient()) {
+            if (hand == Hand.MAIN_HAND && !player.hasStackEquipped(EquipmentSlot.MAINHAND)) {
+                world.setBlockState(pos, state.cycle(VARIANT));
+                world.playSound(null, pos, SoundEvents.BLOCK_CHISELED_BOOKSHELF_PLACE, SoundCategory.BLOCKS, 1, 1);
+                return ActionResult.SUCCESS;
+            }
         }
-        return ActionResult.success(true);
+        return ActionResult.PASS;
     }
 
     @Override
