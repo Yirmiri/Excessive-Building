@@ -746,10 +746,15 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("tooltip.item.hammer.desc", "Can Change The Variants of Some Blocks");
         build.add("tooltip.excessive_building.hammerable", "Can be hammered");
 
+        //HAMMER MESSAGES
+        build.add("hammer.block.excessive_building.ancient_leaves.variant_false", "Glowing: True");
+        build.add("hammer.block.excessive_building.ancient_leaves.variant_true", "Glowing: False");
+
         //MISC
         build.add("excessive_building.container.kiln", "Kiln");
         build.add("pack.excessive_building.vanilla_retextures", "Vanilla Retextures");
-        build.add(EBStats.BLOCKS_HAMMERED, "Blocks Hammered");
+        build.add("pack.excessive_building.1.22_ancient_retextures", "1.22 Ancient Wood Retextures");
+        build.add("stat.excessive_building.blocks_hammered", "Blocks Hammered");
 
         //ITEM GROUPS
         build.add("itemgroup.excessive_building", "Excessive Building");

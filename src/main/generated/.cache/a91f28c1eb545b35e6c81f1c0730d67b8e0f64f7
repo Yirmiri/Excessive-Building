@@ -1,6 +1,7 @@
-// 1.21	2024-09-26T05:41:09.9733442	Excessive Building/Advancements
+// 1.21	2024-09-26T19:24:57.1469886	Excessive Building/Advancements
 67fa815ffba45626cf4f3e0c944707dac0205364 data\excessive_building\advancement\eat_ancient_fruit.json
+951f0d7c8f1c7d166a5f761303bb5dcad7e243da data\excessive_building\advancement\use_hammer.json
 dc7d214851594203427df66515ada1f4ac7ff6ea data\excessive_building\advancement\place_gloom_seeds.json
 002c046d1b8490ad0dec37b594da40a7368f075f data\excessive_building\advancement\obtain_ancient_sapling.json
-4113c5858eaa5412280ce93bf3a9f93aa117100c data\excessive_building\advancement\place_all_almentra_statues.json
+15d1a790bf1d1cb7c47062a13b4f538c4427575c data\excessive_building\advancement\place_all_almentra_statues.json
 66d199a0b10ece9ee3a63b38a6c4e026089c5533 data\excessive_building\advancement\excessive_building.json

@@ -17,7 +17,7 @@ public class EBLootModifiers {
     public static final Identifier OCEAN_RUIN_COLD = Identifier.ofVanilla("archaeology/ocean_ruin_cold");
     public static final Identifier OCEAN_RUIN_WARM = Identifier.ofVanilla("archaeology/ocean_ruin_warm");
 
-    public static void modifyLoot() {
+    public static void modifyLoot() { //TODO: REPLACE INSTEAD OF MODIFY
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
             if (SNIFFER_DIGGING.equals(key.getValue()) && EBConfig.ENABLE_ANCIENT_SAPLINGS.get()) {
                 LootPool.Builder lootPool = LootPool.builder()

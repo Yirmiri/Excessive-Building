@@ -14,6 +14,7 @@ public class EBTags {
         public static final TagKey<Block> GLOOM_LOGS = create("gloom_logs");
         public static final TagKey<Block> DECORATIVES = create("decoratives");
         public static final TagKey<Block> HAMMER_MINEABLE = create("hammer_mineable");
+        public static final TagKey<Block> HAMMERABLE_BLOCKS = create("hammerable_blocks");
         public static final TagKey<Block> CARVED_PUMPKINS = create("carved_pumpkins");
 
         private static TagKey<Block> create(String id) {

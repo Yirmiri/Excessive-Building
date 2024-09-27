@@ -44,7 +44,7 @@ public class EBCarvedPumpkinBlock extends CarvedPumpkinBlock implements Equipmen
         if (wearable) {
             return EquipmentSlot.HEAD;
         }
-        else return null;
+        else return EquipmentSlot.MAINHAND;
     }
 
     protected void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean notify) {

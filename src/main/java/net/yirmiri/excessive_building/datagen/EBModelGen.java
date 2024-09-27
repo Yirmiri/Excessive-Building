@@ -188,10 +188,10 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WEATHERED_COPPER_BRICKS);
         EBModels.registerVerticalStairs(generator, EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.OXIDIZED_COPPER_BRICKS);
 
-        generator.registerParented(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS);
-        generator.registerParented(EBBlocks.EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS);
-        generator.registerParented(EBBlocks.WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS);
-        generator.registerParented(EBBlocks.OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.COPPER_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.EXPOSED_COPPER_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WEATHERED_COPPER_BRICKS);
+        EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.OXIDIZED_COPPER_BRICKS);
 
         BlockStateModelGenerator.BlockTexturePool ironBricks = generator.registerCubeAllModelTexturePool(EBBlocks.IRON_BRICKS);
         ironBricks.stairs(EBBlocks.IRON_BRICK_STAIRS);

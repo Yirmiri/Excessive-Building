@@ -13,27 +13,37 @@ Version Release v3.3.0 Fabric/Quilt-1.21(1.)/1.20.1
 •   The hammer also increases knockback based on player movement speed and has higher damage than other items (can be configured)
 •   Hammers can be enabled/disabled via the config (on by default)
 
-  Misc Additions
-•   Added uk_ua translations (@unroman)
+  New Features
 •   Added mossy variants for deepslate bricks, polished blackstone bricks, cobbled deepslate bricks, and blackstone bricks
 •   Mossy cobblestone bricks now have an additional recipe that uses moss blocks or vines
 •   Added armadillo scute blocks (as part of losing a bet -_-)
-•   Moved custom tooltips to a client configuration
+•   Added wooden boards and new pumpkin variants as hammered variants of existing blocks
+•   Added an advancement to go along with hammering a block
+
+  Misc Additions
+•   Added uk_ua translations (@unroman)
+•   Added a built-in resource pack for 1.22+ ancient wood retextures (this is due to 1.22 adding a white wood set)
+...this will replace the textures fully on 1.22+ versions of the mod
+•   Added pack icons to built-in resource packs
+•   Ancient fruit now creates mundane potions when using water instead of awkward potions
+•   Moved custom tooltips to a separate client configuration
 •   Added a configuration to allow the hammer to have weapon-like attributes (higher damage, slow, atk speed and increased knockback with movement)
-•   Added two client configurations for disabling contributor capes and hammerable block tooltips
+•   Added a client configurations for hammerable block tooltips
 
   Changes
 •   Updated the texture of almentra bricks
 •   Updated the texture of almentra statues
 •   Updated the texture of ancient leaves
 •   Updated the colors of lime, pink, and brown almentra
-•   Updated the models for orange almentra statue
+•   Updated the models for orange, cyan, purple, magenta, pink, and brown almentra statues
 •   Removed recipes for many blocks such as almentra statues or thick paper walls as these are obtained via the hammer now
 •   Removed chests from the Excessive Building creative tab
 •   Updated contributor capes
 
   Fixes
+•   Fixed an issue that caused the model of waxed copper brick vertical stairs to not rotate
 •   Fixed an issue that caused mossy cobblestone brick slabs to drop normal cobblestone brick slabs
+•   Fixed an issue that caused the comment for "Content Toggles" in the config file to be written at the bottom
 
   Note
 •   I know I've said it a few times in the past but I really need to focus on new things, so for now this will be the last "content" update for a while.

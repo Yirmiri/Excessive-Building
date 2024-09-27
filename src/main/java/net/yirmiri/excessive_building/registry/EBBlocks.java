@@ -13,7 +13,6 @@ import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.*;
 import net.yirmiri.excessive_building.block.configurable.*;
-import net.yirmiri.excessive_building.block.hammerable.*;
 import net.yirmiri.excessive_building.block.sign.EBHangingSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBWallHangingSignBlock;
@@ -182,57 +181,57 @@ public class EBBlocks {
     public static final Block GLOOM_BOARD_VERTICAL_STAIRS = registerVStairs("gloom_board_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GLOOM_WOOD), true);
 
     //MOSAIC WOOD
-    public static final Block OAK_MOSAIC = register("oak_mosaic", new HammerableBlock(OAK_BOARDS, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block OAK_MOSAIC_STAIRS = register("oak_mosaic_stairs", new HammerableStairsBlock(OAK_BOARD_STAIRS, OAK_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block OAK_MOSAIC_SLAB = register("oak_mosaic_slab", new HammerableSlabBlock(OAK_BOARD_SLAB, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block OAK_MOSAIC_VERTICAL_STAIRS = registerVStairs("oak_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(OAK_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block OAK_MOSAIC = register("oak_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block OAK_MOSAIC_STAIRS = register("oak_mosaic_stairs", new StairsBlock(OAK_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block OAK_MOSAIC_SLAB = register("oak_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block OAK_MOSAIC_VERTICAL_STAIRS = registerVStairs("oak_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
-    public static final Block SPRUCE_MOSAIC = register("spruce_mosaic", new HammerableBlock(SPRUCE_BOARDS, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block SPRUCE_MOSAIC_STAIRS = register("spruce_mosaic_stairs", new HammerableStairsBlock(SPRUCE_BOARD_STAIRS, SPRUCE_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block SPRUCE_MOSAIC_SLAB = register("spruce_mosaic_slab", new HammerableSlabBlock(SPRUCE_BOARD_SLAB, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block SPRUCE_MOSAIC_VERTICAL_STAIRS = registerVStairs("spruce_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(SPRUCE_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block SPRUCE_MOSAIC = register("spruce_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block SPRUCE_MOSAIC_STAIRS = register("spruce_mosaic_stairs", new StairsBlock(SPRUCE_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block SPRUCE_MOSAIC_SLAB = register("spruce_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block SPRUCE_MOSAIC_VERTICAL_STAIRS = registerVStairs("spruce_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
-    public static final Block BIRCH_MOSAIC = register("birch_mosaic", new HammerableBlock(BIRCH_BOARDS, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block BIRCH_MOSAIC_STAIRS = register("birch_mosaic_stairs", new HammerableStairsBlock(BIRCH_BOARD_STAIRS, BIRCH_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block BIRCH_MOSAIC_SLAB = register("birch_mosaic_slab", new HammerableSlabBlock(BIRCH_BOARD_SLAB, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block BIRCH_MOSAIC_VERTICAL_STAIRS = registerVStairs("birch_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(BIRCH_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block BIRCH_MOSAIC = register("birch_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block BIRCH_MOSAIC_STAIRS = register("birch_mosaic_stairs", new StairsBlock(BIRCH_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block BIRCH_MOSAIC_SLAB = register("birch_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block BIRCH_MOSAIC_VERTICAL_STAIRS = registerVStairs("birch_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
-    public static final Block JUNGLE_MOSAIC = register("jungle_mosaic", new HammerableBlock(JUNGLE_BOARDS, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block JUNGLE_MOSAIC_STAIRS = register("jungle_mosaic_stairs", new HammerableStairsBlock(JUNGLE_BOARD_STAIRS, JUNGLE_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block JUNGLE_MOSAIC_SLAB = register("jungle_mosaic_slab", new HammerableSlabBlock(JUNGLE_BOARD_SLAB, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block JUNGLE_MOSAIC_VERTICAL_STAIRS = registerVStairs("jungle_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(JUNGLE_VERTICAL_STAIRS, EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block JUNGLE_MOSAIC = register("jungle_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block JUNGLE_MOSAIC_STAIRS = register("jungle_mosaic_stairs", new StairsBlock(JUNGLE_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block JUNGLE_MOSAIC_SLAB = register("jungle_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block JUNGLE_MOSAIC_VERTICAL_STAIRS = registerVStairs("jungle_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
-    public static final Block ACACIA_MOSAIC = register("acacia_mosaic", new HammerableBlock(ACACIA_BOARDS, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block ACACIA_MOSAIC_STAIRS = register("acacia_mosaic_stairs", new HammerableStairsBlock(ACACIA_BOARD_STAIRS, ACACIA_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block ACACIA_MOSAIC_SLAB = register("acacia_mosaic_slab", new HammerableSlabBlock(ACACIA_BOARD_SLAB, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block ACACIA_MOSAIC_VERTICAL_STAIRS = registerVStairs("acacia_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(ACACIA_VERTICAL_STAIRS, EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block ACACIA_MOSAIC = register("acacia_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block ACACIA_MOSAIC_STAIRS = register("acacia_mosaic_stairs", new StairsBlock(ACACIA_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block ACACIA_MOSAIC_SLAB = register("acacia_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block ACACIA_MOSAIC_VERTICAL_STAIRS = registerVStairs("acacia_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
-    public static final Block DARK_OAK_MOSAIC = register("dark_oak_mosaic", new HammerableBlock(DARK_OAK_BOARDS, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block DARK_OAK_MOSAIC_STAIRS = register("dark_oak_mosaic_stairs", new HammerableStairsBlock(DARK_OAK_BOARD_STAIRS, DARK_OAK_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block DARK_OAK_MOSAIC_SLAB = register("dark_oak_mosaic_slab", new HammerableSlabBlock(DARK_OAK_BOARD_SLAB, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block DARK_OAK_MOSAIC_VERTICAL_STAIRS = registerVStairs("dark_oak_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(DARK_OAK_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block DARK_OAK_MOSAIC = register("dark_oak_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block DARK_OAK_MOSAIC_STAIRS = register("dark_oak_mosaic_stairs", new StairsBlock(DARK_OAK_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block DARK_OAK_MOSAIC_SLAB = register("dark_oak_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block DARK_OAK_MOSAIC_VERTICAL_STAIRS = registerVStairs("dark_oak_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
-    public static final Block MANGROVE_MOSAIC = register("mangrove_mosaic", new HammerableBlock(MANGROVE_BOARDS, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block MANGROVE_MOSAIC_STAIRS = register("mangrove_mosaic_stairs", new HammerableStairsBlock(MANGROVE_BOARD_STAIRS, MANGROVE_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block MANGROVE_MOSAIC_SLAB = register("mangrove_mosaic_slab", new HammerableSlabBlock(MANGROVE_BOARD_SLAB, EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block MANGROVE_MOSAIC_VERTICAL_STAIRS = registerVStairs("mangrove_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(MANGROVE_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block MANGROVE_MOSAIC = register("mangrove_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block MANGROVE_MOSAIC_STAIRS = register("mangrove_mosaic_stairs", new StairsBlock(MANGROVE_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block MANGROVE_MOSAIC_SLAB = register("mangrove_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block MANGROVE_MOSAIC_VERTICAL_STAIRS = registerVStairs("mangrove_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
-    public static final Block CHERRY_MOSAIC = register("cherry_mosaic", new HammerableBlock(CHERRY_BOARDS, EBProperties.BlockP.CHERRY_WOOD), true);
-    public static final Block CHERRY_MOSAIC_STAIRS = register("cherry_mosaic_stairs", new HammerableStairsBlock(CHERRY_BOARD_STAIRS, CHERRY_MOSAIC.getDefaultState(), EBProperties.BlockP.CHERRY_WOOD), true);
-    public static final Block CHERRY_MOSAIC_SLAB = register("cherry_mosaic_slab", new HammerableSlabBlock(CHERRY_BOARD_SLAB, EBProperties.BlockP.CHERRY_WOOD), true);
-    public static final Block CHERRY_MOSAIC_VERTICAL_STAIRS = registerVStairs("cherry_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(CHERRY_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.CHERRY_WOOD), true);
+    public static final Block CHERRY_MOSAIC = register("cherry_mosaic", new Block(EBProperties.BlockP.CHERRY_WOOD), true);
+    public static final Block CHERRY_MOSAIC_STAIRS = register("cherry_mosaic_stairs", new StairsBlock(CHERRY_MOSAIC.getDefaultState(), EBProperties.BlockP.CHERRY_WOOD), true);
+    public static final Block CHERRY_MOSAIC_SLAB = register("cherry_mosaic_slab", new SlabBlock(EBProperties.BlockP.CHERRY_WOOD), true);
+    public static final Block CHERRY_MOSAIC_VERTICAL_STAIRS = registerVStairs("cherry_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.CHERRY_WOOD), true);
 
-    public static final Block BAMBOO_MOSAIC_VERTICAL_STAIRS = registerVStairs("bamboo_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(BAMBOO_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.BAMBOO_WOOD), true);
+    public static final Block BAMBOO_MOSAIC_VERTICAL_STAIRS = registerVStairs("bamboo_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BAMBOO_WOOD), true);
 
-    public static final Block CRIMSON_MOSAIC = register("crimson_mosaic", new HammerableBlock(CRIMSON_BOARDS, EBProperties.BlockP.CRIMSON_WOOD), true);
-    public static final Block CRIMSON_MOSAIC_STAIRS = register("crimson_mosaic_stairs", new HammerableStairsBlock(CRIMSON_BOARD_STAIRS, CRIMSON_MOSAIC.getDefaultState(), EBProperties.BlockP.CRIMSON_WOOD), true);
-    public static final Block CRIMSON_MOSAIC_SLAB = register("crimson_mosaic_slab", new HammerableSlabBlock(CRIMSON_BOARD_SLAB, EBProperties.BlockP.CRIMSON_WOOD), true);
-    public static final Block CRIMSON_MOSAIC_VERTICAL_STAIRS = registerVStairs("crimson_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(CRIMSON_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.CRIMSON_WOOD), true);
+    public static final Block CRIMSON_MOSAIC = register("crimson_mosaic", new Block(EBProperties.BlockP.CRIMSON_WOOD), true);
+    public static final Block CRIMSON_MOSAIC_STAIRS = register("crimson_mosaic_stairs", new StairsBlock(CRIMSON_MOSAIC.getDefaultState(), EBProperties.BlockP.CRIMSON_WOOD), true);
+    public static final Block CRIMSON_MOSAIC_SLAB = register("crimson_mosaic_slab", new SlabBlock(EBProperties.BlockP.CRIMSON_WOOD), true);
+    public static final Block CRIMSON_MOSAIC_VERTICAL_STAIRS = registerVStairs("crimson_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.CRIMSON_WOOD), true);
 
-    public static final Block WARPED_MOSAIC = register("warped_mosaic", new HammerableBlock(WARPED_BOARDS, EBProperties.BlockP.WARPED_WOOD), true);
-    public static final Block WARPED_MOSAIC_STAIRS = register("warped_mosaic_stairs", new HammerableStairsBlock(WARPED_BOARD_STAIRS, WARPED_MOSAIC.getDefaultState(), EBProperties.BlockP.WARPED_WOOD), true);
-    public static final Block WARPED_MOSAIC_SLAB = register("warped_mosaic_slab", new HammerableSlabBlock(WARPED_BOARD_SLAB, EBProperties.BlockP.WARPED_WOOD), true);
-    public static final Block WARPED_MOSAIC_VERTICAL_STAIRS = registerVStairs("warped_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(WARPED_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.WARPED_WOOD), true);
+    public static final Block WARPED_MOSAIC = register("warped_mosaic", new Block(EBProperties.BlockP.WARPED_WOOD), true);
+    public static final Block WARPED_MOSAIC_STAIRS = register("warped_mosaic_stairs", new StairsBlock(WARPED_MOSAIC.getDefaultState(), EBProperties.BlockP.WARPED_WOOD), true);
+    public static final Block WARPED_MOSAIC_SLAB = register("warped_mosaic_slab", new SlabBlock(EBProperties.BlockP.WARPED_WOOD), true);
+    public static final Block WARPED_MOSAIC_VERTICAL_STAIRS = registerVStairs("warped_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.WARPED_WOOD), true);
 
     //CHISELED PLANKS
     public static final Block CHISELED_OAK_PLANKS = register("chiseled_oak_planks", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
@@ -260,10 +259,10 @@ public class EBBlocks {
     public static final Block ANCIENT_SLAB = register("ancient_slab", new SlabBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
     public static final Block ANCIENT_VERTICAL_STAIRS = registerVStairs("ancient_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
 
-    public static final Block ANCIENT_MOSAIC = register("ancient_mosaic", new HammerableBlock(ANCIENT_BOARDS, EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block ANCIENT_MOSAIC_STAIRS = register("ancient_mosaic_stairs", new HammerableStairsBlock(ANCIENT_BOARD_STAIRS, ANCIENT_MOSAIC.getDefaultState(), EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block ANCIENT_MOSAIC_SLAB = register("ancient_mosaic_slab", new HammerableSlabBlock(ANCIENT_BOARD_SLAB, EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block ANCIENT_MOSAIC_VERTICAL_STAIRS = registerVStairs("ancient_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(ANCIENT_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block ANCIENT_MOSAIC = register("ancient_mosaic", new Block(EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block ANCIENT_MOSAIC_STAIRS = register("ancient_mosaic_stairs", new StairsBlock(ANCIENT_MOSAIC.getDefaultState(), EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block ANCIENT_MOSAIC_SLAB = register("ancient_mosaic_slab", new SlabBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block ANCIENT_MOSAIC_VERTICAL_STAIRS = registerVStairs("ancient_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
 
     public static final Block ANCIENT_FENCE = register("ancient_fence", new FenceBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
     public static final Block ANCIENT_FENCE_GATE = register("ancient_fence_gate", new FenceGateBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), true);
@@ -291,10 +290,10 @@ public class EBBlocks {
     public static final Block GLOOM_SLAB = register("gloom_slab", new SlabBlock(EBProperties.BlockP.GLOOM_WOOD), true);
     public static final Block GLOOM_VERTICAL_STAIRS = registerVStairs("gloom_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GLOOM_WOOD), true);
 
-    public static final Block GLOOM_MOSAIC = register("gloom_mosaic", new HammerableBlock(GLOOM_BOARDS, EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_MOSAIC_STAIRS = register("gloom_mosaic_stairs", new HammerableStairsBlock(GLOOM_BOARD_STAIRS, GLOOM_MOSAIC.getDefaultState(), EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_MOSAIC_SLAB = register("gloom_mosaic_slab", new HammerableSlabBlock(GLOOM_BOARD_SLAB, EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_MOSAIC_VERTICAL_STAIRS = registerVStairs("gloom_mosaic_vertical_stairs", new HammerableVerticalStairsBlock(GLOOM_BOARD_VERTICAL_STAIRS, EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block GLOOM_MOSAIC = register("gloom_mosaic", new Block(EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block GLOOM_MOSAIC_STAIRS = register("gloom_mosaic_stairs", new StairsBlock(GLOOM_MOSAIC.getDefaultState(), EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block GLOOM_MOSAIC_SLAB = register("gloom_mosaic_slab", new SlabBlock(EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block GLOOM_MOSAIC_VERTICAL_STAIRS = registerVStairs("gloom_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GLOOM_WOOD), true);
 
     public static final Block GLOOM_FENCE = register("gloom_fence", new FenceBlock(EBProperties.BlockP.GLOOM_WOOD), true);
     public static final Block GLOOM_FENCE_GATE = register("gloom_fence_gate", new FenceGateBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), true);
@@ -540,7 +539,7 @@ public class EBBlocks {
     }
 
     //POLISHED ALMENTRA
-    public static final Block POLISHED_ALMENTRA = register("polished_almentra", new HammerableBlock(EBBlocks.ALMENTRA_STATUE, EBProperties.BlockP.POLISHED_ALMENTRA), true);
+    public static final Block POLISHED_ALMENTRA = register("polished_almentra", new HammerableIntoRotatableBlock(EBBlocks.ALMENTRA_STATUE, EBProperties.BlockP.POLISHED_ALMENTRA), true);
     public static final Block POLISHED_ALMENTRA_STAIRS = register("polished_almentra_stairs", new StairsBlock(EBBlocks.POLISHED_ALMENTRA.getDefaultState(), EBProperties.BlockP.POLISHED_ALMENTRA), true);
     public static final Block POLISHED_ALMENTRA_VERTICAL_STAIRS = registerVStairs("polished_almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_ALMENTRA), true);
     public static final Block POLISHED_ALMENTRA_SLAB = register("polished_almentra_slab", new SlabBlock(EBProperties.BlockP.POLISHED_ALMENTRA), true);
@@ -600,7 +599,7 @@ public class EBBlocks {
             DYED_ALMENTRA_VERTICAL_STAIRS.put(colors, registerVStairs(colors + "_almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
             DYED_ALMENTRA_SLAB.put(colors, register(colors + "_almentra_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
 
-            DYED_POLISHED_ALMENTRA.put(colors, register(colors + "_polished_almentra", new HammerableBlock(EBBlocks.getDyedAlmentraStatues(colors.getId()), EBProperties.BlockP.POLISHED_ALMENTRA.mapColor(colors)), true));
+            DYED_POLISHED_ALMENTRA.put(colors, register(colors + "_polished_almentra", new HammerableIntoRotatableBlock(EBBlocks.getDyedAlmentraStatues(colors.getId()), EBProperties.BlockP.POLISHED_ALMENTRA.mapColor(colors)), true));
             DYED_POLISHED_ALMENTRA_STAIRS.put(colors, register(colors + "_polished_almentra_stairs", new StairsBlock(getDyedPolishedAlmentra(colors.getId()).getDefaultState(), EBProperties.BlockP.POLISHED_ALMENTRA.mapColor(colors)), true));
             DYED_POLISHED_ALMENTRA_VERTICAL_STAIRS.put(colors, registerVStairs(colors + "_polished_almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_ALMENTRA.mapColor(colors)), true));
             DYED_POLISHED_ALMENTRA_SLAB.put(colors, register(colors + "_polished_almentra_slab", new SlabBlock(EBProperties.BlockP.POLISHED_ALMENTRA.mapColor(colors)), true));
@@ -665,7 +664,7 @@ public class EBBlocks {
 
     public static final Block CHISELED_SANDSTONE_BRICKS = register("chiseled_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block ENGRAVED_SANDSTONE_BRICKS = register("engraved_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
-    public static final Block DECORATED_SANDSTONE_BRICKS = register("decorated_sandstone_bricks", new HammerableBlock(ENGRAVED_SANDSTONE_BRICKS, EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block DECORATED_SANDSTONE_BRICKS = register("decorated_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block SANDSTONE_PILLAR = register("sandstone_pillar", new PillarBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
 
     //RED POLISHED SANDSTONE
@@ -689,7 +688,7 @@ public class EBBlocks {
 
     public static final Block CHISELED_RED_SANDSTONE_BRICKS = register("chiseled_red_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block ENGRAVED_RED_SANDSTONE_BRICKS = register("engraved_red_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
-    public static final Block DECORATED_RED_SANDSTONE_BRICKS = register("decorated_red_sandstone_bricks", new HammerableBlock(ENGRAVED_RED_SANDSTONE_BRICKS, EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
+    public static final Block DECORATED_RED_SANDSTONE_BRICKS = register("decorated_red_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block RED_SANDSTONE_PILLAR = register("red_sandstone_pillar", new PillarBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
 
     //SOUL POLISHED SANDSTONE
@@ -713,7 +712,7 @@ public class EBBlocks {
 
     public static final Block CHISELED_SOUL_SANDSTONE_BRICKS = register("chiseled_soul_sandstone_bricks", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block ENGRAVED_SOUL_SANDSTONE_BRICKS = register("engraved_soul_sandstone_bricks", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
-    public static final Block DECORATED_SOUL_SANDSTONE_BRICKS = register("decorated_soul_sandstone_bricks", new HammerableBlock(ENGRAVED_SOUL_SANDSTONE_BRICKS, EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
+    public static final Block DECORATED_SOUL_SANDSTONE_BRICKS = register("decorated_soul_sandstone_bricks", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_PILLAR = register("soul_sandstone_pillar", new PillarBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
 
     //LADDERS
@@ -913,26 +912,26 @@ public class EBBlocks {
     public static final Block THICK_DIVIDED_PAPER_BLOCK = register("thick_divided_paper_block", new Block(EBProperties.BlockP.PAPER), true);
     public static final Block THICK_DIAGONAL_PAPER_BLOCK = register("thick_diagonal_paper_block", new EBHorizontalFacingBlock(EBProperties.BlockP.PAPER), true);
 
-    public static final Block THIN_PAPER_BLOCK = register("thin_paper_block", new HammerableBlock(THICK_PAPER_BLOCK, EBProperties.BlockP.PAPER), true);
-    public static final Block THIN_PAPER_STAIRS = register("thin_paper_stairs", new HammerableStairsBlock(THICK_PAPER_STAIRS, THIN_PAPER_BLOCK.getDefaultState(), EBProperties.BlockP.PAPER), true);
-    public static final Block THIN_PAPER_SLAB = register("thin_paper_slab", new HammerableSlabBlock(THICK_PAPER_SLAB, EBProperties.BlockP.PAPER), true);
-    public static final Block THIN_PAPER_VERTICAL_STAIRS = registerVStairs("thin_paper_vertical_stairs", new HammerableVerticalStairsBlock(THICK_PAPER_VERTICAL_STAIRS, EBProperties.BlockP.PAPER), true);
-    public static final Block THIN_DIVIDED_PAPER_BLOCK = register("thin_divided_paper_block", new HammerableBlock(THICK_DIVIDED_PAPER_BLOCK, EBProperties.BlockP.PAPER), true);
-    public static final Block THIN_DIAGONAL_PAPER_BLOCK = register("thin_diagonal_paper_block", new HammerableHorizontalBlock(THICK_DIAGONAL_PAPER_BLOCK, EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_PAPER_BLOCK = register("thin_paper_block", new Block(EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_PAPER_STAIRS = register("thin_paper_stairs", new StairsBlock(THIN_PAPER_BLOCK.getDefaultState(), EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_PAPER_SLAB = register("thin_paper_slab", new SlabBlock(EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_PAPER_VERTICAL_STAIRS = registerVStairs("thin_paper_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_DIVIDED_PAPER_BLOCK = register("thin_divided_paper_block", new Block(EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_DIAGONAL_PAPER_BLOCK = register("thin_diagonal_paper_block", new EBHorizontalFacingBlock(EBProperties.BlockP.PAPER), true);
 
     //MISC
-    public static final Block GRUMPY_CARVED_PUMPKIN = register("grumpy_carved_pumpkin", new HammerableCarvedPumpkinBlock(Blocks.CARVED_PUMPKIN, EBProperties.BlockP.PUMPKIN, true), true);
-    public static final Block CHEERFUL_CARVED_PUMPKIN = register("cheerful_carved_pumpkin", new HammerableCarvedPumpkinBlock(EBBlocks.GRUMPY_CARVED_PUMPKIN, EBProperties.BlockP.PUMPKIN, true), true);
-    public static final Block WICKED_CARVED_PUMPKIN = register("wicked_carved_pumpkin", new HammerableCarvedPumpkinBlock(EBBlocks.CHEERFUL_CARVED_PUMPKIN, EBProperties.BlockP.PUMPKIN, true), true);
+    public static final Block GRUMPY_CARVED_PUMPKIN = register("grumpy_carved_pumpkin", new EBCarvedPumpkinBlock(EBProperties.BlockP.PUMPKIN, true), true);
+    public static final Block CHEERFUL_CARVED_PUMPKIN = register("cheerful_carved_pumpkin", new EBCarvedPumpkinBlock(EBProperties.BlockP.PUMPKIN, true), true);
+    public static final Block WICKED_CARVED_PUMPKIN = register("wicked_carved_pumpkin", new EBCarvedPumpkinBlock(EBProperties.BlockP.PUMPKIN, true), true);
 
-    public static final Block GRUMPY_JACK_O_LANTERN = register("grumpy_jack_o_lantern", new HammerableCarvedPumpkinBlock(Blocks.JACK_O_LANTERN, EBProperties.BlockP.JACK_O, false), true);
-    public static final Block CHEERFUL_JACK_O_LANTERN = register("cheerful_jack_o_lantern", new HammerableCarvedPumpkinBlock(EBBlocks.GRUMPY_JACK_O_LANTERN, EBProperties.BlockP.JACK_O, false), true);
-    public static final Block WICKED_JACK_O_LANTERN = register("wicked_jack_o_lantern", new HammerableCarvedPumpkinBlock(EBBlocks.CHEERFUL_JACK_O_LANTERN, EBProperties.BlockP.JACK_O, false), true);
+    public static final Block GRUMPY_JACK_O_LANTERN = register("grumpy_jack_o_lantern", new EBCarvedPumpkinBlock(EBProperties.BlockP.JACK_O, false), true);
+    public static final Block CHEERFUL_JACK_O_LANTERN = register("cheerful_jack_o_lantern", new EBCarvedPumpkinBlock(EBProperties.BlockP.JACK_O, false), true);
+    public static final Block WICKED_JACK_O_LANTERN = register("wicked_jack_o_lantern", new EBCarvedPumpkinBlock(EBProperties.BlockP.JACK_O, false), true);
 
     public static final Block SOUL_JACK_O_LANTERN = register("soul_jack_o_lantern", new EBCarvedPumpkinBlock(EBProperties.BlockP.SOUL_JACK_O, false), true);
-    public static final Block GRUMPY_SOUL_JACK_O_LANTERN = register("grumpy_soul_jack_o_lantern", new HammerableCarvedPumpkinBlock(EBBlocks.SOUL_JACK_O_LANTERN, EBProperties.BlockP.SOUL_JACK_O, false), true);
-    public static final Block CHEERFUL_SOUL_JACK_O_LANTERN = register("cheerful_soul_jack_o_lantern", new HammerableCarvedPumpkinBlock(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN, EBProperties.BlockP.SOUL_JACK_O, false), true);
-    public static final Block WICKED_SOUL_JACK_O_LANTERN = register("wicked_soul_jack_o_lantern", new HammerableCarvedPumpkinBlock(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN, EBProperties.BlockP.SOUL_JACK_O, false), true);
+    public static final Block GRUMPY_SOUL_JACK_O_LANTERN = register("grumpy_soul_jack_o_lantern", new EBCarvedPumpkinBlock(EBProperties.BlockP.SOUL_JACK_O, false), true);
+    public static final Block CHEERFUL_SOUL_JACK_O_LANTERN = register("cheerful_soul_jack_o_lantern", new EBCarvedPumpkinBlock(EBProperties.BlockP.SOUL_JACK_O, false), true);
+    public static final Block WICKED_SOUL_JACK_O_LANTERN = register("wicked_soul_jack_o_lantern", new EBCarvedPumpkinBlock(EBProperties.BlockP.SOUL_JACK_O, false), true);
 
     public static final Block WEEPING_CANDLE = register("weeping_candle", new ParticleCandleBlock(ParticleTypes.CRIMSON_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
     public static final Block TWISTING_CANDLE = register("twisting_candle", new ParticleCandleBlock(ParticleTypes.WARPED_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
@@ -956,7 +955,12 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO: CALCITE BLOCKSET, PEDESTALS, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES), BRAZIERS, DYEABLE PAPER BLOCKS
+    //TODO:
+    // PEDESTALS,
+    // DYED TERRACOTTA POTS,
+    // GLOOM CRYSTALS,
+    // BRAZIERS,
+    // DYEABLE CHISELED PAPER BLOCK
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {

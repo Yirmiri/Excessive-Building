@@ -236,7 +236,7 @@ public class EBRegistries {
         FuelRegistry.INSTANCE.add(EBBlocks.GLOOM_DECORATIVE_SHELF, 300);
     }
 
-    //TODO: ANCIENT/GLOOM
+    //TODO: BOARDS
 
     public static void registerFlammables() {
         //5: logs || 20: planks/carpet || 30: shelves || 60: wool

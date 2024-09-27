@@ -1,12 +1,9 @@
 package net.yirmiri.excessive_building.item;
 
-import com.google.common.base.Supplier;
-import com.google.common.base.Suppliers;
 import com.google.common.collect.BiMap;
-import com.google.common.collect.ImmutableBiMap;
+import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.EquipmentSlot;
@@ -19,7 +16,6 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -31,9 +27,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.EBConfig;
-import net.yirmiri.excessive_building.registry.EBBlocks;
-import net.yirmiri.excessive_building.util.EBStats;
 import net.yirmiri.excessive_building.util.EBTags;
+import net.yirmiri.excessive_building.util.EBUtils;
 
 import java.util.List;
 import java.util.Optional;
@@ -47,42 +42,28 @@ public class HammerItem extends MiningToolItem {
         super(material, EBTags.Blocks.HAMMER_MINEABLE, settings);
     }
 
-    public static final Supplier<ImmutableBiMap<Object, Object>> BASE_TO_HAMMERED_VARIANT = Suppliers.memoize(() -> ImmutableBiMap.builder()
-            .put(Blocks.BAMBOO_MOSAIC, EBBlocks.BAMBOO_BOARDS)
-            .put(Blocks.BAMBOO_MOSAIC_STAIRS, EBBlocks.BAMBOO_BOARD_STAIRS)
-            .put(Blocks.BAMBOO_MOSAIC_SLAB, EBBlocks.BAMBOO_BOARD_SLAB)
-            .put(Blocks.CARVED_PUMPKIN, EBBlocks.WICKED_CARVED_PUMPKIN)
-            .put(Blocks.JACK_O_LANTERN, EBBlocks.WICKED_JACK_O_LANTERN)
-            .put(EBBlocks.SOUL_JACK_O_LANTERN, EBBlocks.WICKED_SOUL_JACK_O_LANTERN)
-            .build());
-
     public static Optional<BlockState> getHammeredState(BlockState state) {
-        return Optional.ofNullable((Block)((BiMap<Object, Object>) BASE_TO_HAMMERED_VARIANT.get()).get(state.getBlock()))
+        return Optional.ofNullable((Block)((BiMap<Object, Object>) EBUtils.BASE_TO_HAMMERED_VARIANT.get()).get(state.getBlock()))
                 .map((block) -> block.getStateWithProperties(state));
     }
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext ctx) {
-        PlayerEntity player = ctx.getPlayer();
-        Hand hand = player.getActiveHand();
-        ItemStack stackHand = player.getStackInHand(hand);
         World world = ctx.getWorld();
         BlockPos pos = ctx.getBlockPos();
         BlockState state = world.getBlockState(pos);
-        if (stackHand.isIn(EBTags.Items.EB_HAMMERS) && EBConfig.ENABLE_HAMMERS.get() && player instanceof ServerPlayerEntity) {
+        PlayerEntity player = ctx.getPlayer();
+        Hand hand = player.getActiveHand();
+        ItemStack stackHand = player.getStackInHand(hand);
+        if (stackHand.isIn(EBTags.Items.EB_HAMMERS) && EBConfig.ENABLE_HAMMERS.get() && state.isIn(EBTags.Blocks.HAMMERABLE_BLOCKS)) { //TODO: check if enabled
+            EBUtils.hammerUsed(world, pos, state, hand, player);
+            if (player instanceof ServerPlayerEntity) {
+                Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity) player, pos, stackHand);
+            }
             return getHammeredState(state).map((state2) -> {
-                if (hand == Hand.MAIN_HAND) {
-                    stackHand.damage(1, player, EquipmentSlot.MAINHAND);
-                } else if (hand == Hand.OFF_HAND) {
-                    stackHand.damage(1, player, EquipmentSlot.OFFHAND);
-                }
                 world.setBlockState(pos, state2, 11);
                 world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(player, state2));
-                world.syncWorldEvent(player, 3003, pos, 0);
-                world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundCategory.BLOCKS, 0.5F, 1.0F, false);
-                world.addBlockBreakParticles(pos, state);
-                player.incrementStat(EBStats.BLOCKS_HAMMERED);
-                return ActionResult.success(world.isClient);
+                return ActionResult.SUCCESS;
             }
             ).orElse(ActionResult.PASS);
         }
@@ -119,7 +100,7 @@ public class HammerItem extends MiningToolItem {
         stack.damage(stack_damage, attacker, EquipmentSlot.MAINHAND);
         if (EBConfig.ENABLE_HAMMER_AS_WEAPON.get()) {
             target.takeKnockback(0.5F + attacker.getMovementSpeed(), attacker.getX() - target.getX(), attacker.getZ() - target.getZ());
-            if (attacker.getMovementSpeed() < 0.5F) {
+            if (attacker.getMovementSpeed() > 0.5F) {
                 attacker.playSound(SoundEvents.ITEM_MACE_SMASH_GROUND, 1.0F, 1.0F);
             }
         }

@@ -58,7 +58,7 @@ public abstract class PlayerListEntryMixin {
             case "66a11b55-08c2-4765-b618-3071dc222b64" -> texture = Identifier.of(ExcessiveBuilding.MOD_ID, "textures/capes/cotton_candy.png");
         }
 
-        if (texture != null && EBClientConfig.ENABLE_CONTRIBUTOR_CAPES.get()) {
+        if (texture != null) {
             SkinTextures textures = texturesSupplier.get();
             cir.setReturnValue(new SkinTextures(textures.texture(), textures.textureUrl(), texture, texture, textures.model(), textures.secure()));
         }

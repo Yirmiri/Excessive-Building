@@ -6,7 +6,6 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Item;
-import net.minecraft.item.ShovelItem;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.IntProperty;
 import net.yirmiri.excessive_building.EBConfig;

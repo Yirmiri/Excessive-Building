@@ -22,6 +22,6 @@ public class EBCraftingScreenHandler extends CraftingScreenHandler {
 
     @Override
     public boolean canUse(PlayerEntity player) {
-        return canUse(this.context, player, block);
+        return canUse(context, player, block);
     }
 }

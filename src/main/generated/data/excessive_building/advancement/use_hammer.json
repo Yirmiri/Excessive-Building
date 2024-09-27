@@ -1,0 +1,39 @@
+{
+  "parent": "excessive_building:excessive_building",
+  "criteria": {
+    "use_hammer": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {}
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "#excessive_building:eb_hammers"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.excessive_building.use_hammer.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "excessive_building:hammer"
+    },
+    "title": {
+      "translate": "advancement.excessive_building.use_hammer"
+    }
+  },
+  "requirements": [
+    [
+      "use_hammer"
+    ]
+  ]
+}

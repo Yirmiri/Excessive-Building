@@ -42,8 +42,7 @@ public class EBConfig {
 
     static {
         //CONTENT TOGGLES
-        BUILDER.push("Content Toggles");
-        BUILDER.comment("Disabling these will make the corresponding feature unobtainable/unusable");
+        BUILDER.push("Content Toggles").comment("Disabling these will make the corresponding feature unobtainable/unusable");
 
         ENABLE_HAMMERS = BUILDER
                 .comment("Should hammers be enabled? This tool can create new block variants and destroy some blocks faster. (default: true)")

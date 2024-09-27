@@ -1,4 +1,4 @@
-// 1.21	2024-09-26T05:41:09.9693551	Excessive Building/Tags for minecraft:block
+// 1.21	2024-09-26T19:24:57.1410058	Excessive Building/Tags for minecraft:block
 9973d3c2d4c8d54df2f5e0f5fd6efa300f3971fd data\minecraft\tags\block\logs_that_burn.json
 1419a0b00f417fbc1bbff44f7a3bfbb4252413fa data\minecraft\tags\block\wooden_stairs.json
 ecc53e060230f69caffdb4ae26bd668560c24bb3 data\excessive_building\tags\block\ancient_logs.json
@@ -6,7 +6,7 @@ d1cba4da54d23b10d7a45b552c760be96688f4f3 data\excessive_building\tags\block\deco
 8eed79d7f0a363657f1d30da123fbc6405c34003 data\minecraft\tags\block\climbable.json
 4ba5a0fc3161fe290f44f101deb39e765bb25287 data\minecraft\tags\block\enchantment_power_provider.json
 56f333f3f6c6b6faa76e74cfd16f9afa91366b34 data\minecraft\tags\block\candles.json
-7628bbe940de9790126c0c0c17e6eef01748f1bc data\excessive_building\tags\block\hammer_mineable.json
+622e701e21de27de91c34859cd7528f16ba0831b data\excessive_building\tags\block\hammer_mineable.json
 d317db704525634aea35ced79306dc006e2fc76e data\minecraft\tags\block\soul_fire_base_blocks.json
 3f003b789a2527d896c55403063a131930c7d9cd data\minecraft\tags\block\mineable\hoe.json
 1de28e4537a6300880f3f4ceb5d83fb067f98b0b data\minecraft\tags\block\guarded_by_piglins.json
@@ -25,6 +25,7 @@ dd7a9cf03ea6af4725212b9d0aad8a4a27708fb8 data\minecraft\tags\block\wooden_slabs.
 3ecb1c1170f3f42ef334561ebf624bda9dae826f data\minecraft\tags\block\saplings.json
 7aef0ae849622dde70c367641a3366dc0f1fb5e3 data\minecraft\tags\block\needs_diamond_tool.json
 7dffe35287959b8c6531736ad8c0b4c75b3506e4 data\minecraft\tags\block\beacon_base_blocks.json
+4c03002dbd128dabce883d091604c9975314f5f8 data\excessive_building\tags\block\hammerable_blocks.json
 14a13c91a0b113e049bd1e2e5554e42f31d3c791 data\minecraft\tags\block\replaceable.json
 e57c89144a6a859d23ae0190b7b4a0eb99343af5 data\minecraft\tags\block\wooden_pressure_plates.json
 14699feb54bad636358691e3367b5d6fdb9c0af8 data\minecraft\tags\block\mineable\axe.json

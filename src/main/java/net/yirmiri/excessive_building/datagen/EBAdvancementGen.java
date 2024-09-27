@@ -10,14 +10,17 @@ import net.minecraft.advancement.criterion.ConsumeItemCriterion;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.advancement.criterion.ItemCriterion;
 import net.minecraft.item.ItemStack;
+import net.minecraft.predicate.entity.LocationPredicate;
 import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
+import net.yirmiri.excessive_building.util.EBTags;
 
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -66,7 +69,17 @@ public class EBAdvancementGen extends FabricAdvancementProvider {
                         ItemCriterion.Conditions.createPlacedBlock(EBBlocks.GLOOM_SEEDS))
                 .build(consumer, ExcessiveBuilding.MOD_ID + ":place_gloom_seeds");
 
-        AdvancementEntry PLACE_ALL_ALMENTRA_STATUES = Advancement.Builder.createUntelemetered().parent(EXCESSIVE_BUILDING)
+        AdvancementEntry USE_HAMMER = Advancement.Builder.createUntelemetered().parent(EXCESSIVE_BUILDING)
+                .display(new AdvancementDisplay(new ItemStack(EBItems.HAMMER),
+                        Text.translatable("advancement.excessive_building.use_hammer"),
+                        Text.translatable("advancement.excessive_building.use_hammer.description"),
+                        Optional.empty(), AdvancementFrame.TASK,
+                        true, true, false)).criterion("use_hammer",
+                        ItemCriterion.Conditions.createItemUsedOnBlock(
+                                LocationPredicate.Builder.create(), ItemPredicate.Builder.create().tag(EBTags.Items.EB_HAMMERS)))
+                .build(consumer, ExcessiveBuilding.MOD_ID + ":use_hammer");
+
+        AdvancementEntry PLACE_ALL_ALMENTRA_STATUES = Advancement.Builder.createUntelemetered().parent(USE_HAMMER)
                 .display(new AdvancementDisplay(new ItemStack(EBBlocks.getDyedAlmentraStatues(DyeColor.LIME.getId())),
                         Text.translatable("advancement.excessive_building.place_all_almentra_statues"),
                         Text.translatable("advancement.excessive_building.place_all_almentra_statues.description"),
