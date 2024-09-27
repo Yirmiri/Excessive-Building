@@ -34,32 +34,6 @@ public class EBDecoratedPotPatterns {
     public static final RegistryKey<String> KOKOS_BUG_POTTERY_PATTERN = register("kokos_bug_pottery_pattern");
     public static final RegistryKey<String> THIEF_POTTERY_PATTERN = register("thief_pottery_pattern");
 
-    public static final Map<Item, RegistryKey<String>> SHERD_MAP = Map.ofEntries(
-            Map.entry(EBItems.ROYALTY_POTTERY_SHERD, ROYALTY_POTTERY_PATTERN),
-            Map.entry(EBItems.ANCIENT_POTTERY_SHERD, ANCIENT_POTTERY_PATTERN),
-            Map.entry(EBItems.BITTER_POTTERY_SHERD, BITTER_POTTERY_PATTERN),
-            Map.entry(EBItems.BOIN_POTTERY_SHERD, BOIN_POTTERY_PATTERN),
-            Map.entry(EBItems.BUSTLING_POTTERY_SHERD, BUSTLING_POTTERY_PATTERN),
-            Map.entry(EBItems.CHECKERED_POTTERY_SHERD, CHECKERED_POTTERY_PATTERN),
-            Map.entry(EBItems.DECAY_POTTERY_SHERD, DECAY_POTTERY_PATTERN),
-            Map.entry(EBItems.DESTRUCTION_POTTERY_SHERD, DESTRUCTION_POTTERY_PATTERN),
-            Map.entry(EBItems.FORWARDS_POTTERY_SHERD, FORWARDS_POTTERY_PATTERN),
-            Map.entry(EBItems.HEXXED_POTTERY_SHERD, HEXXED_POTTERY_PATTERN),
-            Map.entry(EBItems.KITTEH_POTTERY_SHERD, KITTEH_POTTERY_PATTERN),
-            Map.entry(EBItems.LIFE_POTTERY_SHERD, LIFE_POTTERY_PATTERN),
-            Map.entry(EBItems.PORTAL_POTTERY_SHERD, PORTAL_POTTERY_PATTERN),
-            Map.entry(EBItems.POTTERY_POTTERY_SHERD, POTTERY_POTTERY_PATTERN),
-            Map.entry(EBItems.RING_POTTERY_SHERD, RING_POTTERY_PATTERN),
-            Map.entry(EBItems.SNOUT_POTTERY_SHERD, SNOUT_POTTERY_PATTERN),
-            Map.entry(EBItems.SPRITE_POTTERY_SHERD, SPRITE_POTTERY_PATTERN),
-            Map.entry(EBItems.TWINS_POTTERY_SHERD, TWINS_POTTERY_PATTERN),
-            Map.entry(EBItems.WRATHFUL_POTTERY_SHERD, WRATHFUL_POTTERY_PATTERN),
-            Map.entry(EBItems.IS_THAT_POTTERY_SHERD, IS_THAT_POTTERY_PATTERN),
-            Map.entry(EBItems.MESMERIZE_POTTERY_SHERD, MESMERIZE_POTTERY_PATTERN),
-            Map.entry(EBItems.KOKOS_BUG_POTTERY_SHERD, KOKOS_BUG_POTTERY_PATTERN),
-            Map.entry(EBItems.THIEF_POTTERY_SHERD, THIEF_POTTERY_PATTERN)
-    );
-
     private static RegistryKey<String> register(String id) {
         return RegistryKey.of(RegistryKeys.DECORATED_POT_PATTERN, Identifier.of(ExcessiveBuilding.MOD_ID, id));
     }
