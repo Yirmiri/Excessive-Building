@@ -78,7 +78,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.MOSSY_COBBLESTONE_BRICKS);
         addDrop(EBBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS);
         addDrop(EBBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS);
-        addDrop(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB, slabDrops(EBBlocks.COBBLESTONE_BRICK_SLAB));
+        addDrop(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB, slabDrops(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB));
         addDrop(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
         addDrop(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
         addDrop(EBBlocks.COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS);
@@ -537,6 +537,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.THICK_PAPER_VERTICAL_STAIRS);
         addDrop(EBBlocks.THICK_PAPER_SLAB, EBBlocks.THICK_PAPER_SLAB);
         addDrop(EBBlocks.AMETHYST_LAMP);
+        addDrop(EBBlocks.MUD_BRICK_VERTICAL_STAIRS);
     }
 
     private void addDyedBlockDrops() {

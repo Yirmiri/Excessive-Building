@@ -2254,6 +2254,12 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(EBBlocks.SMOOTH_BRICKS), conditionsFromItem(EBBlocks.SMOOTH_BRICKS))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.SMOOTH_BRICK_WALL)));
 
+        createVerticalStairsRecipe(EBBlocks.MUD_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.MUD_BRICKS))
+                .criterion(hasItem(Blocks.MUD_BRICKS), conditionsFromItem(Blocks.MUD_BRICKS))
+                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.MUD_BRICK_VERTICAL_STAIRS)));
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MUD_BRICK_VERTICAL_STAIRS, Blocks.MUD_BRICKS, 1);
+
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BRICKS, Blocks.BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BRICK_STAIRS, EBBlocks.SMOOTH_BRICKS, 1);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BRICK_SLAB, EBBlocks.SMOOTH_BRICKS, 2);

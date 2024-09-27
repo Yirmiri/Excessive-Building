@@ -4,7 +4,7 @@
 	"textures": {
 		"2": "excessive_building:block/light_gray_almentra_statue_stand",
 		"3": "excessive_building:block/light_gray_almentra_statue",
-		"particle": "excessive_building:block/polished_light_gray_almentra"
+		"particle": "excessive_building:block/light_gray_polished_almentra"
 	},
 	"elements": [
 		{
