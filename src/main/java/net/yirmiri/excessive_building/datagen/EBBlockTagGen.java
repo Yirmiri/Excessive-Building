@@ -762,6 +762,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS)
                     .add(EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS)
                     .add(EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS)
+                    .add(EBBlocks.MUD_BRICK_VERTICAL_STAIRS)
             ;
 
             for (DyeColor colors : DyeColor.values()) {

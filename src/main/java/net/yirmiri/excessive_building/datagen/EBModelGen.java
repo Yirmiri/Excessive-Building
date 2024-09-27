@@ -233,6 +233,7 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS, EBBlocks.ANCIENT_MOSAIC);
         EBModels.registerVerticalStairs(generator, EBBlocks.GLOOM_MOSAIC_VERTICAL_STAIRS, EBBlocks.GLOOM_MOSAIC);
 
+        EBModels.registerVerticalStairs(generator, EBBlocks.MUD_BRICK_VERTICAL_STAIRS, Blocks.MUD_BRICKS);
         EBModels.registerVerticalStairs(generator, EBBlocks.COBBLESTONE_BRICK_VERTICAL_STAIRS, EBBlocks.COBBLESTONE_BRICKS);
         EBModels.registerVerticalStairs(generator, EBBlocks.COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS, EBBlocks.COBBLED_DEEPSLATE_BRICKS);
         EBModels.registerVerticalStairs(generator, EBBlocks.BLACKSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.BLACKSTONE_BRICKS);

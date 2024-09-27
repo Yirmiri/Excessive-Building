@@ -39,6 +39,7 @@ public class EBBlocks {
     public static final Block CRIMSON_VERTICAL_STAIRS = registerVStairs("crimson_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.CRIMSON_PLANKS)), true);
     public static final Block WARPED_VERTICAL_STAIRS = registerVStairs("warped_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.WARPED_PLANKS)), true);
 
+    public static final Block MUD_BRICK_VERTICAL_STAIRS = registerVStairs("mud_brick_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.MUD_BRICKS)), true);
     public static final Block STONE_VERTICAL_STAIRS = registerVStairs("stone_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.STONE)), true);
     public static final Block COBBLESTONE_VERTICAL_STAIRS = registerVStairs("cobblestone_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.COBBLESTONE)), true);
     public static final Block MOSSY_COBBLESTONE_VERTICAL_STAIRS = registerVStairs("mossy_cobblestone_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.MOSSY_COBBLESTONE)), true);

@@ -1,18 +1,18 @@
-// 1.20.1	2024-09-07T13:15:40.1304896	Excessive Building/Tags for minecraft:item
-9552d798293cd216aa8dae9f734d807baecfaff4 data\excessive_building\tags\items\ancient_logs.json
-1342c941661ef577ed0cdd2e71014882b0cbdf2c data\minecraft\tags\items\soul_fire_base_blocks.json
-0ad37cab6a673f12a4140b0a02b4914aa74d2c1c data\minecraft\tags\items\planks.json
+// 1.20.1	2024-09-27T23:21:22.9388649	Excessive Building/Tags for minecraft:item
+1ba4b50ee326026674d97e6b373609945eb0110d data\minecraft\tags\items\piglin_loved.json
+b774b7ea473e6c0f04e6bfbd3c410ea4f9103b49 data\excessive_building\tags\items\crafting_tables.json
+ab4f71111a9196088e54469fd718f5e5c26aa87a data\minecraft\tags\items\sniffer_food.json
+d382968d52d7d3c361fbc24e8c650d535ee8d2ce data\minecraft\tags\items\leaves.json
+c46399f01cfc8a0e56cf23974659372b5e0d746d data\excessive_building\tags\items\knitted_carpet.json
+efe690eca7cf20d4e6b473c4fa11dd5b578e1158 data\excessive_building\tags\items\glow_removals.json
 97e5302966d299679c43ff18f26a88dc0afe025d data\excessive_building\tags\items\knitted_wool.json
 2d91c547335347f556f27ea19442d78601c59bd3 data\excessive_building\tags\items\mosaic.json
-997246f618c7e7a1186c484580d574c95620059b data\excessive_building\tags\items\soils.json
-d382968d52d7d3c361fbc24e8c650d535ee8d2ce data\minecraft\tags\items\leaves.json
-f5c75202e9954de6d9b4eb0f3d3c7aacf4fc46f6 data\minecraft\tags\items\small_flowers.json
-c46399f01cfc8a0e56cf23974659372b5e0d746d data\excessive_building\tags\items\knitted_carpet.json
-289bce2a32f9deea65a5dd7f130fccf803c466af data\excessive_building\tags\items\gloom_logs.json
-1ba4b50ee326026674d97e6b373609945eb0110d data\minecraft\tags\items\piglin_loved.json
+1342c941661ef577ed0cdd2e71014882b0cbdf2c data\minecraft\tags\items\soul_fire_base_blocks.json
+e757a217005cb38675b906f1e7062576a0aa5bfb data\minecraft\tags\items\decorated_pot_sherds.json
+9552d798293cd216aa8dae9f734d807baecfaff4 data\excessive_building\tags\items\ancient_logs.json
 f98499724f4f11d8d90366f9687e52cc95d91e77 data\minecraft\tags\items\saplings.json
 e757a217005cb38675b906f1e7062576a0aa5bfb data\minecraft\tags\items\decorated_pot_ingredients.json
-ab4f71111a9196088e54469fd718f5e5c26aa87a data\minecraft\tags\items\sniffer_food.json
-efe690eca7cf20d4e6b473c4fa11dd5b578e1158 data\excessive_building\tags\items\glow_removals.json
-b774b7ea473e6c0f04e6bfbd3c410ea4f9103b49 data\excessive_building\tags\items\crafting_tables.json
-e757a217005cb38675b906f1e7062576a0aa5bfb data\minecraft\tags\items\decorated_pot_sherds.json
+289bce2a32f9deea65a5dd7f130fccf803c466af data\excessive_building\tags\items\gloom_logs.json
+997246f618c7e7a1186c484580d574c95620059b data\excessive_building\tags\items\soils.json
+0ad37cab6a673f12a4140b0a02b4914aa74d2c1c data\minecraft\tags\items\planks.json
+f5c75202e9954de6d9b4eb0f3d3c7aacf4fc46f6 data\minecraft\tags\items\small_flowers.json
