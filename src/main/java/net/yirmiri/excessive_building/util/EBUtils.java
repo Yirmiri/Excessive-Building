@@ -168,6 +168,24 @@ public class EBUtils {
             .put(EBBlocks.DECORATED_SANDSTONE_BRICKS, EBBlocks.ENGRAVED_SANDSTONE_BRICKS)
             .put(EBBlocks.DECORATED_RED_SANDSTONE_BRICKS, EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS)
             .put(EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS, EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS)
+
+            .put(Blocks.STONE_BRICKS, Blocks.CRACKED_STONE_BRICKS)
+            .put(Blocks.DEEPSLATE_BRICKS, Blocks.CRACKED_DEEPSLATE_BRICKS)
+            .put(Blocks.DEEPSLATE_TILES, Blocks.CRACKED_DEEPSLATE_TILES)
+            .put(Blocks.POLISHED_BLACKSTONE_BRICKS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS)
+            .put(Blocks.NETHER_BRICKS, Blocks.CRACKED_NETHER_BRICKS)
+            .put(Blocks.INFESTED_STONE_BRICKS, Blocks.INFESTED_CRACKED_STONE_BRICKS)
+            .put(EBBlocks.COBBLESTONE_BRICKS, EBBlocks.CRACKED_COBBLESTONE_BRICKS)
+            .put(EBBlocks.COBBLED_DEEPSLATE_BRICKS, EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS)
+            .put(EBBlocks.BLACKSTONE_BRICKS, EBBlocks.CRACKED_BLACKSTONE_BRICKS)
+            .put(EBBlocks.SMOOTH_STONE_BRICKS, EBBlocks.CRACKED_SMOOTH_STONE_BRICKS)
+            .put(EBBlocks.GRANITE_BRICKS, EBBlocks.CRACKED_GRANITE_BRICKS)
+            .put(EBBlocks.ANDESITE_BRICKS, EBBlocks.CRACKED_ANDESITE_BRICKS)
+            .put(EBBlocks.DIORITE_BRICKS, EBBlocks.CRACKED_DIORITE_BRICKS)
+            .put(Blocks.BRICKS, EBBlocks.CRACKED_BRICKS)
+            .put(EBBlocks.SMOOTH_BRICKS, EBBlocks.CRACKED_SMOOTH_BRICKS)
+            .put(EBBlocks.BRIMSTONE_BRICKS, EBBlocks.CRACKED_BRIMSTONE_BRICKS)
+            .put(Blocks.MUD_BRICKS, EBBlocks.CRACKED_MUD_BRICKS)
             .build());
 
     public static void registerHammerableBlockPair(Object base, Object hammered) {

@@ -182,6 +182,25 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.GLOOM_BOARD_STAIRS.asItem())
                 .add(EBBlocks.GLOOM_BOARD_SLAB.asItem())
                 .add(EBBlocks.GLOOM_BOARD_VERTICAL_STAIRS.asItem())
+
+                //CRACKED
+                .add(Blocks.STONE_BRICKS.asItem())
+                .add(Blocks.DEEPSLATE_BRICKS.asItem())
+                .add(Blocks.DEEPSLATE_TILES.asItem())
+                .add(Blocks.POLISHED_BLACKSTONE_BRICKS.asItem())
+                .add(Blocks.NETHER_BRICKS.asItem())
+                .add(Blocks.INFESTED_STONE_BRICKS.asItem())
+                .add(EBBlocks.COBBLESTONE_BRICKS.asItem())
+                .add(EBBlocks.COBBLED_DEEPSLATE_BRICKS.asItem())
+                .add(EBBlocks.BLACKSTONE_BRICKS.asItem())
+                .add(EBBlocks.SMOOTH_STONE_BRICKS.asItem())
+                .add(EBBlocks.GRANITE_BRICKS.asItem())
+                .add(EBBlocks.ANDESITE_BRICKS.asItem())
+                .add(EBBlocks.DIORITE_BRICKS.asItem())
+                .add(Blocks.BRICKS.asItem())
+                .add(EBBlocks.SMOOTH_BRICKS.asItem())
+                .add(EBBlocks.BRIMSTONE_BRICKS.asItem())
+                .add(Blocks.MUD_BRICKS.asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {
