@@ -62,6 +62,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendHammerMineable();
         appendCarvedPumpkins();
         appendHammerableBlocks();
+        appendTerracottaPots();
     }
 
     public void appendHammerableBlocks() {
@@ -319,6 +320,16 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         for (DyeColor colors : DyeColor.values()) {
             getOrCreateTagBuilder(EBTags.Blocks.HAMMER_MINEABLE).add(EBBlocks.getDyedAlmentraStatues(colors.getId()));
             getOrCreateTagBuilder(EBTags.Blocks.HAMMER_MINEABLE).add(EBBlocks.getDyedTerracottaPots(colors.getId()));
+        }
+    }
+
+    public void appendTerracottaPots() {
+        getOrCreateTagBuilder(EBTags.Blocks.TERRACOTTA_POTS)
+                .add(EBBlocks.TERRACOTTA_POT)
+        ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(EBTags.Blocks.TERRACOTTA_POTS).add(EBBlocks.getDyedTerracottaPots(colors.getId()));
         }
     }
 

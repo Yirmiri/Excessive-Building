@@ -16,6 +16,7 @@ public class EBTags {
         public static final TagKey<Block> HAMMER_MINEABLE = create("hammer_mineable");
         public static final TagKey<Block> HAMMERABLE_BLOCKS = create("hammerable_blocks");
         public static final TagKey<Block> CARVED_PUMPKINS = create("carved_pumpkins");
+        public static final TagKey<Block> TERRACOTTA_POTS = create("terracotta_pots");
 
         private static TagKey<Block> create(String id) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id));
