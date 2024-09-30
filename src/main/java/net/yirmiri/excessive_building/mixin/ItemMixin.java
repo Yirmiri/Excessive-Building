@@ -21,7 +21,7 @@ import java.util.List;
 @Mixin(Item.class)
 public abstract class ItemMixin {
     @Inject(at = @At("HEAD"), method = "appendTooltip")
-    private void appendTooltip(ItemStack stack, Item.TooltipContext ctx, List<Text> tooltip, TooltipType type, CallbackInfo ci) {
+    private void excessiveBuilding_appendTooltip(ItemStack stack, Item.TooltipContext ctx, List<Text> tooltip, TooltipType type, CallbackInfo ci) {
         if (stack.isIn(EBTags.Items.HAMMERABLE_TOOLTIP) && EBClientConfig.ENABLE_HAMMERABLE_TOOLTIPS.get()) {
             tooltip.add(Text.translatable("tooltip." + ExcessiveBuilding.MOD_ID + ".hammerable").formatted(Formatting.GRAY).formatted(Formatting.ITALIC));
         }

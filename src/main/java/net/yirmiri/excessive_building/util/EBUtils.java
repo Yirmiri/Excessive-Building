@@ -192,6 +192,5 @@ public class EBUtils {
         Objects.requireNonNull(base, "The base block cannot be null!");
         Objects.requireNonNull(hammered, "The hammered block cannot be null!");
         BASE_TO_HAMMERED_VARIANT.get().put(base, hammered);
-        BASE_TO_HAMMERED_VARIANT.get().put(hammered, base);
     }
 }

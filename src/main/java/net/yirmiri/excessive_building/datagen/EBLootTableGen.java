@@ -653,6 +653,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN);
         addDrop(EBBlocks.WICKED_SOUL_JACK_O_LANTERN);
         addDrop(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN);
+        addDrop(EBBlocks.TERRACOTTA_POT);
     }
 
     private void addDyedBlockDrops() {
@@ -676,6 +677,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
             addDrop(EBBlocks.getDyedTerracottaTileStairs(colors.getId()));
             addDrop(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()));
             addDrop(EBBlocks.getDyedTerracottaTileSlab(colors.getId()));
+            addDrop(EBBlocks.getDyedTerracottaPots(colors.getId()));
         }
     }
 

@@ -46,6 +46,8 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
             build.add(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()), dyeString + " Almentra Brick Stairs");
             build.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(colors.getId()), dyeString + " Almentra Brick Vertical Stairs");
             build.add(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()), dyeString + " Almentra Brick Slab");
+
+            build.add(EBBlocks.getDyedTerracottaPots(colors.getId()), dyeString + " Terracotta Pot");
         }
 
         //BLOCKS
@@ -677,6 +679,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN, "Soul Jack O' Lantern");
         build.add(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN, "Soul Jack O' Lantern");
         build.add(EBBlocks.WICKED_SOUL_JACK_O_LANTERN, "Soul Jack O' Lantern");
+        build.add(EBBlocks.TERRACOTTA_POT, "Terracotta Pot");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");

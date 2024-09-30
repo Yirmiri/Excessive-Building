@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:gray_dye"
+    },
+    {
+      "item": "excessive_building:terracotta_pot"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "excessive_building:gray_terracotta_pot"
+  }
+}

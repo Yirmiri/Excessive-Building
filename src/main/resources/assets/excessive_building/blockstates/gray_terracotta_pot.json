@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "filled=false": {
+      "model": "excessive_building:block/gray_terracotta_pot"
+    },
+    "filled=true": {
+      "model": "excessive_building:block/gray_terracotta_pot_filled"
+    }
+  }
+}

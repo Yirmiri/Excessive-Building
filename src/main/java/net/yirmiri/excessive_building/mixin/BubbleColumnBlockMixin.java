@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(BubbleColumnBlock.class)
 public abstract class BubbleColumnBlockMixin {
     @Inject(method = "getBubbleState", at = @At("HEAD"), cancellable = true)
-    private static void getBubbleState(BlockState state, CallbackInfoReturnable<BlockState> cir) {
+    private static void excessiveBuilding_getBubbleState(BlockState state, CallbackInfoReturnable<BlockState> cir) {
         if (state.isOf(EBBlocks.SOUL_MAGMA_BLOCK) && state.get(SoulMagmaBlock.POWERED) == Boolean.TRUE) {
             cir.setReturnValue(Blocks.BUBBLE_COLUMN.getDefaultState().with(BubbleColumnBlock.DRAG, false));
 
@@ -26,7 +26,7 @@ public abstract class BubbleColumnBlockMixin {
     }
 
     @Inject(method = "canPlaceAt", at = @At("HEAD"), cancellable = true)
-    private void canPlaceAt(BlockState state, WorldView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
+    private void excessiveBuilding_canPlaceAt(BlockState state, WorldView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         BlockState below = world.getBlockState(pos.down());
         if (below.isOf(EBBlocks.SOUL_MAGMA_BLOCK)) {
             cir.setReturnValue(true);

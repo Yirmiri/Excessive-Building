@@ -7,6 +7,7 @@ import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.GlowingLeavesBlock;
@@ -18,6 +19,7 @@ import net.yirmiri.excessive_building.registry.EBStatusEffects;
 public class EBProperties {
     public static final int MAX_ROTATIONS = 15;
     public static final IntProperty ROTATION = IntProperty.of("rotation", 0, MAX_ROTATIONS);
+    public static final BooleanProperty FILLED = BooleanProperty.of("filled");
 
     public static class BlockP {
         //VANILLA ADDITIONS
@@ -137,7 +139,7 @@ public class EBProperties {
         public static final Block.Settings BRICKS = FabricBlockSettings.copyOf(Blocks.BRICKS);
         public static final Block.Settings BONE = FabricBlockSettings.copyOf(Blocks.BONE_BLOCK);
         public static final Block.Settings INDESTRUCTIBLE = FabricBlockSettings.copyOf(Blocks.BEDROCK);
-        public static final Block.Settings TERRACOTTA_POT = FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT_SHATTER);
+        public static final Block.Settings TERRACOTTA_POT = FabricBlockSettings.copyOf(Blocks.TERRACOTTA).hardness(0.5F).resistance(0F).sounds(BlockSoundGroup.DECORATED_POT_SHATTER);
         public static final Block.Settings PAPER = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.WOOL);
         public static final Block.Settings LAMP = FabricBlockSettings.copyOf(Blocks.SEA_LANTERN);
         public static final Block.Settings ARMADILLO_SCUTE_BLOCK = FabricBlockSettings.copyOf(Blocks.SANDSTONE).sounds(BlockSoundGroup.CORAL);

@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:block/template_pot",
+  "textures": {
+    "0": "excessive_building:block/magenta_terracotta_pot",
+    "particle": "minecraft:block/magenta_terracotta"
+  }
+}

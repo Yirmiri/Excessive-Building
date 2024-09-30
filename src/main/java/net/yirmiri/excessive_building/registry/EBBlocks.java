@@ -611,6 +611,21 @@ public class EBBlocks {
         }
     }
 
+    //TERRACOTTA POTS
+    public static final Block TERRACOTTA_POT = register("terracotta_pot", new TerracottaPotBlock(FabricBlockSettings.copyOf(EBProperties.BlockP.TERRACOTTA_POT)), true);
+
+    public static final HashMap<DyeColor, Block> DYED_TERRACOTTA_POTS = new HashMap<>();
+
+    public static Block getDyedTerracottaPots(int colors) {
+        return DYED_TERRACOTTA_POTS.get(DyeColor.byId(colors));
+    }
+
+    static {
+        for (DyeColor colors : DyeColor.values()) {
+            DYED_TERRACOTTA_POTS.put(colors, register(colors + "_terracotta_pot", new TerracottaPotBlock(EBProperties.BlockP.TERRACOTTA_POT.mapColor(colors)), true));
+        }
+    }
+
     //SEA GLASS
     public static final Block SEA_GLASS = register("sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
     public static final Block ROSE_SEA_GLASS = register("rose_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);

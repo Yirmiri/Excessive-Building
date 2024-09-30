@@ -34,8 +34,9 @@ Version Release v3.3.0 Fabric/Quilt-1.21(1.)/1.20.1
 •   Updated the texture of almentra bricks
 •   Updated the texture of almentra statues
 •   Updated the texture of ancient leaves
+•   Updated the texture of asphalt (THANK YOU @bricker_man)
 •   Updated the colors of lime, pink, and brown almentra
-•   Updated the models for orange, cyan, purple, magenta, pink, and brown almentra statues
+•   Updated the models for orange, cyan, purple, magenta, pink, and brown almentra statues (THANK YOU FOR HELP @tellioaridoitsu AND @hecco)
 •   Removed recipes for many blocks such as almentra statues or thick paper walls as these are obtained via the hammer now
 •   Removed chests from the Excessive Building creative tab
 •   Updated contributor capes
@@ -45,10 +46,15 @@ Version Release v3.3.0 Fabric/Quilt-1.21(1.)/1.20.1
 •   Fixed an issue that caused mossy cobblestone brick slabs to drop normal cobblestone brick slabs
 •   Fixed an issue that caused the comment for "Content Toggles" in the config file to be written at the bottom
 
+•   Special Thanks to:
+@CreationsKeke - for helping out with moving the mod over to MultiLoader (may or may not be out at the time of you reading this)
+@tellioaridoitsu - for helping out with a bunch of the new almentra statues!
+@Hecco - for helping with the new orange almentra statue!
+@bricker_man - for helping with the new asphalt texture!
+
   Note
-•   I know I've said it a few times in the past but I really need to focus on new things, so for now this will be the last "content" update for a while.
-I will maintain the mod for the latest Minecraft version and am in the thoughts of moving the mod over to MultiLoader but for now enjoy this.
-I am happy with the state the mod is and I think it is time to finally let it rest.
+•   I know I've said it a few times in the past but I really need to focus on new things, so for now this will be the last major "content" update for a while.
+I will maintain the mod for the latest major modding version, I am happy with the state the mod is and I think it is time to finally let it rest.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

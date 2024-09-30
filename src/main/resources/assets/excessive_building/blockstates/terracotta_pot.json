@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "filled=false": { "model": "excessive_building:block/terracotta_pot" },
+    "filled=true": { "model": "excessive_building:block/terracotta_pot_filled" }
+  }
+}
