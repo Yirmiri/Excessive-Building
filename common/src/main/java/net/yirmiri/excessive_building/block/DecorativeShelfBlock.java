@@ -1,25 +1,25 @@
 package net.yirmiri.excessive_building.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.resource.featuretoggle.FeatureSet;
-import net.minecraft.screen.ScreenTexts;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.IntProperty;
-import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.CommonComponents;
+import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.phys.BlockHitResult;
 import net.yirmiri.excessive_building.EBConfig;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -27,42 +27,42 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class DecorativeShelfBlock extends Block {
-    public static final IntProperty VARIANT = IntProperty.of("variant", 0, 6);
+    public static final IntegerProperty VARIANT = IntegerProperty.create("variant", 0, 6);
 
-    public DecorativeShelfBlock(Settings settings) {
+    public DecorativeShelfBlock(Properties settings) {
         super(settings);
-        setDefaultState(stateManager.getDefaultState().with(VARIANT, 0));
+        registerDefaultState(stateDefinition.any().setValue(VARIANT, 0));
     }
 
     @Override
-    public boolean isEnabled(FeatureSet enable) {
+    public boolean isEnabled(FeatureFlagSet enable) {
         return EBConfig.ENABLE_DECORATIVE_SHELVES.get();
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable BlockView context, List<Text> tooltip, TooltipContext options) {
+    public void appendHoverText(ItemStack stack, @Nullable BlockGetter context, List<Component> tooltip, TooltipFlag options) {
         if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
-            super.appendTooltip(stack, context, tooltip, options);
-            tooltip.add(ScreenTexts.EMPTY);
-            tooltip.add(Text.translatable("tooltip.block.interact").formatted(Formatting.GRAY));
-            tooltip.add(ScreenTexts.space().append(Text.translatable("tooltip.block.variant").formatted(Formatting.BLUE)));
+            super.appendHoverText(stack, context, tooltip, options);
+            tooltip.add(CommonComponents.EMPTY);
+            tooltip.add(Component.translatable("tooltip.block.interact").withStyle(ChatFormatting.GRAY));
+            tooltip.add(CommonComponents.space().append(Component.translatable("tooltip.block.variant").withStyle(ChatFormatting.BLUE)));
         }
     }
 
     @Override @NotNull
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient()) {
-            if (hand == Hand.MAIN_HAND && !player.hasStackEquipped(EquipmentSlot.MAINHAND)) {
-                world.setBlockState(pos, state.cycle(VARIANT));
-                world.playSound(null, pos, SoundEvents.BLOCK_CHISELED_BOOKSHELF_PLACE, SoundCategory.BLOCKS, 1, 1);
-                return ActionResult.SUCCESS;
+    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        if (!world.isClientSide()) {
+            if (hand == InteractionHand.MAIN_HAND && !player.hasItemInSlot(EquipmentSlot.MAINHAND)) {
+                world.setBlockAndUpdate(pos, state.cycle(VARIANT));
+                world.playSound(null, pos, SoundEvents.CHISELED_BOOKSHELF_PLACE, SoundSource.BLOCKS, 1, 1);
+                return InteractionResult.SUCCESS;
             }
         }
-        return ActionResult.PASS;
+        return InteractionResult.PASS;
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(VARIANT);
     }
 }

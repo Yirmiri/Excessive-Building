@@ -1,9 +1,9 @@
 package net.yirmiri.excessive_building.mixin;
 
-import net.minecraft.block.DecoratedPotPatterns;
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
 import net.yirmiri.excessive_building.registry.EBItems;
 import net.yirmiri.excessive_building.util.EBDecoratedPotPatterns;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class DecoratedPotPatternsMixin {
 
     @Inject(method = "fromSherd", at = @At("RETURN"), cancellable = true)
-    private static void fromSherd(Item item, CallbackInfoReturnable<RegistryKey<String>> cir) {
+    private static void fromSherd(Item item, CallbackInfoReturnable<ResourceKey<String>> cir) {
         if (item == EBItems.ROYALTY_POTTERY_SHERD) {
             cir.setReturnValue(EBDecoratedPotPatterns.ROYALTY_POTTERY_PATTERN);
         }

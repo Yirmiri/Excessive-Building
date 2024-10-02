@@ -1,17 +1,17 @@
 package net.yirmiri.excessive_building.item.configurable;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.resource.featuretoggle.FeatureSet;
+import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.level.block.Block;
 import net.yirmiri.excessive_building.EBConfig;
 
 public class GloomSaplingItem extends BlockItem {
-    public GloomSaplingItem(Block block, Settings settings) {
+    public GloomSaplingItem(Block block, Properties settings) {
         super(block, settings);
     }
 
     @Override
-    public boolean isEnabled(FeatureSet enable) {
+    public boolean isEnabled(FeatureFlagSet enable) {
         return EBConfig.ENABLE_GLOOM_SEEDS.get();
     }
 }

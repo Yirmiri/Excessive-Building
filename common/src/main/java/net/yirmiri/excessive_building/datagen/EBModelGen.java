@@ -2,13 +2,24 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import net.minecraft.core.Direction;
 import net.minecraft.data.client.*;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.DyeColor;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
+import net.minecraft.data.models.BlockModelGenerators;
+import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.data.models.blockstates.PropertyDispatch;
+import net.minecraft.data.models.blockstates.Variant;
+import net.minecraft.data.models.blockstates.VariantProperties;
+import net.minecraft.data.models.model.ModelTemplate;
+import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.TextureMapping;
+import net.minecraft.data.models.model.TextureSlot;
+import net.minecraft.data.models.model.TexturedModel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.AlmentraStatueBlock;
 import net.yirmiri.excessive_building.registry.EBBlocks;
@@ -22,72 +33,72 @@ public class EBModelGen extends FabricModelProvider {
     }
 
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator generator) {
-        BlockStateModelGenerator.BlockTexturePool oakMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.OAK_MOSAIC);
+    public void generateBlockStateModels(BlockModelGenerators generator) {
+        BlockModelGenerators.BlockFamilyProvider oakMosaic = generator.family(EBBlocks.OAK_MOSAIC);
         oakMosaic.stairs(EBBlocks.OAK_MOSAIC_STAIRS);
         oakMosaic.slab(EBBlocks.OAK_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool spruceMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.SPRUCE_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider spruceMosaic = generator.family(EBBlocks.SPRUCE_MOSAIC);
         spruceMosaic.stairs(EBBlocks.SPRUCE_MOSAIC_STAIRS);
         spruceMosaic.slab(EBBlocks.SPRUCE_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool birchMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.BIRCH_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider birchMosaic = generator.family(EBBlocks.BIRCH_MOSAIC);
         birchMosaic.stairs(EBBlocks.BIRCH_MOSAIC_STAIRS);
         birchMosaic.slab(EBBlocks.BIRCH_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool jungleMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.JUNGLE_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider jungleMosaic = generator.family(EBBlocks.JUNGLE_MOSAIC);
         jungleMosaic.stairs(EBBlocks.JUNGLE_MOSAIC_STAIRS);
         jungleMosaic.slab(EBBlocks.JUNGLE_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool acaciaMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.ACACIA_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider acaciaMosaic = generator.family(EBBlocks.ACACIA_MOSAIC);
         acaciaMosaic.stairs(EBBlocks.ACACIA_MOSAIC_STAIRS);
         acaciaMosaic.slab(EBBlocks.ACACIA_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool darkOakMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.DARK_OAK_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider darkOakMosaic = generator.family(EBBlocks.DARK_OAK_MOSAIC);
         darkOakMosaic.stairs(EBBlocks.DARK_OAK_MOSAIC_STAIRS);
         darkOakMosaic.slab(EBBlocks.DARK_OAK_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool mangroveMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.MANGROVE_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider mangroveMosaic = generator.family(EBBlocks.MANGROVE_MOSAIC);
         mangroveMosaic.stairs(EBBlocks.MANGROVE_MOSAIC_STAIRS);
         mangroveMosaic.slab(EBBlocks.MANGROVE_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool cherryMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.CHERRY_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider cherryMosaic = generator.family(EBBlocks.CHERRY_MOSAIC);
         cherryMosaic.stairs(EBBlocks.CHERRY_MOSAIC_STAIRS);
         cherryMosaic.slab(EBBlocks.CHERRY_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool crimsonMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.CRIMSON_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider crimsonMosaic = generator.family(EBBlocks.CRIMSON_MOSAIC);
         crimsonMosaic.stairs(EBBlocks.CRIMSON_MOSAIC_STAIRS);
         crimsonMosaic.slab(EBBlocks.CRIMSON_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool warpedMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.WARPED_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider warpedMosaic = generator.family(EBBlocks.WARPED_MOSAIC);
         warpedMosaic.stairs(EBBlocks.WARPED_MOSAIC_STAIRS);
         warpedMosaic.slab(EBBlocks.WARPED_MOSAIC_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool cobblestoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.COBBLESTONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider cobblestoneBricks = generator.family(EBBlocks.COBBLESTONE_BRICKS);
         cobblestoneBricks.stairs(EBBlocks.COBBLESTONE_BRICK_STAIRS);
         cobblestoneBricks.slab(EBBlocks.COBBLESTONE_BRICK_SLAB);
         cobblestoneBricks.wall(EBBlocks.COBBLESTONE_BRICK_WALL);
 
-        BlockStateModelGenerator.BlockTexturePool mossyCobblestoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.MOSSY_COBBLESTONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider mossyCobblestoneBricks = generator.family(EBBlocks.MOSSY_COBBLESTONE_BRICKS);
         mossyCobblestoneBricks.stairs(EBBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS);
         mossyCobblestoneBricks.slab(EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB);
         mossyCobblestoneBricks.wall(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL);
 
-        BlockStateModelGenerator.BlockTexturePool cobbledDeepslateBricks = generator.registerCubeAllModelTexturePool(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider cobbledDeepslateBricks = generator.family(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
         cobbledDeepslateBricks.stairs(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
         cobbledDeepslateBricks.slab(EBBlocks.COBBLED_DEEPSLATE_BRICK_SLAB);
         cobbledDeepslateBricks.wall(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL);
 
-        BlockStateModelGenerator.BlockTexturePool blackstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.BLACKSTONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider blackstoneBricks = generator.family(EBBlocks.BLACKSTONE_BRICKS);
         blackstoneBricks.stairs(EBBlocks.BLACKSTONE_BRICK_STAIRS);
         blackstoneBricks.slab(EBBlocks.BLACKSTONE_BRICK_SLAB);
         blackstoneBricks.wall(EBBlocks.BLACKSTONE_BRICK_WALL);
 
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_BLACKSTONE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool ancientPlanks = generator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_PLANKS);
+        BlockModelGenerators.BlockFamilyProvider ancientPlanks = generator.family(EBBlocks.ANCIENT_PLANKS);
         ancientPlanks.stairs(EBBlocks.ANCIENT_STAIRS);
         ancientPlanks.slab(EBBlocks.ANCIENT_SLAB);
         ancientPlanks.fence(EBBlocks.ANCIENT_FENCE);
@@ -95,34 +106,34 @@ public class EBModelGen extends FabricModelProvider {
         ancientPlanks.button(EBBlocks.ANCIENT_BUTTON);
         ancientPlanks.pressurePlate(EBBlocks.ANCIENT_PRESSURE_PLATE);
 
-        BlockStateModelGenerator.BlockTexturePool ancientMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.ANCIENT_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider ancientMosaic = generator.family(EBBlocks.ANCIENT_MOSAIC);
         ancientMosaic.stairs(EBBlocks.ANCIENT_MOSAIC_STAIRS);
         ancientMosaic.slab(EBBlocks.ANCIENT_MOSAIC_SLAB);
 
-        generator.registerSimpleCubeAll(EBBlocks.ANCIENT_LEAVES);
-        generator.registerDoor(EBBlocks.ANCIENT_DOOR);
-        generator.registerOrientableTrapdoor(EBBlocks.ANCIENT_TRAPDOOR);
+        generator.createTrivialCube(EBBlocks.ANCIENT_LEAVES);
+        generator.createDoor(EBBlocks.ANCIENT_DOOR);
+        generator.createOrientableTrapdoor(EBBlocks.ANCIENT_TRAPDOOR);
 
-        generator.registerLog(EBBlocks.ANCIENT_LOG).log(EBBlocks.ANCIENT_LOG).wood(EBBlocks.ANCIENT_WOOD);
-        generator.registerLog(EBBlocks.STRIPPED_ANCIENT_LOG).log(EBBlocks.STRIPPED_ANCIENT_LOG).wood(EBBlocks.STRIPPED_ANCIENT_WOOD);
+        generator.woodProvider(EBBlocks.ANCIENT_LOG).logWithHorizontal(EBBlocks.ANCIENT_LOG).wood(EBBlocks.ANCIENT_WOOD);
+        generator.woodProvider(EBBlocks.STRIPPED_ANCIENT_LOG).logWithHorizontal(EBBlocks.STRIPPED_ANCIENT_LOG).wood(EBBlocks.STRIPPED_ANCIENT_WOOD);
 
-        generator.registerFlowerPotPlant(EBBlocks.ANCIENT_SAPLING, EBBlocks.POTTED_ANCIENT_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
-        generator.registerSingleton(EBBlocks.CHISELED_ANCIENT_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerHangingSign(EBBlocks.STRIPPED_ANCIENT_LOG, EBBlocks.ANCIENT_HANGING_SIGN, EBBlocks.ANCIENT_WALL_HANGING_SIGN);
+        generator.createPlant(EBBlocks.ANCIENT_SAPLING, EBBlocks.POTTED_ANCIENT_SAPLING, BlockModelGenerators.TintState.NOT_TINTED);
+        generator.createTrivialBlock(EBBlocks.CHISELED_ANCIENT_PLANKS, TexturedModel.COLUMN);
+        generator.createHangingSign(EBBlocks.STRIPPED_ANCIENT_LOG, EBBlocks.ANCIENT_HANGING_SIGN, EBBlocks.ANCIENT_WALL_HANGING_SIGN);
 
-        generator.registerSingleton(EBBlocks.CHISELED_OAK_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.CHISELED_SPRUCE_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.CHISELED_BIRCH_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.CHISELED_JUNGLE_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.CHISELED_ACACIA_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.CHISELED_DARK_OAK_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.CHISELED_MANGROVE_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.CHISELED_BAMBOO_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.CHISELED_CHERRY_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.CHISELED_CRIMSON_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.CHISELED_WARPED_PLANKS, TexturedModel.CUBE_COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_OAK_PLANKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_SPRUCE_PLANKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_BIRCH_PLANKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_JUNGLE_PLANKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_ACACIA_PLANKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_DARK_OAK_PLANKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_MANGROVE_PLANKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_BAMBOO_PLANKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_CHERRY_PLANKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_CRIMSON_PLANKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_WARPED_PLANKS, TexturedModel.COLUMN);
 
-        BlockStateModelGenerator.BlockTexturePool gloomPlanks = generator.registerCubeAllModelTexturePool(EBBlocks.GLOOM_PLANKS);
+        BlockModelGenerators.BlockFamilyProvider gloomPlanks = generator.family(EBBlocks.GLOOM_PLANKS);
         gloomPlanks.stairs(EBBlocks.GLOOM_STAIRS);
         gloomPlanks.slab(EBBlocks.GLOOM_SLAB);
         gloomPlanks.fence(EBBlocks.GLOOM_FENCE);
@@ -130,52 +141,52 @@ public class EBModelGen extends FabricModelProvider {
         gloomPlanks.button(EBBlocks.GLOOM_BUTTON);
         gloomPlanks.pressurePlate(EBBlocks.GLOOM_PRESSURE_PLATE);
 
-        BlockStateModelGenerator.BlockTexturePool gloomMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.GLOOM_MOSAIC);
+        BlockModelGenerators.BlockFamilyProvider gloomMosaic = generator.family(EBBlocks.GLOOM_MOSAIC);
         gloomMosaic.stairs(EBBlocks.GLOOM_MOSAIC_STAIRS);
         gloomMosaic.slab(EBBlocks.GLOOM_MOSAIC_SLAB);
 
-        generator.registerDoor(EBBlocks.GLOOM_DOOR);
-        generator.registerOrientableTrapdoor(EBBlocks.GLOOM_TRAPDOOR);
+        generator.createDoor(EBBlocks.GLOOM_DOOR);
+        generator.createOrientableTrapdoor(EBBlocks.GLOOM_TRAPDOOR);
 
-        generator.registerLog(EBBlocks.GLOOM_LOG).log(EBBlocks.GLOOM_LOG).wood(EBBlocks.GLOOM_WOOD);
-        generator.registerLog(EBBlocks.STRIPPED_GLOOM_LOG).log(EBBlocks.STRIPPED_GLOOM_LOG).wood(EBBlocks.STRIPPED_GLOOM_WOOD);
+        generator.woodProvider(EBBlocks.GLOOM_LOG).logWithHorizontal(EBBlocks.GLOOM_LOG).wood(EBBlocks.GLOOM_WOOD);
+        generator.woodProvider(EBBlocks.STRIPPED_GLOOM_LOG).logWithHorizontal(EBBlocks.STRIPPED_GLOOM_LOG).wood(EBBlocks.STRIPPED_GLOOM_WOOD);
 
-        generator.registerSingleton(EBBlocks.CHISELED_GLOOM_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerHangingSign(EBBlocks.STRIPPED_GLOOM_LOG, EBBlocks.GLOOM_HANGING_SIGN, EBBlocks.GLOOM_WALL_HANGING_SIGN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_GLOOM_PLANKS, TexturedModel.COLUMN);
+        generator.createHangingSign(EBBlocks.STRIPPED_GLOOM_LOG, EBBlocks.GLOOM_HANGING_SIGN, EBBlocks.GLOOM_WALL_HANGING_SIGN);
 
-        BlockStateModelGenerator.BlockTexturePool copper = generator.registerCubeAllModelTexturePool(Blocks.COPPER_BLOCK);
+        BlockModelGenerators.BlockFamilyProvider copper = generator.family(Blocks.COPPER_BLOCK);
 
-        BlockStateModelGenerator.BlockTexturePool exposedCopper = generator.registerCubeAllModelTexturePool(Blocks.EXPOSED_COPPER);
+        BlockModelGenerators.BlockFamilyProvider exposedCopper = generator.family(Blocks.EXPOSED_COPPER);
 
-        BlockStateModelGenerator.BlockTexturePool weatheredCopper = generator.registerCubeAllModelTexturePool(Blocks.WEATHERED_COPPER);
+        BlockModelGenerators.BlockFamilyProvider weatheredCopper = generator.family(Blocks.WEATHERED_COPPER);
 
-        BlockStateModelGenerator.BlockTexturePool oxidizedCopper = generator.registerCubeAllModelTexturePool(Blocks.OXIDIZED_COPPER);
+        BlockModelGenerators.BlockFamilyProvider oxidizedCopper = generator.family(Blocks.OXIDIZED_COPPER);
 
-        BlockStateModelGenerator.BlockTexturePool copperBricks = generator.registerCubeAllModelTexturePool(EBBlocks.COPPER_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider copperBricks = generator.family(EBBlocks.COPPER_BRICKS);
         copperBricks.stairs(EBBlocks.COPPER_BRICK_STAIRS);
         copperBricks.slab(EBBlocks.COPPER_BRICK_SLAB);
-        generator.registerCubeAllModelTexturePool(EBBlocks.WAXED_COPPER_BRICKS);
+        generator.family(EBBlocks.WAXED_COPPER_BRICKS);
         copperBricks.stairs(EBBlocks.WAXED_COPPER_BRICK_STAIRS);
         copperBricks.slab(EBBlocks.WAXED_COPPER_BRICK_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool exposedCopperBricks = generator.registerCubeAllModelTexturePool(EBBlocks.EXPOSED_COPPER_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider exposedCopperBricks = generator.family(EBBlocks.EXPOSED_COPPER_BRICKS);
         exposedCopperBricks.stairs(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS);
         exposedCopperBricks.slab(EBBlocks.EXPOSED_COPPER_BRICK_SLAB);
-        generator.registerCubeAllModelTexturePool(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS);
+        generator.family(EBBlocks.WAXED_EXPOSED_COPPER_BRICKS);
         exposedCopperBricks.stairs(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS);
         exposedCopperBricks.slab(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool weatheredCopperBricks = generator.registerCubeAllModelTexturePool(EBBlocks.WEATHERED_COPPER_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider weatheredCopperBricks = generator.family(EBBlocks.WEATHERED_COPPER_BRICKS);
         weatheredCopperBricks.stairs(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS);
         weatheredCopperBricks.slab(EBBlocks.WEATHERED_COPPER_BRICK_SLAB);
-        generator.registerCubeAllModelTexturePool(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS);
+        generator.family(EBBlocks.WAXED_WEATHERED_COPPER_BRICKS);
         weatheredCopperBricks.stairs(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS);
         weatheredCopperBricks.slab(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB);
 
-        BlockStateModelGenerator.BlockTexturePool oxidizedCopperBricks = generator.registerCubeAllModelTexturePool(EBBlocks.OXIDIZED_COPPER_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider oxidizedCopperBricks = generator.family(EBBlocks.OXIDIZED_COPPER_BRICKS);
         oxidizedCopperBricks.stairs(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS);
         oxidizedCopperBricks.slab(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB);
-        generator.registerCubeAllModelTexturePool(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS);
+        generator.family(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS);
         oxidizedCopperBricks.stairs(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS);
         oxidizedCopperBricks.slab(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB);
 
@@ -189,32 +200,32 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.WEATHERED_COPPER_BRICKS);
         EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS, EBBlocks.OXIDIZED_COPPER_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool ironBricks = generator.registerCubeAllModelTexturePool(EBBlocks.IRON_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider ironBricks = generator.family(EBBlocks.IRON_BRICKS);
         ironBricks.stairs(EBBlocks.IRON_BRICK_STAIRS);
         ironBricks.slab(EBBlocks.IRON_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.IRON_BRICK_VERTICAL_STAIRS, EBBlocks.IRON_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool goldBricks = generator.registerCubeAllModelTexturePool(EBBlocks.GOLD_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider goldBricks = generator.family(EBBlocks.GOLD_BRICKS);
         goldBricks.stairs(EBBlocks.GOLD_BRICK_STAIRS);
         goldBricks.slab(EBBlocks.GOLD_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.GOLD_BRICK_VERTICAL_STAIRS, EBBlocks.GOLD_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool lapisBricks = generator.registerCubeAllModelTexturePool(EBBlocks.LAPIS_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider lapisBricks = generator.family(EBBlocks.LAPIS_BRICKS);
         lapisBricks.stairs(EBBlocks.LAPIS_BRICK_STAIRS);
         lapisBricks.slab(EBBlocks.LAPIS_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.LAPIS_BRICK_VERTICAL_STAIRS, EBBlocks.LAPIS_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool emeraldBricks = generator.registerCubeAllModelTexturePool(EBBlocks.EMERALD_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider emeraldBricks = generator.family(EBBlocks.EMERALD_BRICKS);
         emeraldBricks.stairs(EBBlocks.EMERALD_BRICK_STAIRS);
         emeraldBricks.slab(EBBlocks.EMERALD_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS, EBBlocks.EMERALD_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool diamondBricks = generator.registerCubeAllModelTexturePool(EBBlocks.DIAMOND_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider diamondBricks = generator.family(EBBlocks.DIAMOND_BRICKS);
         diamondBricks.stairs(EBBlocks.DIAMOND_BRICK_STAIRS);
         diamondBricks.slab(EBBlocks.DIAMOND_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.DIAMOND_BRICK_VERTICAL_STAIRS, EBBlocks.DIAMOND_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool netheriteBricks = generator.registerCubeAllModelTexturePool(EBBlocks.NETHERITE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider netheriteBricks = generator.family(EBBlocks.NETHERITE_BRICKS);
         netheriteBricks.stairs(EBBlocks.NETHERITE_BRICK_STAIRS);
         netheriteBricks.slab(EBBlocks.NETHERITE_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.NETHERITE_BRICK_VERTICAL_STAIRS, EBBlocks.NETHERITE_BRICKS);
@@ -242,12 +253,12 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.ANCIENT_VERTICAL_STAIRS, EBBlocks.ANCIENT_PLANKS);
         EBModels.registerVerticalStairs(generator, EBBlocks.GLOOM_VERTICAL_STAIRS, EBBlocks.GLOOM_PLANKS);
 
-        generator.registerSimpleCubeAll(EBBlocks.SEA_GLASS);
-        generator.registerSimpleCubeAll(EBBlocks.VERDANT_SEA_GLASS);
-        generator.registerSimpleCubeAll(EBBlocks.ROSE_SEA_GLASS);
-        generator.registerSimpleCubeAll(EBBlocks.FUCHSIA_SEA_GLASS);
-        generator.registerSimpleCubeAll(EBBlocks.AQUA_SEA_GLASS);
-        generator.registerSimpleCubeAll(EBBlocks.SCARLET_SEA_GLASS);
+        generator.createTrivialCube(EBBlocks.SEA_GLASS);
+        generator.createTrivialCube(EBBlocks.VERDANT_SEA_GLASS);
+        generator.createTrivialCube(EBBlocks.ROSE_SEA_GLASS);
+        generator.createTrivialCube(EBBlocks.FUCHSIA_SEA_GLASS);
+        generator.createTrivialCube(EBBlocks.AQUA_SEA_GLASS);
+        generator.createTrivialCube(EBBlocks.SCARLET_SEA_GLASS);
 
         EBModels.registerSeaGlassPane(generator, EBBlocks.SEA_GLASS_PANE, EBBlocks.SEA_GLASS);
         EBModels.registerSeaGlassPane(generator, EBBlocks.VERDANT_SEA_GLASS_PANE, EBBlocks.VERDANT_SEA_GLASS);
@@ -256,83 +267,83 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerSeaGlassPane(generator, EBBlocks.AQUA_SEA_GLASS_PANE, EBBlocks.AQUA_SEA_GLASS);
         EBModels.registerSeaGlassPane(generator, EBBlocks.SCARLET_SEA_GLASS_PANE, EBBlocks.SCARLET_SEA_GLASS);
 
-        BlockStateModelGenerator.BlockTexturePool boneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.BONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider boneBricks = generator.family(EBBlocks.BONE_BRICKS);
         boneBricks.stairs(EBBlocks.BONE_BRICK_STAIRS);
         boneBricks.slab(EBBlocks.BONE_BRICK_SLAB);
         boneBricks.wall(EBBlocks.BONE_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.BONE_BRICK_VERTICAL_STAIRS, EBBlocks.BONE_BRICKS);
 
         for (DyeColor colors : DyeColor.values()) {
-            generator.registerWoolAndCarpet(EBBlocks.getDyedKnittedWools(colors.getId()), EBBlocks.getDyedKnittedCarpets(colors.getId()));
+            generator.createFullAndCarpetBlocks(EBBlocks.getDyedKnittedWools(colors.getId()), EBBlocks.getDyedKnittedCarpets(colors.getId()));
         }
 
-        generator.registerSimpleCubeAll(EBBlocks.SOUL_MAGMA_BLOCK);
+        generator.createTrivialCube(EBBlocks.SOUL_MAGMA_BLOCK);
 
-        BlockStateModelGenerator.BlockTexturePool polishedSandstone = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_SANDSTONE);
+        BlockModelGenerators.BlockFamilyProvider polishedSandstone = generator.family(EBBlocks.POLISHED_SANDSTONE);
         polishedSandstone.stairs(EBBlocks.POLISHED_SANDSTONE_STAIRS);
         polishedSandstone.slab(EBBlocks.POLISHED_SANDSTONE_SLAB);
         polishedSandstone.wall(EBBlocks.POLISHED_SANDSTONE_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_SANDSTONE_VERTICAL_STAIRS, EBBlocks.POLISHED_SANDSTONE);
 
-        BlockStateModelGenerator.BlockTexturePool sandstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.SANDSTONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider sandstoneBricks = generator.family(EBBlocks.SANDSTONE_BRICKS);
         sandstoneBricks.stairs(EBBlocks.SANDSTONE_BRICK_STAIRS);
         sandstoneBricks.slab(EBBlocks.SANDSTONE_BRICK_SLAB);
         sandstoneBricks.wall(EBBlocks.SANDSTONE_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.SANDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.SANDSTONE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool sandstoneTiles = generator.registerCubeAllModelTexturePool(EBBlocks.SANDSTONE_TILES);
+        BlockModelGenerators.BlockFamilyProvider sandstoneTiles = generator.family(EBBlocks.SANDSTONE_TILES);
         sandstoneTiles.stairs(EBBlocks.SANDSTONE_TILE_STAIRS);
         sandstoneTiles.slab(EBBlocks.SANDSTONE_TILE_SLAB);
         sandstoneTiles.wall(EBBlocks.SANDSTONE_TILE_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.SANDSTONE_TILE_VERTICAL_STAIRS, EBBlocks.SANDSTONE_TILES);
 
-        generator.registerSingleton(EBBlocks.CHISELED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.DECORATED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.ENGRAVED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_SANDSTONE_BRICKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.DECORATED_SANDSTONE_BRICKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.ENGRAVED_SANDSTONE_BRICKS, TexturedModel.COLUMN);
 
-        BlockStateModelGenerator.BlockTexturePool polishedRedSandstone = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_RED_SANDSTONE);
+        BlockModelGenerators.BlockFamilyProvider polishedRedSandstone = generator.family(EBBlocks.POLISHED_RED_SANDSTONE);
         polishedRedSandstone.stairs(EBBlocks.POLISHED_RED_SANDSTONE_STAIRS);
         polishedRedSandstone.slab(EBBlocks.POLISHED_RED_SANDSTONE_SLAB);
         polishedRedSandstone.wall(EBBlocks.POLISHED_RED_SANDSTONE_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_RED_SANDSTONE_VERTICAL_STAIRS, EBBlocks.POLISHED_RED_SANDSTONE);
 
-        BlockStateModelGenerator.BlockTexturePool sandstoneRedBricks = generator.registerCubeAllModelTexturePool(EBBlocks.RED_SANDSTONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider sandstoneRedBricks = generator.family(EBBlocks.RED_SANDSTONE_BRICKS);
         sandstoneRedBricks.stairs(EBBlocks.RED_SANDSTONE_BRICK_STAIRS);
         sandstoneRedBricks.slab(EBBlocks.RED_SANDSTONE_BRICK_SLAB);
         sandstoneRedBricks.wall(EBBlocks.RED_SANDSTONE_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.RED_SANDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.RED_SANDSTONE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool sandstoneRedTiles = generator.registerCubeAllModelTexturePool(EBBlocks.RED_SANDSTONE_TILES);
+        BlockModelGenerators.BlockFamilyProvider sandstoneRedTiles = generator.family(EBBlocks.RED_SANDSTONE_TILES);
         sandstoneRedTiles.stairs(EBBlocks.RED_SANDSTONE_TILE_STAIRS);
         sandstoneRedTiles.slab(EBBlocks.RED_SANDSTONE_TILE_SLAB);
         sandstoneRedTiles.wall(EBBlocks.RED_SANDSTONE_TILE_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.RED_SANDSTONE_TILE_VERTICAL_STAIRS, EBBlocks.RED_SANDSTONE_TILES);
 
-        generator.registerSingleton(EBBlocks.CHISELED_RED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.DECORATED_RED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_RED_SANDSTONE_BRICKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.DECORATED_RED_SANDSTONE_BRICKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.ENGRAVED_RED_SANDSTONE_BRICKS, TexturedModel.COLUMN);
 
-        BlockStateModelGenerator.BlockTexturePool polishedSoulSandstone = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_SOUL_SANDSTONE);
+        BlockModelGenerators.BlockFamilyProvider polishedSoulSandstone = generator.family(EBBlocks.POLISHED_SOUL_SANDSTONE);
         polishedSoulSandstone.stairs(EBBlocks.POLISHED_SOUL_SANDSTONE_STAIRS);
         polishedSoulSandstone.slab(EBBlocks.POLISHED_SOUL_SANDSTONE_SLAB);
         polishedSoulSandstone.wall(EBBlocks.POLISHED_SOUL_SANDSTONE_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_SOUL_SANDSTONE_VERTICAL_STAIRS, EBBlocks.POLISHED_SOUL_SANDSTONE);
 
-        BlockStateModelGenerator.BlockTexturePool sandstoneSoulBricks = generator.registerCubeAllModelTexturePool(EBBlocks.SOUL_SANDSTONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider sandstoneSoulBricks = generator.family(EBBlocks.SOUL_SANDSTONE_BRICKS);
         sandstoneSoulBricks.stairs(EBBlocks.SOUL_SANDSTONE_BRICK_STAIRS);
         sandstoneSoulBricks.slab(EBBlocks.SOUL_SANDSTONE_BRICK_SLAB);
         sandstoneSoulBricks.wall(EBBlocks.SOUL_SANDSTONE_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.SOUL_SANDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.SOUL_SANDSTONE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool sandstoneSoulTiles = generator.registerCubeAllModelTexturePool(EBBlocks.SOUL_SANDSTONE_TILES);
+        BlockModelGenerators.BlockFamilyProvider sandstoneSoulTiles = generator.family(EBBlocks.SOUL_SANDSTONE_TILES);
         sandstoneSoulTiles.stairs(EBBlocks.SOUL_SANDSTONE_TILE_STAIRS);
         sandstoneSoulTiles.slab(EBBlocks.SOUL_SANDSTONE_TILE_SLAB);
         sandstoneSoulTiles.wall(EBBlocks.SOUL_SANDSTONE_TILE_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.SOUL_SANDSTONE_TILE_VERTICAL_STAIRS, EBBlocks.SOUL_SANDSTONE_TILES);
 
-        generator.registerSingleton(EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
-        generator.registerSingleton(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS, TexturedModel.CUBE_COLUMN);
+        generator.createTrivialBlock(EBBlocks.CHISELED_SOUL_SANDSTONE_BRICKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.DECORATED_SOUL_SANDSTONE_BRICKS, TexturedModel.COLUMN);
+        generator.createTrivialBlock(EBBlocks.ENGRAVED_SOUL_SANDSTONE_BRICKS, TexturedModel.COLUMN);
 
         EBModels.registerLadder(generator, EBBlocks.SPRUCE_LADDER);
         EBModels.registerLadder(generator, EBBlocks.BIRCH_LADDER);
@@ -347,35 +358,35 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerLadder(generator, EBBlocks.GLOOM_LADDER);
         EBModels.registerLadder(generator, EBBlocks.ANCIENT_LADDER);
 
-        generator.registerCubeWithCustomTextures(EBBlocks.SPRUCE_CRAFTING_TABLE, Blocks.SPRUCE_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.BIRCH_CRAFTING_TABLE, Blocks.BIRCH_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.JUNGLE_CRAFTING_TABLE, Blocks.JUNGLE_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.ACACIA_CRAFTING_TABLE, Blocks.ACACIA_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.DARK_OAK_CRAFTING_TABLE, Blocks.DARK_OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.MANGROVE_CRAFTING_TABLE, Blocks.MANGROVE_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.CHERRY_CRAFTING_TABLE, Blocks.CHERRY_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.BAMBOO_CRAFTING_TABLE, Blocks.BAMBOO_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.CRIMSON_CRAFTING_TABLE, Blocks.CRIMSON_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.WARPED_CRAFTING_TABLE, Blocks.WARPED_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.ANCIENT_CRAFTING_TABLE, EBBlocks.ANCIENT_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.GLOOM_CRAFTING_TABLE, EBBlocks.GLOOM_PLANKS, TextureMap::frontSideWithCustomBottom);
+        generator.createCraftingTableLike(EBBlocks.SPRUCE_CRAFTING_TABLE, Blocks.SPRUCE_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.BIRCH_CRAFTING_TABLE, Blocks.BIRCH_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.JUNGLE_CRAFTING_TABLE, Blocks.JUNGLE_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.ACACIA_CRAFTING_TABLE, Blocks.ACACIA_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.DARK_OAK_CRAFTING_TABLE, Blocks.DARK_OAK_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.MANGROVE_CRAFTING_TABLE, Blocks.MANGROVE_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.CHERRY_CRAFTING_TABLE, Blocks.CHERRY_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.BAMBOO_CRAFTING_TABLE, Blocks.BAMBOO_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.CRIMSON_CRAFTING_TABLE, Blocks.CRIMSON_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.WARPED_CRAFTING_TABLE, Blocks.WARPED_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.ANCIENT_CRAFTING_TABLE, EBBlocks.ANCIENT_PLANKS, TextureMapping::craftingTable);
+        generator.createCraftingTableLike(EBBlocks.GLOOM_CRAFTING_TABLE, EBBlocks.GLOOM_PLANKS, TextureMapping::craftingTable);
 
         EBModels.registerMug(generator, EBBlocks.WOODEN_MUG);
 
-        BlockStateModelGenerator.BlockTexturePool quartzBricks = generator.registerCubeAllModelTexturePool(Blocks.QUARTZ_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider quartzBricks = generator.family(Blocks.QUARTZ_BRICKS);
         quartzBricks.stairs(EBBlocks.QUARTZ_BRICK_STAIRS);
         quartzBricks.slab(EBBlocks.QUARTZ_BRICK_SLAB);
         quartzBricks.wall(EBBlocks.QUARTZ_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS, Blocks.QUARTZ_BRICKS);
 
         for (DyeColor colors : DyeColor.values()) {
-            BlockStateModelGenerator.BlockTexturePool dyedTerracottaTiles = generator.registerCubeAllModelTexturePool(EBBlocks.getDyedTerracottaTiles(colors.getId()));
+            BlockModelGenerators.BlockFamilyProvider dyedTerracottaTiles = generator.family(EBBlocks.getDyedTerracottaTiles(colors.getId()));
             dyedTerracottaTiles.stairs(EBBlocks.getDyedTerracottaTileStairs(colors.getId()));
             dyedTerracottaTiles.slab(EBBlocks.getDyedTerracottaTileSlab(colors.getId()));
             EBModels.registerVerticalStairs(generator, EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()), EBBlocks.getDyedTerracottaTiles(colors.getId()));
         }
 
-        BlockStateModelGenerator.BlockTexturePool terracottaTiles = generator.registerCubeAllModelTexturePool(EBBlocks.TERRACOTTA_TILES);
+        BlockModelGenerators.BlockFamilyProvider terracottaTiles = generator.family(EBBlocks.TERRACOTTA_TILES);
         terracottaTiles.stairs(EBBlocks.TERRACOTTA_TILE_STAIRS);
         terracottaTiles.slab(EBBlocks.TERRACOTTA_TILE_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.TERRACOTTA_TILE_VERTICAL_STAIRS, EBBlocks.TERRACOTTA_TILES);
@@ -435,36 +446,36 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WEATHERED_CUT_COPPER);
         EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS, Blocks.OXIDIZED_CUT_COPPER);
 
-        EBModels.registerTintableCrossWithoutItem(generator, EBBlocks.GLOOM_SEEDS, BlockStateModelGenerator.TintType.NOT_TINTED);
+        EBModels.registerTintableCrossWithoutItem(generator, EBBlocks.GLOOM_SEEDS, BlockModelGenerators.TintState.NOT_TINTED);
 
-        BlockStateModelGenerator.BlockTexturePool graniteBricks = generator.registerCubeAllModelTexturePool(EBBlocks.GRANITE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider graniteBricks = generator.family(EBBlocks.GRANITE_BRICKS);
         graniteBricks.stairs(EBBlocks.GRANITE_BRICK_STAIRS);
         graniteBricks.slab(EBBlocks.GRANITE_BRICK_SLAB);
         graniteBricks.wall(EBBlocks.GRANITE_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.GRANITE_BRICK_VERTICAL_STAIRS, EBBlocks.GRANITE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool dioriteBricks = generator.registerCubeAllModelTexturePool(EBBlocks.DIORITE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider dioriteBricks = generator.family(EBBlocks.DIORITE_BRICKS);
         dioriteBricks.stairs(EBBlocks.DIORITE_BRICK_STAIRS);
         dioriteBricks.slab(EBBlocks.DIORITE_BRICK_SLAB);
         dioriteBricks.wall(EBBlocks.DIORITE_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.DIORITE_BRICK_VERTICAL_STAIRS, EBBlocks.DIORITE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool andesiteBricks = generator.registerCubeAllModelTexturePool(EBBlocks.ANDESITE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider andesiteBricks = generator.family(EBBlocks.ANDESITE_BRICKS);
         andesiteBricks.stairs(EBBlocks.ANDESITE_BRICK_STAIRS);
         andesiteBricks.slab(EBBlocks.ANDESITE_BRICK_SLAB);
         andesiteBricks.wall(EBBlocks.ANDESITE_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.ANDESITE_BRICK_VERTICAL_STAIRS, EBBlocks.ANDESITE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool smoothBricks = generator.registerCubeAllModelTexturePool(EBBlocks.SMOOTH_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider smoothBricks = generator.family(EBBlocks.SMOOTH_BRICKS);
         smoothBricks.stairs(EBBlocks.SMOOTH_BRICK_STAIRS);
         smoothBricks.slab(EBBlocks.SMOOTH_BRICK_SLAB);
         smoothBricks.wall(EBBlocks.SMOOTH_BRICK_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.SMOOTH_BRICK_VERTICAL_STAIRS, EBBlocks.SMOOTH_BRICKS);
 
-        generator.registerSimpleCubeAll(EBBlocks.HERRINGBONE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.SMOOTH_HERRINGBONE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_SMOOTH_BRICKS);
+        generator.createTrivialCube(EBBlocks.HERRINGBONE_BRICKS);
+        generator.createTrivialCube(EBBlocks.SMOOTH_HERRINGBONE_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_SMOOTH_BRICKS);
 
         EBModels.registerEBBookshelf(generator, EBBlocks.SPRUCE_BOOKSHELF, Blocks.SPRUCE_PLANKS);
         EBModels.registerEBBookshelf(generator, EBBlocks.BIRCH_BOOKSHELF, Blocks.BIRCH_PLANKS);
@@ -479,70 +490,70 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerEBBookshelf(generator, EBBlocks.ANCIENT_BOOKSHELF, EBBlocks.ANCIENT_PLANKS);
         EBModels.registerEBBookshelf(generator, EBBlocks.GLOOM_BOOKSHELF, EBBlocks.GLOOM_PLANKS);
 
-        generator.registerSimpleCubeAll(EBBlocks.BRIMSTONE_WINDOW);
-        generator.registerSimpleCubeAll(EBBlocks.BRIMSTONE_LAMP);
-        generator.registerAxisRotated(EBBlocks.BRIMSTONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
+        generator.createTrivialCube(EBBlocks.BRIMSTONE_WINDOW);
+        generator.createTrivialCube(EBBlocks.BRIMSTONE_LAMP);
+        generator.createRotatedPillarWithHorizontalVariant(EBBlocks.BRIMSTONE_PILLAR, TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
 
-        BlockStateModelGenerator.BlockTexturePool brimstone = generator.registerCubeAllModelTexturePool(EBBlocks.BRIMSTONE);
+        BlockModelGenerators.BlockFamilyProvider brimstone = generator.family(EBBlocks.BRIMSTONE);
         brimstone.stairs(EBBlocks.BRIMSTONE_STAIRS);
         brimstone.slab(EBBlocks.BRIMSTONE_SLAB);
         brimstone.wall(EBBlocks.BRIMSTONE_WALL);
         EBModels.registerVerticalStairs(generator, EBBlocks.BRIMSTONE_VERTICAL_STAIRS, EBBlocks.BRIMSTONE);
 
-        BlockStateModelGenerator.BlockTexturePool brimstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.BRIMSTONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider brimstoneBricks = generator.family(EBBlocks.BRIMSTONE_BRICKS);
         brimstoneBricks.stairs(EBBlocks.BRIMSTONE_BRICK_STAIRS);
         brimstoneBricks.slab(EBBlocks.BRIMSTONE_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.BRIMSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.BRIMSTONE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool brimstoneTiles = generator.registerCubeAllModelTexturePool(EBBlocks.BRIMSTONE_TILES);
+        BlockModelGenerators.BlockFamilyProvider brimstoneTiles = generator.family(EBBlocks.BRIMSTONE_TILES);
         brimstoneTiles.stairs(EBBlocks.BRIMSTONE_TILE_STAIRS);
         brimstoneTiles.slab(EBBlocks.BRIMSTONE_TILE_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.BRIMSTONE_TILE_VERTICAL_STAIRS, EBBlocks.BRIMSTONE_TILES);
 
-        BlockStateModelGenerator.BlockTexturePool polishedBrimstone = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_BRIMSTONE);
+        BlockModelGenerators.BlockFamilyProvider polishedBrimstone = generator.family(EBBlocks.POLISHED_BRIMSTONE);
         polishedBrimstone.stairs(EBBlocks.POLISHED_BRIMSTONE_STAIRS);
         polishedBrimstone.slab(EBBlocks.POLISHED_BRIMSTONE_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_BRIMSTONE_VERTICAL_STAIRS, EBBlocks.POLISHED_BRIMSTONE);
 
-        BlockStateModelGenerator.BlockTexturePool asphalt = generator.registerCubeAllModelTexturePool(EBBlocks.ASPHALT);
+        BlockModelGenerators.BlockFamilyProvider asphalt = generator.family(EBBlocks.ASPHALT);
         asphalt.stairs(EBBlocks.ASPHALT_STAIRS);
         asphalt.slab(EBBlocks.ASPHALT_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.ASPHALT_VERTICAL_STAIRS, EBBlocks.ASPHALT);
 
-        generator.registerFlowerPotPlant(EBBlocks.ROSE, EBBlocks.POTTED_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        generator.registerFlowerPotPlant(EBBlocks.CYAN_ROSE, EBBlocks.POTTED_CYAN_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        generator.registerFlowerPotPlant(EBBlocks.WHITE_ROSE, EBBlocks.POTTED_WHITE_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        generator.createPlant(EBBlocks.ROSE, EBBlocks.POTTED_ROSE, BlockModelGenerators.TintState.NOT_TINTED);
+        generator.createPlant(EBBlocks.CYAN_ROSE, EBBlocks.POTTED_CYAN_ROSE, BlockModelGenerators.TintState.NOT_TINTED);
+        generator.createPlant(EBBlocks.WHITE_ROSE, EBBlocks.POTTED_WHITE_ROSE, BlockModelGenerators.TintState.NOT_TINTED);
 
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_DIORITE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_MUD_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_GRANITE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_BRIMSTONE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_ANDESITE_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_DIORITE_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_MUD_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_GRANITE_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_BRIMSTONE_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_ANDESITE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool redstoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.REDSTONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider redstoneBricks = generator.family(EBBlocks.REDSTONE_BRICKS);
         redstoneBricks.stairs(EBBlocks.REDSTONE_BRICK_STAIRS);
         redstoneBricks.slab(EBBlocks.REDSTONE_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.REDSTONE_BRICK_VERTICAL_STAIRS, EBBlocks.REDSTONE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool polishedStone = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_STONE);
+        BlockModelGenerators.BlockFamilyProvider polishedStone = generator.family(EBBlocks.POLISHED_STONE);
         polishedStone.stairs(EBBlocks.POLISHED_STONE_STAIRS);
         polishedStone.slab(EBBlocks.POLISHED_STONE_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_STONE_VERTICAL_STAIRS, EBBlocks.POLISHED_STONE);
 
-        BlockStateModelGenerator.BlockTexturePool smoothStoneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.SMOOTH_STONE_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider smoothStoneBricks = generator.family(EBBlocks.SMOOTH_STONE_BRICKS);
         smoothStoneBricks.stairs(EBBlocks.SMOOTH_STONE_BRICK_STAIRS);
         smoothStoneBricks.slab(EBBlocks.SMOOTH_STONE_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.SMOOTH_STONE_BRICK_VERTICAL_STAIRS, EBBlocks.SMOOTH_STONE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_SMOOTH_STONE_BRICKS);
+        generator.createTrivialCube(EBBlocks.CRACKED_SMOOTH_STONE_BRICKS);
 
-        BlockStateModelGenerator.BlockTexturePool smoothStoneTiles = generator.registerCubeAllModelTexturePool(EBBlocks.SMOOTH_STONE_TILES);
+        BlockModelGenerators.BlockFamilyProvider smoothStoneTiles = generator.family(EBBlocks.SMOOTH_STONE_TILES);
         smoothStoneTiles.stairs(EBBlocks.SMOOTH_STONE_TILE_STAIRS);
         smoothStoneTiles.slab(EBBlocks.SMOOTH_STONE_TILE_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.SMOOTH_STONE_TILE_VERTICAL_STAIRS, EBBlocks.SMOOTH_STONE_TILES);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_SMOOTH_STONE_TILES);
+        generator.createTrivialCube(EBBlocks.CRACKED_SMOOTH_STONE_TILES);
 
-        generator.registerAxisRotated(EBBlocks.SMOOTH_STONE_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN, TexturedModel.END_FOR_TOP_CUBE_COLUMN_HORIZONTAL);
-        generator.registerSimpleCubeAll(EBBlocks.CHISELED_SMOOTH_STONE_BRICKS);
+        generator.createRotatedPillarWithHorizontalVariant(EBBlocks.SMOOTH_STONE_PILLAR, TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
+        generator.createTrivialCube(EBBlocks.CHISELED_SMOOTH_STONE_BRICKS);
 
         EBModels.registerDecorativeShelfModel(generator, EBBlocks.OAK_DECORATIVE_SHELF, "0", EBBlocks.OAK_MOSAIC);
         EBModels.registerDecorativeShelfModel(generator, EBBlocks.OAK_DECORATIVE_SHELF, "1", EBBlocks.OAK_MOSAIC);
@@ -651,55 +662,55 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerParticleCandle(generator, EBBlocks.WEEPING_CANDLE);
         EBModels.registerParticleCandle(generator, EBBlocks.TWISTING_CANDLE);
 
-        generator.registerSimpleCubeAll(EBBlocks.GLOOM_LEAVES);
-        generator.registerFlowerPotPlant(EBBlocks.GLOOM_SAPLING, EBBlocks.POTTED_GLOOM_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        generator.createTrivialCube(EBBlocks.GLOOM_LEAVES);
+        generator.createPlant(EBBlocks.GLOOM_SAPLING, EBBlocks.POTTED_GLOOM_SAPLING, BlockModelGenerators.TintState.NOT_TINTED);
 
-        EBModels.registerAlmentraStatueState(generator, EBBlocks.ALMENTRA_STATUE, Identifier.of(ExcessiveBuilding.MOD_ID, "block/almentra_statue"),
-                Identifier.of(ExcessiveBuilding.MOD_ID, "block/almentra_statue_diagonal"));
+        EBModels.registerAlmentraStatueState(generator, EBBlocks.ALMENTRA_STATUE, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, "block/almentra_statue"),
+                ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, "block/almentra_statue_diagonal"));
 
         for (DyeColor colors : DyeColor.values()) {
             EBModels.registerAlmentraStatueState(generator, EBBlocks.getDyedAlmentraStatues(colors.getId()),
-                    Identifier.of(ExcessiveBuilding.MOD_ID, "block/" + colors.getName() + "_almentra_statue"),
-                    Identifier.of(ExcessiveBuilding.MOD_ID, "block/" + colors.getName() + "_almentra_statue_diagonal"));
+                    ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, "block/" + colors.getName() + "_almentra_statue"),
+                    ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, "block/" + colors.getName() + "_almentra_statue_diagonal"));
         }
 
-        BlockStateModelGenerator.BlockTexturePool almentra = generator.registerCubeAllModelTexturePool(EBBlocks.ALMENTRA);
+        BlockModelGenerators.BlockFamilyProvider almentra = generator.family(EBBlocks.ALMENTRA);
         almentra.stairs(EBBlocks.ALMENTRA_STAIRS);
         almentra.slab(EBBlocks.ALMENTRA_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.ALMENTRA_VERTICAL_STAIRS, EBBlocks.ALMENTRA);
 
-        BlockStateModelGenerator.BlockTexturePool polishedAlmentra = generator.registerCubeAllModelTexturePool(EBBlocks.POLISHED_ALMENTRA);
+        BlockModelGenerators.BlockFamilyProvider polishedAlmentra = generator.family(EBBlocks.POLISHED_ALMENTRA);
         polishedAlmentra.stairs(EBBlocks.POLISHED_ALMENTRA_STAIRS);
         polishedAlmentra.slab(EBBlocks.POLISHED_ALMENTRA_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS, EBBlocks.POLISHED_ALMENTRA);
 
-        BlockStateModelGenerator.BlockTexturePool almentraBricks = generator.registerCubeAllModelTexturePool(EBBlocks.ALMENTRA_BRICKS);
+        BlockModelGenerators.BlockFamilyProvider almentraBricks = generator.family(EBBlocks.ALMENTRA_BRICKS);
         almentraBricks.stairs(EBBlocks.ALMENTRA_BRICK_STAIRS);
         almentraBricks.slab(EBBlocks.ALMENTRA_BRICK_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.ALMENTRA_BRICK_VERTICAL_STAIRS, EBBlocks.ALMENTRA_BRICKS);
 
         for (DyeColor colors : DyeColor.values()) {
-            BlockStateModelGenerator.BlockTexturePool dyedAlmentra = generator.registerCubeAllModelTexturePool(EBBlocks.getDyedAlmentra(colors.getId()));
+            BlockModelGenerators.BlockFamilyProvider dyedAlmentra = generator.family(EBBlocks.getDyedAlmentra(colors.getId()));
             dyedAlmentra.stairs(EBBlocks.getDyedAlmentraStairs(colors.getId()));
             dyedAlmentra.slab(EBBlocks.getDyedAlmentraSlab(colors.getId()));
             EBModels.registerVerticalStairs(generator, EBBlocks.getDyedAlmentraVerticalStairs(colors.getId()), EBBlocks.getDyedAlmentra(colors.getId()));
         }
 
         for (DyeColor colors : DyeColor.values()) {
-            BlockStateModelGenerator.BlockTexturePool dyedPolishedAlmentra = generator.registerCubeAllModelTexturePool(EBBlocks.getDyedPolishedAlmentra(colors.getId()));
+            BlockModelGenerators.BlockFamilyProvider dyedPolishedAlmentra = generator.family(EBBlocks.getDyedPolishedAlmentra(colors.getId()));
             dyedPolishedAlmentra.stairs(EBBlocks.getDyedPolishedAlmentraStairs(colors.getId()));
             dyedPolishedAlmentra.slab(EBBlocks.getDyedPolishedAlmentraSlab(colors.getId()));
             EBModels.registerVerticalStairs(generator, EBBlocks.getDyedPolishedAlmentraVerticalStairs(colors.getId()), EBBlocks.getDyedPolishedAlmentra(colors.getId()));
         }
 
         for (DyeColor colors : DyeColor.values()) {
-            BlockStateModelGenerator.BlockTexturePool dyedAlmentraBricks = generator.registerCubeAllModelTexturePool(EBBlocks.getDyedAlmentraBricks(colors.getId()));
+            BlockModelGenerators.BlockFamilyProvider dyedAlmentraBricks = generator.family(EBBlocks.getDyedAlmentraBricks(colors.getId()));
             dyedAlmentraBricks.stairs(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()));
             dyedAlmentraBricks.slab(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()));
             EBModels.registerVerticalStairs(generator, EBBlocks.getDyedAlmentraBrickVerticalStairs(colors.getId()), EBBlocks.getDyedAlmentraBricks(colors.getId()));
         }
 
-        generator.registerWallPlant(EBBlocks.MOSS_PASTE);
+        generator.createMultiface(EBBlocks.MOSS_PASTE);
 
 //        generator.registerBuiltin(EBModels.getEBNamespacedBlock("spruce_chest"),
 //                Blocks.SPRUCE_PLANKS).includeWithoutItem(EBBlocks.SPRUCE_CHEST, EBBlocks.TRAPPED_SPRUCE_CHEST);
@@ -737,183 +748,183 @@ public class EBModelGen extends FabricModelProvider {
 //        generator.registerBuiltin(EBModels.getEBNamespacedBlock("gloom_chest"),
 //                EBBlocks.GLOOM_PLANKS).includeWithoutItem(EBBlocks.GLOOM_CHEST, EBBlocks.TRAPPED_GLOOM_CHEST);
 
-        generator.registerCubeAllModelTexturePool(EBBlocks.PAPER_BLOCK);
+        generator.family(EBBlocks.PAPER_BLOCK);
         
-        BlockStateModelGenerator.BlockTexturePool thinPaper = generator.registerCubeAllModelTexturePool(EBBlocks.THIN_PAPER_BLOCK);
+        BlockModelGenerators.BlockFamilyProvider thinPaper = generator.family(EBBlocks.THIN_PAPER_BLOCK);
         thinPaper.stairs(EBBlocks.THIN_PAPER_STAIRS);
         thinPaper.slab(EBBlocks.THIN_PAPER_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.THIN_PAPER_VERTICAL_STAIRS, EBBlocks.THIN_PAPER_BLOCK);
-        generator.registerCubeAllModelTexturePool(EBBlocks.THIN_DIVIDED_PAPER_BLOCK);
+        generator.family(EBBlocks.THIN_DIVIDED_PAPER_BLOCK);
 
-        BlockStateModelGenerator.BlockTexturePool thickPaper = generator.registerCubeAllModelTexturePool(EBBlocks.THICK_PAPER_BLOCK);
+        BlockModelGenerators.BlockFamilyProvider thickPaper = generator.family(EBBlocks.THICK_PAPER_BLOCK);
         thickPaper.stairs(EBBlocks.THICK_PAPER_STAIRS);
         thickPaper.slab(EBBlocks.THICK_PAPER_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.THICK_PAPER_VERTICAL_STAIRS, EBBlocks.THICK_PAPER_BLOCK);
-        generator.registerCubeAllModelTexturePool(EBBlocks.THICK_DIVIDED_PAPER_BLOCK);
+        generator.family(EBBlocks.THICK_DIVIDED_PAPER_BLOCK);
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerator generator) {
-        generator.register(EBItems.ANCIENT_FRUIT, Models.GENERATED);
-        generator.register(EBItems.ANCIENT_SIGN, Models.GENERATED);
-        generator.register(EBItems.GLOOM_SIGN, Models.GENERATED);
+    public void generateItemModels(ItemModelGenerators generator) {
+        generator.generateFlatItem(EBItems.ANCIENT_FRUIT, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.ANCIENT_SIGN, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.GLOOM_SIGN, ModelTemplates.FLAT_ITEM);
 
-        generator.register(EBItems.ROYALTY_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.ANCIENT_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.BITTER_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.BOIN_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.BUSTLING_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.CHECKERED_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.DECAY_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.DESTRUCTION_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.FORWARDS_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.HEXXED_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.KITTEH_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.LIFE_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.MESMERIZE_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.PORTAL_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.POTTERY_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.RING_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.SNOUT_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.SPRITE_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.TWINS_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.WRATHFUL_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.IS_THAT_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.KOKOS_BUG_POTTERY_SHERD, Models.GENERATED);
-        generator.register(EBItems.THIEF_POTTERY_SHERD, Models.GENERATED);
+        generator.generateFlatItem(EBItems.ROYALTY_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.ANCIENT_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.BITTER_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.BOIN_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.BUSTLING_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.CHECKERED_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.DECAY_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.DESTRUCTION_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.FORWARDS_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.HEXXED_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.KITTEH_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.LIFE_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.MESMERIZE_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.PORTAL_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.POTTERY_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.RING_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.SNOUT_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.SPRITE_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.TWINS_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.WRATHFUL_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.IS_THAT_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.KOKOS_BUG_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.THIEF_POTTERY_SHERD, ModelTemplates.FLAT_ITEM);
 
-        generator.register(EBBlocks.SPRUCE_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.BIRCH_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.JUNGLE_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.ACACIA_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.DARK_OAK_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.MANGROVE_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.CHERRY_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.BAMBOO_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.CRIMSON_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.WARPED_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.ANCIENT_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.GLOOM_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.GLOOM_SEEDS.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.WEEPING_CANDLE.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.TWISTING_CANDLE.asItem(), Models.GENERATED);
+        generator.generateFlatItem(EBBlocks.SPRUCE_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.BIRCH_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.JUNGLE_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.ACACIA_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.DARK_OAK_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.MANGROVE_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.CHERRY_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.BAMBOO_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.CRIMSON_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.WARPED_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.ANCIENT_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.GLOOM_LADDER.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.GLOOM_SEEDS.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.WEEPING_CANDLE.asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.TWISTING_CANDLE.asItem(), ModelTemplates.FLAT_ITEM);
     }
 
     public static class EBModels {
         @Deprecated
-        public static Identifier getEBNamespacedBlock(String id) {
-            return Identifier.of(ExcessiveBuilding.MOD_ID, "block/" + id);
+        public static ResourceLocation getEBNamespacedBlock(String id) {
+            return ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, "block/" + id);
         }
         
-        public static final Model VERTICAL_STAIRS = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_vertical_stairs")
-                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+        public static final ModelTemplate VERTICAL_STAIRS = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, "template_vertical_stairs")
+                .withPrefix("block/")), Optional.empty(), TextureSlot.TEXTURE, TextureSlot.PARTICLE);
 
-        public static final Model SEA_GLASS_PANE = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_sea_glass_pane")
-                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+        public static final ModelTemplate SEA_GLASS_PANE = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, "template_sea_glass_pane")
+                .withPrefix("block/")), Optional.empty(), TextureSlot.TEXTURE, TextureSlot.PARTICLE);
 
-        public static final Model LADDER = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_ladder")
-                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+        public static final ModelTemplate LADDER = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, "template_ladder")
+                .withPrefix("block/")), Optional.empty(), TextureSlot.TEXTURE, TextureSlot.PARTICLE);
 
-        public static final Model MUG = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_mug")
-                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+        public static final ModelTemplate MUG = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, "template_mug")
+                .withPrefix("block/")), Optional.empty(), TextureSlot.TEXTURE, TextureSlot.PARTICLE);
 
-        public static final Model PARTICLE_CANDLE = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_particle_candle")
-                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
+        public static final ModelTemplate PARTICLE_CANDLE = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, "template_particle_candle")
+                .withPrefix("block/")), Optional.empty(), TextureSlot.TEXTURE, TextureSlot.PARTICLE);
 
-        public static void registerAlmentraStatueState(BlockStateModelGenerator generator, Block statue, Identifier model, Identifier diagonalModel) {
-            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(statue).coordinate(BlockStateVariantMap.create(AlmentraStatueBlock.ROTATION)
-                    .register(0, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R0))
-                    .register(1, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R0))
-                    .register(2, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R0))
-                    .register(3, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R0))
-                    .register(4, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                    .register(5, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                    .register(6, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                    .register(7, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                    .register(8, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-                    .register(9, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-                    .register(10, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-                    .register(11, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-                    .register(12, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R270))
-                    .register(13, BlockStateVariant.create().put(VariantSettings.MODEL, model).put(VariantSettings.Y, VariantSettings.Rotation.R270))
-                    .register(14, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
-                    .register(15, BlockStateVariant.create().put(VariantSettings.MODEL, diagonalModel).put(VariantSettings.Y, VariantSettings.Rotation.R270))
+        public static void registerAlmentraStatueState(BlockModelGenerators generator, Block statue, ResourceLocation model, ResourceLocation diagonalModel) {
+            generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(statue).with(PropertyDispatch.property(AlmentraStatueBlock.ROTATION)
+                    .select(0, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0))
+                    .select(1, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0))
+                    .select(2, Variant.variant().with(VariantProperties.MODEL, diagonalModel).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0))
+                    .select(3, Variant.variant().with(VariantProperties.MODEL, diagonalModel).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0))
+                    .select(4, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90))
+                    .select(5, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90))
+                    .select(6, Variant.variant().with(VariantProperties.MODEL, diagonalModel).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90))
+                    .select(7, Variant.variant().with(VariantProperties.MODEL, diagonalModel).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90))
+                    .select(8, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180))
+                    .select(9, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180))
+                    .select(10, Variant.variant().with(VariantProperties.MODEL, diagonalModel).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180))
+                    .select(11, Variant.variant().with(VariantProperties.MODEL, diagonalModel).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180))
+                    .select(12, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270))
+                    .select(13, Variant.variant().with(VariantProperties.MODEL, model).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270))
+                    .select(14, Variant.variant().with(VariantProperties.MODEL, diagonalModel).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270))
+                    .select(15, Variant.variant().with(VariantProperties.MODEL, diagonalModel).with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270))
             ));
         }
 
-        public static void registerParticleCandle(BlockStateModelGenerator generator, Block particleCandle) {
-            TextureMap textureMap = TextureMap.all(TextureMap.getId(particleCandle));
-            TextureMap textureMapLit = TextureMap.all(TextureMap.getSubId(particleCandle, "_lit"));
-            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(particleCandle).coordinate(BlockStateVariantMap.create(Properties.LIT)
-            .register(Boolean.FALSE, BlockStateVariant.create().put(VariantSettings.MODEL, PARTICLE_CANDLE.upload(particleCandle, textureMap, generator.modelCollector)))
-            .register(Boolean.TRUE, BlockStateVariant.create().put(VariantSettings.MODEL, PARTICLE_CANDLE.uploadWithoutVariant(particleCandle, "_lit", textureMapLit, generator.modelCollector)))));
+        public static void registerParticleCandle(BlockModelGenerators generator, Block particleCandle) {
+            TextureMapping textureMap = TextureMapping.cube(TextureMapping.getBlockTexture(particleCandle));
+            TextureMapping textureMapLit = TextureMapping.cube(TextureMapping.getBlockTexture(particleCandle, "_lit"));
+            generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(particleCandle).with(PropertyDispatch.property(BlockStateProperties.LIT)
+            .select(Boolean.FALSE, Variant.variant().with(VariantProperties.MODEL, PARTICLE_CANDLE.create(particleCandle, textureMap, generator.modelOutput)))
+            .select(Boolean.TRUE, Variant.variant().with(VariantProperties.MODEL, PARTICLE_CANDLE.createWithOverride(particleCandle, "_lit", textureMapLit, generator.modelOutput)))));
         }
 
-        private static void registerEBBookshelf(BlockStateModelGenerator generator, Block bookshelf, Block planks) {
-            TextureMap textureMap = TextureMap.sideEnd(TextureMap.getId(bookshelf), TextureMap.getId(planks));
-            Identifier model = Models.CUBE_COLUMN.upload(bookshelf, textureMap, generator.modelCollector);
-            generator.blockStateCollector.accept(generator.createSingletonBlockState(bookshelf, model));
+        private static void registerEBBookshelf(BlockModelGenerators generator, Block bookshelf, Block planks) {
+            TextureMapping textureMap = TextureMapping.column(TextureMapping.getBlockTexture(bookshelf), TextureMapping.getBlockTexture(planks));
+            ResourceLocation model = ModelTemplates.CUBE_COLUMN.create(bookshelf, textureMap, generator.modelOutput);
+            generator.blockStateOutput.accept(generator.createSimpleBlock(bookshelf, model));
         }
 
-        private static void registerDecorativeShelfModel(BlockStateModelGenerator generator, Block bookshelf, String variant, Block planks) {
-            TextureMap textureMap = TextureMap.sideEnd(TextureMap.getSubId(bookshelf, variant), TextureMap.getId(planks));
-            Identifier identifier = Models.CUBE_COLUMN.upload(bookshelf, variant, textureMap, generator.modelCollector);
+        private static void registerDecorativeShelfModel(BlockModelGenerators generator, Block bookshelf, String variant, Block planks) {
+            TextureMapping textureMap = TextureMapping.column(TextureMapping.getBlockTexture(bookshelf, variant), TextureMapping.getBlockTexture(planks));
+            ResourceLocation identifier = ModelTemplates.CUBE_COLUMN.createWithSuffix(bookshelf, variant, textureMap, generator.modelOutput);
         }
 
-        public static void registerTintableCrossWithoutItem(BlockStateModelGenerator generator, Block block, BlockStateModelGenerator.TintType tintType) {
-            generator.registerTintableCrossBlockState(block, tintType);
+        public static void registerTintableCrossWithoutItem(BlockModelGenerators generator, Block block, BlockModelGenerators.TintState tintType) {
+            generator.createCrossBlock(block, tintType);
         }
 
-        public static void registerVerticalStairs(BlockStateModelGenerator generator, Block verticalStairs, Block texture) {
-            Identifier model = VERTICAL_STAIRS.upload(verticalStairs, TextureMap.texture(texture), generator.modelCollector);
-            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(verticalStairs).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
-                    .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, true))
-                    .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, true))
-                    .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true))
-                    .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true))));
+        public static void registerVerticalStairs(BlockModelGenerators generator, Block verticalStairs, Block texture) {
+            ResourceLocation model = VERTICAL_STAIRS.create(verticalStairs, TextureMapping.defaultTexture(texture), generator.modelOutput);
+            generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(verticalStairs).with(PropertyDispatch.property(BlockStateProperties.HORIZONTAL_FACING)
+                    .select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0).with(VariantProperties.UV_LOCK, true))
+                    .select(Direction.EAST, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90).with(VariantProperties.UV_LOCK, true))
+                    .select(Direction.WEST, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270).with(VariantProperties.UV_LOCK, true))
+                    .select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180).with(VariantProperties.UV_LOCK, true))));
         }
 
-        public static void registerMug(BlockStateModelGenerator generator, Block mug) {
-            Identifier model = MUG.upload(mug, TextureMap.texture(mug), generator.modelCollector);
-            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(mug).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
-                    .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, false))
-                    .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, false))
-                    .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, false))
-                    .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, false))));
+        public static void registerMug(BlockModelGenerators generator, Block mug) {
+            ResourceLocation model = MUG.create(mug, TextureMapping.defaultTexture(mug), generator.modelOutput);
+            generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(mug).with(PropertyDispatch.property(BlockStateProperties.HORIZONTAL_FACING)
+                    .select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0).with(VariantProperties.UV_LOCK, false))
+                    .select(Direction.EAST, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90).with(VariantProperties.UV_LOCK, false))
+                    .select(Direction.WEST, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270).with(VariantProperties.UV_LOCK, false))
+                    .select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180).with(VariantProperties.UV_LOCK, false))));
         }
 
-            public static void registerSeaGlassPane(BlockStateModelGenerator generator, Block seaGlass, Block texture) {
-                Identifier model = SEA_GLASS_PANE.upload(seaGlass, TextureMap.texture(texture), generator.modelCollector);
-                generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(seaGlass).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
-                        .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                                .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, true))
-                        .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                                .put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, true))
-                        .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                                .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true))
-                        .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                                .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true))));
+            public static void registerSeaGlassPane(BlockModelGenerators generator, Block seaGlass, Block texture) {
+                ResourceLocation model = SEA_GLASS_PANE.create(seaGlass, TextureMapping.defaultTexture(texture), generator.modelOutput);
+                generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(seaGlass).with(PropertyDispatch.property(BlockStateProperties.HORIZONTAL_FACING)
+                        .select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0).with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.EAST, Variant.variant().with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90).with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.WEST, Variant.variant().with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270).with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180).with(VariantProperties.UV_LOCK, true))));
         }
 
-        public static void registerLadder(BlockStateModelGenerator generator, Block ladder) {
-            Identifier model = LADDER.upload(ladder, TextureMap.texture(ladder), generator.modelCollector);
-            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ladder).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
-                    .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, true))
-                    .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, true))
-                    .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true))
-                    .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true))));
+        public static void registerLadder(BlockModelGenerators generator, Block ladder) {
+            ResourceLocation model = LADDER.create(ladder, TextureMapping.defaultTexture(ladder), generator.modelOutput);
+            generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(ladder).with(PropertyDispatch.property(BlockStateProperties.HORIZONTAL_FACING)
+                    .select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0).with(VariantProperties.UV_LOCK, true))
+                    .select(Direction.EAST, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90).with(VariantProperties.UV_LOCK, true))
+                    .select(Direction.WEST, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270).with(VariantProperties.UV_LOCK, true))
+                    .select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model)
+                            .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180).with(VariantProperties.UV_LOCK, true))));
         }
     }
 }

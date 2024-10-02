@@ -2,62 +2,70 @@ package net.yirmiri.excessive_building.worldgen;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.registry.tag.BiomeTags;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.YOffset;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.*;
+import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.placement.BiomeFilter;
+import net.minecraft.world.level.levelgen.placement.CountPlacement;
+import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
+import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 import java.util.List;
 
 public class EBPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> ANCIENT_TREE = createKey("ancient_tree"); //ancient trees don't generate but whatever
-    public static final RegistryKey<PlacedFeature> GLOOM_TREE = createKey("gloom_tree"); //neither do these
-    public static final RegistryKey<PlacedFeature> ORE_BRIMSTONE = createKey("ore_brimstone");
-    public static final RegistryKey<PlacedFeature> PATCH_ROSE = createKey("patch_rose");
-    public static final RegistryKey<PlacedFeature> PATCH_CYAN_ROSE = createKey("patch_cyan_rose");
-    public static final RegistryKey<PlacedFeature> PATCH_WHITE_ROSE = createKey("patch_white_rose");
-    public static final RegistryKey<PlacedFeature> ORE_ALMENTRA = createKey("ore_almentra");
+    public static final ResourceKey<PlacedFeature> ANCIENT_TREE = createKey("ancient_tree"); //ancient trees don't generate but whatever
+    public static final ResourceKey<PlacedFeature> GLOOM_TREE = createKey("gloom_tree"); //neither do these
+    public static final ResourceKey<PlacedFeature> ORE_BRIMSTONE = createKey("ore_brimstone");
+    public static final ResourceKey<PlacedFeature> PATCH_ROSE = createKey("patch_rose");
+    public static final ResourceKey<PlacedFeature> PATCH_CYAN_ROSE = createKey("patch_cyan_rose");
+    public static final ResourceKey<PlacedFeature> PATCH_WHITE_ROSE = createKey("patch_white_rose");
+    public static final ResourceKey<PlacedFeature> ORE_ALMENTRA = createKey("ore_almentra");
 
-    public static void bootstrap(Registerable<PlacedFeature> ctx) {
-        var configuredFeatureRegistryEntryLookup = ctx.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+    public static void bootstrap(BootstapContext<PlacedFeature> ctx) {
+        var configuredFeatureRegistryEntryLookup = ctx.lookup(Registries.CONFIGURED_FEATURE);
 
         register(ctx, ORE_ALMENTRA, configuredFeatureRegistryEntryLookup.getOrThrow(EBConfiguredFeatures.ORE_ALMENTRA),
-                PlacementModifiers.modifiersWithCount(6, HeightRangePlacementModifier.uniform(YOffset.fixed(24), YOffset.fixed(128))));
+                PlacementModifiers.modifiersWithCount(6, HeightRangePlacement.uniform(VerticalAnchor.absolute(24), VerticalAnchor.absolute(128))));
 
         register(ctx, ORE_BRIMSTONE, configuredFeatureRegistryEntryLookup.getOrThrow(EBConfiguredFeatures.ORE_BRIMSTONE),
-                PlacementModifiers.modifiersWithCount(4, HeightRangePlacementModifier.uniform(YOffset.fixed(16), YOffset.fixed(108))));
+                PlacementModifiers.modifiersWithCount(4, HeightRangePlacement.uniform(VerticalAnchor.absolute(16), VerticalAnchor.absolute(108))));
     }
 
     public static void addBiomeModifiers() {
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_NETHER), GenerationStep.Feature.UNDERGROUND_ORES, EBPlacedFeatures.ORE_BRIMSTONE);
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_ROSE);
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Feature.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_WHITE_ROSE);
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_CYAN_ROSE);
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Feature.UNDERGROUND_ORES, EBPlacedFeatures.ORE_ALMENTRA);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_NETHER), GenerationStep.Decoration.UNDERGROUND_ORES, EBPlacedFeatures.ORE_BRIMSTONE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_FOREST), GenerationStep.Decoration.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_ROSE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Decoration.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_WHITE_ROSE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Decoration.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_CYAN_ROSE);
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Decoration.UNDERGROUND_ORES, EBPlacedFeatures.ORE_ALMENTRA);
     }
 
-    public static RegistryKey<PlacedFeature> createKey(String id) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(ExcessiveBuilding.MOD_ID, id));
+    public static ResourceKey<PlacedFeature> createKey(String id) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id));
     }
 
-    private static void register(Registerable<PlacedFeature> ctx, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
+    private static void register(BootstapContext<PlacedFeature> ctx, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
         ctx.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 
     public static class PlacementModifiers {
         public static List<PlacementModifier> modifiers(PlacementModifier perChunk, PlacementModifier height) {
-            return List.of(perChunk, SquarePlacementModifier.of(), height, BiomePlacementModifier.of());
+            return List.of(perChunk, InSquarePlacement.spread(), height, BiomeFilter.biome());
         }
 
         public static List<PlacementModifier> modifiersWithCount(int perChunk, PlacementModifier height) {
-            return modifiers(CountPlacementModifier.of(perChunk), height);
+            return modifiers(CountPlacement.of(perChunk), height);
         }
     }
 }

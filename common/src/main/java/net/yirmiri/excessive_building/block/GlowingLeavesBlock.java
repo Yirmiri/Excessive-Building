@@ -1,24 +1,24 @@
 package net.yirmiri.excessive_building.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.particle.ParticleEffect;
-import net.minecraft.screen.ScreenTexts;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.text.Text;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.network.chat.CommonComponents;
+import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.phys.BlockHitResult;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.util.EBTags;
 import org.jetbrains.annotations.NotNull;
@@ -27,51 +27,51 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class GlowingLeavesBlock extends FloweringLeavesBlock {
-    public static final BooleanProperty GLOWING = BooleanProperty.of("glowing");
+    public static final BooleanProperty GLOWING = BooleanProperty.create("glowing");
 
-    public GlowingLeavesBlock(ParticleEffect type, Settings settings) {
+    public GlowingLeavesBlock(ParticleOptions type, Properties settings) {
         super(type, settings);
-        setDefaultState(stateManager.getDefaultState().with(GLOWING, true));
+        registerDefaultState(stateDefinition.any().setValue(GLOWING, true));
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable BlockView context, List<Text> tooltip, TooltipContext options) {
+    public void appendHoverText(ItemStack stack, @Nullable BlockGetter context, List<Component> tooltip, TooltipFlag options) {
         if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
-            super.appendTooltip(stack, context, tooltip, options);
-            tooltip.add(ScreenTexts.EMPTY);
-            tooltip.add(Text.translatable("tooltip.block.interact_glow_removals").formatted(Formatting.GRAY));
-            tooltip.add(ScreenTexts.space().append(Text.translatable("tooltip.block.glow_removal").formatted(Formatting.BLUE)));
+            super.appendHoverText(stack, context, tooltip, options);
+            tooltip.add(CommonComponents.EMPTY);
+            tooltip.add(Component.translatable("tooltip.block.interact_glow_removals").withStyle(ChatFormatting.GRAY));
+            tooltip.add(CommonComponents.space().append(Component.translatable("tooltip.block.glow_removal").withStyle(ChatFormatting.BLUE)));
         }
     }
 
     @Override @NotNull
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack itemstack = player.getStackInHand(hand);
-        if (state.get(GLOWING) && itemstack.isIn(EBTags.Items.GLOW_REMOVALS)) {
+    public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+        ItemStack itemstack = player.getItemInHand(hand);
+        if (state.getValue(GLOWING) && itemstack.is(EBTags.Items.GLOW_REMOVALS)) {
             removeGlow(state, world, pos);
-            player.swingHand(hand);
+            player.swing(hand);
             if (!player.isCreative()) {
-                itemstack.decrement(1);
+                itemstack.shrink(1);
             }
         } else {
-            return ActionResult.PASS;
+            return InteractionResult.PASS;
         }
-        return ActionResult.success(world.isClient);
+        return InteractionResult.sidedSuccess(world.isClientSide);
     }
 
-    private static void removeGlow(BlockState state, World world, BlockPos pos) {
-        if (!world.isClient) {
-            world.setBlockState(pos, state.with(GLOWING, false));
-            world.playSound(null, pos, SoundEvents.ITEM_DYE_USE, SoundCategory.BLOCKS, 1, 1);
+    private static void removeGlow(BlockState state, Level world, BlockPos pos) {
+        if (!world.isClientSide) {
+            world.setBlockAndUpdate(pos, state.setValue(GLOWING, false));
+            world.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1, 1);
         }
     }
 
     public static boolean isGlowing(BlockState state) {
-        return state.get(GLOWING);
+        return state.getValue(GLOWING);
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(GLOWING, DISTANCE, PERSISTENT, WATERLOGGED);
     }
 }

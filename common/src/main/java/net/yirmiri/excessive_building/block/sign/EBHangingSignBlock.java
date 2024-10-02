@@ -1,19 +1,19 @@
 package net.yirmiri.excessive_building.block.sign;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HangingSignBlock;
-import net.minecraft.block.WoodType;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.CeilingHangingSignBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.yirmiri.excessive_building.block.entity.EBHangingSignBlockEntity;
 
-public class EBHangingSignBlock extends HangingSignBlock {
-    public EBHangingSignBlock(WoodType woodType, Settings settings) {
+public class EBHangingSignBlock extends CeilingHangingSignBlock {
+    public EBHangingSignBlock(WoodType woodType, Properties settings) {
         super(settings, woodType);
     }
 
     @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new EBHangingSignBlockEntity(pos, state);
     }
 }

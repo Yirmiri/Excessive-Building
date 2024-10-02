@@ -1,33 +1,33 @@
 package net.yirmiri.excessive_building.block;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.CraftingTableBlock;
-import net.minecraft.resource.featuretoggle.FeatureSet;
-import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.screen.ScreenHandlerContext;
-import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
-import net.minecraft.text.Text;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleMenuProvider;
+import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.CraftingTableBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.util.EBCraftingScreenHandler;
 
 public class EBCraftingTableBlock extends CraftingTableBlock {
-    private static final Text TITLE = Text.translatable("container.crafting");
+    private static final Component TITLE = Component.translatable("container.crafting");
 
-    public EBCraftingTableBlock(Settings settings) {
+    public EBCraftingTableBlock(Properties settings) {
         super(settings);
     }
 
     @Override
-    public boolean isEnabled(FeatureSet enable) {
+    public boolean isEnabled(FeatureFlagSet enable) {
         return EBConfig.ENABLE_CRAFTING_TABLE_VARIANTS.get();
     }
 
     @Override
-    public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
-        return new SimpleNamedScreenHandlerFactory(
-                (syncId, inventory, player) -> new EBCraftingScreenHandler(syncId, inventory, ScreenHandlerContext.create(world, pos), this), TITLE
+    public MenuProvider getMenuProvider(BlockState state, Level world, BlockPos pos) {
+        return new SimpleMenuProvider(
+                (syncId, inventory, player) -> new EBCraftingScreenHandler(syncId, inventory, ContainerLevelAccess.create(world, pos), this), TITLE
         );
     }
 }

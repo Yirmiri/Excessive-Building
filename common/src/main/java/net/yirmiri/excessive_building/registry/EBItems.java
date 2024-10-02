@@ -1,11 +1,11 @@
 package net.yirmiri.excessive_building.registry;
 
-import net.minecraft.item.HangingSignItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.SignItem;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.HangingSignItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SignItem;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.item.configurable.EBPotterySherdItem;
 import net.yirmiri.excessive_building.item.configurable.ResourceBrickBlockItem;
@@ -20,11 +20,11 @@ public class EBItems {
     public static final Item NETHERITE_BRICK_VERTICAL_STAIRS = register("netherite_brick_vertical_stairs", new ResourceBrickVerticalStairsBlockItem(EBBlocks.NETHERITE_BRICK_SLAB, EBProperties.ItemP.NETHERITE));
 
     //SIGNS
-    public static final Item ANCIENT_SIGN = register("ancient_sign", new SignItem(new Item.Settings().maxCount(16), EBBlocks.ANCIENT_SIGN, EBBlocks.ANCIENT_WALL_SIGN));
-    public static final Item ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", new HangingSignItem(EBBlocks.ANCIENT_HANGING_SIGN, EBBlocks.ANCIENT_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
+    public static final Item ANCIENT_SIGN = register("ancient_sign", new SignItem(new Item.Properties().stacksTo(16), EBBlocks.ANCIENT_SIGN, EBBlocks.ANCIENT_WALL_SIGN));
+    public static final Item ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", new HangingSignItem(EBBlocks.ANCIENT_HANGING_SIGN, EBBlocks.ANCIENT_WALL_HANGING_SIGN, new Item.Properties().stacksTo(16)));
 
-    public static final Item GLOOM_SIGN = register("gloom_sign", new SignItem(new Item.Settings().maxCount(16), EBBlocks.GLOOM_SIGN, EBBlocks.GLOOM_WALL_SIGN));
-    public static final Item GLOOM_HANGING_SIGN = register("gloom_hanging_sign", new HangingSignItem(EBBlocks.GLOOM_HANGING_SIGN, EBBlocks.GLOOM_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
+    public static final Item GLOOM_SIGN = register("gloom_sign", new SignItem(new Item.Properties().stacksTo(16), EBBlocks.GLOOM_SIGN, EBBlocks.GLOOM_WALL_SIGN));
+    public static final Item GLOOM_HANGING_SIGN = register("gloom_hanging_sign", new HangingSignItem(EBBlocks.GLOOM_HANGING_SIGN, EBBlocks.GLOOM_WALL_HANGING_SIGN, new Item.Properties().stacksTo(16)));
 
     //FOOD
     public static final Item ANCIENT_FRUIT = register("ancient_fruit", new Item(EBProperties.ItemP.ANCIENT_FRUIT));
@@ -55,7 +55,7 @@ public class EBItems {
     public static final Item THIEF_POTTERY_SHERD = register("thief_pottery_sherd", new EBPotterySherdItem(EBProperties.ItemP.GENERIC));
 
     private static Item register(String id, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), item);
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), item);
     }
 
     public static void loadItems() {

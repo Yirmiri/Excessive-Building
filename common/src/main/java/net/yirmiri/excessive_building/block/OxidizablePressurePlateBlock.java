@@ -1,29 +1,34 @@
 package net.yirmiri.excessive_building.block;
 
 import net.minecraft.block.*;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.WeatheringCopper;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 
-public class OxidizablePressurePlateBlock extends CopperPressurePlateBlock implements Oxidizable {
-    private final Oxidizable.OxidationLevel oxidationLevel;
+public class OxidizablePressurePlateBlock extends CopperPressurePlateBlock implements WeatheringCopper {
+    private final WeatheringCopper.WeatherState oxidationLevel;
 
-    public OxidizablePressurePlateBlock(Oxidizable.OxidationLevel oxidationLevel, PressurePlateBlock.ActivationRule rule, AbstractBlock.Settings settings, BlockSetType type, int ticks) {
+    public OxidizablePressurePlateBlock(WeatheringCopper.WeatherState oxidationLevel, PressurePlateBlock.Sensitivity rule, BlockBehaviour.Properties settings, BlockSetType type, int ticks) {
         super(rule, settings, type, ticks);
         this.oxidationLevel = oxidationLevel;
     }
 
     @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        this.tickDegradation(state, world, pos, random);
+    public void randomTick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+        this.onRandomTick(state, world, pos, random);
     }
 
     @Override
-    public boolean hasRandomTicks(BlockState state) {
-        return Oxidizable.getIncreasedOxidationBlock(state.getBlock()).isPresent();
+    public boolean isRandomlyTicking(BlockState state) {
+        return WeatheringCopper.getNext(state.getBlock()).isPresent();
     }
 
-    public Oxidizable.OxidationLevel getDegradationLevel() {
+    public WeatheringCopper.WeatherState getAge() {
         return this.oxidationLevel;
     }
 }

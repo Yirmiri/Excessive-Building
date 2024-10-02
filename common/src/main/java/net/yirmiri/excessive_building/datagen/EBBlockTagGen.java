@@ -2,21 +2,21 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.util.DyeColor;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.util.EBTags;
 
 import java.util.concurrent.CompletableFuture;
 
 public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
-    public EBBlockTagGen(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> future) {
+    public EBBlockTagGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> future) {
         super(output, future);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup wrapper) {
+    protected void addTags(HolderLookup.Provider wrapper) {
         appendAxeMineable();
         appendPickaxeMineable();
         appendHoeMineable();
@@ -59,20 +59,20 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendReplaceable() {
-        getOrCreateTagBuilder(BlockTags.REPLACEABLE)
+        tag(BlockTags.REPLACEABLE)
                 .add(EBBlocks.MOSS_PASTE)
         ;
     }
 
     public void appendCandles() {
-        getOrCreateTagBuilder(BlockTags.CANDLES)
+        tag(BlockTags.CANDLES)
                 .add(EBBlocks.WEEPING_CANDLE)
                 .add(EBBlocks.TWISTING_CANDLE)
         ;
     }
 
     public void appendDecoratives() {
-        getOrCreateTagBuilder(EBTags.Blocks.DECORATIVES)
+        tag(EBTags.Blocks.DECORATIVES)
                 .add(EBBlocks.WOODEN_MUG)
                 .add(EBBlocks.GLASS_JAR)
                 .add(EBBlocks.GLASS_JAR_OF_FIRE)
@@ -81,7 +81,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendEnchantmentPowerProvider() {
-        getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
+        tag(BlockTags.ENCHANTMENT_POWER_PROVIDER)
                 .add(EBBlocks.SPRUCE_BOOKSHELF)
                 .add(EBBlocks.BIRCH_BOOKSHELF)
                 .add(EBBlocks.JUNGLE_BOOKSHELF)
@@ -110,7 +110,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendClimbable() {
-        getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+        tag(BlockTags.CLIMBABLE)
                 .add(EBBlocks.SPRUCE_LADDER)
                 .add(EBBlocks.BIRCH_LADDER)
                 .add(EBBlocks.JUNGLE_LADDER)
@@ -127,42 +127,42 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendWoodenDoors() {
-        getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
+        tag(BlockTags.WOODEN_DOORS)
                 .add(EBBlocks.ANCIENT_DOOR)
                 .add(EBBlocks.GLOOM_DOOR)
         ;
     }
 
     public void appendWoodenFences() {
-        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+        tag(BlockTags.WOODEN_FENCES)
                 .add(EBBlocks.ANCIENT_FENCE)
                 .add(EBBlocks.GLOOM_FENCE)
         ;
     }
 
     public void appendWoodenStairs() {
-        getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
+        tag(BlockTags.WOODEN_STAIRS)
                 .add(EBBlocks.ANCIENT_STAIRS)
                 .add(EBBlocks.GLOOM_STAIRS)
         ;
     }
 
     public void appendWoodenSlabs() {
-        getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
+        tag(BlockTags.WOODEN_SLABS)
                 .add(EBBlocks.ANCIENT_SLAB)
                 .add(EBBlocks.GLOOM_SLAB)
         ;
     }
 
     public void appendWoodenTrapdoors() {
-        getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
+        tag(BlockTags.WOODEN_TRAPDOORS)
                 .add(EBBlocks.ANCIENT_TRAPDOOR)
                 .add(EBBlocks.GLOOM_TRAPDOOR)
         ;
     }
 
     public void appendSoulSpeedBlocks() {
-        getOrCreateTagBuilder(BlockTags.SOUL_SPEED_BLOCKS)
+        tag(BlockTags.SOUL_SPEED_BLOCKS)
                 .add(EBBlocks.POLISHED_SOUL_SANDSTONE)
                 .add(EBBlocks.POLISHED_SOUL_SANDSTONE_STAIRS)
                 .add(EBBlocks.POLISHED_SOUL_SANDSTONE_VERTICAL_STAIRS)
@@ -199,7 +199,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendSoulFireBaseBlocks() {
-        getOrCreateTagBuilder(BlockTags.SOUL_FIRE_BASE_BLOCKS)
+        tag(BlockTags.SOUL_FIRE_BASE_BLOCKS)
                 .add(EBBlocks.POLISHED_SOUL_SANDSTONE)
                 .add(EBBlocks.POLISHED_SOUL_SANDSTONE_STAIRS)
                 .add(EBBlocks.POLISHED_SOUL_SANDSTONE_VERTICAL_STAIRS)
@@ -236,37 +236,37 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendDampensVibrations() {
-        getOrCreateTagBuilder(BlockTags.DAMPENS_VIBRATIONS)
+        tag(BlockTags.DAMPENS_VIBRATIONS)
 
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(BlockTags.DAMPENS_VIBRATIONS).add(EBBlocks.getDyedKnittedWools(colors.getId()));
+            tag(BlockTags.DAMPENS_VIBRATIONS).add(EBBlocks.getDyedKnittedWools(colors.getId()));
         }
     }
 
     public void appendWool() {
-        getOrCreateTagBuilder(BlockTags.WOOL)
+        tag(BlockTags.WOOL)
 
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(BlockTags.WOOL).add(EBBlocks.getDyedKnittedWools(colors.getId()));
+            tag(BlockTags.WOOL).add(EBBlocks.getDyedKnittedWools(colors.getId()));
         }
     }
 
     public void appendWoolCarpets() {
-        getOrCreateTagBuilder(BlockTags.WOOL_CARPETS)
+        tag(BlockTags.WOOL_CARPETS)
 
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(BlockTags.WOOL_CARPETS).add(EBBlocks.getDyedKnittedCarpets(colors.getId()));
+            tag(BlockTags.WOOL_CARPETS).add(EBBlocks.getDyedKnittedCarpets(colors.getId()));
         }
     }
 
     public void appendBeaconBaseBlocks() {
-        getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
+        tag(BlockTags.BEACON_BASE_BLOCKS)
                 .add(EBBlocks.IRON_BRICKS)
                 .add(EBBlocks.IRON_BRICK_STAIRS)
                 .add(EBBlocks.IRON_BRICK_VERTICAL_STAIRS)
@@ -289,7 +289,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendGuardedByPiglins() {
-        getOrCreateTagBuilder(BlockTags.GUARDED_BY_PIGLINS)
+        tag(BlockTags.GUARDED_BY_PIGLINS)
                 .add(EBBlocks.GOLD_BRICKS)
                 .add(EBBlocks.GOLD_BRICK_STAIRS)
                 .add(EBBlocks.GOLD_BRICK_SLAB)
@@ -298,7 +298,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendNeedsDiamondTool() {
-        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(EBBlocks.NETHERITE_BRICKS)
                 .add(EBBlocks.NETHERITE_BRICK_STAIRS)
                 .add(EBBlocks.NETHERITE_BRICK_SLAB)
@@ -307,7 +307,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendNeedsIronTool() {
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+        tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(EBBlocks.GOLD_BRICKS)
                 .add(EBBlocks.GOLD_BRICK_STAIRS)
                 .add(EBBlocks.GOLD_BRICK_SLAB)
@@ -328,7 +328,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendNeedsStoneTool() {
-        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+        tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(EBBlocks.CUT_COPPER_VERTICAL_STAIRS)
                 .add(EBBlocks.EXPOSED_CUT_COPPER_VERTICAL_STAIRS)
                 .add(EBBlocks.WEATHERED_CUT_COPPER_VERTICAL_STAIRS)
@@ -381,63 +381,63 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendWoodenPressurePlates() {
-        getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
+        tag(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(EBBlocks.ANCIENT_PRESSURE_PLATE)
                 .add(EBBlocks.GLOOM_PRESSURE_PLATE)
         ;
     }
 
     public void appendWoodenButtons() {
-        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
+        tag(BlockTags.WOODEN_BUTTONS)
                 .add(EBBlocks.ANCIENT_BUTTON)
                 .add(EBBlocks.GLOOM_BUTTON)
         ;
     }
 
     public void appendSigns() {
-        getOrCreateTagBuilder(BlockTags.SIGNS)
+        tag(BlockTags.SIGNS)
                 .add(EBBlocks.ANCIENT_SIGN)
                 .add(EBBlocks.GLOOM_SIGN)
         ;
     }
 
     public void appendWallSigns() {
-        getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
+        tag(BlockTags.WALL_SIGNS)
                 .add(EBBlocks.ANCIENT_WALL_SIGN)
                 .add(EBBlocks.GLOOM_WALL_SIGN)
         ;
     }
 
     public void appendHangingSigns() {
-        getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
+        tag(BlockTags.CEILING_HANGING_SIGNS)
                 .add(EBBlocks.ANCIENT_HANGING_SIGN)
                 .add(EBBlocks.GLOOM_HANGING_SIGN)
         ;
     }
 
     public void appendWallHangingSigns() {
-        getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
+        tag(BlockTags.WALL_HANGING_SIGNS)
                 .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN)
                 .add(EBBlocks.GLOOM_WALL_HANGING_SIGN)
         ;
     }
 
     public void appendLogs() {
-        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+        tag(BlockTags.LOGS_THAT_BURN)
                 .addTag(EBTags.Blocks.ANCIENT_LOGS)
                 .addTag(EBTags.Blocks.GLOOM_LOGS)
         ;
     }
 
     public void appendLeaves() {
-        getOrCreateTagBuilder(BlockTags.LEAVES)
+        tag(BlockTags.LEAVES)
                 .add(EBBlocks.ANCIENT_LEAVES)
                 .add(EBBlocks.GLOOM_LEAVES)
         ;
     }
 
     public void appendGloomLogs() {
-        getOrCreateTagBuilder(EBTags.Blocks.GLOOM_LOGS)
+        tag(EBTags.Blocks.GLOOM_LOGS)
                 .add(EBBlocks.GLOOM_LOG)
                 .add(EBBlocks.STRIPPED_GLOOM_LOG)
                 .add(EBBlocks.GLOOM_WOOD)
@@ -446,7 +446,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendAncientLogs() {
-        getOrCreateTagBuilder(EBTags.Blocks.ANCIENT_LOGS)
+        tag(EBTags.Blocks.ANCIENT_LOGS)
                 .add(EBBlocks.ANCIENT_LOG)
                 .add(EBBlocks.STRIPPED_ANCIENT_LOG)
                 .add(EBBlocks.ANCIENT_WOOD)
@@ -455,7 +455,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
     public void appendSaplings() {
-        getOrCreateTagBuilder(BlockTags.SAPLINGS)
+        tag(BlockTags.SAPLINGS)
                 .add(EBBlocks.ANCIENT_SAPLING)
                 .add(EBBlocks.GLOOM_SEEDS)
                 .add(EBBlocks.GLOOM_SAPLING)
@@ -463,7 +463,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
         public void appendFlowerPots() {
-            getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+            tag(BlockTags.FLOWER_POTS)
                     .add(EBBlocks.POTTED_ANCIENT_SAPLING)
                     .add(EBBlocks.POTTED_ROSE)
                     .add(EBBlocks.POTTED_CYAN_ROSE)
@@ -473,7 +473,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         }
 
     public void appendSmallFlowers() {
-        getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
+        tag(BlockTags.SMALL_FLOWERS)
                 .add(EBBlocks.ROSE)
                 .add(EBBlocks.CYAN_ROSE)
                 .add(EBBlocks.WHITE_ROSE)
@@ -481,21 +481,21 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     }
 
         public void appendFences() {
-            getOrCreateTagBuilder(BlockTags.FENCES)
+            tag(BlockTags.FENCES)
                     .add(EBBlocks.ANCIENT_FENCE)
                     .add(EBBlocks.GLOOM_FENCE)
             ;
         }
 
         public void appendFenceGates() {
-            getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+            tag(BlockTags.FENCE_GATES)
                     .add(EBBlocks.ANCIENT_FENCE_GATE)
                     .add(EBBlocks.GLOOM_FENCE_GATE)
             ;
         }
 
         public void appendWalls() {
-            getOrCreateTagBuilder(BlockTags.WALLS)
+            tag(BlockTags.WALLS)
                     .add(EBBlocks.COBBLESTONE_BRICK_WALL)
                     .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)
                     .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)
@@ -512,7 +512,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         }
 
         public void appendPickaxeMineable() {
-            getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+            tag(BlockTags.MINEABLE_WITH_PICKAXE)
                     .add(EBBlocks.ALMENTRA_STATUE)
                     .add(EBBlocks.ALMENTRA)
                     .add(EBBlocks.ALMENTRA_STAIRS)
@@ -766,26 +766,26 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
             ;
 
             for (DyeColor colors : DyeColor.values()) {
-                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTiles(colors.getId()));
-                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTileStairs(colors.getId()));
-                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()));
-                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedTerracottaTileSlab(colors.getId()));
-                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedAlmentraStatues(colors.getId()));
-                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedAlmentra(colors.getId()));
-                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedPolishedAlmentra(colors.getId()));
-                getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE).add(EBBlocks.getDyedAlmentraBricks(colors.getId()));
+                tag(BlockTags.MINEABLE_WITH_PICKAXE).add(EBBlocks.getDyedTerracottaTiles(colors.getId()));
+                tag(BlockTags.MINEABLE_WITH_PICKAXE).add(EBBlocks.getDyedTerracottaTileStairs(colors.getId()));
+                tag(BlockTags.MINEABLE_WITH_PICKAXE).add(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()));
+                tag(BlockTags.MINEABLE_WITH_PICKAXE).add(EBBlocks.getDyedTerracottaTileSlab(colors.getId()));
+                tag(BlockTags.MINEABLE_WITH_PICKAXE).add(EBBlocks.getDyedAlmentraStatues(colors.getId()));
+                tag(BlockTags.MINEABLE_WITH_PICKAXE).add(EBBlocks.getDyedAlmentra(colors.getId()));
+                tag(BlockTags.MINEABLE_WITH_PICKAXE).add(EBBlocks.getDyedPolishedAlmentra(colors.getId()));
+                tag(BlockTags.MINEABLE_WITH_PICKAXE).add(EBBlocks.getDyedAlmentraBricks(colors.getId()));
             }
         }
 
         public void appendHoeMineable() {
-            getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+            tag(BlockTags.MINEABLE_WITH_HOE)
                     .add(EBBlocks.ANCIENT_LEAVES)
                     .add(EBBlocks.GLOOM_LEAVES)
             ;
         }
 
         public void appendAxeMineable() {
-        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+        tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(EBBlocks.PAPER_BLOCK)
                 .add(EBBlocks.THIN_PAPER_BLOCK)
                 .add(EBBlocks.THIN_DIVIDED_PAPER_BLOCK)

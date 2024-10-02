@@ -1,19 +1,16 @@
-package net.yirmiri.excessive_building.util;
+package net.yirmiri.excessive_building.registry;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.minecraft.item.Items;
-import net.minecraft.potion.Potions;
-import net.minecraft.util.DyeColor;
-import net.yirmiri.excessive_building.registry.EBBlocks;
-import net.yirmiri.excessive_building.registry.EBItems;
-import net.yirmiri.excessive_building.registry.EBPotions;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 
 import static net.yirmiri.excessive_building.mixin.BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe;
 
-import static net.minecraft.block.ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE;
+import static net.minecraft.world.level.block.ComposterBlock.COMPOSTABLES;
 
 public class EBRegistries {
     public static void loadRegistries() {
@@ -364,15 +361,15 @@ public class EBRegistries {
 
     private static void registerCompostables() {
         //ANCIENT IS INCREASED BY +50%
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.ANCIENT_SAPLING.asItem(), 0.8f);
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.ANCIENT_LEAVES.asItem(), 0.8f);
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBItems.ANCIENT_FRUIT.asItem(), 1.0f);
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.GLOOM_SAPLING.asItem(), 0.3f);
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.GLOOM_SEEDS.asItem(), 0.3f);
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.GLOOM_LEAVES.asItem(), 0.3f);
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.MOSS_PASTE.asItem(), 0.5f);
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.ROSE.asItem(), 0.65f);
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.CYAN_ROSE.asItem(), 0.65f);
-        ITEM_TO_LEVEL_INCREASE_CHANCE.put(EBBlocks.WHITE_ROSE.asItem(), 0.65f);
+        COMPOSTABLES.put(EBBlocks.ANCIENT_SAPLING.asItem(), 0.8f);
+        COMPOSTABLES.put(EBBlocks.ANCIENT_LEAVES.asItem(), 0.8f);
+        COMPOSTABLES.put(EBItems.ANCIENT_FRUIT.asItem(), 1.0f);
+        COMPOSTABLES.put(EBBlocks.GLOOM_SAPLING.asItem(), 0.3f);
+        COMPOSTABLES.put(EBBlocks.GLOOM_SEEDS.asItem(), 0.3f);
+        COMPOSTABLES.put(EBBlocks.GLOOM_LEAVES.asItem(), 0.3f);
+        COMPOSTABLES.put(EBBlocks.MOSS_PASTE.asItem(), 0.5f);
+        COMPOSTABLES.put(EBBlocks.ROSE.asItem(), 0.65f);
+        COMPOSTABLES.put(EBBlocks.CYAN_ROSE.asItem(), 0.65f);
+        COMPOSTABLES.put(EBBlocks.WHITE_ROSE.asItem(), 0.65f);
     }
 }

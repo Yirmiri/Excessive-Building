@@ -1,10 +1,10 @@
 package net.yirmiri.excessive_building.registry;
 
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.block.SoundType;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBSounds {
@@ -16,11 +16,11 @@ public class EBSounds {
     public static final SoundEvent COBBLED_BRICKS_FALL = register("block.cobbled_bricks.fall");
 
     //GROUPS
-    public static BlockSoundGroup COBBLED_BRICKS = new BlockSoundGroup(1.0F, 1.0F,
+    public static SoundType COBBLED_BRICKS = new SoundType(1.0F, 1.0F,
             COBBLED_BRICKS_BREAK, COBBLED_BRICKS_STEP, COBBLED_BRICKS_PLACE, COBBLED_BRICKS_HIT, COBBLED_BRICKS_FALL);
 
     private static SoundEvent register(String id) {
-        return Registry.register(Registries.SOUND_EVENT, Identifier.of(ExcessiveBuilding.MOD_ID, id), SoundEvent.of(Identifier.of(ExcessiveBuilding.MOD_ID, id)));
+        return Registry.register(BuiltInRegistries.SOUND_EVENT, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), SoundEvent.createVariableRangeEvent(ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id)));
     }
 
     public static void loadSounds() {

@@ -1,8 +1,10 @@
 package net.yirmiri.excessive_building.util;
 
-import net.minecraft.entity.decoration.painting.PaintingVariant;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.registry.*;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.decoration.PaintingVariant;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBPaintingVariants {
@@ -41,7 +43,7 @@ public class EBPaintingVariants {
     public static final PaintingVariant GOODIE_MALK = register("goodiemalk", new PaintingVariant(4, 4));
 
     private static PaintingVariant register(String id, PaintingVariant variant) {
-        return Registry.register(Registries.PAINTING_VARIANT, new Identifier(ExcessiveBuilding.MOD_ID, id), variant);
+        return Registry.register(BuiltInRegistries.PAINTING_VARIANT, new ResourceLocation(ExcessiveBuilding.MOD_ID, id), variant);
     }
 
     public static void loadEBPaintings() {

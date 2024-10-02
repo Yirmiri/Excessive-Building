@@ -1,11 +1,11 @@
 package net.yirmiri.excessive_building.util;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.decoration.painting.PaintingVariant;
-import net.minecraft.item.Item;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.decoration.PaintingVariant;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBTags {
@@ -15,7 +15,7 @@ public class EBTags {
         public static final TagKey<Block> DECORATIVES = create("decoratives");
 
         private static TagKey<Block> create(String id) {
-            return TagKey.of(RegistryKeys.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id));
+            return TagKey.create(Registries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id));
         }
     }
 
@@ -30,7 +30,7 @@ public class EBTags {
         public static final TagKey<Item> KNITTED_CARPET = create("knitted_carpet");
 
         private static TagKey<Item> create(String id) {
-            return TagKey.of(RegistryKeys.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id));
+            return TagKey.create(Registries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id));
         }
     }
 
@@ -38,7 +38,7 @@ public class EBTags {
         public static final TagKey<PaintingVariant> EB_PAINTINGS = create("eb_paintings");
 
         private static TagKey<PaintingVariant> create(String id) {
-            return TagKey.of(RegistryKeys.PAINTING_VARIANT, Identifier.of(ExcessiveBuilding.MOD_ID, id));
+            return TagKey.create(Registries.PAINTING_VARIANT, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id));
         }
     }
 }

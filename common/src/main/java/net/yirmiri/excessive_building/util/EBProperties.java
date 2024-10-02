@@ -1,13 +1,14 @@
 package net.yirmiri.excessive_building.util;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
-import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.GlowingLeavesBlock;
 import net.yirmiri.excessive_building.block.ParticleCandleBlock;
@@ -16,130 +17,130 @@ import net.yirmiri.excessive_building.registry.EBSounds;
 public class EBProperties {
     public static class BlockP {
         //VANILLA ADDITIONS
-        public static final Block.Settings QUARTZ_BRICKS = FabricBlockSettings.copyOf(Blocks.QUARTZ_BRICKS);
+        public static final BlockBehaviour.Properties QUARTZ_BRICKS = BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS);
 
         //WOODS
-        public static final Block.Settings GENERIC_WOOD = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.WOOD);
-        public static final Block.Settings CHERRY_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS).sounds(BlockSoundGroup.CHERRY_WOOD);
-        public static final Block.Settings BAMBOO_WOOD = FabricBlockSettings.copyOf(Blocks.BAMBOO_PLANKS).sounds(BlockSoundGroup.BAMBOO_WOOD);
-        public static final Block.Settings CRIMSON_WOOD = FabricBlockSettings.copyOf(Blocks.CRIMSON_PLANKS).sounds(BlockSoundGroup.NETHER_WOOD);
-        public static final Block.Settings WARPED_WOOD = FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS).sounds(BlockSoundGroup.NETHER_WOOD);
-        public static final Block.Settings ANCIENT_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS).mapColor(MapColor.TERRACOTTA_WHITE).sounds(BlockSoundGroup.CHERRY_WOOD);
-        public static final Block.Settings GLOOM_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS).mapColor(MapColor.RAW_IRON_PINK).sounds(BlockSoundGroup.CHERRY_WOOD);
+        public static final BlockBehaviour.Properties GENERIC_WOOD = BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOD);
+        public static final BlockBehaviour.Properties CHERRY_WOOD = BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS).sound(SoundType.CHERRY_WOOD);
+        public static final BlockBehaviour.Properties BAMBOO_WOOD = BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).sound(SoundType.BAMBOO_WOOD);
+        public static final BlockBehaviour.Properties CRIMSON_WOOD = BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS).sound(SoundType.NETHER_WOOD);
+        public static final BlockBehaviour.Properties WARPED_WOOD = BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS).sound(SoundType.NETHER_WOOD);
+        public static final BlockBehaviour.Properties ANCIENT_WOOD = BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.TERRACOTTA_WHITE).sound(SoundType.CHERRY_WOOD);
+        public static final BlockBehaviour.Properties GLOOM_WOOD = BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS).mapColor(MapColor.RAW_IRON).sound(SoundType.CHERRY_WOOD);
 
         //DOORS
-        public static final Block.Settings ANCIENT_DOOR = FabricBlockSettings.copyOf(Blocks.CHERRY_DOOR).mapColor(MapColor.RAW_IRON_PINK).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque();
-        public static final Block.Settings ANCIENT_TRAPDOOR = FabricBlockSettings.copyOf(Blocks.CHERRY_TRAPDOOR).mapColor(MapColor.RAW_IRON_PINK).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque();
-        public static final Block.Settings GLOOM_DOOR = FabricBlockSettings.copyOf(Blocks.CHERRY_DOOR).mapColor(MapColor.RAW_IRON_PINK).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque();
-        public static final Block.Settings GLOOM_TRAPDOOR = FabricBlockSettings.copyOf(Blocks.CHERRY_TRAPDOOR).mapColor(MapColor.RAW_IRON_PINK).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque();
+        public static final BlockBehaviour.Properties ANCIENT_DOOR = BlockBehaviour.Properties.copy(Blocks.CHERRY_DOOR).mapColor(MapColor.RAW_IRON).sound(SoundType.CHERRY_WOOD).noOcclusion();
+        public static final BlockBehaviour.Properties ANCIENT_TRAPDOOR = BlockBehaviour.Properties.copy(Blocks.CHERRY_TRAPDOOR).mapColor(MapColor.RAW_IRON).sound(SoundType.CHERRY_WOOD).noOcclusion();
+        public static final BlockBehaviour.Properties GLOOM_DOOR = BlockBehaviour.Properties.copy(Blocks.CHERRY_DOOR).mapColor(MapColor.RAW_IRON).sound(SoundType.CHERRY_WOOD).noOcclusion();
+        public static final BlockBehaviour.Properties GLOOM_TRAPDOOR = BlockBehaviour.Properties.copy(Blocks.CHERRY_TRAPDOOR).mapColor(MapColor.RAW_IRON).sound(SoundType.CHERRY_WOOD).noOcclusion();
 
         //BOOKSHELVES
-        public static final Block.Settings GENERIC_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.WOOD);
-        public static final Block.Settings CHERRY_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.CHERRY_WOOD);
-        public static final Block.Settings BAMBOO_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.BAMBOO_WOOD);
-        public static final Block.Settings CRIMSON_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.NETHER_WOOD);
-        public static final Block.Settings WARPED_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.NETHER_WOOD);
+        public static final BlockBehaviour.Properties GENERIC_SHELF = BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).sound(SoundType.WOOD);
+        public static final BlockBehaviour.Properties CHERRY_SHELF = BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).sound(SoundType.CHERRY_WOOD);
+        public static final BlockBehaviour.Properties BAMBOO_SHELF = BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).sound(SoundType.BAMBOO_WOOD);
+        public static final BlockBehaviour.Properties CRIMSON_SHELF = BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).sound(SoundType.NETHER_WOOD);
+        public static final BlockBehaviour.Properties WARPED_SHELF = BlockBehaviour.Properties.copy(Blocks.BOOKSHELF).sound(SoundType.NETHER_WOOD);
 
         //LADDERS
-        public static final Block.Settings GENERIC_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
-        public static final Block.Settings CHERRY_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
-        public static final Block.Settings BAMBOO_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
-        public static final Block.Settings CRIMSON_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
-        public static final Block.Settings WARPED_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
-        public static final Block.Settings ANCIENT_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER).mapColor(MapColor.TERRACOTTA_WHITE);
-        public static final Block.Settings GLOOM_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER).mapColor(MapColor.RAW_IRON_PINK);
+        public static final BlockBehaviour.Properties GENERIC_LADDER = BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.LADDER);
+        public static final BlockBehaviour.Properties CHERRY_LADDER = BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.LADDER);
+        public static final BlockBehaviour.Properties BAMBOO_LADDER = BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.LADDER);
+        public static final BlockBehaviour.Properties CRIMSON_LADDER = BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.LADDER);
+        public static final BlockBehaviour.Properties WARPED_LADDER = BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.LADDER);
+        public static final BlockBehaviour.Properties ANCIENT_LADDER = BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.LADDER).mapColor(MapColor.TERRACOTTA_WHITE);
+        public static final BlockBehaviour.Properties GLOOM_LADDER = BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.LADDER).mapColor(MapColor.RAW_IRON);
 
         //STONES
-        public static final Block.Settings COBBLESTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLESTONE).sounds(EBSounds.COBBLED_BRICKS);
-        public static final Block.Settings COBBLED_DEEPSLATE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLED_DEEPSLATE).sounds(EBSounds.COBBLED_BRICKS);
-        public static final Block.Settings BLACKSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.BLACKSTONE).sounds(EBSounds.COBBLED_BRICKS);
-        public static final Block.Settings SMOOTH_STONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_STONE);
-        public static final Block.Settings ALMENTRA = FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK).sounds(BlockSoundGroup.DRIPSTONE_BLOCK).mapColor(MapColor.BROWN);
-        public static final Block.Settings ALMENTRA_BRICKS = FabricBlockSettings.copyOf(Blocks.DEEPSLATE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.BROWN);
+        public static final BlockBehaviour.Properties COBBLESTONE_BRICKS = BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).sound(EBSounds.COBBLED_BRICKS);
+        public static final BlockBehaviour.Properties COBBLED_DEEPSLATE_BRICKS = BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).sound(EBSounds.COBBLED_BRICKS);
+        public static final BlockBehaviour.Properties BLACKSTONE_BRICKS = BlockBehaviour.Properties.copy(Blocks.BLACKSTONE).sound(EBSounds.COBBLED_BRICKS);
+        public static final BlockBehaviour.Properties SMOOTH_STONE = BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE);
+        public static final BlockBehaviour.Properties ALMENTRA = BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK).sound(SoundType.DRIPSTONE_BLOCK).mapColor(MapColor.COLOR_BROWN);
+        public static final BlockBehaviour.Properties ALMENTRA_BRICKS = BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS).sound(SoundType.DEEPSLATE_BRICKS).mapColor(MapColor.COLOR_BROWN);
 
         //NATURE
-        public static final Block.Settings GLOWING_LEAVES = FabricBlockSettings.of().luminance(state -> GlowingLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
-        public static final Block.Settings GLOWING_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).luminance(state -> 5);
-        public static final Block.Settings GLOOM_SEEDS = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).sounds(BlockSoundGroup.ROOTS);
-        public static final Block.Settings GLOOM_LEAVES = FabricBlockSettings.copyOf(Blocks.CHERRY_LEAVES);
-        public static final Block.Settings GLOOM_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING);
+        public static final BlockBehaviour.Properties GLOWING_LEAVES = BlockBehaviour.Properties.of().lightLevel(state -> GlowingLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.COLOR_RED).strength(0.2F).randomTicks().sound(SoundType.CHERRY_LEAVES).noOcclusion().isValidSpawn(Blocks::ocelotOrParrot).isSuffocating(Blocks::never).isViewBlocking(Blocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(Blocks::never);
+        public static final BlockBehaviour.Properties GLOWING_SAPLING = BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING).lightLevel(state -> 5);
+        public static final BlockBehaviour.Properties GLOOM_SEEDS = BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING).sound(SoundType.ROOTS);
+        public static final BlockBehaviour.Properties GLOOM_LEAVES = BlockBehaviour.Properties.copy(Blocks.CHERRY_LEAVES);
+        public static final BlockBehaviour.Properties GLOOM_SAPLING = BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING);
 
         //SEA GLASS
-        public static final Block.Settings SEA_GLASS = FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque();
+        public static final BlockBehaviour.Properties SEA_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion();
 
         //NATURE
-        public static final Block.Settings ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.RED);
-        public static final Block.Settings CYAN_ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.CYAN);
-        public static final Block.Settings WHITE_ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.WHITE);
-        public static final Block.Settings MOSS_PASTE = FabricBlockSettings.copyOf(Blocks.GLOW_LICHEN).mapColor(MapColor.GREEN).sounds(BlockSoundGroup.AZALEA_LEAVES).lightLevel(0);
+        public static final BlockBehaviour.Properties ROSE = BlockBehaviour.Properties.copy(Blocks.POPPY).mapColor(MapColor.COLOR_RED);
+        public static final BlockBehaviour.Properties CYAN_ROSE = BlockBehaviour.Properties.copy(Blocks.POPPY).mapColor(MapColor.COLOR_CYAN);
+        public static final BlockBehaviour.Properties WHITE_ROSE = BlockBehaviour.Properties.copy(Blocks.POPPY).mapColor(MapColor.SNOW);
+        public static final BlockBehaviour.Properties MOSS_PASTE = BlockBehaviour.Properties.copy(Blocks.GLOW_LICHEN).mapColor(MapColor.COLOR_GREEN).sound(SoundType.AZALEA_LEAVES).lightLevel(0);
 
         //RESOURCES
-        public static final Block.Settings GOLD = FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK);
-        public static final Block.Settings IRON = FabricBlockSettings.copyOf(Blocks.IRON_BLOCK);
-        public static final Block.Settings EMERALD = FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK);
-        public static final Block.Settings LAPIS = FabricBlockSettings.copyOf(Blocks.LAPIS_BLOCK);
-        public static final Block.Settings DIAMOND = FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK);
-        public static final Block.Settings NETHERITE = FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK);
-        public static final Block.Settings REDSTONE = FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK);
+        public static final BlockBehaviour.Properties GOLD = BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK);
+        public static final BlockBehaviour.Properties IRON = BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK);
+        public static final BlockBehaviour.Properties EMERALD = BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK);
+        public static final BlockBehaviour.Properties LAPIS = BlockBehaviour.Properties.copy(Blocks.LAPIS_BLOCK);
+        public static final BlockBehaviour.Properties DIAMOND = BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK);
+        public static final BlockBehaviour.Properties NETHERITE = BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK);
+        public static final BlockBehaviour.Properties REDSTONE = BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK);
 
         //COPPERS
-        public static final Block.Settings COPPER = FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK);
-        public static final Block.Settings EXPOSED_COPPER = FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER);
-        public static final Block.Settings WEATHERED_COPPER = FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER);
-        public static final Block.Settings OXIDIZED_COPPER = FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER);
+        public static final BlockBehaviour.Properties COPPER = BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK);
+        public static final BlockBehaviour.Properties EXPOSED_COPPER = BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER);
+        public static final BlockBehaviour.Properties WEATHERED_COPPER = BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER);
+        public static final BlockBehaviour.Properties OXIDIZED_COPPER = BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER);
 
         //POLISHED SANDSTONES
-        public static final Block.Settings POLISHED_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_SANDSTONE);
-        public static final Block.Settings POLISHED_RED_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_RED_SANDSTONE);
+        public static final BlockBehaviour.Properties POLISHED_SANDSTONE = BlockBehaviour.Properties.copy(Blocks.SMOOTH_SANDSTONE);
+        public static final BlockBehaviour.Properties POLISHED_RED_SANDSTONE = BlockBehaviour.Properties.copy(Blocks.SMOOTH_RED_SANDSTONE);
 
         //SOULS
-        public static final Block.Settings SOUL_MAGMA = FabricBlockSettings.copyOf(Blocks.MAGMA_BLOCK).mapColor(MapColor.BROWN);
-        public static final Block.Settings SOUL_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SANDSTONE).mapColor(MapColor.BROWN);
-        public static final Block.Settings CUT_SOUL_SANDSTONE = FabricBlockSettings.copyOf(Blocks.CUT_SANDSTONE).mapColor(MapColor.BROWN);
-        public static final Block.Settings SMOOTH_SOUL_SANDSTONE = FabricBlockSettings.copyOf(Blocks.SMOOTH_SANDSTONE).mapColor(MapColor.BROWN);
+        public static final BlockBehaviour.Properties SOUL_MAGMA = BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK).mapColor(MapColor.COLOR_BROWN);
+        public static final BlockBehaviour.Properties SOUL_SANDSTONE = BlockBehaviour.Properties.copy(Blocks.SANDSTONE).mapColor(MapColor.COLOR_BROWN);
+        public static final BlockBehaviour.Properties CUT_SOUL_SANDSTONE = BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE).mapColor(MapColor.COLOR_BROWN);
+        public static final BlockBehaviour.Properties SMOOTH_SOUL_SANDSTONE = BlockBehaviour.Properties.copy(Blocks.SMOOTH_SANDSTONE).mapColor(MapColor.COLOR_BROWN);
 
         //DECORATIVES
-        public static final Block.Settings WOODEN_MUG = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(0.5F).resistance(0F);
-        public static final Block.Settings GLASS_JAR = FabricBlockSettings.copyOf(Blocks.GLASS).strength(0.5F).resistance(0F).nonOpaque();
-        public static final Block.Settings FIRE_GLASS_JAR = FabricBlockSettings.copyOf(Blocks.GLASS).strength(0.5F).resistance(0F).lightLevel(15).nonOpaque();
-        public static final Block.Settings SOUL_FIRE_GLASS_JAR = FabricBlockSettings.copyOf(Blocks.GLASS).strength(0.5F).resistance(0F).lightLevel(7).nonOpaque();
+        public static final BlockBehaviour.Properties WOODEN_MUG = BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(0.5F).explosionResistance(0F);
+        public static final BlockBehaviour.Properties GLASS_JAR = BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.5F).explosionResistance(0F).noOcclusion();
+        public static final BlockBehaviour.Properties FIRE_GLASS_JAR = BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.5F).explosionResistance(0F).lightLevel(15).noOcclusion();
+        public static final BlockBehaviour.Properties SOUL_FIRE_GLASS_JAR = BlockBehaviour.Properties.copy(Blocks.GLASS).strength(0.5F).explosionResistance(0F).lightLevel(7).noOcclusion();
 
         //STONE VARIANTS
-        public static final Block.Settings POLISHED_GRANITE = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE);
-        public static final Block.Settings POLISHED_ANDESITE = FabricBlockSettings.copyOf(Blocks.POLISHED_ANDESITE);
-        public static final Block.Settings POLISHED_DIORITE = FabricBlockSettings.copyOf(Blocks.POLISHED_DIORITE);
+        public static final BlockBehaviour.Properties POLISHED_GRANITE = BlockBehaviour.Properties.copy(Blocks.POLISHED_GRANITE);
+        public static final BlockBehaviour.Properties POLISHED_ANDESITE = BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE);
+        public static final BlockBehaviour.Properties POLISHED_DIORITE = BlockBehaviour.Properties.copy(Blocks.POLISHED_DIORITE);
 
         //BRIMSTONE
-        public static final Block.Settings BRIMSTONE = FabricBlockSettings.copyOf(Blocks.GRANITE).sounds(BlockSoundGroup.DRIPSTONE_BLOCK).mapColor(MapColor.RED);
-        public static final Block.Settings POLISHED_BRIMSTONE = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE).sounds(BlockSoundGroup.POLISHED_DEEPSLATE).mapColor(MapColor.RED);
-        public static final Block.Settings BRIMSTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.RED);
-        public static final Block.Settings BRIMSTONE_TILES = FabricBlockSettings.copyOf(Blocks.POLISHED_GRANITE).sounds(BlockSoundGroup.DEEPSLATE_TILES).mapColor(MapColor.RED);
-        public static final Block.Settings BRIMSTONE_LAMP = FabricBlockSettings.copyOf(Blocks.SEA_LANTERN).mapColor(MapColor.RED);
+        public static final BlockBehaviour.Properties BRIMSTONE = BlockBehaviour.Properties.copy(Blocks.GRANITE).sound(SoundType.DRIPSTONE_BLOCK).mapColor(MapColor.COLOR_RED);
+        public static final BlockBehaviour.Properties POLISHED_BRIMSTONE = BlockBehaviour.Properties.copy(Blocks.POLISHED_GRANITE).sound(SoundType.POLISHED_DEEPSLATE).mapColor(MapColor.COLOR_RED);
+        public static final BlockBehaviour.Properties BRIMSTONE_BRICKS = BlockBehaviour.Properties.copy(Blocks.POLISHED_GRANITE).sound(SoundType.DEEPSLATE_BRICKS).mapColor(MapColor.COLOR_RED);
+        public static final BlockBehaviour.Properties BRIMSTONE_TILES = BlockBehaviour.Properties.copy(Blocks.POLISHED_GRANITE).sound(SoundType.DEEPSLATE_TILES).mapColor(MapColor.COLOR_RED);
+        public static final BlockBehaviour.Properties BRIMSTONE_LAMP = BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN).mapColor(MapColor.COLOR_RED);
 
         //MISC
-        public static final Block.Settings PARTICLE_CANDLE = FabricBlockSettings.copyOf(Blocks.CANDLE).luminance(ParticleCandleBlock.STATE_TO_LUMINANCE);
-        public static final Block.Settings MUD_BRICKS = FabricBlockSettings.copyOf(Blocks.MUD_BRICKS);
-        public static final Block.Settings ASPHALT = FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK);
-        public static final Block.Settings REACHING_LANTERN = FabricBlockSettings.copyOf(Blocks.SOUL_LANTERN);
-        public static final Block.Settings BRICKS = FabricBlockSettings.copyOf(Blocks.BRICKS);
-        public static final Block.Settings BONE = FabricBlockSettings.copyOf(Blocks.BONE_BLOCK);
-        public static final Block.Settings INDESTRUCTIBLE = FabricBlockSettings.copyOf(Blocks.BEDROCK);
-        public static final Block.Settings TERRACOTTA_POT = FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT_SHATTER);
-        public static final Block.Settings PAPER = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.WOOL);
-        public static final Block.Settings LAMP = FabricBlockSettings.copyOf(Blocks.SEA_LANTERN);
+        public static final BlockBehaviour.Properties PARTICLE_CANDLE = BlockBehaviour.Properties.copy(Blocks.CANDLE).lightLevel(ParticleCandleBlock.STATE_TO_LUMINANCE);
+        public static final BlockBehaviour.Properties MUD_BRICKS = BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS);
+        public static final BlockBehaviour.Properties ASPHALT = BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK);
+        public static final BlockBehaviour.Properties REACHING_LANTERN = BlockBehaviour.Properties.copy(Blocks.SOUL_LANTERN);
+        public static final BlockBehaviour.Properties BRICKS = BlockBehaviour.Properties.copy(Blocks.BRICKS);
+        public static final BlockBehaviour.Properties BONE = BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK);
+        public static final BlockBehaviour.Properties INDESTRUCTIBLE = BlockBehaviour.Properties.copy(Blocks.BEDROCK);
+        public static final BlockBehaviour.Properties TERRACOTTA_POT = BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).sound(SoundType.DECORATED_POT_CRACKED);
+        public static final BlockBehaviour.Properties PAPER = BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.WOOL);
+        public static final BlockBehaviour.Properties LAMP = BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN);
     }
 
     public static class ItemP {
         //FOOD
-        public static final Item.Settings ANCIENT_FRUIT = new Item.Settings().food(Food.ANCIENT_FRUIT);
+        public static final Item.Properties ANCIENT_FRUIT = new Item.Properties().food(Food.ANCIENT_FRUIT);
 
         //MISC
-        public static final Item.Settings GENERIC = new Item.Settings();
-        public static final Item.Settings NETHERITE = new Item.Settings().fireproof();
+        public static final Item.Properties GENERIC = new Item.Properties();
+        public static final Item.Properties NETHERITE = new Item.Properties().fireResistant();
 
         public static class Food {
-            public static final FoodComponent ANCIENT_FRUIT = new FoodComponent.Builder().hunger(4).saturationModifier(0.8F).alwaysEdible()
-            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, EBConfig.ANCIENT_FRUIT_DURATION.get(),
+            public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationMod(0.8F).alwaysEat()
+            .effect(new MobEffectInstance(MobEffects.DIG_SPEED, EBConfig.ANCIENT_FRUIT_DURATION.get(),
                     EBConfig.ANCIENT_FRUIT_AMPLIFIER.get()), 1.0F).build();
         }
     }

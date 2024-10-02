@@ -1,10 +1,10 @@
 package net.yirmiri.excessive_building.registry;
 
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.village.TradeOffer;
-import net.minecraft.village.VillagerProfession;
+import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.yirmiri.excessive_building.EBConfig;
 
 public class EBTrades {
@@ -27,14 +27,14 @@ public class EBTrades {
         if (EBConfig.ENABLE_EB_VILLAGER_TRADES.get()) {
             TradeOfferHelper.registerVillagerOffers(VillagerProfession.MASON, 5,
                     factories -> {
-                        factories.add((entity, random) -> new TradeOffer(
+                        factories.add((entity, random) -> new MerchantOffer(
                                 new ItemStack(Items.EMERALD, 4), new ItemStack(EBBlocks.ASPHALT, 24),
                                 COMMON_MAX_USES, MASTER_TRADE_XP, LOW_PRICE_MULTIPLIER));
                     });
 
             TradeOfferHelper.registerVillagerOffers(VillagerProfession.MASON, 3,
                     factories -> {
-                        factories.add((entity, random) -> new TradeOffer(
+                        factories.add((entity, random) -> new MerchantOffer(
                                 new ItemStack(Items.EMERALD, 2), new ItemStack(EBBlocks.ALMENTRA, 16),
                                 DEFAULT_MAX_USES, JOURNEYMAN_SELL_XP, LOW_PRICE_MULTIPLIER));
                     });

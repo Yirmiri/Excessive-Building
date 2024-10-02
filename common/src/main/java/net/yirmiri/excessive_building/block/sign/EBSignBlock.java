@@ -1,19 +1,19 @@
 package net.yirmiri.excessive_building.block.sign;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SignBlock;
-import net.minecraft.block.WoodType;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.StandingSignBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.yirmiri.excessive_building.block.entity.EBSignBlockEntity;
 
-public class EBSignBlock extends SignBlock {
-    public EBSignBlock(WoodType woodType, Settings settings) {
+public class EBSignBlock extends StandingSignBlock {
+    public EBSignBlock(WoodType woodType, Properties settings) {
         super(settings, woodType);
     }
 
     @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new EBSignBlockEntity(pos, state);
     }
 }

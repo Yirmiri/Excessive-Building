@@ -1,15 +1,33 @@
 package net.yirmiri.excessive_building.registry;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.DyeColor;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.Registry;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.CarpetBlock;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.GlowLichenBlock;
+import net.minecraft.world.level.block.HalfTransparentBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.WeatheringCopper;
+import net.minecraft.world.level.block.WeatheringCopperFullBlock;
+import net.minecraft.world.level.block.WeatheringCopperSlabBlock;
+import net.minecraft.world.level.block.WeatheringCopperStairBlock;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.*;
 import net.yirmiri.excessive_building.block.configurable.*;
@@ -73,17 +91,17 @@ public class EBBlocks {
     public static final Block PURPUR_VERTICAL_STAIRS = registerVStairs("purpur_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.PURPUR_BLOCK)), true);
     public static final Block END_STONE_BRICK_VERTICAL_STAIRS = registerVStairs("end_stone_brick_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.END_STONE_BRICKS)), true);
 
-    public static final Block CUT_COPPER_VERTICAL_STAIRS = registerVStairs("cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copy(Blocks.CUT_COPPER)), true);
-    public static final Block EXPOSED_CUT_COPPER_VERTICAL_STAIRS = registerVStairs("exposed_cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copy(Blocks.EXPOSED_CUT_COPPER)), true);
-    public static final Block WEATHERED_CUT_COPPER_VERTICAL_STAIRS = registerVStairs("weathered_cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copy(Blocks.WEATHERED_CUT_COPPER)), true);
-    public static final Block OXIDIZED_CUT_COPPER_VERTICAL_STAIRS = registerVStairs("oxidized_cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copy(Blocks.OXIDIZED_CUT_COPPER)), true);
+    public static final Block CUT_COPPER_VERTICAL_STAIRS = registerVStairs("cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(WeatheringCopper.WeatherState.UNAFFECTED, FabricBlockSettings.copy(Blocks.CUT_COPPER)), true);
+    public static final Block EXPOSED_CUT_COPPER_VERTICAL_STAIRS = registerVStairs("exposed_cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(WeatheringCopper.WeatherState.EXPOSED, FabricBlockSettings.copy(Blocks.EXPOSED_CUT_COPPER)), true);
+    public static final Block WEATHERED_CUT_COPPER_VERTICAL_STAIRS = registerVStairs("weathered_cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(WeatheringCopper.WeatherState.WEATHERED, FabricBlockSettings.copy(Blocks.WEATHERED_CUT_COPPER)), true);
+    public static final Block OXIDIZED_CUT_COPPER_VERTICAL_STAIRS = registerVStairs("oxidized_cut_copper_vertical_stairs", new OxidizableVerticalStairsBlock(WeatheringCopper.WeatherState.OXIDIZED, FabricBlockSettings.copy(Blocks.OXIDIZED_CUT_COPPER)), true);
     public static final Block WAXED_CUT_COPPER_VERTICAL_STAIRS = registerVStairs("waxed_cut_copper_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.WAXED_CUT_COPPER)), true);
     public static final Block WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS = registerVStairs("waxed_exposed_cut_copper_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.WAXED_EXPOSED_CUT_COPPER)), true);
     public static final Block WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS = registerVStairs("waxed_weathered_cut_copper_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.WAXED_WEATHERED_CUT_COPPER)), true);
     public static final Block WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS = registerVStairs("waxed_oxidized_cut_copper_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.WAXED_OXIDIZED_CUT_COPPER)), true);
 
     //VANILLA ADDITIONS
-    public static final Block QUARTZ_BRICK_STAIRS = register("quartz_brick_stairs", new StairsBlock(Blocks.QUARTZ_BRICKS.getDefaultState(), EBProperties.BlockP.QUARTZ_BRICKS), true);
+    public static final Block QUARTZ_BRICK_STAIRS = register("quartz_brick_stairs", new EBStairBlock(Blocks.QUARTZ_BRICKS.defaultBlockState(), EBProperties.BlockP.QUARTZ_BRICKS), true);
     public static final Block QUARTZ_BRICK_SLAB = register("quartz_brick_slab", new SlabBlock(EBProperties.BlockP.QUARTZ_BRICKS), true);
     public static final Block QUARTZ_BRICK_VERTICAL_STAIRS = registerVStairs("quartz_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.QUARTZ_BRICKS), true);
     public static final Block QUARTZ_BRICK_WALL = register("quartz_brick_wall", new WallBlock(EBProperties.BlockP.QUARTZ_BRICKS), true);
@@ -92,54 +110,54 @@ public class EBBlocks {
 
     //MOSAIC WOOD
     public static final Block OAK_MOSAIC = register("oak_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block OAK_MOSAIC_STAIRS = register("oak_mosaic_stairs", new StairsBlock(OAK_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block OAK_MOSAIC_STAIRS = register("oak_mosaic_stairs", new EBStairBlock(OAK_MOSAIC.defaultBlockState(), EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block OAK_MOSAIC_SLAB = register("oak_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block OAK_MOSAIC_VERTICAL_STAIRS = registerVStairs("oak_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
     public static final Block SPRUCE_MOSAIC = register("spruce_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block SPRUCE_MOSAIC_STAIRS = register("spruce_mosaic_stairs", new StairsBlock(SPRUCE_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block SPRUCE_MOSAIC_STAIRS = register("spruce_mosaic_stairs", new EBStairBlock(SPRUCE_MOSAIC.defaultBlockState(), EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block SPRUCE_MOSAIC_SLAB = register("spruce_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block SPRUCE_MOSAIC_VERTICAL_STAIRS = registerVStairs("spruce_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
     public static final Block BIRCH_MOSAIC = register("birch_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block BIRCH_MOSAIC_STAIRS = register("birch_mosaic_stairs", new StairsBlock(BIRCH_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block BIRCH_MOSAIC_STAIRS = register("birch_mosaic_stairs", new EBStairBlock(BIRCH_MOSAIC.defaultBlockState(), EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block BIRCH_MOSAIC_SLAB = register("birch_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block BIRCH_MOSAIC_VERTICAL_STAIRS = registerVStairs("birch_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
     public static final Block JUNGLE_MOSAIC = register("jungle_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block JUNGLE_MOSAIC_STAIRS = register("jungle_mosaic_stairs", new StairsBlock(JUNGLE_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block JUNGLE_MOSAIC_STAIRS = register("jungle_mosaic_stairs", new EBStairBlock(JUNGLE_MOSAIC.defaultBlockState(), EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block JUNGLE_MOSAIC_SLAB = register("jungle_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block JUNGLE_MOSAIC_VERTICAL_STAIRS = registerVStairs("jungle_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
     public static final Block ACACIA_MOSAIC = register("acacia_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block ACACIA_MOSAIC_STAIRS = register("acacia_mosaic_stairs", new StairsBlock(ACACIA_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block ACACIA_MOSAIC_STAIRS = register("acacia_mosaic_stairs", new EBStairBlock(ACACIA_MOSAIC.defaultBlockState(), EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block ACACIA_MOSAIC_SLAB = register("acacia_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block ACACIA_MOSAIC_VERTICAL_STAIRS = registerVStairs("acacia_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
     public static final Block DARK_OAK_MOSAIC = register("dark_oak_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block DARK_OAK_MOSAIC_STAIRS = register("dark_oak_mosaic_stairs", new StairsBlock(DARK_OAK_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block DARK_OAK_MOSAIC_STAIRS = register("dark_oak_mosaic_stairs", new EBStairBlock(DARK_OAK_MOSAIC.defaultBlockState(), EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block DARK_OAK_MOSAIC_SLAB = register("dark_oak_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block DARK_OAK_MOSAIC_VERTICAL_STAIRS = registerVStairs("dark_oak_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
     public static final Block MANGROVE_MOSAIC = register("mangrove_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
-    public static final Block MANGROVE_MOSAIC_STAIRS = register("mangrove_mosaic_stairs", new StairsBlock(MANGROVE_MOSAIC.getDefaultState(), EBProperties.BlockP.GENERIC_WOOD), true);
+    public static final Block MANGROVE_MOSAIC_STAIRS = register("mangrove_mosaic_stairs", new EBStairBlock(MANGROVE_MOSAIC.defaultBlockState(), EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block MANGROVE_MOSAIC_SLAB = register("mangrove_mosaic_slab", new SlabBlock(EBProperties.BlockP.GENERIC_WOOD), true);
     public static final Block MANGROVE_MOSAIC_VERTICAL_STAIRS = registerVStairs("mangrove_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GENERIC_WOOD), true);
 
     public static final Block CHERRY_MOSAIC = register("cherry_mosaic", new Block(EBProperties.BlockP.CHERRY_WOOD), true);
-    public static final Block CHERRY_MOSAIC_STAIRS = register("cherry_mosaic_stairs", new StairsBlock(CHERRY_MOSAIC.getDefaultState(), EBProperties.BlockP.CHERRY_WOOD), true);
+    public static final Block CHERRY_MOSAIC_STAIRS = register("cherry_mosaic_stairs", new EBStairBlock(CHERRY_MOSAIC.defaultBlockState(), EBProperties.BlockP.CHERRY_WOOD), true);
     public static final Block CHERRY_MOSAIC_SLAB = register("cherry_mosaic_slab", new SlabBlock(EBProperties.BlockP.CHERRY_WOOD), true);
     public static final Block CHERRY_MOSAIC_VERTICAL_STAIRS = registerVStairs("cherry_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.CHERRY_WOOD), true);
 
     public static final Block BAMBOO_MOSAIC_VERTICAL_STAIRS = registerVStairs("bamboo_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BAMBOO_WOOD), true);
 
     public static final Block CRIMSON_MOSAIC = register("crimson_mosaic", new Block(EBProperties.BlockP.CRIMSON_WOOD), true);
-    public static final Block CRIMSON_MOSAIC_STAIRS = register("crimson_mosaic_stairs", new StairsBlock(CRIMSON_MOSAIC.getDefaultState(), EBProperties.BlockP.CRIMSON_WOOD), true);
+    public static final Block CRIMSON_MOSAIC_STAIRS = register("crimson_mosaic_stairs", new EBStairBlock(CRIMSON_MOSAIC.defaultBlockState(), EBProperties.BlockP.CRIMSON_WOOD), true);
     public static final Block CRIMSON_MOSAIC_SLAB = register("crimson_mosaic_slab", new SlabBlock(EBProperties.BlockP.CRIMSON_WOOD), true);
     public static final Block CRIMSON_MOSAIC_VERTICAL_STAIRS = registerVStairs("crimson_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.CRIMSON_WOOD), true);
 
     public static final Block WARPED_MOSAIC = register("warped_mosaic", new Block(EBProperties.BlockP.WARPED_WOOD), true);
-    public static final Block WARPED_MOSAIC_STAIRS = register("warped_mosaic_stairs", new StairsBlock(WARPED_MOSAIC.getDefaultState(), EBProperties.BlockP.WARPED_WOOD), true);
+    public static final Block WARPED_MOSAIC_STAIRS = register("warped_mosaic_stairs", new EBStairBlock(WARPED_MOSAIC.defaultBlockState(), EBProperties.BlockP.WARPED_WOOD), true);
     public static final Block WARPED_MOSAIC_SLAB = register("warped_mosaic_slab", new SlabBlock(EBProperties.BlockP.WARPED_WOOD), true);
     public static final Block WARPED_MOSAIC_VERTICAL_STAIRS = registerVStairs("warped_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.WARPED_WOOD), true);
 
@@ -159,26 +177,26 @@ public class EBBlocks {
     public static final Block CHISELED_GLOOM_PLANKS = register("chiseled_gloom_planks", new Block(EBProperties.BlockP.GLOOM_WOOD), true);
 
     //ANCIENT
-    public static final Block ANCIENT_LOG = register("ancient_log", new PillarBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block STRIPPED_ANCIENT_LOG = register("stripped_ancient_log", new PillarBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block ANCIENT_WOOD = register("ancient_wood", new PillarBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block STRIPPED_ANCIENT_WOOD = register("stripped_ancient_wood", new PillarBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block ANCIENT_LOG = register("ancient_log", new RotatedPillarBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block STRIPPED_ANCIENT_LOG = register("stripped_ancient_log", new RotatedPillarBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block ANCIENT_WOOD = register("ancient_wood", new RotatedPillarBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block STRIPPED_ANCIENT_WOOD = register("stripped_ancient_wood", new RotatedPillarBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
 
     public static final Block ANCIENT_PLANKS = register("ancient_planks", new Block(EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block ANCIENT_STAIRS = register("ancient_stairs", new StairsBlock(ANCIENT_PLANKS.getDefaultState(), EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block ANCIENT_STAIRS = register("ancient_stairs", new EBStairBlock(ANCIENT_PLANKS.defaultBlockState(), EBProperties.BlockP.ANCIENT_WOOD), true);
     public static final Block ANCIENT_SLAB = register("ancient_slab", new SlabBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
     public static final Block ANCIENT_VERTICAL_STAIRS = registerVStairs("ancient_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
 
     public static final Block ANCIENT_MOSAIC = register("ancient_mosaic", new Block(EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block ANCIENT_MOSAIC_STAIRS = register("ancient_mosaic_stairs", new StairsBlock(ANCIENT_MOSAIC.getDefaultState(), EBProperties.BlockP.ANCIENT_WOOD), true);
+    public static final Block ANCIENT_MOSAIC_STAIRS = register("ancient_mosaic_stairs", new EBStairBlock(ANCIENT_MOSAIC.defaultBlockState(), EBProperties.BlockP.ANCIENT_WOOD), true);
     public static final Block ANCIENT_MOSAIC_SLAB = register("ancient_mosaic_slab", new SlabBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
     public static final Block ANCIENT_MOSAIC_VERTICAL_STAIRS = registerVStairs("ancient_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
 
     public static final Block ANCIENT_FENCE = register("ancient_fence", new FenceBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
     public static final Block ANCIENT_FENCE_GATE = register("ancient_fence_gate", new FenceGateBlock(EBProperties.BlockP.ANCIENT_WOOD, EBBlockSetTypes.EBWoodTypes.ANCIENT), true);
     public static final Block ANCIENT_DOOR = register("ancient_door", new DoorBlock(EBProperties.BlockP.ANCIENT_DOOR, EBBlockSetTypes.ANCIENT), true);
-    public static final Block ANCIENT_TRAPDOOR = register("ancient_trapdoor", new TrapdoorBlock(EBProperties.BlockP.ANCIENT_TRAPDOOR, EBBlockSetTypes.ANCIENT), true);
-    public static final Block ANCIENT_PRESSURE_PLATE = register("ancient_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, EBProperties.BlockP.ANCIENT_WOOD, EBBlockSetTypes.ANCIENT), true);
+    public static final Block ANCIENT_TRAPDOOR = register("ancient_trapdoor", new TrapDoorBlock(EBProperties.BlockP.ANCIENT_TRAPDOOR, EBBlockSetTypes.ANCIENT), true);
+    public static final Block ANCIENT_PRESSURE_PLATE = register("ancient_pressure_plate", new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, EBProperties.BlockP.ANCIENT_WOOD, EBBlockSetTypes.ANCIENT), true);
     public static final Block ANCIENT_BUTTON = register("ancient_button", new ButtonBlock(EBProperties.BlockP.ANCIENT_WOOD, EBBlockSetTypes.ANCIENT, 30, true), true);
     public static final Block ANCIENT_SIGN = register("ancient_sign", new EBSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), false);
     public static final Block ANCIENT_WALL_SIGN = register("ancient_wall_sign", new EBWallSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), false);
@@ -187,29 +205,29 @@ public class EBBlocks {
 
     public static final Block ANCIENT_LEAVES = register("ancient_leaves", new GlowingLeavesBlock(EBParticles.ANCIENT_PARTICLE, EBProperties.BlockP.GLOWING_LEAVES), true);
     public static final Block ANCIENT_SAPLING = registerAncSapling("ancient_sapling", new AncientSaplingBlock(new AncientSaplingGenerator(), EBProperties.BlockP.GLOWING_SAPLING), true);
-    public static final Block POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", Blocks.createFlowerPotBlock(EBBlocks.ANCIENT_SAPLING), false);
+    public static final Block POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", Blocks.flowerPot(EBBlocks.ANCIENT_SAPLING), false);
 
     //GLOOM
-    public static final Block GLOOM_LOG = register("gloom_log", new PillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block STRIPPED_GLOOM_LOG = register("stripped_gloom_log", new PillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_WOOD = register("gloom_wood", new PillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block STRIPPED_GLOOM_WOOD = register("stripped_stripped_gloom_log_wood", new PillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block GLOOM_LOG = register("gloom_log", new RotatedPillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block STRIPPED_GLOOM_LOG = register("stripped_gloom_log", new RotatedPillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block GLOOM_WOOD = register("gloom_wood", new RotatedPillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block STRIPPED_GLOOM_WOOD = register("stripped_stripped_gloom_log_wood", new RotatedPillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
 
     public static final Block GLOOM_PLANKS = register("gloom_planks", new Block(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_STAIRS = register("gloom_stairs", new StairsBlock(GLOOM_PLANKS.getDefaultState(), EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block GLOOM_STAIRS = register("gloom_stairs", new EBStairBlock(GLOOM_PLANKS.defaultBlockState(), EBProperties.BlockP.GLOOM_WOOD), true);
     public static final Block GLOOM_SLAB = register("gloom_slab", new SlabBlock(EBProperties.BlockP.GLOOM_WOOD), true);
     public static final Block GLOOM_VERTICAL_STAIRS = registerVStairs("gloom_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GLOOM_WOOD), true);
 
     public static final Block GLOOM_MOSAIC = register("gloom_mosaic", new Block(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_MOSAIC_STAIRS = register("gloom_mosaic_stairs", new StairsBlock(GLOOM_MOSAIC.getDefaultState(), EBProperties.BlockP.GLOOM_WOOD), true);
+    public static final Block GLOOM_MOSAIC_STAIRS = register("gloom_mosaic_stairs", new EBStairBlock(GLOOM_MOSAIC.defaultBlockState(), EBProperties.BlockP.GLOOM_WOOD), true);
     public static final Block GLOOM_MOSAIC_SLAB = register("gloom_mosaic_slab", new SlabBlock(EBProperties.BlockP.GLOOM_WOOD), true);
     public static final Block GLOOM_MOSAIC_VERTICAL_STAIRS = registerVStairs("gloom_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GLOOM_WOOD), true);
 
     public static final Block GLOOM_FENCE = register("gloom_fence", new FenceBlock(EBProperties.BlockP.GLOOM_WOOD), true);
     public static final Block GLOOM_FENCE_GATE = register("gloom_fence_gate", new FenceGateBlock(EBProperties.BlockP.GLOOM_WOOD, EBBlockSetTypes.EBWoodTypes.GLOOM), true);
     public static final Block GLOOM_DOOR = register("gloom_door", new DoorBlock(EBProperties.BlockP.GLOOM_DOOR, EBBlockSetTypes.GLOOM), true);
-    public static final Block GLOOM_TRAPDOOR = register("gloom_trapdoor", new TrapdoorBlock(EBProperties.BlockP.GLOOM_TRAPDOOR, EBBlockSetTypes.GLOOM), true);
-    public static final Block GLOOM_PRESSURE_PLATE = register("gloom_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, EBProperties.BlockP.GLOOM_WOOD, EBBlockSetTypes.GLOOM), true);
+    public static final Block GLOOM_TRAPDOOR = register("gloom_trapdoor", new TrapDoorBlock(EBProperties.BlockP.GLOOM_TRAPDOOR, EBBlockSetTypes.GLOOM), true);
+    public static final Block GLOOM_PRESSURE_PLATE = register("gloom_pressure_plate", new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, EBProperties.BlockP.GLOOM_WOOD, EBBlockSetTypes.GLOOM), true);
     public static final Block GLOOM_BUTTON = register("gloom_button", new ButtonBlock(EBProperties.BlockP.GLOOM_WOOD, EBBlockSetTypes.GLOOM, 30, true), true);
     public static final Block GLOOM_SIGN = register("gloom_sign", new EBSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
     public static final Block GLOOM_WALL_SIGN = register("gloom_wall_sign", new EBWallSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
@@ -219,30 +237,30 @@ public class EBBlocks {
     public static final Block GLOOM_LEAVES = register("gloom_leaves", new FloweringLeavesBlock(EBParticles.GLOOM_PARTICLE, EBProperties.BlockP.GLOOM_LEAVES), true);
     public static final Block GLOOM_SEEDS = register("gloom_seeds", new SaplingBlock(new GloomSaplingGenerator(), EBProperties.BlockP.GLOOM_SEEDS), true);
     public static final Block GLOOM_SAPLING = registerGlmSapling("gloom_sapling", new GloomSaplingBlock(new GloomSaplingGenerator(), EBProperties.BlockP.GLOOM_SAPLING), true);
-    public static final Block POTTED_GLOOM_SAPLING = register("potted_gloom_sapling", Blocks.createFlowerPotBlock(EBBlocks.GLOOM_SAPLING), false);
+    public static final Block POTTED_GLOOM_SAPLING = register("potted_gloom_sapling", Blocks.flowerPot(EBBlocks.GLOOM_SAPLING), false);
 
     //COBBLED BRICKS
     public static final Block COBBLESTONE_BRICKS = register("cobblestone_bricks", new Block(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
-    public static final Block COBBLESTONE_BRICK_STAIRS = register("cobblestone_brick_stairs", new StairsBlock(COBBLESTONE_BRICKS.getDefaultState(), EBProperties.BlockP.COBBLESTONE_BRICKS), true);
+    public static final Block COBBLESTONE_BRICK_STAIRS = register("cobblestone_brick_stairs", new EBStairBlock(COBBLESTONE_BRICKS.defaultBlockState(), EBProperties.BlockP.COBBLESTONE_BRICKS), true);
     public static final Block COBBLESTONE_BRICK_SLAB = register("cobblestone_brick_slab", new SlabBlock(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
     public static final Block COBBLESTONE_BRICK_VERTICAL_STAIRS = registerVStairs("cobblestone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
     public static final Block COBBLESTONE_BRICK_WALL = register("cobblestone_brick_wall", new WallBlock(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
     public static final Block CRACKED_COBBLESTONE_BRICKS = register("cracked_cobblestone_bricks", new Block(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
     public static final Block MOSSY_COBBLESTONE_BRICKS = register("mossy_cobblestone_bricks", new Block(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
-    public static final Block MOSSY_COBBLESTONE_BRICK_STAIRS = register("mossy_cobblestone_brick_stairs", new StairsBlock(MOSSY_COBBLESTONE_BRICKS.getDefaultState(), EBProperties.BlockP.COBBLESTONE_BRICKS), true);
+    public static final Block MOSSY_COBBLESTONE_BRICK_STAIRS = register("mossy_cobblestone_brick_stairs", new EBStairBlock(MOSSY_COBBLESTONE_BRICKS.defaultBlockState(), EBProperties.BlockP.COBBLESTONE_BRICKS), true);
     public static final Block MOSSY_COBBLESTONE_BRICK_SLAB = register("mossy_cobblestone_brick_slab", new SlabBlock(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
     public static final Block MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS = registerVStairs("mossy_cobblestone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
     public static final Block MOSSY_COBBLESTONE_BRICK_WALL = register("mossy_cobblestone_brick_wall", new WallBlock(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
 
     public static final Block COBBLED_DEEPSLATE_BRICKS = register("cobbled_deepslate_bricks", new Block(EBProperties.BlockP.COBBLED_DEEPSLATE_BRICKS), true);
-    public static final Block COBBLED_DEEPSLATE_BRICK_STAIRS = register("cobbled_deepslate_brick_stairs", new StairsBlock(COBBLED_DEEPSLATE_BRICKS.getDefaultState(), EBProperties.BlockP.COBBLED_DEEPSLATE_BRICKS), true);
+    public static final Block COBBLED_DEEPSLATE_BRICK_STAIRS = register("cobbled_deepslate_brick_stairs", new EBStairBlock(COBBLED_DEEPSLATE_BRICKS.defaultBlockState(), EBProperties.BlockP.COBBLED_DEEPSLATE_BRICKS), true);
     public static final Block COBBLED_DEEPSLATE_BRICK_SLAB = register("cobbled_deepslate_brick_slab", new SlabBlock(EBProperties.BlockP.COBBLED_DEEPSLATE_BRICKS), true);
     public static final Block COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS = registerVStairs("cobbled_deepslate_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.COBBLED_DEEPSLATE_BRICKS), true);
     public static final Block COBBLED_DEEPSLATE_BRICK_WALL = register("cobbled_deepslate_brick_wall", new WallBlock(EBProperties.BlockP.COBBLED_DEEPSLATE_BRICKS), true);
     public static final Block CRACKED_COBBLED_DEEPSLATE_BRICKS = register("cracked_cobbled_deepslate_bricks", new Block(EBProperties.BlockP.COBBLED_DEEPSLATE_BRICKS), true);
 
     public static final Block BLACKSTONE_BRICKS = register("blackstone_bricks", new Block(EBProperties.BlockP.BLACKSTONE_BRICKS), true);
-    public static final Block BLACKSTONE_BRICK_STAIRS = register("blackstone_brick_stairs", new StairsBlock(BLACKSTONE_BRICKS.getDefaultState(), EBProperties.BlockP.BLACKSTONE_BRICKS), true);
+    public static final Block BLACKSTONE_BRICK_STAIRS = register("blackstone_brick_stairs", new EBStairBlock(BLACKSTONE_BRICKS.defaultBlockState(), EBProperties.BlockP.BLACKSTONE_BRICKS), true);
     public static final Block BLACKSTONE_BRICK_SLAB = register("blackstone_brick_slab", new SlabBlock(EBProperties.BlockP.BLACKSTONE_BRICKS), true);
     public static final Block BLACKSTONE_BRICK_VERTICAL_STAIRS = registerVStairs("blackstone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BLACKSTONE_BRICKS), true);
     public static final Block BLACKSTONE_BRICK_WALL = register("blackstone_brick_wall", new WallBlock(EBProperties.BlockP.BLACKSTONE_BRICKS), true);
@@ -250,73 +268,73 @@ public class EBBlocks {
 
     //RESOURCE
     public static final Block GOLD_BRICKS = registerRB("gold_bricks", new ResourceBrickBlock(EBProperties.BlockP.GOLD), true);
-    public static final Block GOLD_BRICK_STAIRS = registerRB("gold_brick_stairs", new ResourceBrickStairsBlock(GOLD_BRICKS.getDefaultState(), EBProperties.BlockP.GOLD), true);
+    public static final Block GOLD_BRICK_STAIRS = registerRB("gold_brick_stairs", new ResourceBrickStairsBlock(GOLD_BRICKS.defaultBlockState(), EBProperties.BlockP.GOLD), true);
     public static final Block GOLD_BRICK_SLAB = registerRB("gold_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.GOLD), true);
     public static final Block GOLD_BRICK_VERTICAL_STAIRS = registerRBVStairs("gold_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.GOLD), true);
 
     public static final Block IRON_BRICKS = registerRB("iron_bricks", new ResourceBrickBlock(EBProperties.BlockP.IRON), true);
-    public static final Block IRON_BRICK_STAIRS = registerRB("iron_brick_stairs", new ResourceBrickStairsBlock(IRON_BRICKS.getDefaultState(), EBProperties.BlockP.IRON), true);
+    public static final Block IRON_BRICK_STAIRS = registerRB("iron_brick_stairs", new ResourceBrickStairsBlock(IRON_BRICKS.defaultBlockState(), EBProperties.BlockP.IRON), true);
     public static final Block IRON_BRICK_SLAB = registerRB("iron_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.IRON), true);
     public static final Block IRON_BRICK_VERTICAL_STAIRS = registerRBVStairs("iron_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.IRON), true);
 
     public static final Block LAPIS_BRICKS = registerRB("lapis_bricks", new ResourceBrickBlock(EBProperties.BlockP.LAPIS), true);
-    public static final Block LAPIS_BRICK_STAIRS = registerRB("lapis_brick_stairs", new ResourceBrickStairsBlock(LAPIS_BRICKS.getDefaultState(), EBProperties.BlockP.LAPIS), true);
+    public static final Block LAPIS_BRICK_STAIRS = registerRB("lapis_brick_stairs", new ResourceBrickStairsBlock(LAPIS_BRICKS.defaultBlockState(), EBProperties.BlockP.LAPIS), true);
     public static final Block LAPIS_BRICK_SLAB = registerRB("lapis_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.LAPIS), true);
     public static final Block LAPIS_BRICK_VERTICAL_STAIRS = registerRBVStairs("lapis_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.LAPIS), true);
 
     public static final Block EMERALD_BRICKS = registerRB("emerald_bricks", new ResourceBrickBlock(EBProperties.BlockP.EMERALD), true);
-    public static final Block EMERALD_BRICK_STAIRS = registerRB("emerald_brick_stairs", new ResourceBrickStairsBlock(EMERALD_BRICKS.getDefaultState(), EBProperties.BlockP.EMERALD), true);
+    public static final Block EMERALD_BRICK_STAIRS = registerRB("emerald_brick_stairs", new ResourceBrickStairsBlock(EMERALD_BRICKS.defaultBlockState(), EBProperties.BlockP.EMERALD), true);
     public static final Block EMERALD_BRICK_SLAB = registerRB("emerald_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.EMERALD), true);
     public static final Block EMERALD_BRICK_VERTICAL_STAIRS = registerRBVStairs("emerald_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.EMERALD), true);
 
     public static final Block DIAMOND_BRICKS = registerRB("diamond_bricks", new ResourceBrickBlock(EBProperties.BlockP.DIAMOND), true);
-    public static final Block DIAMOND_BRICK_STAIRS = registerRB("diamond_brick_stairs", new ResourceBrickStairsBlock(DIAMOND_BRICKS.getDefaultState(), EBProperties.BlockP.DIAMOND), true);
+    public static final Block DIAMOND_BRICK_STAIRS = registerRB("diamond_brick_stairs", new ResourceBrickStairsBlock(DIAMOND_BRICKS.defaultBlockState(), EBProperties.BlockP.DIAMOND), true);
     public static final Block DIAMOND_BRICK_SLAB = registerRB("diamond_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.DIAMOND), true);
     public static final Block DIAMOND_BRICK_VERTICAL_STAIRS = registerRBVStairs("diamond_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.DIAMOND), true);
 
     public static final Block NETHERITE_BRICKS = registerRB("netherite_bricks", new ResourceBrickBlock(EBProperties.BlockP.NETHERITE), false);
-    public static final Block NETHERITE_BRICK_STAIRS = registerRB("netherite_brick_stairs", new ResourceBrickStairsBlock(NETHERITE_BRICKS.getDefaultState(), EBProperties.BlockP.NETHERITE), false);
+    public static final Block NETHERITE_BRICK_STAIRS = registerRB("netherite_brick_stairs", new ResourceBrickStairsBlock(NETHERITE_BRICKS.defaultBlockState(), EBProperties.BlockP.NETHERITE), false);
     public static final Block NETHERITE_BRICK_SLAB = registerRB("netherite_brick_slab", new ResourceBrickSlabBlock(EBProperties.BlockP.NETHERITE), false);
     public static final Block NETHERITE_BRICK_VERTICAL_STAIRS = registerRBVStairs("netherite_brick_vertical_stairs", new ResourceBrickVerticalStairsBlock(EBProperties.BlockP.NETHERITE), false);
 
     public static final Block REDSTONE_BRICKS = registerRB("redstone_bricks", new RedstoneResourceBrickBlock(EBProperties.BlockP.REDSTONE), true);
-    public static final Block REDSTONE_BRICK_STAIRS = registerRB("redstone_brick_stairs", new RedstoneResourceBrickStairsBlock(REDSTONE_BRICKS.getDefaultState(), EBProperties.BlockP.REDSTONE), true);
+    public static final Block REDSTONE_BRICK_STAIRS = registerRB("redstone_brick_stairs", new RedstoneResourceBrickStairsBlock(REDSTONE_BRICKS.defaultBlockState(), EBProperties.BlockP.REDSTONE), true);
     public static final Block REDSTONE_BRICK_SLAB = registerRB("redstone_brick_slab", new RedstoneResourceBrickSlabBlock(EBProperties.BlockP.REDSTONE), true);
     public static final Block REDSTONE_BRICK_VERTICAL_STAIRS = registerRBVStairs("redstone_brick_vertical_stairs", new RedstoneResourceBrickVerticalStairsBlock(EBProperties.BlockP.REDSTONE), true);
 
     //COPPER - UNAFFECTED
-    public static final Block COPPER_BRICKS = register("copper_bricks", new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, EBProperties.BlockP.COPPER), true);
-    public static final Block COPPER_BRICK_STAIRS = register("copper_brick_stairs", new OxidizableStairsBlock(Oxidizable.OxidationLevel.UNAFFECTED, COPPER_BRICKS.getDefaultState(), EBProperties.BlockP.COPPER), true);
-    public static final Block COPPER_BRICK_SLAB = register("copper_brick_slab", new OxidizableSlabBlock(Oxidizable.OxidationLevel.UNAFFECTED, EBProperties.BlockP.COPPER), true);
-    public static final Block COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("copper_brick_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.UNAFFECTED, EBProperties.BlockP.COPPER), true);
-    public static final Block EXPOSED_COPPER_BRICKS = register("exposed_copper_bricks", new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, EBProperties.BlockP.EXPOSED_COPPER), true);
-    public static final Block EXPOSED_COPPER_BRICK_STAIRS = register("exposed_copper_brick_stairs", new OxidizableStairsBlock(Oxidizable.OxidationLevel.EXPOSED, EXPOSED_COPPER_BRICKS.getDefaultState(), EBProperties.BlockP.EXPOSED_COPPER), true);
-    public static final Block EXPOSED_COPPER_BRICK_SLAB = register("exposed_copper_brick_slab", new OxidizableSlabBlock(Oxidizable.OxidationLevel.EXPOSED, EBProperties.BlockP.EXPOSED_COPPER), true);
-    public static final Block EXPOSED_COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("exposed_copper_brick_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.EXPOSED, EBProperties.BlockP.EXPOSED_COPPER), true);
-    public static final Block WEATHERED_COPPER_BRICKS = register("weathered_copper_bricks", new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, EBProperties.BlockP.WEATHERED_COPPER), true);
-    public static final Block WEATHERED_COPPER_BRICK_STAIRS = register("weathered_copper_brick_stairs", new OxidizableStairsBlock(Oxidizable.OxidationLevel.WEATHERED, WEATHERED_COPPER_BRICKS.getDefaultState(), EBProperties.BlockP.WEATHERED_COPPER), true);
-    public static final Block WEATHERED_COPPER_BRICK_SLAB = register("weathered_copper_brick_slab", new OxidizableSlabBlock(Oxidizable.OxidationLevel.WEATHERED, EBProperties.BlockP.WEATHERED_COPPER), true);
-    public static final Block WEATHERED_COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("weathered_copper_brick_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.WEATHERED, EBProperties.BlockP.WEATHERED_COPPER), true);
-    public static final Block OXIDIZED_COPPER_BRICKS = register("oxidized_copper_bricks", new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, EBProperties.BlockP.OXIDIZED_COPPER), true);
-    public static final Block OXIDIZED_COPPER_BRICK_STAIRS = register("oxidized_copper_brick_stairs", new OxidizableStairsBlock(Oxidizable.OxidationLevel.OXIDIZED, OXIDIZED_COPPER_BRICKS.getDefaultState(), EBProperties.BlockP.OXIDIZED_COPPER), true);
-    public static final Block OXIDIZED_COPPER_BRICK_SLAB = register("oxidized_copper_brick_slab", new OxidizableSlabBlock(Oxidizable.OxidationLevel.OXIDIZED, EBProperties.BlockP.OXIDIZED_COPPER), true);
-    public static final Block OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("oxidized_copper_brick_vertical_stairs", new OxidizableVerticalStairsBlock(Oxidizable.OxidationLevel.OXIDIZED, EBProperties.BlockP.OXIDIZED_COPPER), true);
+    public static final Block COPPER_BRICKS = register("copper_bricks", new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, EBProperties.BlockP.COPPER), true);
+    public static final Block COPPER_BRICK_STAIRS = register("copper_brick_stairs", new WeatheringCopperStairBlock(WeatheringCopper.WeatherState.UNAFFECTED, COPPER_BRICKS.defaultBlockState(), EBProperties.BlockP.COPPER), true);
+    public static final Block COPPER_BRICK_SLAB = register("copper_brick_slab", new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.UNAFFECTED, EBProperties.BlockP.COPPER), true);
+    public static final Block COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("copper_brick_vertical_stairs", new OxidizableVerticalStairsBlock(WeatheringCopper.WeatherState.UNAFFECTED, EBProperties.BlockP.COPPER), true);
+    public static final Block EXPOSED_COPPER_BRICKS = register("exposed_copper_bricks", new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED, EBProperties.BlockP.EXPOSED_COPPER), true);
+    public static final Block EXPOSED_COPPER_BRICK_STAIRS = register("exposed_copper_brick_stairs", new WeatheringCopperStairBlock(WeatheringCopper.WeatherState.EXPOSED, EXPOSED_COPPER_BRICKS.defaultBlockState(), EBProperties.BlockP.EXPOSED_COPPER), true);
+    public static final Block EXPOSED_COPPER_BRICK_SLAB = register("exposed_copper_brick_slab", new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.EXPOSED, EBProperties.BlockP.EXPOSED_COPPER), true);
+    public static final Block EXPOSED_COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("exposed_copper_brick_vertical_stairs", new OxidizableVerticalStairsBlock(WeatheringCopper.WeatherState.EXPOSED, EBProperties.BlockP.EXPOSED_COPPER), true);
+    public static final Block WEATHERED_COPPER_BRICKS = register("weathered_copper_bricks", new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED, EBProperties.BlockP.WEATHERED_COPPER), true);
+    public static final Block WEATHERED_COPPER_BRICK_STAIRS = register("weathered_copper_brick_stairs", new WeatheringCopperStairBlock(WeatheringCopper.WeatherState.WEATHERED, WEATHERED_COPPER_BRICKS.defaultBlockState(), EBProperties.BlockP.WEATHERED_COPPER), true);
+    public static final Block WEATHERED_COPPER_BRICK_SLAB = register("weathered_copper_brick_slab", new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.WEATHERED, EBProperties.BlockP.WEATHERED_COPPER), true);
+    public static final Block WEATHERED_COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("weathered_copper_brick_vertical_stairs", new OxidizableVerticalStairsBlock(WeatheringCopper.WeatherState.WEATHERED, EBProperties.BlockP.WEATHERED_COPPER), true);
+    public static final Block OXIDIZED_COPPER_BRICKS = register("oxidized_copper_bricks", new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED, EBProperties.BlockP.OXIDIZED_COPPER), true);
+    public static final Block OXIDIZED_COPPER_BRICK_STAIRS = register("oxidized_copper_brick_stairs", new WeatheringCopperStairBlock(WeatheringCopper.WeatherState.OXIDIZED, OXIDIZED_COPPER_BRICKS.defaultBlockState(), EBProperties.BlockP.OXIDIZED_COPPER), true);
+    public static final Block OXIDIZED_COPPER_BRICK_SLAB = register("oxidized_copper_brick_slab", new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.OXIDIZED, EBProperties.BlockP.OXIDIZED_COPPER), true);
+    public static final Block OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("oxidized_copper_brick_vertical_stairs", new OxidizableVerticalStairsBlock(WeatheringCopper.WeatherState.OXIDIZED, EBProperties.BlockP.OXIDIZED_COPPER), true);
 
     //COPPER - WAXED
     public static final Block WAXED_COPPER_BRICKS = register("waxed_copper_bricks", new Block(EBProperties.BlockP.COPPER), true);
-    public static final Block WAXED_COPPER_BRICK_STAIRS = register("waxed_copper_brick_stairs", new StairsBlock(WAXED_COPPER_BRICKS.getDefaultState(), EBProperties.BlockP.COPPER), true);
+    public static final Block WAXED_COPPER_BRICK_STAIRS = register("waxed_copper_brick_stairs", new EBStairBlock(WAXED_COPPER_BRICKS.defaultBlockState(), EBProperties.BlockP.COPPER), true);
     public static final Block WAXED_COPPER_BRICK_SLAB = register("waxed_copper_brick_slab", new SlabBlock(EBProperties.BlockP.COPPER), true);
     public static final Block WAXED_COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("waxed_copper_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.COPPER), true);
     public static final Block WAXED_EXPOSED_COPPER_BRICKS = register("waxed_exposed_copper_bricks", new Block(EBProperties.BlockP.EXPOSED_COPPER), true);
-    public static final Block WAXED_EXPOSED_COPPER_BRICK_STAIRS = register("waxed_exposed_copper_brick_stairs", new StairsBlock(WAXED_EXPOSED_COPPER_BRICKS.getDefaultState(), EBProperties.BlockP.EXPOSED_COPPER), true);
+    public static final Block WAXED_EXPOSED_COPPER_BRICK_STAIRS = register("waxed_exposed_copper_brick_stairs", new EBStairBlock(WAXED_EXPOSED_COPPER_BRICKS.defaultBlockState(), EBProperties.BlockP.EXPOSED_COPPER), true);
     public static final Block WAXED_EXPOSED_COPPER_BRICK_SLAB = register("waxed_exposed_copper_brick_slab", new SlabBlock(EBProperties.BlockP.EXPOSED_COPPER), true);
     public static final Block WAXED_EXPOSED_COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("waxed_exposed_copper_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.EXPOSED_COPPER), true);
     public static final Block WAXED_WEATHERED_COPPER_BRICKS = register("waxed_weathered_copper_bricks", new Block(EBProperties.BlockP.WEATHERED_COPPER), true);
-    public static final Block WAXED_WEATHERED_COPPER_BRICK_STAIRS = register("waxed_weathered_copper_brick_stairs", new StairsBlock(WAXED_WEATHERED_COPPER_BRICKS.getDefaultState(), EBProperties.BlockP.WEATHERED_COPPER), true);
+    public static final Block WAXED_WEATHERED_COPPER_BRICK_STAIRS = register("waxed_weathered_copper_brick_stairs", new EBStairBlock(WAXED_WEATHERED_COPPER_BRICKS.defaultBlockState(), EBProperties.BlockP.WEATHERED_COPPER), true);
     public static final Block WAXED_WEATHERED_COPPER_BRICK_SLAB = register("waxed_weathered_copper_brick_slab", new SlabBlock(EBProperties.BlockP.WEATHERED_COPPER), true);
     public static final Block WAXED_WEATHERED_COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("waxed_weathered_copper_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.WEATHERED_COPPER), true);
     public static final Block WAXED_OXIDIZED_COPPER_BRICKS = register("waxed_oxidized_copper_bricks", new Block(EBProperties.BlockP.OXIDIZED_COPPER), true);
-    public static final Block WAXED_OXIDIZED_COPPER_BRICK_STAIRS = register("waxed_oxidized_copper_brick_stairs", new StairsBlock(WAXED_OXIDIZED_COPPER_BRICKS.getDefaultState(), EBProperties.BlockP.OXIDIZED_COPPER), true);
+    public static final Block WAXED_OXIDIZED_COPPER_BRICK_STAIRS = register("waxed_oxidized_copper_brick_stairs", new EBStairBlock(WAXED_OXIDIZED_COPPER_BRICKS.defaultBlockState(), EBProperties.BlockP.OXIDIZED_COPPER), true);
     public static final Block WAXED_OXIDIZED_COPPER_BRICK_SLAB = register("waxed_oxidized_copper_brick_slab", new SlabBlock(EBProperties.BlockP.OXIDIZED_COPPER), true);
     public static final Block WAXED_OXIDIZED_COPPER_BRICK_VERTICAL_STAIRS = registerVStairs("waxed_oxidized_copper_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.OXIDIZED_COPPER), true);
 
@@ -341,7 +359,7 @@ public class EBBlocks {
 
     //TERRACOTTA TILES
     public static final Block TERRACOTTA_TILES = register("terracotta_tiles", new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA)), true);
-    public static final Block TERRACOTTA_TILE_STAIRS = register("terracotta_tile_stairs", new StairsBlock(EBBlocks.TERRACOTTA_TILES.getDefaultState(), FabricBlockSettings.copyOf(Blocks.TERRACOTTA)), true);
+    public static final Block TERRACOTTA_TILE_STAIRS = register("terracotta_tile_stairs", new EBStairBlock(EBBlocks.TERRACOTTA_TILES.defaultBlockState(), FabricBlockSettings.copyOf(Blocks.TERRACOTTA)), true);
     public static final Block TERRACOTTA_TILE_VERTICAL_STAIRS = registerVStairs("terracotta_tile_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA)), true);
     public static final Block TERRACOTTA_TILE_SLAB = register("terracotta_tile_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA)), true);
 
@@ -369,7 +387,7 @@ public class EBBlocks {
     static {
         for (DyeColor colors : DyeColor.values()) {
             DYED_TERRACOTTA_TILES.put(colors, register(colors + "_terracotta_tiles", new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).mapColor(colors)), true));
-            DYED_TERRACOTTA_TILE_STAIRS.put(colors, register(colors + "_terracotta_tile_stairs", new StairsBlock(getDyedTerracottaTiles(colors.getId()).getDefaultState(), FabricBlockSettings.copyOf(Blocks.TERRACOTTA).mapColor(colors)), true));
+            DYED_TERRACOTTA_TILE_STAIRS.put(colors, register(colors + "_terracotta_tile_stairs", new EBStairBlock(getDyedTerracottaTiles(colors.getId()).defaultBlockState(), FabricBlockSettings.copyOf(Blocks.TERRACOTTA).mapColor(colors)), true));
             DYED_TERRACOTTA_TILE_VERTICAL_STAIRS.put(colors, registerVStairs(colors + "_terracotta_tile_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).mapColor(colors)), true));
             DYED_TERRACOTTA_TILE_SLAB.put(colors, register(colors + "_terracotta_tile_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).mapColor(colors)), true));
         }
@@ -392,7 +410,7 @@ public class EBBlocks {
 
     //ALMENTRA
     public static final Block ALMENTRA = register("almentra", new Block(EBProperties.BlockP.ALMENTRA), true);
-    public static final Block ALMENTRA_STAIRS = register("almentra_stairs", new StairsBlock(EBBlocks.ALMENTRA.getDefaultState(), EBProperties.BlockP.ALMENTRA), true);
+    public static final Block ALMENTRA_STAIRS = register("almentra_stairs", new EBStairBlock(EBBlocks.ALMENTRA.defaultBlockState(), EBProperties.BlockP.ALMENTRA), true);
     public static final Block ALMENTRA_VERTICAL_STAIRS = registerVStairs("almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA), true);
     public static final Block ALMENTRA_SLAB = register("almentra_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA), true);
 
@@ -419,7 +437,7 @@ public class EBBlocks {
 
     //POLISHED ALMENTRA
     public static final Block POLISHED_ALMENTRA = register("polished_almentra", new Block(EBProperties.BlockP.ALMENTRA), true);
-    public static final Block POLISHED_ALMENTRA_STAIRS = register("polished_almentra_stairs", new StairsBlock(EBBlocks.POLISHED_ALMENTRA.getDefaultState(), EBProperties.BlockP.ALMENTRA), true);
+    public static final Block POLISHED_ALMENTRA_STAIRS = register("polished_almentra_stairs", new EBStairBlock(EBBlocks.POLISHED_ALMENTRA.defaultBlockState(), EBProperties.BlockP.ALMENTRA), true);
     public static final Block POLISHED_ALMENTRA_VERTICAL_STAIRS = registerVStairs("polished_almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA), true);
     public static final Block POLISHED_ALMENTRA_SLAB = register("polished_almentra_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA), true);
 
@@ -446,7 +464,7 @@ public class EBBlocks {
 
     //ALMENTRA BRICKS
     public static final Block ALMENTRA_BRICKS = register("almentra_bricks", new Block(EBProperties.BlockP.ALMENTRA_BRICKS), true);
-    public static final Block ALMENTRA_BRICK_STAIRS = register("almentra_brick_stairs", new StairsBlock(EBBlocks.ALMENTRA_BRICKS.getDefaultState(), EBProperties.BlockP.ALMENTRA_BRICKS), true);
+    public static final Block ALMENTRA_BRICK_STAIRS = register("almentra_brick_stairs", new EBStairBlock(EBBlocks.ALMENTRA_BRICKS.defaultBlockState(), EBProperties.BlockP.ALMENTRA_BRICKS), true);
     public static final Block ALMENTRA_BRICK_VERTICAL_STAIRS = registerVStairs("almentra_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA_BRICKS), true);
     public static final Block ALMENTRA_BRICK_SLAB = register("almentra_brick_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA_BRICKS), true);
 
@@ -474,29 +492,29 @@ public class EBBlocks {
     static {
         for (DyeColor colors : DyeColor.values()) {
             DYED_ALMENTRA.put(colors, register(colors + "_almentra", new Block(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
-            DYED_ALMENTRA_STAIRS.put(colors, register(colors + "_almentra_stairs", new StairsBlock(getDyedAlmentra(colors.getId()).getDefaultState(), EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+            DYED_ALMENTRA_STAIRS.put(colors, register(colors + "_almentra_stairs", new EBStairBlock(getDyedAlmentra(colors.getId()).defaultBlockState(), EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
             DYED_ALMENTRA_VERTICAL_STAIRS.put(colors, registerVStairs(colors + "_almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
             DYED_ALMENTRA_SLAB.put(colors, register(colors + "_almentra_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
 
             DYED_POLISHED_ALMENTRA.put(colors, register(colors + "_polished_almentra", new Block(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
-            DYED_POLISHED_ALMENTRA_STAIRS.put(colors, register(colors + "_polished_almentra_stairs", new StairsBlock(getDyedPolishedAlmentra(colors.getId()).getDefaultState(), EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+            DYED_POLISHED_ALMENTRA_STAIRS.put(colors, register(colors + "_polished_almentra_stairs", new EBStairBlock(getDyedPolishedAlmentra(colors.getId()).defaultBlockState(), EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
             DYED_POLISHED_ALMENTRA_VERTICAL_STAIRS.put(colors, registerVStairs(colors + "_polished_almentra_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
             DYED_POLISHED_ALMENTRA_SLAB.put(colors, register(colors + "_polished_almentra_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
 
             DYED_ALMENTRA_BRICKS.put(colors, register(colors + "_almentra_bricks", new Block(EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
-            DYED_ALMENTRA_BRICK_STAIRS.put(colors, register(colors + "_almentra_brick_stairs", new StairsBlock(getDyedAlmentraBricks(colors.getId()).getDefaultState(), EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
+            DYED_ALMENTRA_BRICK_STAIRS.put(colors, register(colors + "_almentra_brick_stairs", new EBStairBlock(getDyedAlmentraBricks(colors.getId()).defaultBlockState(), EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
             DYED_ALMENTRA_BRICK_VERTICAL_STAIRS.put(colors, registerVStairs(colors + "_almentra_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
             DYED_ALMENTRA_BRICK_SLAB.put(colors, register(colors + "_almentra_brick_slab", new SlabBlock(EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
         }
     }
 
     //SEA GLASS
-    public static final Block SEA_GLASS = register("sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
-    public static final Block ROSE_SEA_GLASS = register("rose_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
-    public static final Block AQUA_SEA_GLASS = register("aqua_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
-    public static final Block VERDANT_SEA_GLASS = register("verdant_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
-    public static final Block SCARLET_SEA_GLASS = register("scarlet_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
-    public static final Block FUCHSIA_SEA_GLASS = register("fuchsia_sea_glass", new TransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block SEA_GLASS = register("sea_glass", new HalfTransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block ROSE_SEA_GLASS = register("rose_sea_glass", new HalfTransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block AQUA_SEA_GLASS = register("aqua_sea_glass", new HalfTransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block VERDANT_SEA_GLASS = register("verdant_sea_glass", new HalfTransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block SCARLET_SEA_GLASS = register("scarlet_sea_glass", new HalfTransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
+    public static final Block FUCHSIA_SEA_GLASS = register("fuchsia_sea_glass", new HalfTransparentBlock(EBProperties.BlockP.SEA_GLASS), true);
     public static final Block SEA_GLASS_PANE = register("sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
     public static final Block ROSE_SEA_GLASS_PANE = register("rose_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
     public static final Block AQUA_SEA_GLASS_PANE = register("aqua_sea_glass_pane", new SeaGlassPaneBlock(EBProperties.BlockP.SEA_GLASS), true);
@@ -506,7 +524,7 @@ public class EBBlocks {
 
     //SOUL SANDSTONE
     public static final Block SOUL_SANDSTONE = register("soul_sandstone", new Block(EBProperties.BlockP.SOUL_SANDSTONE), true);
-    public static final Block SOUL_SANDSTONE_STAIRS = register("soul_sandstone_stairs", new StairsBlock(SOUL_SANDSTONE.getDefaultState(), EBProperties.BlockP.SOUL_SANDSTONE), true);
+    public static final Block SOUL_SANDSTONE_STAIRS = register("soul_sandstone_stairs", new EBStairBlock(SOUL_SANDSTONE.defaultBlockState(), EBProperties.BlockP.SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_SLAB = register("soul_sandstone_slab", new SlabBlock(EBProperties.BlockP.SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_VERTICAL_STAIRS = registerVStairs("soul_sandstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_WALL = register("soul_sandstone_wall", new WallBlock(EBProperties.BlockP.SOUL_SANDSTONE), true);
@@ -516,7 +534,7 @@ public class EBBlocks {
     public static final Block CHISELED_SOUL_SANDSTONE = register("chiseled_soul_sandstone", new Block(EBProperties.BlockP.CUT_SOUL_SANDSTONE), true);
 
     public static final Block SMOOTH_SOUL_SANDSTONE = register("smooth_soul_sandstone", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
-    public static final Block SMOOTH_SOUL_SANDSTONE_STAIRS = register("smooth_soul_sandstone_stairs", new StairsBlock(SMOOTH_SOUL_SANDSTONE.getDefaultState(), EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
+    public static final Block SMOOTH_SOUL_SANDSTONE_STAIRS = register("smooth_soul_sandstone_stairs", new EBStairBlock(SMOOTH_SOUL_SANDSTONE.defaultBlockState(), EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block SMOOTH_SOUL_SANDSTONE_SLAB = register("smooth_soul_sandstone_slab", new SlabBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block SMOOTH_SOUL_SANDSTONE_VERTICAL_STAIRS = registerVStairs("smooth_soul_sandstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
 
@@ -524,19 +542,19 @@ public class EBBlocks {
 
     //POLISHED SANDSTONE
     public static final Block POLISHED_SANDSTONE = register("polished_sandstone", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
-    public static final Block POLISHED_SANDSTONE_STAIRS = register("polished_sandstone_stairs", new StairsBlock(POLISHED_SANDSTONE.getDefaultState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block POLISHED_SANDSTONE_STAIRS = register("polished_sandstone_stairs", new EBStairBlock(POLISHED_SANDSTONE.defaultBlockState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block POLISHED_SANDSTONE_SLAB = register("polished_sandstone_slab", new SlabBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block POLISHED_SANDSTONE_VERTICAL_STAIRS = registerVStairs("polished_sandstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block POLISHED_SANDSTONE_WALL = register("polished_sandstone_wall", new WallBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
 
     public static final Block SANDSTONE_BRICKS = register("sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
-    public static final Block SANDSTONE_BRICK_STAIRS = register("sandstone_brick_stairs", new StairsBlock(SANDSTONE_BRICKS.getDefaultState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_BRICK_STAIRS = register("sandstone_brick_stairs", new EBStairBlock(SANDSTONE_BRICKS.defaultBlockState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block SANDSTONE_BRICK_SLAB = register("sandstone_brick_slab", new SlabBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block SANDSTONE_BRICK_VERTICAL_STAIRS = registerVStairs("sandstone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block SANDSTONE_BRICK_WALL = register("sandstone_brick_wall", new WallBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
 
     public static final Block SANDSTONE_TILES = register("sandstone_tiles", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
-    public static final Block SANDSTONE_TILE_STAIRS = register("sandstone_tile_stairs", new StairsBlock(SANDSTONE_TILES.getDefaultState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_TILE_STAIRS = register("sandstone_tile_stairs", new EBStairBlock(SANDSTONE_TILES.defaultBlockState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block SANDSTONE_TILE_SLAB = register("sandstone_tile_slab", new SlabBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block SANDSTONE_TILE_VERTICAL_STAIRS = registerVStairs("sandstone_tile_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block SANDSTONE_TILE_WALL = register("sandstone_tile_wall", new WallBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
@@ -544,23 +562,23 @@ public class EBBlocks {
     public static final Block CHISELED_SANDSTONE_BRICKS = register("chiseled_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block ENGRAVED_SANDSTONE_BRICKS = register("engraved_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block DECORATED_SANDSTONE_BRICKS = register("decorated_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_SANDSTONE), true);
-    public static final Block SANDSTONE_PILLAR = register("sandstone_pillar", new PillarBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block SANDSTONE_PILLAR = register("sandstone_pillar", new RotatedPillarBlock(EBProperties.BlockP.POLISHED_SANDSTONE), true);
 
     //RED POLISHED SANDSTONE
     public static final Block POLISHED_RED_SANDSTONE = register("polished_red_sandstone", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
-    public static final Block POLISHED_RED_SANDSTONE_STAIRS = register("polished_red_sandstone_stairs", new StairsBlock(POLISHED_RED_SANDSTONE.getDefaultState(), EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
+    public static final Block POLISHED_RED_SANDSTONE_STAIRS = register("polished_red_sandstone_stairs", new EBStairBlock(POLISHED_RED_SANDSTONE.defaultBlockState(), EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block POLISHED_RED_SANDSTONE_SLAB = register("polished_red_sandstone_slab", new SlabBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block POLISHED_RED_SANDSTONE_VERTICAL_STAIRS = registerVStairs("polished_red_sandstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block POLISHED_RED_SANDSTONE_WALL = register("polished_red_sandstone_wall", new WallBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
 
     public static final Block RED_SANDSTONE_BRICKS = register("red_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
-    public static final Block RED_SANDSTONE_BRICK_STAIRS = register("red_sandstone_brick_stairs", new StairsBlock(RED_SANDSTONE_BRICKS.getDefaultState(), EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
+    public static final Block RED_SANDSTONE_BRICK_STAIRS = register("red_sandstone_brick_stairs", new EBStairBlock(RED_SANDSTONE_BRICKS.defaultBlockState(), EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block RED_SANDSTONE_BRICK_SLAB = register("red_sandstone_brick_slab", new SlabBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block RED_SANDSTONE_BRICK_VERTICAL_STAIRS = registerVStairs("red_sandstone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block RED_SANDSTONE_BRICK_WALL = register("red_sandstone_brick_wall", new WallBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
 
     public static final Block RED_SANDSTONE_TILES = register("red_sandstone_tiles", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
-    public static final Block RED_SANDSTONE_TILE_STAIRS = register("red_sandstone_tile_stairs", new StairsBlock(RED_SANDSTONE_TILES.getDefaultState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
+    public static final Block RED_SANDSTONE_TILE_STAIRS = register("red_sandstone_tile_stairs", new EBStairBlock(RED_SANDSTONE_TILES.defaultBlockState(), EBProperties.BlockP.POLISHED_SANDSTONE), true);
     public static final Block RED_SANDSTONE_TILE_SLAB = register("red_sandstone_tile_slab", new SlabBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block RED_SANDSTONE_TILE_VERTICAL_STAIRS = registerVStairs("red_sandstone_tile_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block RED_SANDSTONE_TILE_WALL = register("red_sandstone_tile_wall", new WallBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
@@ -568,23 +586,23 @@ public class EBBlocks {
     public static final Block CHISELED_RED_SANDSTONE_BRICKS = register("chiseled_red_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block ENGRAVED_RED_SANDSTONE_BRICKS = register("engraved_red_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
     public static final Block DECORATED_RED_SANDSTONE_BRICKS = register("decorated_red_sandstone_bricks", new Block(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
-    public static final Block RED_SANDSTONE_PILLAR = register("red_sandstone_pillar", new PillarBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
+    public static final Block RED_SANDSTONE_PILLAR = register("red_sandstone_pillar", new RotatedPillarBlock(EBProperties.BlockP.POLISHED_RED_SANDSTONE), true);
 
     //SOUL POLISHED SANDSTONE
     public static final Block POLISHED_SOUL_SANDSTONE = register("polished_soul_sandstone", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
-    public static final Block POLISHED_SOUL_SANDSTONE_STAIRS = register("polished_soul_sandstone_stairs", new StairsBlock(POLISHED_SOUL_SANDSTONE.getDefaultState(), EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
+    public static final Block POLISHED_SOUL_SANDSTONE_STAIRS = register("polished_soul_sandstone_stairs", new EBStairBlock(POLISHED_SOUL_SANDSTONE.defaultBlockState(), EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block POLISHED_SOUL_SANDSTONE_SLAB = register("polished_soul_sandstone_slab", new SlabBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block POLISHED_SOUL_SANDSTONE_VERTICAL_STAIRS = registerVStairs("polished_soul_sandstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block POLISHED_SOUL_SANDSTONE_WALL = register("polished_soul_sandstone_wall", new WallBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
 
     public static final Block SOUL_SANDSTONE_BRICKS = register("soul_sandstone_bricks", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
-    public static final Block SOUL_SANDSTONE_BRICK_STAIRS = register("soul_sandstone_brick_stairs", new StairsBlock(SOUL_SANDSTONE_BRICKS.getDefaultState(), EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
+    public static final Block SOUL_SANDSTONE_BRICK_STAIRS = register("soul_sandstone_brick_stairs", new EBStairBlock(SOUL_SANDSTONE_BRICKS.defaultBlockState(), EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_BRICK_SLAB = register("soul_sandstone_brick_slab", new SlabBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_BRICK_VERTICAL_STAIRS = registerVStairs("soul_sandstone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_BRICK_WALL = register("soul_sandstone_brick_wall", new WallBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
 
     public static final Block SOUL_SANDSTONE_TILES = register("soul_sandstone_tiles", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
-    public static final Block SOUL_SANDSTONE_TILE_STAIRS = register("soul_sandstone_tile_stairs", new StairsBlock(SOUL_SANDSTONE_TILES.getDefaultState(), EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
+    public static final Block SOUL_SANDSTONE_TILE_STAIRS = register("soul_sandstone_tile_stairs", new EBStairBlock(SOUL_SANDSTONE_TILES.defaultBlockState(), EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_TILE_SLAB = register("soul_sandstone_tile_slab", new SlabBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_TILE_VERTICAL_STAIRS = registerVStairs("soul_sandstone_tile_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block SOUL_SANDSTONE_TILE_WALL = register("soul_sandstone_tile_wall", new WallBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
@@ -592,7 +610,7 @@ public class EBBlocks {
     public static final Block CHISELED_SOUL_SANDSTONE_BRICKS = register("chiseled_soul_sandstone_bricks", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block ENGRAVED_SOUL_SANDSTONE_BRICKS = register("engraved_soul_sandstone_bricks", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
     public static final Block DECORATED_SOUL_SANDSTONE_BRICKS = register("decorated_soul_sandstone_bricks", new Block(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
-    public static final Block SOUL_SANDSTONE_PILLAR = register("soul_sandstone_pillar", new PillarBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
+    public static final Block SOUL_SANDSTONE_PILLAR = register("soul_sandstone_pillar", new RotatedPillarBlock(EBProperties.BlockP.SMOOTH_SOUL_SANDSTONE), true);
 
     //LADDERS
     public static final Block SPRUCE_LADDER = registerLadder("spruce_ladder", new EBLadderBlock(EBProperties.BlockP.GENERIC_LADDER), true);
@@ -687,21 +705,21 @@ public class EBBlocks {
 
     //STONE VARIANTS
     public static final Block GRANITE_BRICKS = register("granite_bricks", new Block(EBProperties.BlockP.POLISHED_GRANITE), true);
-    public static final Block GRANITE_BRICK_STAIRS = register("granite_brick_stairs", new StairsBlock(GRANITE_BRICKS.getDefaultState(), EBProperties.BlockP.POLISHED_GRANITE), true);
+    public static final Block GRANITE_BRICK_STAIRS = register("granite_brick_stairs", new EBStairBlock(GRANITE_BRICKS.defaultBlockState(), EBProperties.BlockP.POLISHED_GRANITE), true);
     public static final Block GRANITE_BRICK_SLAB = register("granite_brick_slab", new SlabBlock(EBProperties.BlockP.POLISHED_GRANITE), true);
     public static final Block GRANITE_BRICK_VERTICAL_STAIRS = registerVStairs("granite_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_GRANITE), true);
     public static final Block GRANITE_BRICK_WALL = register("granite_brick_wall", new WallBlock(EBProperties.BlockP.POLISHED_GRANITE), true);
     public static final Block CRACKED_GRANITE_BRICKS = register("cracked_granite_bricks", new Block(EBProperties.BlockP.POLISHED_GRANITE), true);
 
     public static final Block ANDESITE_BRICKS = register("andesite_bricks", new Block(EBProperties.BlockP.POLISHED_ANDESITE), true);
-    public static final Block ANDESITE_BRICK_STAIRS = register("andesite_brick_stairs", new StairsBlock(ANDESITE_BRICKS.getDefaultState(), EBProperties.BlockP.POLISHED_ANDESITE), true);
+    public static final Block ANDESITE_BRICK_STAIRS = register("andesite_brick_stairs", new EBStairBlock(ANDESITE_BRICKS.defaultBlockState(), EBProperties.BlockP.POLISHED_ANDESITE), true);
     public static final Block ANDESITE_BRICK_SLAB = register("andesite_brick_slab", new SlabBlock(EBProperties.BlockP.POLISHED_ANDESITE), true);
     public static final Block ANDESITE_BRICK_VERTICAL_STAIRS = registerVStairs("andesite_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_ANDESITE), true);
     public static final Block ANDESITE_BRICK_WALL = register("andesite_brick_wall", new WallBlock(EBProperties.BlockP.POLISHED_ANDESITE), true);
     public static final Block CRACKED_ANDESITE_BRICKS = register("cracked_andesite_bricks", new Block(EBProperties.BlockP.POLISHED_ANDESITE), true);
 
     public static final Block DIORITE_BRICKS = register("diorite_bricks", new Block(EBProperties.BlockP.POLISHED_DIORITE), true);
-    public static final Block DIORITE_BRICK_STAIRS = register("diorite_brick_stairs", new StairsBlock(DIORITE_BRICKS.getDefaultState(), EBProperties.BlockP.POLISHED_DIORITE), true);
+    public static final Block DIORITE_BRICK_STAIRS = register("diorite_brick_stairs", new EBStairBlock(DIORITE_BRICKS.defaultBlockState(), EBProperties.BlockP.POLISHED_DIORITE), true);
     public static final Block DIORITE_BRICK_SLAB = register("diorite_brick_slab", new SlabBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
     public static final Block DIORITE_BRICK_VERTICAL_STAIRS = registerVStairs("diorite_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
     public static final Block DIORITE_BRICK_WALL = register("diorite_brick_wall", new WallBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
@@ -709,7 +727,7 @@ public class EBBlocks {
 
     //BRICKS
     public static final Block SMOOTH_BRICKS = register("smooth_bricks", new Block(EBProperties.BlockP.BRICKS), true);
-    public static final Block SMOOTH_BRICK_STAIRS = register("smooth_brick_stairs", new StairsBlock(SMOOTH_BRICKS.getDefaultState(), EBProperties.BlockP.BRICKS), true);
+    public static final Block SMOOTH_BRICK_STAIRS = register("smooth_brick_stairs", new EBStairBlock(SMOOTH_BRICKS.defaultBlockState(), EBProperties.BlockP.BRICKS), true);
     public static final Block SMOOTH_BRICK_SLAB = register("smooth_brick_slab", new SlabBlock(EBProperties.BlockP.BRICKS), true);
     public static final Block SMOOTH_BRICK_VERTICAL_STAIRS = registerVStairs("smooth_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BRICKS), true);
     public static final Block SMOOTH_BRICK_WALL = register("smooth_brick_wall", new WallBlock(EBProperties.BlockP.BRICKS), true);
@@ -720,79 +738,79 @@ public class EBBlocks {
 
     //BRIMSTONE
     public static final Block BRIMSTONE = register("brimstone", new Block(EBProperties.BlockP.BRIMSTONE), true);
-    public static final Block BRIMSTONE_STAIRS = register("brimstone_stairs", new StairsBlock(BRIMSTONE.getDefaultState(), EBProperties.BlockP.BRIMSTONE), true);
+    public static final Block BRIMSTONE_STAIRS = register("brimstone_stairs", new EBStairBlock(BRIMSTONE.defaultBlockState(), EBProperties.BlockP.BRIMSTONE), true);
     public static final Block BRIMSTONE_SLAB = register("brimstone_slab", new SlabBlock(EBProperties.BlockP.BRIMSTONE), true);
     public static final Block BRIMSTONE_VERTICAL_STAIRS = registerVStairs("brimstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BRIMSTONE), true);
     public static final Block BRIMSTONE_WALL = register("brimstone_wall", new WallBlock(EBProperties.BlockP.BRIMSTONE), true);
 
     public static final Block POLISHED_BRIMSTONE = register("polished_brimstone", new Block(EBProperties.BlockP.POLISHED_BRIMSTONE), true);
-    public static final Block POLISHED_BRIMSTONE_STAIRS = register("polished_brimstone_stairs", new StairsBlock(POLISHED_BRIMSTONE.getDefaultState(), EBProperties.BlockP.POLISHED_BRIMSTONE), true);
+    public static final Block POLISHED_BRIMSTONE_STAIRS = register("polished_brimstone_stairs", new EBStairBlock(POLISHED_BRIMSTONE.defaultBlockState(), EBProperties.BlockP.POLISHED_BRIMSTONE), true);
     public static final Block POLISHED_BRIMSTONE_SLAB = register("polished_brimstone_slab", new SlabBlock(EBProperties.BlockP.POLISHED_BRIMSTONE), true);
     public static final Block POLISHED_BRIMSTONE_VERTICAL_STAIRS = registerVStairs("polished_brimstone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.POLISHED_BRIMSTONE), true);
 
     public static final Block BRIMSTONE_BRICKS = register("brimstone_bricks", new Block(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
-    public static final Block BRIMSTONE_BRICK_STAIRS = register("brimstone_brick_stairs", new StairsBlock(BRIMSTONE_BRICKS.getDefaultState(), EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Block BRIMSTONE_BRICK_STAIRS = register("brimstone_brick_stairs", new EBStairBlock(BRIMSTONE_BRICKS.defaultBlockState(), EBProperties.BlockP.BRIMSTONE_BRICKS), true);
     public static final Block BRIMSTONE_BRICK_SLAB = register("brimstone_brick_slab", new SlabBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
     public static final Block BRIMSTONE_BRICK_VERTICAL_STAIRS = registerVStairs("brimstone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
     public static final Block CRACKED_BRIMSTONE_BRICKS = register("cracked_brimstone_bricks", new Block(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
 
     public static final Block BRIMSTONE_TILES = register("brimstone_tiles", new Block(EBProperties.BlockP.BRIMSTONE_TILES), true);
-    public static final Block BRIMSTONE_TILE_STAIRS = register("brimstone_tile_stairs", new StairsBlock(BRIMSTONE_TILES.getDefaultState(), EBProperties.BlockP.BRIMSTONE_TILES), true);
+    public static final Block BRIMSTONE_TILE_STAIRS = register("brimstone_tile_stairs", new EBStairBlock(BRIMSTONE_TILES.defaultBlockState(), EBProperties.BlockP.BRIMSTONE_TILES), true);
     public static final Block BRIMSTONE_TILE_SLAB = register("brimstone_tile_slab", new SlabBlock(EBProperties.BlockP.BRIMSTONE_TILES), true);
     public static final Block BRIMSTONE_TILE_VERTICAL_STAIRS = registerVStairs("brimstone_tile_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BRIMSTONE_TILES), true);
 
-    public static final Block BRIMSTONE_PILLAR = register("brimstone_pillar", new PillarBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Block BRIMSTONE_PILLAR = register("brimstone_pillar", new RotatedPillarBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
     public static final Block BRIMSTONE_LAMP = register("brimstone_lamp", new Block(EBProperties.BlockP.BRIMSTONE_LAMP), true);
     public static final Block BRIMSTONE_WINDOW = register("brimstone_window", new Block(EBProperties.BlockP.BRIMSTONE_LAMP), true);
 
     //SMOOTH STONE
     public static final Block POLISHED_STONE = register("polished_stone", new Block(EBProperties.BlockP.SMOOTH_STONE), true);
-    public static final Block POLISHED_STONE_STAIRS = register("polished_stone_stairs", new StairsBlock(POLISHED_STONE.getDefaultState(), EBProperties.BlockP.SMOOTH_STONE), true);
+    public static final Block POLISHED_STONE_STAIRS = register("polished_stone_stairs", new EBStairBlock(POLISHED_STONE.defaultBlockState(), EBProperties.BlockP.SMOOTH_STONE), true);
     public static final Block POLISHED_STONE_SLAB = register("polished_stone_slab", new SlabBlock(EBProperties.BlockP.SMOOTH_STONE), true);
     public static final Block POLISHED_STONE_VERTICAL_STAIRS = registerVStairs("polished_stone_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.SMOOTH_STONE), true);
 
     public static final Block SMOOTH_STONE_BRICKS = register("smooth_stone_bricks", new Block(EBProperties.BlockP.SMOOTH_STONE), true);
-    public static final Block SMOOTH_STONE_BRICK_STAIRS = register("smooth_stone_brick_stairs", new StairsBlock(SMOOTH_STONE_BRICKS.getDefaultState(), EBProperties.BlockP.SMOOTH_STONE), true);
+    public static final Block SMOOTH_STONE_BRICK_STAIRS = register("smooth_stone_brick_stairs", new EBStairBlock(SMOOTH_STONE_BRICKS.defaultBlockState(), EBProperties.BlockP.SMOOTH_STONE), true);
     public static final Block SMOOTH_STONE_BRICK_SLAB = register("smooth_stone_brick_slab", new SlabBlock(EBProperties.BlockP.SMOOTH_STONE), true);
     public static final Block SMOOTH_STONE_BRICK_VERTICAL_STAIRS = registerVStairs("smooth_stone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.SMOOTH_STONE), true);
     public static final Block CRACKED_SMOOTH_STONE_BRICKS = register("cracked_smooth_stone_bricks", new Block(EBProperties.BlockP.SMOOTH_STONE), true);
 
     public static final Block SMOOTH_STONE_TILES = register("smooth_stone_tiles", new Block(EBProperties.BlockP.SMOOTH_STONE), true);
-    public static final Block SMOOTH_STONE_TILE_STAIRS = register("smooth_stone_tile_stairs", new StairsBlock(SMOOTH_STONE_TILES.getDefaultState(), EBProperties.BlockP.SMOOTH_STONE), true);
+    public static final Block SMOOTH_STONE_TILE_STAIRS = register("smooth_stone_tile_stairs", new EBStairBlock(SMOOTH_STONE_TILES.defaultBlockState(), EBProperties.BlockP.SMOOTH_STONE), true);
     public static final Block SMOOTH_STONE_TILE_SLAB = register("smooth_stone_tile_slab", new SlabBlock(EBProperties.BlockP.SMOOTH_STONE), true);
     public static final Block SMOOTH_STONE_TILE_VERTICAL_STAIRS = registerVStairs("smooth_stone_tile_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.SMOOTH_STONE), true);
     public static final Block CRACKED_SMOOTH_STONE_TILES = register("cracked_smooth_stone_tiles", new Block(EBProperties.BlockP.SMOOTH_STONE), true);
 
     public static final Block CHISELED_SMOOTH_STONE_BRICKS = register("chiseled_smooth_stone_bricks", new Block(EBProperties.BlockP.SMOOTH_STONE), true);
-    public static final Block SMOOTH_STONE_PILLAR = register("smooth_stone_pillar", new PillarBlock(EBProperties.BlockP.SMOOTH_STONE), true);
+    public static final Block SMOOTH_STONE_PILLAR = register("smooth_stone_pillar", new RotatedPillarBlock(EBProperties.BlockP.SMOOTH_STONE), true);
 
     //ASPHALT
     public static final Block ASPHALT = registerAP("asphalt", new AsphaltBlock(EBProperties.BlockP.ASPHALT), true);
-    public static final Block ASPHALT_STAIRS = registerAP("asphalt_stairs", new AsphaltStairsBlock(ASPHALT.getDefaultState(), EBProperties.BlockP.ASPHALT), true);
+    public static final Block ASPHALT_STAIRS = registerAP("asphalt_stairs", new AsphaltStairsBlock(ASPHALT.defaultBlockState(), EBProperties.BlockP.ASPHALT), true);
     public static final Block ASPHALT_SLAB = registerAP("asphalt_slab", new AsphaltSlabBlock(EBProperties.BlockP.ASPHALT), true);
     public static final Block ASPHALT_VERTICAL_STAIRS = registerAPVStairs("asphalt_vertical_stairs", new AsphaltVerticalStairsBlock(EBProperties.BlockP.ASPHALT), true);
 
     //NATURE
-    public static final Block ROSE = register("rose", new FlowerBlock(StatusEffects.HEALTH_BOOST, 20, EBProperties.BlockP.ROSE), true);
-    public static final Block POTTED_ROSE = register("potted_rose", Blocks.createFlowerPotBlock(EBBlocks.ROSE), false);
-    public static final Block CYAN_ROSE = register("cyan_rose", new FlowerBlock(StatusEffects.INVISIBILITY, 10, EBProperties.BlockP.CYAN_ROSE), true);
-    public static final Block POTTED_CYAN_ROSE = register("potted_cyan_rose", Blocks.createFlowerPotBlock(EBBlocks.CYAN_ROSE), false);
-    public static final Block WHITE_ROSE = register("white_rose", new FlowerBlock(StatusEffects.LUCK, 30, EBProperties.BlockP.WHITE_ROSE), true);
-    public static final Block POTTED_WHITE_ROSE = register("potted_white_rose", Blocks.createFlowerPotBlock(EBBlocks.WHITE_ROSE), false);
+    public static final Block ROSE = register("rose", new FlowerBlock(MobEffects.HEALTH_BOOST, 20, EBProperties.BlockP.ROSE), true);
+    public static final Block POTTED_ROSE = register("potted_rose", Blocks.flowerPot(EBBlocks.ROSE), false);
+    public static final Block CYAN_ROSE = register("cyan_rose", new FlowerBlock(MobEffects.INVISIBILITY, 10, EBProperties.BlockP.CYAN_ROSE), true);
+    public static final Block POTTED_CYAN_ROSE = register("potted_cyan_rose", Blocks.flowerPot(EBBlocks.CYAN_ROSE), false);
+    public static final Block WHITE_ROSE = register("white_rose", new FlowerBlock(MobEffects.LUCK, 30, EBProperties.BlockP.WHITE_ROSE), true);
+    public static final Block POTTED_WHITE_ROSE = register("potted_white_rose", Blocks.flowerPot(EBBlocks.WHITE_ROSE), false);
     public static final Block MOSS_PASTE = register("moss_paste", new GlowLichenBlock(EBProperties.BlockP.MOSS_PASTE), true);
 
     //PAPER
     public static final Block PAPER_BLOCK = register("paper_block", new Block(EBProperties.BlockP.PAPER), true);
 
     public static final Block THIN_PAPER_BLOCK = register("thin_paper_block", new Block(EBProperties.BlockP.PAPER), true);
-    public static final Block THIN_PAPER_STAIRS = register("thin_paper_stairs", new StairsBlock(THIN_PAPER_BLOCK.getDefaultState(), EBProperties.BlockP.PAPER), true);
+    public static final Block THIN_PAPER_STAIRS = register("thin_paper_stairs", new EBStairBlock(THIN_PAPER_BLOCK.defaultBlockState(), EBProperties.BlockP.PAPER), true);
     public static final Block THIN_PAPER_SLAB = register("thin_paper_slab", new SlabBlock(EBProperties.BlockP.PAPER), true);
     public static final Block THIN_PAPER_VERTICAL_STAIRS = registerVStairs("thin_paper_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.PAPER), true);
     public static final Block THIN_DIVIDED_PAPER_BLOCK = register("thin_divided_paper_block", new Block(EBProperties.BlockP.PAPER), true);
     public static final Block THIN_DIAGONAL_PAPER_BLOCK = register("thin_diagonal_paper_block", new EBHorizontalFacingBlock(EBProperties.BlockP.PAPER), true);
 
     public static final Block THICK_PAPER_BLOCK = register("thick_paper_block", new Block(EBProperties.BlockP.PAPER), true);
-    public static final Block THICK_PAPER_STAIRS = register("thick_paper_stairs", new StairsBlock(THICK_PAPER_BLOCK.getDefaultState(), EBProperties.BlockP.PAPER), true);
+    public static final Block THICK_PAPER_STAIRS = register("thick_paper_stairs", new EBStairBlock(THICK_PAPER_BLOCK.defaultBlockState(), EBProperties.BlockP.PAPER), true);
     public static final Block THICK_PAPER_SLAB = register("thick_paper_slab", new SlabBlock(EBProperties.BlockP.PAPER), true);
     public static final Block THICK_PAPER_VERTICAL_STAIRS = registerVStairs("thick_paper_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.PAPER), true);
     public static final Block THICK_DIVIDED_PAPER_BLOCK = register("thick_divided_paper_block", new Block(EBProperties.BlockP.PAPER), true);
@@ -806,7 +824,7 @@ public class EBBlocks {
     public static final Block AMETHYST_LAMP = register("amethyst_lamp", new Block(EBProperties.BlockP.LAMP), true);
 
     public static final Block BONE_BRICKS = register("bone_bricks", new Block(EBProperties.BlockP.BONE), true);
-    public static final Block BONE_BRICK_STAIRS = register("bone_brick_stairs", new StairsBlock(BONE_BRICKS.getDefaultState(), EBProperties.BlockP.BONE), true);
+    public static final Block BONE_BRICK_STAIRS = register("bone_brick_stairs", new EBStairBlock(BONE_BRICKS.defaultBlockState(), EBProperties.BlockP.BONE), true);
     public static final Block BONE_BRICK_SLAB = register("bone_brick_slab", new SlabBlock(EBProperties.BlockP.BONE), true);
     public static final Block BONE_BRICK_VERTICAL_STAIRS = registerVStairs("bone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BONE), true);
     public static final Block BONE_BRICK_WALL = register("bone_brick_wall", new WallBlock(EBProperties.BlockP.BONE), true);
@@ -819,11 +837,11 @@ public class EBBlocks {
         if (registerItem) {
             registerBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new BlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new BlockItem(block, new Item.Properties()));
     }
 
     //CONFIGURABLE BLOCKS
@@ -831,143 +849,143 @@ public class EBBlocks {
         if (registerItem) {
             registerAPBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerAPBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new AsphaltBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new AsphaltBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerAPVStairs(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerAPVStairsBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerAPVStairsBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new AsphaltVerticalStairsBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new AsphaltVerticalStairsBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerRB(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerRBBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerRBBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new ResourceBrickBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new ResourceBrickBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerRBVStairs(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerRBVStairsBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerRBVStairsBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new ResourceBrickVerticalStairsBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new ResourceBrickVerticalStairsBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerGlmSapling(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerGlmSaplingBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerGlmSaplingBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new GloomSaplingItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new GloomSaplingItem(block, new Item.Properties()));
     }
 
     private static Block registerAncSapling(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerAncSaplingBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerAncSaplingBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new AncientSaplingBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new AncientSaplingBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerDS(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerDSBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerDSBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new DecorativeShelfBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new DecorativeShelfBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerBS(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerBSBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerBSBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new EBBookshelfBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new EBBookshelfBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerCV(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerregisterCVBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerregisterCVBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new EBChestBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new EBChestBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerCT(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerCTBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerCTBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new EBCraftingTableBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new EBCraftingTableBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerVStairs(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerVStairsBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerVStairsBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new VerticalStairsBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new VerticalStairsBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerLadder(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerLadderBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerLadderBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new EBLadderBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new EBLadderBlockItem(block, new Item.Properties()));
     }
 
     private static Block registerDeco(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerDecoBlockItem(id, block);
         }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), block);
     }
 
     private static Item registerDecoBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new DecorationBlockItem(block, new Item.Settings()));
+        return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, id), new DecorationBlockItem(block, new Item.Properties()));
     }
 
     public static void loadBlocks() {
