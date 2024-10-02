@@ -82,6 +82,7 @@ public class EBBlocks {
     public static final Block TUFF_VERTICAL_STAIRS = registerVStairs("tuff_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.TUFF)), true);
     public static final Block POLISHED_TUFF_VERTICAL_STAIRS = registerVStairs("polished_tuff_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.POLISHED_TUFF)), true);
     public static final Block TUFF_BRICK_VERTICAL_STAIRS = registerVStairs("tuff_brick_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.TUFF_BRICKS)), true);
+    public static final Block MUD_BRICK_VERTICAL_STAIRS = registerVStairs("mud_brick_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.MUD_BRICKS)), true);
 
     //VANILLA ADDITIONS
     public static final Block QUARTZ_BRICK_STAIRS = register("quartz_brick_stairs", new StairsBlock(Blocks.QUARTZ_BRICKS.getDefaultState(), EBProperties.BlockP.QUARTZ_BRICKS), true);

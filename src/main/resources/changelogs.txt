@@ -58,6 +58,24 @@ I will maintain the mod for the latest major modding version, I am happy with th
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.2.4 Fabric/Quilt-1.20.1
+
+Changes
+• Almentra texture changes
+
+Fixes
+• Fixed Black and Light Gray Almentra Statues having missing particles
+• All Pottery Patterns are now visible!
+• Decorative Shelves increment states by 1 now instead of 2
+• Decorative Shelves interaction fixes
+• Added missing Mud Brick Vertical Stairs
+
+Note
+• Thanks to KekeCreations for helping out with this small fix list,
+I had plans to fix these a little while later but he offered to help out :)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.2.3 Fabric/Quilt-1.21(1.)/1.20.1
 
   Misc Additions

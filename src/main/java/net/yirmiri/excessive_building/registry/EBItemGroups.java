@@ -1124,6 +1124,7 @@ public class EBItemGroups {
                 entries.add(EBBlocks.POLISHED_TUFF_VERTICAL_STAIRS);
                 entries.add(EBBlocks.TUFF_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.BRICK_VERTICAL_STAIRS);
+                entries.add(EBBlocks.MUD_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.SANDSTONE_VERTICAL_STAIRS);
                 entries.add(EBBlocks.SMOOTH_SANDSTONE_VERTICAL_STAIRS);
                 entries.add(EBBlocks.RED_SANDSTONE_VERTICAL_STAIRS);

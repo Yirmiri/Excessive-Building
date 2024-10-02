@@ -900,6 +900,8 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerNorthDefaultHorizontalRotatable(EBBlocks.WICKED_SOUL_JACK_O_LANTERN, pumpkinTexture);
         generator.registerNorthDefaultHorizontalRotatable(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN, pumpkinTexture);
         generator.registerNorthDefaultHorizontalRotatable(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN, pumpkinTexture);
+
+        EBModels.registerVerticalStairs(generator, EBBlocks.MUD_BRICK_VERTICAL_STAIRS, Blocks.MUD_BRICKS);
     }
 
     @Override

@@ -3967,6 +3967,11 @@ public class EBRecipeGen extends FabricRecipeProvider {
                     .criterion(hasItem(EBBlocks.getDyedTerracottaPots(colors.getId())), conditionsFromItem(EBBlocks.getDyedTerracottaPots(colors.getId())))
                     .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(colors.getId())) + "_from_base"));
         }
+
+        createVerticalStairsRecipe(EBBlocks.MUD_BRICK_VERTICAL_STAIRS,
+                Ingredient.ofItems(Blocks.MUD_BRICKS))
+                .criterion(hasItem(Blocks.MUD_BRICKS), conditionsFromItem(Blocks.MUD_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MUD_BRICK_VERTICAL_STAIRS)));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

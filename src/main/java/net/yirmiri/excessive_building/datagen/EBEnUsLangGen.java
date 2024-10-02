@@ -680,6 +680,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.GRUMPY_SOUL_JACK_O_LANTERN, "Soul Jack O' Lantern");
         build.add(EBBlocks.WICKED_SOUL_JACK_O_LANTERN, "Soul Jack O' Lantern");
         build.add(EBBlocks.TERRACOTTA_POT, "Terracotta Pot");
+        build.add(EBBlocks.MUD_BRICK_VERTICAL_STAIRS, "Mud Brick Vertical Stairs");
 
         //ITEMS
         build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
@@ -727,7 +728,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("advancement.excessive_building.place_gloom_seeds", "Ancient Mystery");
         build.add("advancement.excessive_building.place_gloom_seeds.description", "Plant the seeds of a once prospering tree");
 
-        build.add("advancement.excessive_building.place_all_almentra_statues", "Double §kRorrRef §rRainbow");
+        build.add("advancement.excessive_building.place_all_almentra_statues", "I Should Build The Man a Statue");
         build.add("advancement.excessive_building.place_all_almentra_statues.description", "Place all almentra statue variants");
 
         build.add("advancement.excessive_building.use_hammer", "Hammer Time!");

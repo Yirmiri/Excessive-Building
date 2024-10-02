@@ -654,6 +654,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.WICKED_SOUL_JACK_O_LANTERN);
         addDrop(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN);
         addDrop(EBBlocks.TERRACOTTA_POT);
+        addDrop(EBBlocks.MUD_BRICK_VERTICAL_STAIRS);
     }
 
     private void addDyedBlockDrops() {

@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.registry;
+package net.yirmiri.excessive_building.util;
 
 public class EBItemGroupAdditions {
     //TODO: Add to vanilla tabs
