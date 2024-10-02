@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "excessive_building:block/terracotta_tiles",
-    "side": "excessive_building:block/terracotta_tiles",
-    "top": "excessive_building:block/terracotta_tiles"
-  }
-}

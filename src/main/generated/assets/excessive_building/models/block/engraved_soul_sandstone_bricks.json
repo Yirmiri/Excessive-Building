@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "excessive_building:block/engraved_soul_sandstone_bricks_top",
-    "side": "excessive_building:block/engraved_soul_sandstone_bricks_side"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "excessive_building:block/thick_paper_block",
-    "side": "excessive_building:block/thick_paper_block",
-    "top": "excessive_building:block/thick_paper_block"
-  }
-}

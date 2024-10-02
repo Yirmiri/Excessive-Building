@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:weathered_copper"
-  },
-  "result": "excessive_building:weathered_copper_bricks"
-}

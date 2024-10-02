@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "excessive_building:block/white_polished_almentra",
-    "side": "excessive_building:block/white_polished_almentra",
-    "top": "excessive_building:block/white_polished_almentra"
-  }
-}

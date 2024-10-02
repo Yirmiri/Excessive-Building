@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:smooth_stone"
-  },
-  "result": "excessive_building:smooth_stone_bricks"
-}

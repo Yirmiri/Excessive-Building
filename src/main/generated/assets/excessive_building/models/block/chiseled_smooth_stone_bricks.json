@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "excessive_building:block/chiseled_smooth_stone_bricks"
-  }
-}
