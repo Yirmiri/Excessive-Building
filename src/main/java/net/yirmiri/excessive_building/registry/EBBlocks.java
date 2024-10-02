@@ -972,11 +972,8 @@ public class EBBlocks {
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
     //TODO:
-    // PEDESTALS,
-    // DYED TERRACOTTA POTS,
-    // GLOOM CRYSTALS,
-    // BRAZIERS,
-    // DYEABLE CHISELED PAPER BLOCK
+    // PEDESTALS THAT CAN HOLD ITEMS
+    // NETHER BRICK DECORATED POT
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {
