@@ -4,7 +4,7 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release v3.3.0 Fabric/Quilt-1.21(1.)/1.20.1
+Version Release v3.3.0 Fabric/Quilt-1.21.1
 
   Hammer
 •   The hammer is a new tool created using amethyst and can mine many blocks that normally don't have a tool assigned to them such as glass
@@ -42,15 +42,16 @@ Version Release v3.3.0 Fabric/Quilt-1.21(1.)/1.20.1
 •   Updated contributor capes
 
   Fixes
+•   Fixed an issue that caused modified loot tables to drop double drops
 •   Fixed an issue that caused the model of waxed copper brick vertical stairs to not rotate
 •   Fixed an issue that caused mossy cobblestone brick slabs to drop normal cobblestone brick slabs
 •   Fixed an issue that caused the comment for "Content Toggles" in the config file to be written at the bottom
 
 •   Special Thanks to:
-@CreationsKeke - for helping out with moving the mod over to MultiLoader (may or may not be out at the time of you reading this)
 @tellioaridoitsu - for helping out with a bunch of the new almentra statues!
 @Hecco - for helping with the new orange almentra statue!
 @bricker_man - for helping with the new asphalt texture!
+@CreationsKeke - for helping out with one last surprise coming up for Excessive Building!
 
   Note
 •   I know I've said it a few times in the past but I really need to focus on new things, so for now this will be the last major "content" update for a while.

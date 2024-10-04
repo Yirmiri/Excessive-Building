@@ -832,22 +832,22 @@ public class EBItemGroups {
                 entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.PINK.getId()));
 
                 entries.add(EBBlocks.TERRACOTTA_POT);
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.PINK.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.WHITE.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_GRAY.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.GRAY.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.BLACK.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.BROWN.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.RED.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.ORANGE.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.YELLOW.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.LIME.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.GREEN.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.CYAN.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_BLUE.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.BLUE.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.PURPLE.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.MAGENTA.getId()));
+//                entries.add(EBBlocks.getDyedTerracottaPots(DyeColor.PINK.getId()));
 
                 entries.add(EBBlocks.ARMADILLO_SCUTE_BLOCK);
                 entries.add(EBBlocks.ARMADILLO_SCUTE_STAIRS);

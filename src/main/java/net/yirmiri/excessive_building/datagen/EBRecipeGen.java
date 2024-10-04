@@ -3881,92 +3881,93 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 Ingredient.ofItems(Blocks.TERRACOTTA))
                 .criterion(hasItem(Blocks.TERRACOTTA), conditionsFromItem(Blocks.TERRACOTTA))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TERRACOTTA_POT)));
+//todo dyed terracotta pots
 
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.BLACK.getId()), 3,
-                Ingredient.ofItems(Blocks.BLACK_TERRACOTTA))
-                .criterion(hasItem(Blocks.BLACK_TERRACOTTA), conditionsFromItem(Blocks.BLACK_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.BLACK.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.WHITE.getId()), 3,
-                Ingredient.ofItems(Blocks.WHITE_TERRACOTTA))
-                .criterion(hasItem(Blocks.WHITE_TERRACOTTA), conditionsFromItem(Blocks.WHITE_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.WHITE.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.GRAY.getId()), 3,
-                Ingredient.ofItems(Blocks.GRAY_TERRACOTTA))
-                .criterion(hasItem(Blocks.GRAY_TERRACOTTA), conditionsFromItem(Blocks.GRAY_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.GRAY.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_GRAY.getId()), 3,
-                Ingredient.ofItems(Blocks.LIGHT_GRAY_TERRACOTTA))
-                .criterion(hasItem(Blocks.LIGHT_GRAY_TERRACOTTA), conditionsFromItem(Blocks.LIGHT_GRAY_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_GRAY.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.BROWN.getId()), 3,
-                Ingredient.ofItems(Blocks.BROWN_TERRACOTTA))
-                .criterion(hasItem(Blocks.BROWN_TERRACOTTA), conditionsFromItem(Blocks.BROWN_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.BROWN.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.RED.getId()), 3,
-                Ingredient.ofItems(Blocks.RED_TERRACOTTA))
-                .criterion(hasItem(Blocks.RED_TERRACOTTA), conditionsFromItem(Blocks.RED_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.RED.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.ORANGE.getId()), 3,
-                Ingredient.ofItems(Blocks.ORANGE_TERRACOTTA))
-                .criterion(hasItem(Blocks.ORANGE_TERRACOTTA), conditionsFromItem(Blocks.ORANGE_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.ORANGE.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.YELLOW.getId()), 3,
-                Ingredient.ofItems(Blocks.YELLOW_TERRACOTTA))
-                .criterion(hasItem(Blocks.YELLOW_TERRACOTTA), conditionsFromItem(Blocks.YELLOW_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.YELLOW.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.LIME.getId()), 3,
-                Ingredient.ofItems(Blocks.LIME_TERRACOTTA))
-                .criterion(hasItem(Blocks.LIME_TERRACOTTA), conditionsFromItem(Blocks.LIME_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.LIME.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.GREEN.getId()), 3,
-                Ingredient.ofItems(Blocks.GREEN_TERRACOTTA))
-                .criterion(hasItem(Blocks.GREEN_TERRACOTTA), conditionsFromItem(Blocks.GREEN_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.GREEN.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.BLUE.getId()), 3,
-                Ingredient.ofItems(Blocks.BLUE_TERRACOTTA))
-                .criterion(hasItem(Blocks.BLUE_TERRACOTTA), conditionsFromItem(Blocks.BLUE_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.BLUE.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_BLUE.getId()), 3,
-                Ingredient.ofItems(Blocks.LIGHT_BLUE_TERRACOTTA))
-                .criterion(hasItem(Blocks.LIGHT_BLUE_TERRACOTTA), conditionsFromItem(Blocks.LIGHT_BLUE_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_BLUE.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.CYAN.getId()), 3,
-                Ingredient.ofItems(Blocks.CYAN_TERRACOTTA))
-                .criterion(hasItem(Blocks.CYAN_TERRACOTTA), conditionsFromItem(Blocks.CYAN_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.CYAN.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.PURPLE.getId()), 3,
-                Ingredient.ofItems(Blocks.PURPLE_TERRACOTTA))
-                .criterion(hasItem(Blocks.PURPLE_TERRACOTTA), conditionsFromItem(Blocks.PURPLE_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.PURPLE.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.MAGENTA.getId()), 3,
-                Ingredient.ofItems(Blocks.MAGENTA_TERRACOTTA))
-                .criterion(hasItem(Blocks.MAGENTA_TERRACOTTA), conditionsFromItem(Blocks.MAGENTA_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.MAGENTA.getId()))));
-
-        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.PINK.getId()), 3,
-                Ingredient.ofItems(Blocks.PINK_TERRACOTTA))
-                .criterion(hasItem(Blocks.PINK_TERRACOTTA), conditionsFromItem(Blocks.PINK_TERRACOTTA))
-                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.PINK.getId()))));
-
-        for (DyeColor colors : DyeColor.values()) {
-            createDyingRecipe(RecipeCategory.DECORATIONS, EBBlocks.getDyedTerracottaPots(colors.getId()), 3, DyeItem.byColor(colors).getColor())
-                    .criterion(hasItem(EBBlocks.getDyedTerracottaPots(colors.getId())), conditionsFromItem(EBBlocks.getDyedTerracottaPots(colors.getId())))
-                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(colors.getId())) + "_from_base"));
-        }
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.BLACK.getId()), 3,
+//                Ingredient.ofItems(Blocks.BLACK_TERRACOTTA))
+//                .criterion(hasItem(Blocks.BLACK_TERRACOTTA), conditionsFromItem(Blocks.BLACK_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.BLACK.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.WHITE.getId()), 3,
+//                Ingredient.ofItems(Blocks.WHITE_TERRACOTTA))
+//                .criterion(hasItem(Blocks.WHITE_TERRACOTTA), conditionsFromItem(Blocks.WHITE_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.WHITE.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.GRAY.getId()), 3,
+//                Ingredient.ofItems(Blocks.GRAY_TERRACOTTA))
+//                .criterion(hasItem(Blocks.GRAY_TERRACOTTA), conditionsFromItem(Blocks.GRAY_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.GRAY.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_GRAY.getId()), 3,
+//                Ingredient.ofItems(Blocks.LIGHT_GRAY_TERRACOTTA))
+//                .criterion(hasItem(Blocks.LIGHT_GRAY_TERRACOTTA), conditionsFromItem(Blocks.LIGHT_GRAY_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_GRAY.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.BROWN.getId()), 3,
+//                Ingredient.ofItems(Blocks.BROWN_TERRACOTTA))
+//                .criterion(hasItem(Blocks.BROWN_TERRACOTTA), conditionsFromItem(Blocks.BROWN_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.BROWN.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.RED.getId()), 3,
+//                Ingredient.ofItems(Blocks.RED_TERRACOTTA))
+//                .criterion(hasItem(Blocks.RED_TERRACOTTA), conditionsFromItem(Blocks.RED_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.RED.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.ORANGE.getId()), 3,
+//                Ingredient.ofItems(Blocks.ORANGE_TERRACOTTA))
+//                .criterion(hasItem(Blocks.ORANGE_TERRACOTTA), conditionsFromItem(Blocks.ORANGE_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.ORANGE.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.YELLOW.getId()), 3,
+//                Ingredient.ofItems(Blocks.YELLOW_TERRACOTTA))
+//                .criterion(hasItem(Blocks.YELLOW_TERRACOTTA), conditionsFromItem(Blocks.YELLOW_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.YELLOW.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.LIME.getId()), 3,
+//                Ingredient.ofItems(Blocks.LIME_TERRACOTTA))
+//                .criterion(hasItem(Blocks.LIME_TERRACOTTA), conditionsFromItem(Blocks.LIME_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.LIME.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.GREEN.getId()), 3,
+//                Ingredient.ofItems(Blocks.GREEN_TERRACOTTA))
+//                .criterion(hasItem(Blocks.GREEN_TERRACOTTA), conditionsFromItem(Blocks.GREEN_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.GREEN.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.BLUE.getId()), 3,
+//                Ingredient.ofItems(Blocks.BLUE_TERRACOTTA))
+//                .criterion(hasItem(Blocks.BLUE_TERRACOTTA), conditionsFromItem(Blocks.BLUE_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.BLUE.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_BLUE.getId()), 3,
+//                Ingredient.ofItems(Blocks.LIGHT_BLUE_TERRACOTTA))
+//                .criterion(hasItem(Blocks.LIGHT_BLUE_TERRACOTTA), conditionsFromItem(Blocks.LIGHT_BLUE_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.LIGHT_BLUE.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.CYAN.getId()), 3,
+//                Ingredient.ofItems(Blocks.CYAN_TERRACOTTA))
+//                .criterion(hasItem(Blocks.CYAN_TERRACOTTA), conditionsFromItem(Blocks.CYAN_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.CYAN.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.PURPLE.getId()), 3,
+//                Ingredient.ofItems(Blocks.PURPLE_TERRACOTTA))
+//                .criterion(hasItem(Blocks.PURPLE_TERRACOTTA), conditionsFromItem(Blocks.PURPLE_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.PURPLE.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.MAGENTA.getId()), 3,
+//                Ingredient.ofItems(Blocks.MAGENTA_TERRACOTTA))
+//                .criterion(hasItem(Blocks.MAGENTA_TERRACOTTA), conditionsFromItem(Blocks.MAGENTA_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.MAGENTA.getId()))));
+//
+//        createTerracottaPotRecipe(EBBlocks.getDyedTerracottaPots(DyeColor.PINK.getId()), 3,
+//                Ingredient.ofItems(Blocks.PINK_TERRACOTTA))
+//                .criterion(hasItem(Blocks.PINK_TERRACOTTA), conditionsFromItem(Blocks.PINK_TERRACOTTA))
+//                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(DyeColor.PINK.getId()))));
+//
+//        for (DyeColor colors : DyeColor.values()) {
+//            createDyingRecipe(RecipeCategory.DECORATIONS, EBBlocks.getDyedTerracottaPots(colors.getId()), 3, DyeItem.byColor(colors).getColor())
+//                    .criterion(hasItem(EBBlocks.getDyedTerracottaPots(colors.getId())), conditionsFromItem(EBBlocks.getDyedTerracottaPots(colors.getId())))
+//                    .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.getDyedTerracottaPots(colors.getId())) + "_from_base"));
+//        }
 
         createVerticalStairsRecipe(EBBlocks.MUD_BRICK_VERTICAL_STAIRS,
                 Ingredient.ofItems(Blocks.MUD_BRICKS))

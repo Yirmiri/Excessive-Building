@@ -1,9 +1,9 @@
-// 1.21	2024-10-02T15:29:55.0751844	Excessive Building/Tags for minecraft:item
+// 1.21	2024-10-04T00:29:56.4415196	Excessive Building/Tags for minecraft:item
 886e5e1db1abef8583882d996f8600275f839c37 data\excessive_building\tags\item\glow_removals.json
 d59daccf97972bb6f8fd061803196366ec6e3c44 data\excessive_building\tags\item\gloom_logs.json
 05675316f525437e0cf8e4076ab7f5dd8033cea9 data\minecraft\tags\item\enchantable\vanishing.json
-05675316f525437e0cf8e4076ab7f5dd8033cea9 data\minecraft\tags\item\enchantable\durability.json
 bde6ca31173d1f22d5f6fe355dc90c9faa35b239 data\excessive_building\tags\item\hammer_repairable.json
+05675316f525437e0cf8e4076ab7f5dd8033cea9 data\minecraft\tags\item\enchantable\durability.json
 d317db704525634aea35ced79306dc006e2fc76e data\minecraft\tags\item\soul_fire_base_blocks.json
 d48a33ad6f25342ce148e9ae1ce9d6609c846dad data\minecraft\tags\item\small_flowers.json
 d28d6e4f7a681ca019e0f4ec5a7bd7f77b0910ef data\excessive_building\tags\item\soils.json
