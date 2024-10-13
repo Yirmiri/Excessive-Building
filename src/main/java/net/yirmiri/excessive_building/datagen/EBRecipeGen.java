@@ -14,6 +14,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.DyeColor;
@@ -3190,15 +3191,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.MOSS_BLOCK), conditionsFromItem(Blocks.MOSS_BLOCK))
                 .offerTo(exporter, Identifier.of((getRecipeName(EBBlocks.MOSS_PASTE))));
 
-        //TODO: REMOVE LATER
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, Items.BUNDLE, 1)
-                .input('#', Items.LEATHER).input('@', Items.STRING)
-                .pattern("@#@")
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.LEATHER), conditionsFromItem(Items.LEATHER))
-                .offerTo(exporter, Identifier.of(getRecipeName(Items.BUNDLE)));
-
 //        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_CHEST, 1)
 //                .input('#', Items.SPRUCE_PLANKS)
 //                .pattern("###")
@@ -3973,6 +3965,14 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 Ingredient.ofItems(Blocks.MUD_BRICKS))
                 .criterion(hasItem(Blocks.MUD_BRICKS), conditionsFromItem(Blocks.MUD_BRICKS))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MUD_BRICK_VERTICAL_STAIRS)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Blocks.LECTERN, 1)
+                .input('#', ItemTags.WOODEN_SLABS).input('@', EBTags.Items.BOOKSHELF_VARIANTS)
+                .pattern("###")
+                .pattern(" @ ")
+                .pattern(" # ")
+                .criterion(hasItem(Blocks.LECTERN), conditionsFromTag(EBTags.Items.BOOKSHELF_VARIANTS))
+                .offerTo(exporter, Identifier.of(getRecipeName(Blocks.LECTERN)));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

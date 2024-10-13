@@ -3,7 +3,6 @@ package net.yirmiri.excessive_building.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
@@ -508,7 +507,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.TUFF_TILE_VERTICAL_STAIRS);
         addDrop(EBBlocks.TUFF_TILE_SLAB, EBBlocks.TUFF_TILE_SLAB);
         addDrop(EBBlocks.TUFF_TILE_WALL);
-        leavesDrops(EBBlocks.GLOOM_LEAVES, EBBlocks.GLOOM_SAPLING);
         addDrop(EBBlocks.ALMENTRA_STATUE);
         addDyedBlockDrops();
         addDrop(EBBlocks.MOSS_PASTE, block -> multifaceGrowthDrops(block, WITH_SHEARS));
@@ -524,7 +522,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.POLISHED_ALMENTRA_STAIRS);
         addDrop(EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS);
         addDrop(EBBlocks.POLISHED_ALMENTRA_SLAB);
-        ancientLeavesDrops(EBBlocks.ANCIENT_LEAVES, EBBlocks.ANCIENT_SAPLING);
 //        addDrop(EBBlocks.SPRUCE_CHEST);
 //        addDrop(EBBlocks.BIRCH_CHEST);
 //        addDrop(EBBlocks.JUNGLE_CHEST);
@@ -655,6 +652,8 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.CHEERFUL_SOUL_JACK_O_LANTERN);
         addDrop(EBBlocks.TERRACOTTA_POT);
         addDrop(EBBlocks.MUD_BRICK_VERTICAL_STAIRS);
+        addDrop(EBBlocks.GLOOM_SAPLING);
+        addPottedPlantDrops(EBBlocks.POTTED_GLOOM_SAPLING);
     }
 
     private void addDyedBlockDrops() {
@@ -680,19 +679,5 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
             addDrop(EBBlocks.getDyedTerracottaTileSlab(colors.getId()));
             addDrop(EBBlocks.getDyedTerracottaPots(colors.getId()));
         }
-    }
-
-    public LootTable.Builder ancientLeavesDrops(Block leaves, Block sapling, float... saplingChance) {
-        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
-        return this.leavesDrops(leaves, sapling, saplingChance)
-                .pool(
-                        LootPool.builder()
-                                .rolls(ConstantLootNumberProvider.create(1.0F))
-                                .conditionally(this.createWithoutShearsOrSilkTouchCondition())
-                                .with(
-                                        ((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(EBItems.ANCIENT_FRUIT)))
-                                                .conditionally(TableBonusLootCondition.builder(impl.getOrThrow(Enchantments.FORTUNE), 0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F))
-                                )
-                );
     }
 }

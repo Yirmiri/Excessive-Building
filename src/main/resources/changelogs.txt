@@ -4,6 +4,30 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.3.1 Fabric/Quilt-1.21-1.21.1
+
+  Misc Additions
+•   Updated ru_ru translations to be up to date with v3.3 (@bricker_man)
+•   Added bookshelf_variants item tag, this tag comes along with a new recipe for lecterns using EB's bookshelves
+•   Added items from Excessive Building to many of vanilla's tags, this should help with compatibility and recipes a ton
+•   Boards can now be smelted and burned like other wood blocks
+
+  Fixes
+•   Fixed missing block drops for gloom saplings and it's potted variant
+•   Fixed missing block drops for both ancient and gloom leaves
+
+Version Release v3.2.5 Fabric/Quilt-1.20.1
+
+  Misc Additions
+•   Added bookshelf_variants item tag, this tag comes along with a new recipe for lecterns using EB's bookshelves
+•   Added items from Excessive Building to many of vanilla's tags, this should help with compatibility and recipes a ton
+
+  Fixes
+•   Fixed missing block drops for gloom saplings and it's potted variant
+•   Fixed missing block drops for both ancient and gloom leaves
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.3.0 Fabric/Quilt-1.21.1
 
   Hammer
@@ -16,7 +40,7 @@ Version Release v3.3.0 Fabric/Quilt-1.21.1
   New Features
 •   Added mossy variants for deepslate bricks, polished blackstone bricks, cobbled deepslate bricks, and blackstone bricks
 •   Mossy cobblestone bricks now have an additional recipe that uses moss blocks or vines
-•   Added armadillo scute blocks (as part of losing a bet -_-)
+•   Added armadillo scute blocks (as part of losing a bet -w-)
 •   Added wooden boards and new pumpkin variants as hammered variants of existing blocks
 •   Added an advancement to go along with hammering a block
 

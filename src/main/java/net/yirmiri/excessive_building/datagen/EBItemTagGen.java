@@ -45,6 +45,56 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendVanishingEnchantable();
         appendDurabilityEnchantable();
         appendMiningLootEnchantable();
+        appendBookshelfVariants();
+        appendWoodenSlabs();
+        appendWoodenStairs();
+        appendWoodenButtons();
+        appendWoodenPressurePlates();
+    }
+
+    public void appendWoodenButtons() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_BUTTONS)
+                .add(EBBlocks.ANCIENT_BUTTON.asItem())
+                .add(EBBlocks.GLOOM_BUTTON.asItem())
+        ;
+    }
+
+    public void appendWoodenPressurePlates() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_PRESSURE_PLATES)
+                .add(EBBlocks.ANCIENT_PRESSURE_PLATE.asItem())
+                .add(EBBlocks.GLOOM_PRESSURE_PLATE.asItem())
+        ;
+    }
+
+    public void appendWoodenStairs() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
+                .add(EBBlocks.ANCIENT_STAIRS.asItem())
+                .add(EBBlocks.GLOOM_STAIRS.asItem())
+        ;
+    }
+
+    public void appendWoodenSlabs() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
+                .add(EBBlocks.ANCIENT_SLAB.asItem())
+                .add(EBBlocks.GLOOM_SLAB.asItem())
+        ;
+    }
+
+    public void appendBookshelfVariants() {
+        getOrCreateTagBuilder(EBTags.Items.BOOKSHELF_VARIANTS)
+                .add(EBBlocks.SPRUCE_BOOKSHELF.asItem())
+                .add(EBBlocks.BIRCH_BOOKSHELF.asItem())
+                .add(EBBlocks.JUNGLE_BOOKSHELF.asItem())
+                .add(EBBlocks.ACACIA_BOOKSHELF.asItem())
+                .add(EBBlocks.DARK_OAK_BOOKSHELF.asItem())
+                .add(EBBlocks.MANGROVE_BOOKSHELF.asItem())
+                .add(EBBlocks.CHERRY_BOOKSHELF.asItem())
+                .add(EBBlocks.BAMBOO_BOOKSHELF.asItem())
+                .add(EBBlocks.CRIMSON_BOOKSHELF.asItem())
+                .add(EBBlocks.WARPED_BOOKSHELF.asItem())
+                .add(EBBlocks.ANCIENT_BOOKSHELF.asItem())
+                .add(EBBlocks.GLOOM_BOOKSHELF.asItem())
+        ;
     }
 
     public void appendHammerableTooltip() {

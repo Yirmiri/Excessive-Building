@@ -234,6 +234,61 @@ public class EBRegistries {
         FuelRegistry.INSTANCE.add(EBBlocks.BAMBOO_DECORATIVE_SHELF, 300);
         FuelRegistry.INSTANCE.add(EBBlocks.ANCIENT_DECORATIVE_SHELF, 300);
         FuelRegistry.INSTANCE.add(EBBlocks.GLOOM_DECORATIVE_SHELF, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.OAK_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.OAK_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.OAK_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.OAK_BOARD_VERTICAL_STAIRS, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.SPRUCE_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.SPRUCE_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.SPRUCE_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.SPRUCE_BOARD_VERTICAL_STAIRS, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.BIRCH_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.BIRCH_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.BIRCH_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.BIRCH_BOARD_VERTICAL_STAIRS, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.ACACIA_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.ACACIA_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.ACACIA_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.ACACIA_BOARD_VERTICAL_STAIRS, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.DARK_OAK_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.DARK_OAK_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.DARK_OAK_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.DARK_OAK_BOARD_VERTICAL_STAIRS, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.MANGROVE_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.MANGROVE_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.MANGROVE_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.MANGROVE_BOARD_VERTICAL_STAIRS, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.CHERRY_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHERRY_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHERRY_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.CHERRY_BOARD_VERTICAL_STAIRS, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.JUNGLE_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.JUNGLE_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.JUNGLE_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.JUNGLE_BOARD_VERTICAL_STAIRS, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.BAMBOO_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.BAMBOO_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.BAMBOO_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.BAMBOO_BOARD_VERTICAL_STAIRS, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.ANCIENT_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.ANCIENT_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.ANCIENT_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.ANCIENT_BOARD_VERTICAL_STAIRS, 300);
+
+        FuelRegistry.INSTANCE.add(EBBlocks.GLOOM_BOARDS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.GLOOM_BOARD_STAIRS, 300);
+        FuelRegistry.INSTANCE.add(EBBlocks.GLOOM_BOARD_SLAB, 150);
+        FuelRegistry.INSTANCE.add(EBBlocks.GLOOM_BOARD_VERTICAL_STAIRS, 300);
     }
 
     //TODO: BOARDS
@@ -360,6 +415,61 @@ public class EBRegistries {
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.MANGROVE_BOOKSHELF, 30, 20);
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHERRY_BOOKSHELF, 30, 20);
         FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.BAMBOO_BOOKSHELF, 30, 20);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.OAK_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.OAK_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.OAK_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.OAK_BOARD_VERTICAL_STAIRS, 20, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.SPRUCE_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.SPRUCE_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.SPRUCE_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.SPRUCE_BOARD_VERTICAL_STAIRS, 20, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.BIRCH_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.BIRCH_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.BIRCH_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.BIRCH_BOARD_VERTICAL_STAIRS, 20, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.JUNGLE_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.JUNGLE_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.JUNGLE_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.JUNGLE_BOARD_VERTICAL_STAIRS, 20, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.ACACIA_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.ACACIA_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.ACACIA_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.ACACIA_BOARD_VERTICAL_STAIRS, 20, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.DARK_OAK_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.DARK_OAK_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.DARK_OAK_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.DARK_OAK_BOARD_VERTICAL_STAIRS, 20, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.MANGROVE_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.MANGROVE_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.MANGROVE_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.MANGROVE_BOARD_VERTICAL_STAIRS, 20, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHERRY_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHERRY_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHERRY_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.CHERRY_BOARD_VERTICAL_STAIRS, 20, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.BAMBOO_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.BAMBOO_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.BAMBOO_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.BAMBOO_BOARD_VERTICAL_STAIRS, 20, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.ANCIENT_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.ANCIENT_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.ANCIENT_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.ANCIENT_BOARD_VERTICAL_STAIRS, 20, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.GLOOM_BOARDS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.GLOOM_BOARD_STAIRS, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.GLOOM_BOARD_SLAB, 20, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(EBBlocks.GLOOM_BOARD_VERTICAL_STAIRS, 20, 5);
     }
 
     private static void registerCompostables() {
