@@ -4,6 +4,14 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.3.2 Fabric/Quilt-1.21-1.21.1
+
+  Fixes
+•   Fixed missing block drops for gloom saplings and it's potted variant
+•   Fixed missing block drops for both ancient and gloom leaves
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.3.1 Fabric/Quilt-1.21-1.21.1
 
   Misc Additions
