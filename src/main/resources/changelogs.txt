@@ -4,12 +4,22 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release v3.2.5 Fabric/Quilt-1.20.1
+Version Release v3.3.3 Fabric - 1.21.1
 
-  Misc Additions
-•   Added bookshelf_variants item tag, this tag comes along with a new recipe for lecterns using EB's bookshelves
-•   Added items from Excessive Building to many of vanilla's tags, this should help with compatibility and recipes a ton
-•   Updated contributor capes
+  Fixes
+•   Fixed an issue that caused crafting table and bookshelf variants to be uncraftable
+
+Version Release v3.2.6 Fabric - 1.20.1
+
+  Changes
+•   Updated almentra statue models to match with the 1.21.1 statue models
+
+  Fixes
+•   Fixed an issue that caused crafting table and bookshelf variants to be uncraftable
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release v3.3.2 Fabric/Quilt-1.21-1.21.1
 
   Fixes
 •   Fixed missing block drops for gloom saplings and it's potted variant
@@ -17,7 +27,104 @@ Version Release v3.2.5 Fabric/Quilt-1.20.1
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release v3.2.3 Fabric/NeoForge/Quilt-1.20.1/1.21(.1)
+Version Release v3.3.1 Fabric/Quilt-1.21-1.21.1
+
+  Misc Additions
+•   Updated ru_ru translations to be up to date with v3.3 (@bricker_man)
+•   Added bookshelf_variants item tag, this tag comes along with a new recipe for lecterns using EB's bookshelves
+•   Added items from Excessive Building to many of vanilla's tags, this should help with compatibility and recipes a ton
+•   Boards can now be smelted and burned like other wood blocks
+
+  Fixes
+•   Fixed missing block drops for gloom saplings and it's potted variant
+•   Fixed missing block drops for both ancient and gloom leaves
+
+Version Release v3.2.5 Fabric/Quilt-1.20.1
+
+  Misc Additions
+•   Added bookshelf_variants item tag, this tag comes along with a new recipe for lecterns using EB's bookshelves
+•   Added items from Excessive Building to many of vanilla's tags, this should help with compatibility and recipes a ton
+
+  Fixes
+•   Fixed missing block drops for gloom saplings and it's potted variant
+•   Fixed missing block drops for both ancient and gloom leaves
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release v3.3.0 Fabric/Quilt-1.21.1
+
+  Hammer
+•   The hammer is a new tool created using amethyst and can mine many blocks that normally don't have a tool assigned to them such as glass
+•   The hammer can also be used to "hammer" various blocks into new states such as engraving sandstone or turning mosaic into boards
+•   The hammer is also how almentra statues are obtained which is via hammering a polished almentra block
+•   The hammer also increases knockback based on player movement speed and has higher damage than other items (can be configured)
+•   Hammers can be enabled/disabled via the config (on by default)
+
+  New Features
+•   Added mossy variants for deepslate bricks, polished blackstone bricks, cobbled deepslate bricks, and blackstone bricks
+•   Mossy cobblestone bricks now have an additional recipe that uses moss blocks or vines
+•   Added armadillo scute blocks (as part of losing a bet -w-)
+•   Added wooden boards and new pumpkin variants as hammered variants of existing blocks
+•   Added an advancement to go along with hammering a block
+
+  Misc Additions
+•   Added uk_ua translations (@unroman)
+•   Added a built-in resource pack for 1.22+ ancient wood retextures (this is due to 1.22 adding a white wood set)
+...this will replace the textures fully on 1.22+ versions of the mod
+•   Added pack icons to built-in resource packs
+•   Ancient fruit now creates mundane potions when using water instead of awkward potions
+•   Moved custom tooltips to a separate client configuration
+•   Added a configuration to allow the hammer to have weapon-like attributes (higher damage, slow, atk speed and increased knockback with movement)
+•   Added a client configurations for hammerable block tooltips
+
+  Changes
+•   Updated the texture of almentra bricks
+•   Updated the texture of almentra statues
+•   Updated the texture of ancient leaves
+•   Updated the texture of asphalt (THANK YOU @bricker_man)
+•   Updated the colors of lime, pink, and brown almentra
+•   Updated the models for orange, cyan, purple, magenta, pink, and brown almentra statues (THANK YOU FOR HELP @tellioaridoitsu AND @hecco)
+•   Removed recipes for many blocks such as almentra statues or thick paper walls as these are obtained via the hammer now
+•   Removed chests from the Excessive Building creative tab
+•   Updated contributor capes
+
+  Fixes
+•   Fixed an issue that caused modified loot tables to drop double drops
+•   Fixed an issue that caused the model of waxed copper brick vertical stairs to not rotate
+•   Fixed an issue that caused mossy cobblestone brick slabs to drop normal cobblestone brick slabs
+•   Fixed an issue that caused the comment for "Content Toggles" in the config file to be written at the bottom
+
+•   Special Thanks to:
+@tellioaridoitsu - for helping out with a bunch of the new almentra statues!
+@Hecco - for helping with the new orange almentra statue!
+@bricker_man - for helping with the new asphalt texture!
+@CreationsKeke - for helping out with one last surprise coming up for Excessive Building!
+
+  Note
+•   I know I've said it a few times in the past but I really need to focus on new things, so for now this will be the last major "content" update for a while.
+I will maintain the mod for the latest major modding version, I am happy with the state the mod is and I think it is time to finally let it rest.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release v3.2.4 Fabric/Quilt-1.20.1
+
+Changes
+• Almentra texture changes
+
+Fixes
+• Fixed Black and Light Gray Almentra Statues having missing particles
+• All Pottery Patterns are now visible!
+• Decorative Shelves increment states by 1 now instead of 2
+• Decorative Shelves interaction fixes
+• Added missing Mud Brick Vertical Stairs
+
+Note
+• Thanks to KekeCreations for helping out with this small fix list,
+I had plans to fix these a little while later but he offered to help out :)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release v3.2.3 Fabric/Quilt-1.21(1.)/1.20.1
 
   Misc Additions
 •   Added amethyst lamps

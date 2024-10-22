@@ -4,7 +4,7 @@
 	"textures": {
 		"0": "excessive_building:block/lime_almentra_statue_stand",
 		"1": "excessive_building:block/lime_almentra_statue",
-		"particle": "excessive_building:block/lime_almentra_statue_stand"
+		"particle": "excessive_building:block/lime_polished_almentra_statue"
 	},
 	"elements": [
 		{
@@ -41,8 +41,8 @@
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 9, 8]},
 			"faces": {
 				"north": {"uv": [0, 0, 4, 4], "texture": "#1"},
-				"east": {"uv": [4, 4, 0, 8], "texture": "#1"},
-				"south": {"uv": [4, 0, 8, 4], "texture": "#1"},
+				"east": {"uv": [4, 4, 8, 8], "texture": "#1"},
+				"south": {"uv": [4, 4, 8, 8], "texture": "#1"},
 				"west": {"uv": [8, 4, 4, 8], "texture": "#1"},
 				"up": {"uv": [4, 12, 0, 8], "texture": "#1"},
 				"down": {"uv": [12, 0, 8, 4], "texture": "#1"}
