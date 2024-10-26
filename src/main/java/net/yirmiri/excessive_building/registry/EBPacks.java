@@ -17,7 +17,7 @@ public class EBPacks {
         ResourceManagerHelper.registerBuiltinResourcePack(Identifier.of(ExcessiveBuilding.MOD_ID, "vanilla_retextures"), container.get(),
                 Text.translatable("pack." + ExcessiveBuilding.MOD_ID + ".vanilla_retextures"), ResourcePackActivationType.DEFAULT_ENABLED);
 
-        ResourceManagerHelper.registerBuiltinResourcePack(Identifier.of(ExcessiveBuilding.MOD_ID, "1.22_ancient_retextures"), container.get(),
-                Text.translatable("pack." + ExcessiveBuilding.MOD_ID + ".1.22_ancient_retextures"), ResourcePackActivationType.NORMAL);
+//        ResourceManagerHelper.registerBuiltinResourcePack(Identifier.of(ExcessiveBuilding.MOD_ID, "1.22_ancient_retextures"), container.get(),
+//                Text.translatable("pack." + ExcessiveBuilding.MOD_ID + ".1.22_ancient_retextures"), ResourcePackActivationType.NORMAL);
     }
 }

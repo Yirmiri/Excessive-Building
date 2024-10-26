@@ -6,6 +6,9 @@ Literally just a secret .txt file of every single update's changelog
 
 Version Release v3.3.4 Fabric - 1.21.1
 
+  Changes
+•   Reverted ancient wood pallete back to white (will be wine red in future Minecraft versions)
+
   Fixes
 •   Fixed an issue that caused crafting table and bookshelf variants to be uncraftable
 
