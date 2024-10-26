@@ -24,6 +24,9 @@ Version Release v3.3.3 Fabric - 1.21.1
 
 Version Release v3.2.6 Fabric - 1.20.1
 
+  Additions
+•   Added Winter Drop Ancient Retextures as a built-in resource pack option (by default ancient is still white)
+
   Changes
 •   Updated almentra statue models to match with the 1.21.1 statue models
 
