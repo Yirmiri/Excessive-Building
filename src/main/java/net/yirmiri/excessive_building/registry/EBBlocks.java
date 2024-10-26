@@ -974,6 +974,8 @@ public class EBBlocks {
     //TODO:
     // PEDESTALS THAT CAN HOLD ITEMS
     // NETHER BRICK DECORATED POT
+    // TERRACOTTA POT DYE VARIANTS
+    // REDO GLOOM TREE + CUSTOM GENERATION
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {
