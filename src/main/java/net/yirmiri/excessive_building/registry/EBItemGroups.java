@@ -10,7 +10,34 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
+import java.util.ArrayList;
+
 public class EBItemGroups {
+    public static ArrayList<DyeColor> COLOR_ORDERING = new ArrayList<DyeColor>();
+
+    public static void addVanillaColorOrdering() {
+        COLOR_ORDERING.add(DyeColor.WHITE);
+        COLOR_ORDERING.add(DyeColor.LIGHT_GRAY);
+        COLOR_ORDERING.add(DyeColor.GRAY);
+        COLOR_ORDERING.add(DyeColor.BLACK);
+        COLOR_ORDERING.add(DyeColor.BROWN);
+        COLOR_ORDERING.add(DyeColor.RED);
+        COLOR_ORDERING.add(DyeColor.ORANGE);
+        COLOR_ORDERING.add(DyeColor.YELLOW);
+        COLOR_ORDERING.add(DyeColor.LIME);
+        COLOR_ORDERING.add(DyeColor.GREEN);
+        COLOR_ORDERING.add(DyeColor.CYAN);
+        COLOR_ORDERING.add(DyeColor.LIGHT_BLUE);
+        COLOR_ORDERING.add(DyeColor.BLUE);
+        COLOR_ORDERING.add(DyeColor.PURPLE);
+        COLOR_ORDERING.add(DyeColor.MAGENTA);
+        COLOR_ORDERING.add(DyeColor.PINK);
+    }
+
+    public static void addColorOrdering(DyeColor colors, int i) {
+        COLOR_ORDERING.add(i, colors);
+    }
+
     public static ItemGroup EXCESSIVE_BUILDING = Registry.register(Registries.ITEM_GROUP, Identifier.of(ExcessiveBuilding.MOD_ID, "excessive_building"),
             FabricItemGroup.builder().icon(() -> new ItemStack(EBBlocks.LOGO_BLOCK)).displayName(Text.translatable("itemgroup.excessive_building")).entries((ctx, entries) -> {
                 entries.add(EBBlocks.OAK_MOSAIC);
@@ -337,397 +364,63 @@ public class EBItemGroups {
                 entries.add(EBBlocks.FUCHSIA_SEA_GLASS_PANE);
                 entries.add(EBBlocks.ROSE_SEA_GLASS_PANE);
 
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedKnittedWools(DyeColor.PINK.getId()));
-
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedKnittedCarpets(DyeColor.PINK.getId()));
+                for (DyeColor colors : COLOR_ORDERING) {
+                    entries.add(EBBlocks.getDyedKnittedWools(colors.getId()));
+                    entries.add(EBBlocks.getDyedKnittedCarpets(colors.getId()));
+                }
 
                 entries.add(EBBlocks.TERRACOTTA_TILES);
                 entries.add(EBBlocks.TERRACOTTA_TILE_STAIRS);
                 entries.add(EBBlocks.TERRACOTTA_TILE_VERTICAL_STAIRS);
                 entries.add(EBBlocks.TERRACOTTA_TILE_SLAB);
 
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.WHITE.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.LIGHT_GRAY.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.GRAY.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.BLACK.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.BROWN.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.RED.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.ORANGE.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.YELLOW.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.LIME.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.GREEN.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.CYAN.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.LIGHT_BLUE.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.BLUE.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.PURPLE.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.MAGENTA.getId()));
-
-                entries.add(EBBlocks.getDyedTerracottaTiles(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileStairs(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedTerracottaTileSlab(DyeColor.PINK.getId()));
+                for (DyeColor colors : COLOR_ORDERING) {
+                    entries.add(EBBlocks.getDyedTerracottaTiles(colors.getId()));
+                    entries.add(EBBlocks.getDyedTerracottaTileStairs(colors.getId()));
+                    entries.add(EBBlocks.getDyedTerracottaTileSlab(colors.getId()));
+                    entries.add(EBBlocks.getDyedTerracottaTileVerticalStairs(colors.getId()));
+                }
 
                 entries.add(EBBlocks.ALMENTRA);
                 entries.add(EBBlocks.ALMENTRA_STAIRS);
                 entries.add(EBBlocks.ALMENTRA_VERTICAL_STAIRS);
                 entries.add(EBBlocks.ALMENTRA_SLAB);
 
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.WHITE.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.LIGHT_GRAY.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.GRAY.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.BLACK.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.BROWN.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.RED.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.ORANGE.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.YELLOW.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.LIME.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.GREEN.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.CYAN.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.LIGHT_BLUE.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.BLUE.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.PURPLE.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.MAGENTA.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentra(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStairs(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraVerticalStairs(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraSlab(DyeColor.PINK.getId()));
+                for (DyeColor colors : COLOR_ORDERING) {
+                    entries.add(EBBlocks.getDyedAlmentra(colors.getId()));
+                    entries.add(EBBlocks.getDyedAlmentraStairs(colors.getId()));
+                    entries.add(EBBlocks.getDyedAlmentraSlab(colors.getId()));
+                    entries.add(EBBlocks.getDyedAlmentraVerticalStairs(colors.getId()));
+                }
 
                 entries.add(EBBlocks.POLISHED_ALMENTRA);
                 entries.add(EBBlocks.POLISHED_ALMENTRA_STAIRS);
                 entries.add(EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS);
                 entries.add(EBBlocks.POLISHED_ALMENTRA_SLAB);
 
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.WHITE.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.LIGHT_GRAY.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.GRAY.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.BLACK.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.BROWN.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.RED.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.ORANGE.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.YELLOW.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.LIME.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.GREEN.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.CYAN.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.LIGHT_BLUE.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.BLUE.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.PURPLE.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.MAGENTA.getId()));
-
-                entries.add(EBBlocks.getDyedPolishedAlmentra(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraStairs(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedPolishedAlmentraSlab(DyeColor.PINK.getId()));
+                for (DyeColor colors : COLOR_ORDERING) {
+                    entries.add(EBBlocks.getDyedPolishedAlmentra(colors.getId()));
+                    entries.add(EBBlocks.getDyedPolishedAlmentraStairs(colors.getId()));
+                    entries.add(EBBlocks.getDyedPolishedAlmentraSlab(colors.getId()));
+                    entries.add(EBBlocks.getDyedPolishedAlmentraVerticalStairs(colors.getId()));
+                }
 
                 entries.add(EBBlocks.ALMENTRA_BRICKS);
                 entries.add(EBBlocks.ALMENTRA_BRICK_STAIRS);
                 entries.add(EBBlocks.ALMENTRA_BRICK_VERTICAL_STAIRS);
                 entries.add(EBBlocks.ALMENTRA_BRICK_SLAB);
 
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.WHITE.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.LIGHT_GRAY.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.GRAY.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.BLACK.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.BROWN.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.RED.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.ORANGE.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.YELLOW.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.LIME.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.GREEN.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.CYAN.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.LIGHT_BLUE.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.BLUE.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.PURPLE.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.MAGENTA.getId()));
-
-                entries.add(EBBlocks.getDyedAlmentraBricks(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickStairs(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(DyeColor.PINK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraBrickSlab(DyeColor.PINK.getId()));
+                for (DyeColor colors : COLOR_ORDERING) {
+                    entries.add(EBBlocks.getDyedAlmentraBricks(colors.getId()));
+                    entries.add(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()));
+                    entries.add(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()));
+                    entries.add(EBBlocks.getDyedAlmentraBrickVerticalStairs(colors.getId()));
+                }
                 
                 entries.add(EBBlocks.ALMENTRA_STATUE);
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.WHITE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.LIGHT_GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.GRAY.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.BLACK.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.BROWN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.RED.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.ORANGE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.YELLOW.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.LIME.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.GREEN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.CYAN.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.LIGHT_BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.BLUE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.PURPLE.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.MAGENTA.getId()));
-                entries.add(EBBlocks.getDyedAlmentraStatues(DyeColor.PINK.getId()));
+                for (DyeColor colors : COLOR_ORDERING) {
+                    entries.add(EBBlocks.getDyedAlmentraStatues(colors.getId()));
+                }
 
                 entries.add(EBBlocks.POLISHED_SANDSTONE);
                 entries.add(EBBlocks.POLISHED_SANDSTONE_STAIRS);
@@ -987,5 +680,6 @@ public class EBItemGroups {
             }).build());
 
     public static void loadItemGroups() {
+        addVanillaColorOrdering();
     }
 }
