@@ -4,6 +4,21 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.3.5 Fabric - 1.21.1
+
+  Misc Additions
+•   Added zh_cn translations (thanks to @ChuijkYahus)
+
+  Changes
+•   Dyed blocks now order themselves in creative tabs automatically (this will only be noticeable for dye mods)
+
+Version Release v3.2.8 Fabric - 1.20.1
+
+  Changes
+•   Dyed blocks now order themselves in creative tabs automatically (this will only be noticeable for dye mods)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.3.4 Fabric - 1.21.1
 
   Changes
