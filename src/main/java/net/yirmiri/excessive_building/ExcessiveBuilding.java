@@ -20,7 +20,7 @@ public class ExcessiveBuilding implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ForgeConfigRegistry.INSTANCE.register(MOD_ID, ModConfig.Type.COMMON, EBConfig.COMMON, "excessive_building-config.toml");
-
+//TODO: Non required config system
 		EBBlocks.loadBlocks();
 		EBRegistries.loadRegistries();
 		EBItemGroups.loadItemGroups();

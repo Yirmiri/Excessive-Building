@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "minecraft:crafting_table"
+    "item": "minecraft:crafting_table"
   }
 }

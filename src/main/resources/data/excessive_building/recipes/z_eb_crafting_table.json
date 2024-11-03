@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "misc",
   "key": {
     "#": {
       "tag": "minecraft:planks"
@@ -11,7 +11,7 @@
     "##"
   ],
   "result": {
-    "count": 1,
-    "id": "minecraft:crafting_table"
-  }
+    "item": "minecraft:crafting_table"
+  },
+  "show_notification": false
 }
