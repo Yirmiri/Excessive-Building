@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
+import net.minecraft.util.Rarity;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.GlowingLeavesBlock;
 import net.yirmiri.excessive_building.block.ParticleCandleBlock;
@@ -158,6 +159,7 @@ public class EBProperties {
         //MISC
         public static final Item.Settings GENERIC = new Item.Settings();
         public static final Item.Settings NETHERITE = new Item.Settings().fireproof();
+        public static final Item.Settings CROWN = new Item.Settings().rarity(Rarity.UNCOMMON).maxCount(1);
 
         public static class Food {
             public static final FoodComponent ANCIENT_FRUIT = new FoodComponent.Builder().nutrition(4).saturationModifier(0.8F)

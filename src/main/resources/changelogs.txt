@@ -4,6 +4,18 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.3.6 Fabric - 1.21.1
+
+  Fixes
+•   Fixed an issue that caused some contributor capes to not load
+
+Version Release v3.2.9 Fabric - 1.20.1
+
+  Fixes
+•   Fixed an issue that caused VANILLA crafting tables and bookshelves to be uncraftable
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.3.5 Fabric - 1.21.1
 
   Misc Additions
