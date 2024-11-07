@@ -24,4 +24,6 @@ public interface ConfigHelper {
 
     boolean enableResourceBricks();
 
+    boolean enableExcessiveBuildingPotterySherds();
+
 }
