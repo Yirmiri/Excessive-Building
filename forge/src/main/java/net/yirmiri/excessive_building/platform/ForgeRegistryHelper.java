@@ -11,13 +11,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.*;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.platform.services.IRegistryHelper;
+import net.yirmiri.excessive_building.platform.services.RegistryHelper;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class ForgeRegistryHelper implements IRegistryHelper {
+public class ForgeRegistryHelper implements RegistryHelper {
 
     private static final RegistryMap registryMap = new RegistryMap();
 
