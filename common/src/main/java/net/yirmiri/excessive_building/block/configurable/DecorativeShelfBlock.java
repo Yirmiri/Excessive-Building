@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.block;
+package net.yirmiri.excessive_building.block.configurable;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;

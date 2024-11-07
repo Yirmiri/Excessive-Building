@@ -1,7 +1,6 @@
 package net.yirmiri.excessive_building.block.configurable;
 
 import net.minecraft.world.flag.FeatureFlagSet;
-import net.yirmiri.excessive_building.block.VerticalStairsBlock;
 import net.yirmiri.excessive_building.platform.Services;
 
 public class ResourceBrickVerticalStairsBlock extends VerticalStairsBlock {

@@ -10,8 +10,10 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.item.ConfigurableBlockItem;
 import net.yirmiri.excessive_building.platform.services.RegistryHelper;
 
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public class FabricRegistryHelper implements RegistryHelper {
@@ -33,6 +35,13 @@ public class FabricRegistryHelper implements RegistryHelper {
     public <T extends Block> Supplier<T> registerBlockWithItem(String id, Supplier<T> blockSupplier) {
         var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ExcessiveBuilding.MOD_ID, id), blockSupplier.get());
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ExcessiveBuilding.MOD_ID, id), new BlockItem(block, new Item.Properties()));
+        return () -> block;
+    }
+
+    @Override
+    public <T extends Block> Supplier<T> registerConfigurableBlockWithItem(boolean configValue, Optional<Boolean> optionalConfigValue, String id, Supplier<T> blockSupplier) {
+        var block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(ExcessiveBuilding.MOD_ID, id), blockSupplier.get());
+        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ExcessiveBuilding.MOD_ID, id), new ConfigurableBlockItem(configValue, optionalConfigValue, block, new Item.Properties()));
         return () -> block;
     }
 

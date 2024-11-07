@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.block;
+package net.yirmiri.excessive_building.block.configurable;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.Block;

@@ -5,6 +5,7 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.Block;
 
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public interface RegistryHelper {
@@ -14,6 +15,8 @@ public interface RegistryHelper {
 
 
     <T extends Block> Supplier<T> registerBlockWithItem(String id, java.util.function.Supplier<T> blockSupplier);
+
+    <T extends Block> Supplier<T> registerConfigurableBlockWithItem(boolean configValue, Optional<Boolean> optionalConfigValue, String id, java.util.function.Supplier<T> blockSupplier);
 
     <T extends Block> Supplier<T> registerBlock(String id, java.util.function.Supplier<T> blockSupplier);
 

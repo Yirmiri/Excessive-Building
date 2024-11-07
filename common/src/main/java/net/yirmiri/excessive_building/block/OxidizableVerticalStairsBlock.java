@@ -6,6 +6,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.yirmiri.excessive_building.block.configurable.VerticalStairsBlock;
 
 public class OxidizableVerticalStairsBlock extends VerticalStairsBlock implements WeatheringCopper {
     private final WeatheringCopper.WeatherState oxidationLevel;

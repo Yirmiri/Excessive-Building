@@ -21,7 +21,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.block.AlmentraStatueBlock;
+import net.yirmiri.excessive_building.block.configurable.AlmentraStatueBlock;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
 

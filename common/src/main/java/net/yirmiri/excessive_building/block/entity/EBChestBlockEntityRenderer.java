@@ -24,7 +24,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.ChestType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.block.EBChestBlock;
+import net.yirmiri.excessive_building.block.configurable.EBChestBlock;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;

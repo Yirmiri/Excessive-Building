@@ -11,10 +11,12 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.*;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.item.ConfigurableBlockItem;
 import net.yirmiri.excessive_building.platform.services.RegistryHelper;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 public class ForgeRegistryHelper implements RegistryHelper {
@@ -41,6 +43,13 @@ public class ForgeRegistryHelper implements RegistryHelper {
     public <T extends Block> Supplier<T> registerBlockWithItem(String id, Supplier<T> blockSupplier) {
         var block = BLOCKS.register(id, blockSupplier);
         ITEMS.register(id, () -> new BlockItem(block.get(), new Item.Properties()));
+        return block;
+    }
+
+    @Override
+    public <T extends Block> Supplier<T> registerConfigurableBlockWithItem(boolean configValue, Optional<Boolean> optionalConfigValue, String id, Supplier<T> blockSupplier) {
+        var block = BLOCKS.register(id, blockSupplier);
+        ITEMS.register(id, () -> new ConfigurableBlockItem(configValue, optionalConfigValue, block.get(), new Item.Properties()));
         return block;
     }
 
