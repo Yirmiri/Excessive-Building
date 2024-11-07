@@ -2,7 +2,7 @@ package net.yirmiri.excessive_building;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
-public class EBConfig {
+public class EBForgeConfig {
     public static final ForgeConfigSpec COMMON;
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
