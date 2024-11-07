@@ -35,7 +35,6 @@ import net.yirmiri.excessive_building.block.sign.EBHangingSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBWallHangingSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBWallSignBlock;
-import net.yirmiri.excessive_building.item.configurable.*;
 import net.yirmiri.excessive_building.util.EBBlockSetTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
 import net.yirmiri.excessive_building.worldgen.sapling.AncientSaplingGenerator;
