@@ -1,8 +1,8 @@
 package net.yirmiri.excessive_building.block.configurable;
 
 import net.minecraft.world.flag.FeatureFlagSet;
-import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.VerticalStairsBlock;
+import net.yirmiri.excessive_building.platform.Services;
 
 public class ResourceBrickVerticalStairsBlock extends VerticalStairsBlock {
     public ResourceBrickVerticalStairsBlock(Properties settings) {
@@ -11,6 +11,6 @@ public class ResourceBrickVerticalStairsBlock extends VerticalStairsBlock {
 
     @Override
     public boolean isEnabled(FeatureFlagSet enable) {
-        return EBConfig.ENABLE_RESOURCE_BRICKS.get() && EBConfig.ENABLE_VERTICAL_STAIRS.get();
+        return Services.CONFIG.enableResourceBricks() && Services.CONFIG.enableVerticalStairs();
     }
 }

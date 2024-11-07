@@ -2,7 +2,7 @@ package net.yirmiri.excessive_building.block.configurable;
 
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.block.SlabBlock;
-import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.platform.Services;
 
 public class ResourceBrickSlabBlock extends SlabBlock {
     public ResourceBrickSlabBlock(Properties settings) {
@@ -11,6 +11,6 @@ public class ResourceBrickSlabBlock extends SlabBlock {
 
     @Override
     public boolean isEnabled(FeatureFlagSet enable) {
-        return EBConfig.ENABLE_RESOURCE_BRICKS.get();
+        return Services.CONFIG.enableResourceBricks();
     }
 }

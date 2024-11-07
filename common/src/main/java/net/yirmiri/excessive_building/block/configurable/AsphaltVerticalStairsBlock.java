@@ -5,8 +5,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.VerticalStairsBlock;
+import net.yirmiri.excessive_building.platform.Services;
 
 public class AsphaltVerticalStairsBlock extends VerticalStairsBlock {
     public AsphaltVerticalStairsBlock(Properties settings) {
@@ -15,7 +15,7 @@ public class AsphaltVerticalStairsBlock extends VerticalStairsBlock {
 
     @Override
     public boolean isEnabled(FeatureFlagSet enable) {
-        return EBConfig.ENABLE_ASPHALT.get() && EBConfig.ENABLE_VERTICAL_STAIRS.get();
+        return Services.CONFIG.enableAsphalt() && Services.CONFIG.enableVerticalStairs();
     }
 
     @Override

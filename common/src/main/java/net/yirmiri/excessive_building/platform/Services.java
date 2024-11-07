@@ -1,6 +1,7 @@
 package net.yirmiri.excessive_building.platform;
 
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.platform.services.ConfigHelper;
 import net.yirmiri.excessive_building.platform.services.PlatformHelper;
 import net.yirmiri.excessive_building.platform.services.RegistryHelper;
 
@@ -10,6 +11,8 @@ public class Services {
     public static final RegistryHelper REGISTRY = load(RegistryHelper.class);
 
     public static final PlatformHelper PLATFORM = load(PlatformHelper.class);
+
+    public static final ConfigHelper CONFIG = load(ConfigHelper.class);
 
     public static <T> T load(Class<T> clazz) {
 

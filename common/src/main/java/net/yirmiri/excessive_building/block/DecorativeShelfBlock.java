@@ -20,7 +20,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
-import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.platform.Services;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -36,12 +36,12 @@ public class DecorativeShelfBlock extends Block {
 
     @Override
     public boolean isEnabled(FeatureFlagSet enable) {
-        return EBConfig.ENABLE_DECORATIVE_SHELVES.get();
+        return Services.CONFIG.enableDecorativeShelves();
     }
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter context, List<Component> tooltip, TooltipFlag options) {
-        if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
+        if (Services.CONFIG.enableCustomTooltips()) {
             super.appendHoverText(stack, context, tooltip, options);
             tooltip.add(CommonComponents.EMPTY);
             tooltip.add(Component.translatable("tooltip.block.interact").withStyle(ChatFormatting.GRAY));

@@ -6,5 +6,22 @@ public interface ConfigHelper {
 
     boolean enableDecorativeShelves();
 
+    boolean enableDecoratives();
+
+    boolean enableCraftingTableVariants();
+
+    boolean enableVerticalStairs();
+
+    boolean enableAncientSapling();
+
+    boolean enableGloomSeeds();
+
+    boolean enableAsphalt();
+
+    boolean enableShelfVariants();
+
+    boolean enableLadderVariants();
+
+    boolean enableResourceBricks();
 
 }

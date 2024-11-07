@@ -6,7 +6,7 @@ import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.platform.Services;
 
 public class AsphaltBlock extends Block {
     public AsphaltBlock(Properties settings) {
@@ -15,7 +15,7 @@ public class AsphaltBlock extends Block {
 
     @Override
     public boolean isEnabled(FeatureFlagSet enable) {
-        return EBConfig.ENABLE_ASPHALT.get();
+        return Services.CONFIG.enableAsphalt();
     }
 
     @Override

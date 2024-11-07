@@ -1,6 +1,5 @@
 package net.yirmiri.excessive_building.block;
 
-import net.minecraft.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.flag.FeatureFlagSet;
@@ -21,7 +20,7 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.platform.Services;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.stream.Stream;
@@ -42,7 +41,7 @@ public class GlassJarBlock extends Block implements SimpleWaterloggedBlock {
 
     @Override
     public boolean isEnabled(FeatureFlagSet enable) {
-        return EBConfig.ENABLE_DECORATIVES.get();
+        return Services.CONFIG.enableDecoratives();
     }
 
     @Nullable @Override

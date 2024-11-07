@@ -3,7 +3,7 @@ package net.yirmiri.excessive_building.block.configurable;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.platform.Services;
 
 public class ResourceBrickStairsBlock extends StairBlock {
     public ResourceBrickStairsBlock(BlockState baseBlockState, Properties settings) {
@@ -12,6 +12,6 @@ public class ResourceBrickStairsBlock extends StairBlock {
 
     @Override
     public boolean isEnabled(FeatureFlagSet enable) {
-        return EBConfig.ENABLE_RESOURCE_BRICKS.get();
+        return Services.CONFIG.enableResourceBricks();
     }
 }

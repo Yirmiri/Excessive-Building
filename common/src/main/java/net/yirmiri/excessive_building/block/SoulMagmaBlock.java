@@ -1,7 +1,6 @@
 package net.yirmiri.excessive_building.block;
 
 import net.minecraft.ChatFormatting;
-import net.minecraft.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.CommonComponents;
@@ -25,7 +24,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.platform.Services;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -40,7 +39,7 @@ public class SoulMagmaBlock extends MagmaBlock {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter context, List<Component> tooltip, TooltipFlag options) {
-        if (EBConfig.ENABLE_CUSTOM_TOOLTIPS.get()) {
+        if (Services.CONFIG.enableCustomTooltips()) {
             super.appendHoverText(stack, context, tooltip, options);
             tooltip.add(CommonComponents.EMPTY);
             tooltip.add(Component.translatable("tooltip.block.when_powered").withStyle(ChatFormatting.GRAY));

@@ -1,6 +1,5 @@
 package net.yirmiri.excessive_building.block;
 
-import net.minecraft.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleOptions;
@@ -33,7 +32,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.function.BiConsumer;
 import java.util.function.ToIntFunction;
 
 public class ParticleCandleBlock extends Block implements SimpleWaterloggedBlock {

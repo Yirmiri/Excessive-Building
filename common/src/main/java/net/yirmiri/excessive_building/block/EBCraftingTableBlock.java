@@ -9,7 +9,7 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.CraftingTableBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.platform.Services;
 import net.yirmiri.excessive_building.util.EBCraftingScreenHandler;
 
 public class EBCraftingTableBlock extends CraftingTableBlock {
@@ -21,7 +21,7 @@ public class EBCraftingTableBlock extends CraftingTableBlock {
 
     @Override
     public boolean isEnabled(FeatureFlagSet enable) {
-        return EBConfig.ENABLE_CRAFTING_TABLE_VARIANTS.get();
+        return Services.CONFIG.enableCraftingTableVariants();
     }
 
     @Override
