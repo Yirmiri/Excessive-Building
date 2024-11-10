@@ -1,8 +1,9 @@
-// 1.21	2024-11-09T23:51:08.7039823	Excessive Building/Tags for minecraft:item
+// 1.21	2024-11-10T15:16:06.8012183	Excessive Building/Tags for minecraft:item
 886e5e1db1abef8583882d996f8600275f839c37 data\excessive_building\tags\item\glow_removals.json
 d59daccf97972bb6f8fd061803196366ec6e3c44 data\excessive_building\tags\item\gloom_logs.json
 bde6ca31173d1f22d5f6fe355dc90c9faa35b239 data\excessive_building\tags\item\hammer_repairable.json
 05675316f525437e0cf8e4076ab7f5dd8033cea9 data\minecraft\tags\item\enchantable\durability.json
+23f4a1cda4ed401654d1c42aab158dba7a4b5410 data\excessive_building\tags\item\takes_priority_over_tools.json
 dbf07108c437f6f048248f06fc2ed6dd557d01cb data\minecraft\tags\item\decorated_pot_sherds.json
 45c62465fdc7dab956c8ac1e4a5d4aafe62076b2 data\excessive_building\tags\item\bookshelf_variants.json
 e57c89144a6a859d23ae0190b7b4a0eb99343af5 data\minecraft\tags\item\wooden_pressure_plates.json
@@ -12,7 +13,6 @@ dbf07108c437f6f048248f06fc2ed6dd557d01cb data\minecraft\tags\item\decorated_pot_
 dd7a9cf03ea6af4725212b9d0aad8a4a27708fb8 data\minecraft\tags\item\wooden_slabs.json
 3ecb1c1170f3f42ef334561ebf624bda9dae826f data\minecraft\tags\item\saplings.json
 1419a0b00f417fbc1bbff44f7a3bfbb4252413fa data\minecraft\tags\item\wooden_stairs.json
-23f4a1cda4ed401654d1c42aab158dba7a4b5410 data\excessive_building\tags\item\cancels_hammers.json
 e16dd0216b65049658bf81ff05bc00cb45041d92 data\excessive_building\tags\item\ancient_logs.json
 3ebe6ccfbaf30f307e1385b7c95c6393b6e42c2f data\minecraft\tags\item\piglin_loved.json
 05675316f525437e0cf8e4076ab7f5dd8033cea9 data\minecraft\tags\item\enchantable\vanishing.json
@@ -26,4 +26,5 @@ d28d6e4f7a681ca019e0f4ec5a7bd7f77b0910ef data\excessive_building\tags\item\soils
 05675316f525437e0cf8e4076ab7f5dd8033cea9 data\minecraft\tags\item\enchantable\mining_loot.json
 71940e01b8a778accc09fd1f6e8978bc627b4792 data\minecraft\tags\item\planks.json
 084083e8b498f8b17956513121d01443facf8ff2 data\minecraft\tags\item\sniffer_food.json
+6222fd0d7d2ce08ee1f70be68a61f4e167dda650 data\excessive_building\tags\item\wrench_repairable.json
 27dccdc99a75a8aedee0046d8cd78d43e420df94 data\excessive_building\tags\item\hammerable_tooltip.json

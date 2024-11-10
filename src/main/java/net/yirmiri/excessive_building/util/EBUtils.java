@@ -23,6 +23,11 @@ public class EBUtils {
         player.incrementStat(EBStats.BLOCKS_HAMMERED);
     }
 
+    public static void wrenchUsed(PlayerEntity player) {
+        player.playSound(SoundEvents.ITEM_SPYGLASS_USE, 0.5F, 1.0F);
+        player.incrementStat(EBStats.BLOCKS_WRENCHED);
+    }
+
     public static final Supplier<ImmutableBiMap<Object, Object>> BASE_TO_HAMMERED_VARIANT = Suppliers.memoize(() -> ImmutableBiMap.builder()
             .put(Blocks.CARVED_PUMPKIN, EBBlocks.WICKED_CARVED_PUMPKIN)
             .put(EBBlocks.WICKED_CARVED_PUMPKIN, EBBlocks.CHEERFUL_CARVED_PUMPKIN)

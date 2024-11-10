@@ -152,6 +152,7 @@ public class EBProperties {
     public static class ItemP {
         //UTILITIES
         public static final Item.Settings HAMMER = new Item.Settings().maxCount(1).maxDamage(781).attributeModifiers(HammerItem.createAttributeModifiers());
+        public static final Item.Settings WRENCH = new Item.Settings().maxCount(1).maxDamage(512);
 
         //FOOD
         public static final Item.Settings ANCIENT_FRUIT = new Item.Settings().food(Food.ANCIENT_FRUIT);

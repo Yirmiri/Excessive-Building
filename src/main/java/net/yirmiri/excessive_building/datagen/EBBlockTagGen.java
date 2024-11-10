@@ -63,6 +63,13 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendHammerMineable();
         appendCarvedPumpkins();
         appendTerracottaPots();
+        appendCannotBeWrenched();
+    }
+
+    public void appendCannotBeWrenched() {
+        getOrCreateTagBuilder(EBTags.Blocks.CANNOT_BE_WRENCHED)
+
+        ;
     }
 
     public void appendCarvedPumpkins() {

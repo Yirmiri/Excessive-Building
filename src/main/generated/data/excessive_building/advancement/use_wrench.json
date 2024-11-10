@@ -1,7 +1,7 @@
 {
   "parent": "excessive_building:excessive_building",
   "criteria": {
-    "use_hammer": {
+    "use_wrench": {
       "conditions": {
         "location": [
           {
@@ -11,7 +11,7 @@
           {
             "condition": "minecraft:match_tool",
             "predicate": {
-              "items": "excessive_building:hammer"
+              "items": "excessive_building:wrench"
             }
           }
         ]
@@ -21,19 +21,19 @@
   },
   "display": {
     "description": {
-      "translate": "advancement.excessive_building.use_hammer.description"
+      "translate": "advancement.excessive_building.use_wrench.description"
     },
     "icon": {
       "count": 1,
-      "id": "excessive_building:hammer"
+      "id": "excessive_building:wrench"
     },
     "title": {
-      "translate": "advancement.excessive_building.use_hammer"
+      "translate": "advancement.excessive_building.use_wrench"
     }
   },
   "requirements": [
     [
-      "use_hammer"
+      "use_wrench"
     ]
   ]
 }

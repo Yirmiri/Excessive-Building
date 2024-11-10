@@ -14,6 +14,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.registry.EBItems;
 import net.yirmiri.excessive_building.util.EBTags;
 import net.yirmiri.excessive_building.util.EBUtils;
 
@@ -28,7 +29,7 @@ public class GlowingLeavesBlock extends FloweringLeavesBlock {
     @Override
     public ItemActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack stackHand = player.getStackInHand(hand);
-        if (stackHand.isIn(EBTags.Items.EB_HAMMERS) && EBConfig.ENABLE_HAMMERS.get()) {
+        if (stackHand.isOf(EBItems.HAMMER) && EBConfig.ENABLE_HAMMERS.get()) {
             world.setBlockState(pos, state.cycle(GLOWING));
             EBUtils.hammerUsed(world, pos, state, player);
             player.sendMessage(Text.translatable("hammer." + this.getTranslationKey() + ".variant_" + state.get(GLOWING)), true);

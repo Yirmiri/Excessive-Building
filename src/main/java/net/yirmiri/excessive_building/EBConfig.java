@@ -8,13 +8,13 @@ public class EBConfig {
 
     //CONTENT
     public static final ForgeConfigSpec.BooleanValue ENABLE_HAMMERS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_WRENCHES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_ASPHALT;
     public static final ForgeConfigSpec.BooleanValue ENABLE_VERTICAL_STAIRS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_RESOURCE_BRICKS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_SHELF_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVE_SHELVES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_CRAFTING_TABLE_VARIANTS;
-    //public static final ForgeConfigSpec.BooleanValue ENABLE_CHEST_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_LADDER_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_EB_POTTERY_SHERDS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_PARTICLE_CANDLES;
@@ -49,6 +49,10 @@ public class EBConfig {
                 .comment("Should hammers be enabled? This tool can create new block variants and destroy some blocks faster. (default: true)")
                 .define("enableHammers", true);
 
+        ENABLE_WRENCHES = BUILDER
+                .comment("Should wrenches be enabled? This tool can change the rotation of some blocks. (default: true)")
+                .define("enableWrenches", true);
+
         ENABLE_ASPHALT = BUILDER
                 .comment("Should asphalt be enabled? (default: true)")
                 .define("enableAsphalt", true);
@@ -72,10 +76,6 @@ public class EBConfig {
         ENABLE_CRAFTING_TABLE_VARIANTS = BUILDER
                 .comment("Should crafting table variants be enabled? (default: true)")
                 .define("enableCraftingTableVariants", true);
-
-//        ENABLE_CHEST_VARIANTS = BUILDER
-//                .comment("Should chest variants be enabled? (default: true)")
-//                .define("enableChestVariants", true);
 
         ENABLE_LADDER_VARIANTS = BUILDER
                 .comment("Should ladder variants be enabled? (default: true)")

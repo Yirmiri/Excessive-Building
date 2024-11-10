@@ -47,11 +47,18 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendWoodenStairs();
         appendWoodenButtons();
         appendWoodenPressurePlates();
-        appendTakesPriorityOverHammer();
+        appendTakesPriorityOverTools();
+        appendWrenchRepairable();
     }
 
-    public void appendTakesPriorityOverHammer() {
-        getOrCreateTagBuilder(EBTags.Items.TAKES_PRIORITY_OVER_HAMMERS)
+    public void appendWrenchRepairable() {
+        getOrCreateTagBuilder(EBTags.Items.WRENCH_REPAIRABLE)
+                .add(Items.COPPER_INGOT)
+        ;
+    }
+
+    public void appendTakesPriorityOverTools() {
+        getOrCreateTagBuilder(EBTags.Items.TAKES_PRIORITY_OVER_TOOLS)
                 .add(Items.SHIELD)
                 .add(Items.BOW)
                 .add(Items.CROSSBOW)

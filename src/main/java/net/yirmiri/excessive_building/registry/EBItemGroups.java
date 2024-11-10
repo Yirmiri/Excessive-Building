@@ -52,6 +52,7 @@ public class EBItemGroups {
     public static ItemGroup EXCESSIVE_BUILDING = Registry.register(Registries.ITEM_GROUP, Identifier.of(ExcessiveBuilding.MOD_ID, "excessive_building"),
             FabricItemGroup.builder().icon(() -> new ItemStack(EBBlocks.LOGO_BLOCK)).displayName(Text.translatable("itemgroup.excessive_building")).entries((ctx, entries) -> {
                 entries.add(EBItems.HAMMER);
+                entries.add(EBItems.WRENCH);
 
                 entries.add(EBBlocks.OAK_MOSAIC);
                 entries.add(EBBlocks.OAK_BOARDS);

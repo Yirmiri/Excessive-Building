@@ -58,7 +58,7 @@ public class HammerItem extends MiningToolItem {
         ItemStack stackHand = player.getStackInHand(hand);
 
         if (EBConfig.ENABLE_HAMMERS.get() && getHammeredState(state).isPresent()
-                && !player.shouldCancelInteraction() && !player.getOffHandStack().isIn(EBTags.Items.TAKES_PRIORITY_OVER_HAMMERS)) {
+                && !player.shouldCancelInteraction() && !player.getOffHandStack().isIn(EBTags.Items.TAKES_PRIORITY_OVER_TOOLS)) {
             EBUtils.hammerUsed(world, pos, state, player);
             if (player instanceof ServerPlayerEntity) {
                 Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity) player, pos, stackHand);
@@ -108,15 +108,6 @@ public class HammerItem extends MiningToolItem {
                 attacker.playSound(SoundEvents.ITEM_MACE_SMASH_GROUND, 1.0F, 1.0F);
             }
         }
-    }
-
-    public int getEnchantability() {
-        return 12;
-    }
-
-    @Override
-    public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-        return ingredient.isIn(EBTags.Items.HAMMER_REPAIRABLE);
     }
 
     @Override

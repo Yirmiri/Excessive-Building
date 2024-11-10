@@ -6,18 +6,32 @@ Literally just a secret .txt file of every single update's changelog
 
 Version Release v3.3.7 Fabric - 1.21.1
 
+  Wrench
+•   The wrench is a new tool created using copper and can be used to rotate some blocks when used
+•   If the player is sneaking and uses the wrench they can rotate blocks in a different direction
+•   This as most things in the mod are, is configurable and can be disabled or enabled to one's will
+
   Misc Additions
 •   Glowstone, sea lanterns, redstone lamps, and amethyst lamps can now be broken faster with a hammer
-•   Added the takes_priority_over_hammer tag, items in this tag take interaction priority over hammers
+•   Added an advancement for using a wrench to rotate a block
+•   Added statistic for Blocks Wrenched, as the name suggests it increases when a block is rotated via a wrench
 
   Changes
+•   The hammer's durability has been raised from 250 to 781
 •   The hammer can no longer be used if sneaking
-•   Certain items now take priority over hammers when interacting
-•   Changed the recipe of copper bricks as they conflicted with cut copper recipes
-•   Removed the eb_hammers and hammerable_blocks (block tag) tags as they weren't needed
+•   Certain items now take priority over hammers (and wrenches) when interacting
+•   Slightly tweaked the description of hammers
 
   Fixes
 •   Fixed an issue that prevented the player from using a hammer till relogging if they used an item that wasn't a hammer on a hammerable block
+•   Changed the recipe of copper bricks as they conflicted with cut copper recipes
+
+  Technical
+•   Added the cannot_be_wrenched block tag, blocks in this tag cannot be interacted with by a wrench
+•   Added the takes_priority_over_tools item tag, items in this tag take interaction priority over hammers and wrenches
+•   Added the incorrect_for_hammer_tool block tag, this is the inverse of hammer_mineable (blocks in this tag will be blacklisted, useful for modpack creators)
+•   Added the wrench_repairable item tag, items in this tag can be used to repair the durability of wrenches
+•   Removed the eb_hammers and hammerable_blocks (block tag) tags as they weren't needed
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

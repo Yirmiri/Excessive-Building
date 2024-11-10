@@ -14,9 +14,10 @@ public class EBTags {
         public static final TagKey<Block> GLOOM_LOGS = create("gloom_logs");
         public static final TagKey<Block> DECORATIVES = create("decoratives");
         public static final TagKey<Block> HAMMER_MINEABLE = create("hammer_mineable");
-        public static final TagKey<Block> HAMMERABLE_BLOCKS = create("hammerable_blocks");
+        public static final TagKey<Block> CANNOT_BE_WRENCHED = create("cannot_be_wrenched");
         public static final TagKey<Block> CARVED_PUMPKINS = create("carved_pumpkins");
         public static final TagKey<Block> TERRACOTTA_POTS = create("terracotta_pots");
+        public static final TagKey<Block> INCORRECT_FOR_HAMMER_TOOL = create("incorrect_for_hammer_tool");
 
         private static TagKey<Block> create(String id) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id));
@@ -33,10 +34,10 @@ public class EBTags {
         public static final TagKey<Item> KNITTED_WOOL = create("knitted_wool");
         public static final TagKey<Item> KNITTED_CARPET = create("knitted_carpet");
         public static final TagKey<Item> HAMMER_REPAIRABLE = create("hammer_repairable");
-        public static final TagKey<Item> EB_HAMMERS = create("eb_hammers");
         public static final TagKey<Item> HAMMERABLE_TOOLTIP = create("hammerable_tooltip");
         public static final TagKey<Item> BOOKSHELF_VARIANTS = create("bookshelf_variants");
-        public static final TagKey<Item> TAKES_PRIORITY_OVER_HAMMERS = create("cancels_hammers");
+        public static final TagKey<Item> TAKES_PRIORITY_OVER_TOOLS = create("takes_priority_over_tools");
+        public static final TagKey<Item> WRENCH_REPAIRABLE = create("wrench_repairable");
 
         private static TagKey<Item> create(String id) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id));

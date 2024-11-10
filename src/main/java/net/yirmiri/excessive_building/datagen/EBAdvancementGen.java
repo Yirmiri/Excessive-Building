@@ -76,7 +76,7 @@ public class EBAdvancementGen extends FabricAdvancementProvider {
                         Optional.empty(), AdvancementFrame.TASK,
                         true, true, false)).criterion("use_hammer",
                         ItemCriterion.Conditions.createItemUsedOnBlock(
-                                LocationPredicate.Builder.create(), ItemPredicate.Builder.create().tag(EBTags.Items.EB_HAMMERS)))
+                                LocationPredicate.Builder.create(), ItemPredicate.Builder.create().items(EBItems.HAMMER)))
                 .build(consumer, ExcessiveBuilding.MOD_ID + ":use_hammer");
 
         AdvancementEntry PLACE_ALL_ALMENTRA_STATUES = Advancement.Builder.createUntelemetered().parent(USE_HAMMER)
@@ -103,5 +103,15 @@ public class EBAdvancementGen extends FabricAdvancementProvider {
                 .criterion("pink_almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.PINK.getId())))
                 .criterion("almentra_statue", ItemCriterion.Conditions.createPlacedBlock(EBBlocks.ALMENTRA_STATUE))
                 .build(consumer, ExcessiveBuilding.MOD_ID + ":place_all_almentra_statues");
+
+        AdvancementEntry USE_WRENCH = Advancement.Builder.createUntelemetered().parent(EXCESSIVE_BUILDING)
+                .display(new AdvancementDisplay(new ItemStack(EBItems.WRENCH),
+                        Text.translatable("advancement.excessive_building.use_wrench"),
+                        Text.translatable("advancement.excessive_building.use_wrench.description"),
+                        Optional.empty(), AdvancementFrame.TASK,
+                        true, true, false)).criterion("use_wrench",
+                        ItemCriterion.Conditions.createItemUsedOnBlock(
+                                LocationPredicate.Builder.create(), ItemPredicate.Builder.create().items(EBItems.WRENCH)))
+                .build(consumer, ExcessiveBuilding.MOD_ID + ":use_wrench");
     }
 }

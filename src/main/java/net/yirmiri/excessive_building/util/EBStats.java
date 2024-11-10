@@ -9,6 +9,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBStats {
     public static final Identifier BLOCKS_HAMMERED = register("blocks_hammered", StatFormatter.DEFAULT);
+    public static final Identifier BLOCKS_WRENCHED = register("blocks_wrenched", StatFormatter.DEFAULT);
 
     private static Identifier register(String id, StatFormatter formatter) {
         Identifier identifier = Identifier.of(ExcessiveBuilding.MOD_ID, id);

@@ -689,6 +689,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add(EBItems.GLOOM_SIGN, "Gloom Sign");
         build.add(EBItems.GLOOM_HANGING_SIGN, "Gloom Hanging Sign");
         build.add(EBItems.HAMMER, "Hammer");
+        build.add(EBItems.WRENCH, "Wrench");
 
         //SHERDS
         build.add(EBItems.ROYALTY_POTTERY_SHERD, "Royalty Pottery Sherd");
@@ -734,6 +735,9 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("advancement.excessive_building.use_hammer", "Hammer Time!");
         build.add("advancement.excessive_building.use_hammer.description", "Use a hammer to transform the look of a block");
 
+        build.add("advancement.excessive_building.use_wrench", "This is Gut-Wrenching");
+        build.add("advancement.excessive_building.use_wrench.description", "Use a wrench to rotate the direction of a block");
+
         //TOOLTIPS
         build.add("tooltip.block.interact", "Upon Interaction:");
         build.add("tooltip.block.variant", "Cycles Block Variants:");
@@ -747,10 +751,11 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("tooltip.block.soul_magma", "Creates a Lifting Bubble Column");
         build.add("tooltip.block.player_nearby", "When Nearby:");
         build.add("tooltip.block.increases_block_reach", "Increases Interaction Reach");
-        build.add("tooltip.item.hammer.desc", "Can Change The Variants of Some Blocks");
+        build.add("tooltip.item.hammer.desc", "Can Change The Variants of Certain Blocks");
         build.add("tooltip.excessive_building.hammerable", "Can be hammered");
+        build.add("tooltip.item.wrench.desc", "Can Rotate Certain Blocks");
 
-        //HAMMER MESSAGES
+        //TOOL MESSAGES
         build.add("hammer.block.excessive_building.ancient_leaves.variant_false", "Glowing: True");
         build.add("hammer.block.excessive_building.ancient_leaves.variant_true", "Glowing: False");
 

@@ -9,14 +9,17 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.item.HammerItem;
+import net.yirmiri.excessive_building.item.WrenchItem;
 import net.yirmiri.excessive_building.item.configurable.EBPotterySherdItem;
 import net.yirmiri.excessive_building.item.configurable.ResourceBrickBlockItem;
 import net.yirmiri.excessive_building.item.configurable.ResourceBrickVerticalStairsBlockItem;
 import net.yirmiri.excessive_building.util.EBProperties;
+import net.yirmiri.excessive_building.util.EBToolMaterials;
 
 public class EBItems {
     //UTILITIES
-    public static final Item HAMMER = register("hammer", new HammerItem(ToolMaterials.IRON, EBProperties.ItemP.HAMMER));
+    public static final Item HAMMER = register("hammer", new HammerItem(EBToolMaterials.HAMMER, EBProperties.ItemP.HAMMER));
+    public static final Item WRENCH = register("wrench", new WrenchItem(EBProperties.ItemP.WRENCH));
 
     //BLOCK ITEMS
     public static final Item NETHERITE_BRICKS = register("netherite_bricks", new ResourceBrickBlockItem(EBBlocks.NETHERITE_BRICKS, EBProperties.ItemP.NETHERITE));

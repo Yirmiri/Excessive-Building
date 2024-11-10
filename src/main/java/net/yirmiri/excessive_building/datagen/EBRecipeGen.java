@@ -3973,6 +3973,14 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern(" # ")
                 .criterion(hasItem(Blocks.LECTERN), conditionsFromTag(EBTags.Items.BOOKSHELF_VARIANTS))
                 .offerTo(exporter, Identifier.of(getRecipeName(Blocks.LECTERN)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, EBItems.WRENCH, 1)
+                .input('#', Items.COPPER_INGOT)
+                .pattern(" # ")
+                .pattern(" ##")
+                .pattern("#  ")
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBItems.WRENCH)));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

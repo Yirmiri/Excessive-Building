@@ -911,6 +911,7 @@ public class EBModelGen extends FabricModelProvider {
         generator.register(EBItems.GLOOM_SIGN, Models.GENERATED);
 
         generator.register(EBItems.HAMMER, Models.HANDHELD);
+        generator.register(EBItems.WRENCH, Models.HANDHELD);
 
         generator.register(EBItems.ROYALTY_POTTERY_SHERD, Models.GENERATED);
         generator.register(EBItems.ANCIENT_POTTERY_SHERD, Models.GENERATED);
