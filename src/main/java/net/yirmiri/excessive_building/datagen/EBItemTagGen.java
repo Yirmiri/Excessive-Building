@@ -3,10 +3,8 @@ package net.yirmiri.excessive_building.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
@@ -39,7 +37,6 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendKnittedWools();
         appendKnittedCarpets();
         appendHammerRepairable();
-        appendEBHammers();
         appendHammerableTooltip();
         appendMiningEnchantable();
         appendVanishingEnchantable();
@@ -50,6 +47,16 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendWoodenStairs();
         appendWoodenButtons();
         appendWoodenPressurePlates();
+        appendTakesPriorityOverHammer();
+    }
+
+    public void appendTakesPriorityOverHammer() {
+        getOrCreateTagBuilder(EBTags.Items.TAKES_PRIORITY_OVER_HAMMERS)
+                .add(Items.SHIELD)
+                .add(Items.BOW)
+                .add(Items.CROSSBOW)
+                .add(Items.TRIDENT)
+        ;
     }
 
     public void appendWoodenButtons() {
@@ -278,12 +285,6 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
 
     public void appendVanishingEnchantable() {
         getOrCreateTagBuilder(ItemTags.VANISHING_ENCHANTABLE)
-                .add(EBItems.HAMMER)
-        ;
-    }
-
-    public void appendEBHammers() {
-        getOrCreateTagBuilder(EBTags.Items.EB_HAMMERS)
                 .add(EBItems.HAMMER)
         ;
     }

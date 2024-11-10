@@ -29,7 +29,7 @@ public class HammerableIntoRotatableBlock extends Block {
         BlockState stateToReplaceWith = block.getStateWithProperties(world.getBlockState(pos));
         if (stackHand.isIn(EBTags.Items.EB_HAMMERS) && EBConfig.ENABLE_HAMMERS.get()) {
             world.setBlockState(pos, stateToReplaceWith.withIfExists(EBProperties.ROTATION, Integer.valueOf(RotationPropertyHelper.fromYaw(player.getYaw()))));
-            EBUtils.hammerUsed(world, pos, state, hand, player);
+            EBUtils.hammerUsed(world, pos, state, player);
             return ItemActionResult.SUCCESS;
         }
         return ItemActionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;

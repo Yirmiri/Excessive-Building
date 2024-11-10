@@ -54,11 +54,15 @@ public class HammerItem extends MiningToolItem {
         BlockState state = world.getBlockState(pos);
         PlayerEntity player = ctx.getPlayer();
         Hand hand = player.getActiveHand();
+        ItemStack hammer = ctx.getStack();
         ItemStack stackHand = player.getStackInHand(hand);
-        if (stackHand.isIn(EBTags.Items.EB_HAMMERS) && EBConfig.ENABLE_HAMMERS.get() && state.isIn(EBTags.Blocks.HAMMERABLE_BLOCKS)) { //TODO: check if enabled
-            EBUtils.hammerUsed(world, pos, state, hand, player);
+
+        if (EBConfig.ENABLE_HAMMERS.get() && getHammeredState(state).isPresent()
+                && !player.shouldCancelInteraction() && !player.getOffHandStack().isIn(EBTags.Items.TAKES_PRIORITY_OVER_HAMMERS)) {
+            EBUtils.hammerUsed(world, pos, state, player);
             if (player instanceof ServerPlayerEntity) {
                 Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity) player, pos, stackHand);
+                hammer.damage(1, player, LivingEntity.getSlotForHand(ctx.getHand()));
             }
             return getHammeredState(state).map((state2) -> {
                 world.setBlockState(pos, state2, 11);
@@ -72,9 +76,9 @@ public class HammerItem extends MiningToolItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, Item.TooltipContext ctx, List<Text> tooltip, TooltipType options) {
         if (EBClientConfig.ENABLE_CUSTOM_TOOLTIPS.get() && EBConfig.ENABLE_HAMMERS.get()) {
-            super.appendTooltip(stack, context, tooltip, options);
+            super.appendTooltip(stack, ctx, tooltip, options);
             tooltip.add(ScreenTexts.EMPTY);
             tooltip.add(Text.translatable("tooltip.block.interact").formatted(Formatting.GRAY));
             tooltip.add(ScreenTexts.space().append(Text.translatable("tooltip.item.hammer.desc").formatted(Formatting.BLUE)));

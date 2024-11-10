@@ -7,11 +7,11 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_waxed_copper_block": {
+    "has_waxed_cut_copper": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:waxed_copper_block"
+            "items": "minecraft:waxed_cut_copper"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_waxed_copper_block"
+      "has_waxed_cut_copper"
     ]
   ],
   "rewards": {

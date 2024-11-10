@@ -17,16 +17,10 @@ import net.yirmiri.excessive_building.registry.EBBlocks;
 import java.util.Objects;
 
 public class EBUtils {
-    public static void hammerUsed(World world, BlockPos pos, BlockState state, Hand hand, PlayerEntity player) {
-        ItemStack stackHand = player.getStackInHand(hand);
+    public static void hammerUsed(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         player.playSound(SoundEvents.UI_STONECUTTER_TAKE_RESULT, 0.5F, 1.0F);
         world.addBlockBreakParticles(pos, state);
         player.incrementStat(EBStats.BLOCKS_HAMMERED);
-        if (hand == Hand.MAIN_HAND) {
-            stackHand.damage(1, player, EquipmentSlot.MAINHAND);
-        } else if (hand == Hand.OFF_HAND) {
-            stackHand.damage(1, player, EquipmentSlot.OFFHAND);
-        }
     }
 
     public static final Supplier<ImmutableBiMap<Object, Object>> BASE_TO_HAMMERED_VARIANT = Suppliers.memoize(() -> ImmutableBiMap.builder()

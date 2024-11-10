@@ -30,7 +30,7 @@ public class GlowingLeavesBlock extends FloweringLeavesBlock {
         ItemStack stackHand = player.getStackInHand(hand);
         if (stackHand.isIn(EBTags.Items.EB_HAMMERS) && EBConfig.ENABLE_HAMMERS.get()) {
             world.setBlockState(pos, state.cycle(GLOWING));
-            EBUtils.hammerUsed(world, pos, state, hand, player);
+            EBUtils.hammerUsed(world, pos, state, player);
             player.sendMessage(Text.translatable("hammer." + this.getTranslationKey() + ".variant_" + state.get(GLOWING)), true);
             return ItemActionResult.SUCCESS;
         }

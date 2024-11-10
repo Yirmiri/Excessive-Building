@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_copper_block": {
+    "has_oxidized_cut_copper": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:copper_block"
+            "items": "minecraft:oxidized_cut_copper"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:copper_bricks_from_copper_block_stonecutting"
+        "recipe": "minecraft:oxidized_copper_bricks_from_oxidized_cut_copper_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_copper_block"
+      "has_oxidized_cut_copper"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:copper_bricks_from_copper_block_stonecutting"
+      "minecraft:oxidized_copper_bricks_from_oxidized_cut_copper_stonecutting"
     ]
   }
 }

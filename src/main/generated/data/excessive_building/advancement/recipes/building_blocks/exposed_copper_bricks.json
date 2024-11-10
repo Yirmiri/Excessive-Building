@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_exposed_copper": {
+    "has_exposed_cut_copper": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:exposed_copper"
+            "items": "minecraft:exposed_cut_copper"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_exposed_copper"
+      "has_exposed_cut_copper"
     ]
   ],
   "rewards": {

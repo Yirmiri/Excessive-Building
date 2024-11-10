@@ -4,6 +4,23 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.3.7 Fabric - 1.21.1
+
+  Misc Additions
+•   Glowstone, sea lanterns, redstone lamps, and amethyst lamps can now be broken faster with a hammer
+•   Added the takes_priority_over_hammer tag, items in this tag take interaction priority over hammers
+
+  Changes
+•   The hammer can no longer be used if sneaking
+•   Certain items now take priority over hammers when interacting
+•   Changed the recipe of copper bricks as they conflicted with cut copper recipes
+•   Removed the eb_hammers and hammerable_blocks (block tag) tags as they weren't needed
+
+  Fixes
+•   Fixed an issue that prevented the player from using a hammer till relogging if they used an item that wasn't a hammer on a hammerable block
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.3.6 Fabric - 1.21.1
 
   Fixes

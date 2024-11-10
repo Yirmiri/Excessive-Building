@@ -36,6 +36,7 @@ public class EBTags {
         public static final TagKey<Item> EB_HAMMERS = create("eb_hammers");
         public static final TagKey<Item> HAMMERABLE_TOOLTIP = create("hammerable_tooltip");
         public static final TagKey<Item> BOOKSHELF_VARIANTS = create("bookshelf_variants");
+        public static final TagKey<Item> TAKES_PRIORITY_OVER_HAMMERS = create("cancels_hammers");
 
         private static TagKey<Item> create(String id) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id));

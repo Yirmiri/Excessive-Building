@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_oxidized_copper": {
+    "has_oxidized_cut_copper": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:oxidized_copper"
+            "items": "minecraft:oxidized_cut_copper"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_oxidized_copper"
+      "has_oxidized_cut_copper"
     ]
   ],
   "rewards": {
