@@ -104,7 +104,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.ANCIENT_FENCE_GATE);
         addDrop(EBBlocks.ANCIENT_BUTTON);
         addDrop(EBBlocks.ANCIENT_PRESSURE_PLATE);
-        doorDrops(EBBlocks.ANCIENT_DOOR);
         addDrop(EBBlocks.ANCIENT_TRAPDOOR);
         addDrop(EBBlocks.ANCIENT_LOG);
         addDrop(EBBlocks.ANCIENT_WOOD);
@@ -136,7 +135,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.GLOOM_FENCE_GATE);
         addDrop(EBBlocks.GLOOM_BUTTON);
         addDrop(EBBlocks.GLOOM_PRESSURE_PLATE);
-        doorDrops(EBBlocks.GLOOM_DOOR);
         addDrop(EBBlocks.GLOOM_TRAPDOOR);
         addDrop(EBBlocks.GLOOM_LOG);
         addDrop(EBBlocks.GLOOM_WOOD);
@@ -654,6 +652,10 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.MUD_BRICK_VERTICAL_STAIRS);
         addDrop(EBBlocks.GLOOM_SAPLING);
         addPottedPlantDrops(EBBlocks.POTTED_GLOOM_SAPLING);
+        addDrop(EBBlocks.GLOOM_DOOR, doorDrops((EBBlocks.GLOOM_DOOR)));
+        addDrop(EBBlocks.ANCIENT_DOOR, doorDrops((EBBlocks.ANCIENT_DOOR)));
+        addDrop(EBBlocks.GLOOM_VERTICAL_STAIRS);
+        addDrop(EBBlocks.ANCIENT_VERTICAL_STAIRS);
     }
 
     private void addDyedBlockDrops() {

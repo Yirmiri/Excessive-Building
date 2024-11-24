@@ -3981,6 +3981,69 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("#  ")
                 .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
                 .offerTo(exporter, Identifier.of(getRecipeName(EBItems.WRENCH)));
+        
+        createPaneRecipe(EBBlocks.COBBLESTONE_BRICK_WALL, 6,
+                Ingredient.ofItems(EBBlocks.COBBLESTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.COBBLESTONE_BRICKS), conditionsFromItem(EBBlocks.COBBLESTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.COBBLESTONE_BRICK_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.COBBLESTONE_BRICK_WALL, EBBlocks.COBBLESTONE_BRICKS, 1);
+
+        createPaneRecipe(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL, 6,
+                Ingredient.ofItems(EBBlocks.MOSSY_COBBLESTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.MOSSY_COBBLESTONE_BRICKS), conditionsFromItem(EBBlocks.MOSSY_COBBLESTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL, EBBlocks.MOSSY_COBBLESTONE_BRICKS, 1);
+
+        createPaneRecipe(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL, 6,
+                Ingredient.ofItems(EBBlocks.COBBLED_DEEPSLATE_BRICKS))
+                .criterion(hasItem(EBBlocks.COBBLED_DEEPSLATE_BRICKS), conditionsFromItem(EBBlocks.COBBLED_DEEPSLATE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL, EBBlocks.COBBLED_DEEPSLATE_BRICKS, 1);
+
+        createPaneRecipe(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_WALL, 6,
+                Ingredient.ofItems(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS))
+                .criterion(hasItem(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS), conditionsFromItem(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_WALL, EBBlocks.MOSSY_COBBLED_DEEPSLATE_BRICKS, 1);
+
+        createPaneRecipe(EBBlocks.BLACKSTONE_BRICK_WALL, 6,
+                Ingredient.ofItems(EBBlocks.BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.BLACKSTONE_BRICK_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLACKSTONE_BRICK_WALL, EBBlocks.BLACKSTONE_BRICKS, 1);
+
+        createPaneRecipe(EBBlocks.WEEPING_BLACKSTONE_BRICK_WALL, 6,
+                Ingredient.ofItems(EBBlocks.WEEPING_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.WEEPING_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.WEEPING_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEEPING_BLACKSTONE_BRICK_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_BLACKSTONE_BRICK_WALL, EBBlocks.WEEPING_BLACKSTONE_BRICKS, 1);
+
+        createPaneRecipe(EBBlocks.TWISTING_BLACKSTONE_BRICK_WALL, 6,
+                Ingredient.ofItems(EBBlocks.TWISTING_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.TWISTING_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.TWISTING_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TWISTING_BLACKSTONE_BRICK_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_BLACKSTONE_BRICK_WALL, EBBlocks.TWISTING_BLACKSTONE_BRICKS, 1);
+
+        createPaneRecipe(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL, 6,
+                Ingredient.ofItems(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL, EBBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS, 1);
+
+        createPaneRecipe(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL, 6,
+                Ingredient.ofItems(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS))
+                .criterion(hasItem(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS), conditionsFromItem(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS))
+                .offerTo(exporter, Identifier.of(getRecipeName(EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL)));
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL, EBBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, 1);
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {

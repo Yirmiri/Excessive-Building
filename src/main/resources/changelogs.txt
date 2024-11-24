@@ -10,6 +10,9 @@ Version Release v3.3.8 Fabric - 1.21.1
 •   Reversed wrench controls and polished the usage of the item
 
   Fixes
+•   Fixed some blocks not appearing in the creative inventory
+•   Fixed some blocks not dropping when destroyed
+•   Fixed missing particle textures (and log spam) of custom signs
 •   Leaves with the glowing property will no longer default to waterlogged being true
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

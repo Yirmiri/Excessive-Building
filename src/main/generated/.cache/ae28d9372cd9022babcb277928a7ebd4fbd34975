@@ -1,10 +1,10 @@
-// 1.21	2024-11-10T15:16:06.7693049	Excessive Building/Tags for minecraft:block
+// 1.21	2024-11-24T01:59:32.4778062	Excessive Building/Tags for minecraft:block
 9973d3c2d4c8d54df2f5e0f5fd6efa300f3971fd data\minecraft\tags\block\logs_that_burn.json
 1419a0b00f417fbc1bbff44f7a3bfbb4252413fa data\minecraft\tags\block\wooden_stairs.json
 ecc53e060230f69caffdb4ae26bd668560c24bb3 data\excessive_building\tags\block\ancient_logs.json
 d1cba4da54d23b10d7a45b552c760be96688f4f3 data\excessive_building\tags\block\decoratives.json
-4ba5a0fc3161fe290f44f101deb39e765bb25287 data\minecraft\tags\block\enchantment_power_provider.json
 8eed79d7f0a363657f1d30da123fbc6405c34003 data\minecraft\tags\block\climbable.json
+4ba5a0fc3161fe290f44f101deb39e765bb25287 data\minecraft\tags\block\enchantment_power_provider.json
 56f333f3f6c6b6faa76e74cfd16f9afa91366b34 data\minecraft\tags\block\candles.json
 23313887acfc366e531dfcfa58f7d419a083d49e data\excessive_building\tags\block\hammer_mineable.json
 d317db704525634aea35ced79306dc006e2fc76e data\minecraft\tags\block\soul_fire_base_blocks.json
@@ -29,8 +29,8 @@ a73964c5e6a561b8c465f8d55a7202ca75a6e6a7 data\excessive_building\tags\block\terr
 7dffe35287959b8c6531736ad8c0b4c75b3506e4 data\minecraft\tags\block\beacon_base_blocks.json
 14a13c91a0b113e049bd1e2e5554e42f31d3c791 data\minecraft\tags\block\replaceable.json
 e57c89144a6a859d23ae0190b7b4a0eb99343af5 data\minecraft\tags\block\wooden_pressure_plates.json
-9bbc61ac96b94b83c813a0a90d2c2ca2185e87d1 data\minecraft\tags\block\wall_hanging_signs.json
 14699feb54bad636358691e3367b5d6fdb9c0af8 data\minecraft\tags\block\mineable\axe.json
+9bbc61ac96b94b83c813a0a90d2c2ca2185e87d1 data\minecraft\tags\block\wall_hanging_signs.json
 0fff8aee72a8ddb53110fd58e5b8b23fdf6aa3cf data\minecraft\tags\block\wooden_fences.json
 6086237a037f627ddd47ab3efeb1796595ad4827 data\minecraft\tags\block\wooden_trapdoors.json
 0fff8aee72a8ddb53110fd58e5b8b23fdf6aa3cf data\minecraft\tags\block\fences.json
