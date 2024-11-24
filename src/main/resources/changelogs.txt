@@ -4,6 +4,16 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.3.8 Fabric - 1.21.1
+
+  Changes
+•   Reversed wrench controls and polished the usage of the item
+
+  Fixes
+•   Leaves with the glowing property will no longer default to waterlogged being true
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.3.7 Fabric - 1.21.1
 
   Wrench

@@ -44,21 +44,21 @@ public class WrenchItem extends Item {
             if (state.contains(Properties.ROTATION)) {
                 world.setBlockState(pos, state.cycle(Properties.ROTATION));
                 useWrench(ctx);
-            } else if (!player.isSneaking() && state.contains(Properties.BLOCK_HALF)) {
+            } else if (player.isSneaking() && state.contains(Properties.BLOCK_HALF)) {
                 world.setBlockState(pos, state.cycle(Properties.BLOCK_HALF));
                 useWrench(ctx);
-            } else if (!player.isSneaking() && state.contains(Properties.FACING)) {
+            } else if (player.isSneaking() && state.contains(Properties.FACING)) {
                 world.setBlockState(pos, state.cycle(Properties.FACING));
                 useWrench(ctx);
-            } else if (!player.isSneaking() && state.contains(Properties.HORIZONTAL_AXIS)) {
+            } else if (player.isSneaking() && state.contains(Properties.HORIZONTAL_AXIS)) {
                 world.setBlockState(pos, state.cycle(Properties.HORIZONTAL_AXIS));
                 useWrench(ctx);
-            } else if (player.isSneaking() && state.contains(Properties.HORIZONTAL_FACING)) {
+            } else if (!player.isSneaking() && state.contains(Properties.HORIZONTAL_FACING)) {
                 world.setBlockState(pos, state.cycle(Properties.HORIZONTAL_FACING));
                 useWrench(ctx);
             }
 
-            return ActionResult.PASS;
+            return ActionResult.SUCCESS;
         }
 
         return ActionResult.success(world.isClient);
