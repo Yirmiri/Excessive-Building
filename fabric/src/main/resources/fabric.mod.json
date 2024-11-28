@@ -1,6 +1,6 @@
 {
     "schemaVersion": 1,
-    "id": "mod_id",
+    "id": "${mod_id}",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",
@@ -12,11 +12,11 @@
         "sources": "https://github.com/FabricMC/fabric-example-mod"
     },
     "license": "${license}",
-    "icon": "assets/modid/${mod_id}.png",
+    "icon": "${mod_id}.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-          "net.yirmiri.excessive_building.FabricExcessiveBuilding"
+            "net.yirmiri.excessive_building.FabricExcessiveBuilding"
         ]
     },
     "mixins": [
@@ -24,10 +24,10 @@
         "${mod_id}.fabric.mixins.json"
     ],
     "depends": {
-        "fabricloader": ">=0.14",
-        "fabric": "*",
+        "fabricloader": ">=${fabric_loader_version}",
+        "fabric-api": "*",
         "minecraft": "${minecraft_version}",
-        "java": ">=17"
+        "java": ">=${java_version}"
     },
     "suggests": {
         "another-mod": "*"
