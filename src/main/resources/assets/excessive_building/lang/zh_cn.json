@@ -11,6 +11,8 @@
   "advancement.excessive_building.place_gloom_seeds.description": "种下某种树的种子，它曾繁盛一时",
   "advancement.excessive_building.use_hammer": "锤子时间！",
   "advancement.excessive_building.use_hammer.description": "使用锤子改变方块的外观",
+  "advancement.excessive_building.use_wrench": "扳手扳的不是手",
+  "advancement.excessive_building.use_wrench.description": "使用扳手更改方块的朝向",
   "block.excessive_building.acacia_board_slab": "金合欢木宽纹板台阶",
   "block.excessive_building.acacia_board_stairs": "金合欢木宽纹板楼梯",
   "block.excessive_building.acacia_board_vertical_stairs": "金合欢木宽纹板竖直楼梯",
@@ -973,6 +975,7 @@
   "item.excessive_building.thief_pottery_sherd": "盗贼纹样陶片",
   "item.excessive_building.twins_pottery_sherd": "双子纹样陶片",
   "item.excessive_building.wrathful_pottery_sherd": "盛怒纹样陶片",
+  "item.excessive_building.wrench": "扳手",
   "item.minecraft.lingering_potion.effect.long_reaching_potion": "滞留型长臂药水",
   "item.minecraft.lingering_potion.effect.long_shortening_potion": "滞留型短臂药水",
   "item.minecraft.lingering_potion.effect.reaching_potion": "滞留型长臂药水",
@@ -1074,5 +1077,6 @@
   "tooltip.block.variant": "循环切换方块外形",
   "tooltip.block.when_powered": "以红石激活时：",
   "tooltip.excessive_building.hammerable": "可被锤击",
-  "tooltip.item.hammer.desc": "能够改变某些方块的形态"
+  "tooltip.item.hammer.desc": "能够改变某些方块的形态",
+  "tooltip.item.wrench.desc": "能够旋转特定方块"
 }
