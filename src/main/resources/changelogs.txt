@@ -10,8 +10,9 @@ Version Release v3.2.10 Fabric - 1.20.1
 •   Removed all paintings created by MilkyFur
 
   Fixes
+•   Fixed an issue that caused paintings not to render properly
 •   Fixed an issue that caused polished deepslate to have a conflicting recipe with cobbled deepslate bricks
-•   Fixed an issue that caused paintings not to render
+•   Fixed a similar issue with the issue above but with blackstone
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
