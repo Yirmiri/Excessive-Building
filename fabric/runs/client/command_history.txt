@@ -1,0 +1,8 @@
+/time set day
+/give Player900 minecraft:ancient_fruit
+/give Player900 excessive_building:ancient_fruit
+/give Player900 /
+/give Player84 exce
+/give Player84 test_item
+/give Player407 exce
+/give Player537 excessive_building:logo_block
