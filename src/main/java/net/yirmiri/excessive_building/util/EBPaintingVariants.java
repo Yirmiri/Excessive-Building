@@ -31,9 +31,6 @@ public class EBPaintingVariants {
     public static final PaintingVariant WHY_DO_MY_EYES_HURT = register("why_do_my_eyes_hurt", new PaintingVariant(5, 3));
     public static final PaintingVariant EVIL_EYE = register("evil_eye", new PaintingVariant(2, 2));
     public static final PaintingVariant CATASTROPHES_BEFORE_THE_CALAMITY = register("catastrophes_before_the_calamity", new PaintingVariant(7, 4));
-    public static final PaintingVariant ENDLESS = register("endless", new PaintingVariant(8, 8));
-    public static final PaintingVariant ZA_HANDO = register("za_hando", new PaintingVariant(1, 1));
-    public static final PaintingVariant ISAAC_WE_LOVE_YOU = register("isaac_we_love_you", new PaintingVariant(2, 2));
     public static final PaintingVariant TERRAIN = register("terrain", new PaintingVariant(3, 3));
 
     //CREATIVE

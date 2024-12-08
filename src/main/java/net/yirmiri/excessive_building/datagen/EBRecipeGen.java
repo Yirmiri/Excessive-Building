@@ -352,8 +352,8 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLESTONE_BRICK_SLAB, EBBlocks.MOSSY_COBBLESTONE_BRICKS, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS, EBBlocks.MOSSY_COBBLESTONE_BRICKS, 1);
 
-        createFourForFourWendysMealRecipe(EBBlocks.COBBLED_DEEPSLATE_BRICKS,
-                Ingredient.ofItems(Blocks.COBBLED_DEEPSLATE))
+        createTwoByTwoCheckersMealRecipe(EBBlocks.COBBLED_DEEPSLATE_BRICKS, 4,
+                Ingredient.ofItems(Blocks.COBBLED_DEEPSLATE), Ingredient.ofItems(Blocks.DEEPSLATE))
                 .criterion(hasItem(Blocks.COBBLED_DEEPSLATE), conditionsFromItem(Blocks.COBBLED_DEEPSLATE))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.COBBLED_DEEPSLATE_BRICKS)));
 
