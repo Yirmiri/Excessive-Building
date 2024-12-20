@@ -15,10 +15,11 @@ public class NeoForgeEBRegistryHelper implements EBRegistryHelper {
 
     @Override
     public <T extends Block> Supplier<T> registerBlock(String id, Supplier<T> block, boolean hasItem) {
+        var register = BLOCKS.register(id, block);
         if (hasItem) {
-            ITEMS.register(id, () -> new BlockItem(block.get(), new Item.Properties()));
+            ITEMS.register(id, () -> new BlockItem(register.get(), new Item.Properties()));
         }
-        return BLOCKS.register(id, block);
+        return register;
     }
 
     @Override

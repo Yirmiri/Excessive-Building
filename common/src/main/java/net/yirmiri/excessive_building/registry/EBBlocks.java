@@ -10,11 +10,8 @@ public class EBBlocks {
     //MISC
     public static final Supplier<Block> LOGO_BLOCK = register("logo_block", () -> new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    private static <T extends Block> Supplier<T> register(String id, Supplier<T> block, boolean hasItem) {
-//        if (hasItem) {
-//            Registry.register(BuiltInRegistries.ITEM, ExcessiveBuilding.modIDPath(id), new BlockItem(block.get(), new Item.Properties()));
-//        }
-        return Services.REGISTRY.registerBlock(id, block, hasItem);
+    private static <T extends Block> Supplier<T> register(String id, Supplier<T> block, boolean item) {
+        return Services.REGISTRY.registerBlock(id, block, item);
     }
 
     public static void loadBlocks() {
