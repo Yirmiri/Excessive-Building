@@ -1,14 +1,14 @@
 package net.yirmiri.excessive_building.platform;
 
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.platform.services.EBRegistryHelper;
+import net.yirmiri.excessive_building.platform.services.ExcessiveBuildingRegistryHelper;
 import net.yirmiri.excessive_building.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 
 public class Services {
     public static final IPlatformHelper PLATFORM = load(IPlatformHelper.class);
-    public static final EBRegistryHelper REGISTRY = load(EBRegistryHelper.class);
+    public static final ExcessiveBuildingRegistryHelper REGISTRY = load(ExcessiveBuildingRegistryHelper.class);
 
     public static <T> T load(Class<T> clazz) {
         final T loadedService = ServiceLoader.load(clazz)

@@ -16,7 +16,7 @@ public class ExcessiveBuilding {
         EBItems.loadItems();
     }
 
-    public static ResourceLocation modIDPath(String id) {
+    public static ResourceLocation modid(String id) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, id);
     }
 }

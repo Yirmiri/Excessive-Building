@@ -134,7 +134,7 @@ public class EBProperties {
 
         public static class Food {
             //public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationMod(0.8F).alwaysEat()
-                    //.effect(new MobEffectInstance(MobEffects.DIG_SPEED, EBConfig.ANCIENT_FRUIT_DURATION.get(),
+                    //.effect(new MobEffectInstance(EBEffects.REACHING, EBConfig.ANCIENT_FRUIT_DURATION.get(),
                             //EBConfig.ANCIENT_FRUIT_AMPLIFIER.get()), 1.0F).build();
         }
     }
