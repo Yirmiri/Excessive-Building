@@ -4,9 +4,10 @@
   "package": "net.yirmiri.excessive_building.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_18",
-  "mixins": [],
+  "mixins": [
+    "WoodTypeMixin"
+  ],
   "client": [
-
   ],
   "server": [],
   "injectors": {

@@ -1,13 +1,23 @@
 package net.yirmiri.excessive_building.util;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
+import net.yirmiri.excessive_building.block.GlowingLeavesBlock;
+import net.yirmiri.excessive_building.block.ParticleCandleBlock;
+import net.yirmiri.excessive_building.item.HammerItem;
+import net.yirmiri.excessive_building.registry.EBSounds;
 
 public class EBProperties {
-    //TODO: Fix broken properties (sounds, effects and some blocks need to be made first)
+    public static final int MAX_ROTATIONS = 15;
+    public static final IntegerProperty ROTATION = IntegerProperty.create("rotation", 0, MAX_ROTATIONS);
+    public static final BooleanProperty FILLED = BooleanProperty.create("filled");
 
     public static class BlockP {
         //VANILLA ADDITIONS
@@ -45,15 +55,19 @@ public class EBProperties {
         public static final BlockBehaviour.Properties GLOOM_LADDER = BlockBehaviour.Properties.ofFullCopy(Blocks.LADDER).sound(SoundType.LADDER).mapColor(MapColor.RAW_IRON);
 
         //STONES
-        //public static final BlockBehaviour.Properties COBBLESTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).sound(EBSounds.COBBLED_BRICKS);
-        //public static final BlockBehaviour.Properties COBBLED_DEEPSLATE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLED_DEEPSLATE).sound(EBSounds.COBBLED_BRICKS);
-        //public static final BlockBehaviour.Properties BLACKSTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE).sound(EBSounds.COBBLED_BRICKS);
+        public static final BlockBehaviour.Properties COBBLESTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).sound(EBSounds.COBBLED_BRICKS);
+        public static final BlockBehaviour.Properties COBBLED_DEEPSLATE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLED_DEEPSLATE).sound(EBSounds.COBBLED_BRICKS);
+        public static final BlockBehaviour.Properties BLACKSTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE).sound(EBSounds.COBBLED_BRICKS);
         public static final BlockBehaviour.Properties SMOOTH_STONE = BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE);
-        public static final BlockBehaviour.Properties ALMENTRA = BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK).sound(SoundType.DRIPSTONE_BLOCK).mapColor(MapColor.COLOR_BROWN);
-        public static final BlockBehaviour.Properties ALMENTRA_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).sound(SoundType.DEEPSLATE_BRICKS).mapColor(MapColor.COLOR_BROWN);
+        public static final BlockBehaviour.Properties TUFF_TILES = BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF_BRICKS);
+        public static final BlockBehaviour.Properties ALMENTRA = BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK).mapColor(MapColor.COLOR_BROWN);
+        public static final BlockBehaviour.Properties POLISHED_ALMENTRA = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DEEPSLATE).mapColor(MapColor.COLOR_BROWN);
+        public static final BlockBehaviour.Properties ALMENTRA_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS).mapColor(MapColor.COLOR_BROWN);
+        public static final BlockBehaviour.Properties DEEPSLATE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_BRICKS);
+        public static final BlockBehaviour.Properties POLISHED_BLACKSTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE_BRICKS);
 
         //NATURE
-        //public static final BlockBehaviour.Properties GLOWING_LEAVES = BlockBehaviour.Properties.of().lightLevel(state -> GlowingLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.COLOR_RED).strength(0.2F).randomTicks().sound(SoundType.CHERRY_LEAVES).noOcclusion().isValidSpawn(Blocks::ocelotOrParrot).isSuffocating(Blocks::never).isViewBlocking(Blocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(Blocks::never);
+        public static final BlockBehaviour.Properties GLOWING_LEAVES = BlockBehaviour.Properties.of().lightLevel(state -> GlowingLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.COLOR_RED).strength(0.2F).randomTicks().sound(SoundType.CHERRY_LEAVES).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY);//.isValidSpawn(Blocks::ocelotOrParrot).isSuffocating(Blocks::never).isViewBlocking(Blocks::never).isRedstoneConductor(Blocks::never);
         public static final BlockBehaviour.Properties GLOWING_SAPLING = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING).lightLevel(state -> 5);
         public static final BlockBehaviour.Properties GLOOM_SEEDS = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING).sound(SoundType.ROOTS);
         public static final BlockBehaviour.Properties GLOOM_LEAVES = BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_LEAVES);
@@ -66,7 +80,7 @@ public class EBProperties {
         public static final BlockBehaviour.Properties ROSE = BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).mapColor(MapColor.COLOR_RED);
         public static final BlockBehaviour.Properties CYAN_ROSE = BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).mapColor(MapColor.COLOR_CYAN);
         public static final BlockBehaviour.Properties WHITE_ROSE = BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).mapColor(MapColor.SNOW);
-        public static final BlockBehaviour.Properties MOSS_PASTE = BlockBehaviour.Properties.ofFullCopy(Blocks.GLOW_LICHEN).mapColor(MapColor.COLOR_GREEN).sound(SoundType.AZALEA_LEAVES);
+        public static final BlockBehaviour.Properties MOSS_PASTE = BlockBehaviour.Properties.ofFullCopy(Blocks.GLOW_LICHEN).mapColor(MapColor.COLOR_GREEN).sound(SoundType.AZALEA_LEAVES).lightLevel(s -> 0);
 
         //RESOURCES
         public static final BlockBehaviour.Properties GOLD = BlockBehaviour.Properties.ofFullCopy(Blocks.GOLD_BLOCK);
@@ -82,6 +96,8 @@ public class EBProperties {
         public static final BlockBehaviour.Properties EXPOSED_COPPER = BlockBehaviour.Properties.ofFullCopy(Blocks.EXPOSED_COPPER);
         public static final BlockBehaviour.Properties WEATHERED_COPPER = BlockBehaviour.Properties.ofFullCopy(Blocks.WEATHERED_COPPER);
         public static final BlockBehaviour.Properties OXIDIZED_COPPER = BlockBehaviour.Properties.ofFullCopy(Blocks.OXIDIZED_COPPER);
+        public static final BlockBehaviour.Properties COPPER_BUTTON = BlockBehaviour.Properties.ofFullCopy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE);
+        public static final BlockBehaviour.Properties COPPER_PRESSURE_PLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE);
 
         //POLISHED SANDSTONES
         public static final BlockBehaviour.Properties POLISHED_SANDSTONE = BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_SANDSTONE);
@@ -96,8 +112,8 @@ public class EBProperties {
         //DECORATIVES
         public static final BlockBehaviour.Properties WOODEN_MUG = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(0.5F).explosionResistance(0F);
         public static final BlockBehaviour.Properties GLASS_JAR = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).strength(0.5F).explosionResistance(0F).noOcclusion();
-        public static final BlockBehaviour.Properties FIRE_GLASS_JAR = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).strength(0.5F).explosionResistance(0F).lightLevel(state -> 15).noOcclusion();
-        public static final BlockBehaviour.Properties SOUL_FIRE_GLASS_JAR = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).strength(0.5F).explosionResistance(0F).lightLevel(state -> 7).noOcclusion();
+        public static final BlockBehaviour.Properties FIRE_GLASS_JAR = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).strength(0.5F).explosionResistance(0F).lightLevel(s -> 15).noOcclusion();
+        public static final BlockBehaviour.Properties SOUL_FIRE_GLASS_JAR = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).strength(0.5F).explosionResistance(0F).lightLevel(s -> 7).noOcclusion();
 
         //STONE VARIANTS
         public static final BlockBehaviour.Properties POLISHED_GRANITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_GRANITE);
@@ -112,30 +128,40 @@ public class EBProperties {
         public static final BlockBehaviour.Properties BRIMSTONE_LAMP = BlockBehaviour.Properties.ofFullCopy(Blocks.SEA_LANTERN).mapColor(MapColor.COLOR_RED);
 
         //MISC
-        //public static final BlockBehaviour.Properties PARTICLE_CANDLE = BlockBehaviour.Properties.ofFullCopy(Blocks.CANDLE).lightLevel(ParticleCandleBlock.STATE_TO_LUMINANCE);
+        public static final BlockBehaviour.Properties PARTICLE_CANDLE = BlockBehaviour.Properties.ofFullCopy(Blocks.CANDLE).lightLevel(ParticleCandleBlock.STATE_TO_LUMINANCE);
         public static final BlockBehaviour.Properties MUD_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS);
+        public static final BlockBehaviour.Properties IRON_GRATE = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.COPPER_GRATE).noOcclusion();//.isValidSpawn(Blocks::never).isRedstoneConductor(Blocks::never).isSuffocating(Blocks::never).isViewBlocking(Blocks::never);
+        public static final BlockBehaviour.Properties GOLD_GRATE = BlockBehaviour.Properties.ofFullCopy(Blocks.GOLD_BLOCK).sound(SoundType.COPPER_GRATE).noOcclusion();//.isValidSpawn(Blocks::never).isRedstoneConductor(Blocks::never).isSuffocating(Blocks::never).isViewBlocking(Blocks::never);
         public static final BlockBehaviour.Properties ASPHALT = BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK);
         public static final BlockBehaviour.Properties REACHING_LANTERN = BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_LANTERN);
         public static final BlockBehaviour.Properties BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS);
         public static final BlockBehaviour.Properties BONE = BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK);
         public static final BlockBehaviour.Properties INDESTRUCTIBLE = BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK);
-        public static final BlockBehaviour.Properties TERRACOTTA_POT = BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA).sound(SoundType.DECORATED_POT_CRACKED);
+        public static final BlockBehaviour.Properties TERRACOTTA_POT = BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA).destroyTime(0.5F).explosionResistance(0F).sound(SoundType.DECORATED_POT_CRACKED);
         public static final BlockBehaviour.Properties PAPER = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.WOOL);
         public static final BlockBehaviour.Properties LAMP = BlockBehaviour.Properties.ofFullCopy(Blocks.SEA_LANTERN);
+        public static final BlockBehaviour.Properties ARMADILLO_SCUTE_BLOCK = BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE).sound(SoundType.CORAL_BLOCK);
+        public static final BlockBehaviour.Properties PUMPKIN = BlockBehaviour.Properties.ofFullCopy(Blocks.CARVED_PUMPKIN);
+        public static final BlockBehaviour.Properties JACK_O = BlockBehaviour.Properties.ofFullCopy(Blocks.JACK_O_LANTERN);
+        public static final BlockBehaviour.Properties SOUL_JACK_O = BlockBehaviour.Properties.ofFullCopy(Blocks.JACK_O_LANTERN).lightLevel(s -> 7);
     }
 
     public static class ItemP {
+        //UTILITIES
+        public static final Item.Properties HAMMER = new Item.Properties().stacksTo(1).durability(781).attributes(HammerItem.createAttributeModifiers());
+        public static final Item.Properties WRENCH = new Item.Properties().stacksTo(1).durability(512);
+
         //FOOD
         //public static final Item.Properties ANCIENT_FRUIT = new Item.Properties().food(Food.ANCIENT_FRUIT);
 
         //MISC
         public static final Item.Properties GENERIC = new Item.Properties();
         public static final Item.Properties NETHERITE = new Item.Properties().fireResistant();
+        public static final Item.Properties CROWN = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1);
 
-        public static class Food {
-            //public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationMod(0.8F).alwaysEat()
-                    //.effect(new MobEffectInstance(EBEffects.REACHING, EBConfig.ANCIENT_FRUIT_DURATION.get(),
-                            //EBConfig.ANCIENT_FRUIT_AMPLIFIER.get()), 1.0F).build();
-        }
+//        public static class Food {
+//            public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.8F)
+//            .effect(new MobEffectInstance(EBStatusEffects.REACHING, EBConfig.ANCIENT_FRUIT_DURATION.get(), EBConfig.ANCIENT_FRUIT_AMPLIFIER.get()), 1.0F).alwaysEdible().build();
+//        }
     }
 }
