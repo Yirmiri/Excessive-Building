@@ -1,5 +1,7 @@
 package net.yirmiri.excessive_building.util;
 
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Blocks;
@@ -9,10 +11,12 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.GlowingLeavesBlock;
 import net.yirmiri.excessive_building.block.ParticleCandleBlock;
 import net.yirmiri.excessive_building.item.HammerItem;
 import net.yirmiri.excessive_building.registry.EBSounds;
+import net.yirmiri.excessive_building.registry.EBStatusEffects;
 
 public class EBProperties {
     public static final int MAX_ROTATIONS = 15;
@@ -152,16 +156,16 @@ public class EBProperties {
         public static final Item.Properties WRENCH = new Item.Properties().stacksTo(1).durability(512);
 
         //FOOD
-        //public static final Item.Properties ANCIENT_FRUIT = new Item.Properties().food(Food.ANCIENT_FRUIT);
+        public static final Item.Properties ANCIENT_FRUIT = new Item.Properties().food(Food.ANCIENT_FRUIT);
 
         //MISC
         public static final Item.Properties GENERIC = new Item.Properties();
         public static final Item.Properties NETHERITE = new Item.Properties().fireResistant();
         public static final Item.Properties CROWN = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1);
 
-//        public static class Food {
-//            public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.8F)
-//            .effect(new MobEffectInstance(EBStatusEffects.REACHING, EBConfig.ANCIENT_FRUIT_DURATION.get(), EBConfig.ANCIENT_FRUIT_AMPLIFIER.get()), 1.0F).alwaysEdible().build();
-//        }
+        public static class Food {
+            public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.8F)
+            .effect(new MobEffectInstance(EBStatusEffects.REACHING, EBConfig.ANCIENT_FRUIT_DURATION.get(), EBConfig.ANCIENT_FRUIT_AMPLIFIER.get()), 1.0F).alwaysEdible().build();
+        }
     }
 }

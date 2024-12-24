@@ -26,7 +26,6 @@ public class ExcessiveBuilding {
         EBPotions.loadPotions();
         EBDecoratedPotPatterns.loadPotteryPatterns();
         EBSounds.loadSounds();
-        EBPacks.loadPacks();
         EBLootModifiers.modifyLoot();
         EBPlacedFeatures.addBiomeModifiers();
         EBTrades.loadTrades();

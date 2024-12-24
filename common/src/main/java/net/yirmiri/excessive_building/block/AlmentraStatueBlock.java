@@ -1,6 +1,5 @@
 package net.yirmiri.excessive_building.block;
 
-import net.minecraft.block.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.flag.FeatureFlagSet;

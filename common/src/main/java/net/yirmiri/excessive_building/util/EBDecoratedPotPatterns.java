@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.util;
 
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -61,7 +62,7 @@ public class EBDecoratedPotPatterns {
     public static final DecoratedPotPattern KOKOS_BUG_POTTERY_PATTERN = register(KOKOS_BUG, "kokos_bug_pottery_pattern");
     public static final DecoratedPotPattern THIEF_POTTERY_PATTERN = register(THIEF, "thief_pottery_pattern");
 
-    public static final Map<Item, ResourceKey<DecoratedPotPattern>> SHERD_MAP = Map.ofEntries(
+    public static final Map<Holder<Item>, ResourceKey<DecoratedPotPattern>> SHERD_MAP = Map.ofEntries(
             Map.entry(EBItems.ROYALTY_POTTERY_SHERD, ROYALTY),
             Map.entry(EBItems.ANCIENT_POTTERY_SHERD, ANCIENT),
             Map.entry(EBItems.BITTER_POTTERY_SHERD, BITTER),
