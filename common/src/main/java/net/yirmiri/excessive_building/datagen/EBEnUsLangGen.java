@@ -6,7 +6,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
-import net.yirmiri.excessive_building.util.EBStats;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.concurrent.CompletableFuture;

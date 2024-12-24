@@ -7,7 +7,6 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.yirmiri.excessive_building.registry.EBBlocks;
-import net.yirmiri.excessive_building.registry.EBItems;
 
 import java.util.concurrent.CompletableFuture;
 

@@ -13,7 +13,6 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.registry.EBItems;
 import net.yirmiri.excessive_building.util.EBProperties;
-import net.yirmiri.excessive_building.util.EBTags;
 import net.yirmiri.excessive_building.util.EBUtils;
 
 public class HammerableIntoRotatableBlock extends Block {

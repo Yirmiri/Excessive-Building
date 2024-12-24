@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(BushBlock.class)
-public abstract class PlantBlockMixin {
-    @Inject(method = "canPlantOnTop", at = @At("TAIL"), cancellable = true)
+public class PlantBlockMixin {
+    @Inject(method = "mayPlaceOn", at = @At("TAIL"), cancellable = true)
     public void excessiveBuilding_canPlantOnTop(BlockState state, BlockGetter world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         if (state.is(EBTags.Blocks.TERRACOTTA_POTS)) {
             cir.setReturnValue(state.getValue(EBProperties.FILLED));

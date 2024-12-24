@@ -5,9 +5,15 @@
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_18",
   "mixins": [
+    "BrewingRecipeRegistryMixin",
+    "BubbleColumnBlockMixin",
+    "DecoratedPotPatternsMixin",
+    "ItemMixin",
+    "PlantBlockMixin",
     "WoodTypeMixin"
   ],
   "client": [
+    "PlayerListEntryMixin"
   ],
   "server": [],
   "injectors": {

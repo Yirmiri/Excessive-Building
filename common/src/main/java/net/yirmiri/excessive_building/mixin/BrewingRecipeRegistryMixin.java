@@ -11,12 +11,12 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(PotionBrewing.class)
-public abstract class BrewingRecipeRegistryMixin {
-    @Inject(method = "registerDefaults", at = @At("TAIL"))
+public class BrewingRecipeRegistryMixin {
+    @Inject(method = "addVanillaMixes", at = @At("TAIL"))
     private static void excessiveBuilding_registerDefaults(PotionBrewing.Builder builder, CallbackInfo ci) {
-        builder.addMix(Potions.WATER, EBItems.ANCIENT_FRUIT, Potions.MUNDANE);
+        builder.addMix(Potions.WATER, EBItems.ANCIENT_FRUIT.value(), Potions.MUNDANE);
 
-        builder.addMix(Potions.AWKWARD, EBItems.ANCIENT_FRUIT, EBPotions.REACHING);
+        builder.addMix(Potions.AWKWARD, EBItems.ANCIENT_FRUIT.value(), EBPotions.REACHING);
         builder.addMix(EBPotions.REACHING, Items.REDSTONE, EBPotions.LONG_REACHING);
         builder.addMix(EBPotions.REACHING, Items.GLOWSTONE_DUST, EBPotions.STRONG_REACHING);
 

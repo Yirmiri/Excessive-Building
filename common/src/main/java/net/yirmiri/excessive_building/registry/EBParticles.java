@@ -1,18 +1,17 @@
 package net.yirmiri.excessive_building.registry;
 
-import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
-import net.minecraft.core.Registry;
+import net.minecraft.core.Holder;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.platform.Services;
 
 public class EBParticles {
-    public static final SimpleParticleType ANCIENT_PARTICLE = FabricParticleTypes.simple();
-    public static final SimpleParticleType GLOOM_PARTICLE = FabricParticleTypes.simple();
+    public static final Holder<SimpleParticleType> ANCIENT_PARTICLE = registerParticle("ancient_particle");
+    public static final Holder<SimpleParticleType> GLOOM_PARTICLE = registerParticle("gloom_particle");
+
+    private static Holder<SimpleParticleType> registerParticle(String id) {
+        return Services.REGISTRY.registerParticle(id);
+    }
 
     public static void loadParticles() {
-        Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(ExcessiveBuilding.MOD_ID, "ancient_particle"), ANCIENT_PARTICLE);
-        Registry.register(BuiltInRegistries.PARTICLE_TYPE, ResourceLocation.fromNamespaceAndPath(ExcessiveBuilding.MOD_ID, "gloom_particle"), GLOOM_PARTICLE);
     }
 }

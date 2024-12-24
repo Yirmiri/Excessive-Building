@@ -6,7 +6,9 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.block.entity.*;
+import net.yirmiri.excessive_building.block.entity.EBHangingSignBlockEntity;
+import net.yirmiri.excessive_building.block.entity.EBSignBlockEntity;
+import net.yirmiri.excessive_building.block.entity.ReachingLanternBlockEntity;
 
 public class EBBlockEntities {
 
@@ -25,20 +27,6 @@ public class EBBlockEntities {
     public static final BlockEntityType<ReachingLanternBlockEntity> REACHING_LANTERN = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE,
             ResourceLocation.fromNamespaceAndPath(ExcessiveBuilding.MOD_ID, "reaching_lantern"), FabricBlockEntityTypeBuilder.create(ReachingLanternBlockEntity::new,
                     EBBlocks.REACHING_LANTERN
-            ).build());
-
-    public static final BlockEntityType<EBChestBlockEntity> EB_CHEST = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE,
-            ResourceLocation.fromNamespaceAndPath(ExcessiveBuilding.MOD_ID, "eb_chest"), FabricBlockEntityTypeBuilder.create(EBChestBlockEntity::new//,
-//                    EBBlocks.SPRUCE_CHEST, EBBlocks.BIRCH_CHEST, EBBlocks.JUNGLE_CHEST, EBBlocks.ACACIA_CHEST, EBBlocks.DARK_OAK_CHEST,
-//                    EBBlocks.MANGROVE_CHEST, EBBlocks.CHERRY_CHEST, EBBlocks.BAMBOO_CHEST, EBBlocks.CRIMSON_CHEST, EBBlocks.WARPED_CHEST,
-//                    EBBlocks.ANCIENT_CHEST, EBBlocks.GLOOM_CHEST
-            ).build());
-
-    public static final BlockEntityType<EBTrappedChestBlockEntity> EB_TRAPPED_CHEST = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE,
-            ResourceLocation.fromNamespaceAndPath(ExcessiveBuilding.MOD_ID, "eb_trapped_chest"), FabricBlockEntityTypeBuilder.create(EBTrappedChestBlockEntity::new//,
-//                    EBBlocks.TRAPPED_SPRUCE_CHEST, EBBlocks.TRAPPED_BIRCH_CHEST, EBBlocks.TRAPPED_JUNGLE_CHEST, EBBlocks.TRAPPED_ACACIA_CHEST, EBBlocks.TRAPPED_DARK_OAK_CHEST,
-//                    EBBlocks.TRAPPED_MANGROVE_CHEST, EBBlocks.TRAPPED_CHERRY_CHEST, EBBlocks.TRAPPED_BAMBOO_CHEST, EBBlocks.TRAPPED_CRIMSON_CHEST, EBBlocks.TRAPPED_WARPED_CHEST,
-//                    EBBlocks.TRAPPED_ANCIENT_CHEST, EBBlocks.TRAPPED_GLOOM_CHEST
             ).build());
 
     public static void loadBlockEntities() {

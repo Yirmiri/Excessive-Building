@@ -25,7 +25,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.yirmiri.excessive_building.EBClientConfig;
-import net.yirmiri.excessive_building.EBConfig;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;

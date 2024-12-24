@@ -1,11 +1,12 @@
 package net.yirmiri.excessive_building.util;
 
 import com.google.common.base.Suppliers;
-import java.util.function.Supplier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+
+import java.util.function.Supplier;
 
 public enum EBToolMaterials implements Tier {
     HAMMER(EBTags.Blocks.INCORRECT_FOR_HAMMER_TOOL, 781, 6.0F, 2.0F, 12, () -> Ingredient.of(EBTags.Items.HAMMER_REPAIRABLE));

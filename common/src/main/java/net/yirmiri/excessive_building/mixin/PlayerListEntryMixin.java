@@ -4,7 +4,6 @@ import com.mojang.authlib.GameProfile;
 import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.resources.PlayerSkin;
 import net.minecraft.resources.ResourceLocation;
-import net.yirmiri.excessive_building.EBClientConfig;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,13 +12,10 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.time.LocalDate;
-import java.time.temporal.ChronoField;
 import java.util.function.Supplier;
 
 @Mixin(PlayerInfo.class)
 public abstract class PlayerListEntryMixin {
-
     @Shadow public abstract GameProfile getProfile();
     @Shadow @Final private Supplier<PlayerSkin> texturesSupplier;
 

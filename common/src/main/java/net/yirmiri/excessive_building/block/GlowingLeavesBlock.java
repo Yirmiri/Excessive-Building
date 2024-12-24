@@ -15,7 +15,6 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.registry.EBItems;
-import net.yirmiri.excessive_building.util.EBTags;
 import net.yirmiri.excessive_building.util.EBUtils;
 
 public class GlowingLeavesBlock extends FloweringLeavesBlock {

@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.block.entity.EBChestBlockEntity;
 
 import java.util.function.Supplier;

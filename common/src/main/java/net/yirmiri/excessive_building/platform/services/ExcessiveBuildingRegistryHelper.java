@@ -1,6 +1,7 @@
 package net.yirmiri.excessive_building.platform.services;
 
 import net.minecraft.core.Holder;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.EntityType;
@@ -8,9 +9,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-
-import java.util.Optional;
-import java.util.function.Supplier;
 
 public interface ExcessiveBuildingRegistryHelper {
     Holder<Block> registerBlock(String id, Block block, boolean hasItem);
@@ -30,4 +28,6 @@ public interface ExcessiveBuildingRegistryHelper {
     Holder<MobEffect> registerEffect(String id, MobEffect mobEffect);
 
     Holder<CreativeModeTab> registerCreativeModeTab(String id, CreativeModeTab tab);
+
+    Holder<SimpleParticleType> registerParticle(String id);
 }
