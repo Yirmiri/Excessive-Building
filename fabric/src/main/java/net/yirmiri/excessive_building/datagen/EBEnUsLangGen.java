@@ -1,5 +1,5 @@
 package net.yirmiri.excessive_building.datagen;
-
+/*
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.HolderLookup;
@@ -869,3 +869,4 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("item.minecraft.tipped_arrow.effect.strong_shortening_potion", "Arrow of Shortening");
     }
 }
+ */

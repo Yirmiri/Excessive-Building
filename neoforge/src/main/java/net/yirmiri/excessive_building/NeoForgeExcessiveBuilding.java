@@ -17,5 +17,7 @@ public class NeoForgeExcessiveBuilding {
         NeoForgeExcessiveBuildingRegistryHelper.MOB_EFFECT.register(eventBus);
         NeoForgeExcessiveBuildingRegistryHelper.SOUND_EVENT.register(eventBus);
         NeoForgeExcessiveBuildingRegistryHelper.CREATIVE_MODE_TAB.register(eventBus);
+
+        //TODO: Neo equivalent of EBRegistries
     }
 }

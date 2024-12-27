@@ -1,5 +1,5 @@
 package net.yirmiri.excessive_building.worldgen;
-
+/*
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -19,3 +19,4 @@ public class EBSaplingGenerators {
         return register(id, 0, Optional.empty(), Optional.empty(), tree, secondaryTree, Optional.empty(), Optional.empty());
     }
 }
+ */

@@ -1,5 +1,5 @@
 package net.yirmiri.excessive_building.worldgen;
-
+/*
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -44,3 +44,4 @@ public class EBConfiguredFeatures {
         registerable.register(key, new ConfiguredFeature<>(feature, config));
     }
 }
+ */

@@ -1,5 +1,5 @@
 package net.yirmiri.excessive_building.worldgen;
-
+/*
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.core.Holder;
@@ -63,3 +63,4 @@ public class EBPlacedFeatures {
         }
     }
 }
+ */

@@ -10,6 +10,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
+import java.util.function.Supplier;
+
 public interface ExcessiveBuildingRegistryHelper {
     Holder<Block> registerBlock(String id, Block block, boolean hasItem);
 
@@ -18,8 +20,6 @@ public interface ExcessiveBuildingRegistryHelper {
     Holder<Item> registerItem(String id, Item item);
 
     //Holder<Item> registerConfigurableItem(boolean configValue, Optional<Boolean> optionalConfigValue, String id, Item item);
-
-    Holder<BlockEntityType<?>> registerBlockEntity(String id, BlockEntityType<?> blockEntity);
 
     Holder<EntityType<?>> registerEntityType(String id, EntityType<?> entityType);
 
@@ -30,4 +30,6 @@ public interface ExcessiveBuildingRegistryHelper {
     Holder<CreativeModeTab> registerCreativeModeTab(String id, CreativeModeTab tab);
 
     Holder<SimpleParticleType> registerParticle(String id);
+
+    <T extends BlockEntityType<?>> Supplier<T> registerBlockEntity(String id, Supplier<T> blockEntitySupplier);
 }

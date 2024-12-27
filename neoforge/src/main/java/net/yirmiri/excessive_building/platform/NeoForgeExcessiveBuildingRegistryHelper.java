@@ -1,5 +1,7 @@
 package net.yirmiri.excessive_building.platform;
 
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -14,6 +16,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.platform.services.ExcessiveBuildingRegistryHelper;
 
+import java.util.function.Supplier;
+
 public class NeoForgeExcessiveBuildingRegistryHelper implements ExcessiveBuildingRegistryHelper {
     public static final DeferredRegister<Block> BLOCK = DeferredRegister.create(Registries.BLOCK, ExcessiveBuilding.MOD_ID);
     public static final DeferredRegister<Item> ITEM = DeferredRegister.create(Registries.ITEM, ExcessiveBuilding.MOD_ID);
@@ -22,6 +26,7 @@ public class NeoForgeExcessiveBuildingRegistryHelper implements ExcessiveBuildin
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPE = DeferredRegister.create(Registries.ENTITY_TYPE, ExcessiveBuilding.MOD_ID);
     public static final DeferredRegister<SoundEvent> SOUND_EVENT = DeferredRegister.create(Registries.SOUND_EVENT, ExcessiveBuilding.MOD_ID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExcessiveBuilding.MOD_ID);
+    public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPE = DeferredRegister.create(Registries.PARTICLE_TYPE, ExcessiveBuilding.MOD_ID);
 
     @Override
     public Holder<Block> registerBlock(String id, Block block, boolean hasItem) {
@@ -38,8 +43,8 @@ public class NeoForgeExcessiveBuildingRegistryHelper implements ExcessiveBuildin
     }
 
     @Override
-    public Holder<BlockEntityType<?>> registerBlockEntity(String id, BlockEntityType<?> blockEntity) {
-        return BLOCK_ENTITY_TYPE.register(id, () -> blockEntity);
+    public <T extends BlockEntityType<?>> Supplier<T> registerBlockEntity(String id, Supplier<T> blockEntitySupplier) {
+        return BLOCK_ENTITY_TYPE.register(id, blockEntitySupplier);
     }
 
     @Override
@@ -60,5 +65,10 @@ public class NeoForgeExcessiveBuildingRegistryHelper implements ExcessiveBuildin
     @Override
     public Holder<CreativeModeTab> registerCreativeModeTab(String id, CreativeModeTab tab) {
         return CREATIVE_MODE_TAB.register(id, () -> tab);
+    }
+
+    @Override
+    public Holder<SimpleParticleType> registerParticle(String id) {
+        return null;//PARTICLE_TYPE.register(id, () -> new SimpleParticleType(false));
     }
 }

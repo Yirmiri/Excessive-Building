@@ -13,6 +13,6 @@ public class EBSignBlockEntity extends SignBlockEntity {
 
     @Override
     public BlockEntityType<?> getType() {
-        return EBBlockEntities.EB_SIGN;
+        return EBBlockEntities.EB_SIGN.get();
     }
 }

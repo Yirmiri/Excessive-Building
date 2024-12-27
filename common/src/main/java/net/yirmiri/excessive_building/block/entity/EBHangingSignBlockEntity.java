@@ -13,6 +13,6 @@ public class EBHangingSignBlockEntity extends HangingSignBlockEntity {
 
     @Override
     public BlockEntityType<?> getType() {
-        return EBBlockEntities.EB_HANGING_SIGN;
+        return EBBlockEntities.EB_HANGING_SIGN.get();
     }
 }

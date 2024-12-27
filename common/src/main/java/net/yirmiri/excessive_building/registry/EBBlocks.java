@@ -6,6 +6,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.flag.FeatureFlag;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.PushReaction;
@@ -18,7 +19,6 @@ import net.yirmiri.excessive_building.block.sign.EBWallSignBlock;
 import net.yirmiri.excessive_building.platform.Services;
 import net.yirmiri.excessive_building.util.EBBlockSetTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
-import net.yirmiri.excessive_building.worldgen.EBSaplingGenerators;
 
 import java.util.HashMap;
 
@@ -275,7 +275,8 @@ public class EBBlocks {
     public static final Holder<Block> ANCIENT_WALL_HANGING_SIGN = register("ancient_wall_hanging_sign", new EBWallHangingSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), false);
 
     public static final Holder<Block> ANCIENT_LEAVES = register("ancient_leaves", new GlowingLeavesBlock(EBParticles.ANCIENT_PARTICLE.value(), EBProperties.BlockP.GLOWING_LEAVES), true);
-    public static final Holder<Block> ANCIENT_SAPLING = register("ancient_sapling", new AncientSaplingBlock(EBSaplingGenerators.ANCIENT, EBProperties.BlockP.GLOWING_SAPLING), true);
+    public static final Holder<Block> ANCIENT_SAPLING = register("ancient_sapling", new AncientSaplingBlock(TreeGrower.OAK, //EBSaplingGenerators.ANCIENT,
+            EBProperties.BlockP.GLOWING_SAPLING), true);
     public static final Holder<Block> POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", flowerPot(EBBlocks.ANCIENT_SAPLING), false);
 
     //GLOOM
@@ -306,8 +307,10 @@ public class EBBlocks {
     public static final Holder<Block> GLOOM_WALL_HANGING_SIGN = register("gloom_wall_hanging_sign", new EBWallHangingSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
 
     public static final Holder<Block> GLOOM_LEAVES = register("gloom_leaves", new FloweringLeavesBlock(EBParticles.GLOOM_PARTICLE.value(), EBProperties.BlockP.GLOOM_LEAVES), true);
-    public static final Holder<Block> GLOOM_SEEDS = register("gloom_seeds", new EBSaplingBlock(EBSaplingGenerators.GLOOM, EBProperties.BlockP.GLOOM_SEEDS), true);
-    public static final Holder<Block> GLOOM_SAPLING = register("gloom_sapling", new GloomSaplingBlock(EBSaplingGenerators.GLOOM, EBProperties.BlockP.GLOOM_SAPLING), true);
+    public static final Holder<Block> GLOOM_SEEDS = register("gloom_seeds", new EBSaplingBlock(TreeGrower.OAK, //EBSaplingGenerators.GLOOM,
+            EBProperties.BlockP.GLOOM_SEEDS), true);
+    public static final Holder<Block> GLOOM_SAPLING = register("gloom_sapling", new GloomSaplingBlock(TreeGrower.OAK, //EBSaplingGenerators.GLOOM,
+            EBProperties.BlockP.GLOOM_SAPLING), true);
     public static final Holder<Block> POTTED_GLOOM_SAPLING = register("potted_gloom_sapling", flowerPot(EBBlocks.GLOOM_SAPLING), false);
 
     //COBBLED BRICKS

@@ -28,7 +28,7 @@ public class EBAdvancementGen extends FabricAdvancementProvider {
     @Override
     public void generateAdvancement(HolderLookup.Provider lookup, Consumer<AdvancementHolder> consumer) {
         AdvancementHolder EXCESSIVE_BUILDING = Advancement.Builder.recipeAdvancement()
-                .display(new DisplayInfo(new ItemStack(EBBlocks.LOGO_BLOCK),
+                .display(new DisplayInfo(new ItemStack(EBBlocks.LOGO_BLOCK.value()),
                         Component.translatable("advancement.excessive_building.excessive_building"),
                         Component.translatable("advancement.excessive_building.excessive_building.description"),
                         Optional.of(ResourceLocation.fromNamespaceAndPath(ExcessiveBuilding.MOD_ID, "textures/block/cobblestone_bricks.png")), AdvancementType.TASK,
@@ -37,12 +37,12 @@ public class EBAdvancementGen extends FabricAdvancementProvider {
                 .save(consumer, ExcessiveBuilding.MOD_ID + ":excessive_building");
 
         AdvancementHolder OBTAIN_ANCIENT_SAPLING = Advancement.Builder.recipeAdvancement().parent(EXCESSIVE_BUILDING)
-                .display(new DisplayInfo(new ItemStack(EBBlocks.ANCIENT_SAPLING),
+                .display(new DisplayInfo(new ItemStack(EBBlocks.ANCIENT_SAPLING.value()),
                         Component.translatable("advancement.excessive_building.obtain_ancient_sapling"),
                         Component.translatable("advancement.excessive_building.obtain_ancient_sapling.description"),
                         Optional.empty(), AdvancementType.TASK,
                         true, true, false)).addCriterion("ancient_sapling",
-                        InventoryChangeTrigger.TriggerInstance.hasItems(EBBlocks.ANCIENT_SAPLING))
+                        InventoryChangeTrigger.TriggerInstance.hasItems(EBBlocks.ANCIENT_SAPLING.value()))
                 .save(consumer, ExcessiveBuilding.MOD_ID + ":obtain_ancient_sapling");
 
         AdvancementHolder EAT_ANCIENT_FRUIT = Advancement.Builder.recipeAdvancement().parent(OBTAIN_ANCIENT_SAPLING)
@@ -51,16 +51,16 @@ public class EBAdvancementGen extends FabricAdvancementProvider {
                         Component.translatable("advancement.excessive_building.eat_ancient_fruit.description"),
                         Optional.empty(), AdvancementType.TASK,
                         true, true, false)).addCriterion("ancient_fruit",
-                        ConsumeItemTrigger.TriggerInstance.usedItem(ItemPredicate.Builder.item().of(EBItems.ANCIENT_FRUIT)))
+                        ConsumeItemTrigger.TriggerInstance.usedItem(ItemPredicate.Builder.item().of(EBItems.ANCIENT_FRUIT.value())))
                 .save(consumer, ExcessiveBuilding.MOD_ID + ":eat_ancient_fruit");
 
         AdvancementHolder PLACE_GLOOM_SEEDS = Advancement.Builder.recipeAdvancement().parent(OBTAIN_ANCIENT_SAPLING)
-                .display(new DisplayInfo(new ItemStack(EBBlocks.GLOOM_SEEDS),
+                .display(new DisplayInfo(new ItemStack(EBBlocks.GLOOM_SEEDS.value()),
                         Component.translatable("advancement.excessive_building.place_gloom_seeds"),
                         Component.translatable("advancement.excessive_building.place_gloom_seeds.description"),
                         Optional.empty(), AdvancementType.TASK,
                         true, true, false)).addCriterion("gloom_seeds",
-                        ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.GLOOM_SEEDS))
+                        ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.GLOOM_SEEDS.value()))
                 .save(consumer, ExcessiveBuilding.MOD_ID + ":place_gloom_seeds");
 
         AdvancementHolder USE_HAMMER = Advancement.Builder.recipeAdvancement().parent(EXCESSIVE_BUILDING)
@@ -70,32 +70,32 @@ public class EBAdvancementGen extends FabricAdvancementProvider {
                         Optional.empty(), AdvancementType.TASK,
                         true, true, false)).addCriterion("use_hammer",
                         ItemUsedOnLocationTrigger.TriggerInstance.itemUsedOnBlock(
-                                LocationPredicate.Builder.location(), ItemPredicate.Builder.item().of(EBItems.HAMMER)))
+                                LocationPredicate.Builder.location(), ItemPredicate.Builder.item().of(EBItems.HAMMER.value())))
                 .save(consumer, ExcessiveBuilding.MOD_ID + ":use_hammer");
 
         AdvancementHolder PLACE_ALL_ALMENTRA_STATUES = Advancement.Builder.recipeAdvancement().parent(USE_HAMMER)
-                .display(new DisplayInfo(new ItemStack(EBBlocks.getDyedAlmentraStatues(DyeColor.LIME.getId())),
+                .display(new DisplayInfo(new ItemStack(EBBlocks.getDyedAlmentraStatues(DyeColor.LIME.getId()).value()),
                         Component.translatable("advancement.excessive_building.place_all_almentra_statues"),
                         Component.translatable("advancement.excessive_building.place_all_almentra_statues.description"),
                         Optional.empty(), AdvancementType.GOAL,
                         true, true, false))
-                .addCriterion("white_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.WHITE.getId())))
-                .addCriterion("light_gray_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.LIGHT_GRAY.getId())))
-                .addCriterion("gray_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.GRAY.getId())))
-                .addCriterion("black_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.BLACK.getId())))
-                .addCriterion("brown_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.BROWN.getId())))
-                .addCriterion("red_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.RED.getId())))
-                .addCriterion("orange_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.ORANGE.getId())))
-                .addCriterion("yellow_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.YELLOW.getId())))
-                .addCriterion("lime_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.LIME.getId())))
-                .addCriterion("green_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.GREEN.getId())))
-                .addCriterion("cyan_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.CYAN.getId())))
-                .addCriterion("light_blue_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.LIGHT_BLUE.getId())))
-                .addCriterion("blue_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.BLUE.getId())))
-                .addCriterion("purple_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.PURPLE.getId())))
-                .addCriterion("magenta_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.MAGENTA.getId())))
-                .addCriterion("pink_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.PINK.getId())))
-                .addCriterion("almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.ALMENTRA_STATUE))
+                .addCriterion("white_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.WHITE.getId()).value()))
+                .addCriterion("light_gray_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.LIGHT_GRAY.getId()).value()))
+                .addCriterion("gray_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.GRAY.getId()).value()))
+                .addCriterion("black_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.BLACK.getId()).value()))
+                .addCriterion("brown_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.BROWN.getId()).value()))
+                .addCriterion("red_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.RED.getId()).value()))
+                .addCriterion("orange_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.ORANGE.getId()).value()))
+                .addCriterion("yellow_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.YELLOW.getId()).value()))
+                .addCriterion("lime_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.LIME.getId()).value()))
+                .addCriterion("green_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.GREEN.getId()).value()))
+                .addCriterion("cyan_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.CYAN.getId()).value()))
+                .addCriterion("light_blue_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.LIGHT_BLUE.getId()).value()))
+                .addCriterion("blue_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.BLUE.getId()).value()))
+                .addCriterion("purple_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.PURPLE.getId()).value()))
+                .addCriterion("magenta_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.MAGENTA.getId()).value()))
+                .addCriterion("pink_almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.getDyedAlmentraStatues(DyeColor.PINK.getId()).value()))
+                .addCriterion("almentra_statue", ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(EBBlocks.ALMENTRA_STATUE.value()))
                 .save(consumer, ExcessiveBuilding.MOD_ID + ":place_all_almentra_statues");
 
         AdvancementHolder USE_WRENCH = Advancement.Builder.recipeAdvancement().parent(EXCESSIVE_BUILDING)
@@ -105,7 +105,7 @@ public class EBAdvancementGen extends FabricAdvancementProvider {
                         Optional.empty(), AdvancementType.TASK,
                         true, true, false)).addCriterion("use_wrench",
                         ItemUsedOnLocationTrigger.TriggerInstance.itemUsedOnBlock(
-                                LocationPredicate.Builder.location(), ItemPredicate.Builder.item().of(EBItems.WRENCH)))
+                                LocationPredicate.Builder.location(), ItemPredicate.Builder.item().of(EBItems.WRENCH.value())))
                 .save(consumer, ExcessiveBuilding.MOD_ID + ":use_wrench");
     }
 }

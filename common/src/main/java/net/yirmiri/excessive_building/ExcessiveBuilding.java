@@ -3,10 +3,7 @@ package net.yirmiri.excessive_building;
 import net.minecraft.resources.ResourceLocation;
 import net.yirmiri.excessive_building.registry.*;
 import net.yirmiri.excessive_building.util.EBDecoratedPotPatterns;
-import net.yirmiri.excessive_building.util.EBLootModifiers;
-import net.yirmiri.excessive_building.util.EBRegistries;
 import net.yirmiri.excessive_building.util.EBStats;
-import net.yirmiri.excessive_building.worldgen.EBPlacedFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,8 +14,7 @@ public class ExcessiveBuilding {
 
     public static void init() {
         EBBlocks.loadBlocks();
-        EBRegistries.loadRegistries();
-        EBItemGroups.loadItemGroups();
+        //EBItemGroups.loadItemGroups();
         EBBlockEntities.loadBlockEntities();
         EBParticles.loadParticles();
         EBItems.loadItems();
@@ -26,8 +22,8 @@ public class ExcessiveBuilding {
         EBPotions.loadPotions();
         EBDecoratedPotPatterns.loadPotteryPatterns();
         EBSounds.loadSounds();
-        EBLootModifiers.modifyLoot();
-        EBPlacedFeatures.addBiomeModifiers();
+        //EBLootModifiers.modifyLoot();
+        //EBPlacedFeatures.addBiomeModifiers();
         EBTrades.loadTrades();
         EBStats.loadStats();
     }

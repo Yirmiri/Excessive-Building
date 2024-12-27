@@ -1,5 +1,5 @@
 package net.yirmiri.excessive_building.datagen;
-
+/*
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.core.Direction;
@@ -1079,3 +1079,4 @@ public class EBModelGen extends FabricModelProvider {
         }
     }
 }
+ */

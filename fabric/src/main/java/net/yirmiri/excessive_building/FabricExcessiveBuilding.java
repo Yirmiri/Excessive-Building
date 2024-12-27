@@ -1,6 +1,7 @@
 package net.yirmiri.excessive_building;
 
 import net.fabricmc.api.ModInitializer;
+import net.yirmiri.excessive_building.registry.EBRegistries;
 
 public class FabricExcessiveBuilding implements ModInitializer {
     
@@ -10,5 +11,6 @@ public class FabricExcessiveBuilding implements ModInitializer {
         //ForgeConfigRegistry.INSTANCE.register(MOD_ID, ModConfig.Type.CLIENT, EBClientConfig.CLIENT, "excessive_building-config-client.toml");
 
         ExcessiveBuilding.init();
+        EBRegistries.loadRegistries();
     }
 }

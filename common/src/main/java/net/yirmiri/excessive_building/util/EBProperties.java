@@ -161,7 +161,6 @@ public class EBProperties {
         //MISC
         public static final Item.Properties GENERIC = new Item.Properties();
         public static final Item.Properties NETHERITE = new Item.Properties().fireResistant();
-        public static final Item.Properties CROWN = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1);
 
         public static class Food {
             public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.8F)

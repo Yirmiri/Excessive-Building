@@ -134,7 +134,7 @@ public class ReachingLanternBlock extends BaseEntityBlock implements EntityBlock
 
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level world, BlockState state, BlockEntityType<T> type) {
-        return createTickerHelper(type, EBBlockEntities.REACHING_LANTERN, ReachingLanternBlockEntity::tick);
+        return createTickerHelper(type, EBBlockEntities.REACHING_LANTERN.get(), ReachingLanternBlockEntity::tick);
     }
 
     @Nullable

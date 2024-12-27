@@ -1,12 +1,9 @@
 package net.yirmiri.excessive_building.particle;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
 import net.minecraft.core.particles.SimpleParticleType;
 
-@Environment(EnvType.CLIENT)
 public class FallingLeafParticle extends TextureSheetParticle {
     private float aFloat;
     private final float aFloat1;
@@ -62,7 +59,6 @@ public class FallingLeafParticle extends TextureSheetParticle {
         }
     }
 
-    @Environment(EnvType.CLIENT)
     public static class Factory implements ParticleProvider<SimpleParticleType> {
         private final SpriteSet sprites;
 

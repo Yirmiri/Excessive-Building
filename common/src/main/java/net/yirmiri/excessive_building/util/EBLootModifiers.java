@@ -1,5 +1,5 @@
 package net.yirmiri.excessive_building.util;
-
+/*
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -95,3 +95,4 @@ public class EBLootModifiers {
         });
     }
 }
+ */

@@ -1,7 +1,9 @@
 package net.yirmiri.excessive_building.platform;
 
+import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.effect.MobEffect;
@@ -13,6 +15,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.platform.services.ExcessiveBuildingRegistryHelper;
+
+import java.util.function.Supplier;
 
 public class FabricExcessiveBuildingRegistryHelper implements ExcessiveBuildingRegistryHelper {
     @Override
@@ -30,8 +34,8 @@ public class FabricExcessiveBuildingRegistryHelper implements ExcessiveBuildingR
     }
 
     @Override
-    public Holder<BlockEntityType<?>> registerBlockEntity(String id, BlockEntityType<?> blockEntity) {
-        return Registry.registerForHolder(BuiltInRegistries.BLOCK_ENTITY_TYPE, ExcessiveBuilding.modid(id), blockEntity);
+    public <T extends BlockEntityType<?>> Supplier<T> registerBlockEntity(String id, Supplier<T> blockEntitySupplier) {
+        return () -> Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, ExcessiveBuilding.modid(id), blockEntitySupplier.get());
     }
 
     @Override
@@ -52,5 +56,10 @@ public class FabricExcessiveBuildingRegistryHelper implements ExcessiveBuildingR
     @Override
     public Holder<CreativeModeTab> registerCreativeModeTab(String id, CreativeModeTab tab) {
         return Registry.registerForHolder(BuiltInRegistries.CREATIVE_MODE_TAB, ExcessiveBuilding.modid(id), tab);
+    }
+
+    @Override
+    public Holder<SimpleParticleType> registerParticle(String id) {
+        return null;//Registry.registerForHolder(BuiltInRegistries.PARTICLE_TYPE, ExcessiveBuilding.modid(id), FabricParticleTypes.simple();
     }
 }

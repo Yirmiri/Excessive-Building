@@ -1,6 +1,5 @@
 package net.yirmiri.excessive_building.registry;
 
-import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -23,22 +22,22 @@ public class EBTrades {
     public static final int MASTER_TRADE_XP = 30; //lv5
     public static final float LOW_PRICE_MULTIPLIER = 0.05F;
     public static final float HIGH_PRICE_MULTIPLIER = 0.2F;
-
+//TODO
     public static void loadTrades() {
-        if (EBConfig.ENABLE_EB_VILLAGER_TRADES.get()) {
-            TradeOfferHelper.registerVillagerOffers(VillagerProfession.MASON, 5,
-                    factories -> {
-                        factories.add((entity, random) -> new MerchantOffer(
-                                new ItemCost(Items.EMERALD, 4), new ItemStack(EBBlocks.ASPHALT, 24),
-                                COMMON_MAX_USES, MASTER_TRADE_XP, LOW_PRICE_MULTIPLIER));
-                    });
-
-            TradeOfferHelper.registerVillagerOffers(VillagerProfession.MASON, 3,
-                    factories -> {
-                        factories.add((entity, random) -> new MerchantOffer(
-                                new ItemCost(Items.EMERALD, 2), new ItemStack(EBBlocks.ALMENTRA, 16),
-                                DEFAULT_MAX_USES, JOURNEYMAN_SELL_XP, LOW_PRICE_MULTIPLIER));
-                    });
-        }
+//        if (EBConfig.ENABLE_EB_VILLAGER_TRADES.get()) {
+//            TradeOfferHelper.registerVillagerOffers(VillagerProfession.MASON, 5,
+//                    factories -> {
+//                        factories.add((entity, random) -> new MerchantOffer(
+//                                new ItemCost(Items.EMERALD, 4), new ItemStack(EBBlocks.ASPHALT, 24),
+//                                COMMON_MAX_USES, MASTER_TRADE_XP, LOW_PRICE_MULTIPLIER));
+//                    });
+//
+//            TradeOfferHelper.registerVillagerOffers(VillagerProfession.MASON, 3,
+//                    factories -> {
+//                        factories.add((entity, random) -> new MerchantOffer(
+//                                new ItemCost(Items.EMERALD, 2), new ItemStack(EBBlocks.ALMENTRA, 16),
+//                                DEFAULT_MAX_USES, JOURNEYMAN_SELL_XP, LOW_PRICE_MULTIPLIER));
+//                    });
+//        }
     }
 }

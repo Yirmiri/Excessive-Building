@@ -1,5 +1,5 @@
 package net.yirmiri.excessive_building.registry;
-
+/*
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -865,3 +865,4 @@ public class EBItemGroups {
         addVanillaColorOrdering();
     }
 }
+ */

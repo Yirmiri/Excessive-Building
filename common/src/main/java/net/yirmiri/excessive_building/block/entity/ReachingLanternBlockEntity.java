@@ -15,7 +15,7 @@ import java.util.List;
 
 public class ReachingLanternBlockEntity extends BlockEntity {
     public ReachingLanternBlockEntity(BlockPos pos, BlockState state) {
-        super(EBBlockEntities.REACHING_LANTERN, pos, state);
+        super(EBBlockEntities.REACHING_LANTERN.get(), pos, state);
     }
 
     public static void tick(Level world, BlockPos pos, BlockState state, ReachingLanternBlockEntity blockEntity) {
