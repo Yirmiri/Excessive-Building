@@ -25,7 +25,6 @@ import net.yirmiri.excessive_building.worldgen.EBSaplingGenerators;
 import java.util.HashMap;
 
 public class EBBlocks {
-
     public static final Block OAK_VERTICAL_STAIRS = registerVStairs("oak_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), true);
     public static final Block SPRUCE_VERTICAL_STAIRS = registerVStairs("spruce_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.SPRUCE_PLANKS)), true);
     public static final Block BIRCH_VERTICAL_STAIRS = registerVStairs("birch_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS)), true);
@@ -971,11 +970,6 @@ public class EBBlocks {
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO:
-    // PEDESTALS THAT CAN HOLD ITEMS
-    // NETHER BRICK DECORATED POT
-    // TERRACOTTA POT DYE VARIANTS
-
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerBlockItem(id, block);
@@ -987,7 +981,7 @@ public class EBBlocks {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new BlockItem(block, new Item.Settings()));
     }
 
-    //CONFIGURABLE BLOCKS
+    //CONFIGURABLE BLOCKS (simplified in 4.0 ml port)
     private static Block registerAP(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerAPBlockItem(id, block);

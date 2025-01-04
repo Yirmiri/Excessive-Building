@@ -4,11 +4,14 @@
   "key": {
     "#": {
       "item": "minecraft:cobbled_deepslate"
+    },
+    "@": {
+      "item": "minecraft:deepslate"
     }
   },
   "pattern": [
-    "##",
-    "##"
+    "@#",
+    "#@"
   ],
   "result": {
     "count": 4,
