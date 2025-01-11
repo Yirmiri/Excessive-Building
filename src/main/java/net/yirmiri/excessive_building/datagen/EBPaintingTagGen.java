@@ -43,9 +43,6 @@ public class EBPaintingTagGen extends TagProvider<PaintingVariant> {
                 .add(EBPaintingVariants.WHY_DO_MY_EYES_HURT)
                 .add(EBPaintingVariants.EVIL_EYE)
                 .add(EBPaintingVariants.CATASTROPHES_BEFORE_THE_CALAMITY)
-                .add(EBPaintingVariants.ENDLESS)
-                .add(EBPaintingVariants.ISAAC_WE_LOVE_YOU)
-                .add(EBPaintingVariants.ZA_HANDO)
                 .add(EBPaintingVariants.TERRAIN)
         ;
 
@@ -74,9 +71,6 @@ public class EBPaintingTagGen extends TagProvider<PaintingVariant> {
                 .add(EBPaintingVariants.WHY_DO_MY_EYES_HURT)
                 .add(EBPaintingVariants.EVIL_EYE)
                 .add(EBPaintingVariants.CATASTROPHES_BEFORE_THE_CALAMITY)
-                .add(EBPaintingVariants.ENDLESS)
-                .add(EBPaintingVariants.ISAAC_WE_LOVE_YOU)
-                .add(EBPaintingVariants.ZA_HANDO)
                 .add(EBPaintingVariants.TERRAIN)
         ;
     }

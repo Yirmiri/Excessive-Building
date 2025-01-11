@@ -4,13 +4,19 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.3.10 Fabric - 1.21.1
+
+  Changes
+•   Removed 3 paintings; za_hando, endless, and isaac_we_love_you
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.3.9 Fabric - 1.21.1
 
   Changes
-•   Removed 3 paintings
+•   Temporarily disabled ancient and gloom signs due to crashes
 
   Fixes
-•   Fixed an issue with running the mod on version 1.21.1
 •   Fixed an issue that caused polished deepslate to have a conflicting recipe with cobbled deepslate bricks
 •   Fixed a similar issue with the issue above but with blackstone
 

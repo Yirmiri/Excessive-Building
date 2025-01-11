@@ -443,10 +443,10 @@ public class EBItemGroups {
                 entries.add(EBBlocks.ASPHALT_STAIRS);
                 entries.add(EBBlocks.ASPHALT_VERTICAL_STAIRS);
                 entries.add(EBBlocks.ASPHALT_SLAB);
-
-                entries.add(EBItems.ANCIENT_SIGN);
+//TODO: ADD SIGNS BACK LATER
+                //entries.add(EBItems.ANCIENT_SIGN);
                 entries.add(EBItems.ANCIENT_HANGING_SIGN);
-                entries.add(EBItems.GLOOM_SIGN);
+                //entries.add(EBItems.GLOOM_SIGN);
                 entries.add(EBItems.GLOOM_HANGING_SIGN);
 
                 entries.add(EBBlocks.ANCIENT_LEAVES);

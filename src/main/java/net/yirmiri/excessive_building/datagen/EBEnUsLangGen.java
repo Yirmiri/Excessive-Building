@@ -827,10 +827,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.rebellious.author", "Rebel (the dog)");
         build.add("painting.excessive_building.catastrophes_before_the_calamity.author", "BackupCup");
         build.add("painting.excessive_building.goodie_malk.author", "Goodie");
-        build.add("painting.excessive_building.endless.author", "Milkyfur");
-        build.add("painting.excessive_building.za_hando.author", "Milkyfur");
-        build.add("painting.excessive_building.isaac_we_love_you.author", "Milkyfur");
-        build.add("painting.excessive_building.terrain.author", "Yirmiri");
+        build.add("painting.excessive_building.terrain.author", "Aseprite resizing tool :3");
 
         //EFFECTS
         build.add("effect.excessive_building.reaching", "Reaching");
