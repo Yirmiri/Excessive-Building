@@ -4,6 +4,17 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.2.13 Fabric - 1.20.1
+
+  Changes
+•   Moved knitted carpets to come after knitted wool in the creative inventory
+
+  Fixes
+•   Fixed a crash when opening the creative inventory
+•   Fixed various issues caused by some broken code
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.2.12 Fabric - 1.20.1
 
   Changes

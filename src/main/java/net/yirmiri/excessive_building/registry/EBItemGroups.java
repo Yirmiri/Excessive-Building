@@ -13,7 +13,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 import java.util.ArrayList;
 
 public class EBItemGroups {
-    public static ArrayList<DyeColor> COLOR_ORDERING = new ArrayList<>();
+    public static ArrayList<DyeColor> COLOR_ORDERING = new ArrayList<DyeColor>();
 
     public static void addCreativeColorOrdering() {
         COLOR_ORDERING.add(DyeColor.WHITE);
@@ -53,8 +53,10 @@ public class EBItemGroups {
         if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("FUCHSIA")); }
     }
 
-    public static ItemGroup EXCESSIVE_BUILDING = Registry.register(Registries.ITEM_GROUP, Identifier.of(ExcessiveBuilding.MOD_ID, "excessive_building"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(EBBlocks.LOGO_BLOCK)).displayName(Text.translatable("itemgroup.excessive_building")).entries((ctx, entries) -> {
+    public static ItemGroup EXCESSIVE_BUILDING = Registry.register(Registries.ITEM_GROUP, Identifier.of(ExcessiveBuilding.MOD_ID, "excessive_building"), FabricItemGroup.builder()
+                    .icon(() -> new ItemStack(EBBlocks.LOGO_BLOCK))
+                    .displayName(Text.translatable("itemgroup.excessive_building"))
+                    .entries((ctx, entries) -> {
                 entries.add(EBBlocks.OAK_MOSAIC);
                 entries.add(EBBlocks.OAK_MOSAIC_STAIRS);
                 entries.add(EBBlocks.OAK_MOSAIC_VERTICAL_STAIRS);
@@ -381,6 +383,9 @@ public class EBItemGroups {
 
                 for (DyeColor colors : COLOR_ORDERING) {
                     entries.add(EBBlocks.getDyedKnittedWools(colors.getId()));
+                }
+
+                for (DyeColor colors : COLOR_ORDERING) {
                     entries.add(EBBlocks.getDyedKnittedCarpets(colors.getId()));
                 }
 

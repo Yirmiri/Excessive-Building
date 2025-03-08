@@ -7,47 +7,82 @@ import net.minecraft.registry.RegistryKey;
 import net.yirmiri.excessive_building.registry.EBItems;
 import net.yirmiri.excessive_building.util.EBDecoratedPotPatterns;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.Map;
-
 @Mixin(DecoratedPotPatterns.class)
 public abstract class DecoratedPotPatternsMixin {
-    @Unique
-    private static final Map<Item, RegistryKey<String>> ITEMS_TO_PATTERN_MAP = Map.ofEntries(
-            Map.entry(EBItems.ROYALTY_POTTERY_SHERD, EBDecoratedPotPatterns.ROYALTY_POTTERY_PATTERN),
-            Map.entry(EBItems.ANCIENT_POTTERY_SHERD, EBDecoratedPotPatterns.ANCIENT_POTTERY_PATTERN),
-            Map.entry(EBItems.BITTER_POTTERY_SHERD, EBDecoratedPotPatterns.BITTER_POTTERY_PATTERN),
-            Map.entry(EBItems.BOIN_POTTERY_SHERD, EBDecoratedPotPatterns.BOIN_POTTERY_PATTERN),
-            Map.entry(EBItems.BUSTLING_POTTERY_SHERD, EBDecoratedPotPatterns.BUSTLING_POTTERY_PATTERN),
-            Map.entry(EBItems.CHECKERED_POTTERY_SHERD, EBDecoratedPotPatterns.CHECKERED_POTTERY_PATTERN),
-            Map.entry(EBItems.DECAY_POTTERY_SHERD, EBDecoratedPotPatterns.DECAY_POTTERY_PATTERN),
-            Map.entry(EBItems.DESTRUCTION_POTTERY_SHERD, EBDecoratedPotPatterns.DESTRUCTION_POTTERY_PATTERN),
-            Map.entry(EBItems.FORWARDS_POTTERY_SHERD, EBDecoratedPotPatterns.FORWARDS_POTTERY_PATTERN),
-            Map.entry(EBItems.HEXXED_POTTERY_SHERD, EBDecoratedPotPatterns.HEXXED_POTTERY_PATTERN),
-            Map.entry(EBItems.KITTEH_POTTERY_SHERD, EBDecoratedPotPatterns.KITTEH_POTTERY_PATTERN),
-            Map.entry(EBItems.LIFE_POTTERY_SHERD, EBDecoratedPotPatterns.LIFE_POTTERY_PATTERN),
-            Map.entry(EBItems.PORTAL_POTTERY_SHERD, EBDecoratedPotPatterns.PORTAL_POTTERY_PATTERN),
-            Map.entry(EBItems.POTTERY_POTTERY_SHERD, EBDecoratedPotPatterns.POTTERY_POTTERY_PATTERN),
-            Map.entry(EBItems.RING_POTTERY_SHERD, EBDecoratedPotPatterns.RING_POTTERY_PATTERN),
-            Map.entry(EBItems.SNOUT_POTTERY_SHERD, EBDecoratedPotPatterns.SNOUT_POTTERY_PATTERN),
-            Map.entry(EBItems.SPRITE_POTTERY_SHERD, EBDecoratedPotPatterns.SPRITE_POTTERY_PATTERN),
-            Map.entry(EBItems.TWINS_POTTERY_SHERD, EBDecoratedPotPatterns.TWINS_POTTERY_PATTERN),
-            Map.entry(EBItems.WRATHFUL_POTTERY_SHERD, EBDecoratedPotPatterns.WRATHFUL_POTTERY_PATTERN),
-            Map.entry(EBItems.IS_THAT_POTTERY_SHERD, EBDecoratedPotPatterns.IS_THAT_POTTERY_PATTERN),
-            Map.entry(EBItems.MESMERIZE_POTTERY_SHERD, EBDecoratedPotPatterns.MESMERIZE_POTTERY_PATTERN),
-            Map.entry(EBItems.KOKOS_BUG_POTTERY_SHERD, EBDecoratedPotPatterns.KOKOS_BUG_POTTERY_PATTERN),
-            Map.entry(EBItems.THIEF_POTTERY_SHERD, EBDecoratedPotPatterns.THIEF_POTTERY_PATTERN)
-    );
-
     @Inject(method = "fromSherd", at = @At("RETURN"), cancellable = true)
     private static void excessiveBuilding$fromSherd(Item item, CallbackInfoReturnable<RegistryKey<String>> cir) {
-        RegistryKey<String> patterns = ITEMS_TO_PATTERN_MAP.get(item);
-        if (patterns != null) {
-            cir.setReturnValue(patterns);
+        if (item == EBItems.ROYALTY_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.ROYALTY_POTTERY_PATTERN);
+        }
+        if (item == EBItems.ANCIENT_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.ANCIENT_POTTERY_PATTERN);
+        }
+        if (item == EBItems.BITTER_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.BITTER_POTTERY_PATTERN);
+        }
+        if (item == EBItems.BOIN_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.BOIN_POTTERY_PATTERN);
+        }
+        if (item == EBItems.BUSTLING_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.BUSTLING_POTTERY_PATTERN);
+        }
+        if (item == EBItems.CHECKERED_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.CHECKERED_POTTERY_PATTERN);
+        }
+        if (item == EBItems.DECAY_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.DECAY_POTTERY_PATTERN);
+        }
+        if (item == EBItems.DESTRUCTION_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.DESTRUCTION_POTTERY_PATTERN);
+        }
+        if (item == EBItems.FORWARDS_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.FORWARDS_POTTERY_PATTERN);
+        }
+        if (item == EBItems.HEXXED_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.HEXXED_POTTERY_PATTERN);
+        }
+        if (item == EBItems.KITTEH_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.KITTEH_POTTERY_PATTERN);
+        }
+        if (item == EBItems.LIFE_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.LIFE_POTTERY_PATTERN);
+        }
+        if (item == EBItems.PORTAL_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.PORTAL_POTTERY_PATTERN);
+        }
+        if (item == EBItems.POTTERY_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.POTTERY_POTTERY_PATTERN);
+        }
+        if (item == EBItems.RING_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.RING_POTTERY_PATTERN);
+        }
+        if (item == EBItems.SNOUT_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.SNOUT_POTTERY_PATTERN);
+        }
+        if (item == EBItems.SPRITE_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.SPRITE_POTTERY_PATTERN);
+        }
+        if (item == EBItems.TWINS_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.TWINS_POTTERY_PATTERN);
+        }
+        if (item == EBItems.WRATHFUL_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.WRATHFUL_POTTERY_PATTERN);
+        }
+        if (item == EBItems.IS_THAT_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.IS_THAT_POTTERY_PATTERN);
+        }
+        if (item == EBItems.MESMERIZE_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.MESMERIZE_POTTERY_PATTERN);
+        }
+        if (item == EBItems.KOKOS_BUG_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.KOKOS_BUG_POTTERY_PATTERN);
+        }
+        if (item == EBItems.THIEF_POTTERY_SHERD) {
+            cir.setReturnValue(EBDecoratedPotPatterns.THIEF_POTTERY_PATTERN);
         }
     }
 
