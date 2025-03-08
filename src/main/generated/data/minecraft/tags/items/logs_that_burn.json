@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#excessive_building:ancient_logs",
-    "#excessive_building:gloom_logs",
     "excessive_building:ancient_log",
     "excessive_building:gloom_log",
     "excessive_building:stripped_ancient_log",

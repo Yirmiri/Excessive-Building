@@ -13,29 +13,44 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 import java.util.ArrayList;
 
 public class EBItemGroups {
-    public static ArrayList<DyeColor> COLOR_ORDERING = new ArrayList<DyeColor>();
+    public static ArrayList<DyeColor> COLOR_ORDERING = new ArrayList<>();
 
-    public static void addVanillaColorOrdering() {
+    public static void addCreativeColorOrdering() {
         COLOR_ORDERING.add(DyeColor.WHITE);
         COLOR_ORDERING.add(DyeColor.LIGHT_GRAY);
         COLOR_ORDERING.add(DyeColor.GRAY);
         COLOR_ORDERING.add(DyeColor.BLACK);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("ACORN")); }
         COLOR_ORDERING.add(DyeColor.BROWN);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("MAROON")); }
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("MOLD")); }
         COLOR_ORDERING.add(DyeColor.RED);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("PEACH")); }
         COLOR_ORDERING.add(DyeColor.ORANGE);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("VERMILION")); }
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("AMBER")); }
         COLOR_ORDERING.add(DyeColor.YELLOW);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("BANANA")); }
         COLOR_ORDERING.add(DyeColor.LIME);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("ARTICHOKE")); }
         COLOR_ORDERING.add(DyeColor.GREEN);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("SAP")); }
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("SHAMROCK")); }
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("SAGE")); }
         COLOR_ORDERING.add(DyeColor.CYAN);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("MINT")); }
         COLOR_ORDERING.add(DyeColor.LIGHT_BLUE);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("CERULEAN")); }
         COLOR_ORDERING.add(DyeColor.BLUE);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("NAVY")); }
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("PERIWINKLE")); }
         COLOR_ORDERING.add(DyeColor.PURPLE);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("GRAPE")); }
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("INDIGO")); }
         COLOR_ORDERING.add(DyeColor.MAGENTA);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("VELVET")); }
         COLOR_ORDERING.add(DyeColor.PINK);
-    }
-
-    public static void addColorOrdering(DyeColor colors, int i) {
-        COLOR_ORDERING.add(i, colors);
+        if (ExcessiveBuilding.isModLoaded("mint")) { COLOR_ORDERING.add(DyeColor.valueOf("FUCHSIA")); }
     }
 
     public static ItemGroup EXCESSIVE_BUILDING = Registry.register(Registries.ITEM_GROUP, Identifier.of(ExcessiveBuilding.MOD_ID, "excessive_building"),
@@ -680,6 +695,6 @@ public class EBItemGroups {
             }).build());
 
     public static void loadItemGroups() {
-        addVanillaColorOrdering();
+        addCreativeColorOrdering();
     }
 }

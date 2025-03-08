@@ -2,6 +2,7 @@ package net.yirmiri.excessive_building;
 
 import fuzs.forgeconfigapiport.api.config.v2.ForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraftforge.fml.config.ModConfig;
 import net.yirmiri.excessive_building.util.EBPaintingVariants;
 import net.yirmiri.excessive_building.worldgen.EBPlacedFeatures;
@@ -20,7 +21,7 @@ public class ExcessiveBuilding implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ForgeConfigRegistry.INSTANCE.register(MOD_ID, ModConfig.Type.COMMON, EBConfig.COMMON, "excessive_building-config.toml");
-//TODO: Non required config system
+
 		EBBlocks.loadBlocks();
 		EBRegistries.loadRegistries();
 		EBItemGroups.loadItemGroups();
@@ -35,5 +36,9 @@ public class ExcessiveBuilding implements ModInitializer {
 		EBPlacedFeatures.addBiomeModifiers();
 		EBTrades.loadTrades();
 		EBPaintingVariants.loadEBPaintings();
+	}
+
+	public static boolean isModLoaded(String id) {
+		return FabricLoader.getInstance().isModLoaded(id);
 	}
 }

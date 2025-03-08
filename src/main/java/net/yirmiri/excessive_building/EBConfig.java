@@ -92,7 +92,7 @@ public class EBConfig {
 
         ENABLE_GLOOM_SEEDS = BUILDER
                 .comment("Should gloom seeds be enabled (and to extension their content)? (default: true)")
-                .define("enableGloomSeeds", true);
+                .define("enableGloomSeeds", false);
 
         ENABLE_CUSTOM_TOOLTIPS = BUILDER
                 .comment("Should Excessive Building items with special interactions have custom tooltips? (default: true)")

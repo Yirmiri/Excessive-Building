@@ -39,6 +39,8 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendKnittedWools();
         appendKnittedCarpets();
         appendCraftingTables();
+        appendLogs();
+        appendLogsThatBurn();
     }
 
     public void appendKnittedWools() {
@@ -59,6 +61,24 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         for (DyeColor colors : DyeColor.values()) {
             getOrCreateTagBuilder(EBTags.Items.KNITTED_CARPET).add(EBBlocks.getDyedKnittedCarpets(colors.getId()).asItem());
         }
+    }
+
+    public void appendLogs() {
+        getOrCreateTagBuilder(ItemTags.LOGS)
+                .add(EBBlocks.ANCIENT_LOG.asItem())
+                .add(EBBlocks.GLOOM_LOG.asItem())
+                .add(EBBlocks.STRIPPED_ANCIENT_LOG.asItem())
+                .add(EBBlocks.STRIPPED_GLOOM_LOG.asItem())
+        ;
+    }
+
+    public void appendLogsThatBurn() {
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(EBBlocks.ANCIENT_LOG.asItem())
+                .add(EBBlocks.GLOOM_LOG.asItem())
+                .add(EBBlocks.STRIPPED_ANCIENT_LOG.asItem())
+                .add(EBBlocks.STRIPPED_GLOOM_LOG.asItem())
+        ;
     }
 
     public void appendSnifferFood() {

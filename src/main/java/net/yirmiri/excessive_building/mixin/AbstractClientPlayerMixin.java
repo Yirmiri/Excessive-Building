@@ -19,7 +19,7 @@ public abstract class AbstractClientPlayerMixin extends PlayerEntity {
     }
 
     @Inject(at = @At("HEAD"), method = "getCapeTexture")
-    public void capeTexture(CallbackInfoReturnable<Identifier> cir) {
+    public void excessiveBuilding$getCapeTexture(CallbackInfoReturnable<Identifier> cir) {
         String playerUUID = getGameProfile().getId().toString();
 
         switch (playerUUID) {

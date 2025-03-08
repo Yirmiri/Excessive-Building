@@ -651,7 +651,7 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.evil_eye.title", "Evil Eye");
         build.add("painting.excessive_building.rebellious.title", "Rebellious");
         build.add("painting.excessive_building.catastrophes_before_the_calamity.title", "Catastrophes Before the Calamity");
-        build.add("painting.excessive_building.goodie_malk.title", "Goodie Malk");
+        build.add("painting.excessive_building.goodiemalk.title", "Goodie Malk");
         build.add("painting.excessive_building.endless.title", "Endless");
         build.add("painting.excessive_building.za_hando.title", "Za Hando");
         build.add("painting.excessive_building.isaac_we_love_you.title", "Isaac We Love You");
@@ -690,20 +690,20 @@ public class EBEnUsLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.terrain.author", "Yirmiri");
 
         //EFFECTS
-        build.add("item.minecraft.potion.effect.hasty_potion", "Potion of Hasty");
-        build.add("item.minecraft.splash_potion.effect.hasty_potion", "Splash Potion of Hasty");
-        build.add("item.minecraft.lingering_potion.effect.hasty_potion", "Lingering Potion of Hasty");
-        build.add("item.minecraft.tipped_arrow.effect.hasty_potion", "Arrow of Hasty");
+        build.add("item.minecraft.potion.effect.hasty_potion", "Potion of Rapidity");
+        build.add("item.minecraft.splash_potion.effect.hasty_potion", "Splash Potion of Rapidity");
+        build.add("item.minecraft.lingering_potion.effect.hasty_potion", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.hasty_potion", "Arrow of Rapidity");
 
-        build.add("item.minecraft.potion.effect.long_hasty_potion", "Potion of Hasty");
-        build.add("item.minecraft.splash_potion.effect.long_hasty_potion", "Splash Potion of Hasty");
-        build.add("item.minecraft.lingering_potion.effect.long_hasty_potion", "Lingering Potion of Hasty");
-        build.add("item.minecraft.tipped_arrow.effect.long_hasty_potion", "Arrow of Hasty");
+        build.add("item.minecraft.potion.effect.long_hasty_potion", "Potion of Rapidity");
+        build.add("item.minecraft.splash_potion.effect.long_hasty_potion", "Splash Potion of Rapidity");
+        build.add("item.minecraft.lingering_potion.effect.long_hasty_potion", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.long_hasty_potion", "Arrow of Rapidity");
 
-        build.add("item.minecraft.potion.effect.strong_hasty_potion", "Potion of Hasty");
-        build.add("item.minecraft.splash_potion.effect.strong_hasty_potion", "Splash Potion of Hasty");
-        build.add("item.minecraft.lingering_potion.effect.strong_hasty_potion", "Lingering Potion of Hasty");
-        build.add("item.minecraft.tipped_arrow.effect.strong_hasty_potion", "Arrow of Hasty");
+        build.add("item.minecraft.potion.effect.strong_hasty_potion", "Potion of Rapidity");
+        build.add("item.minecraft.splash_potion.effect.strong_hasty_potion", "Splash Potion of Rapidity");
+        build.add("item.minecraft.lingering_potion.effect.strong_hasty_potion", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.strong_hasty_potion", "Arrow of Rapidity");
 
         build.add("item.minecraft.potion.effect.fatigued_potion", "Potion of Fatigued");
         build.add("item.minecraft.splash_potion.effect.fatigued_potion", "Splash Potion of Fatigued");

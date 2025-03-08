@@ -60,7 +60,7 @@ public class EBPaintingVariants {
         THE_END = register("the_end", new PaintingVariant(80, 48));
         THE_LONE_TREE = register("the_lone_tree", new PaintingVariant(32, 32));
         THINE_HOLY_PEANUT = register("thine_holy_peanut", new PaintingVariant(32, 16));
-        WHY_DO_MY_EYES_HURT = register("why_do_my_eyes_hurt", new PaintingVariant(80, 32));
+        WHY_DO_MY_EYES_HURT = register("why_do_my_eyes_hurt", new PaintingVariant(80, 48));
         EVIL_EYE = register("evil_eye", new PaintingVariant(32, 32));
         CATASTROPHES_BEFORE_THE_CALAMITY = register("catastrophes_before_the_calamity", new PaintingVariant(112, 64));
         TERRAIN = register("terrain", new PaintingVariant(48, 48));

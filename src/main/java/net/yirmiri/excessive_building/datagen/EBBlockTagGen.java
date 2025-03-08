@@ -56,6 +56,16 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendGuardedByPiglins();
         appendCandles();
         appendReplaceable();
+        appendLogsThatBurn();
+    }
+
+    public void appendLogsThatBurn() {
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(EBBlocks.ANCIENT_LOG)
+                .add(EBBlocks.GLOOM_LOG)
+                .add(EBBlocks.STRIPPED_ANCIENT_LOG)
+                .add(EBBlocks.STRIPPED_GLOOM_LOG)
+        ;
     }
 
     public void appendReplaceable() {

@@ -3314,6 +3314,20 @@ public class EBRecipeGen extends FabricRecipeProvider {
                     .criterion(hasItem(EBBlocks.getDyedAlmentra(colors.getId())), conditionsFromItem(EBBlocks.getDyedAlmentra(colors.getId())))
                     .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.getDyedAlmentraVerticalStairs(colors.getId()))));
         }
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_WOOD, 3)
+                .input('@', EBBlocks.ANCIENT_LOG)
+                .pattern("@@")
+                .pattern("@@")
+                .criterion(hasItem(EBBlocks.THICK_PAPER_BLOCK), conditionsFromItem(EBBlocks.ANCIENT_LOG))
+                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.ANCIENT_WOOD)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GLOOM_WOOD, 3)
+                .input('@', EBBlocks.GLOOM_LOG)
+                .pattern("@@")
+                .pattern("@@")
+                .criterion(hasItem(EBBlocks.THICK_PAPER_BLOCK), conditionsFromItem(EBBlocks.GLOOM_LOG))
+                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_WOOD)));
     }
 
     public static CraftingRecipeJsonBuilder createShelfBlock(ItemConvertible output, int count, Ingredient input, Ingredient input2) {
