@@ -17,7 +17,7 @@ import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
-import net.yirmiri.excessive_building.util.EBTags;
+import net.yirmiri.excessive_building.init.EBTags;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -480,91 +480,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 Ingredient.ofItems(EBBlocks.ANCIENT_SLAB))
                 .criterion(hasItem(EBBlocks.ANCIENT_SLAB), conditionsFromItem(EBBlocks.ANCIENT_SLAB))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.CHISELED_ANCIENT_PLANKS)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GLOOM_MOSAIC, 1)
-                .input('#', EBBlocks.GLOOM_SLAB)
-                .pattern("#")
-                .pattern("#")
-                .criterion(hasItem(EBBlocks.GLOOM_SLAB), conditionsFromItem(EBBlocks.GLOOM_SLAB))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_MOSAIC)));
-
-        createStairsRecipe(EBBlocks.GLOOM_MOSAIC_STAIRS,
-                Ingredient.ofItems(EBBlocks.GLOOM_MOSAIC))
-                .criterion(hasItem(EBBlocks.GLOOM_MOSAIC), conditionsFromItem(EBBlocks.GLOOM_MOSAIC))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_MOSAIC_STAIRS)));
-
-        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GLOOM_MOSAIC_SLAB,
-                Ingredient.ofItems(EBBlocks.GLOOM_MOSAIC))
-                .criterion(hasItem(EBBlocks.GLOOM_MOSAIC), conditionsFromItem(EBBlocks.GLOOM_MOSAIC))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_MOSAIC_SLAB)));
-
-        createVerticalStairsRecipe(EBBlocks.GLOOM_MOSAIC_VERTICAL_STAIRS,
-                Ingredient.ofItems(EBBlocks.GLOOM_MOSAIC))
-                .criterion(hasItem(EBBlocks.GLOOM_MOSAIC), conditionsFromItem(EBBlocks.GLOOM_MOSAIC))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_MOSAIC_VERTICAL_STAIRS)));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GLOOM_PLANKS, 4)
-                .input(EBTags.Items.GLOOM_LOGS)
-                .criterion(hasItem(EBBlocks.GLOOM_LOG), conditionsFromItem(EBBlocks.GLOOM_LOG))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_PLANKS)));
-
-        createStairsRecipe(EBBlocks.GLOOM_STAIRS,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_STAIRS)));
-
-        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GLOOM_SLAB,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_SLAB)));
-
-        createVerticalStairsRecipe(EBBlocks.GLOOM_VERTICAL_STAIRS,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_VERTICAL_STAIRS)));
-
-        createFenceRecipe(EBBlocks.GLOOM_FENCE,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_FENCE)));
-
-        createFenceGateRecipe(EBBlocks.GLOOM_FENCE_GATE,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_FENCE_GATE)));
-
-        createDoorRecipe(EBBlocks.GLOOM_DOOR,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_DOOR)));
-
-        createTrapdoorRecipe(EBBlocks.GLOOM_TRAPDOOR,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_TRAPDOOR)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.GLOOM_PRESSURE_PLATE, 1)
-                .input('#', EBBlocks.GLOOM_PLANKS)
-                .pattern("##")
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_PRESSURE_PLATE)));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.GLOOM_BUTTON, 1)
-                .input(EBBlocks.GLOOM_PLANKS)
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_BUTTON)));
-
-        createSignRecipe(EBItems.GLOOM_SIGN,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBItems.GLOOM_SIGN)));
-
-        offerHangingSignRecipe(exporter, EBItems.GLOOM_HANGING_SIGN, EBBlocks.STRIPPED_GLOOM_LOG);
-
-        createTwoByTwoRecipe(EBBlocks.CHISELED_GLOOM_PLANKS, 2,
-                Ingredient.ofItems(EBBlocks.GLOOM_SLAB))
-                .criterion(hasItem(EBBlocks.GLOOM_SLAB), conditionsFromItem(EBBlocks.GLOOM_SLAB))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.CHISELED_GLOOM_PLANKS)));
 
         createFourForFourWendysMealRecipe(EBBlocks.COPPER_BRICKS,
                 Ingredient.ofItems(Blocks.COPPER_BLOCK))
@@ -1068,37 +983,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(EBBlocks.SEA_GLASS_PANE), conditionsFromItem(EBBlocks.SEA_GLASS_PANE))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.FUCHSIA_SEA_GLASS_PANE) + "_from_dye"));
 
-        createTwoByTwoRecipe(EBBlocks.BONE_BRICKS, 4,
-                Ingredient.ofItems(Items.BONE_BLOCK))
-                .criterion(hasItem(Items.BONE_BLOCK), conditionsFromItem(Items.BONE_BLOCK))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.BONE_BRICKS)));
-
-        createStairsRecipe(EBBlocks.BONE_BRICK_STAIRS,
-                Ingredient.ofItems(EBBlocks.BONE_BRICKS))
-                .criterion(hasItem(EBBlocks.BONE_BRICKS), conditionsFromItem(EBBlocks.BONE_BRICKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.BONE_BRICK_STAIRS)));
-
-        createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICK_SLAB,
-                Ingredient.ofItems(EBBlocks.BONE_BRICKS))
-                .criterion(hasItem(EBBlocks.BONE_BRICKS), conditionsFromItem(EBBlocks.BONE_BRICKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.BONE_BRICK_SLAB)));
-
-        createVerticalStairsRecipe(EBBlocks.BONE_BRICK_VERTICAL_STAIRS,
-                Ingredient.ofItems(EBBlocks.BONE_BRICKS))
-                .criterion(hasItem(EBBlocks.BONE_BRICKS), conditionsFromItem(EBBlocks.BONE_BRICKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.BONE_BRICK_VERTICAL_STAIRS)));
-
-        createPaneRecipe(EBBlocks.BONE_BRICK_WALL, 6,
-                Ingredient.ofItems(EBBlocks.BONE_BRICKS))
-                .criterion(hasItem(EBBlocks.BONE_BRICKS), conditionsFromItem(EBBlocks.BONE_BRICKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.BONE_BRICK_WALL)));
-
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICKS, Blocks.BONE_BLOCK, 1);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICK_STAIRS, EBBlocks.BONE_BRICKS, 1);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICK_SLAB, EBBlocks.BONE_BRICKS, 2);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICK_VERTICAL_STAIRS, EBBlocks.BONE_BRICKS, 1);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.BONE_BRICK_WALL, EBBlocks.BONE_BRICKS, 1);
-
         for (DyeColor colors : DyeColor.values()) {
             offerCarpetRecipe(exporter, EBBlocks.getDyedKnittedCarpets(colors.getId()), EBBlocks.getDyedKnittedWools(colors.getId()));
         }
@@ -1540,11 +1424,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.ANCIENT_LADDER)));
 
-        createLadderRecipe(EBBlocks.GLOOM_LADDER,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_LADDER)));
-
         createLadderRecipe(Blocks.LADDER,
                 Ingredient.ofItems(Blocks.OAK_PLANKS))
                 .criterion(hasItem(Blocks.OAK_PLANKS), conditionsFromItem(Blocks.OAK_PLANKS))
@@ -1604,11 +1483,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 Ingredient.ofItems(EBBlocks.ANCIENT_PLANKS))
                 .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.ANCIENT_CRAFTING_TABLE)));
-
-        createTwoByTwoRecipe(EBBlocks.GLOOM_CRAFTING_TABLE, 1,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS))
-                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_CRAFTING_TABLE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.WOODEN_MUG, 3)
                 .input('#', ItemTags.WOODEN_SLABS).input('@', Items.STICK)
@@ -2349,11 +2223,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.ANCIENT_BOOKSHELF)));
 
-        createShelfBlock(EBBlocks.GLOOM_BOOKSHELF, 1,
-                Ingredient.ofItems(EBBlocks.GLOOM_PLANKS), Ingredient.ofItems(Items.BOOK))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_BOOKSHELF)));
-
         createTwoByTwoCheckersMealRecipe(EBBlocks.BRIMSTONE, 4,
                 Ingredient.ofItems(Blocks.NETHERRACK), Ingredient.ofItems(Blocks.BASALT))
                 .criterion(hasItem(Blocks.BASALT), conditionsFromItem(Blocks.BASALT))
@@ -2502,26 +2371,10 @@ public class EBRecipeGen extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ASPHALT_SLAB, EBBlocks.ASPHALT, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ASPHALT_VERTICAL_STAIRS, EBBlocks.ASPHALT, 1);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.RED_DYE, 1)
-                .input(EBBlocks.ROSE)
-                .criterion(hasItem(EBBlocks.ROSE), conditionsFromItem(EBBlocks.ROSE))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(Items.RED_DYE) + "_from_rose"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CYAN_DYE, 1)
-                .input(EBBlocks.CYAN_ROSE)
-                .criterion(hasItem(EBBlocks.CYAN_ROSE), conditionsFromItem(EBBlocks.CYAN_ROSE))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(Items.CYAN_DYE) + "_from_cyan_rose"));
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.WHITE_DYE, 1)
-                .input(EBBlocks.WHITE_ROSE)
-                .criterion(hasItem(EBBlocks.WHITE_ROSE), conditionsFromItem(EBBlocks.WHITE_ROSE))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(Items.WHITE_DYE) + "_from_white_rose"));
-
         offerCrackingRecipe(exporter, EBBlocks.CRACKED_BRIMSTONE_BRICKS, EBBlocks.BRIMSTONE_BRICKS);
         offerCrackingRecipe(exporter, EBBlocks.CRACKED_ANDESITE_BRICKS, EBBlocks.ANDESITE_BRICKS);
         offerCrackingRecipe(exporter, EBBlocks.CRACKED_DIORITE_BRICKS, EBBlocks.DIORITE_BRICKS);
         offerCrackingRecipe(exporter, EBBlocks.CRACKED_GRANITE_BRICKS, EBBlocks.GRANITE_BRICKS);
-        offerCrackingRecipe(exporter, EBBlocks.CRACKED_MUD_BRICKS, Blocks.MUD_BRICKS);
 
         createTwoByTwoRecipe(EBBlocks.SMOOTH_STONE_BRICKS, 4,
                 Ingredient.ofItems(Blocks.SMOOTH_STONE))
@@ -2702,11 +2555,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 Ingredient.ofItems(EBBlocks.ANCIENT_MOSAIC), Ingredient.ofItems(Items.BOOK))
                 .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.ANCIENT_DECORATIVE_SHELF)));
-
-        createShelfBlock(EBBlocks.GLOOM_DECORATIVE_SHELF, 1,
-                Ingredient.ofItems(EBBlocks.GLOOM_MOSAIC), Ingredient.ofItems(Items.BOOK))
-                .criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_DECORATIVE_SHELF)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.WEEPING_CANDLE, 1)
                 .input('#', Items.HONEYCOMB).input('@', Items.STRING).input('!', Items.CRIMSON_FUNGUS)
@@ -3008,166 +2856,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(Blocks.MOSS_BLOCK), conditionsFromItem(Blocks.MOSS_BLOCK))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.MOSS_PASTE)));
 
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_CHEST, 1)
-//                .input('#', Items.SPRUCE_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(Items.SPRUCE_PLANKS), conditionsFromItem(Items.SPRUCE_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.SPRUCE_CHEST)));
-//
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_CHEST, 1)
-//                .input('#', Items.CRIMSON_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(Items.CRIMSON_PLANKS), conditionsFromItem(Items.CRIMSON_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.CRIMSON_CHEST)));
-//
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.WARPED_CHEST, 1)
-//                .input('#', Items.WARPED_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(Items.WARPED_PLANKS), conditionsFromItem(Items.WARPED_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.WARPED_CHEST)));
-//
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_CHEST, 1)
-//                .input('#', Items.CHERRY_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(Items.CHERRY_PLANKS), conditionsFromItem(Items.CHERRY_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.CHERRY_CHEST)));
-//
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_CHEST, 1)
-//                .input('#', Items.MANGROVE_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(Items.MANGROVE_PLANKS), conditionsFromItem(Items.MANGROVE_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.MANGROVE_CHEST)));
-//
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_CHEST, 1)
-//                .input('#', Items.DARK_OAK_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(Items.DARK_OAK_PLANKS), conditionsFromItem(Items.DARK_OAK_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.DARK_OAK_CHEST)));
-//
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_CHEST, 1)
-//                .input('#', Items.ACACIA_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(Items.ACACIA_PLANKS), conditionsFromItem(Items.ACACIA_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.ACACIA_CHEST)));
-//
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_CHEST, 1)
-//                .input('#', Items.JUNGLE_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(Items.JUNGLE_PLANKS), conditionsFromItem(Items.JUNGLE_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.JUNGLE_CHEST)));
-//
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_CHEST, 1)
-//                .input('#', Items.BIRCH_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(Items.BIRCH_PLANKS), conditionsFromItem(Items.BIRCH_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.BIRCH_CHEST)));
-//
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_CHEST, 1)
-//                .input('#', EBBlocks.ANCIENT_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.ANCIENT_CHEST)));
-//
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GLOOM_CHEST, 1)
-//                .input('#', EBBlocks.GLOOM_PLANKS)
-//                .pattern("###")
-//                .pattern("# #")
-//                .pattern("###")
-//                .criterion(hasItem(EBBlocks.GLOOM_PLANKS), conditionsFromItem(EBBlocks.GLOOM_PLANKS))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLOOM_CHEST)));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_SPRUCE_CHEST, 1)
-//                .input(EBBlocks.SPRUCE_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.SPRUCE_CHEST), conditionsFromItem(EBBlocks.SPRUCE_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_SPRUCE_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_BIRCH_CHEST, 1)
-//                .input(EBBlocks.BIRCH_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.BIRCH_CHEST), conditionsFromItem(EBBlocks.BIRCH_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_BIRCH_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_JUNGLE_CHEST, 1)
-//                .input(EBBlocks.JUNGLE_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.JUNGLE_CHEST), conditionsFromItem(EBBlocks.JUNGLE_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_JUNGLE_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_ACACIA_CHEST, 1)
-//                .input(EBBlocks.ACACIA_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.ACACIA_CHEST), conditionsFromItem(EBBlocks.ACACIA_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_ACACIA_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_DARK_OAK_CHEST, 1)
-//                .input(EBBlocks.DARK_OAK_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.DARK_OAK_CHEST), conditionsFromItem(EBBlocks.DARK_OAK_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_DARK_OAK_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_MANGROVE_CHEST, 1)
-//                .input(EBBlocks.MANGROVE_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.MANGROVE_CHEST), conditionsFromItem(EBBlocks.MANGROVE_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_MANGROVE_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_CHERRY_CHEST, 1)
-//                .input(EBBlocks.CHERRY_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.CHERRY_CHEST), conditionsFromItem(EBBlocks.CHERRY_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_CHERRY_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_BAMBOO_CHEST, 1)
-//                .input(EBBlocks.BAMBOO_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.BAMBOO_CHEST), conditionsFromItem(EBBlocks.BAMBOO_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_BAMBOO_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_WARPED_CHEST, 1)
-//                .input(EBBlocks.WARPED_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.WARPED_CHEST), conditionsFromItem(EBBlocks.WARPED_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_WARPED_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_CRIMSON_CHEST, 1)
-//                .input(EBBlocks.CRIMSON_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.CRIMSON_CHEST), conditionsFromItem(EBBlocks.CRIMSON_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_CRIMSON_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_ANCIENT_CHEST, 1)
-//                .input(EBBlocks.ANCIENT_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.ANCIENT_CHEST), conditionsFromItem(EBBlocks.ANCIENT_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_ANCIENT_CHEST))));
-//
-//        ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, EBBlocks.TRAPPED_GLOOM_CHEST, 1)
-//                .input(EBBlocks.GLOOM_CHEST).input(Items.TRIPWIRE_HOOK)
-//                .criterion(hasItem(EBBlocks.GLOOM_CHEST), conditionsFromItem(EBBlocks.GLOOM_CHEST))
-//                .criterion(hasItem(Items.TRIPWIRE_HOOK), conditionsFromItem(Items.TRIPWIRE_HOOK))
-//                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.TRAPPED_GLOOM_CHEST))));
-
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SANDSTONE_PILLAR, 2)
                 .input('#', EBBlocks.POLISHED_SANDSTONE)
                 .pattern("#")
@@ -3273,14 +2961,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("@#@")
                 .criterion(hasItem(EBBlocks.THICK_PAPER_BLOCK), conditionsFromItem(EBBlocks.THICK_PAPER_BLOCK))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.THICK_DIVIDED_PAPER_BLOCK)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.AMETHYST_LAMP, 2)
-                .input('#', Items.AMETHYST_SHARD).input('@', Items.IRON_INGOT).input('!', Items.IRON_NUGGET)
-                .pattern("@!@")
-                .pattern("###")
-                .pattern("@!@")
-                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.AMETHYST_LAMP)));
 
         for (DyeColor colors : DyeColor.values()) {
             offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraStairs(colors.getId()), EBBlocks.getDyedAlmentra(colors.getId()), 1);

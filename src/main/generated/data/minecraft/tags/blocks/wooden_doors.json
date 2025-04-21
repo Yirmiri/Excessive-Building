@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "excessive_building:ancient_door",
-    "excessive_building:gloom_door"
+    "excessive_building:ancient_door"
   ]
 }

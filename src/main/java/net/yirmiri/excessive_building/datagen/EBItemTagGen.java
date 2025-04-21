@@ -3,15 +3,13 @@ package net.yirmiri.excessive_building.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
-import net.yirmiri.excessive_building.util.EBTags;
+import net.yirmiri.excessive_building.init.EBTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -29,11 +27,8 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendDecoratedPotIngredients();
         appendGlowRemovals();
         appendAncientLogs();
-        appendGloomLogs();
         appendSoulFireBaseBlocks();
-        appendSmallFlowers();
         appendPiglinLoved();
-        appendSoils();
         appendLeaves();
         appendSnifferFood();
         appendKnittedWools();
@@ -63,14 +58,12 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
 
     public void appendSnifferFood() {
         getOrCreateTagBuilder(ItemTags.SNIFFER_FOOD)
-                .add(EBBlocks.GLOOM_SEEDS.asItem())
                 .add(EBItems.ANCIENT_FRUIT)
         ;
     }
 
     public void appendLeaves() {
         getOrCreateTagBuilder(ItemTags.LEAVES)
-                .add(EBBlocks.GLOOM_LEAVES.asItem())
                 .add(EBBlocks.ANCIENT_LEAVES.asItem())
         ;
     }
@@ -89,15 +82,6 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.CRIMSON_CRAFTING_TABLE.asItem())
                 .add(EBBlocks.WARPED_CRAFTING_TABLE.asItem())
                 .add(EBBlocks.ANCIENT_CRAFTING_TABLE.asItem())
-                .add(EBBlocks.GLOOM_CRAFTING_TABLE.asItem())
-        ;
-    }
-
-    public void appendSoils() {
-        getOrCreateTagBuilder(EBTags.Items.SOILS)
-                .add(Items.DIRT)
-                .add(Items.ROOTED_DIRT)
-                .add(Items.COARSE_DIRT)
         ;
     }
 
@@ -107,14 +91,6 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.GOLD_BRICK_STAIRS.asItem())
                 .add(EBBlocks.GOLD_BRICK_VERTICAL_STAIRS.asItem())
                 .add(EBBlocks.GOLD_BRICK_SLAB.asItem())
-        ;
-    }
-
-    public void appendSmallFlowers() {
-        getOrCreateTagBuilder(ItemTags.SMALL_FLOWERS)
-                .add(EBBlocks.ROSE.asItem())
-                .add(EBBlocks.CYAN_ROSE.asItem())
-                .add(EBBlocks.WHITE_ROSE.asItem())
         ;
     }
 
@@ -169,16 +145,6 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.CRIMSON_MOSAIC.asItem())
                 .add(EBBlocks.WARPED_MOSAIC.asItem())
                 .add(EBBlocks.ANCIENT_MOSAIC.asItem())
-                .add(EBBlocks.GLOOM_MOSAIC.asItem())
-        ;
-    }
-
-    public void appendGloomLogs() {
-        getOrCreateTagBuilder(EBTags.Items.GLOOM_LOGS)
-                .add(EBBlocks.GLOOM_LOG.asItem())
-                .add(EBBlocks.GLOOM_WOOD.asItem())
-                .add(EBBlocks.STRIPPED_GLOOM_LOG.asItem())
-                .add(EBBlocks.STRIPPED_GLOOM_WOOD.asItem())
         ;
     }
 
@@ -200,15 +166,12 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
     public void appendSaplings() {
         getOrCreateTagBuilder(ItemTags.SAPLINGS)
                 .add(EBBlocks.ANCIENT_SAPLING.asItem())
-                .add(EBBlocks.GLOOM_SEEDS.asItem())
-                .add(EBBlocks.GLOOM_SAPLING.asItem())
         ;
     }
 
     public void appendPlanks() {
         getOrCreateTagBuilder(ItemTags.PLANKS)
                 .add(EBBlocks.ANCIENT_PLANKS.asItem())
-                .add(EBBlocks.GLOOM_PLANKS.asItem())
         ;
     }
 

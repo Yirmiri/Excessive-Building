@@ -125,25 +125,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.CHISELED_BAMBOO_PLANKS);
         addDrop(EBBlocks.CHISELED_CRIMSON_PLANKS);
         addDrop(EBBlocks.CHISELED_WARPED_PLANKS);
-        addDrop(EBBlocks.GLOOM_PLANKS);
-        addDrop(EBBlocks.GLOOM_STAIRS);
-        addDrop(EBBlocks.GLOOM_MOSAIC_STAIRS);
-        addDrop(EBBlocks.GLOOM_MOSAIC_VERTICAL_STAIRS);
-        addDrop(EBBlocks.GLOOM_SLAB, slabDrops(EBBlocks.GLOOM_SLAB));
-        addDrop(EBBlocks.GLOOM_MOSAIC);
-        addDrop(EBBlocks.GLOOM_MOSAIC_STAIRS);
-        addDrop(EBBlocks.GLOOM_MOSAIC_SLAB, slabDrops(EBBlocks.GLOOM_MOSAIC_SLAB));
-        addDrop(EBBlocks.GLOOM_FENCE);
-        addDrop(EBBlocks.GLOOM_FENCE_GATE);
-        addDrop(EBBlocks.GLOOM_BUTTON);
-        addDrop(EBBlocks.GLOOM_PRESSURE_PLATE);
-        doorDrops(EBBlocks.GLOOM_DOOR);
-        addDrop(EBBlocks.GLOOM_TRAPDOOR);
-        addDrop(EBBlocks.GLOOM_LOG);
-        addDrop(EBBlocks.GLOOM_WOOD);
-        addDrop(EBBlocks.STRIPPED_GLOOM_LOG);
-        addDrop(EBBlocks.STRIPPED_GLOOM_WOOD);
-        addDrop(EBBlocks.CHISELED_GLOOM_PLANKS);
         addDrop(EBBlocks.COPPER_BRICKS);
         addDrop(EBBlocks.COPPER_BRICK_STAIRS);
         addDrop(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS);
@@ -212,11 +193,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDropWithSilkTouch(EBBlocks.AQUA_SEA_GLASS_PANE);
         addDropWithSilkTouch(EBBlocks.SCARLET_SEA_GLASS_PANE);
         addDropWithSilkTouch(EBBlocks.FUCHSIA_SEA_GLASS_PANE);
-        addDrop(EBBlocks.BONE_BRICKS);
-        addDrop(EBBlocks.BONE_BRICK_STAIRS);
-        addDrop(EBBlocks.BONE_BRICK_VERTICAL_STAIRS);
-        addDrop(EBBlocks.BONE_BRICK_SLAB, slabDrops(EBBlocks.BONE_BRICK_SLAB));
-        addDrop(EBBlocks.BONE_BRICK_WALL);
         addDrop(EBBlocks.SOUL_MAGMA_BLOCK);
         addDrop(EBBlocks.SOUL_SANDSTONE);
         addDrop(EBBlocks.SOUL_SANDSTONE_STAIRS);
@@ -297,7 +273,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.CRIMSON_LADDER);
         addDrop(EBBlocks.WARPED_LADDER);
         addDrop(EBBlocks.CHERRY_LADDER);
-        addDrop(EBBlocks.GLOOM_LADDER);
         addDrop(EBBlocks.ANCIENT_LADDER);
         addDrop(EBBlocks.SPRUCE_CRAFTING_TABLE);
         addDrop(EBBlocks.BIRCH_CRAFTING_TABLE);
@@ -309,7 +284,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.CRIMSON_CRAFTING_TABLE);
         addDrop(EBBlocks.WARPED_CRAFTING_TABLE);
         addDrop(EBBlocks.CHERRY_CRAFTING_TABLE);
-        addDrop(EBBlocks.GLOOM_CRAFTING_TABLE);
         addDrop(EBBlocks.ANCIENT_CRAFTING_TABLE);
         addDrop(EBBlocks.WOODEN_MUG);
         addDrop(EBBlocks.GLASS_JAR);
@@ -374,7 +348,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.WAXED_EXPOSED_CUT_COPPER_VERTICAL_STAIRS);
         addDrop(EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS);
         addDrop(EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS);
-        addDrop(EBBlocks.GLOOM_SEEDS);
         addDrop(EBBlocks.GRANITE_BRICKS);
         addDrop(EBBlocks.GRANITE_BRICK_STAIRS);
         addDrop(EBBlocks.GRANITE_BRICK_VERTICAL_STAIRS);
@@ -400,18 +373,17 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.HERRINGBONE_BRICKS);
         addDrop(EBBlocks.SMOOTH_HERRINGBONE_BRICKS);
         addDrop(EBBlocks.REACHING_LANTERN);
-        this.addDrop(EBBlocks.SPRUCE_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.BIRCH_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.JUNGLE_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.ACACIA_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.DARK_OAK_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.MANGROVE_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.CHERRY_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.BAMBOO_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.CRIMSON_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.WARPED_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.ANCIENT_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
-        this.addDrop(EBBlocks.GLOOM_BOOKSHELF, block -> this.drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.SPRUCE_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.BIRCH_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.JUNGLE_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.ACACIA_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.DARK_OAK_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.MANGROVE_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.CHERRY_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.BAMBOO_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.CRIMSON_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.WARPED_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
+        addDrop(EBBlocks.ANCIENT_BOOKSHELF, block -> drops(block, Items.BOOK, ConstantLootNumberProvider.create(3.0F)));
         addDrop(EBBlocks.BRIMSTONE);
         addDrop(EBBlocks.BRIMSTONE_STAIRS);
         addDrop(EBBlocks.BRIMSTONE_VERTICAL_STAIRS);
@@ -436,17 +408,10 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.ASPHALT_STAIRS);
         addDrop(EBBlocks.ASPHALT_VERTICAL_STAIRS);
         addDrop(EBBlocks.ASPHALT_SLAB, EBBlocks.ASPHALT_SLAB);
-        addDrop(EBBlocks.ROSE);
-        addDrop(EBBlocks.CYAN_ROSE);
-        addDrop(EBBlocks.WHITE_ROSE);
-        addPottedPlantDrops(EBBlocks.POTTED_ROSE);
-        addPottedPlantDrops(EBBlocks.POTTED_CYAN_ROSE);
-        addPottedPlantDrops(EBBlocks.POTTED_WHITE_ROSE);
         addDrop(EBBlocks.CRACKED_BRIMSTONE_BRICKS);
         addDrop(EBBlocks.CRACKED_GRANITE_BRICKS);
         addDrop(EBBlocks.CRACKED_ANDESITE_BRICKS);
         addDrop(EBBlocks.CRACKED_DIORITE_BRICKS);
-        addDrop(EBBlocks.CRACKED_MUD_BRICKS);
         addDrop(EBBlocks.POLISHED_STONE);
         addDrop(EBBlocks.POLISHED_STONE_STAIRS);
         addDrop(EBBlocks.POLISHED_STONE_VERTICAL_STAIRS);
@@ -479,10 +444,8 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.CRIMSON_DECORATIVE_SHELF);
         addDrop(EBBlocks.WARPED_DECORATIVE_SHELF);
         addDrop(EBBlocks.ANCIENT_DECORATIVE_SHELF);
-        addDrop(EBBlocks.GLOOM_DECORATIVE_SHELF);
         addDrop(EBBlocks.WEEPING_CANDLE);
         addDrop(EBBlocks.TWISTING_CANDLE);
-        leavesDrops(EBBlocks.GLOOM_LEAVES, EBBlocks.GLOOM_SAPLING);
         addDrop(EBBlocks.ALMENTRA_STATUE);
         addDyedBlockDrops();
         addDrop(EBBlocks.MOSS_PASTE, block -> multifaceGrowthDrops(block, WITH_SHEARS));
@@ -499,30 +462,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.POLISHED_ALMENTRA_VERTICAL_STAIRS);
         addDrop(EBBlocks.POLISHED_ALMENTRA_SLAB);
         ancientLeavesDrops(EBBlocks.ANCIENT_LEAVES, EBBlocks.ANCIENT_SAPLING);
-//        addDrop(EBBlocks.SPRUCE_CHEST);
-//        addDrop(EBBlocks.BIRCH_CHEST);
-//        addDrop(EBBlocks.JUNGLE_CHEST);
-//        addDrop(EBBlocks.ACACIA_CHEST);
-//        addDrop(EBBlocks.DARK_OAK_CHEST);
-//        addDrop(EBBlocks.MANGROVE_CHEST);
-//        addDrop(EBBlocks.CHERRY_CHEST);
-//        addDrop(EBBlocks.BAMBOO_CHEST);
-//        addDrop(EBBlocks.CRIMSON_CHEST);
-//        addDrop(EBBlocks.WARPED_CHEST);
-//        addDrop(EBBlocks.ANCIENT_CHEST);
-//        addDrop(EBBlocks.GLOOM_CHEST);
-//        addDrop(EBBlocks.TRAPPED_SPRUCE_CHEST);
-//        addDrop(EBBlocks.TRAPPED_BIRCH_CHEST);
-//        addDrop(EBBlocks.TRAPPED_JUNGLE_CHEST);
-//        addDrop(EBBlocks.TRAPPED_ACACIA_CHEST);
-//        addDrop(EBBlocks.TRAPPED_DARK_OAK_CHEST);
-//        addDrop(EBBlocks.TRAPPED_MANGROVE_CHEST);
-//        addDrop(EBBlocks.TRAPPED_CHERRY_CHEST);
-//        addDrop(EBBlocks.TRAPPED_BAMBOO_CHEST);
-//        addDrop(EBBlocks.TRAPPED_CRIMSON_CHEST);
-//        addDrop(EBBlocks.TRAPPED_WARPED_CHEST);
-//        addDrop(EBBlocks.TRAPPED_ANCIENT_CHEST);
-//        addDrop(EBBlocks.TRAPPED_GLOOM_CHEST);
         addDrop(EBBlocks.PAPER_BLOCK);
         addDrop(EBBlocks.THIN_PAPER_BLOCK);
         addDrop(EBBlocks.THIN_DIAGONAL_PAPER_BLOCK);
@@ -536,7 +475,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         addDrop(EBBlocks.THICK_PAPER_STAIRS);
         addDrop(EBBlocks.THICK_PAPER_VERTICAL_STAIRS);
         addDrop(EBBlocks.THICK_PAPER_SLAB, EBBlocks.THICK_PAPER_SLAB);
-        addDrop(EBBlocks.AMETHYST_LAMP);
         addDrop(EBBlocks.MUD_BRICK_VERTICAL_STAIRS);
     }
 
@@ -565,6 +503,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
     }
 
     public LootTable.Builder ancientLeavesDrops(Block leaves, Block drop, float... chance) {
-        return this.leavesDrops(leaves, drop, chance).pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS).with(((LeafEntry.Builder)this.addSurvivesExplosionCondition(leaves, ItemEntry.builder(EBItems.ANCIENT_FRUIT))).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, new float[]{0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F}))));
+        return leavesDrops(leaves, drop, chance).pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0F)).conditionally(WITHOUT_SILK_TOUCH_NOR_SHEARS).with(((LeafEntry.Builder)addSurvivesExplosionCondition(leaves, ItemEntry.builder(EBItems.ANCIENT_FRUIT))).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, new float[]{0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F}))));
     }
 }

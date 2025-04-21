@@ -10,23 +10,23 @@ import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBPotions {
-    public static final Potion HASTY = register("hasty_potion",
-            new Potion(new StatusEffectInstance(StatusEffects.HASTE, EBConfig.HASTY_DURATION.get(), EBConfig.HASTY_AMPLIFIER.get())));
+    public static final Potion ENDURANCE = register("endurance_potion",
+            new Potion(new StatusEffectInstance(StatusEffects.HASTE, EBConfig.ENDURANCE_DURATION.get(), EBConfig.ENDURANCE_AMPLIFIER.get())));
 
-    public static final Potion LONG_HASTY = register("long_hasty_potion",
-            new Potion(new StatusEffectInstance(StatusEffects.HASTE, EBConfig.LONG_HASTY_DURATION.get(), EBConfig.HASTY_AMPLIFIER.get())));
+    public static final Potion LONG_ENDURANCE = register("long_endurance_potion",
+            new Potion(new StatusEffectInstance(StatusEffects.HASTE, EBConfig.LONG_ENDURANCE_DURATION.get(), EBConfig.ENDURANCE_AMPLIFIER.get())));
 
-    public static final Potion STRONG_HASTY = register("strong_hasty_potion",
-            new Potion(new StatusEffectInstance(StatusEffects.HASTE, EBConfig.HASTY_DURATION.get(), EBConfig.STRONG_HASTY_AMPLIFIER.get())));
+    public static final Potion STRONG_ENDURANCE = register("strong_endurance_potion",
+            new Potion(new StatusEffectInstance(StatusEffects.HASTE, EBConfig.ENDURANCE_DURATION.get(), EBConfig.STRONG_ENDURANCE_AMPLIFIER.get())));
 
-    public static final Potion FATIGUED = register("fatigued_potion",
-            new Potion(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, EBConfig.FATIGUED_DURATION.get(), EBConfig.FATIGUED_AMPLIFIER.get())));
+    public static final Potion FATIGUING = register("fatiguing_potion",
+            new Potion(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, EBConfig.FATIGUING_DURATION.get(), EBConfig.FATIGUING_AMPLIFIER.get())));
 
-    public static final Potion LONG_FATIGUED = register("long_fatigued_potion",
-            new Potion(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, EBConfig.LONG_FATIGUED_DURATION.get(), EBConfig.FATIGUED_AMPLIFIER.get())));
+    public static final Potion LONG_FATIGUING = register("long_fatiguing_potion",
+            new Potion(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, EBConfig.LONG_FATIGUING_DURATION.get(), EBConfig.FATIGUING_AMPLIFIER.get())));
 
-    public static final Potion STRONG_FATIGUED = register("strong_fatigued_potion",
-            new Potion(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, EBConfig.FATIGUED_DURATION.get(), EBConfig.STRONG_HASTY_AMPLIFIER.get())));
+    public static final Potion STRONG_FATIGUING = register("strong_fatiguing_potion",
+            new Potion(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, EBConfig.FATIGUING_DURATION.get(), EBConfig.STRONG_ENDURANCE_AMPLIFIER.get())));
 
     private static Potion register(String id, Potion potion) {
         return Registry.register(Registries.POTION, new Identifier(ExcessiveBuilding.MOD_ID, id), potion);

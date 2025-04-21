@@ -2,7 +2,6 @@ package net.yirmiri.excessive_building.registry;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleTypes;
@@ -18,15 +17,14 @@ import net.yirmiri.excessive_building.block.sign.EBSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBWallHangingSignBlock;
 import net.yirmiri.excessive_building.block.sign.EBWallSignBlock;
 import net.yirmiri.excessive_building.item.configurable.*;
-import net.yirmiri.excessive_building.util.EBBlockSetTypes;
+import net.yirmiri.excessive_building.init.EBBlockSetTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
-import net.yirmiri.excessive_building.worldgen.sapling.AncientSaplingGenerator;
-import net.yirmiri.excessive_building.worldgen.sapling.GloomSaplingGenerator;
+import net.yirmiri.excessive_building.worldgen.generator.AncientSaplingGenerator;
 
 import java.util.HashMap;
 
 public class EBBlocks {
-
+    //VERTICAL STAIRS
     public static final Block OAK_VERTICAL_STAIRS = registerVStairs("oak_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), true);
     public static final Block SPRUCE_VERTICAL_STAIRS = registerVStairs("spruce_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.SPRUCE_PLANKS)), true);
     public static final Block BIRCH_VERTICAL_STAIRS = registerVStairs("birch_vertical_stairs", new VerticalStairsBlock(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS)), true);
@@ -87,8 +85,6 @@ public class EBBlocks {
     public static final Block QUARTZ_BRICK_SLAB = register("quartz_brick_slab", new SlabBlock(EBProperties.BlockP.QUARTZ_BRICKS), true);
     public static final Block QUARTZ_BRICK_VERTICAL_STAIRS = registerVStairs("quartz_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.QUARTZ_BRICKS), true);
     public static final Block QUARTZ_BRICK_WALL = register("quartz_brick_wall", new WallBlock(EBProperties.BlockP.QUARTZ_BRICKS), true);
-
-    public static final Block CRACKED_MUD_BRICKS = register("cracked_mud_bricks", new Block(EBProperties.BlockP.MUD_BRICKS), true);
 
     //MOSAIC WOOD
     public static final Block OAK_MOSAIC = register("oak_mosaic", new Block(EBProperties.BlockP.GENERIC_WOOD), true);
@@ -156,7 +152,6 @@ public class EBBlocks {
     public static final Block CHISELED_CRIMSON_PLANKS = register("chiseled_crimson_planks", new Block(EBProperties.BlockP.CRIMSON_WOOD), true);
     public static final Block CHISELED_WARPED_PLANKS = register("chiseled_warped_planks", new Block(EBProperties.BlockP.WARPED_WOOD), true);
     public static final Block CHISELED_ANCIENT_PLANKS = register("chiseled_ancient_planks", new Block(EBProperties.BlockP.ANCIENT_WOOD), true);
-    public static final Block CHISELED_GLOOM_PLANKS = register("chiseled_gloom_planks", new Block(EBProperties.BlockP.GLOOM_WOOD), true);
 
     //ANCIENT
     public static final Block ANCIENT_LOG = register("ancient_log", new PillarBlock(EBProperties.BlockP.ANCIENT_WOOD), true);
@@ -185,41 +180,9 @@ public class EBBlocks {
     public static final Block ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", new EBHangingSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), false);
     public static final Block ANCIENT_WALL_HANGING_SIGN = register("ancient_wall_hanging_sign", new EBWallHangingSignBlock(EBBlockSetTypes.EBWoodTypes.ANCIENT, EBProperties.BlockP.ANCIENT_WOOD), false);
 
-    public static final Block ANCIENT_LEAVES = register("ancient_leaves", new GlowingLeavesBlock(EBParticles.ANCIENT_PARTICLE, EBProperties.BlockP.GLOWING_LEAVES), true);
+    public static final Block ANCIENT_LEAVES = register("ancient_leaves", new FloweringLeavesBlock(EBParticles.ANCIENT_PARTICLE, EBProperties.BlockP.ANCIENT_LEAVES), true);
     public static final Block ANCIENT_SAPLING = registerAncSapling("ancient_sapling", new AncientSaplingBlock(new AncientSaplingGenerator(), EBProperties.BlockP.GLOWING_SAPLING), true);
     public static final Block POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", Blocks.createFlowerPotBlock(EBBlocks.ANCIENT_SAPLING), false);
-
-    //GLOOM
-    public static final Block GLOOM_LOG = register("gloom_log", new PillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block STRIPPED_GLOOM_LOG = register("stripped_gloom_log", new PillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_WOOD = register("gloom_wood", new PillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block STRIPPED_GLOOM_WOOD = register("stripped_stripped_gloom_log_wood", new PillarBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-
-    public static final Block GLOOM_PLANKS = register("gloom_planks", new Block(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_STAIRS = register("gloom_stairs", new StairsBlock(GLOOM_PLANKS.getDefaultState(), EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_SLAB = register("gloom_slab", new SlabBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_VERTICAL_STAIRS = registerVStairs("gloom_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-
-    public static final Block GLOOM_MOSAIC = register("gloom_mosaic", new Block(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_MOSAIC_STAIRS = register("gloom_mosaic_stairs", new StairsBlock(GLOOM_MOSAIC.getDefaultState(), EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_MOSAIC_SLAB = register("gloom_mosaic_slab", new SlabBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_MOSAIC_VERTICAL_STAIRS = registerVStairs("gloom_mosaic_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-
-    public static final Block GLOOM_FENCE = register("gloom_fence", new FenceBlock(EBProperties.BlockP.GLOOM_WOOD), true);
-    public static final Block GLOOM_FENCE_GATE = register("gloom_fence_gate", new FenceGateBlock(EBProperties.BlockP.GLOOM_WOOD, EBBlockSetTypes.EBWoodTypes.GLOOM), true);
-    public static final Block GLOOM_DOOR = register("gloom_door", new DoorBlock(EBProperties.BlockP.GLOOM_DOOR, EBBlockSetTypes.GLOOM), true);
-    public static final Block GLOOM_TRAPDOOR = register("gloom_trapdoor", new TrapdoorBlock(EBProperties.BlockP.GLOOM_TRAPDOOR, EBBlockSetTypes.GLOOM), true);
-    public static final Block GLOOM_PRESSURE_PLATE = register("gloom_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, EBProperties.BlockP.GLOOM_WOOD, EBBlockSetTypes.GLOOM), true);
-    public static final Block GLOOM_BUTTON = register("gloom_button", new ButtonBlock(EBProperties.BlockP.GLOOM_WOOD, EBBlockSetTypes.GLOOM, 30, true), true);
-    public static final Block GLOOM_SIGN = register("gloom_sign", new EBSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
-    public static final Block GLOOM_WALL_SIGN = register("gloom_wall_sign", new EBWallSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
-    public static final Block GLOOM_HANGING_SIGN = register("gloom_hanging_sign", new EBHangingSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
-    public static final Block GLOOM_WALL_HANGING_SIGN = register("gloom_wall_hanging_sign", new EBWallHangingSignBlock(EBBlockSetTypes.EBWoodTypes.GLOOM, EBProperties.BlockP.GLOOM_WOOD), false);
-
-    public static final Block GLOOM_LEAVES = register("gloom_leaves", new FloweringLeavesBlock(EBParticles.GLOOM_PARTICLE, EBProperties.BlockP.GLOOM_LEAVES), true);
-    public static final Block GLOOM_SEEDS = register("gloom_seeds", new SaplingBlock(new GloomSaplingGenerator(), EBProperties.BlockP.GLOOM_SEEDS), true);
-    public static final Block GLOOM_SAPLING = registerGlmSapling("gloom_sapling", new GloomSaplingBlock(new GloomSaplingGenerator(), EBProperties.BlockP.GLOOM_SAPLING), true);
-    public static final Block POTTED_GLOOM_SAPLING = register("potted_gloom_sapling", Blocks.createFlowerPotBlock(EBBlocks.GLOOM_SAPLING), false);
 
     //COBBLED BRICKS
     public static final Block COBBLESTONE_BRICKS = register("cobblestone_bricks", new Block(EBProperties.BlockP.COBBLESTONE_BRICKS), true);
@@ -606,35 +569,6 @@ public class EBBlocks {
     public static final Block CRIMSON_LADDER = registerLadder("crimson_ladder", new EBLadderBlock(EBProperties.BlockP.CRIMSON_LADDER), true);
     public static final Block WARPED_LADDER = registerLadder("warped_ladder", new EBLadderBlock(EBProperties.BlockP.WARPED_LADDER), true);
     public static final Block ANCIENT_LADDER = registerLadder("ancient_ladder", new EBLadderBlock(EBProperties.BlockP.ANCIENT_LADDER), true);
-    public static final Block GLOOM_LADDER = registerLadder("gloom_ladder", new EBLadderBlock(EBProperties.BlockP.GLOOM_LADDER), true);
-
-    //CHESTS
-//    public static final Block SPRUCE_CHEST = registerCV("spruce_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.SPRUCE, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block BIRCH_CHEST = registerCV("birch_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.BIRCH, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block JUNGLE_CHEST = registerCV("jungle_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.JUNGLE, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block ACACIA_CHEST = registerCV("acacia_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.ACACIA, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block DARK_OAK_CHEST = registerCV("dark_oak_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.DARK_OAK, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block MANGROVE_CHEST = registerCV("mangrove_chest", new EBChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.MANGROVE, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block CHERRY_CHEST = registerCV("cherry_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, WoodType.CHERRY, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block BAMBOO_CHEST = registerCV("bamboo_chest", new EBChestBlock(EBProperties.BlockP.BAMBOO_WOOD, WoodType.BAMBOO, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block CRIMSON_CHEST = registerCV("crimson_chest", new EBChestBlock(EBProperties.BlockP.CRIMSON_WOOD, WoodType.CRIMSON, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block WARPED_CHEST = registerCV("warped_chest", new EBChestBlock(EBProperties.BlockP.WARPED_WOOD, WoodType.WARPED, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block ANCIENT_CHEST = registerCV("ancient_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.ANCIENT, () -> EBBlockEntities.EB_CHEST), true);
-//    public static final Block GLOOM_CHEST = registerCV("gloom_chest", new EBChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.GLOOM, () -> EBBlockEntities.EB_CHEST), true);
-//
-//    //TRAPPED CHESTS
-//    public static final Block TRAPPED_SPRUCE_CHEST = registerCV("trapped_spruce_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.SPRUCE, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_BIRCH_CHEST = registerCV("trapped_birch_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.BIRCH, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_JUNGLE_CHEST = registerCV("trapped_jungle_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.JUNGLE, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_ACACIA_CHEST = registerCV("trapped_acacia_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.ACACIA, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_DARK_OAK_CHEST = registerCV("trapped_dark_oak_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.DARK_OAK, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_MANGROVE_CHEST = registerCV("trapped_mangrove_chest", new EBTrappedChestBlock(EBProperties.BlockP.GENERIC_WOOD, WoodType.MANGROVE, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_CHERRY_CHEST = registerCV("trapped_cherry_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, WoodType.CHERRY, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_BAMBOO_CHEST = registerCV("trapped_bamboo_chest", new EBTrappedChestBlock(EBProperties.BlockP.BAMBOO_WOOD, WoodType.BAMBOO, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_CRIMSON_CHEST = registerCV("trapped_crimson_chest", new EBTrappedChestBlock(EBProperties.BlockP.CRIMSON_WOOD, WoodType.CRIMSON, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_WARPED_CHEST = registerCV("trapped_warped_chest", new EBTrappedChestBlock(EBProperties.BlockP.WARPED_WOOD, WoodType.WARPED, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_ANCIENT_CHEST = registerCV("trapped_ancient_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.ANCIENT, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
-//    public static final Block TRAPPED_GLOOM_CHEST = registerCV("trapped_gloom_chest", new EBTrappedChestBlock(EBProperties.BlockP.CHERRY_WOOD, EBBlockSetTypes.EBWoodTypes.GLOOM, () -> EBBlockEntities.EB_TRAPPED_CHEST), true);
 
     //CRAFTING TABLES
     public static final Block SPRUCE_CRAFTING_TABLE = registerCT("spruce_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.GENERIC_WOOD), true);
@@ -648,7 +582,6 @@ public class EBBlocks {
     public static final Block CRIMSON_CRAFTING_TABLE = registerCT("crimson_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.CRIMSON_WOOD), true);
     public static final Block WARPED_CRAFTING_TABLE = registerCT("warped_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.WARPED_WOOD), true);
     public static final Block ANCIENT_CRAFTING_TABLE = registerCT("ancient_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.CHERRY_WOOD), true);
-    public static final Block GLOOM_CRAFTING_TABLE = registerCT("gloom_crafting_table", new EBCraftingTableBlock(EBProperties.BlockP.CHERRY_WOOD), true);
 
     //BOOKSHELF
     public static final Block SPRUCE_BOOKSHELF = registerBS("spruce_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
@@ -662,7 +595,6 @@ public class EBBlocks {
     public static final Block CRIMSON_BOOKSHELF = registerBS("crimson_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.CRIMSON_SHELF), true);
     public static final Block WARPED_BOOKSHELF = registerBS("warped_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.WARPED_SHELF), true);
     public static final Block ANCIENT_BOOKSHELF = registerBS("ancient_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
-    public static final Block GLOOM_BOOKSHELF = registerBS("gloom_bookshelf", new EBBookshelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
 
     //DECORATIVE SHELF
     public static final Block OAK_DECORATIVE_SHELF = registerDS("oak_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.GENERIC_SHELF), true);
@@ -677,8 +609,7 @@ public class EBBlocks {
     public static final Block CRIMSON_DECORATIVE_SHELF = registerDS("crimson_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.CRIMSON_SHELF), true);
     public static final Block WARPED_DECORATIVE_SHELF = registerDS("warped_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.WARPED_SHELF), true);
     public static final Block ANCIENT_DECORATIVE_SHELF = registerDS("ancient_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
-    public static final Block GLOOM_DECORATIVE_SHELF = registerDS("gloom_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
-    
+
     //DECORATIVES
     public static final Block WOODEN_MUG = registerDeco("wooden_mug", new WoodenMugBlock(EBProperties.BlockP.WOODEN_MUG), true);
     public static final Block GLASS_JAR = registerDeco("glass_jar", new GlassJarBlock(EBProperties.BlockP.GLASS_JAR), true);
@@ -773,12 +704,6 @@ public class EBBlocks {
     public static final Block ASPHALT_VERTICAL_STAIRS = registerAPVStairs("asphalt_vertical_stairs", new AsphaltVerticalStairsBlock(EBProperties.BlockP.ASPHALT), true);
 
     //NATURE
-    public static final Block ROSE = register("rose", new FlowerBlock(StatusEffects.HEALTH_BOOST, 20, EBProperties.BlockP.ROSE), true);
-    public static final Block POTTED_ROSE = register("potted_rose", Blocks.createFlowerPotBlock(EBBlocks.ROSE), false);
-    public static final Block CYAN_ROSE = register("cyan_rose", new FlowerBlock(StatusEffects.INVISIBILITY, 10, EBProperties.BlockP.CYAN_ROSE), true);
-    public static final Block POTTED_CYAN_ROSE = register("potted_cyan_rose", Blocks.createFlowerPotBlock(EBBlocks.CYAN_ROSE), false);
-    public static final Block WHITE_ROSE = register("white_rose", new FlowerBlock(StatusEffects.LUCK, 30, EBProperties.BlockP.WHITE_ROSE), true);
-    public static final Block POTTED_WHITE_ROSE = register("potted_white_rose", Blocks.createFlowerPotBlock(EBBlocks.WHITE_ROSE), false);
     public static final Block MOSS_PASTE = register("moss_paste", new GlowLichenBlock(EBProperties.BlockP.MOSS_PASTE), true);
 
     //PAPER
@@ -803,17 +728,10 @@ public class EBBlocks {
     public static final Block TWISTING_CANDLE = register("twisting_candle", new ParticleCandleBlock(ParticleTypes.WARPED_SPORE, EBProperties.BlockP.PARTICLE_CANDLE), true);
     
     public static final Block REACHING_LANTERN = register("reaching_lantern", new ReachingLanternBlock(EBProperties.BlockP.REACHING_LANTERN), true);
-    public static final Block AMETHYST_LAMP = register("amethyst_lamp", new Block(EBProperties.BlockP.LAMP), true);
-
-    public static final Block BONE_BRICKS = register("bone_bricks", new Block(EBProperties.BlockP.BONE), true);
-    public static final Block BONE_BRICK_STAIRS = register("bone_brick_stairs", new StairsBlock(BONE_BRICKS.getDefaultState(), EBProperties.BlockP.BONE), true);
-    public static final Block BONE_BRICK_SLAB = register("bone_brick_slab", new SlabBlock(EBProperties.BlockP.BONE), true);
-    public static final Block BONE_BRICK_VERTICAL_STAIRS = registerVStairs("bone_brick_vertical_stairs", new VerticalStairsBlock(EBProperties.BlockP.BONE), true);
-    public static final Block BONE_BRICK_WALL = register("bone_brick_wall", new WallBlock(EBProperties.BlockP.BONE), true);
 
     public static final Block LOGO_BLOCK = register("logo_block", new Block(EBProperties.BlockP.INDESTRUCTIBLE), true);
 
-    //TODO: CALCITE BLOCKSET, PEDESTALS, DYED TERRACOTTA POTS, GLOOM CRYSTALS, FLOWERING LEAVES (WITH FALLING LEAVES), BRAZIERS, DYEABLE PAPER BLOCKS
+    //TODO: PEDESTALS, BRAZIERS, DYEABLE PAPER BLOCKS
 
     private static Block register(String id, Block block, boolean registerItem) {
         if (registerItem) {
@@ -826,7 +744,7 @@ public class EBBlocks {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new BlockItem(block, new Item.Settings()));
     }
 
-    //CONFIGURABLE BLOCKS
+    //CONFIGURABLE BLOCKS ---- what in the f**k was me a year ago doing :skull:
     private static Block registerAP(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerAPBlockItem(id, block);
@@ -869,17 +787,6 @@ public class EBBlocks {
 
     private static Item registerRBVStairsBlockItem(String id, Block block) {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new ResourceBrickVerticalStairsBlockItem(block, new Item.Settings()));
-    }
-
-    private static Block registerGlmSapling(String id, Block block, boolean registerItem) {
-        if (registerItem) {
-            registerGlmSaplingBlockItem(id, block);
-        }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
-    }
-
-    private static Item registerGlmSaplingBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new GloomSaplingItem(block, new Item.Settings()));
     }
 
     private static Block registerAncSapling(String id, Block block, boolean registerItem) {

@@ -9,10 +9,8 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBParticles {
     public static final DefaultParticleType ANCIENT_PARTICLE = FabricParticleTypes.simple();
-    public static final DefaultParticleType GLOOM_PARTICLE = FabricParticleTypes.simple();
 
     public static void loadParticles() {
         Registry.register(Registries.PARTICLE_TYPE, Identifier.of(ExcessiveBuilding.MOD_ID, "ancient_particle"), ANCIENT_PARTICLE);
-        Registry.register(Registries.PARTICLE_TYPE, Identifier.of(ExcessiveBuilding.MOD_ID, "gloom_particle"), GLOOM_PARTICLE);
     }
 }

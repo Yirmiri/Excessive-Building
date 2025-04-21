@@ -9,7 +9,6 @@ import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.yirmiri.excessive_building.EBConfig;
-import net.yirmiri.excessive_building.block.GlowingLeavesBlock;
 import net.yirmiri.excessive_building.block.ParticleCandleBlock;
 import net.yirmiri.excessive_building.registry.EBSounds;
 
@@ -58,19 +57,13 @@ public class EBProperties {
         public static final Block.Settings ALMENTRA_BRICKS = FabricBlockSettings.copyOf(Blocks.DEEPSLATE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.BROWN);
 
         //NATURE
-        public static final Block.Settings GLOWING_LEAVES = FabricBlockSettings.of().luminance(state -> GlowingLeavesBlock.isGlowing(state) ? 8 : 0).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
-        public static final Block.Settings GLOWING_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).luminance(state -> 5);
-        public static final Block.Settings GLOOM_SEEDS = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).sounds(BlockSoundGroup.ROOTS);
-        public static final Block.Settings GLOOM_LEAVES = FabricBlockSettings.copyOf(Blocks.CHERRY_LEAVES);
-        public static final Block.Settings GLOOM_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING);
+        public static final Block.Settings ANCIENT_LEAVES = FabricBlockSettings.of().luminance(s -> 8).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
+        public static final Block.Settings GLOWING_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).luminance(s -> 5);
 
         //SEA GLASS
         public static final Block.Settings SEA_GLASS = FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque();
 
         //NATURE
-        public static final Block.Settings ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.RED);
-        public static final Block.Settings CYAN_ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.CYAN);
-        public static final Block.Settings WHITE_ROSE = FabricBlockSettings.copyOf(Blocks.POPPY).mapColor(MapColor.WHITE);
         public static final Block.Settings MOSS_PASTE = FabricBlockSettings.copyOf(Blocks.GLOW_LICHEN).mapColor(MapColor.GREEN).sounds(BlockSoundGroup.AZALEA_LEAVES).lightLevel(0);
 
         //RESOURCES
@@ -118,15 +111,11 @@ public class EBProperties {
 
         //MISC
         public static final Block.Settings PARTICLE_CANDLE = FabricBlockSettings.copyOf(Blocks.CANDLE).luminance(ParticleCandleBlock.STATE_TO_LUMINANCE);
-        public static final Block.Settings MUD_BRICKS = FabricBlockSettings.copyOf(Blocks.MUD_BRICKS);
         public static final Block.Settings ASPHALT = FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK);
         public static final Block.Settings REACHING_LANTERN = FabricBlockSettings.copyOf(Blocks.SOUL_LANTERN);
         public static final Block.Settings BRICKS = FabricBlockSettings.copyOf(Blocks.BRICKS);
-        public static final Block.Settings BONE = FabricBlockSettings.copyOf(Blocks.BONE_BLOCK);
         public static final Block.Settings INDESTRUCTIBLE = FabricBlockSettings.copyOf(Blocks.BEDROCK);
-        public static final Block.Settings TERRACOTTA_POT = FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.DECORATED_POT_SHATTER);
         public static final Block.Settings PAPER = FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).sounds(BlockSoundGroup.WOOL);
-        public static final Block.Settings LAMP = FabricBlockSettings.copyOf(Blocks.SEA_LANTERN);
     }
 
     public static class ItemP {

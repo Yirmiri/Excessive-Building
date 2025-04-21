@@ -18,11 +18,7 @@ import java.util.List;
 
 public class EBPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ANCIENT_TREE = createKey("ancient_tree"); //ancient trees don't generate but whatever
-    public static final RegistryKey<PlacedFeature> GLOOM_TREE = createKey("gloom_tree"); //neither do these
     public static final RegistryKey<PlacedFeature> ORE_BRIMSTONE = createKey("ore_brimstone");
-    public static final RegistryKey<PlacedFeature> PATCH_ROSE = createKey("patch_rose");
-    public static final RegistryKey<PlacedFeature> PATCH_CYAN_ROSE = createKey("patch_cyan_rose");
-    public static final RegistryKey<PlacedFeature> PATCH_WHITE_ROSE = createKey("patch_white_rose");
     public static final RegistryKey<PlacedFeature> ORE_ALMENTRA = createKey("ore_almentra");
 
     public static void bootstrap(Registerable<PlacedFeature> ctx) {
@@ -37,9 +33,6 @@ public class EBPlacedFeatures {
 
     public static void addBiomeModifiers() {
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_NETHER), GenerationStep.Feature.UNDERGROUND_ORES, EBPlacedFeatures.ORE_BRIMSTONE);
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_ROSE);
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Feature.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_WHITE_ROSE);
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, EBPlacedFeatures.PATCH_CYAN_ROSE);
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN), GenerationStep.Feature.UNDERGROUND_ORES, EBPlacedFeatures.ORE_ALMENTRA);
     }
 

@@ -6,7 +6,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.DyeColor;
 import net.yirmiri.excessive_building.registry.EBBlocks;
-import net.yirmiri.excessive_building.util.EBTags;
+import net.yirmiri.excessive_building.init.EBTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -28,7 +28,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendLogs();
         appendLeaves();
         appendAncientLogs();
-        appendGloomLogs();
         appendSigns();
         appendWallSigns();
         appendHangingSigns();
@@ -92,7 +91,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.BAMBOO_BOOKSHELF)
                 .add(EBBlocks.CRIMSON_BOOKSHELF)
                 .add(EBBlocks.WARPED_BOOKSHELF)
-                .add(EBBlocks.GLOOM_BOOKSHELF)
                 .add(EBBlocks.ANCIENT_BOOKSHELF)
                 .add(EBBlocks.OAK_DECORATIVE_SHELF)
                 .add(EBBlocks.SPRUCE_DECORATIVE_SHELF)
@@ -104,7 +102,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.BAMBOO_DECORATIVE_SHELF)
                 .add(EBBlocks.CRIMSON_DECORATIVE_SHELF)
                 .add(EBBlocks.WARPED_DECORATIVE_SHELF)
-                .add(EBBlocks.GLOOM_DECORATIVE_SHELF)
                 .add(EBBlocks.ANCIENT_DECORATIVE_SHELF)
         ;
     }
@@ -122,42 +119,36 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.CRIMSON_LADDER)
                 .add(EBBlocks.WARPED_LADDER)
                 .add(EBBlocks.ANCIENT_LADDER)
-                .add(EBBlocks.GLOOM_LADDER)
         ;
     }
 
     public void appendWoodenDoors() {
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
                 .add(EBBlocks.ANCIENT_DOOR)
-                .add(EBBlocks.GLOOM_DOOR)
         ;
     }
 
     public void appendWoodenFences() {
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
                 .add(EBBlocks.ANCIENT_FENCE)
-                .add(EBBlocks.GLOOM_FENCE)
         ;
     }
 
     public void appendWoodenStairs() {
         getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
                 .add(EBBlocks.ANCIENT_STAIRS)
-                .add(EBBlocks.GLOOM_STAIRS)
         ;
     }
 
     public void appendWoodenSlabs() {
         getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
                 .add(EBBlocks.ANCIENT_SLAB)
-                .add(EBBlocks.GLOOM_SLAB)
         ;
     }
 
     public void appendWoodenTrapdoors() {
         getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
                 .add(EBBlocks.ANCIENT_TRAPDOOR)
-                .add(EBBlocks.GLOOM_TRAPDOOR)
         ;
     }
 
@@ -383,65 +374,48 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     public void appendWoodenPressurePlates() {
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(EBBlocks.ANCIENT_PRESSURE_PLATE)
-                .add(EBBlocks.GLOOM_PRESSURE_PLATE)
         ;
     }
 
     public void appendWoodenButtons() {
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
                 .add(EBBlocks.ANCIENT_BUTTON)
-                .add(EBBlocks.GLOOM_BUTTON)
         ;
     }
 
     public void appendSigns() {
         getOrCreateTagBuilder(BlockTags.SIGNS)
                 .add(EBBlocks.ANCIENT_SIGN)
-                .add(EBBlocks.GLOOM_SIGN)
         ;
     }
 
     public void appendWallSigns() {
         getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
                 .add(EBBlocks.ANCIENT_WALL_SIGN)
-                .add(EBBlocks.GLOOM_WALL_SIGN)
         ;
     }
 
     public void appendHangingSigns() {
         getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
                 .add(EBBlocks.ANCIENT_HANGING_SIGN)
-                .add(EBBlocks.GLOOM_HANGING_SIGN)
         ;
     }
 
     public void appendWallHangingSigns() {
         getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
                 .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN)
-                .add(EBBlocks.GLOOM_WALL_HANGING_SIGN)
         ;
     }
 
     public void appendLogs() {
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .addTag(EBTags.Blocks.ANCIENT_LOGS)
-                .addTag(EBTags.Blocks.GLOOM_LOGS)
         ;
     }
 
     public void appendLeaves() {
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(EBBlocks.ANCIENT_LEAVES)
-                .add(EBBlocks.GLOOM_LEAVES)
-        ;
-    }
-
-    public void appendGloomLogs() {
-        getOrCreateTagBuilder(EBTags.Blocks.GLOOM_LOGS)
-                .add(EBBlocks.GLOOM_LOG)
-                .add(EBBlocks.STRIPPED_GLOOM_LOG)
-                .add(EBBlocks.GLOOM_WOOD)
-                .add(EBBlocks.STRIPPED_GLOOM_WOOD)
         ;
     }
 
@@ -457,40 +431,29 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     public void appendSaplings() {
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
                 .add(EBBlocks.ANCIENT_SAPLING)
-                .add(EBBlocks.GLOOM_SEEDS)
-                .add(EBBlocks.GLOOM_SAPLING)
         ;
     }
 
         public void appendFlowerPots() {
             getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                     .add(EBBlocks.POTTED_ANCIENT_SAPLING)
-                    .add(EBBlocks.POTTED_ROSE)
-                    .add(EBBlocks.POTTED_CYAN_ROSE)
-                    .add(EBBlocks.POTTED_WHITE_ROSE)
-                    .add(EBBlocks.POTTED_GLOOM_SAPLING)
             ;
         }
 
     public void appendSmallFlowers() {
         getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
-                .add(EBBlocks.ROSE)
-                .add(EBBlocks.CYAN_ROSE)
-                .add(EBBlocks.WHITE_ROSE)
         ;
     }
 
         public void appendFences() {
             getOrCreateTagBuilder(BlockTags.FENCES)
                     .add(EBBlocks.ANCIENT_FENCE)
-                    .add(EBBlocks.GLOOM_FENCE)
             ;
         }
 
         public void appendFenceGates() {
             getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                     .add(EBBlocks.ANCIENT_FENCE_GATE)
-                    .add(EBBlocks.GLOOM_FENCE_GATE)
             ;
         }
 
@@ -500,7 +463,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.MOSSY_COBBLESTONE_BRICK_WALL)
                     .add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL)
                     .add(EBBlocks.BLACKSTONE_BRICK_WALL)
-                    .add(EBBlocks.BONE_BRICK_WALL)
                     .add(EBBlocks.SOUL_SANDSTONE_WALL)
                     .add(EBBlocks.QUARTZ_BRICK_WALL)
                     .add(EBBlocks.DIORITE_BRICK_WALL)
@@ -546,7 +508,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.CRACKED_BRIMSTONE_BRICKS)
                     .add(EBBlocks.CRACKED_GRANITE_BRICKS)
                     .add(EBBlocks.CRACKED_DIORITE_BRICKS)
-                    .add(EBBlocks.CRACKED_MUD_BRICKS)
                     .add(EBBlocks.ASPHALT)
                     .add(EBBlocks.ASPHALT_STAIRS)
                     .add(EBBlocks.ASPHALT_SLAB)
@@ -626,11 +587,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.CUT_SOUL_SANDSTONE)
                     .add(EBBlocks.CHISELED_SOUL_SANDSTONE)
                     .add(EBBlocks.SOUL_MAGMA_BLOCK)
-                    .add(EBBlocks.BONE_BRICKS)
-                    .add(EBBlocks.BONE_BRICK_STAIRS)
-                    .add(EBBlocks.BONE_BRICK_SLAB)
-                    .add(EBBlocks.BONE_BRICK_VERTICAL_STAIRS)
-                    .add(EBBlocks.BONE_BRICK_WALL)
                     .add(EBBlocks.COBBLESTONE_BRICKS)
                     .add(EBBlocks.COBBLESTONE_BRICK_STAIRS)
                     .add(EBBlocks.COBBLESTONE_BRICK_SLAB)
@@ -780,7 +736,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         public void appendHoeMineable() {
             getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                     .add(EBBlocks.ANCIENT_LEAVES)
-                    .add(EBBlocks.GLOOM_LEAVES)
             ;
         }
 
@@ -842,7 +797,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.CRIMSON_CRAFTING_TABLE)
                 .add(EBBlocks.WARPED_CRAFTING_TABLE)
                 .add(EBBlocks.ANCIENT_CRAFTING_TABLE)
-                .add(EBBlocks.GLOOM_CRAFTING_TABLE)
                 .add(EBBlocks.SPRUCE_LADDER)
                 .add(EBBlocks.BIRCH_LADDER)
                 .add(EBBlocks.JUNGLE_LADDER)
@@ -854,7 +808,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.CRIMSON_LADDER)
                 .add(EBBlocks.WARPED_LADDER)
                 .add(EBBlocks.ANCIENT_LADDER)
-                .add(EBBlocks.GLOOM_LADDER)
                 .add(EBBlocks.OAK_MOSAIC)
                 .add(EBBlocks.OAK_MOSAIC_STAIRS)
                 .add(EBBlocks.OAK_MOSAIC_SLAB)
@@ -927,27 +880,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.CHISELED_BAMBOO_PLANKS)
                 .add(EBBlocks.CHISELED_CRIMSON_PLANKS)
                 .add(EBBlocks.CHISELED_WARPED_PLANKS)
-                .add(EBBlocks.GLOOM_PLANKS)
-                .add(EBBlocks.GLOOM_STAIRS)
-                .add(EBBlocks.GLOOM_SLAB)
-                .add(EBBlocks.GLOOM_VERTICAL_STAIRS)
-                .add(EBBlocks.GLOOM_MOSAIC)
-                .add(EBBlocks.GLOOM_MOSAIC_STAIRS)
-                .add(EBBlocks.GLOOM_MOSAIC_SLAB)
-                .add(EBBlocks.GLOOM_MOSAIC_VERTICAL_STAIRS)
-                .add(EBBlocks.GLOOM_LOG)
-                .add(EBBlocks.GLOOM_WOOD)
-                .add(EBBlocks.STRIPPED_GLOOM_LOG)
-                .add(EBBlocks.STRIPPED_GLOOM_WOOD)
-                .add(EBBlocks.GLOOM_DOOR)
-                .add(EBBlocks.GLOOM_TRAPDOOR)
-                .add(EBBlocks.GLOOM_BUTTON)
-                .add(EBBlocks.GLOOM_PRESSURE_PLATE)
-                .add(EBBlocks.GLOOM_SIGN)
-                .add(EBBlocks.GLOOM_WALL_SIGN)
-                .add(EBBlocks.GLOOM_HANGING_SIGN)
-                .add(EBBlocks.GLOOM_WALL_HANGING_SIGN)
-                .add(EBBlocks.CHISELED_GLOOM_PLANKS)
                 .add(EBBlocks.OAK_DECORATIVE_SHELF)
                 .add(EBBlocks.SPRUCE_DECORATIVE_SHELF)
                 .add(EBBlocks.BIRCH_DECORATIVE_SHELF)
@@ -958,7 +890,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.BAMBOO_DECORATIVE_SHELF)
                 .add(EBBlocks.CRIMSON_DECORATIVE_SHELF)
                 .add(EBBlocks.WARPED_DECORATIVE_SHELF)
-                .add(EBBlocks.GLOOM_DECORATIVE_SHELF)
                 .add(EBBlocks.ANCIENT_DECORATIVE_SHELF)
                 .add(EBBlocks.SPRUCE_BOOKSHELF)
                 .add(EBBlocks.BIRCH_BOOKSHELF)
@@ -969,7 +900,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.BAMBOO_BOOKSHELF)
                 .add(EBBlocks.CRIMSON_BOOKSHELF)
                 .add(EBBlocks.WARPED_BOOKSHELF)
-                .add(EBBlocks.GLOOM_BOOKSHELF)
                 .add(EBBlocks.ANCIENT_BOOKSHELF)
         ;
     }

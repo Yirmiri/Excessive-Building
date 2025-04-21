@@ -122,35 +122,6 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerSingleton(EBBlocks.CHISELED_CRIMSON_PLANKS, TexturedModel.CUBE_COLUMN);
         generator.registerSingleton(EBBlocks.CHISELED_WARPED_PLANKS, TexturedModel.CUBE_COLUMN);
 
-        BlockStateModelGenerator.BlockTexturePool gloomPlanks = generator.registerCubeAllModelTexturePool(EBBlocks.GLOOM_PLANKS);
-        gloomPlanks.stairs(EBBlocks.GLOOM_STAIRS);
-        gloomPlanks.slab(EBBlocks.GLOOM_SLAB);
-        gloomPlanks.fence(EBBlocks.GLOOM_FENCE);
-        gloomPlanks.fenceGate(EBBlocks.GLOOM_FENCE_GATE);
-        gloomPlanks.button(EBBlocks.GLOOM_BUTTON);
-        gloomPlanks.pressurePlate(EBBlocks.GLOOM_PRESSURE_PLATE);
-
-        BlockStateModelGenerator.BlockTexturePool gloomMosaic = generator.registerCubeAllModelTexturePool(EBBlocks.GLOOM_MOSAIC);
-        gloomMosaic.stairs(EBBlocks.GLOOM_MOSAIC_STAIRS);
-        gloomMosaic.slab(EBBlocks.GLOOM_MOSAIC_SLAB);
-
-        generator.registerDoor(EBBlocks.GLOOM_DOOR);
-        generator.registerOrientableTrapdoor(EBBlocks.GLOOM_TRAPDOOR);
-
-        generator.registerLog(EBBlocks.GLOOM_LOG).log(EBBlocks.GLOOM_LOG).wood(EBBlocks.GLOOM_WOOD);
-        generator.registerLog(EBBlocks.STRIPPED_GLOOM_LOG).log(EBBlocks.STRIPPED_GLOOM_LOG).wood(EBBlocks.STRIPPED_GLOOM_WOOD);
-
-        generator.registerSingleton(EBBlocks.CHISELED_GLOOM_PLANKS, TexturedModel.CUBE_COLUMN);
-        generator.registerHangingSign(EBBlocks.STRIPPED_GLOOM_LOG, EBBlocks.GLOOM_HANGING_SIGN, EBBlocks.GLOOM_WALL_HANGING_SIGN);
-
-        BlockStateModelGenerator.BlockTexturePool copper = generator.registerCubeAllModelTexturePool(Blocks.COPPER_BLOCK);
-
-        BlockStateModelGenerator.BlockTexturePool exposedCopper = generator.registerCubeAllModelTexturePool(Blocks.EXPOSED_COPPER);
-
-        BlockStateModelGenerator.BlockTexturePool weatheredCopper = generator.registerCubeAllModelTexturePool(Blocks.WEATHERED_COPPER);
-
-        BlockStateModelGenerator.BlockTexturePool oxidizedCopper = generator.registerCubeAllModelTexturePool(Blocks.OXIDIZED_COPPER);
-
         BlockStateModelGenerator.BlockTexturePool copperBricks = generator.registerCubeAllModelTexturePool(EBBlocks.COPPER_BRICKS);
         copperBricks.stairs(EBBlocks.COPPER_BRICK_STAIRS);
         copperBricks.slab(EBBlocks.COPPER_BRICK_SLAB);
@@ -231,7 +202,6 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.CRIMSON_MOSAIC_VERTICAL_STAIRS, EBBlocks.CRIMSON_MOSAIC);
         EBModels.registerVerticalStairs(generator, EBBlocks.WARPED_MOSAIC_VERTICAL_STAIRS, EBBlocks.WARPED_MOSAIC);
         EBModels.registerVerticalStairs(generator, EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS, EBBlocks.ANCIENT_MOSAIC);
-        EBModels.registerVerticalStairs(generator, EBBlocks.GLOOM_MOSAIC_VERTICAL_STAIRS, EBBlocks.GLOOM_MOSAIC);
 
         EBModels.registerVerticalStairs(generator, EBBlocks.MUD_BRICK_VERTICAL_STAIRS, Blocks.MUD_BRICKS);
         EBModels.registerVerticalStairs(generator, EBBlocks.COBBLESTONE_BRICK_VERTICAL_STAIRS, EBBlocks.COBBLESTONE_BRICKS);
@@ -240,7 +210,6 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS, EBBlocks.MOSSY_COBBLESTONE_BRICKS);
 
         EBModels.registerVerticalStairs(generator, EBBlocks.ANCIENT_VERTICAL_STAIRS, EBBlocks.ANCIENT_PLANKS);
-        EBModels.registerVerticalStairs(generator, EBBlocks.GLOOM_VERTICAL_STAIRS, EBBlocks.GLOOM_PLANKS);
 
         generator.registerSimpleCubeAll(EBBlocks.SEA_GLASS);
         generator.registerSimpleCubeAll(EBBlocks.VERDANT_SEA_GLASS);
@@ -255,12 +224,6 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerSeaGlassPane(generator, EBBlocks.FUCHSIA_SEA_GLASS_PANE, EBBlocks.FUCHSIA_SEA_GLASS);
         EBModels.registerSeaGlassPane(generator, EBBlocks.AQUA_SEA_GLASS_PANE, EBBlocks.AQUA_SEA_GLASS);
         EBModels.registerSeaGlassPane(generator, EBBlocks.SCARLET_SEA_GLASS_PANE, EBBlocks.SCARLET_SEA_GLASS);
-
-        BlockStateModelGenerator.BlockTexturePool boneBricks = generator.registerCubeAllModelTexturePool(EBBlocks.BONE_BRICKS);
-        boneBricks.stairs(EBBlocks.BONE_BRICK_STAIRS);
-        boneBricks.slab(EBBlocks.BONE_BRICK_SLAB);
-        boneBricks.wall(EBBlocks.BONE_BRICK_WALL);
-        EBModels.registerVerticalStairs(generator, EBBlocks.BONE_BRICK_VERTICAL_STAIRS, EBBlocks.BONE_BRICKS);
 
         for (DyeColor colors : DyeColor.values()) {
             generator.registerWoolAndCarpet(EBBlocks.getDyedKnittedWools(colors.getId()), EBBlocks.getDyedKnittedCarpets(colors.getId()));
@@ -344,7 +307,6 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerLadder(generator, EBBlocks.BAMBOO_LADDER);
         EBModels.registerLadder(generator, EBBlocks.CRIMSON_LADDER);
         EBModels.registerLadder(generator, EBBlocks.WARPED_LADDER);
-        EBModels.registerLadder(generator, EBBlocks.GLOOM_LADDER);
         EBModels.registerLadder(generator, EBBlocks.ANCIENT_LADDER);
 
         generator.registerCubeWithCustomTextures(EBBlocks.SPRUCE_CRAFTING_TABLE, Blocks.SPRUCE_PLANKS, TextureMap::frontSideWithCustomBottom);
@@ -358,7 +320,6 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerCubeWithCustomTextures(EBBlocks.CRIMSON_CRAFTING_TABLE, Blocks.CRIMSON_PLANKS, TextureMap::frontSideWithCustomBottom);
         generator.registerCubeWithCustomTextures(EBBlocks.WARPED_CRAFTING_TABLE, Blocks.WARPED_PLANKS, TextureMap::frontSideWithCustomBottom);
         generator.registerCubeWithCustomTextures(EBBlocks.ANCIENT_CRAFTING_TABLE, EBBlocks.ANCIENT_PLANKS, TextureMap::frontSideWithCustomBottom);
-        generator.registerCubeWithCustomTextures(EBBlocks.GLOOM_CRAFTING_TABLE, EBBlocks.GLOOM_PLANKS, TextureMap::frontSideWithCustomBottom);
 
         EBModels.registerMug(generator, EBBlocks.WOODEN_MUG);
 
@@ -435,8 +396,6 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_WEATHERED_CUT_COPPER_VERTICAL_STAIRS, Blocks.WEATHERED_CUT_COPPER);
         EBModels.registerVerticalStairs(generator, EBBlocks.WAXED_OXIDIZED_CUT_COPPER_VERTICAL_STAIRS, Blocks.OXIDIZED_CUT_COPPER);
 
-        EBModels.registerTintableCrossWithoutItem(generator, EBBlocks.GLOOM_SEEDS, BlockStateModelGenerator.TintType.NOT_TINTED);
-
         BlockStateModelGenerator.BlockTexturePool graniteBricks = generator.registerCubeAllModelTexturePool(EBBlocks.GRANITE_BRICKS);
         graniteBricks.stairs(EBBlocks.GRANITE_BRICK_STAIRS);
         graniteBricks.slab(EBBlocks.GRANITE_BRICK_SLAB);
@@ -477,7 +436,6 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerEBBookshelf(generator, EBBlocks.CRIMSON_BOOKSHELF, Blocks.CRIMSON_PLANKS);
         EBModels.registerEBBookshelf(generator, EBBlocks.WARPED_BOOKSHELF, Blocks.WARPED_PLANKS);
         EBModels.registerEBBookshelf(generator, EBBlocks.ANCIENT_BOOKSHELF, EBBlocks.ANCIENT_PLANKS);
-        EBModels.registerEBBookshelf(generator, EBBlocks.GLOOM_BOOKSHELF, EBBlocks.GLOOM_PLANKS);
 
         generator.registerSimpleCubeAll(EBBlocks.BRIMSTONE_WINDOW);
         generator.registerSimpleCubeAll(EBBlocks.BRIMSTONE_LAMP);
@@ -509,12 +467,7 @@ public class EBModelGen extends FabricModelProvider {
         asphalt.slab(EBBlocks.ASPHALT_SLAB);
         EBModels.registerVerticalStairs(generator, EBBlocks.ASPHALT_VERTICAL_STAIRS, EBBlocks.ASPHALT);
 
-        generator.registerFlowerPotPlant(EBBlocks.ROSE, EBBlocks.POTTED_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        generator.registerFlowerPotPlant(EBBlocks.CYAN_ROSE, EBBlocks.POTTED_CYAN_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        generator.registerFlowerPotPlant(EBBlocks.WHITE_ROSE, EBBlocks.POTTED_WHITE_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
-
         generator.registerSimpleCubeAll(EBBlocks.CRACKED_DIORITE_BRICKS);
-        generator.registerSimpleCubeAll(EBBlocks.CRACKED_MUD_BRICKS);
         generator.registerSimpleCubeAll(EBBlocks.CRACKED_GRANITE_BRICKS);
         generator.registerSimpleCubeAll(EBBlocks.CRACKED_BRIMSTONE_BRICKS);
         generator.registerSimpleCubeAll(EBBlocks.CRACKED_ANDESITE_BRICKS);
@@ -640,19 +593,8 @@ public class EBModelGen extends FabricModelProvider {
         EBModels.registerDecorativeShelfModel(generator, EBBlocks.ANCIENT_DECORATIVE_SHELF, "5", EBBlocks.ANCIENT_MOSAIC);
         EBModels.registerDecorativeShelfModel(generator, EBBlocks.ANCIENT_DECORATIVE_SHELF, "6", EBBlocks.ANCIENT_MOSAIC);
 
-        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "0", EBBlocks.GLOOM_MOSAIC);
-        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "1", EBBlocks.GLOOM_MOSAIC);
-        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "2", EBBlocks.GLOOM_MOSAIC);
-        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "3", EBBlocks.GLOOM_MOSAIC);
-        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "4", EBBlocks.GLOOM_MOSAIC);
-        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "5", EBBlocks.GLOOM_MOSAIC);
-        EBModels.registerDecorativeShelfModel(generator, EBBlocks.GLOOM_DECORATIVE_SHELF, "6", EBBlocks.GLOOM_MOSAIC);
-
         EBModels.registerParticleCandle(generator, EBBlocks.WEEPING_CANDLE);
         EBModels.registerParticleCandle(generator, EBBlocks.TWISTING_CANDLE);
-
-        generator.registerSimpleCubeAll(EBBlocks.GLOOM_LEAVES);
-        generator.registerFlowerPotPlant(EBBlocks.GLOOM_SAPLING, EBBlocks.POTTED_GLOOM_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         EBModels.registerAlmentraStatueState(generator, EBBlocks.ALMENTRA_STATUE, Identifier.of(ExcessiveBuilding.MOD_ID, "block/almentra_statue"),
                 Identifier.of(ExcessiveBuilding.MOD_ID, "block/almentra_statue_diagonal"));
@@ -756,7 +698,6 @@ public class EBModelGen extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator generator) {
         generator.register(EBItems.ANCIENT_FRUIT, Models.GENERATED);
         generator.register(EBItems.ANCIENT_SIGN, Models.GENERATED);
-        generator.register(EBItems.GLOOM_SIGN, Models.GENERATED);
 
         generator.register(EBItems.ROYALTY_POTTERY_SHERD, Models.GENERATED);
         generator.register(EBItems.ANCIENT_POTTERY_SHERD, Models.GENERATED);
@@ -793,8 +734,6 @@ public class EBModelGen extends FabricModelProvider {
         generator.register(EBBlocks.CRIMSON_LADDER.asItem(), Models.GENERATED);
         generator.register(EBBlocks.WARPED_LADDER.asItem(), Models.GENERATED);
         generator.register(EBBlocks.ANCIENT_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.GLOOM_LADDER.asItem(), Models.GENERATED);
-        generator.register(EBBlocks.GLOOM_SEEDS.asItem(), Models.GENERATED);
         generator.register(EBBlocks.WEEPING_CANDLE.asItem(), Models.GENERATED);
         generator.register(EBBlocks.TWISTING_CANDLE.asItem(), Models.GENERATED);
     }

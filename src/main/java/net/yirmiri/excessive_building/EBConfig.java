@@ -13,26 +13,24 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_SHELF_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVE_SHELVES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_CRAFTING_TABLE_VARIANTS;
-    //public static final ForgeConfigSpec.BooleanValue ENABLE_CHEST_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_LADDER_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_EB_POTTERY_SHERDS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_PARTICLE_CANDLES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_ANCIENT_SAPLINGS;
-    public static final ForgeConfigSpec.BooleanValue ENABLE_GLOOM_SEEDS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_TOOLTIPS;
 
     //BALANCE
     public static final ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_SOUL_MAGMA_COLUMN_TOGGLE;
-    public static final ForgeConfigSpec.IntValue HASTY_DURATION;
-    public static final ForgeConfigSpec.IntValue LONG_HASTY_DURATION;
-    public static final ForgeConfigSpec.IntValue HASTY_AMPLIFIER;
-    public static final ForgeConfigSpec.IntValue STRONG_HASTY_AMPLIFIER;
-    public static final ForgeConfigSpec.IntValue FATIGUED_DURATION;
-    public static final ForgeConfigSpec.IntValue LONG_FATIGUED_DURATION;
-    public static final ForgeConfigSpec.IntValue FATIGUED_AMPLIFIER;
-    public static final ForgeConfigSpec.IntValue STRONG_FATIGUED_AMPLIFIER;
+    public static final ForgeConfigSpec.IntValue ENDURANCE_DURATION;
+    public static final ForgeConfigSpec.IntValue LONG_ENDURANCE_DURATION;
+    public static final ForgeConfigSpec.IntValue ENDURANCE_AMPLIFIER;
+    public static final ForgeConfigSpec.IntValue STRONG_ENDURANCE_AMPLIFIER;
+    public static final ForgeConfigSpec.IntValue FATIGUING_DURATION;
+    public static final ForgeConfigSpec.IntValue LONG_FATIGUING_DURATION;
+    public static final ForgeConfigSpec.IntValue FATIGUING_AMPLIFIER;
+    public static final ForgeConfigSpec.IntValue STRONG_FATIGUING_AMPLIFIER;
     public static final ForgeConfigSpec.IntValue ANCIENT_FRUIT_DURATION;
     public static final ForgeConfigSpec.IntValue ANCIENT_FRUIT_AMPLIFIER;
 
@@ -66,10 +64,6 @@ public class EBConfig {
                 .comment("Should crafting table variants be enabled? (default: true)")
                 .define("enableCraftingTableVariants", true);
 
-//        ENABLE_CHEST_VARIANTS = BUILDER
-//                .comment("Should chest variants be enabled? (default: true)")
-//                .define("enableChestVariants", true);
-
         ENABLE_LADDER_VARIANTS = BUILDER
                 .comment("Should ladder variants be enabled? (default: true)")
                 .define("enableLadderVariants", true);
@@ -90,10 +84,6 @@ public class EBConfig {
                 .comment("Should ancient saplings be enabled (and to extension their content)? (default: true)")
                 .define("enableAncientSaplings", true);
 
-        ENABLE_GLOOM_SEEDS = BUILDER
-                .comment("Should gloom seeds be enabled (and to extension their content)? (default: true)")
-                .define("enableGloomSeeds", true);
-
         ENABLE_CUSTOM_TOOLTIPS = BUILDER
                 .comment("Should Excessive Building items with special interactions have custom tooltips? (default: true)")
                 .define("enableCustomTooltips", true);
@@ -111,37 +101,37 @@ public class EBConfig {
                 .comment("Should soul magma bubble columns be toggled with redstone? (default: true)")
                 .define("enableSoulMagmaColumnToggle", true);
 
-        HASTY_DURATION = BUILDER
-                .comment("How long should the hasty potion last in ticks? (default: 6000)")
-                .defineInRange("hastyDuration", 6000, 0, 72000);
+        ENDURANCE_DURATION = BUILDER
+                .comment("How long should the endurance potion last in ticks? (default: 6000)")
+                .defineInRange("enduranceDuration", 6000, 0, 72000);
 
-        LONG_HASTY_DURATION = BUILDER
-                .comment("How long should the long hasty potion last in ticks? (default: 12000)")
-                .defineInRange("longHastyDuration", 12000, 0, 72000);
+        LONG_ENDURANCE_DURATION = BUILDER
+                .comment("How long should the long endurance potion last in ticks? (default: 12000)")
+                .defineInRange("longEnduranceDuration", 12000, 0, 72000);
 
-        HASTY_AMPLIFIER = BUILDER
-                .comment("What level of haste should the reaching potion grant? (default: 0)")
-                .defineInRange("hastyAmplifier", 0, 0, 255);
+        ENDURANCE_AMPLIFIER = BUILDER
+                .comment("What level of haste should the endurance potion grant? (default: 0)")
+                .defineInRange("enduranceAmplifier", 0, 0, 255);
 
-        STRONG_HASTY_AMPLIFIER = BUILDER
-                .comment("What level of haste should the strong hasty potion grant? (default: 1)")
-                .defineInRange("strongHastyAmplifier", 1, 0, 255);
+        STRONG_ENDURANCE_AMPLIFIER = BUILDER
+                .comment("What level of haste should the strong endurance potion grant? (default: 1)")
+                .defineInRange("strongEnduranceAmplifier", 1, 0, 255);
 
-        FATIGUED_DURATION = BUILDER
-                .comment("How long should the fatigued potion last in ticks? (default: 3000)")
-                .defineInRange("fatiguedDuration", 3000, 0, 72000);
+        FATIGUING_DURATION = BUILDER
+                .comment("How long should the fatiguing potion last in ticks? (default: 3000)")
+                .defineInRange("fatiguingDuration", 3000, 0, 72000);
 
-        LONG_FATIGUED_DURATION = BUILDER
-                .comment("How long should the long fatigued potion last in ticks? (default: 6000)")
-                .defineInRange("longFatiguedDuration", 6000, 0, 72000);
+        LONG_FATIGUING_DURATION = BUILDER
+                .comment("How long should the long fatiguing potion last in ticks? (default: 6000)")
+                .defineInRange("longFatiguingDuration", 6000, 0, 72000);
 
-        FATIGUED_AMPLIFIER = BUILDER
-                .comment("What level of mining fatigue should the fatigued potion grant? (default: 0)")
-                .defineInRange("fatiguedAmplifier", 0, 0, 255);
+        FATIGUING_AMPLIFIER = BUILDER
+                .comment("What level of mining fatigue should the fatiguing potion grant? (default: 0)")
+                .defineInRange("fatiguingAmplifier", 0, 0, 255);
 
-        STRONG_FATIGUED_AMPLIFIER = BUILDER
-                .comment("What level of mining fatigue should the strong fatigued potion grant? (default: 1)")
-                .defineInRange("strongFatiguedAmplifier", 1, 0, 255);
+        STRONG_FATIGUING_AMPLIFIER = BUILDER
+                .comment("What level of mining fatigue should the strong fatiguing potion grant? (default: 1)")
+                .defineInRange("strongFatiguingAmplifier", 1, 0, 255);
 
         ANCIENT_FRUIT_DURATION = BUILDER
                 .comment("How long should the ancient fruit's haste last in ticks? (default: 600)")

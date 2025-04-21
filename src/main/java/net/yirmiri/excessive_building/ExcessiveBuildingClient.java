@@ -10,13 +10,11 @@ import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.block.entity.HangingSignBlockEntityRenderer;
 import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
-import net.yirmiri.excessive_building.block.entity.EBChestBlockEntityRenderer;
-import net.yirmiri.excessive_building.block.entity.EBTrappedChestBlockEntityRenderer;
 import net.yirmiri.excessive_building.particle.FallingLeafParticle;
 import net.yirmiri.excessive_building.registry.EBBlockEntities;
 import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBParticles;
-import net.yirmiri.excessive_building.util.EBBlockSetTypes;
+import net.yirmiri.excessive_building.init.EBBlockSetTypes;
 
 @Environment(EnvType.CLIENT)
 public class ExcessiveBuildingClient implements ClientModInitializer {
@@ -29,8 +27,6 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         //ENTITIES
         BlockEntityRendererFactories.register(EBBlockEntities.EB_SIGN, SignBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(EBBlockEntities.EB_HANGING_SIGN, HangingSignBlockEntityRenderer::new);
-        BlockEntityRendererFactories.register(EBBlockEntities.EB_CHEST, EBChestBlockEntityRenderer::new);
-        BlockEntityRendererFactories.register(EBBlockEntities.EB_TRAPPED_CHEST, EBTrappedChestBlockEntityRenderer::new);
 
         //CUTOUT
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ANCIENT_LEAVES, RenderLayer.getCutout());
@@ -38,8 +34,6 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ANCIENT_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ANCIENT_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.POTTED_ANCIENT_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_DOOR, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.SPRUCE_LADDER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.BIRCH_LADDER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.JUNGLE_LADDER, RenderLayer.getCutout());
@@ -51,22 +45,11 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.CRIMSON_LADDER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.WARPED_LADDER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ANCIENT_LADDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_LADDER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLASS_JAR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLASS_JAR_OF_FIRE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLASS_JAR_OF_SOUL_FIRE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_SEEDS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.ROSE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.POTTED_ROSE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.CYAN_ROSE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.POTTED_CYAN_ROSE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.WHITE_ROSE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.POTTED_WHITE_ROSE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.WEEPING_CANDLE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.TWISTING_CANDLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_LEAVES, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.GLOOM_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.POTTED_GLOOM_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.MOSS_PASTE, RenderLayer.getCutout());
 
         //TRANSLUCENT
@@ -86,6 +69,5 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
 
         //PARTICLE
         ParticleFactoryRegistry.getInstance().register(EBParticles.ANCIENT_PARTICLE, FallingLeafParticle.Factory::new);
-        ParticleFactoryRegistry.getInstance().register(EBParticles.GLOOM_PARTICLE, FallingLeafParticle.Factory::new);
     }
 }
