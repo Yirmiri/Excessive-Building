@@ -47,7 +47,6 @@ public class SoulMagmaBlock extends MagmaBlock {
         if (!entity.bypassesSteppingEffects() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)entity)) {
             entity.damage(world.getDamageSources().hotFloor(), 2.0F);
         }
-
         super.onSteppedOn(world, pos, state, entity);
     }
 
@@ -83,7 +82,6 @@ public class SoulMagmaBlock extends MagmaBlock {
         if (direction == Direction.UP && neighborState.isOf(Blocks.WATER)) {
             world.scheduleBlockTick(pos, this, 20);
         }
-
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 

@@ -59,7 +59,6 @@ public class EBPaintingVariants {
         WHY_DO_MY_EYES_HURT = register("why_do_my_eyes_hurt", new PaintingVariant(80, 32));
         EVIL_EYE = register("evil_eye", new PaintingVariant(32, 32));
         CATASTROPHES_BEFORE_THE_CALAMITY = register("catastrophes_before_the_calamity", new PaintingVariant(112, 64));
-        TERRAIN = register("terrain", new PaintingVariant(48, 48));
 
         //CREATIVE
         REBELLIOUS = register("rebellious", new PaintingVariant(128, 128));

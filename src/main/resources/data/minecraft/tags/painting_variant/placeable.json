@@ -4,7 +4,6 @@
     "excessive_building:beacon_of_the_desert",
     "excessive_building:beacon_of_the_desert_trimmed",
     "excessive_building:burrito",
-    "excessive_building:courbet_original",
     "excessive_building:crash_landing",
     "excessive_building:fit_for_a_queen",
     "excessive_building:floors",
@@ -17,13 +16,11 @@
     "excessive_building:pufferlight",
     "excessive_building:scourge_bringer",
     "excessive_building:sniffing_in_the_pine_forest",
-    "excessive_building:stage_original",
     "excessive_building:thine_holy_peanut",
     "excessive_building:the_end",
     "excessive_building:the_lone_tree",
     "excessive_building:why_do_my_eyes_hurt",
     "excessive_building:evil_eye",
-    "excessive_building:catastrophes_before_the_calamity",
-    "excessive_building:terrain"
+    "excessive_building:catastrophes_before_the_calamity"
   ]
 }

@@ -45,12 +45,12 @@ public class VerticalStairsBlock extends Block implements Waterloggable {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, net.minecraft.world.BlockView world, BlockPos pos, ShapeContext ctx) {
-        switch (state.get(FACING)) {
-            default: return SHAPE_SOUTH;
-            case NORTH: return SHAPE_NORTH;
-            case EAST: return SHAPE_EAST;
-            case WEST: return SHAPE_WEST;
-        }
+        return switch (state.get(FACING)) {
+            case NORTH -> SHAPE_NORTH;
+            case EAST -> SHAPE_EAST;
+            case WEST -> SHAPE_WEST;
+            default -> SHAPE_SOUTH;
+        };
     }
 
     @Nullable @Override

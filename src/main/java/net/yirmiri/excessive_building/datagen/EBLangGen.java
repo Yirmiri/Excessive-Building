@@ -47,6 +47,20 @@ public class EBLangGen extends FabricLanguageProvider {
             build.add(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()), dyeString + " Almentra Brick Slab");
         }
 
+        //TOOLTIPS
+        build.add("tooltip.block.interact", "Upon Interaction:");
+        build.add("tooltip.block.variant", "Cycles Block Variants:");
+        build.add("tooltip.block.interact_sugar", "Interact with Sugar:");
+        build.add("tooltip.block.swift", "Increases Movement Speed");
+        build.add("tooltip.block.when_powered", "When Powered by Redstone:");
+        build.add("tooltip.block.soul_magma", "Reverses Bubble Column Direction");
+        build.add("tooltip.block.player_nearby", "When Nearby:");
+        build.add("tooltip.block.increases_block_reach", "Increases Interaction Reach");
+
+        //MISC
+        build.add("excessive_building.container.kiln", "Kiln");
+        build.add("pack.excessive_building.vanilla_retextures", "Excessive Building Re-textures");
+
         //BLOCKS
         build.add(EBBlocks.OAK_MOSAIC, "Oak Mosaic");
         build.add(EBBlocks.OAK_MOSAIC_STAIRS, "Oak Mosaic Stairs");
@@ -566,24 +580,6 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add("advancement.excessive_building.place_all_almentra_statues", "Double §kRorrRef §rRainbow");
         build.add("advancement.excessive_building.place_all_almentra_statues.description", "Place all almentra statue variants");
 
-        //TOOLTIPS
-        build.add("tooltip.block.interact", "Upon Interaction:");
-        build.add("tooltip.block.variant", "Cycles Block Variants:");
-        build.add("tooltip.block.interact_sugar", "Interact with Sugar:");
-        build.add("tooltip.block.swift", "Increases Movement Speed");
-        build.add("tooltip.block.interact_soil", "Interact with Soil:");
-        build.add("tooltip.block.fill", "Fills Up Pot");
-        build.add("tooltip.block.interact_glow_removals", "Interact with Paper:");
-        build.add("tooltip.block.glow_removal", "Removes it's Glow");
-        build.add("tooltip.block.when_powered", "When Powered by Redstone:");
-        build.add("tooltip.block.soul_magma", "Reverses Bubble Column Direction");
-        build.add("tooltip.block.player_nearby", "When Nearby:");
-        build.add("tooltip.block.increases_block_reach", "Increases Interaction Reach");
-
-        //MISC
-        build.add("excessive_building.container.kiln", "Kiln");
-        build.add("pack.excessive_building.vanilla_retextures", "Excessive Building Re-textures");
-
         //ITEM GROUPS
         build.add("itemgroup.excessive_building", "Excessive Building");
 
@@ -612,7 +608,6 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.rebellious.title", "Rebellious");
         build.add("painting.excessive_building.catastrophes_before_the_calamity.title", "Catastrophes Before the Calamity");
         build.add("painting.excessive_building.goodie_malk.title", "Goodie Malk");
-        build.add("painting.excessive_building.terrain.title", "terrain.png");
 
         //PAINTING AUTHORS
         build.add("painting.excessive_building.forgotten_kingdom.author", "Yirmiri");
@@ -639,7 +634,6 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add("painting.excessive_building.rebellious.author", "Rebel (the dog)");
         build.add("painting.excessive_building.catastrophes_before_the_calamity.author", "BackupCup");
         build.add("painting.excessive_building.goodie_malk.author", "Goodie");
-        build.add("painting.excessive_building.terrain.author", "???");
 
         //EFFECTS
         build.add("item.minecraft.potion.effect.endurance_potion", "Potion of Endurance");
