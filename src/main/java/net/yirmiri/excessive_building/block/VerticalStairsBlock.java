@@ -53,10 +53,36 @@ public class VerticalStairsBlock extends Block implements Waterloggable {
         };
     }
 
-    @Nullable @Override
+    @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite())
+        return this.getDefaultState().with(FACING, getDirection(ctx.getPlayerYaw(), ctx))
                 .with(WATERLOGGED, ctx.getWorld().getFluidState(ctx.getBlockPos()).isOf(Fluids.WATER));
+    }
+
+    public static boolean isDiagonal(float angle) {
+        return (!(angle > -180.0F) || !(angle < -157.5F))
+                && (!(angle > -112.5F) || !(angle < -67.5F))
+                && (!(angle > -22.5F) || !(angle < 22.5F))
+                && (!(angle > 67.5F) || !(angle < 112.5F))
+                && (!(angle > 157.5F) || !(angle < 180F));
+    }
+
+    public static Direction getDirection(float angle, ItemPlacementContext ctx) {
+        if (isDiagonal(angle)) {
+            if (-157.5F < angle && angle < -112.5F) {
+                return Direction.WEST;
+            }
+            if (-67.5F < angle && angle < -22.5F) {
+                return Direction.NORTH;
+            }
+            if (22.5F < angle && angle < 67.5F) {
+                return Direction.EAST;
+            }
+            if (112.5F < angle && angle < 157.5F) {
+                return Direction.SOUTH;
+            }
+        }
+        return ctx.getHorizontalPlayerFacing().getOpposite();
     }
 
     @Override
@@ -84,7 +110,6 @@ public class VerticalStairsBlock extends Block implements Waterloggable {
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
-
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 }
