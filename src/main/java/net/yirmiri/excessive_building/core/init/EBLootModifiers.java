@@ -26,7 +26,7 @@ public class EBLootModifiers {
     public static void replaceLoot() {
         LootTableEvents.REPLACE.register((resourceManager, lootManager, key, original, source) -> {
 
-            if (SNIFFER_DIGGING.equals(key) && EBConfig.ENABLE_ANCIENT_SAPLINGS.get()) {
+            if (SNIFFER_DIGGING.equals(key) && EBConfig.ENABLE_BLOODROOT_SAPLINGS.get()) {
                 List<LootPoolEntry> entries = new ArrayList<>(Arrays.asList(original.pools[0].entries));
                 entries.add(ItemEntry.builder(EBBlocks.ANCIENT_SAPLING).build());
 

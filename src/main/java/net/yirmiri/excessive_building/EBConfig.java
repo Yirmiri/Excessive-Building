@@ -18,7 +18,7 @@ public class EBConfig {
     public static final ForgeConfigSpec.BooleanValue ENABLE_SHELF_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_CRAFTING_TABLE_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_LADDER_VARIANTS;
-    public static final ForgeConfigSpec.BooleanValue ENABLE_ANCIENT_SAPLINGS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_BLOODROOT_SAPLINGS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_EB_POTTERY_SHERDS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_PARTICLE_CANDLES;
 
@@ -33,8 +33,8 @@ public class EBConfig {
     public static final ForgeConfigSpec.IntValue LONG_FATIGUING_DURATION;
     public static final ForgeConfigSpec.IntValue FATIGUING_AMPLIFIER;
     public static final ForgeConfigSpec.IntValue STRONG_FATIGUING_AMPLIFIER;
-    public static final ForgeConfigSpec.IntValue ANCIENT_FRUIT_DURATION;
-    public static final ForgeConfigSpec.IntValue ANCIENT_FRUIT_AMPLIFIER;
+    public static final ForgeConfigSpec.IntValue LIFE_FRUIT_DURATION;
+    public static final ForgeConfigSpec.IntValue LIFE_FRUIT_AMPLIFIER;
 
     static {
         BUILDER.push("Excessive Building Config");
@@ -83,9 +83,9 @@ public class EBConfig {
                 .comment("Should ladder wood variants be enabled? (default: false)")
                 .define("enableLadderVariants", false);
 
-        ENABLE_ANCIENT_SAPLINGS = BUILDER
-                .comment("Should ancient saplings be enabled (and to extension their content)? (default: true)")
-                .define("enableAncientSaplings", true);
+        ENABLE_BLOODROOT_SAPLINGS = BUILDER
+                .comment("Should bloodroot saplings be enabled (and to extension their content)? (default: true)")
+                .define("enableBloodrootSaplings", true);
 
         ENABLE_EB_POTTERY_SHERDS = BUILDER
                 .comment("Should Excessive Building's pottery sherds be enabled? (default: true)")
@@ -140,13 +140,13 @@ public class EBConfig {
                 .comment("What level of mining fatigue should the strong fatiguing potion grant? (default: 1)")
                 .defineInRange("strongFatiguingAmplifier", 1, 0, 255);
 
-        ANCIENT_FRUIT_DURATION = BUILDER
+        LIFE_FRUIT_DURATION = BUILDER
                 .comment("How long should the ancient fruit's haste last in ticks? (default: 600)")
-                .defineInRange("ancientFruitDuration", 600, 0, 72000);
+                .defineInRange("lifeFruitDuration", 600, 0, 72000);
 
-        ANCIENT_FRUIT_AMPLIFIER = BUILDER
+        LIFE_FRUIT_AMPLIFIER = BUILDER
                 .comment("What level of haste should the ancient fruit grant? (default: 1)")
-                .defineInRange("ancientFruitAmplifier", 1, 0, 255);
+                .defineInRange("lifeFruitAmplifier", 1, 0, 255);
 
         COMMON = BUILDER.build();
     }

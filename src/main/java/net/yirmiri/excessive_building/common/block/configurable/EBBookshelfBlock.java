@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.yirmiri.excessive_building.EBConfig;
 
+@Deprecated(forRemoval = true)
 public class EBBookshelfBlock extends Block {
     public EBBookshelfBlock(Settings settings) {
         super(settings);

@@ -24,7 +24,7 @@ public class EBItems {
     public static final Item ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", new HangingSignItem(EBBlocks.ANCIENT_HANGING_SIGN, EBBlocks.ANCIENT_WALL_HANGING_SIGN, new Item.Settings().maxCount(16)));
 
     //FOOD
-    public static final Item ANCIENT_FRUIT = register("ancient_fruit", new Item(EBProperties.ItemP.ANCIENT_FRUIT));
+    public static final Item ANCIENT_FRUIT = register("ancient_fruit", new Item(EBProperties.ItemP.LIFE_FRUIT));
 
     //SHERDS
     public static final Item ROYALTY_POTTERY_SHERD = register("royalty_pottery_sherd", new EBPotterySherdItem(null, EBProperties.ItemP.GENERIC));

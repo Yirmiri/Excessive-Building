@@ -13,8 +13,6 @@ import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.common.util.EBCraftingScreenHandler;
 
 public class EBCraftingTableBlock extends CraftingTableBlock {
-    private static final Text TITLE = Text.translatable("container.crafting");
-
     public EBCraftingTableBlock(Settings settings) {
         super(settings);
     }
@@ -26,8 +24,8 @@ public class EBCraftingTableBlock extends CraftingTableBlock {
 
     @Override
     public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
-        return new SimpleNamedScreenHandlerFactory(
-                (syncId, inventory, player) -> new EBCraftingScreenHandler(syncId, inventory, ScreenHandlerContext.create(world, pos), this), TITLE
+        return new SimpleNamedScreenHandlerFactory((syncId, inventory, player) ->
+                new EBCraftingScreenHandler(syncId, inventory, ScreenHandlerContext.create(world, pos), this), Text.translatable("container.crafting")
         );
     }
 }

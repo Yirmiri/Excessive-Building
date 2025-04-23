@@ -17,7 +17,6 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 import java.util.List;
 
 public class EBPlacedFeatures {
-    public static final RegistryKey<PlacedFeature> ANCIENT_TREE = createKey("ancient_tree"); //ancient trees don't generate but whatever
     public static final RegistryKey<PlacedFeature> ORE_BRIMSTONE = createKey("ore_brimstone");
     public static final RegistryKey<PlacedFeature> ORE_ALMENTRA = createKey("ore_almentra");
 

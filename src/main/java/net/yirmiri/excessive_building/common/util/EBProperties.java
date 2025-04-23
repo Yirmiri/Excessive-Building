@@ -8,6 +8,8 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Formatting;
+import net.minecraft.util.Rarity;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.common.block.ParticleCandleBlock;
 import net.yirmiri.excessive_building.core.registry.EBSounds;
@@ -23,11 +25,11 @@ public class EBProperties {
         public static final Block.Settings BAMBOO_WOOD = FabricBlockSettings.copyOf(Blocks.BAMBOO_PLANKS).sounds(BlockSoundGroup.BAMBOO_WOOD);
         public static final Block.Settings CRIMSON_WOOD = FabricBlockSettings.copyOf(Blocks.CRIMSON_PLANKS).sounds(BlockSoundGroup.NETHER_WOOD);
         public static final Block.Settings WARPED_WOOD = FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS).sounds(BlockSoundGroup.NETHER_WOOD);
-        public static final Block.Settings ANCIENT_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS).mapColor(MapColor.TERRACOTTA_WHITE).sounds(BlockSoundGroup.CHERRY_WOOD);
+        public static final Block.Settings BLOODROOT_WOOD = FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS).mapColor(MapColor.TERRACOTTA_WHITE).sounds(BlockSoundGroup.CHERRY_WOOD);
 
         //DOORS
-        public static final Block.Settings ANCIENT_DOOR = FabricBlockSettings.copyOf(Blocks.CHERRY_DOOR).mapColor(MapColor.RAW_IRON_PINK).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque();
-        public static final Block.Settings ANCIENT_TRAPDOOR = FabricBlockSettings.copyOf(Blocks.CHERRY_TRAPDOOR).mapColor(MapColor.RAW_IRON_PINK).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque();
+        public static final Block.Settings BLOODROOT_DOOR = FabricBlockSettings.copyOf(Blocks.CHERRY_DOOR).mapColor(MapColor.RAW_IRON_PINK).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque();
+        public static final Block.Settings BLOODROOT_TRAPDOOR = FabricBlockSettings.copyOf(Blocks.CHERRY_TRAPDOOR).mapColor(MapColor.RAW_IRON_PINK).sounds(BlockSoundGroup.CHERRY_WOOD).nonOpaque();
 
         //BOOKSHELVES
         public static final Block.Settings GENERIC_SHELF = FabricBlockSettings.copyOf(Blocks.BOOKSHELF).sounds(BlockSoundGroup.WOOD);
@@ -42,7 +44,7 @@ public class EBProperties {
         public static final Block.Settings BAMBOO_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
         public static final Block.Settings CRIMSON_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
         public static final Block.Settings WARPED_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER);
-        public static final Block.Settings ANCIENT_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER).mapColor(MapColor.TERRACOTTA_WHITE);
+        public static final Block.Settings BLOODROOT_LADDER = FabricBlockSettings.copyOf(Blocks.LADDER).sounds(BlockSoundGroup.LADDER).mapColor(MapColor.TERRACOTTA_WHITE);
 
         //STONES
         public static final Block.Settings COBBLESTONE_BRICKS = FabricBlockSettings.copyOf(Blocks.COBBLESTONE).sounds(EBSounds.COBBLED_BRICKS);
@@ -54,8 +56,8 @@ public class EBProperties {
         public static final Block.Settings ALMENTRA_BRICKS = FabricBlockSettings.copyOf(Blocks.DEEPSLATE_BRICKS).sounds(BlockSoundGroup.DEEPSLATE_BRICKS).mapColor(MapColor.RAW_IRON_PINK);
 
         //NATURE
-        public static final Block.Settings ANCIENT_LEAVES = FabricBlockSettings.of().luminance(s -> 8).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
-        public static final Block.Settings ANCIENT_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).luminance(s -> 5);
+        public static final Block.Settings BLOODROOT_LEAVES = FabricBlockSettings.of().luminance(s -> 8).mapColor(MapColor.RED).strength(0.2F).ticksRandomly().sounds(BlockSoundGroup.CHERRY_LEAVES).nonOpaque().allowsSpawning(Blocks::canSpawnOnLeaves).suffocates(Blocks::never).blockVision(Blocks::never).burnable().pistonBehavior(PistonBehavior.DESTROY).solidBlock(Blocks::never);
+        public static final Block.Settings BLOODROOT_SAPLING = FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING).luminance(s -> 5);
 
         //SEA GLASS
         public static final Block.Settings SEA_GLASS = FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque();
@@ -111,7 +113,7 @@ public class EBProperties {
 
     public static class ItemP {
         //FOOD
-        public static final Item.Settings ANCIENT_FRUIT = new Item.Settings().food(Food.ANCIENT_FRUIT);
+        public static final Item.Settings LIFE_FRUIT = new Item.Settings().food(Food.LIFE_FRUIT);
 
         //MISC
         public static final Item.Settings GENERIC = new Item.Settings();
@@ -119,8 +121,8 @@ public class EBProperties {
 
         public static class Food {
             //EFFECT FOODS
-            public static final FoodComponent ANCIENT_FRUIT = new FoodComponent.Builder().hunger(4).saturationModifier(0.8F).alwaysEdible()
-            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, EBConfig.ANCIENT_FRUIT_DURATION.get(), EBConfig.ANCIENT_FRUIT_AMPLIFIER.get()), 1.0F)
+            public static final FoodComponent LIFE_FRUIT = new FoodComponent.Builder().hunger(4).saturationModifier(0.8F).alwaysEdible()
+            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, EBConfig.LIFE_FRUIT_DURATION.get(), EBConfig.LIFE_FRUIT_AMPLIFIER.get()), 1.0F)
             .build();
         }
     }

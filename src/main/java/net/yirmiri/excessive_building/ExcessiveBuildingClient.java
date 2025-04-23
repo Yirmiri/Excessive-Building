@@ -64,6 +64,6 @@ public class ExcessiveBuildingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.REACHING_LANTERN, RenderLayer.getTranslucent());
 
         //PARTICLE
-        ParticleFactoryRegistry.getInstance().register(EBParticles.ANCIENT_PARTICLE, FallingLeafParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(EBParticles.BLOODROOT_PARTICLE, FallingLeafParticle.Factory::new);
     }
 }

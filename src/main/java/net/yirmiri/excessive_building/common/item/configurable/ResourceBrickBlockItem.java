@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.yirmiri.excessive_building.EBConfig;
 
+@Deprecated(forRemoval = true)
 public class ResourceBrickBlockItem extends BlockItem {
     public ResourceBrickBlockItem(Block block, Item.Settings settings) {
         super(block, settings);

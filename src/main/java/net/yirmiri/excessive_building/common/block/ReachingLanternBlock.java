@@ -43,7 +43,6 @@ public class ReachingLanternBlock extends Block implements Waterloggable {
     @Nullable @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-
         for (Direction direction : ctx.getPlacementDirections()) {
             if (direction.getAxis() == Direction.Axis.Y) {
                 BlockState blockState = this.getDefaultState().with(HANGING, Boolean.valueOf(direction == Direction.UP));
@@ -52,7 +51,6 @@ public class ReachingLanternBlock extends Block implements Waterloggable {
                 }
             }
         }
-
         return null;
     }
 
@@ -77,12 +75,10 @@ public class ReachingLanternBlock extends Block implements Waterloggable {
     }
 
     @Override
-    public BlockState getStateForNeighborUpdate(
-            BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
-
         return attachedDirection(state).getOpposite() == direction && !state.canPlaceAt(world, pos)
                 ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }

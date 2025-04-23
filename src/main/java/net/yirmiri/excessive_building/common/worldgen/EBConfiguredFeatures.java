@@ -14,7 +14,7 @@ import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import java.util.List;
 
 public class EBConfiguredFeatures {
-    public static final RegistryKey<ConfiguredFeature<?, ?>> ANCIENT_TREE = createKey("ancient_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BLOODROOT = createKey("bloodroot");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_BRIMSTONE = createKey("ore_brimstone");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_ALMENTRA = createKey("ore_almentra");
 

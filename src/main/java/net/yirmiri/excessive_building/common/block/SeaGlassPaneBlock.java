@@ -31,15 +31,14 @@ public class SeaGlassPaneBlock extends TransparentBlock implements Waterloggable
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, net.minecraft.world.BlockView world, BlockPos pos, ShapeContext ctx) {
-        switch (state.get(FACING)) {
-            default: return SHAPE_SOUTH;
-            case NORTH: return SHAPE_NORTH;
-            case EAST: return SHAPE_EAST;
-            case WEST: return SHAPE_WEST;
-        }
+        return switch (state.get(FACING)) {
+            case NORTH -> SHAPE_NORTH;
+            case EAST -> SHAPE_EAST;
+            case WEST -> SHAPE_WEST;
+            default -> SHAPE_SOUTH;
+        };
     }
 
-    @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite())
@@ -71,7 +70,6 @@ public class SeaGlassPaneBlock extends TransparentBlock implements Waterloggable
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
-
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 }

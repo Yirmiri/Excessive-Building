@@ -532,11 +532,11 @@ public class EBCreativeTabs {
                 entries.add(EBBlocks.WEEPING_CANDLE);
                 entries.add(EBBlocks.TWISTING_CANDLE);
 
-                entries.add(EBItems.ANCIENT_POTTERY_SHERD);
                 entries.add(EBItems.BITTER_POTTERY_SHERD);
                 entries.add(EBItems.BOIN_POTTERY_SHERD);
                 entries.add(EBItems.BUSTLING_POTTERY_SHERD);
                 entries.add(EBItems.CHECKERED_POTTERY_SHERD);
+                entries.add(EBItems.ANCIENT_POTTERY_SHERD); //lang renamed to consume thus why it is not at the top
                 entries.add(EBItems.DECAY_POTTERY_SHERD);
                 entries.add(EBItems.DESTRUCTION_POTTERY_SHERD);
                 entries.add(EBItems.FORWARDS_POTTERY_SHERD);

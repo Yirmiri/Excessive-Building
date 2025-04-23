@@ -4,6 +4,7 @@ import net.minecraft.block.SlabBlock;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.yirmiri.excessive_building.EBConfig;
 
+@Deprecated(forRemoval = true)
 public class ResourceBrickSlabBlock extends SlabBlock {
     public ResourceBrickSlabBlock(Settings settings) {
         super(settings);

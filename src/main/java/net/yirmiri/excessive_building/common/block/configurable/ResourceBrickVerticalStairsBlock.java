@@ -4,6 +4,7 @@ import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.common.block.VerticalStairsBlock;
 
+@Deprecated(forRemoval = true)
 public class ResourceBrickVerticalStairsBlock extends VerticalStairsBlock {
     public ResourceBrickVerticalStairsBlock(Settings settings) {
         super(settings);

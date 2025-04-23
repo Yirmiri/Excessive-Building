@@ -18,7 +18,6 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
-import org.jetbrains.annotations.Nullable;
 
 public class AlmentraStatueBlock extends Block implements Waterloggable {
     private static final int MAX_ROTATIONS = 15;
@@ -39,7 +38,6 @@ public class AlmentraStatueBlock extends Block implements Waterloggable {
         return SHAPE;
     }
 
-    @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return this.getDefaultState().with(ROTATION, Integer.valueOf(RotationPropertyHelper.fromYaw(ctx.getPlayerYaw())))
@@ -71,7 +69,6 @@ public class AlmentraStatueBlock extends Block implements Waterloggable {
         if (state.get(WATERLOGGED)) {
             world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
-
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 }

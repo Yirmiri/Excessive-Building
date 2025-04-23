@@ -5,6 +5,7 @@ import net.minecraft.block.StairsBlock;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.yirmiri.excessive_building.EBConfig;
 
+@Deprecated(forRemoval = true)
 public class ResourceBrickStairsBlock extends StairsBlock {
     public ResourceBrickStairsBlock(BlockState baseBlockState, Settings settings) {
         super(baseBlockState, settings);

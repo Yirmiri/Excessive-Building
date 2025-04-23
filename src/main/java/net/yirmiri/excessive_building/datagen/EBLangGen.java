@@ -125,27 +125,27 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.COBBLED_DEEPSLATE_BRICK_WALL, "Cobbled Deepslate Brick Wall");
         build.add(EBBlocks.BLACKSTONE_BRICK_WALL, "Blackstone Brick Wall");
         build.add(EBBlocks.LOGO_BLOCK, "Logo Block");
-        build.add(EBBlocks.ANCIENT_PLANKS, "Ancient Planks");
-        build.add(EBBlocks.ANCIENT_STAIRS, "Ancient Stairs");
-        build.add(EBBlocks.ANCIENT_SLAB, "Ancient Slab");
-        build.add(EBBlocks.ANCIENT_VERTICAL_STAIRS, "Ancient Vertical Stairs");
-        build.add(EBBlocks.ANCIENT_MOSAIC, "Ancient Mosaic");
-        build.add(EBBlocks.ANCIENT_MOSAIC_STAIRS, "Ancient Mosaic Stairs");
-        build.add(EBBlocks.ANCIENT_MOSAIC_SLAB, "Ancient Mosaic Slab");
-        build.add(EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS, "Ancient Mosaic Vertical Stairs");
-        build.add(EBBlocks.ANCIENT_BUTTON, "Ancient Button");
-        build.add(EBBlocks.ANCIENT_PRESSURE_PLATE, "Ancient Pressure Plate");
-        build.add(EBBlocks.ANCIENT_DOOR, "Ancient Door");
-        build.add(EBBlocks.ANCIENT_TRAPDOOR, "Ancient Trapdoor");
-        build.add(EBBlocks.ANCIENT_LOG, "Ancient Log");
-        build.add(EBBlocks.ANCIENT_WOOD, "Ancient Wood");
-        build.add(EBBlocks.STRIPPED_ANCIENT_LOG, "Stripped Ancient Log");
-        build.add(EBBlocks.STRIPPED_ANCIENT_WOOD, "Stripped Ancient Wood");
-        build.add(EBBlocks.ANCIENT_LEAVES, "Ancient Leaves");
-        build.add(EBBlocks.ANCIENT_FENCE, "Ancient Fence");
-        build.add(EBBlocks.ANCIENT_FENCE_GATE, "Ancient Fence Gate");
-        build.add(EBBlocks.ANCIENT_SAPLING, "Ancient Sapling");
-        build.add(EBBlocks.POTTED_ANCIENT_SAPLING, "Potted Ancient Sapling");
+        build.add(EBBlocks.ANCIENT_PLANKS, "Bloodroot Planks");
+        build.add(EBBlocks.ANCIENT_STAIRS, "Bloodroot Stairs");
+        build.add(EBBlocks.ANCIENT_SLAB, "Bloodroot Slab");
+        build.add(EBBlocks.ANCIENT_VERTICAL_STAIRS, "Bloodroot Vertical Stairs");
+        build.add(EBBlocks.ANCIENT_MOSAIC, "Bloodroot Mosaic");
+        build.add(EBBlocks.ANCIENT_MOSAIC_STAIRS, "Bloodroot Mosaic Stairs");
+        build.add(EBBlocks.ANCIENT_MOSAIC_SLAB, "Bloodroot Mosaic Slab");
+        build.add(EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS, "Bloodroot Mosaic Vertical Stairs");
+        build.add(EBBlocks.ANCIENT_BUTTON, "Bloodroot Button");
+        build.add(EBBlocks.ANCIENT_PRESSURE_PLATE, "Bloodroot Pressure Plate");
+        build.add(EBBlocks.ANCIENT_DOOR, "Bloodroot Door");
+        build.add(EBBlocks.ANCIENT_TRAPDOOR, "Bloodroot Trapdoor");
+        build.add(EBBlocks.ANCIENT_LOG, "Bloodroot Log");
+        build.add(EBBlocks.ANCIENT_WOOD, "Bloodroot Wood");
+        build.add(EBBlocks.STRIPPED_ANCIENT_LOG, "Stripped Bloodroot Log");
+        build.add(EBBlocks.STRIPPED_ANCIENT_WOOD, "Stripped Bloodroot Wood");
+        build.add(EBBlocks.ANCIENT_LEAVES, "Bloodroot Leaves");
+        build.add(EBBlocks.ANCIENT_FENCE, "Bloodroot Fence");
+        build.add(EBBlocks.ANCIENT_FENCE_GATE, "Bloodroot Fence Gate");
+        build.add(EBBlocks.ANCIENT_SAPLING, "Bloodroot Sapling");
+        build.add(EBBlocks.POTTED_ANCIENT_SAPLING, "Potted Bloodroot Sapling");
         build.add(EBBlocks.CHISELED_OAK_PLANKS, "Chiseled Oak Planks");
         build.add(EBBlocks.CHISELED_SPRUCE_PLANKS, "Chiseled Spruce Planks");
         build.add(EBBlocks.CHISELED_BIRCH_PLANKS, "Chiseled Birch Planks");
@@ -156,7 +156,7 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.CHISELED_BAMBOO_PLANKS, "Chiseled Bamboo Planks");
         build.add(EBBlocks.CHISELED_CRIMSON_PLANKS, "Chiseled Crimson Planks");
         build.add(EBBlocks.CHISELED_WARPED_PLANKS, "Chiseled Warped Planks");
-        build.add(EBBlocks.CHISELED_ANCIENT_PLANKS, "Chiseled Ancient Planks");
+        build.add(EBBlocks.CHISELED_ANCIENT_PLANKS, "Chiseled Bloodroot Planks");
         build.add(EBBlocks.COPPER_BRICKS, "Copper Bricks");
         build.add(EBBlocks.COPPER_BRICK_STAIRS, "Copper Stairs");
         build.add(EBBlocks.COPPER_BRICK_VERTICAL_STAIRS, "Copper Brick Vertical Stairs");
@@ -305,7 +305,7 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.BAMBOO_LADDER, "Bamboo Ladder");
         build.add(EBBlocks.CRIMSON_LADDER, "Crimson Ladder");
         build.add(EBBlocks.WARPED_LADDER, "Warped Ladder");
-        build.add(EBBlocks.ANCIENT_LADDER, "Ancient Ladder");
+        build.add(EBBlocks.ANCIENT_LADDER, "Bloodroot Ladder");
         build.add(EBBlocks.SPRUCE_CRAFTING_TABLE, "Spruce Crafting Table");
         build.add(EBBlocks.BIRCH_CRAFTING_TABLE, "Birch Crafting Table");
         build.add(EBBlocks.JUNGLE_CRAFTING_TABLE, "Jungle Crafting Table");
@@ -316,7 +316,7 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.BAMBOO_CRAFTING_TABLE, "Bamboo Crafting Table");
         build.add(EBBlocks.CRIMSON_CRAFTING_TABLE, "Crimson Crafting Table");
         build.add(EBBlocks.WARPED_CRAFTING_TABLE, "Warped Crafting Table");
-        build.add(EBBlocks.ANCIENT_CRAFTING_TABLE, "Ancient Crafting Table");
+        build.add(EBBlocks.ANCIENT_CRAFTING_TABLE, "Bloodroot Crafting Table");
         build.add(EBBlocks.QUARTZ_BRICK_STAIRS, "Quartz Brick Stairs");
         build.add(EBBlocks.QUARTZ_BRICK_SLAB, "Quartz Brick Slab");
         build.add(EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS, "Quartz Brick Vertical Stairs");
@@ -412,7 +412,7 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.BAMBOO_BOOKSHELF, "Bamboo Bookshelf");
         build.add(EBBlocks.CRIMSON_BOOKSHELF, "Crimson Bookshelf");
         build.add(EBBlocks.WARPED_BOOKSHELF, "Warped Bookshelf");
-        build.add(EBBlocks.ANCIENT_BOOKSHELF, "Ancient Bookshelf");
+        build.add(EBBlocks.ANCIENT_BOOKSHELF, "Bloodroot Bookshelf");
         build.add(EBBlocks.BRIMSTONE, "Brimstone");
         build.add(EBBlocks.BRIMSTONE_STAIRS, "Brimstone Stairs");
         build.add(EBBlocks.BRIMSTONE_VERTICAL_STAIRS, "Brimstone Vertical Stairs");
@@ -472,7 +472,7 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.BAMBOO_DECORATIVE_SHELF, "Bamboo Decorative Shelf");
         build.add(EBBlocks.CRIMSON_DECORATIVE_SHELF, "Crimson Decorative Shelf");
         build.add(EBBlocks.WARPED_DECORATIVE_SHELF, "Warped Decorative Shelf");
-        build.add(EBBlocks.ANCIENT_DECORATIVE_SHELF, "Ancient Decorative Shelf");
+        build.add(EBBlocks.ANCIENT_DECORATIVE_SHELF, "Bloodroot Decorative Shelf");
         build.add(EBBlocks.WEEPING_CANDLE, "Weeping Candle");
         build.add(EBBlocks.TWISTING_CANDLE, "Twisting Candle");
         build.add(EBBlocks.ALMENTRA_STATUE, "Almentra Statue");
@@ -489,30 +489,6 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.ALMENTRA_BRICK_VERTICAL_STAIRS, "Almentra Brick Vertical Stairs");
         build.add(EBBlocks.ALMENTRA_BRICK_SLAB, "Almentra Brick Slab");
         build.add(EBBlocks.MOSS_PASTE, "Moss Paste");
-//        build.add(EBBlocks.SPRUCE_CHEST, "Spruce Chest");
-//        build.add(EBBlocks.BIRCH_CHEST, "Birch Chest");
-//        build.add(EBBlocks.JUNGLE_CHEST, "Jungle Chest");
-//        build.add(EBBlocks.ACACIA_CHEST, "Acacia Chest");
-//        build.add(EBBlocks.DARK_OAK_CHEST, "Dark Oak Chest");
-//        build.add(EBBlocks.MANGROVE_CHEST, "Mangrove Chest");
-//        build.add(EBBlocks.CHERRY_CHEST, "Cherry Chest");
-//        build.add(EBBlocks.BAMBOO_CHEST, "Bamboo Chest");
-//        build.add(EBBlocks.CRIMSON_CHEST, "Crimson Chest");
-//        build.add(EBBlocks.WARPED_CHEST, "Warped Chest");
-//        build.add(EBBlocks.ANCIENT_CHEST, "Ancient Chest");
-//        build.add(EBBlocks.GLOOM_CHEST, "Gloom Chest");
-//        build.add(EBBlocks.TRAPPED_SPRUCE_CHEST, "Trapped Spruce Chest");
-//        build.add(EBBlocks.TRAPPED_BIRCH_CHEST, "Trapped Birch Chest");
-//        build.add(EBBlocks.TRAPPED_JUNGLE_CHEST, "Trapped Jungle Chest");
-//        build.add(EBBlocks.TRAPPED_ACACIA_CHEST, "Trapped Acacia Chest");
-//        build.add(EBBlocks.TRAPPED_DARK_OAK_CHEST, "Trapped Dark Oak Chest");
-//        build.add(EBBlocks.TRAPPED_MANGROVE_CHEST, "Trapped Mangrove Chest");
-//        build.add(EBBlocks.TRAPPED_CHERRY_CHEST, "Trapped Cherry Chest");
-//        build.add(EBBlocks.TRAPPED_BAMBOO_CHEST, "Trapped Bamboo Chest");
-//        build.add(EBBlocks.TRAPPED_CRIMSON_CHEST, "Trapped Crimson Chest");
-//        build.add(EBBlocks.TRAPPED_WARPED_CHEST, "Trapped Warped Chest");
-//        build.add(EBBlocks.TRAPPED_ANCIENT_CHEST, "Trapped Ancient Chest");
-//        build.add(EBBlocks.TRAPPED_GLOOM_CHEST, "Trapped Gloom Chest");
         build.add(EBBlocks.PAPER_BLOCK, "Paper Block");
         build.add(EBBlocks.THIN_PAPER_BLOCK, "Thin Paper Block");
         build.add(EBBlocks.THIN_DIAGONAL_PAPER_BLOCK, "Thin Diagonal Paper Block");
@@ -529,13 +505,13 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.MUD_BRICK_VERTICAL_STAIRS, "Mud Brick Vertical Stairs");
 
         //ITEMS
-        build.add(EBItems.ANCIENT_SIGN, "Ancient Sign");
-        build.add(EBItems.ANCIENT_HANGING_SIGN, "Ancient Hanging Sign");
-        build.add(EBItems.ANCIENT_FRUIT, "Ancient Fruit");
+        build.add(EBItems.ANCIENT_SIGN, "Bloodroot Sign");
+        build.add(EBItems.ANCIENT_HANGING_SIGN, "Bloodroot Hanging Sign");
+        build.add(EBItems.ANCIENT_FRUIT, "Life Fruit");
 
         //SHERDS
         build.add(EBItems.ROYALTY_POTTERY_SHERD, "Royalty Pottery Sherd");
-        build.add(EBItems.ANCIENT_POTTERY_SHERD, "Ancient Pottery Sherd");
+        build.add(EBItems.ANCIENT_POTTERY_SHERD, "Consume Pottery Sherd");
         build.add(EBItems.BITTER_POTTERY_SHERD, "Bitter Pottery Sherd");
         build.add(EBItems.BOIN_POTTERY_SHERD, "Boin Pottery Sherd");
         build.add(EBItems.BUSTLING_POTTERY_SHERD, "Bustling Pottery Sherd");
@@ -560,16 +536,13 @@ public class EBLangGen extends FabricLanguageProvider {
 
         //ADVANCEMENTS
         build.add("advancement.excessive_building.excessive_building", "Excessive Building");
-        build.add("advancement.excessive_building.excessive_building.description", "The world is your canvas so pick up some blocks and paint the world with creations!");
+        build.add("advancement.excessive_building.excessive_building.description", "The world is your canvas so pick up some blocks and paint the world with creation!");
 
         build.add("advancement.excessive_building.obtain_ancient_sapling", "No Sound No Memory");
-        build.add("advancement.excessive_building.obtain_ancient_sapling.description", "Have a Sniffer sniff out an Ancient Sapling an obtain it");
+        build.add("advancement.excessive_building.obtain_ancient_sapling.description", "Have a Sniffer sniff out an Bloodroot Sapling an obtain it");
 
         build.add("advancement.excessive_building.eat_ancient_fruit", "Hey What's The Expiration Date?");
-        build.add("advancement.excessive_building.eat_ancient_fruit.description", "Feed on an ancient fruit and discover its magical capabilities");
-
-        build.add("advancement.excessive_building.place_gloom_seeds", "Ancient Mystery");
-        build.add("advancement.excessive_building.place_gloom_seeds.description", "Plant the seeds of a once prospering tree");
+        build.add("advancement.excessive_building.eat_ancient_fruit.description", "Consume a Life Fruit and discover its magical capabilities");
 
         build.add("advancement.excessive_building.place_all_almentra_statues", "Double §kRorrRef §rRainbow");
         build.add("advancement.excessive_building.place_all_almentra_statues.description", "Place all almentra statue variants");

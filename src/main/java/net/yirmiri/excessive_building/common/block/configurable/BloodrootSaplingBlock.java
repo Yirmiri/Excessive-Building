@@ -5,13 +5,14 @@ import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.yirmiri.excessive_building.EBConfig;
 
-public class AncientSaplingBlock extends SaplingBlock {
-    public AncientSaplingBlock(SaplingGenerator generator, Settings settings) {
+@Deprecated(forRemoval = true)
+public class BloodrootSaplingBlock extends SaplingBlock {
+    public BloodrootSaplingBlock(SaplingGenerator generator, Settings settings) {
         super(generator, settings);
     }
 
     @Override
     public boolean isEnabled(FeatureSet enable) {
-        return EBConfig.ENABLE_ANCIENT_SAPLINGS.get();
+        return EBConfig.ENABLE_BLOODROOT_SAPLINGS.get();
     }
 }
