@@ -44,7 +44,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendSoulFireBaseBlocks();
         appendSoulSpeedBlocks();
         appendClimbable();
-        appendDecoratives();
         appendWoodenFences();
         appendWoodenDoors();
         appendWoodenTrapdoors();
@@ -67,15 +66,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.CANDLES)
                 .add(EBBlocks.WEEPING_CANDLE)
                 .add(EBBlocks.TWISTING_CANDLE)
-        ;
-    }
-
-    public void appendDecoratives() {
-        getOrCreateTagBuilder(EBTags.Blocks.DECORATIVES)
-                .add(EBBlocks.WOODEN_MUG)
-                .add(EBBlocks.GLASS_JAR)
-                .add(EBBlocks.GLASS_JAR_OF_FIRE)
-                .add(EBBlocks.GLASS_JAR_OF_SOUL_FIRE)
         ;
     }
 
@@ -754,26 +744,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.THICK_PAPER_STAIRS)
                 .add(EBBlocks.THICK_PAPER_VERTICAL_STAIRS)
                 .add(EBBlocks.THICK_PAPER_SLAB)
-//                .add(EBBlocks.SPRUCE_CHEST)
-//                .add(EBBlocks.BIRCH_CHEST)
-//                .add(EBBlocks.JUNGLE_CHEST)
-//                .add(EBBlocks.ACACIA_CHEST)
-//                .add(EBBlocks.DARK_OAK_CHEST)
-//                .add(EBBlocks.MANGROVE_CHEST)
-//                .add(EBBlocks.CHERRY_CHEST)
-//                .add(EBBlocks.BAMBOO_CHEST)
-//                .add(EBBlocks.CRIMSON_CHEST)
-//                .add(EBBlocks.WARPED_CHEST)
-//                .add(EBBlocks.TRAPPED_SPRUCE_CHEST)
-//                .add(EBBlocks.TRAPPED_BIRCH_CHEST)
-//                .add(EBBlocks.TRAPPED_JUNGLE_CHEST)
-//                .add(EBBlocks.TRAPPED_ACACIA_CHEST)
-//                .add(EBBlocks.TRAPPED_DARK_OAK_CHEST)
-//                .add(EBBlocks.TRAPPED_MANGROVE_CHEST)
-//                .add(EBBlocks.TRAPPED_CHERRY_CHEST)
-//                .add(EBBlocks.TRAPPED_BAMBOO_CHEST)
-//                .add(EBBlocks.TRAPPED_CRIMSON_CHEST)
-//                .add(EBBlocks.TRAPPED_WARPED_CHEST)
                 .add(EBBlocks.OAK_VERTICAL_STAIRS)
                 .add(EBBlocks.SPRUCE_VERTICAL_STAIRS)
                 .add(EBBlocks.BIRCH_VERTICAL_STAIRS)
@@ -785,7 +755,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.BAMBOO_VERTICAL_STAIRS)
                 .add(EBBlocks.CRIMSON_VERTICAL_STAIRS)
                 .add(EBBlocks.WARPED_VERTICAL_STAIRS)
-                .add(EBBlocks.WOODEN_MUG)
                 .add(EBBlocks.SPRUCE_CRAFTING_TABLE)
                 .add(EBBlocks.BIRCH_CRAFTING_TABLE)
                 .add(EBBlocks.JUNGLE_CRAFTING_TABLE)

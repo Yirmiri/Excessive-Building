@@ -610,12 +610,6 @@ public class EBBlocks {
     public static final Block WARPED_DECORATIVE_SHELF = registerDS("warped_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.WARPED_SHELF), true);
     public static final Block ANCIENT_DECORATIVE_SHELF = registerDS("ancient_decorative_shelf", new DecorativeShelfBlock(EBProperties.BlockP.CHERRY_SHELF), true);
 
-    //DECORATIVES
-    public static final Block WOODEN_MUG = registerDeco("wooden_mug", new WoodenMugBlock(EBProperties.BlockP.WOODEN_MUG), true);
-    public static final Block GLASS_JAR = registerDeco("glass_jar", new GlassJarBlock(EBProperties.BlockP.GLASS_JAR), true);
-    public static final Block GLASS_JAR_OF_FIRE = registerDeco("glass_jar_of_fire", new GlassJarBlock(EBProperties.BlockP.FIRE_GLASS_JAR), true);
-    public static final Block GLASS_JAR_OF_SOUL_FIRE = registerDeco("glass_jar_of_soul_fire", new GlassJarBlock(EBProperties.BlockP.SOUL_FIRE_GLASS_JAR), true);
-
     //STONE VARIANTS
     public static final Block GRANITE_BRICKS = register("granite_bricks", new Block(EBProperties.BlockP.POLISHED_GRANITE), true);
     public static final Block GRANITE_BRICK_STAIRS = register("granite_brick_stairs", new StairsBlock(GRANITE_BRICKS.getDefaultState(), EBProperties.BlockP.POLISHED_GRANITE), true);
@@ -822,17 +816,6 @@ public class EBBlocks {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new EBBookshelfBlockItem(block, new Item.Settings()));
     }
 
-    private static Block registerCV(String id, Block block, boolean registerItem) {
-        if (registerItem) {
-            registerregisterCVBlockItem(id, block);
-        }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
-    }
-
-    private static Item registerregisterCVBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new EBChestBlockItem(block, new Item.Settings()));
-    }
-
     private static Block registerCT(String id, Block block, boolean registerItem) {
         if (registerItem) {
             registerCTBlockItem(id, block);
@@ -864,17 +847,6 @@ public class EBBlocks {
 
     private static Item registerLadderBlockItem(String id, Block block) {
         return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new EBLadderBlockItem(block, new Item.Settings()));
-    }
-
-    private static Block registerDeco(String id, Block block, boolean registerItem) {
-        if (registerItem) {
-            registerDecoBlockItem(id, block);
-        }
-        return Registry.register(Registries.BLOCK, Identifier.of(ExcessiveBuilding.MOD_ID, id), block);
-    }
-
-    private static Item registerDecoBlockItem(String id, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(ExcessiveBuilding.MOD_ID, id), new DecorationBlockItem(block, new Item.Settings()));
     }
 
     public static void loadBlocks() {

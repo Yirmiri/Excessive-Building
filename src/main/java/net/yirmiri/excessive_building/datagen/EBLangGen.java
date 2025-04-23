@@ -50,11 +50,9 @@ public class EBLangGen extends FabricLanguageProvider {
         //TOOLTIPS
         build.add("tooltip.block.interact", "Upon Interaction:");
         build.add("tooltip.block.variant", "Cycles Block Variants:");
-        build.add("tooltip.block.interact_sugar", "Interact with Sugar:");
-        build.add("tooltip.block.swift", "Increases Movement Speed");
         build.add("tooltip.block.when_powered", "When Powered by Redstone:");
         build.add("tooltip.block.soul_magma", "Reverses Bubble Column Direction");
-        build.add("tooltip.block.player_nearby", "When Nearby:");
+        build.add("tooltip.block.player_nearby", "While Nearby:");
         build.add("tooltip.block.increases_block_reach", "Increases Interaction Reach");
 
         //MISC
@@ -319,10 +317,6 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.CRIMSON_CRAFTING_TABLE, "Crimson Crafting Table");
         build.add(EBBlocks.WARPED_CRAFTING_TABLE, "Warped Crafting Table");
         build.add(EBBlocks.ANCIENT_CRAFTING_TABLE, "Ancient Crafting Table");
-        build.add(EBBlocks.WOODEN_MUG, "Wooden Mug");
-        build.add(EBBlocks.GLASS_JAR, "Glass Jar");
-        build.add(EBBlocks.GLASS_JAR_OF_FIRE, "Glass Jar of Fire");
-        build.add(EBBlocks.GLASS_JAR_OF_SOUL_FIRE, "Glass Jar of Soul Fire");
         build.add(EBBlocks.QUARTZ_BRICK_STAIRS, "Quartz Brick Stairs");
         build.add(EBBlocks.QUARTZ_BRICK_SLAB, "Quartz Brick Slab");
         build.add(EBBlocks.QUARTZ_BRICK_VERTICAL_STAIRS, "Quartz Brick Vertical Stairs");

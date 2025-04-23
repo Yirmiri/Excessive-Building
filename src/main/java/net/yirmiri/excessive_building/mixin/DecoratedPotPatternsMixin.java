@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class DecoratedPotPatternsMixin {
 
     @Inject(method = "fromSherd", at = @At("RETURN"), cancellable = true)
-    private static void fromSherd(Item item, CallbackInfoReturnable<RegistryKey<String>> cir) {
+    private static void excessiveBuilding$fromSherd(Item item, CallbackInfoReturnable<RegistryKey<String>> cir) {
         if (item == EBItems.ROYALTY_POTTERY_SHERD) {
             cir.setReturnValue(EBDecoratedPotPatterns.ROYALTY_POTTERY_PATTERN);
         }

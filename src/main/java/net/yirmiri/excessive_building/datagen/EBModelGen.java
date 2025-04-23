@@ -321,8 +321,6 @@ public class EBModelGen extends FabricModelProvider {
         generator.registerCubeWithCustomTextures(EBBlocks.WARPED_CRAFTING_TABLE, Blocks.WARPED_PLANKS, TextureMap::frontSideWithCustomBottom);
         generator.registerCubeWithCustomTextures(EBBlocks.ANCIENT_CRAFTING_TABLE, EBBlocks.ANCIENT_PLANKS, TextureMap::frontSideWithCustomBottom);
 
-        EBModels.registerMug(generator, EBBlocks.WOODEN_MUG);
-
         BlockStateModelGenerator.BlockTexturePool quartzBricks = generator.registerCubeAllModelTexturePool(Blocks.QUARTZ_BRICKS);
         quartzBricks.stairs(EBBlocks.QUARTZ_BRICK_STAIRS);
         quartzBricks.slab(EBBlocks.QUARTZ_BRICK_SLAB);
@@ -753,9 +751,6 @@ public class EBModelGen extends FabricModelProvider {
         public static final Model LADDER = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_ladder")
                 .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
 
-        public static final Model MUG = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_mug")
-                .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
-
         public static final Model PARTICLE_CANDLE = new Model(Optional.of(Identifier.of(ExcessiveBuilding.MOD_ID, "template_particle_candle")
                 .withPrefixedPath("block/")), Optional.empty(), TextureKey.TEXTURE, TextureKey.PARTICLE);
 
@@ -814,19 +809,6 @@ public class EBModelGen extends FabricModelProvider {
                             .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true))
                     .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
                             .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true))));
-        }
-
-        public static void registerMug(BlockStateModelGenerator generator, Block mug) {
-            Identifier model = MUG.upload(mug, TextureMap.texture(mug), generator.modelCollector);
-            generator.blockStateCollector.accept(VariantsBlockStateSupplier.create(mug).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
-                    .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R0).put(VariantSettings.UVLOCK, false))
-                    .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, false))
-                    .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, false))
-                    .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, model)
-                            .put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, false))));
         }
 
             public static void registerSeaGlassPane(BlockStateModelGenerator generator, Block seaGlass, Block texture) {

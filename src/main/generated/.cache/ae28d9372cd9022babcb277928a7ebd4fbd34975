@@ -1,4 +1,4 @@
-// 1.20.1	2025-04-21T15:58:08.6067646	Excessive Building/Tags for minecraft:block
+// 1.20.1	2025-04-22T22:47:02.2181601	Excessive Building/Tags for minecraft:block
 6a81bcf06507afe81c7d487b432e1ce5f85ff6c8 data\minecraft\tags\blocks\needs_stone_tool.json
 97e5302966d299679c43ff18f26a88dc0afe025d data\minecraft\tags\blocks\dampens_vibrations.json
 c56fb325fba9e489f5722f03fe17eec24f408c8b data\minecraft\tags\blocks\wooden_pressure_plates.json
@@ -16,7 +16,7 @@ f84c893f3b6f74bb4c2cff26bd4089720f7bb82c data\minecraft\tags\blocks\saplings.jso
 b8248c5ca2f35f5303a194c3669a3ab0633155ef data\minecraft\tags\blocks\beacon_base_blocks.json
 5fb66c1130328a7cf0e74d8ce0179834e52d5aec data\minecraft\tags\blocks\wooden_fences.json
 1222c97d0c524556b752dae1c93162ef7177eb0a data\minecraft\tags\blocks\enchantment_power_provider.json
-6c35a13f890bbd60ecc1e92795551acaaa5fbb70 data\minecraft\tags\blocks\mineable\axe.json
+5db416a5471139702ace39e7af5d750c691c3c85 data\minecraft\tags\blocks\mineable\axe.json
 cd5bc44ed602ab0098c1fed75a633d7c6ae24ba5 data\minecraft\tags\blocks\mineable\hoe.json
 ed66a60d224eafa32222f04f5f305d88b374a938 data\minecraft\tags\blocks\logs_that_burn.json
 c8c3439fdee03f5979f23aaa48653d87f8acd1f7 data\minecraft\tags\blocks\candles.json
@@ -33,7 +33,6 @@ c474d0c7d61ce32856dddcc22cf87150d0b1c28e data\minecraft\tags\blocks\wooden_slabs
 c961787dd6feb3f7383b3bb42adc46fb46288a0d data\minecraft\tags\blocks\fence_gates.json
 5d53b067bf0810b4938872ee8831f405caf3b136 data\minecraft\tags\blocks\guarded_by_piglins.json
 9514b016224003660c183a22ffca11a62ac3abc6 data\minecraft\tags\blocks\wooden_doors.json
-cd3da2a25b9b388ad83af9d5fd88fb06731f68d3 data\excessive_building\tags\blocks\decoratives.json
 2c36f6032581c5bfd252f43d578ae38847cbbb8d data\minecraft\tags\blocks\wooden_buttons.json
 7af3e4d48fc3376a6d8a07064d404c4a79a8b05c data\excessive_building\tags\blocks\ancient_logs.json
 c58818b30f1bd6d0f967967fee119e5d8490de2d data\minecraft\tags\blocks\climbable.json

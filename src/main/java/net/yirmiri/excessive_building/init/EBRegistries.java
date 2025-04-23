@@ -11,7 +11,7 @@ import net.yirmiri.excessive_building.registry.EBBlocks;
 import net.yirmiri.excessive_building.registry.EBItems;
 import net.yirmiri.excessive_building.registry.EBPotions;
 
-import static net.yirmiri.excessive_building.mixin.BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe;
+import static net.yirmiri.excessive_building.mixin.BrewingRecipeRegistryMixin.excessiveBuilding$invokeRegisterPotionRecipe;
 
 import static net.minecraft.block.ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE;
 
@@ -27,15 +27,15 @@ public class EBRegistries {
     }
 
     private static void registerBrewingRecipes() {
-        invokeRegisterPotionRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT, EBPotions.ENDURANCE);
-        invokeRegisterPotionRecipe(EBPotions.ENDURANCE, Items.REDSTONE, EBPotions.LONG_ENDURANCE);
-        invokeRegisterPotionRecipe(EBPotions.ENDURANCE, Items.GLOWSTONE_DUST, EBPotions.STRONG_ENDURANCE);
+        excessiveBuilding$invokeRegisterPotionRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT, EBPotions.ENDURANCE);
+        excessiveBuilding$invokeRegisterPotionRecipe(EBPotions.ENDURANCE, Items.REDSTONE, EBPotions.LONG_ENDURANCE);
+        excessiveBuilding$invokeRegisterPotionRecipe(EBPotions.ENDURANCE, Items.GLOWSTONE_DUST, EBPotions.STRONG_ENDURANCE);
 
-        invokeRegisterPotionRecipe(EBPotions.ENDURANCE, Items.FERMENTED_SPIDER_EYE, EBPotions.FATIGUING);
-        invokeRegisterPotionRecipe(EBPotions.FATIGUING, Items.REDSTONE, EBPotions.LONG_FATIGUING);
-        invokeRegisterPotionRecipe(EBPotions.FATIGUING, Items.GLOWSTONE_DUST, EBPotions.STRONG_FATIGUING);
-        invokeRegisterPotionRecipe(EBPotions.LONG_ENDURANCE, Items.FERMENTED_SPIDER_EYE, EBPotions.LONG_FATIGUING);
-        invokeRegisterPotionRecipe(EBPotions.STRONG_ENDURANCE, Items.FERMENTED_SPIDER_EYE, EBPotions.STRONG_FATIGUING);
+        excessiveBuilding$invokeRegisterPotionRecipe(EBPotions.ENDURANCE, Items.FERMENTED_SPIDER_EYE, EBPotions.FATIGUING);
+        excessiveBuilding$invokeRegisterPotionRecipe(EBPotions.FATIGUING, Items.REDSTONE, EBPotions.LONG_FATIGUING);
+        excessiveBuilding$invokeRegisterPotionRecipe(EBPotions.FATIGUING, Items.GLOWSTONE_DUST, EBPotions.STRONG_FATIGUING);
+        excessiveBuilding$invokeRegisterPotionRecipe(EBPotions.LONG_ENDURANCE, Items.FERMENTED_SPIDER_EYE, EBPotions.LONG_FATIGUING);
+        excessiveBuilding$invokeRegisterPotionRecipe(EBPotions.STRONG_ENDURANCE, Items.FERMENTED_SPIDER_EYE, EBPotions.STRONG_FATIGUING);
     }
 
     public static void registerOxidizables() {

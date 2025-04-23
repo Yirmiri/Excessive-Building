@@ -1,11 +1,9 @@
 package net.yirmiri.excessive_building.block;
 
 import net.minecraft.block.*;
-import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
@@ -20,7 +18,6 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
-import net.yirmiri.excessive_building.EBConfig;
 import org.jetbrains.annotations.Nullable;
 
 public class AlmentraStatueBlock extends Block implements Waterloggable {
@@ -35,11 +32,6 @@ public class AlmentraStatueBlock extends Block implements Waterloggable {
     public AlmentraStatueBlock(Settings settings) {
         super(settings);
         setDefaultState(getDefaultState().with(ROTATION, 0).with(WATERLOGGED, false));
-    }
-
-    @Override
-    public boolean isEnabled(FeatureSet enable) {
-        return EBConfig.ENABLE_DECORATIVES.get();
     }
 
     @Override

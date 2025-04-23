@@ -6,21 +6,23 @@ public class EBConfig {
     public static final ForgeConfigSpec COMMON;
     public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
-    //CONTENT
-    public static final ForgeConfigSpec.BooleanValue ENABLE_ASPHALT;
+    //MISC CONFIGURATIONS
+    public static final ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_TOOLTIPS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_MISC_TOOLTIPS;
+
+    //CONTENT CONFIGURATIONS
     public static final ForgeConfigSpec.BooleanValue ENABLE_VERTICAL_STAIRS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_ASPHALT;
     public static final ForgeConfigSpec.BooleanValue ENABLE_RESOURCE_BRICKS;
-    public static final ForgeConfigSpec.BooleanValue ENABLE_SHELF_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVE_SHELVES;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_SHELF_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_CRAFTING_TABLE_VARIANTS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_LADDER_VARIANTS;
+    public static final ForgeConfigSpec.BooleanValue ENABLE_ANCIENT_SAPLINGS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_EB_POTTERY_SHERDS;
     public static final ForgeConfigSpec.BooleanValue ENABLE_PARTICLE_CANDLES;
-    public static final ForgeConfigSpec.BooleanValue ENABLE_DECORATIVES;
-    public static final ForgeConfigSpec.BooleanValue ENABLE_ANCIENT_SAPLINGS;
-    public static final ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_TOOLTIPS;
 
-    //BALANCE
+    //BALANCE CONFIGURATIONS
     public static final ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
     public static final ForgeConfigSpec.BooleanValue ENABLE_SOUL_MAGMA_COLUMN_TOGGLE;
     public static final ForgeConfigSpec.IntValue ENDURANCE_DURATION;
@@ -35,38 +37,55 @@ public class EBConfig {
     public static final ForgeConfigSpec.IntValue ANCIENT_FRUIT_AMPLIFIER;
 
     static {
-        //CONTENT TOGGLES
         BUILDER.push("Excessive Building Config");
 
-        BUILDER.push("Content Toggles").comment("Disabling these will make the corresponding feature unobtainable/unusable");
+        //MISC CONFIGURATIONS
+        BUILDER.push("Misc Configurations").comment("Configurations for miscellaneous features that don't directly affect gameplay");
 
-        ENABLE_ASPHALT = BUILDER
-                .comment("Should asphalt be enabled? (default: true)")
-                .define("enableAsphalt", true);
+        ENABLE_CUSTOM_TOOLTIPS = BUILDER
+                .comment("Should Excessive Building items with special interactions have custom tooltips? (default: true)")
+                .define("enableCustomTooltips", true);
+
+        ENABLE_MISC_TOOLTIPS = BUILDER
+                .comment("Should additional tooltips appear on some items like Excessive Building's pottery sherds? (default: true)")
+                .define("enableMiscTooltips", true);
+
+        BUILDER.pop();
+
+        //CONTENT CONFIGURATIONS
+        BUILDER.push("Content Configurations").comment("Disabling these will make the corresponding feature unobtainable/unusable");
 
         ENABLE_VERTICAL_STAIRS = BUILDER
                 .comment("Should vertical stairs be enabled? (default: true)")
                 .define("enableVerticalStairs", true);
 
+        ENABLE_ASPHALT = BUILDER
+                .comment("Should asphalt be enabled? (default: true)")
+                .define("enableAsphalt", true);
+
         ENABLE_RESOURCE_BRICKS = BUILDER
                 .comment("Should blocks made out of resources (gold, diamond, etc) be enabled? (default: true)")
                 .define("enableResourceBricks", true);
-
-        ENABLE_SHELF_VARIANTS = BUILDER
-                .comment("Should shelf variants be enabled? (default: true)")
-                .define("enableShelfVariants", true);
 
         ENABLE_DECORATIVE_SHELVES = BUILDER
                 .comment("Should decorative shelf blocks be enabled? (default: true)")
                 .define("enableDecorativeShelves", true);
 
+        ENABLE_SHELF_VARIANTS = BUILDER
+                .comment("Should shelf variants be enabled? (default: false)")
+                .define("enableShelfVariants", false);
+
         ENABLE_CRAFTING_TABLE_VARIANTS = BUILDER
-                .comment("Should crafting table variants be enabled? (default: true)")
-                .define("enableCraftingTableVariants", true);
+                .comment("Should crafting table variants be enabled? (default: false)")
+                .define("enableCraftingTableVariants", false);
 
         ENABLE_LADDER_VARIANTS = BUILDER
-                .comment("Should ladder variants be enabled? (default: true)")
-                .define("enableLadderVariants", true);
+                .comment("Should ladder variants be enabled? (default: false)")
+                .define("enableLadderVariants", false);
+
+        ENABLE_ANCIENT_SAPLINGS = BUILDER
+                .comment("Should ancient saplings be enabled (and to extension their content)? (default: true)")
+                .define("enableAncientSaplings", true);
 
         ENABLE_EB_POTTERY_SHERDS = BUILDER
                 .comment("Should Excessive Building's pottery sherds be enabled? (default: true)")
@@ -76,22 +95,10 @@ public class EBConfig {
                 .comment("Should new candles that produce particles when lit be enabled? (default: true)")
                 .define("enableParticleCandles", true);
 
-        ENABLE_DECORATIVES = BUILDER
-                .comment("Should small decoration blocks (jars, mugs, etc) be enabled? (default: true)")
-                .define("enableDecoratives", true);
-
-        ENABLE_ANCIENT_SAPLINGS = BUILDER
-                .comment("Should ancient saplings be enabled (and to extension their content)? (default: true)")
-                .define("enableAncientSaplings", true);
-
-        ENABLE_CUSTOM_TOOLTIPS = BUILDER
-                .comment("Should Excessive Building items with special interactions have custom tooltips? (default: true)")
-                .define("enableCustomTooltips", true);
-
         BUILDER.pop();
 
-        //BALANCE CONFIGURATION
-        BUILDER.push("Balance Configuration").comment("Configuration for features that may impact gameplay in a large way");
+        //BALANCE CONFIGURATIONS
+        BUILDER.push("Balance Configurations").comment("Configurations for features that may impact gameplay in a large way");
 
         ENABLE_EB_VILLAGER_TRADES = BUILDER
                 .comment("Should Excessive Building add new trade offers to villagers? (default: true)")

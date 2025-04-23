@@ -20,6 +20,6 @@ public class EBWorldGenGen extends FabricDynamicRegistryProvider {
 
     @Override
     public String getName() {
-        return "World Gen Gen";
+        return "EBWorldGenGen";
     }
 }

@@ -1484,35 +1484,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(EBBlocks.ANCIENT_PLANKS), conditionsFromItem(EBBlocks.ANCIENT_PLANKS))
                 .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.ANCIENT_CRAFTING_TABLE)));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.WOODEN_MUG, 3)
-                .input('#', ItemTags.WOODEN_SLABS).input('@', Items.STICK)
-                .pattern("@##")
-                .pattern(" ##")
-                .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.WOODEN_MUG)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GLASS_JAR, 3)
-                .input('#', Items.GLASS)
-                .pattern("# #")
-                .pattern("###")
-                .criterion(hasItem(Items.GLASS), conditionsFromItem(Items.GLASS))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLASS_JAR)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GLASS_JAR_OF_FIRE, 1)
-                .input('#', EBBlocks.GLASS_JAR).input('@', Items.FIRE_CHARGE)
-                .pattern("#")
-                .pattern("@")
-                .criterion(hasItem(EBBlocks.GLASS_JAR), conditionsFromItem(EBBlocks.GLASS_JAR))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLASS_JAR_OF_FIRE)));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, EBBlocks.GLASS_JAR_OF_SOUL_FIRE, 1)
-                .input('#', EBBlocks.GLASS_JAR).input('@', Items.FIRE_CHARGE).input('!', ItemTags.SOUL_FIRE_BASE_BLOCKS)
-                .pattern("#")
-                .pattern("@")
-                .pattern("!")
-                .criterion(hasItem(EBBlocks.GLASS_JAR), conditionsFromItem(EBBlocks.GLASS_JAR))
-                .offerTo(exporter, Identifier.of(ExcessiveBuilding.MOD_ID, getRecipeName(EBBlocks.GLASS_JAR_OF_SOUL_FIRE)));
-
         createStairsRecipe(EBBlocks.QUARTZ_BRICK_STAIRS,
                 Ingredient.ofItems(Blocks.QUARTZ_BRICKS))
                 .criterion(hasItem(Blocks.QUARTZ_BRICKS), conditionsFromItem(Blocks.QUARTZ_BRICKS))
