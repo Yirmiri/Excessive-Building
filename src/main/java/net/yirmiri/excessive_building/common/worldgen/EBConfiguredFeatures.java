@@ -1,0 +1,39 @@
+package net.yirmiri.excessive_building.common.worldgen;
+
+import net.minecraft.registry.Registerable;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.RuleTest;
+import net.minecraft.structure.rule.TagMatchRuleTest;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.feature.*;
+import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.core.registry.EBBlocks;
+
+import java.util.List;
+
+public class EBConfiguredFeatures {
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ANCIENT_TREE = createKey("ancient_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_BRIMSTONE = createKey("ore_brimstone");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORE_ALMENTRA = createKey("ore_almentra");
+
+    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> ctx) {
+        RuleTest overworldReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_OVERWORLD);
+        RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
+
+        List<OreFeatureConfig.Target> oreAlmentra = List.of(OreFeatureConfig.createTarget(overworldReplaceables, EBBlocks.ALMENTRA.getDefaultState()));
+        List<OreFeatureConfig.Target> oreBrimstone = List.of(OreFeatureConfig.createTarget(netherReplaceables, EBBlocks.BRIMSTONE.getDefaultState()));
+
+        register(ctx, ORE_ALMENTRA, Feature.ORE, new OreFeatureConfig(oreAlmentra, 48));
+        register(ctx, ORE_BRIMSTONE, Feature.ORE, new OreFeatureConfig(oreBrimstone, 48));
+    }
+
+    public static RegistryKey<ConfiguredFeature<?, ?>> createKey(String id) {
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(ExcessiveBuilding.MOD_ID, id));
+    }
+
+    public static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> registerable, RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC config) {
+        registerable.register(key, new ConfiguredFeature<>(feature, config));
+    }
+}

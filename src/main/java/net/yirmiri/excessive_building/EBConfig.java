@@ -60,7 +60,7 @@ public class EBConfig {
                 .define("enableVerticalStairs", true);
 
         ENABLE_ASPHALT = BUILDER
-                .comment("Should asphalt be enabled? (default: true)")
+                .comment("Should asphalt, a block that increases movement speed while stepped on be enabled? (default: true)")
                 .define("enableAsphalt", true);
 
         ENABLE_RESOURCE_BRICKS = BUILDER
@@ -68,19 +68,19 @@ public class EBConfig {
                 .define("enableResourceBricks", true);
 
         ENABLE_DECORATIVE_SHELVES = BUILDER
-                .comment("Should decorative shelf blocks be enabled? (default: true)")
+                .comment("Should decorative shelves be enabled? (default: true)")
                 .define("enableDecorativeShelves", true);
 
         ENABLE_SHELF_VARIANTS = BUILDER
-                .comment("Should shelf variants be enabled? (default: false)")
+                .comment("Should shelf wood variants be enabled? (default: false)")
                 .define("enableShelfVariants", false);
 
         ENABLE_CRAFTING_TABLE_VARIANTS = BUILDER
-                .comment("Should crafting table variants be enabled? (default: false)")
+                .comment("Should crafting table wood variants be enabled? (default: false)")
                 .define("enableCraftingTableVariants", false);
 
         ENABLE_LADDER_VARIANTS = BUILDER
-                .comment("Should ladder variants be enabled? (default: false)")
+                .comment("Should ladder wood variants be enabled? (default: false)")
                 .define("enableLadderVariants", false);
 
         ENABLE_ANCIENT_SAPLINGS = BUILDER

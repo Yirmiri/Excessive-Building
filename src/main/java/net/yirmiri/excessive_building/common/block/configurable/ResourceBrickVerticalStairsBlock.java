@@ -1,0 +1,16 @@
+package net.yirmiri.excessive_building.common.block.configurable;
+
+import net.minecraft.resource.featuretoggle.FeatureSet;
+import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.common.block.VerticalStairsBlock;
+
+public class ResourceBrickVerticalStairsBlock extends VerticalStairsBlock {
+    public ResourceBrickVerticalStairsBlock(Settings settings) {
+        super(settings);
+    }
+
+    @Override
+    public boolean isEnabled(FeatureSet enable) {
+        return EBConfig.ENABLE_RESOURCE_BRICKS.get() && EBConfig.ENABLE_VERTICAL_STAIRS.get();
+    }
+}

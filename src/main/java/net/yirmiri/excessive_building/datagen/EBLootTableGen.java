@@ -13,8 +13,8 @@ import net.minecraft.loot.entry.LeafEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.DyeColor;
-import net.yirmiri.excessive_building.registry.EBBlocks;
-import net.yirmiri.excessive_building.registry.EBItems;
+import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 
 import java.util.concurrent.CompletableFuture;
 

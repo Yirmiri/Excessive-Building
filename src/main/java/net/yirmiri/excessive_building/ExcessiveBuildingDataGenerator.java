@@ -5,8 +5,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 import net.yirmiri.excessive_building.datagen.*;
-import net.yirmiri.excessive_building.worldgen.EBConfiguredFeatures;
-import net.yirmiri.excessive_building.worldgen.EBPlacedFeatures;
+import net.yirmiri.excessive_building.common.worldgen.EBConfiguredFeatures;
+import net.yirmiri.excessive_building.common.worldgen.EBPlacedFeatures;
 
 public class ExcessiveBuildingDataGenerator implements DataGeneratorEntrypoint {
 	@Override

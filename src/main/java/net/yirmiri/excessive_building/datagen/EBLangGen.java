@@ -4,8 +4,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.DyeColor;
-import net.yirmiri.excessive_building.registry.EBBlocks;
-import net.yirmiri.excessive_building.registry.EBItems;
+import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.concurrent.CompletableFuture;

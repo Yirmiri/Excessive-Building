@@ -15,9 +15,9 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.registry.EBBlocks;
-import net.yirmiri.excessive_building.registry.EBItems;
-import net.yirmiri.excessive_building.init.EBTags;
+import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
+import net.yirmiri.excessive_building.core.init.EBTags;
 
 import java.util.List;
 import java.util.function.Consumer;

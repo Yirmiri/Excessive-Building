@@ -7,9 +7,9 @@ import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.DyeColor;
-import net.yirmiri.excessive_building.registry.EBBlocks;
-import net.yirmiri.excessive_building.registry.EBItems;
-import net.yirmiri.excessive_building.init.EBTags;
+import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
+import net.yirmiri.excessive_building.core.init.EBTags;
 
 import java.util.concurrent.CompletableFuture;
 

@@ -10,11 +10,11 @@ import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.block.entity.HangingSignBlockEntityRenderer;
 import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
-import net.yirmiri.excessive_building.particle.FallingLeafParticle;
-import net.yirmiri.excessive_building.registry.EBBlockEntities;
-import net.yirmiri.excessive_building.registry.EBBlocks;
-import net.yirmiri.excessive_building.registry.EBParticles;
-import net.yirmiri.excessive_building.init.EBBlockSetTypes;
+import net.yirmiri.excessive_building.common.particle.FallingLeafParticle;
+import net.yirmiri.excessive_building.core.registry.EBBlockEntities;
+import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBParticles;
+import net.yirmiri.excessive_building.core.init.EBBlockSetTypes;
 
 @Environment(EnvType.CLIENT)
 public class ExcessiveBuildingClient implements ClientModInitializer {

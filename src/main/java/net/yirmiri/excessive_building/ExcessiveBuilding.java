@@ -3,11 +3,11 @@ package net.yirmiri.excessive_building;
 import fuzs.forgeconfigapiport.api.config.v2.ForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.minecraftforge.fml.config.ModConfig;
-import net.yirmiri.excessive_building.init.*;
-import net.yirmiri.excessive_building.worldgen.EBPlacedFeatures;
+import net.yirmiri.excessive_building.core.init.*;
+import net.yirmiri.excessive_building.common.worldgen.EBPlacedFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import net.yirmiri.excessive_building.registry.*;
+import net.yirmiri.excessive_building.core.registry.*;
 
 public class ExcessiveBuilding implements ModInitializer {
 	public static final String MOD_ID = "excessive_building";
