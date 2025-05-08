@@ -34,4 +34,21 @@ public class ExcessiveBuilding implements ModInitializer {
 
 		//Registries.BLOCK.addAlias(Identifier.of(MOD_ID, "old"), Registries.BLOCK.get(Identifier.of(MOD_ID, "new")));
 	}
+
+	//TODO
+	//Life fruit obtaining method
+	//New woodset
+	//New stoneset (inspired by screwed up pallete)
+	//Rewrite configurable blocks registry
+	//Common features config - enables cobblestone bricks/stone brick variants etc
+	//Additional plank blocks config - enables mosaics and chiseled planks
+	//Multiple new blockset configs (sandstone, brimstone etc)
+	//Overhaul paper blocks
+	//Reaching lantern updates
+	//Particle candle overhaul
+	//Sea glass overhaul (pane only maybe?)
+	//Old ancient color resource pack
+	//Ancient tree gen
+	//Port 1.21 features here
+	//PORT TO MULTILOADER (last)
 }

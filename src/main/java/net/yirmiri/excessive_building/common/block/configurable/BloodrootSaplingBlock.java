@@ -5,7 +5,7 @@ import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.yirmiri.excessive_building.EBConfig;
 
-@Deprecated(forRemoval = true)
+@Deprecated
 public class BloodrootSaplingBlock extends SaplingBlock {
     public BloodrootSaplingBlock(SaplingGenerator generator, Settings settings) {
         super(generator, settings);

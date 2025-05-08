@@ -4,7 +4,7 @@ import net.minecraft.block.LadderBlock;
 import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.yirmiri.excessive_building.EBConfig;
 
-@Deprecated(forRemoval = true)
+@Deprecated
 public class EBLadderBlock extends LadderBlock {
     public EBLadderBlock(Settings settings) {
         super(settings);
