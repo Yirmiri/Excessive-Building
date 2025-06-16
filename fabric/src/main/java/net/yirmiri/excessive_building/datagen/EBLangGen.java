@@ -25,6 +25,7 @@ public class EBLangGen extends FabricLanguageProvider {
 
         //MISC
         build.add("itemgroup.excessive_building", "Excessive Building");
+        build.add("itemgroup.excessive_building_vertical_stairs", "Excessive Building: Vertical Stairs");
         build.add("tooltip.item.radiance_gauntlet", "Reduces the delay of placing blocks");
         build.add("message.item.radiance_gauntlet", "Gauntlet power level:");
 

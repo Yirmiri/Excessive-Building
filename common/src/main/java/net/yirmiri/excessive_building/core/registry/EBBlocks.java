@@ -2,16 +2,48 @@ package net.yirmiri.excessive_building.core.registry;
 
 import net.azurune.runiclib.common.publicized.PublicStairBlock;
 import net.azurune.runiclib.core.platform.Services;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.AmethystGlassBlock;
+import net.yirmiri.excessive_building.common.block.VerticalStairBlock;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 
-import java.util.HashMap;
+import java.util.*;
 import java.util.function.Supplier;
 
 public class EBBlocks {
+    //VERTICAL STAIRS
+    public static final List<Supplier<Block>> VERTICAL_STAIRS = new ArrayList<>();
+
+    public static void createVerticalStairs() {
+        //This creates a VerticalStairBlock for every registered StairBlock
+        Registry<Block> blockRegistry = BuiltInRegistries.BLOCK;
+        Set<ResourceKey<Block>> keys = new HashSet<>(blockRegistry.registryKeySet());
+
+        for (ResourceKey<Block> key : keys) {
+            Block originalBlock = blockRegistry.get(key);
+            if (originalBlock instanceof StairBlock) {
+                String originalPath = key.location().getPath();
+                String blockId;
+
+                //This cuts _stairs from the id and adds _vertical_stairs so we can have mod_id:block_vertical stairs instead of mod_id:vertical_block_stairs
+                if (originalPath.endsWith("_stairs")) {
+                    blockId = originalPath.substring(0, originalPath.length() - "_stairs".length()) + "_vertical_stairs";
+                } else {
+                    blockId = "vertical_" + originalPath; //Fallback
+                }
+
+                registerVerticalStair(key.location().getNamespace(), blockId, () ->
+                        new VerticalStairBlock(BlockBehaviour.Properties.copy(originalBlock)), true);
+            }
+        }
+    }
+
     //ELYERIUM
     public static final Supplier<Block> ELYERIUM = register("elyerium", () -> new Block(EBProperties.BlockP.ELYERIUM), true);
     public static final Supplier<Block> ELYERIUM_STAIRS = register("elyerium_stairs", () -> new PublicStairBlock(ELYERIUM.get().defaultBlockState(), EBProperties.BlockP.ELYERIUM), true);
@@ -123,6 +155,12 @@ public class EBBlocks {
         return Services.REGISTRY.registerBlock(ExcessiveBuilding.MOD_ID, id, block, hasItem);
     }
 
+    private static Supplier<Block> registerVerticalStair(String modId, String id, Supplier<Block> block, boolean hasItem) {
+        VERTICAL_STAIRS.add(block);
+        return Services.REGISTRY.registerBlock(modId, id, block, hasItem);
+    }
+
     public static void loadBlocks() {
+        createVerticalStairs();
     }
 }
