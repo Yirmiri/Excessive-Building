@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/polished_chloroslate",
+    "side": "excessive_building:block/polished_chloroslate",
+    "top": "excessive_building:block/polished_chloroslate"
+  }
+}

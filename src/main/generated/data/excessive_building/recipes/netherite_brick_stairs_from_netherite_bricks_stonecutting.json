@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "excessive_building:netherite_bricks"
-  },
-  "result": "excessive_building:netherite_brick_stairs"
-}

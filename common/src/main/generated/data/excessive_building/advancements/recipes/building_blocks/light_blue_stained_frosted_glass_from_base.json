@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_light_blue_stained_frosted_glass": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "excessive_building:light_blue_stained_frosted_glass"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "excessive_building:light_blue_stained_frosted_glass_from_base"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_light_blue_stained_frosted_glass",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "excessive_building:light_blue_stained_frosted_glass_from_base"
+    ]
+  },
+  "sends_telemetry_event": false
+}

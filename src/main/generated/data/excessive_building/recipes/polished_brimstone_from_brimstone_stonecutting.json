@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "excessive_building:brimstone"
-  },
-  "result": "excessive_building:polished_brimstone"
-}

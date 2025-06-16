@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "excessive_building:hectalite"
+    },
+    "@": {
+      "item": "excessive_building:aridite"
+    }
+  },
+  "pattern": [
+    "@#",
+    "#@"
+  ],
+  "result": {
+    "count": 4,
+    "item": "excessive_building:elyerium"
+  },
+  "show_notification": true
+}

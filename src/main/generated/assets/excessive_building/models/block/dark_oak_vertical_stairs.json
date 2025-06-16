@@ -1,7 +1,0 @@
-{
-  "parent": "excessive_building:block/template_vertical_stairs",
-  "textures": {
-    "particle": "minecraft:block/dark_oak_planks",
-    "texture": "minecraft:block/dark_oak_planks"
-  }
-}

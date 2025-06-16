@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:diorite"
-  },
-  "result": "excessive_building:diorite_vertical_stairs"
-}

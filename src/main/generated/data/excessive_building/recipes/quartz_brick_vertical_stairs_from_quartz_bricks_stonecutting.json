@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:quartz_bricks"
-  },
-  "result": "excessive_building:quartz_brick_vertical_stairs"
-}

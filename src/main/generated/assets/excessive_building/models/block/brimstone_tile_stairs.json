@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "excessive_building:block/brimstone_tiles",
-    "side": "excessive_building:block/brimstone_tiles",
-    "top": "excessive_building:block/brimstone_tiles"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "excessive_building:block/template_vertical_stairs",
-  "textures": {
-    "particle": "excessive_building:block/black_polished_almentra",
-    "texture": "excessive_building:block/black_polished_almentra"
-  }
-}

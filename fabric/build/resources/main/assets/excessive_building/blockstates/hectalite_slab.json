@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/hectalite_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/hectalite"
+    },
+    "type=top": {
+      "model": "excessive_building:block/hectalite_slab_top"
+    }
+  }
+}

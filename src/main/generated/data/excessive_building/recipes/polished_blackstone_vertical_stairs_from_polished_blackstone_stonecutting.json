@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:polished_blackstone"
-  },
-  "result": "excessive_building:polished_blackstone_vertical_stairs"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "excessive_building:block/cobbled_deepslate_bricks",
-    "side": "excessive_building:block/cobbled_deepslate_bricks",
-    "top": "excessive_building:block/cobbled_deepslate_bricks"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "excessive_building:block/brimstone",
-    "side": "excessive_building:block/brimstone",
-    "top": "excessive_building:block/brimstone"
-  }
-}

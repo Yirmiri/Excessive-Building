@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "excessive_building:chloroslate"
+  },
+  "result": "excessive_building:chloroslate_wall"
+}

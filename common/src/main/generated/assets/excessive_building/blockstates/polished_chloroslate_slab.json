@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/polished_chloroslate_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/polished_chloroslate"
+    },
+    "type=top": {
+      "model": "excessive_building:block/polished_chloroslate_slab_top"
+    }
+  }
+}

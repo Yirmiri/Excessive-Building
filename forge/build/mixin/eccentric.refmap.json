@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "net/yirmiri/eccentric/core/mixin/MinecraftMixin": {
+      "shouldEntityAppearGlowing": "Lnet/minecraft/client/Minecraft;m_91314_(Lnet/minecraft/world/entity/Entity;)Z"
+    }
+  },
+  "data": {
+    "searge": {
+      "net/yirmiri/eccentric/core/mixin/MinecraftMixin": {
+        "shouldEntityAppearGlowing": "Lnet/minecraft/client/Minecraft;m_91314_(Lnet/minecraft/world/entity/Entity;)Z"
+      }
+    }
+  }
+}

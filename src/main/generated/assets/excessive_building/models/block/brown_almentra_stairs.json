@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "excessive_building:block/brown_almentra",
-    "side": "excessive_building:block/brown_almentra",
-    "top": "excessive_building:block/brown_almentra"
-  }
-}

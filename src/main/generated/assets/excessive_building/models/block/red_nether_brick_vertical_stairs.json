@@ -1,7 +1,0 @@
-{
-  "parent": "excessive_building:block/template_vertical_stairs",
-  "textures": {
-    "particle": "minecraft:block/red_nether_bricks",
-    "texture": "minecraft:block/red_nether_bricks"
-  }
-}

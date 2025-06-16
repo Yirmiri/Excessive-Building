@@ -1,0 +1,5 @@
+v1	named	intermediary
+FIELD	net/yirmiri/excessive_building/core/mixin/MinecraftMixin	I	rightClickDelay	field_1752
+FIELD	net/yirmiri/excessive_building/core/mixin/MinecraftMixin	Lnet/minecraft/client/player/LocalPlayer;	player	field_1724
+METHOD	net/yirmiri/excessive_building/core/mixin/client/ItemRendererMixin	()Lnet/minecraft/client/renderer/ItemModelShaper;	getItemModelShaper	method_4012
+METHOD	net/yirmiri/excessive_building/core/mixin/client/ModelBakeryMixin	(Lnet/minecraft/client/resources/model/ModelResourceLocation;)V	loadTopLevel	method_4727

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:amethyst_block"
+  },
+  "result": "excessive_building:amethyst_brick_wall"
+}

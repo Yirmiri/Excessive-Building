@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/polished_aridite_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/polished_aridite"
+    },
+    "type=top": {
+      "model": "excessive_building:block/polished_aridite_slab_top"
+    }
+  }
+}

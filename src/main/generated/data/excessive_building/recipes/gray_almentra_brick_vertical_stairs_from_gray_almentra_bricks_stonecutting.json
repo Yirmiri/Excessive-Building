@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "excessive_building:gray_almentra_bricks"
-  },
-  "result": "excessive_building:gray_almentra_brick_vertical_stairs"
-}

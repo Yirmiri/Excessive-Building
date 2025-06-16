@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "excessive_building:block/asphalt",
-    "side": "excessive_building:block/asphalt",
-    "top": "excessive_building:block/asphalt"
-  }
-}

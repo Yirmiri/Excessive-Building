@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/chloroslate",
+    "side": "excessive_building:block/chloroslate",
+    "top": "excessive_building:block/chloroslate"
+  }
+}

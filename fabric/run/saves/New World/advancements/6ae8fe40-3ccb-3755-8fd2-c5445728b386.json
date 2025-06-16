@@ -1,0 +1,39 @@
+{
+  "bunchoblocks:recipes/building_blocks/amethyst_lantern": {
+    "criteria": {
+      "has_the_recipe": "2025-05-30 17:36:13 -0400"
+    },
+    "done": true
+  },
+  "bunchoblocks:recipes/building_blocks/frosted_glass": {
+    "criteria": {
+      "has_the_recipe": "2025-05-30 17:36:13 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2025-05-30 17:36:01 -0400"
+    },
+    "done": true
+  },
+  "bunchoblocks:recipes/building_blocks/amethyst_framed_glass_pane": {
+    "criteria": {
+      "has_the_recipe": "2025-05-30 17:36:13 -0400"
+    },
+    "done": true
+  },
+  "bunchoblocks:recipes/building_blocks/amethyst_framed_glass": {
+    "criteria": {
+      "has_the_recipe": "2025-05-30 17:36:13 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:stony_shore": "2025-05-30 17:36:02 -0400"
+    },
+    "done": false
+  },
+  "DataVersion": 3465
+}

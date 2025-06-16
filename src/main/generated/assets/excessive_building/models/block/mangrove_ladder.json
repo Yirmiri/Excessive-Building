@@ -1,7 +1,0 @@
-{
-  "parent": "excessive_building:block/template_ladder",
-  "textures": {
-    "particle": "excessive_building:block/mangrove_ladder",
-    "texture": "excessive_building:block/mangrove_ladder"
-  }
-}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_elyerium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "excessive_building:elyerium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:elyerium_brick_slab_from_elyerium_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_elyerium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:elyerium_brick_slab_from_elyerium_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

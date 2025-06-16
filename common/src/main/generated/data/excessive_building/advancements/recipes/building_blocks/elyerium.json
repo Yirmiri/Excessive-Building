@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aridite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "excessive_building:aridite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_hectalite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "excessive_building:hectalite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "excessive_building:elyerium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_hectalite",
+      "has_aridite",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "excessive_building:elyerium"
+    ]
+  },
+  "sends_telemetry_event": false
+}

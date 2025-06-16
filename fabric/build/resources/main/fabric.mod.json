@@ -1,0 +1,43 @@
+{
+    "schemaVersion": 1,
+    "id": "excessive_building",
+    "version": "4.0.0",
+    "name": "Excessive Building",
+    "description": "PLACEHOLDER, IF U READ THIS YIRMIRI IS DUMB AND FORGOT A DESCRIPTION",
+    "authors": [
+        "Yirmiri"
+    ],
+    "contact": {
+        "homepage": "*",
+        "sources": "*"
+    },
+    "license": "MIT License (Modified)",
+    "icon": "icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "net.yirmiri.excessive_building.FabricExcessiveBuilding"
+        ],
+        "client": [
+            "net.yirmiri.excessive_building.FabricExcessiveBuildingClient"
+        ],
+        "fabric-datagen": [
+            "net.yirmiri.excessive_building.FabricExcessiveBuildingDatagen"
+        ]
+    },
+    "mixins": [
+        "excessive_building.mixins.json",
+        "excessive_building.fabric.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.14",
+        "fabric": "*",
+        "minecraft": "1.20.1",
+        "java": ">=17",
+        "runiclib": ">=4.1.0"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
+}
+  

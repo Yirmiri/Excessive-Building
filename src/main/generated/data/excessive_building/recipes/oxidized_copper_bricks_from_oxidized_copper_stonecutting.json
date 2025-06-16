@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 4,
-  "ingredient": {
-    "item": "minecraft:oxidized_copper"
-  },
-  "result": "excessive_building:oxidized_copper_bricks"
-}
