@@ -1,5 +1,4 @@
-// 1.20.1	2025-06-15T23:47:33.0259427	Excessive Building/Tags for minecraft:block
-87510da99badd096d9706f37f39e48d2fc91b1ab data\minecraft\tags\blocks\walls.json
+// 1.20.1	2025-06-18T04:20:17.3792932	Excessive Building/Tags for minecraft:block
+4f8160a6b1cbe4f2467ec698a9d4d4aa7c1518ac data\minecraft\tags\blocks\walls.json
 394dc285ce83b29dc96f8156799cbad5223c4651 data\excessive_building\tags\blocks\mineable_with_gauntlet.json
-a0f99e286775e94ccc668166b0b02cd1416efbcc data\minecraft\tags\blocks\dragon_immune.json
-98bcdc9594f69e4f0d4980ee7a02ba9b7efad6a7 data\minecraft\tags\blocks\mineable\pickaxe.json
+1f097edd5dfa0174381bab4c628894ff7497f05b data\minecraft\tags\blocks\mineable\pickaxe.json

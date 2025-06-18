@@ -21,6 +21,11 @@ public class EBProperties {
         public static final BlockBehaviour.Properties RADIANCE_BLOCK = BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.COLOR_PURPLE);
 
         //STONES
+        public static final BlockBehaviour.Properties COBBLESTONE = BlockBehaviour.Properties.copy(Blocks.COBBLESTONE);
+        public static final BlockBehaviour.Properties POLISHED_GRANITE = BlockBehaviour.Properties.copy(Blocks.POLISHED_GRANITE);
+        public static final BlockBehaviour.Properties POLISHED_ANDESITE = BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE);
+        public static final BlockBehaviour.Properties POLISHED_DIORITE = BlockBehaviour.Properties.copy(Blocks.POLISHED_DIORITE);
+
         public static final BlockBehaviour.Properties ELYERIUM = BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).strength(6.0F, 12.0F);
         public static final BlockBehaviour.Properties POLISHED_ELYERIUM = BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE).strength(6.0F, 12.0F);
         public static final BlockBehaviour.Properties ELYERIUM_BRICKS = BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE).strength(6.0F, 12.0F);

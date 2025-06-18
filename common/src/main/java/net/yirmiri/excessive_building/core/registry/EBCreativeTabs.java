@@ -80,6 +80,28 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.CHISELED_ELYERIUM.get());
                         entry.accept(EBBlocks.ELYERIUM_PILLAR.get());
 
+                        //VANILLA STONES
+                        entry.accept(EBBlocks.COBBLESTONE_BRICKS.get());
+                        entry.accept(EBBlocks.COBBLESTONE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.COBBLESTONE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.COBBLESTONE_BRICK_WALL.get());
+                        entry.accept(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get());
+
+                        entry.accept(EBBlocks.GRANITE_BRICKS.get());
+                        entry.accept(EBBlocks.GRANITE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.GRANITE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.GRANITE_BRICK_WALL.get());
+
+                        entry.accept(EBBlocks.DIORITE_BRICKS.get());
+                        entry.accept(EBBlocks.DIORITE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.DIORITE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.DIORITE_BRICK_WALL.get());
+
+                        entry.accept(EBBlocks.ANDESITE_BRICKS.get());
+                        entry.accept(EBBlocks.ANDESITE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.ANDESITE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.ANDESITE_BRICK_WALL.get());
+
                         //FROSTED GLASS
                         entry.accept(EBBlocks.FROSTED_GLASS.get());
                         entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.WHITE.getId()).get());

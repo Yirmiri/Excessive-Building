@@ -63,6 +63,23 @@
     "excessive_building:amethyst_brick_wall",
     "excessive_building:radiance_block",
     "excessive_building:radiance_ore",
-    "excessive_building:deepslate_radiance_ore"
+    "excessive_building:deepslate_radiance_ore",
+    "excessive_building:cracked_cobblestone_bricks",
+    "excessive_building:cobblestone_bricks",
+    "excessive_building:cobblestone_brick_stairs",
+    "excessive_building:cobblestone_brick_slab",
+    "excessive_building:cobblestone_brick_wall",
+    "excessive_building:andesite_bricks",
+    "excessive_building:andesite_brick_stairs",
+    "excessive_building:andesite_brick_slab",
+    "excessive_building:andesite_brick_wall",
+    "excessive_building:granite_bricks",
+    "excessive_building:granite_brick_stairs",
+    "excessive_building:granite_brick_slab",
+    "excessive_building:granite_brick_wall",
+    "excessive_building:andesite_bricks",
+    "excessive_building:andesite_brick_stairs",
+    "excessive_building:andesite_brick_slab",
+    "excessive_building:andesite_brick_wall"
   ]
 }

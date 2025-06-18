@@ -33,6 +33,11 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.CHLOROSLATE_BRICK_WALL.get().asItem())
 
                 .add(EBBlocks.AMETHYST_BRICK_WALL.get().asItem())
+
+                .add(EBBlocks.COBBLESTONE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.GRANITE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.DIORITE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.ANDESITE_BRICK_WALL.get().asItem())
         ;
     }
 }

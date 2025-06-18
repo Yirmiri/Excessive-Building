@@ -105,6 +105,27 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.ELYERIUM_PILLAR.get(), "Elyerium Pillar");
         build.add(EBBlocks.HECTALITE_PILLAR.get(), "Hectalite Pillar");
 
+        build.add(EBBlocks.COBBLESTONE_BRICKS.get(), "Cobblestone Bricks");
+        build.add(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get(), "Cracked Cobblestone Bricks");
+        build.add(EBBlocks.COBBLESTONE_BRICK_STAIRS.get(), "Cobblestone Brick Stairs");
+        build.add(EBBlocks.COBBLESTONE_BRICK_SLAB.get(), "Cobblestone Brick Slab");
+        build.add(EBBlocks.COBBLESTONE_BRICK_WALL.get(), "Cobblestone Brick Wall");
+
+        build.add(EBBlocks.ANDESITE_BRICKS.get(), "Andesite Bricks");
+        build.add(EBBlocks.ANDESITE_BRICK_STAIRS.get(), "Andesite Brick Stairs");
+        build.add(EBBlocks.ANDESITE_BRICK_SLAB.get(), "Andesite Brick Slab");
+        build.add(EBBlocks.ANDESITE_BRICK_WALL.get(), "Andesite Brick Wall");
+
+        build.add(EBBlocks.GRANITE_BRICKS.get(), "Granite Bricks");
+        build.add(EBBlocks.GRANITE_BRICK_STAIRS.get(), "Granite Brick Stairs");
+        build.add(EBBlocks.GRANITE_BRICK_SLAB.get(), "Granite Brick Slab");
+        build.add(EBBlocks.GRANITE_BRICK_WALL.get(), "Granite Brick Wall");
+
+        build.add(EBBlocks.DIORITE_BRICKS.get(), "Diorite Bricks");
+        build.add(EBBlocks.DIORITE_BRICK_STAIRS.get(), "Diorite Brick Stairs");
+        build.add(EBBlocks.DIORITE_BRICK_SLAB.get(), "Diorite Brick Slab");
+        build.add(EBBlocks.DIORITE_BRICK_WALL.get(), "Diorite Brick Wall");
+
         //ITEMS
         build.add(EBItems.RADIANCE_CRYSTAL.get(), "Radiance Crystal");
         build.add(EBItems.RADIANCE_INGOT.get(), "Radiance Ingot");

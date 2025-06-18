@@ -111,6 +111,28 @@ public class EBModelGen extends FabricModelProvider {
         generator.createRotatedPillarWithHorizontalVariant(EBBlocks.ELYERIUM_PILLAR.get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
         generator.createRotatedPillarWithHorizontalVariant(EBBlocks.CHLOROSLATE_PILLAR.get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
         generator.createRotatedPillarWithHorizontalVariant(EBBlocks.ARIDITE_PILLAR.get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
+
+        BlockModelGenerators.BlockFamilyProvider cobblestoneBricks = generator.family(EBBlocks.COBBLESTONE_BRICKS.get());
+        cobblestoneBricks.stairs(EBBlocks.COBBLESTONE_BRICK_STAIRS.get());
+        cobblestoneBricks.slab(EBBlocks.COBBLESTONE_BRICK_SLAB.get());
+        cobblestoneBricks.wall(EBBlocks.COBBLESTONE_BRICK_WALL.get());
+
+        generator.createTrivialCube(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get());
+
+        BlockModelGenerators.BlockFamilyProvider andesiteBricks = generator.family(EBBlocks.ANDESITE_BRICKS.get());
+        andesiteBricks.stairs(EBBlocks.ANDESITE_BRICK_STAIRS.get());
+        andesiteBricks.slab(EBBlocks.ANDESITE_BRICK_SLAB.get());
+        andesiteBricks.wall(EBBlocks.ANDESITE_BRICK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider graniteBricks = generator.family(EBBlocks.GRANITE_BRICKS.get());
+        graniteBricks.stairs(EBBlocks.GRANITE_BRICK_STAIRS.get());
+        graniteBricks.slab(EBBlocks.GRANITE_BRICK_SLAB.get());
+        graniteBricks.wall(EBBlocks.GRANITE_BRICK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider dioriteBricks = generator.family(EBBlocks.DIORITE_BRICKS.get());
+        dioriteBricks.stairs(EBBlocks.DIORITE_BRICK_STAIRS.get());
+        dioriteBricks.slab(EBBlocks.DIORITE_BRICK_SLAB.get());
+        dioriteBricks.wall(EBBlocks.DIORITE_BRICK_WALL.get());
     }
 
     @Override

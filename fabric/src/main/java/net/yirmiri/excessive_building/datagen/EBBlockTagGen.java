@@ -21,7 +21,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendMineableWithPickaxe();
         appendWalls();
         appendMineableWithGauntlet();
-        appendDragonImmune();
     }
 
     private void appendMineableWithGauntlet() {
@@ -146,6 +145,27 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.RADIANCE_BLOCK.get())
                 .add(EBBlocks.RADIANCE_ORE.get())
                 .add(EBBlocks.DEEPSLATE_RADIANCE_ORE.get())
+
+                .add(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get())
+                .add(EBBlocks.COBBLESTONE_BRICKS.get())
+                .add(EBBlocks.COBBLESTONE_BRICK_STAIRS.get())
+                .add(EBBlocks.COBBLESTONE_BRICK_SLAB.get())
+                .add(EBBlocks.COBBLESTONE_BRICK_WALL.get())
+
+                .add(EBBlocks.ANDESITE_BRICKS.get())
+                .add(EBBlocks.ANDESITE_BRICK_STAIRS.get())
+                .add(EBBlocks.ANDESITE_BRICK_SLAB.get())
+                .add(EBBlocks.ANDESITE_BRICK_WALL.get())
+
+                .add(EBBlocks.GRANITE_BRICKS.get())
+                .add(EBBlocks.GRANITE_BRICK_STAIRS.get())
+                .add(EBBlocks.GRANITE_BRICK_SLAB.get())
+                .add(EBBlocks.GRANITE_BRICK_WALL.get())
+
+                .add(EBBlocks.ANDESITE_BRICKS.get())
+                .add(EBBlocks.ANDESITE_BRICK_STAIRS.get())
+                .add(EBBlocks.ANDESITE_BRICK_SLAB.get())
+                .add(EBBlocks.ANDESITE_BRICK_WALL.get())
         ;
     }
 
@@ -168,24 +188,11 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.CHLOROSLATE_BRICK_WALL.get())
 
                 .add(EBBlocks.AMETHYST_BRICK_WALL.get())
-        ;
-    }
 
-    private void appendDragonImmune() {
-        getOrCreateTagBuilder(BlockTags.DRAGON_IMMUNE)
-                .add(EBBlocks.ELYERIUM.get())
-                .add(EBBlocks.ELYERIUM_STAIRS.get())
-                .add(EBBlocks.ELYERIUM_SLAB.get())
-                .add(EBBlocks.ELYERIUM_WALL.get())
-                .add(EBBlocks.POLISHED_ELYERIUM.get())
-                .add(EBBlocks.POLISHED_ELYERIUM_STAIRS.get())
-                .add(EBBlocks.POLISHED_ELYERIUM_SLAB.get())
-                .add(EBBlocks.POLISHED_ELYERIUM_WALL.get())
-                .add(EBBlocks.ELYERIUM_BRICKS.get())
-                .add(EBBlocks.ELYERIUM_BRICK_STAIRS.get())
-                .add(EBBlocks.ELYERIUM_BRICK_SLAB.get())
-                .add(EBBlocks.ELYERIUM_BRICK_WALL.get())
-                .add(EBBlocks.CHISELED_ELYERIUM.get())
+                .add(EBBlocks.COBBLESTONE_BRICK_WALL.get())
+                .add(EBBlocks.GRANITE_BRICK_WALL.get())
+                .add(EBBlocks.DIORITE_BRICK_WALL.get())
+                .add(EBBlocks.ANDESITE_BRICK_WALL.get())
         ;
     }
 }

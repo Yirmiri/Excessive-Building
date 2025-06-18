@@ -101,6 +101,28 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         dropSelf(EBBlocks.CHLOROSLATE_PILLAR.get());
         dropSelf(EBBlocks.ARIDITE_PILLAR.get());
         dropSelf(EBBlocks.ELYERIUM_PILLAR.get());
+
+        dropSelf(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get());
+        
+        dropSelf(EBBlocks.COBBLESTONE_BRICKS.get());
+        dropSelf(EBBlocks.COBBLESTONE_BRICK_STAIRS.get());
+        add(EBBlocks.COBBLESTONE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.COBBLESTONE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.COBBLESTONE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.DIORITE_BRICKS.get());
+        dropSelf(EBBlocks.DIORITE_BRICK_STAIRS.get());
+        add(EBBlocks.DIORITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.DIORITE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.DIORITE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.GRANITE_BRICKS.get());
+        dropSelf(EBBlocks.GRANITE_BRICK_STAIRS.get());
+        add(EBBlocks.GRANITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.GRANITE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.GRANITE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.ANDESITE_BRICKS.get());
+        dropSelf(EBBlocks.ANDESITE_BRICK_STAIRS.get());
+        add(EBBlocks.ANDESITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.ANDESITE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.ANDESITE_BRICK_WALL.get());
     }
 
     private void addDyedFrostedGlassDrops() {
