@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.datagen;
 
+import com.google.common.collect.ImmutableList;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipes.*;
@@ -9,9 +10,11 @@ import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 
 import java.util.function.Consumer;
 
@@ -414,7 +417,17 @@ public class EBRecipeGen extends FabricRecipeProvider {
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.COBBLESTONE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS,
                 EBBlocks.CRACKED_COBBLESTONE_BRICKS.get(), 0.1F, 200).unlockedBy(getHasName(EBBlocks.COBBLESTONE_BRICKS.get()), has(EBBlocks.COBBLESTONE_BRICKS.get())).save(consumer);
-        
+
+        //==========================RADIANCE==========================
+        final ImmutableList<ItemLike> RADIANCE_SMELTABLES = ImmutableList.of(EBBlocks.RADIANCE_ORE.get(), EBBlocks.DEEPSLATE_RADIANCE_ORE.get());
+
+        oreSmelting(consumer, RADIANCE_SMELTABLES, RecipeCategory.MISC, EBItems.RADIANCE_CRYSTAL.get(), 1.0F, 200, "radiance_crystal");
+        oreBlasting(consumer, RADIANCE_SMELTABLES, RecipeCategory.MISC, EBItems.RADIANCE_CRYSTAL.get(), 1.0F, 100, "radiance_crystal");
+
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(EBItems.RADIANCE_CRYSTAL.get()), RecipeCategory.MISC, EBItems.RADIANCE_INGOT.get(), 1.0F, 200)
+                .unlockedBy("has_radiance_crystal", has(EBItems.RADIANCE_CRYSTAL.get())).save(consumer, getBlastingRecipeName(EBItems.RADIANCE_INGOT.get()));
+
+        //====================================================
         stonecutterRecipeTreeGenerator.generateRecipes(consumer);
     }
 

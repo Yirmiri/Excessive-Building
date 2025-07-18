@@ -20,29 +20,29 @@ public class EBBlocks {
     //VERTICAL STAIRS
     public static final List<Supplier<Block>> VERTICAL_STAIRS = new ArrayList<>();
 
-    public static void createVerticalStairs() {
-        //This creates a VerticalStairBlock for every registered StairBlock
-        Registry<Block> blockRegistry = BuiltInRegistries.BLOCK;
-        Set<ResourceKey<Block>> keys = new HashSet<>(blockRegistry.registryKeySet());
-
-        for (ResourceKey<Block> key : keys) {
-            Block originalBlock = blockRegistry.get(key);
-            if (originalBlock instanceof StairBlock) {
-                String originalPath = key.location().getPath();
-                String blockId;
-
-                //This cuts _stairs from the id and adds _vertical_stairs so we can have mod_id:block_vertical stairs instead of mod_id:vertical_block_stairs
-                if (originalPath.endsWith("_stairs")) {
-                    blockId = originalPath.substring(0, originalPath.length() - "_stairs".length()) + "_vertical_stairs";
-                } else {
-                    blockId = "vertical_" + originalPath; //Fallback
-                }
-
-                registerVerticalStair(key.location().getNamespace(), blockId, () ->
-                        new VerticalStairBlock(BlockBehaviour.Properties.copy(originalBlock)), true);
-            }
-        }
-    }
+//    public static void createVerticalStairs() {
+//        //This creates a VerticalStairBlock for every registered StairBlock
+//        Registry<Block> blockRegistry = BuiltInRegistries.BLOCK;
+//        Set<ResourceKey<Block>> keys = new HashSet<>(blockRegistry.registryKeySet());
+//
+//        for (ResourceKey<Block> key : keys) {
+//            Block originalBlock = blockRegistry.get(key);
+//            if (originalBlock instanceof StairBlock) {
+//                String originalPath = key.location().getPath();
+//                String blockId;
+//
+//                //This cuts _stairs from the id and adds _vertical_stairs so we can have mod_id:block_vertical stairs instead of mod_id:vertical_block_stairs
+//                if (originalPath.endsWith("_stairs")) {
+//                    blockId = originalPath.substring(0, originalPath.length() - "_stairs".length()) + "_vertical_stairs";
+//                } else {
+//                    blockId = "vertical_" + originalPath; //Fallback
+//                }
+//
+//                registerVerticalStair(key.location().getNamespace(), blockId, () ->
+//                        new VerticalStairBlock(BlockBehaviour.Properties.copy(originalBlock)), true);
+//            }
+//        }
+//    }
 
     //VANILLA ADDITIONS
     public static final Supplier<Block> COBBLESTONE_BRICKS = register("cobblestone_bricks", () -> new Block(EBProperties.BlockP.COBBLESTONE), true);
@@ -184,6 +184,6 @@ public class EBBlocks {
     }
 
     public static void loadBlocks() {
-        createVerticalStairs();
+        //createVerticalStairs();
     }
 }

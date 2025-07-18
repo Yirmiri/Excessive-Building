@@ -137,7 +137,7 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.RADIANCE_BLOCK.get());
                         entry.accept(EBItems.RADIANCE_CRYSTAL.get());
                         entry.accept(EBItems.RADIANCE_INGOT.get());
-                        entry.accept(EBItems.RADIANCE_POWERCELL.get());
+                        //entry.accept(EBItems.RADIANCE_POWERCELL.get());
                         entry.accept(EBItems.RADIANCE_GAUNTLET.get());
                     }).build());
 

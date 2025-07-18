@@ -27,7 +27,7 @@ public class EBMaterials {
         }
 
         public Ingredient getRepairIngredient() {
-            return Ingredient.of(EBItems.RADIANCE_POWERCELL.get());
+            return Ingredient.of(EBItems.RADIANCE_INGOT.get());
         }
     };
 

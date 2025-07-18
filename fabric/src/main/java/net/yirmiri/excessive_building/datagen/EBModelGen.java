@@ -139,7 +139,7 @@ public class EBModelGen extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerators generator) {
         generator.generateFlatItem(EBItems.RADIANCE_CRYSTAL.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.RADIANCE_INGOT.get(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(EBItems.RADIANCE_POWERCELL.get(), ModelTemplates.FLAT_ITEM);
+        //generator.generateFlatItem(EBItems.RADIANCE_POWERCELL.get(), ModelTemplates.FLAT_ITEM);
     }
 
     public void createCrystalLantern(BlockModelGenerators generator, Block block) {

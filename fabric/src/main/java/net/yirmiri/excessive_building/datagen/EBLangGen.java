@@ -129,7 +129,7 @@ public class EBLangGen extends FabricLanguageProvider {
         //ITEMS
         build.add(EBItems.RADIANCE_CRYSTAL.get(), "Radiance Crystal");
         build.add(EBItems.RADIANCE_INGOT.get(), "Radiance Ingot");
-        build.add(EBItems.RADIANCE_POWERCELL.get(), "Radiance Powercell");
+        //build.add(EBItems.RADIANCE_POWERCELL.get(), "Radiance Powercell");
         build.add(EBItems.RADIANCE_GAUNTLET.get(), "Radiance Gauntlet");
     }
 }

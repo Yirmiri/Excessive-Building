@@ -14,7 +14,7 @@ public class EBItems {
     //RADIANCE
     public static final Supplier<Item> RADIANCE_CRYSTAL = register("radiance_crystal", () -> new Item(EBProperties.ItemP.UNCOMMON));
     public static final Supplier<Item> RADIANCE_INGOT = register("radiance_ingot", () -> new Item(EBProperties.ItemP.UNCOMMON));
-    public static final Supplier<Item> RADIANCE_POWERCELL = register("radiance_powercell", () -> new Item(EBProperties.ItemP.UNCOMMON));
+    //public static final Supplier<Item> RADIANCE_POWERCELL = register("radiance_powercell", () -> new Item(EBProperties.ItemP.UNCOMMON));
     public static final Supplier<Item> RADIANCE_GAUNTLET = register("radiance_gauntlet", () -> new RadianceGauntletItem(1, -2.0F, EBMaterials.RADIANCE, EBTags.Blocks.MINEABLE_WITH_GAUNTLET, EBProperties.ItemP.RADIANCE_GAUNTLET));
 
     private static Supplier<Item> register(String id, Supplier<Item> item) {
