@@ -123,6 +123,9 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         dropSelf(EBBlocks.ANDESITE_BRICK_STAIRS.get());
         add(EBBlocks.ANDESITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.ANDESITE_BRICK_SLAB.get()));
         dropSelf(EBBlocks.ANDESITE_BRICK_WALL.get());
+
+        dropOther(EBBlocks.RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get());
+        dropOther(EBBlocks.DEEPSLATE_RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get());
     }
 
     private void addDyedFrostedGlassDrops() {

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -16,6 +17,7 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         appendWalls();
+        appendBeaconPaymentItems();
     }
 
     private void appendWalls() {
@@ -38,6 +40,12 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.GRANITE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.DIORITE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.ANDESITE_BRICK_WALL.get().asItem())
+        ;
+    }
+
+    private void appendBeaconPaymentItems() {
+        getOrCreateTagBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
+                .add(EBItems.RADIANCE_INGOT.get().asItem())
         ;
     }
 }

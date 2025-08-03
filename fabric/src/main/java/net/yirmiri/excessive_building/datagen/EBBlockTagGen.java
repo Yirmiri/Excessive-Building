@@ -21,6 +21,8 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendMineableWithPickaxe();
         appendWalls();
         appendMineableWithGauntlet();
+        appendNeedsIronTool();
+        appendBeaconBaseBlocks();
     }
 
     private void appendMineableWithGauntlet() {
@@ -72,6 +74,14 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.getDyedFrostedGlass(colors.getId()).get())
             ;
         }
+    }
+
+    private void appendNeedsIronTool() {
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(EBBlocks.RADIANCE_ORE.get())
+                .add(EBBlocks.DEEPSLATE_RADIANCE_ORE.get())
+                .add(EBBlocks.RADIANCE_BLOCK.get())
+        ;
     }
 
     private void appendMineableWithPickaxe() {
@@ -193,6 +203,12 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.GRANITE_BRICK_WALL.get())
                 .add(EBBlocks.DIORITE_BRICK_WALL.get())
                 .add(EBBlocks.ANDESITE_BRICK_WALL.get())
+        ;
+    }
+
+    private void appendBeaconBaseBlocks() {
+        getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
+                .add(EBBlocks.RADIANCE_BLOCK.get())
         ;
     }
 }
