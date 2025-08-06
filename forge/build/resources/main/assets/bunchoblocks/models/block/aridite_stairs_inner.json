@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "bunchoblocks:block/aridite",
-    "side": "bunchoblocks:block/aridite",
-    "top": "bunchoblocks:block/aridite"
-  }
-}

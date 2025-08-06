@@ -421,11 +421,35 @@ public class EBRecipeGen extends FabricRecipeProvider {
         //==========================RADIANCE==========================
         final ImmutableList<ItemLike> RADIANCE_SMELTABLES = ImmutableList.of(EBBlocks.RADIANCE_ORE.get(), EBBlocks.DEEPSLATE_RADIANCE_ORE.get());
 
-        oreSmelting(consumer, RADIANCE_SMELTABLES, RecipeCategory.MISC, EBItems.RADIANCE_CRYSTAL.get(), 1.0F, 200, "radiance_crystal");
+        //oreSmelting(consumer, RADIANCE_SMELTABLES, RecipeCategory.MISC, EBItems.RADIANCE_CRYSTAL.get(), 1.0F, 200, "radiance_crystal");
         oreBlasting(consumer, RADIANCE_SMELTABLES, RecipeCategory.MISC, EBItems.RADIANCE_CRYSTAL.get(), 1.0F, 100, "radiance_crystal");
 
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(EBItems.RADIANCE_CRYSTAL.get()), RecipeCategory.MISC, EBItems.RADIANCE_INGOT.get(), 1.0F, 200)
                 .unlockedBy("has_radiance_crystal", has(EBItems.RADIANCE_CRYSTAL.get())).save(consumer, getBlastingRecipeName(EBItems.RADIANCE_INGOT.get()));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.RADIANCE_GAUNTLET.get(), 1)
+                .define('#', EBItems.RADIANCE_INGOT.get()).define('@', Items.GOLD_INGOT).define('!', EBItems.RADIANCE_CRYSTAL.get())
+                .pattern(" ##")
+                .pattern("@!#")
+                .pattern("@@ ");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.RADIANCE_MALLET.get(), 1)
+                .define('#', EBItems.RADIANCE_INGOT.get()).define('@', Items.GOLD_INGOT).define('!', Items.STICK)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern(" ! ");
+
+        createCrystalLantern(EBBlocks.RADIANCE_LANTERN.get().asItem(), EBItems.RADIANCE_CRYSTAL.get())
+                .unlockedBy(getHasName(EBItems.RADIANCE_CRYSTAL.get()), has(EBItems.RADIANCE_CRYSTAL.get()))
+                .save(consumer, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.RADIANCE_LANTERN.get())));
+
+        createCrystalGlass(EBBlocks.RADIANCE_FRAMED_GLASS.get().asItem(), EBItems.RADIANCE_CRYSTAL.get())
+                .unlockedBy(getHasName(EBItems.RADIANCE_CRYSTAL.get()), has(EBItems.RADIANCE_CRYSTAL.get()))
+                .save(consumer, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.RADIANCE_FRAMED_GLASS.get())));
+
+        createPane(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get().asItem(), EBBlocks.RADIANCE_FRAMED_GLASS.get().asItem())
+                .unlockedBy(getHasName(EBBlocks.RADIANCE_FRAMED_GLASS.get()), has(EBBlocks.RADIANCE_FRAMED_GLASS.get()))
+                .save(consumer, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get())));
 
         //====================================================
         stonecutterRecipeTreeGenerator.generateRecipes(consumer);

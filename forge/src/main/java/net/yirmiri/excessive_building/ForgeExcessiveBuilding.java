@@ -24,5 +24,7 @@ public class ForgeExcessiveBuilding {
         //TRANSLUCENT
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.AMETHYST_FRAMED_GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.RADIANCE_FRAMED_GLASS.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get(), RenderType.translucent());
     }
 }

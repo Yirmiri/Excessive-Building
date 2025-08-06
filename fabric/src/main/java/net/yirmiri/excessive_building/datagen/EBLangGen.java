@@ -3,6 +3,8 @@ package net.yirmiri.excessive_building.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 import org.apache.commons.lang3.StringUtils;
@@ -99,6 +101,9 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.RADIANCE_BLOCK.get(), "Block of Radiance");
         build.add(EBBlocks.RADIANCE_ORE.get(), "Radiance Ore");
         build.add(EBBlocks.DEEPSLATE_RADIANCE_ORE.get(), "Deepslate Radiance Ore");
+        build.add(EBBlocks.RADIANCE_LANTERN.get(), "Radiance Lantern");
+        build.add(EBBlocks.RADIANCE_FRAMED_GLASS.get(), "Radiance Framed Glass");
+        build.add(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get(), "Radiance Framed Glass Pane");
 
         build.add(EBBlocks.CHLOROSLATE_PILLAR.get(), "Chloroslate Pillar");
         build.add(EBBlocks.ARIDITE_PILLAR.get(), "Aridite Pillar");
@@ -129,7 +134,18 @@ public class EBLangGen extends FabricLanguageProvider {
         //ITEMS
         build.add(EBItems.RADIANCE_CRYSTAL.get(), "Radiance Crystal");
         build.add(EBItems.RADIANCE_INGOT.get(), "Radiance Ingot");
-        //build.add(EBItems.RADIANCE_POWERCELL.get(), "Radiance Powercell");
         build.add(EBItems.RADIANCE_GAUNTLET.get(), "Radiance Gauntlet");
+        build.add(EBItems.RADIANCE_MALLET.get(), "Radiance Mallet");
+
+        //YAPPING TOOLTIPS
+        addYT(build, EBBlocks.ARIDITE.get(), "A sedimentary rock that can be found generating in cluster under deserts.");
+    }
+
+    public static void addYT(FabricLanguageProvider.TranslationBuilder build, Block block, String tooltip) {
+        build.add("yapping_tooltips." + block.getDescriptionId() + ".desc", tooltip);
+    }
+
+    public static void addYT(FabricLanguageProvider.TranslationBuilder builder, Item item, String tooltip) {
+        builder.add("yapping_tooltips." + item.getDescriptionId() + ".desc", tooltip);
     }
 }

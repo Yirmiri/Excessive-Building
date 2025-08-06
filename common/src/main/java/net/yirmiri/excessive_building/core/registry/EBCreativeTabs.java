@@ -135,9 +135,14 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.RADIANCE_ORE.get());
                         entry.accept(EBBlocks.DEEPSLATE_RADIANCE_ORE.get());
                         entry.accept(EBBlocks.RADIANCE_BLOCK.get());
+
+                        entry.accept(EBBlocks.RADIANCE_LANTERN.get());
+                        entry.accept(EBBlocks.RADIANCE_FRAMED_GLASS.get());
+                        entry.accept(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get());
+
                         entry.accept(EBItems.RADIANCE_CRYSTAL.get());
                         entry.accept(EBItems.RADIANCE_INGOT.get());
-                        //entry.accept(EBItems.RADIANCE_POWERCELL.get());
+                        entry.accept(EBItems.RADIANCE_MALLET.get());
                         entry.accept(EBItems.RADIANCE_GAUNTLET.get());
                     }).build());
 

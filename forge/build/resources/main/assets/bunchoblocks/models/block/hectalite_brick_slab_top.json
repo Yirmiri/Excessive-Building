@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "bunchoblocks:block/hectalite_bricks",
-    "side": "bunchoblocks:block/hectalite_bricks",
-    "top": "bunchoblocks:block/hectalite_bricks"
-  }
-}

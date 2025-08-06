@@ -14,5 +14,7 @@ public class FabricExcessiveBuildingClient implements ClientModInitializer {
         //TRANSLUCENT
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.AMETHYST_FRAMED_GLASS.get(), RenderType.translucent());
         BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.RADIANCE_FRAMED_GLASS.get(), RenderType.translucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get(), RenderType.translucent());
     }
 }

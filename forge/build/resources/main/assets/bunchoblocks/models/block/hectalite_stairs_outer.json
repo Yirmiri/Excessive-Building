@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "bunchoblocks:block/hectalite",
-    "side": "bunchoblocks:block/hectalite",
-    "top": "bunchoblocks:block/hectalite"
-  }
-}

@@ -20,13 +20,22 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     protected void addTags(HolderLookup.Provider provider) {
         appendMineableWithPickaxe();
         appendWalls();
-        appendMineableWithGauntlet();
+        appendMineableWithMallet();
         appendNeedsIronTool();
         appendBeaconBaseBlocks();
     }
 
-    private void appendMineableWithGauntlet() {
-        getOrCreateTagBuilder(EBTags.Blocks.MINEABLE_WITH_GAUNTLET)
+    private void appendMineableWithMallet() {
+        getOrCreateTagBuilder(EBTags.Blocks.MINEABLE_WITH_MALLET)
+                .add(EBBlocks.RADIANCE_FRAMED_GLASS.get())
+                .add(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get())
+                .add(Blocks.SEA_LANTERN)
+                .add(Blocks.GLOWSTONE)
+                .add(Blocks.REDSTONE_LAMP)
+                .add(EBBlocks.AMETHYST_FRAMED_GLASS.get())
+                .add(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get())
+                .add(EBBlocks.AMETHYST_LANTERN.get())
+                .add(EBBlocks.RADIANCE_LANTERN.get())
                 .add(Blocks.TINTED_GLASS)
                 .add(Blocks.GLASS)
                 .add(Blocks.GLASS_PANE)
@@ -70,7 +79,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(EBTags.Blocks.MINEABLE_WITH_GAUNTLET)
+            getOrCreateTagBuilder(EBTags.Blocks.MINEABLE_WITH_MALLET)
                     .add(EBBlocks.getDyedFrostedGlass(colors.getId()).get())
             ;
         }

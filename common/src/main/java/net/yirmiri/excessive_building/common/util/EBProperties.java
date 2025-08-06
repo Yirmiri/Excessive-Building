@@ -15,11 +15,6 @@ public class EBProperties {
         public static final BlockBehaviour.Properties INDESTRUCTIBLE = BlockBehaviour.Properties.copy(Blocks.BEDROCK);
         public static final BlockBehaviour.Properties FROSTED_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS);
 
-        //RADIANCE
-        public static final BlockBehaviour.Properties RADIANCE = BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).lightLevel(s -> 5).mapColor(MapColor.COLOR_PURPLE);
-        public static final BlockBehaviour.Properties DEEPSLATE_RADIANCE = BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE).lightLevel(s -> 5).mapColor(MapColor.COLOR_PURPLE);
-        public static final BlockBehaviour.Properties RADIANCE_BLOCK = BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.COLOR_PURPLE);
-
         //STONES
         public static final BlockBehaviour.Properties COBBLESTONE = BlockBehaviour.Properties.copy(Blocks.COBBLESTONE);
         public static final BlockBehaviour.Properties POLISHED_GRANITE = BlockBehaviour.Properties.copy(Blocks.POLISHED_GRANITE);
@@ -44,8 +39,13 @@ public class EBProperties {
 
         //CRYSTALS
         public static final BlockBehaviour.Properties AMETHYST_BRICKS = BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK);
-        public static final BlockBehaviour.Properties AMETHYST_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion();
-        public static final BlockBehaviour.Properties AMETHYST_LANTERN = BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN);
+        public static final BlockBehaviour.Properties CRYSTAL_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion();
+        public static final BlockBehaviour.Properties CRYSTAL_LANTERN = BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN);
+
+        //RADIANCE
+        public static final BlockBehaviour.Properties RADIANCE = BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).lightLevel(s -> 5).mapColor(MapColor.COLOR_PURPLE);
+        public static final BlockBehaviour.Properties DEEPSLATE_RADIANCE = BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE).lightLevel(s -> 5).mapColor(MapColor.COLOR_PURPLE);
+        public static final BlockBehaviour.Properties RADIANCE_BLOCK = BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.COLOR_PURPLE);
     }
 
     public static class ItemP {

@@ -149,10 +149,10 @@ public class EBBlocks {
     public static final Supplier<Block> AMETHYST_BRICK_SLAB = register("amethyst_brick_slab", () -> new SlabBlock(EBProperties.BlockP.AMETHYST_BRICKS), true);
     public static final Supplier<Block> AMETHYST_BRICK_WALL = register("amethyst_brick_wall", () -> new WallBlock(EBProperties.BlockP.AMETHYST_BRICKS), true);
 
-    public static final Supplier<Block> AMETHYST_FRAMED_GLASS = register("amethyst_framed_glass", () -> new AmethystGlassBlock(EBProperties.BlockP.AMETHYST_GLASS), true);
-    public static final Supplier<Block> AMETHYST_FRAMED_GLASS_PANE = register("amethyst_framed_glass_pane", () -> new StainedGlassPaneBlock(DyeColor.MAGENTA, EBProperties.BlockP.AMETHYST_GLASS), true);
+    public static final Supplier<Block> AMETHYST_FRAMED_GLASS = register("amethyst_framed_glass", () -> new AmethystGlassBlock(EBProperties.BlockP.CRYSTAL_GLASS), true);
+    public static final Supplier<Block> AMETHYST_FRAMED_GLASS_PANE = register("amethyst_framed_glass_pane", () -> new StainedGlassPaneBlock(DyeColor.MAGENTA, EBProperties.BlockP.CRYSTAL_GLASS), true);
 
-    public static final Supplier<Block> AMETHYST_LANTERN = register("amethyst_lantern", () -> new Block(EBProperties.BlockP.AMETHYST_LANTERN), true);
+    public static final Supplier<Block> AMETHYST_LANTERN = register("amethyst_lantern", () -> new Block(EBProperties.BlockP.CRYSTAL_LANTERN), true);
 
     //FROSTED GLASS
     public static final Supplier<Block> FROSTED_GLASS = register("frosted_glass", () -> new GlassBlock(EBProperties.BlockP.FROSTED_GLASS), true);
@@ -173,6 +173,11 @@ public class EBBlocks {
     public static final Supplier<Block> RADIANCE_ORE = register("radiance_ore", () -> new Block(EBProperties.BlockP.RADIANCE), true);
     public static final Supplier<Block> DEEPSLATE_RADIANCE_ORE = register("deepslate_radiance_ore", () -> new Block(EBProperties.BlockP.DEEPSLATE_RADIANCE), true);
     public static final Supplier<Block> RADIANCE_BLOCK = register("radiance_block", () -> new Block(EBProperties.BlockP.RADIANCE_BLOCK), true);
+
+    public static final Supplier<Block> RADIANCE_FRAMED_GLASS = register("radiance_framed_glass", () -> new GlassBlock(EBProperties.BlockP.CRYSTAL_GLASS), true);
+    public static final Supplier<Block> RADIANCE_FRAMED_GLASS_PANE = register("radiance_framed_glass_pane", () -> new StainedGlassPaneBlock(DyeColor.BLUE, EBProperties.BlockP.CRYSTAL_GLASS), true);
+
+    public static final Supplier<Block> RADIANCE_LANTERN = register("radiance_lantern", () -> new Block(EBProperties.BlockP.CRYSTAL_LANTERN), true);
 
     private static Supplier<Block> register(String id, Supplier<Block> block, boolean hasItem) {
         return Services.REGISTRY.registerBlock(ExcessiveBuilding.MOD_ID, id, block, hasItem);

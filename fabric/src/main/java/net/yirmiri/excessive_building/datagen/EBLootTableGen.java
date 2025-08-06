@@ -52,10 +52,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         add(EBBlocks.AMETHYST_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.AMETHYST_BRICK_SLAB.get()));
         dropSelf(EBBlocks.AMETHYST_BRICK_WALL.get());
 
-        dropSelf(EBBlocks.AMETHYST_LANTERN.get());
-        add(EBBlocks.AMETHYST_FRAMED_GLASS.get(), createSilkTouchOnlyTable(EBBlocks.AMETHYST_FRAMED_GLASS.get()));
-        add(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get(), createSilkTouchOnlyTable(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get()));
-
         addDyedFrostedGlassDrops();
         dropSelf(EBBlocks.FROSTED_GLASS.get());
 
@@ -126,6 +122,14 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
 
         dropOther(EBBlocks.RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get());
         dropOther(EBBlocks.DEEPSLATE_RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get());
+
+        dropSelf(EBBlocks.AMETHYST_LANTERN.get());
+        add(EBBlocks.AMETHYST_FRAMED_GLASS.get(), createSilkTouchOnlyTable(EBBlocks.AMETHYST_FRAMED_GLASS.get()));
+        add(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get(), createSilkTouchOnlyTable(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get()));
+
+        dropSelf(EBBlocks.RADIANCE_LANTERN.get());
+        add(EBBlocks.RADIANCE_FRAMED_GLASS.get(), createSilkTouchOnlyTable(EBBlocks.RADIANCE_FRAMED_GLASS.get()));
+        add(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get(), createSilkTouchOnlyTable(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get()));
     }
 
     private void addDyedFrostedGlassDrops() {

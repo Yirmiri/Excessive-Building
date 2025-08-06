@@ -95,6 +95,9 @@
   "block.excessive_building.polished_hectalite_wall": "Polished Hectalite Wall",
   "block.excessive_building.purple_stained_frosted_glass": "Purple Stained Frosted Glass",
   "block.excessive_building.radiance_block": "Block of Radiance",
+  "block.excessive_building.radiance_framed_glass": "Radiance Framed Glass",
+  "block.excessive_building.radiance_framed_glass_pane": "Radiance Framed Glass Pane",
+  "block.excessive_building.radiance_lantern": "Radiance Lantern",
   "block.excessive_building.radiance_ore": "Radiance Ore",
   "block.excessive_building.red_stained_frosted_glass": "Red Stained Frosted Glass",
   "block.excessive_building.white_stained_frosted_glass": "White Stained Frosted Glass",
@@ -102,8 +105,10 @@
   "item.excessive_building.radiance_crystal": "Radiance Crystal",
   "item.excessive_building.radiance_gauntlet": "Radiance Gauntlet",
   "item.excessive_building.radiance_ingot": "Radiance Ingot",
+  "item.excessive_building.radiance_mallet": "Radiance Mallet",
   "itemgroup.excessive_building": "Excessive Building",
   "itemgroup.excessive_building_vertical_stairs": "Excessive Building: Vertical Stairs",
   "message.item.radiance_gauntlet": "Gauntlet power level:",
-  "tooltip.item.radiance_gauntlet": "Reduces the delay of placing blocks"
+  "tooltip.item.radiance_gauntlet": "Reduces the delay of placing blocks",
+  "yapping_tooltips.block.excessive_building.elyerium.desc": ""
 }

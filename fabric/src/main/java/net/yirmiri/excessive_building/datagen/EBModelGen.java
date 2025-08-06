@@ -60,9 +60,6 @@ public class EBModelGen extends FabricModelProvider {
         amethystbricks.slab(EBBlocks.AMETHYST_BRICK_SLAB.get());
         amethystbricks.wall(EBBlocks.AMETHYST_BRICK_WALL.get());
 
-        generator.createGlassBlocks(EBBlocks.AMETHYST_FRAMED_GLASS.get(), EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
-        createCrystalLantern(generator, EBBlocks.AMETHYST_LANTERN.get());
-
         generator.createTrivialCube(EBBlocks.FROSTED_GLASS.get());
 
         for (DyeColor colors : DyeColor.values()) {
@@ -133,13 +130,19 @@ public class EBModelGen extends FabricModelProvider {
         dioriteBricks.stairs(EBBlocks.DIORITE_BRICK_STAIRS.get());
         dioriteBricks.slab(EBBlocks.DIORITE_BRICK_SLAB.get());
         dioriteBricks.wall(EBBlocks.DIORITE_BRICK_WALL.get());
+
+        generator.createGlassBlocks(EBBlocks.AMETHYST_FRAMED_GLASS.get(), EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
+        createCrystalLantern(generator, EBBlocks.AMETHYST_LANTERN.get());
+
+        createCrystalLantern(generator, EBBlocks.RADIANCE_LANTERN.get());
+        generator.createGlassBlocks(EBBlocks.RADIANCE_FRAMED_GLASS.get(), EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get());
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators generator) {
         generator.generateFlatItem(EBItems.RADIANCE_CRYSTAL.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.RADIANCE_INGOT.get(), ModelTemplates.FLAT_ITEM);
-        //generator.generateFlatItem(EBItems.RADIANCE_POWERCELL.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.RADIANCE_MALLET.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 
     public void createCrystalLantern(BlockModelGenerators generator, Block block) {

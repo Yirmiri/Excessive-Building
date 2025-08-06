@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": {
+    "edge": "excessive_building:block/radiance_framed_glass_pane_top",
+    "pane": "excessive_building:block/radiance_framed_glass"
+  }
+}

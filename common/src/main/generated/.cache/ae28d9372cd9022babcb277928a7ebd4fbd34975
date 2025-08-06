@@ -1,6 +1,6 @@
-// 1.20.1	2025-08-03T18:31:04.0122562	Excessive Building/Tags for minecraft:block
+// 1.20.1	2025-08-06T00:09:48.7323459	Excessive Building/Tags for minecraft:block
 4f8160a6b1cbe4f2467ec698a9d4d4aa7c1518ac data\minecraft\tags\blocks\walls.json
-394dc285ce83b29dc96f8156799cbad5223c4651 data\excessive_building\tags\blocks\mineable_with_gauntlet.json
 ba6629ca9b6316785dbf5df09a898c409efba23c data\minecraft\tags\blocks\beacon_base_blocks.json
+2a1af5f0670850471a14b529fa5f2f27094cb13e data\excessive_building\tags\blocks\mineable_with_mallet.json
 1f097edd5dfa0174381bab4c628894ff7497f05b data\minecraft\tags\blocks\mineable\pickaxe.json
 e4215810bd5090605f345413ee8e1888f8d58afa data\minecraft\tags\blocks\needs_iron_tool.json
