@@ -130,6 +130,8 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         dropSelf(EBBlocks.RADIANCE_LANTERN.get());
         add(EBBlocks.RADIANCE_FRAMED_GLASS.get(), createSilkTouchOnlyTable(EBBlocks.RADIANCE_FRAMED_GLASS.get()));
         add(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get(), createSilkTouchOnlyTable(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get()));
+
+        dropSelf(EBBlocks.KILN.get());
     }
 
     private void addDyedFrostedGlassDrops() {

@@ -136,6 +136,8 @@ public class EBModelGen extends FabricModelProvider {
 
         createCrystalLantern(generator, EBBlocks.RADIANCE_LANTERN.get());
         generator.createGlassBlocks(EBBlocks.RADIANCE_FRAMED_GLASS.get(), EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get());
+
+        generator.createFurnace(EBBlocks.KILN.get(), TexturedModel.ORIENTABLE);
     }
 
     @Override

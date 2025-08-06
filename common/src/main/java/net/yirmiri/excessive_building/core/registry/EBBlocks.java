@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.AmethystGlassBlock;
+import net.yirmiri.excessive_building.common.block.KilnBlock;
 import net.yirmiri.excessive_building.common.block.VerticalStairBlock;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 
@@ -178,6 +179,9 @@ public class EBBlocks {
     public static final Supplier<Block> RADIANCE_FRAMED_GLASS_PANE = register("radiance_framed_glass_pane", () -> new StainedGlassPaneBlock(DyeColor.BLUE, EBProperties.BlockP.CRYSTAL_GLASS), true);
 
     public static final Supplier<Block> RADIANCE_LANTERN = register("radiance_lantern", () -> new Block(EBProperties.BlockP.CRYSTAL_LANTERN), true);
+
+    //MISC
+    public static final Supplier<Block> KILN = register("kiln", () -> new KilnBlock(EBProperties.BlockP.KILN), true);
 
     private static Supplier<Block> register(String id, Supplier<Block> block, boolean hasItem) {
         return Services.REGISTRY.registerBlock(ExcessiveBuilding.MOD_ID, id, block, hasItem);

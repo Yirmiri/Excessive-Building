@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "excessive_building:kiln",
     "excessive_building:elyerium_pillar",
     "excessive_building:hectalite_pillar",
     "excessive_building:chloroslate_pillar",

@@ -14,6 +14,7 @@ public class EBProperties {
         //MISC
         public static final BlockBehaviour.Properties INDESTRUCTIBLE = BlockBehaviour.Properties.copy(Blocks.BEDROCK);
         public static final BlockBehaviour.Properties FROSTED_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS);
+        public static final BlockBehaviour.Properties KILN = BlockBehaviour.Properties.copy(Blocks.FURNACE);
 
         //STONES
         public static final BlockBehaviour.Properties COBBLESTONE = BlockBehaviour.Properties.copy(Blocks.COBBLESTONE);

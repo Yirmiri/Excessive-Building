@@ -1,6 +1,7 @@
 package net.yirmiri.excessive_building;
 
 import net.minecraft.resources.ResourceLocation;
+import net.yirmiri.excessive_building.core.registry.EBBlockEntities;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBCreativeTabs;
 import net.yirmiri.excessive_building.core.registry.EBItems;
@@ -14,6 +15,7 @@ public class ExcessiveBuilding {
     public static void init() {
         EBBlocks.loadBlocks();
         EBItems.loadItems();
+        EBBlockEntities.loadBlockEntities();
         EBCreativeTabs.loadCreativeTabs();
     }
 

@@ -30,6 +30,7 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add("itemgroup.excessive_building_vertical_stairs", "Excessive Building: Vertical Stairs");
         build.add("tooltip.item.radiance_gauntlet", "Reduces the delay of placing blocks");
         build.add("message.item.radiance_gauntlet", "Gauntlet power level:");
+        build.add("excessive_building.container.kiln", "Kiln");
 
         //BLOCKS
         build.add(EBBlocks.ELYERIUM.get(), "Elyerium");
@@ -130,6 +131,8 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.DIORITE_BRICK_STAIRS.get(), "Diorite Brick Stairs");
         build.add(EBBlocks.DIORITE_BRICK_SLAB.get(), "Diorite Brick Slab");
         build.add(EBBlocks.DIORITE_BRICK_WALL.get(), "Diorite Brick Wall");
+
+        build.add(EBBlocks.KILN.get(), "Kiln");
 
         //ITEMS
         build.add(EBItems.RADIANCE_CRYSTAL.get(), "Radiance Crystal");

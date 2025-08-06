@@ -95,6 +95,8 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     private void appendMineableWithPickaxe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(EBBlocks.KILN.get())
+
                 .add(EBBlocks.ELYERIUM_PILLAR.get())
                 .add(EBBlocks.HECTALITE_PILLAR.get())
                 .add(EBBlocks.CHLOROSLATE_PILLAR.get())

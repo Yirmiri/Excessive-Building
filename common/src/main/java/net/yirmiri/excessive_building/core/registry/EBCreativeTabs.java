@@ -144,6 +144,9 @@ public class EBCreativeTabs {
                         entry.accept(EBItems.RADIANCE_INGOT.get());
                         entry.accept(EBItems.RADIANCE_MALLET.get());
                         entry.accept(EBItems.RADIANCE_GAUNTLET.get());
+
+                        //FUNCTION
+                        entry.accept(EBBlocks.KILN.get());
                     }).build());
 
     public static void loadCreativeTabs() {
