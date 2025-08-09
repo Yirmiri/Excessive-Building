@@ -29,6 +29,6 @@ public class RadianceGauntletItem extends DiggerItem {
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag isAdvanced) {
         super.appendHoverText(stack, level, tooltip, isAdvanced);
-        tooltip.add(Component.translatable("tooltip.item.radiance_gauntlet").withStyle(ChatFormatting.BLUE));
+        tooltip.add(Component.translatable("item.excessive_building.gauntlet.desc").withStyle(ChatFormatting.BLUE));
     }
 }

@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.data.models.blockstates.BlockStateGenerator;
 import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.data.models.model.TexturedModel;
@@ -138,6 +139,19 @@ public class EBModelGen extends FabricModelProvider {
         generator.createGlassBlocks(EBBlocks.RADIANCE_FRAMED_GLASS.get(), EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get());
 
         generator.createFurnace(EBBlocks.KILN.get(), TexturedModel.ORIENTABLE);
+
+        createBookshelf(generator, EBBlocks.BOOKSHELF_VARIANT1.get(), Blocks.OAK_PLANKS);
+        createBookshelf(generator, EBBlocks.BOOKSHELF_VARIANT2.get(), Blocks.OAK_PLANKS);
+        createBookshelf(generator, EBBlocks.BOOKSHELF_VARIANT3.get(), Blocks.OAK_PLANKS);
+        createBookshelf(generator, EBBlocks.BOOKSHELF_VARIANT4.get(), Blocks.OAK_PLANKS);
+        createBookshelf(generator, EBBlocks.BOOKSHELF_VARIANT5.get(), Blocks.OAK_PLANKS);
+
+        createBookshelf(generator, EBBlocks.ALCHEMY_SHELF.get(), Blocks.OAK_PLANKS);
+        createBookshelf(generator, EBBlocks.ALCHEMY_SHELF_VARIANT1.get(), Blocks.OAK_PLANKS);
+        createBookshelf(generator, EBBlocks.ALCHEMY_SHELF_VARIANT2.get(), Blocks.OAK_PLANKS);
+        createBookshelf(generator, EBBlocks.ALCHEMY_SHELF_VARIANT3.get(), Blocks.OAK_PLANKS);
+        createBookshelf(generator, EBBlocks.ALCHEMY_SHELF_VARIANT4.get(), Blocks.OAK_PLANKS);
+        createBookshelf(generator, EBBlocks.ALCHEMY_SHELF_VARIANT5.get(), Blocks.OAK_PLANKS);
     }
 
     @Override
@@ -145,6 +159,13 @@ public class EBModelGen extends FabricModelProvider {
         generator.generateFlatItem(EBItems.RADIANCE_CRYSTAL.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.RADIANCE_INGOT.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.RADIANCE_MALLET.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+    }
+
+    //GENERATORS
+    private void createBookshelf(BlockModelGenerators generator, Block block, Block wood) {
+        TextureMapping textureMapping = TextureMapping.column(TextureMapping.getBlockTexture(block), TextureMapping.getBlockTexture(wood));
+        ResourceLocation resourceLocation = ModelTemplates.CUBE_COLUMN.create(block, textureMapping, generator.modelOutput);
+        generator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block, resourceLocation));
     }
 
     public void createCrystalLantern(BlockModelGenerators generator, Block block) {

@@ -5,16 +5,28 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.MapColor;
+
+import java.util.function.ToIntFunction;
 
 public class EBProperties {
 //0xbca2e9 - RADIANT RARITY COLOR (for the future)
 
     public static class BlockP {
+        private static ToIntFunction<BlockState> litBlockEmission(int defaultVal, int lightValue) {
+            return (state) -> (Boolean)state.getValue(BlockStateProperties.LIT) ? lightValue : defaultVal;
+        }
+
         //MISC
         public static final BlockBehaviour.Properties INDESTRUCTIBLE = BlockBehaviour.Properties.copy(Blocks.BEDROCK);
         public static final BlockBehaviour.Properties FROSTED_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS);
-        public static final BlockBehaviour.Properties KILN = BlockBehaviour.Properties.copy(Blocks.FURNACE);
+        public static final BlockBehaviour.Properties KILN = BlockBehaviour.Properties.copy(Blocks.FURNACE).lightLevel(litBlockEmission(3, 13));
+
+        //WOOD
+        public static final BlockBehaviour.Properties PLANKS = BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS);
+        public static final BlockBehaviour.Properties BOOKSHELF = BlockBehaviour.Properties.copy(Blocks.BOOKSHELF);
 
         //STONES
         public static final BlockBehaviour.Properties COBBLESTONE = BlockBehaviour.Properties.copy(Blocks.COBBLESTONE);

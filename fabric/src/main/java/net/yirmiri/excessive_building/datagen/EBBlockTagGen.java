@@ -23,10 +23,12 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendMineableWithMallet();
         appendNeedsIronTool();
         appendBeaconBaseBlocks();
+        appendEnchantmentPowerProvider();
+        appendMineableWithAxe();
     }
 
     private void appendMineableWithMallet() {
-        getOrCreateTagBuilder(EBTags.Blocks.MINEABLE_WITH_MALLET)
+        getOrCreateTagBuilder(EBTags.BlockT.MINEABLE_WITH_MALLET)
                 .add(EBBlocks.RADIANCE_FRAMED_GLASS.get())
                 .add(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get())
                 .add(Blocks.SEA_LANTERN)
@@ -79,10 +81,27 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         ;
 
         for (DyeColor colors : DyeColor.values()) {
-            getOrCreateTagBuilder(EBTags.Blocks.MINEABLE_WITH_MALLET)
+            getOrCreateTagBuilder(EBTags.BlockT.MINEABLE_WITH_MALLET)
                     .add(EBBlocks.getDyedFrostedGlass(colors.getId()).get())
             ;
         }
+    }
+
+    private void appendEnchantmentPowerProvider() {
+        getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
+                .add(EBBlocks.ALCHEMY_SHELF.get())
+                .add(EBBlocks.ALCHEMY_SHELF_VARIANT1.get())
+                .add(EBBlocks.ALCHEMY_SHELF_VARIANT2.get())
+                .add(EBBlocks.ALCHEMY_SHELF_VARIANT3.get())
+                .add(EBBlocks.ALCHEMY_SHELF_VARIANT4.get())
+                .add(EBBlocks.ALCHEMY_SHELF_VARIANT5.get())
+
+                .add(EBBlocks.BOOKSHELF_VARIANT1.get())
+                .add(EBBlocks.BOOKSHELF_VARIANT2.get())
+                .add(EBBlocks.BOOKSHELF_VARIANT3.get())
+                .add(EBBlocks.BOOKSHELF_VARIANT4.get())
+                .add(EBBlocks.BOOKSHELF_VARIANT5.get())
+        ;
     }
 
     private void appendNeedsIronTool() {
@@ -90,6 +109,23 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.RADIANCE_ORE.get())
                 .add(EBBlocks.DEEPSLATE_RADIANCE_ORE.get())
                 .add(EBBlocks.RADIANCE_BLOCK.get())
+        ;
+    }
+
+    private void appendMineableWithAxe() {
+        getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .add(EBBlocks.ALCHEMY_SHELF.get())
+                .add(EBBlocks.ALCHEMY_SHELF_VARIANT1.get())
+                .add(EBBlocks.ALCHEMY_SHELF_VARIANT2.get())
+                .add(EBBlocks.ALCHEMY_SHELF_VARIANT3.get())
+                .add(EBBlocks.ALCHEMY_SHELF_VARIANT4.get())
+                .add(EBBlocks.ALCHEMY_SHELF_VARIANT5.get())
+
+                .add(EBBlocks.BOOKSHELF_VARIANT1.get())
+                .add(EBBlocks.BOOKSHELF_VARIANT2.get())
+                .add(EBBlocks.BOOKSHELF_VARIANT3.get())
+                .add(EBBlocks.BOOKSHELF_VARIANT4.get())
+                .add(EBBlocks.BOOKSHELF_VARIANT5.get())
         ;
     }
 

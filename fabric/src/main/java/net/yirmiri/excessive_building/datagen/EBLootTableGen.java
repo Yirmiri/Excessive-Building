@@ -3,6 +3,16 @@ package net.yirmiri.excessive_building.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
@@ -120,9 +130,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         add(EBBlocks.ANDESITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.ANDESITE_BRICK_SLAB.get()));
         dropSelf(EBBlocks.ANDESITE_BRICK_WALL.get());
 
-        dropOther(EBBlocks.RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get());
-        dropOther(EBBlocks.DEEPSLATE_RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get());
-
         dropSelf(EBBlocks.AMETHYST_LANTERN.get());
         add(EBBlocks.AMETHYST_FRAMED_GLASS.get(), createSilkTouchOnlyTable(EBBlocks.AMETHYST_FRAMED_GLASS.get()));
         add(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get(), createSilkTouchOnlyTable(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get()));
@@ -132,6 +139,16 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         add(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get(), createSilkTouchOnlyTable(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get()));
 
         dropSelf(EBBlocks.KILN.get());
+
+        add(EBBlocks.RADIANCE_ORE.get(), createOreDrop(EBBlocks.RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get()));
+        add(EBBlocks.DEEPSLATE_RADIANCE_ORE.get(), createOreDrop(EBBlocks.DEEPSLATE_RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get()));
+
+        add(EBBlocks.ALCHEMY_SHELF.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
+        add(EBBlocks.ALCHEMY_SHELF_VARIANT1.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
+        add(EBBlocks.ALCHEMY_SHELF_VARIANT2.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
+        add(EBBlocks.ALCHEMY_SHELF_VARIANT3.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
+        add(EBBlocks.ALCHEMY_SHELF_VARIANT4.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
+        add(EBBlocks.ALCHEMY_SHELF_VARIANT5.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
     }
 
     private void addDyedFrostedGlassDrops() {

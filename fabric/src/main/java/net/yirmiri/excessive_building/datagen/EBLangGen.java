@@ -28,11 +28,16 @@ public class EBLangGen extends FabricLanguageProvider {
         //MISC
         build.add("itemgroup.excessive_building", "Excessive Building");
         build.add("itemgroup.excessive_building_vertical_stairs", "Excessive Building: Vertical Stairs");
-        build.add("tooltip.item.radiance_gauntlet", "Reduces the delay of placing blocks");
+        build.add("item.excessive_building.gauntlet.desc", "Reduces the delay of placing blocks");
+        build.add("item.excessive_building.mallet.use", "When used on specific blocks:");
+        build.add("item.excessive_building.mallet.desc", "Changes variant");
+        build.add("tooltip.excessive_building.malleable", "Has mallet variants");
         build.add("message.item.radiance_gauntlet", "Gauntlet power level:");
         build.add("excessive_building.container.kiln", "Kiln");
 
         //BLOCKS
+        build.add(EBBlocks.ALCHEMY_SHELF.get(), "Alchemy Shelf");
+
         build.add(EBBlocks.ELYERIUM.get(), "Elyerium");
         build.add(EBBlocks.ELYERIUM_STAIRS.get(), "Elyerium Stairs");
         build.add(EBBlocks.ELYERIUM_SLAB.get(), "Elyerium Slab");

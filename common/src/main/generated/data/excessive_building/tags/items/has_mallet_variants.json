@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bookshelf",
+    "excessive_building:alchemy_shelf"
+  ]
+}

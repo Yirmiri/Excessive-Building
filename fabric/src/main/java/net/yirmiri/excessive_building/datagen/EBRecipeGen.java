@@ -451,6 +451,9 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .unlockedBy(getHasName(EBBlocks.RADIANCE_FRAMED_GLASS.get()), has(EBBlocks.RADIANCE_FRAMED_GLASS.get()))
                 .save(consumer, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get())));
 
+        //==========================OTHER==========================
+        createShelf(EBBlocks.ALCHEMY_SHELF.get().asItem(), Blocks.OAK_PLANKS.asItem(), Items.GLASS_BOTTLE);
+
         //====================================================
         stonecutterRecipeTreeGenerator.generateRecipes(consumer);
     }
@@ -460,6 +463,14 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .define('#', ingredient).define('@', ingredient2)
                 .pattern("@#")
                 .pattern("#@");
+    }
+
+    public static ShapedRecipeBuilder createShelf(Item output, Item wood, Item ingredient) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 1)
+                .define('#', ingredient).define('@', wood)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###");
     }
 
     public static ShapedRecipeBuilder createCrystalLantern(Item output, Item ingredient) {

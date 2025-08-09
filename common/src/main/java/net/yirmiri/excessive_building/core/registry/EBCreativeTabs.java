@@ -1,14 +1,10 @@
 package net.yirmiri.excessive_building.core.registry;
 
 import net.azurune.runiclib.core.platform.Services;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 import java.util.function.Supplier;
@@ -101,6 +97,9 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.ANDESITE_BRICK_STAIRS.get());
                         entry.accept(EBBlocks.ANDESITE_BRICK_SLAB.get());
                         entry.accept(EBBlocks.ANDESITE_BRICK_WALL.get());
+
+                        //OAK WOOD
+                        entry.accept(EBBlocks.ALCHEMY_SHELF.get());
 
                         //FROSTED GLASS
                         entry.accept(EBBlocks.FROSTED_GLASS.get());

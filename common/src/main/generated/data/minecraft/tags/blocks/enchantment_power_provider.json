@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "excessive_building:alchemy_shelf",
+    "excessive_building:alchemy_shelf_variant1",
+    "excessive_building:alchemy_shelf_variant2",
+    "excessive_building:alchemy_shelf_variant3",
+    "excessive_building:alchemy_shelf_variant4",
+    "excessive_building:alchemy_shelf_variant5",
+    "excessive_building:bookshelf_variant1",
+    "excessive_building:bookshelf_variant2",
+    "excessive_building:bookshelf_variant3",
+    "excessive_building:bookshelf_variant4",
+    "excessive_building:bookshelf_variant5"
+  ]
+}

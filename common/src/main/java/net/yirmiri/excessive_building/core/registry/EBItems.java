@@ -15,8 +15,8 @@ public class EBItems {
     //RADIANCE
     public static final Supplier<Item> RADIANCE_CRYSTAL = register("radiance_crystal", () -> new Item(EBProperties.ItemP.UNCOMMON));
     public static final Supplier<Item> RADIANCE_INGOT = register("radiance_ingot", () -> new Item(EBProperties.ItemP.UNCOMMON));
-    public static final Supplier<Item> RADIANCE_MALLET = register("radiance_mallet", () -> new RadianceMalletItem(2, -3.0F, EBMaterials.RADIANCE_MALLET, EBTags.Blocks.MINEABLE_WITH_MALLET, EBProperties.ItemP.UNCOMMON));
-    public static final Supplier<Item> RADIANCE_GAUNTLET = register("radiance_gauntlet", () -> new RadianceGauntletItem(1, -2.0F, EBMaterials.RADIANCE_GAUNTLET, EBTags.Blocks.MINEABLE_WITH_MALLET, EBProperties.ItemP.RADIANCE_GAUNTLET));
+    public static final Supplier<Item> RADIANCE_MALLET = register("radiance_mallet", () -> new RadianceMalletItem(2, -3.0F, EBMaterials.RADIANCE_MALLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.UNCOMMON));
+    public static final Supplier<Item> RADIANCE_GAUNTLET = register("radiance_gauntlet", () -> new RadianceGauntletItem(1, -2.0F, EBMaterials.RADIANCE_GAUNTLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.RADIANCE_GAUNTLET));
 
     private static Supplier<Item> register(String id, Supplier<Item> item) {
         return Services.REGISTRY.registerItem(ExcessiveBuilding.MOD_ID, id, item);

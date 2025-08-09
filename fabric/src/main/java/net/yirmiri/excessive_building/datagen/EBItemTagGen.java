@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.level.block.Blocks;
+import net.yirmiri.excessive_building.core.init.EBTags;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
@@ -18,6 +20,14 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
     protected void addTags(HolderLookup.Provider provider) {
         appendWalls();
         appendBeaconPaymentItems();
+        appendHasMalletVariants();
+    }
+
+    private void appendHasMalletVariants() {
+        getOrCreateTagBuilder(EBTags.ItemT.HAS_MALLET_VARIANTS)
+                .add(Blocks.BOOKSHELF.asItem())
+                .add(EBBlocks.ALCHEMY_SHELF.get().asItem())
+        ;
     }
 
     private void appendWalls() {

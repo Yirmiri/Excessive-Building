@@ -2,16 +2,11 @@ package net.yirmiri.excessive_building.core.registry;
 
 import net.azurune.runiclib.common.publicized.PublicStairBlock;
 import net.azurune.runiclib.core.platform.Services;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.AmethystGlassBlock;
 import net.yirmiri.excessive_building.common.block.KilnBlock;
-import net.yirmiri.excessive_building.common.block.VerticalStairBlock;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 
 import java.util.*;
@@ -179,6 +174,20 @@ public class EBBlocks {
     public static final Supplier<Block> RADIANCE_FRAMED_GLASS_PANE = register("radiance_framed_glass_pane", () -> new StainedGlassPaneBlock(DyeColor.BLUE, EBProperties.BlockP.CRYSTAL_GLASS), true);
 
     public static final Supplier<Block> RADIANCE_LANTERN = register("radiance_lantern", () -> new Block(EBProperties.BlockP.CRYSTAL_LANTERN), true);
+
+    //SHELVES
+    public static final Supplier<Block> ALCHEMY_SHELF = register("alchemy_shelf", () -> new Block(EBProperties.BlockP.BOOKSHELF), true);
+    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT1 = register("alchemy_shelf_variant1", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT2 = register("alchemy_shelf_variant2", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT3 = register("alchemy_shelf_variant3", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT4 = register("alchemy_shelf_variant4", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT5 = register("alchemy_shelf_variant5", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+
+    public static final Supplier<Block> BOOKSHELF_VARIANT1 = register("bookshelf_variant1", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> BOOKSHELF_VARIANT2 = register("bookshelf_variant2", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> BOOKSHELF_VARIANT3 = register("bookshelf_variant3", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> BOOKSHELF_VARIANT4 = register("bookshelf_variant4", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> BOOKSHELF_VARIANT5 = register("bookshelf_variant5", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
 
     //MISC
     public static final Supplier<Block> KILN = register("kiln", () -> new KilnBlock(EBProperties.BlockP.KILN), true);

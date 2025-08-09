@@ -1,3 +1,4 @@
-// 1.20.1	2025-08-06T01:10:21.0384942	Excessive Building/Tags for minecraft:item
+// 1.20.1	2025-08-09T11:17:22.9017046	Excessive Building/Tags for minecraft:item
 d6baa765882ad7b35baf7948e3743e0417de04b7 data\minecraft\tags\items\beacon_payment_items.json
+d25c88a769e0425641cf3b80130e24b11c6dac2c data\excessive_building\tags\items\has_mallet_variants.json
 eca3a14c25cf42a3459026fb797db0500e45da14 data\minecraft\tags\items\walls.json

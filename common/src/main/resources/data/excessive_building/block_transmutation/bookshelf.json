@@ -1,0 +1,40 @@
+{
+  "transmutations": [
+    {
+      "base_block": "minecraft:bookshelf",
+      "held_item": "excessive_building:radiance_mallet",
+      "transmuted_block": "excessive_building:bookshelf_variant1",
+      "sound_event": "minecraft:block.wood.break"
+    },
+    {
+      "base_block": "excessive_building:bookshelf_variant1",
+      "held_item": "excessive_building:radiance_mallet",
+      "transmuted_block": "excessive_building:bookshelf_variant2",
+      "sound_event": "minecraft:block.wood.break"
+    },
+    {
+      "base_block": "excessive_building:bookshelf_variant2",
+      "held_item": "excessive_building:radiance_mallet",
+      "transmuted_block": "excessive_building:bookshelf_variant3",
+      "sound_event": "minecraft:block.wood.break"
+    },
+    {
+      "base_block": "excessive_building:bookshelf_variant3",
+      "held_item": "excessive_building:radiance_mallet",
+      "transmuted_block": "excessive_building:bookshelf_variant4",
+      "sound_event": "minecraft:block.wood.break"
+    },
+    {
+      "base_block": "excessive_building:bookshelf_variant4",
+      "held_item": "excessive_building:radiance_mallet",
+      "transmuted_block": "excessive_building:bookshelf_variant5",
+      "sound_event": "minecraft:block.wood.break"
+    },
+    {
+      "base_block": "excessive_building:bookshelf_variant5",
+      "held_item": "excessive_building:radiance_mallet",
+      "transmuted_block": "minecraft:bookshelf",
+      "sound_event": "minecraft:block.wood.break"
+    }
+  ]
+}
