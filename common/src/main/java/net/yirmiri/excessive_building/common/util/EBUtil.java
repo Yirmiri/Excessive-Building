@@ -1,9 +1,12 @@
 package net.yirmiri.excessive_building.common.util;
 
+import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Property;
 
 public class EBUtil {
+    public static final Boat.Type ANCIENT_BOAT = Boat.Type.byName("ancient");
+
     public static BlockState copyBlockProperties(BlockState state, BlockState state1) {
         for (Property<?> property : state.getProperties()) {
             if (state1.hasProperty(property)) {
