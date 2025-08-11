@@ -50,6 +50,12 @@ public class EBProperties {
         public static final BlockBehaviour.Properties POLISHED_ARIDITE = BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5F, 6.0F);
         public static final BlockBehaviour.Properties ARIDITE_BRICKS = BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5F, 6.0F);
 
+        //METALS
+        public static final BlockBehaviour.Properties COPPER = BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK);
+        public static final BlockBehaviour.Properties EXPOSED_COPPER = BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER);
+        public static final BlockBehaviour.Properties WEATHERED_COPPER = BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER);
+        public static final BlockBehaviour.Properties OXIDIZED_COPPER = BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER);
+
         //CRYSTALS
         public static final BlockBehaviour.Properties AMETHYST_BRICKS = BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK);
         public static final BlockBehaviour.Properties CRYSTAL_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion();
