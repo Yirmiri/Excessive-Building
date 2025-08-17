@@ -21,6 +21,7 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendWalls();
         appendBeaconPaymentItems();
         appendHasMalletVariants();
+        appendBoats();
     }
 
     private void appendHasMalletVariants() {
@@ -56,6 +57,13 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
     private void appendBeaconPaymentItems() {
         getOrCreateTagBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
                 .add(EBItems.RADIANCE_INGOT.get().asItem())
+        ;
+    }
+
+    private void appendBoats() {
+        getOrCreateTagBuilder(ItemTags.BOATS)
+                .add(EBItems.ANCIENT_BOAT.get())
+                .add(EBItems.ANCIENT_CHEST_BOAT.get())
         ;
     }
 }

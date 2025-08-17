@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-09T11:28:27.6495319	Excessive Building/Block Loot Tables
+// 1.20.1	2025-08-17T13:40:09.2837598	Excessive Building/Block Loot Tables
 1768b183d2fdc60e7e56d01e4ecf0a55a2e733a3 data\excessive_building\loot_tables\blocks\radiance_framed_glass.json
 159488b4f1bf7d24568ed2e98c1fe8c357918b91 data\excessive_building\loot_tables\blocks\aridite.json
 1a5694d04b2edfa1f504b9d03d2e87e4a005439f data\excessive_building\loot_tables\blocks\chloroslate_brick_slab.json
@@ -77,8 +77,8 @@ f5dd17d14a197a3a8aba991caeff58f53fad3b7f data\excessive_building\loot_tables\blo
 61310ddecef02fbfb45229e736ad0568eb88bdfe data\excessive_building\loot_tables\blocks\aridite_brick_stairs.json
 783905a8be4b61438d8a8e5bf392baaaec35e2a4 data\excessive_building\loot_tables\blocks\polished_chloroslate_stairs.json
 03aade547422cc9a6b9bf881a7305dc493f2290d data\excessive_building\loot_tables\blocks\polished_aridite_stairs.json
-7ea52b0f79fbe513bcf1bf9d46b7580472a2c5ac data\excessive_building\loot_tables\blocks\polished_chloroslate_wall.json
 fb3b656c0af5b8c7c5126074ba55f023f6296fae data\excessive_building\loot_tables\blocks\granite_bricks.json
+7ea52b0f79fbe513bcf1bf9d46b7580472a2c5ac data\excessive_building\loot_tables\blocks\polished_chloroslate_wall.json
 7b770cc313b872c274342cbbf07b9dde28a45a9d data\excessive_building\loot_tables\blocks\granite_brick_stairs.json
 331d4e4be2cd172be257a335061a3eb244f5734c data\excessive_building\loot_tables\blocks\aridite_wall.json
 45f4f40d763be842e96ec43cbf3e82bf5b0d470f data\excessive_building\loot_tables\blocks\elyerium.json

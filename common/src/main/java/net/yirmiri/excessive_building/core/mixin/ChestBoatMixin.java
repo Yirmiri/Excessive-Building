@@ -7,6 +7,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.yirmiri.excessive_building.common.util.EBUtil;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -21,7 +22,7 @@ public abstract class ChestBoatMixin extends Boat {
     @Inject(at = @At(value = "RETURN"), method = "getDropItem", cancellable = true)
     public void excessiveBuilding$getDropItem(CallbackInfoReturnable<Item> cir) {
         if (this.getVariant() == EBUtil.ANCIENT_BOAT) {
-            cir.setReturnValue(Items.SPRUCE_BOAT);
+            cir.setReturnValue(EBItems.ANCIENT_CHEST_BOAT.get());
         }
     }
 }

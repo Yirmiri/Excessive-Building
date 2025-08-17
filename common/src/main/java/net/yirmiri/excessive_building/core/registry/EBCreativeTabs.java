@@ -101,6 +101,10 @@ public class EBCreativeTabs {
                         //OAK WOOD
                         entry.accept(EBBlocks.ALCHEMY_SHELF.get());
 
+                        //ANCIENT WOOD
+                        entry.accept(EBItems.ANCIENT_BOAT.get());
+                        entry.accept(EBItems.ANCIENT_CHEST_BOAT.get());
+
                         //FROSTED GLASS
                         entry.accept(EBBlocks.FROSTED_GLASS.get());
                         entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.WHITE.getId()).get());

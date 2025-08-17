@@ -144,6 +144,8 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBItems.RADIANCE_INGOT.get(), "Radiance Ingot");
         build.add(EBItems.RADIANCE_GAUNTLET.get(), "Radiance Gauntlet");
         build.add(EBItems.RADIANCE_MALLET.get(), "Radiance Mallet");
+        build.add(EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
+        build.add(EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");
 
         //YAPPING TOOLTIPS
         addYT(build, EBBlocks.ARIDITE.get(), "A sedimentary rock that can be found generating in cluster under deserts.");

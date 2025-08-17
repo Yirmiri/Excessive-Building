@@ -6,6 +6,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.AmethystGlassBlock;
+import net.yirmiri.excessive_building.common.block.CloneOtherBlock;
 import net.yirmiri.excessive_building.common.block.KilnBlock;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 
@@ -177,17 +178,17 @@ public class EBBlocks {
 
     //SHELVES
     public static final Supplier<Block> ALCHEMY_SHELF = register("alchemy_shelf", () -> new Block(EBProperties.BlockP.BOOKSHELF), true);
-    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT1 = register("alchemy_shelf_variant1", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
-    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT2 = register("alchemy_shelf_variant2", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
-    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT3 = register("alchemy_shelf_variant3", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
-    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT4 = register("alchemy_shelf_variant4", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
-    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT5 = register("alchemy_shelf_variant5", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT1 = register("alchemy_shelf_variant1", () -> new CloneOtherBlock(ALCHEMY_SHELF.get(), EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT2 = register("alchemy_shelf_variant2", () -> new CloneOtherBlock(ALCHEMY_SHELF.get(), EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT3 = register("alchemy_shelf_variant3", () -> new CloneOtherBlock(ALCHEMY_SHELF.get(), EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT4 = register("alchemy_shelf_variant4", () -> new CloneOtherBlock(ALCHEMY_SHELF.get(), EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> ALCHEMY_SHELF_VARIANT5 = register("alchemy_shelf_variant5", () -> new CloneOtherBlock(ALCHEMY_SHELF.get(), EBProperties.BlockP.BOOKSHELF), false);
 
-    public static final Supplier<Block> BOOKSHELF_VARIANT1 = register("bookshelf_variant1", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
-    public static final Supplier<Block> BOOKSHELF_VARIANT2 = register("bookshelf_variant2", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
-    public static final Supplier<Block> BOOKSHELF_VARIANT3 = register("bookshelf_variant3", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
-    public static final Supplier<Block> BOOKSHELF_VARIANT4 = register("bookshelf_variant4", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
-    public static final Supplier<Block> BOOKSHELF_VARIANT5 = register("bookshelf_variant5", () -> new Block(EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> BOOKSHELF_VARIANT1 = register("bookshelf_variant1", () -> new CloneOtherBlock(Blocks.BOOKSHELF, EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> BOOKSHELF_VARIANT2 = register("bookshelf_variant2", () -> new CloneOtherBlock(Blocks.BOOKSHELF, EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> BOOKSHELF_VARIANT3 = register("bookshelf_variant3", () -> new CloneOtherBlock(Blocks.BOOKSHELF, EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> BOOKSHELF_VARIANT4 = register("bookshelf_variant4", () -> new CloneOtherBlock(Blocks.BOOKSHELF, EBProperties.BlockP.BOOKSHELF), false);
+    public static final Supplier<Block> BOOKSHELF_VARIANT5 = register("bookshelf_variant5", () -> new CloneOtherBlock(Blocks.BOOKSHELF, EBProperties.BlockP.BOOKSHELF), false);
 
     //MISC
     public static final Supplier<Block> KILN = register("kiln", () -> new KilnBlock(EBProperties.BlockP.KILN), true);

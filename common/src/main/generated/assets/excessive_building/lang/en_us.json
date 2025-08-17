@@ -105,6 +105,8 @@
   "block.excessive_building.white_stained_frosted_glass": "White Stained Frosted Glass",
   "block.excessive_building.yellow_stained_frosted_glass": "Yellow Stained Frosted Glass",
   "excessive_building.container.kiln": "Kiln",
+  "item.excessive_building.ancient_boat": "Ancient Boat",
+  "item.excessive_building.ancient_chest_boat": "Ancient Chest Boat",
   "item.excessive_building.gauntlet.desc": "Reduces the delay of placing blocks",
   "item.excessive_building.mallet.desc": "Changes variant",
   "item.excessive_building.mallet.use": "When used on specific blocks:",

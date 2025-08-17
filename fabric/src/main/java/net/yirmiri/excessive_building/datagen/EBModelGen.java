@@ -159,6 +159,8 @@ public class EBModelGen extends FabricModelProvider {
         generator.generateFlatItem(EBItems.RADIANCE_CRYSTAL.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.RADIANCE_INGOT.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.RADIANCE_MALLET.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        generator.generateFlatItem(EBItems.ANCIENT_BOAT.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.ANCIENT_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
     }
 
     //GENERATORS

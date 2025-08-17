@@ -454,6 +454,9 @@ public class EBRecipeGen extends FabricRecipeProvider {
         //==========================OTHER==========================
         createShelf(EBBlocks.ALCHEMY_SHELF.get().asItem(), Blocks.OAK_PLANKS.asItem(), Items.GLASS_BOTTLE);
 
+        //==========================ANCIENT WOOD==========================
+        //TODO: boat recipes
+
         //====================================================
         stonecutterRecipeTreeGenerator.generateRecipes(consumer);
     }

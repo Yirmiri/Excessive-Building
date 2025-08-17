@@ -1,5 +1,5 @@
-[11:28:09] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.9
-[11:28:10] [main/INFO] (FabricLoader) Loading 60 mods:
+[13:39:49] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.9
+[13:39:50] [main/INFO] (FabricLoader) Loading 60 mods:
 	- excessive_building 4.0.0
 	- fabric-api 0.92.1+1.20.1
 	- fabric-api-base 0.4.31+1802ada577
@@ -60,16 +60,16 @@
 	- minecraft 1.20.1
 	- mixinextras 0.4.1
 	- runiclib 4.3.1
-[11:28:10] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[11:28:10] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[11:28:10] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[11:28:10] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[11:28:12] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[11:28:21] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 204 milliseconds
-[11:28:21] [main/WARN] (FabricLoader/Mixin) Discarding @Unique public field effect in runiclib.mixins.json:server.MobEffectInstanceMixin from mod runiclib because it already exists in net.minecraft.world.effect.MobEffectInstance. Note that declared FIELD INITIALISERS will NOT be removed!
-[11:28:23] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
-[11:28:23] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[11:28:24] [Render thread/ERROR] (Minecraft) Failed to verify authentication
+[13:39:50] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[13:39:50] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[13:39:50] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[13:39:50] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[13:39:52] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[13:40:02] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 470 milliseconds
+[13:40:02] [main/WARN] (FabricLoader/Mixin) Discarding @Unique public field effect in runiclib.mixins.json:server.MobEffectInstanceMixin from mod runiclib because it already exists in net.minecraft.world.effect.MobEffectInstance. Note that declared FIELD INITIALISERS will NOT be removed!
+[13:40:05] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
+[13:40:05] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[13:40:06] [Render thread/ERROR] (Minecraft) Failed to verify authentication
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-4.0.43.jar:?]
@@ -87,20 +87,20 @@ Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 4
 	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-4.0.43.jar:?]
 	... 9 more
-[11:28:24] [Render thread/INFO] (Minecraft) Setting user: Player237
-[11:28:25] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[11:28:26] [Render thread/INFO] (FabricDataGenHelper) Running data generator for excessive_building
-[11:28:26] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Language (en_us)
-[11:28:26] [Render thread/INFO] (Minecraft) Excessive Building/Language (en_us) finished after 118 ms
-[11:28:26] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:block
-[11:28:26] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:block finished after 469 ms
-[11:28:26] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:item
-[11:28:26] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:item finished after 5 ms
-[11:28:26] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Recipes
-[11:28:27] [Render thread/INFO] (Minecraft) Excessive Building/Recipes finished after 181 ms
-[11:28:27] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Block Loot Tables
-[11:28:27] [Render thread/INFO] (Minecraft) Excessive Building/Block Loot Tables finished after 131 ms
-[11:28:27] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Model Definitions
-[11:28:27] [Render thread/INFO] (Minecraft) Excessive Building/Model Definitions finished after 195 ms
-[11:28:27] [Render thread/INFO] (Minecraft) All providers took: 1108 ms
-[11:28:27] [Render thread/INFO] (Minecraft) Caching: total files: 980, old count: 980, new count: 981, removed stale: 0, written: 1
+[13:40:06] [Render thread/INFO] (Minecraft) Setting user: Player596
+[13:40:07] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[13:40:08] [Render thread/INFO] (FabricDataGenHelper) Running data generator for excessive_building
+[13:40:08] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Language (en_us)
+[13:40:08] [Render thread/INFO] (Minecraft) Excessive Building/Language (en_us) finished after 86 ms
+[13:40:08] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:block
+[13:40:08] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:block finished after 505 ms
+[13:40:08] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:item
+[13:40:08] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:item finished after 6 ms
+[13:40:08] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Recipes
+[13:40:09] [Render thread/INFO] (Minecraft) Excessive Building/Recipes finished after 130 ms
+[13:40:09] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Block Loot Tables
+[13:40:09] [Render thread/INFO] (Minecraft) Excessive Building/Block Loot Tables finished after 81 ms
+[13:40:09] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Model Definitions
+[13:40:09] [Render thread/INFO] (Minecraft) Excessive Building/Model Definitions finished after 132 ms
+[13:40:09] [Render thread/INFO] (Minecraft) All providers took: 948 ms
+[13:40:09] [Render thread/INFO] (Minecraft) Caching: total files: 983, old count: 980, new count: 984, removed stale: 0, written: 4
