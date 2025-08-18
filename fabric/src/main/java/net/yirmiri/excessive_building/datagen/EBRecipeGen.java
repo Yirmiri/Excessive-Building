@@ -450,12 +450,82 @@ public class EBRecipeGen extends FabricRecipeProvider {
         createPane(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get().asItem(), EBBlocks.RADIANCE_FRAMED_GLASS.get().asItem())
                 .unlockedBy(getHasName(EBBlocks.RADIANCE_FRAMED_GLASS.get()), has(EBBlocks.RADIANCE_FRAMED_GLASS.get()))
                 .save(consumer, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get())));
+        //==========================PRISMARINE==========================
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.PRISMARINE), RecipeCategory.MISC, EBBlocks.POLISHED_PRISMARINE.get(), 0.1F, 200)
+                .unlockedBy("has_prismarine", has(Blocks.PRISMARINE)).save(consumer, getSmeltingRecipeName(EBBlocks.POLISHED_PRISMARINE.get()));
 
-        //==========================OTHER==========================
-        createShelf(EBBlocks.ALCHEMY_SHELF.get().asItem(), Blocks.OAK_PLANKS.asItem(), Items.GLASS_BOTTLE);
+        stairBuilder(EBBlocks.POLISHED_PRISMARINE_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_PRISMARINE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_PRISMARINE.get()), has(EBBlocks.POLISHED_PRISMARINE.get()))
+                .save(consumer);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_PRISMARINE_SLAB.get(), Ingredient.of(EBBlocks.POLISHED_PRISMARINE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_PRISMARINE.get()), has(EBBlocks.POLISHED_PRISMARINE.get()))
+                .save(consumer);
+
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_PRISMARINE_STAIRS.get(), EBBlocks.POLISHED_PRISMARINE.get());
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_PRISMARINE_SLAB.get(), EBBlocks.POLISHED_PRISMARINE.get(), 2);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.DARK_PRISMARINE), RecipeCategory.MISC, EBBlocks.POLISHED_DARK_PRISMARINE.get(), 0.1F, 200)
+                .unlockedBy("has_dark_prismarine", has(Blocks.DARK_PRISMARINE)).save(consumer, getSmeltingRecipeName(EBBlocks.POLISHED_DARK_PRISMARINE.get()));
+
+        stairBuilder(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_DARK_PRISMARINE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_DARK_PRISMARINE.get()), has(EBBlocks.POLISHED_DARK_PRISMARINE.get()))
+                .save(consumer);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get(), Ingredient.of(EBBlocks.POLISHED_DARK_PRISMARINE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_DARK_PRISMARINE.get()), has(EBBlocks.POLISHED_DARK_PRISMARINE.get()))
+                .save(consumer);
+
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get(), EBBlocks.POLISHED_DARK_PRISMARINE.get());
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get(), EBBlocks.POLISHED_DARK_PRISMARINE.get(), 2);
+
+        createWendysFourForFourMeal(EBBlocks.PRISMARINE_TILES.get().asItem(), Blocks.PRISMARINE_BRICKS.asItem(), Blocks.PRISMARINE_BRICKS.asItem());
+
+        stairBuilder(EBBlocks.PRISMARINE_TILE_STAIRS.get(), Ingredient.of(EBBlocks.PRISMARINE_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_TILES.get()), has(EBBlocks.PRISMARINE_TILES.get()))
+                .save(consumer);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_TILE_SLAB.get(), Ingredient.of(EBBlocks.PRISMARINE_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_TILES.get()), has(EBBlocks.PRISMARINE_TILES.get()))
+                .save(consumer);
+        
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.PRISMARINE_TILES.get(), Blocks.PRISMARINE_BRICKS);
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.PRISMARINE_TILE_STAIRS.get(), EBBlocks.PRISMARINE_TILES.get());
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.PRISMARINE_TILE_SLAB.get(), EBBlocks.PRISMARINE_TILES.get(), 2);
+
+        createWendysFourForFourMeal(EBBlocks.DARK_PRISMARINE_TILES.get().asItem(), EBBlocks.DARK_PRISMARINE_BRICKS.get().asItem(), EBBlocks.DARK_PRISMARINE_BRICKS.get().asItem());
+
+        stairBuilder(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get(), Ingredient.of(EBBlocks.DARK_PRISMARINE_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.DARK_PRISMARINE_TILES.get()), has(EBBlocks.DARK_PRISMARINE_TILES.get()))
+                .save(consumer);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DARK_PRISMARINE_TILE_SLAB.get(), Ingredient.of(EBBlocks.DARK_PRISMARINE_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.DARK_PRISMARINE_TILES.get()), has(EBBlocks.DARK_PRISMARINE_TILES.get()))
+                .save(consumer);
+
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_TILES.get(), EBBlocks.DARK_PRISMARINE_BRICKS.get());
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get(), EBBlocks.DARK_PRISMARINE_TILES.get());
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get(), EBBlocks.DARK_PRISMARINE_TILES.get(), 2);
+
+        createWendysFourForFourMeal(EBBlocks.DARK_PRISMARINE_BRICKS.get().asItem(), Blocks.DARK_PRISMARINE.asItem(), Blocks.DARK_PRISMARINE.asItem());
+
+        stairBuilder(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.DARK_PRISMARINE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.DARK_PRISMARINE_BRICKS.get()), has(EBBlocks.DARK_PRISMARINE_BRICKS.get()))
+                .save(consumer);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.DARK_PRISMARINE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.DARK_PRISMARINE_BRICKS.get()), has(EBBlocks.DARK_PRISMARINE_BRICKS.get()))
+                .save(consumer);
+
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE);
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get(), EBBlocks.DARK_PRISMARINE_BRICKS.get());
+        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get(), EBBlocks.DARK_PRISMARINE_BRICKS.get(), 2);
 
         //==========================ANCIENT WOOD==========================
         //TODO: boat recipes
+
+        //==========================OTHER==========================
+        createShelf(EBBlocks.ALCHEMY_SHELF.get().asItem(), Blocks.OAK_PLANKS.asItem(), Items.GLASS_BOTTLE);
 
         //====================================================
         stonecutterRecipeTreeGenerator.generateRecipes(consumer);

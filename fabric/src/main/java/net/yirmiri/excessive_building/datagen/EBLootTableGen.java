@@ -149,6 +149,26 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         add(EBBlocks.ALCHEMY_SHELF_VARIANT3.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
         add(EBBlocks.ALCHEMY_SHELF_VARIANT4.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
         add(EBBlocks.ALCHEMY_SHELF_VARIANT5.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
+
+        dropSelf(EBBlocks.POLISHED_PRISMARINE.get());
+        dropSelf(EBBlocks.POLISHED_PRISMARINE_STAIRS.get());
+        add(EBBlocks.POLISHED_PRISMARINE_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_PRISMARINE_SLAB.get()));
+
+        dropSelf(EBBlocks.PRISMARINE_TILES.get());
+        dropSelf(EBBlocks.PRISMARINE_TILE_STAIRS.get());
+        add(EBBlocks.PRISMARINE_TILE_SLAB.get(), createSlabItemTable(EBBlocks.PRISMARINE_TILE_SLAB.get()));
+
+        dropSelf(EBBlocks.POLISHED_DARK_PRISMARINE.get());
+        dropSelf(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get());
+        add(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get()));
+
+        dropSelf(EBBlocks.DARK_PRISMARINE_BRICKS.get());
+        dropSelf(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get());
+        add(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get()));
+        
+        dropSelf(EBBlocks.DARK_PRISMARINE_TILES.get());
+        dropSelf(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get());
+        add(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get(), createSlabItemTable(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get()));
     }
 
     private void addDyedFrostedGlassDrops() {

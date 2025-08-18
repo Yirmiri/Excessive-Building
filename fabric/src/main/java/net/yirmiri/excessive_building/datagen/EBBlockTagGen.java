@@ -131,6 +131,26 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     private void appendMineableWithPickaxe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(EBBlocks.POLISHED_PRISMARINE.get())
+                .add(EBBlocks.POLISHED_PRISMARINE_STAIRS.get())
+                .add(EBBlocks.POLISHED_PRISMARINE_SLAB.get())
+
+                .add(EBBlocks.PRISMARINE_TILES.get())
+                .add(EBBlocks.PRISMARINE_TILE_STAIRS.get())
+                .add(EBBlocks.PRISMARINE_TILE_SLAB.get())
+
+                .add(EBBlocks.POLISHED_DARK_PRISMARINE.get())
+                .add(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get())
+                .add(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get())
+
+                .add(EBBlocks.DARK_PRISMARINE_TILES.get())
+                .add(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get())
+                .add(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get())
+
+                .add(EBBlocks.DARK_PRISMARINE_TILES.get())
+                .add(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get())
+                .add(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get())
+
                 .add(EBBlocks.KILN.get())
 
                 .add(EBBlocks.ELYERIUM_PILLAR.get())

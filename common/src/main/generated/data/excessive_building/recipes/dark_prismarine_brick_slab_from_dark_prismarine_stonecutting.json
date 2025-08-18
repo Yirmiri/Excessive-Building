@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:dark_prismarine"
+  },
+  "result": "excessive_building:dark_prismarine_brick_slab"
+}

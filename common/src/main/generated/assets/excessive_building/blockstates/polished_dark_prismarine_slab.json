@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/polished_dark_prismarine_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/polished_dark_prismarine"
+    },
+    "type=top": {
+      "model": "excessive_building:block/polished_dark_prismarine_slab_top"
+    }
+  }
+}

@@ -1,5 +1,5 @@
-[13:40:45] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.9
-[13:40:46] [main/INFO] (FabricLoader) Loading 61 mods:
+[04:01:22] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.9
+[04:01:23] [main/INFO] (FabricLoader) Loading 61 mods:
 	- appledog 1.0.0
 	- excessive_building 4.0.0
 	- fabric-api 0.92.1+1.20.1
@@ -60,18 +60,18 @@
 	- java 21
 	- minecraft 1.20.1
 	- mixinextras 0.4.1
-	- runiclib 4.3.1
-[13:41:06] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[13:41:06] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[13:41:06] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[13:41:06] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[13:41:06] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
-[13:41:08] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[13:41:15] [main/WARN] (FabricLoader/Mixin) Discarding @Unique public field effect in runiclib.mixins.json:server.MobEffectInstanceMixin from mod runiclib because it already exists in net.minecraft.world.effect.MobEffectInstance. Note that declared FIELD INITIALISERS will NOT be removed!
-[13:41:15] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 1040 milliseconds
-[13:41:17] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
-[13:41:17] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[13:41:18] [Render thread/ERROR] (Minecraft) Failed to verify authentication
+	- runiclib 4.3.3
+[04:01:35] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[04:01:35] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[04:01:35] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[04:01:35] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[04:01:35] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[04:01:37] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[04:01:44] [main/WARN] (FabricLoader/Mixin) Discarding @Unique public field effect in runiclib.mixins.json:server.MobEffectInstanceMixin from mod runiclib because it already exists in net.minecraft.world.effect.MobEffectInstance. Note that declared FIELD INITIALISERS will NOT be removed!
+[04:01:45] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 912 milliseconds
+[04:01:46] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
+[04:01:46] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[04:01:47] [Render thread/ERROR] (Minecraft) Failed to verify authentication
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-4.0.43.jar:?]
@@ -89,68 +89,189 @@ Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 4
 	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-4.0.43.jar:?]
 	... 9 more
-[13:41:18] [Render thread/INFO] (Minecraft) Setting user: Player861
-[13:41:18] [Render thread/ERROR] (Minecraft) No data fixer registered for appledog
-[13:41:19] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[13:41:19] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.2-snapshot
-[13:41:29] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric (fabric-renderer-indigo, fabric-api-base, fabric-convention-tags-v1, fabric-lifecycle-events-v1, fabric-registry-sync-v0, fabric-recipe-api-v1, fabric-api-lookup-api-v1, fabric-api, runiclib, fabric-object-builder-api-v1, fabric-commands-v0, fabric-mining-level-api-v1, fabric-block-view-api-v2, fabric-sound-api-v1, fabric-game-rule-api-v1, fabric-networking-api-v1, fabric-screen-handler-api-v1, fabric-networking-v0, fabric-client-tags-api-v1, fabric-crash-report-info-v1, fabric-events-lifecycle-v0, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-resource-loader-v0, fabric-particles-v1, fabric-loot-tables-v1, fabric-rendering-fluids-v1, fabric-command-api-v1, appledog, fabric-message-api-v1, fabric-gametest-api-v1, fabric-rendering-v1, fabric-block-api-v1, fabric-rendering-v0, fabric-renderer-registries-v1, fabric-data-generation-api-v1, fabric-keybindings-v0, fabric-item-api-v1, fabric-blockrenderlayer-v1, excessive_building, fabric-events-interaction-v0, fabric-transitive-access-wideners-v1, fabric-biome-api-v1, fabric-models-v0, fabric-content-registries-v0, fabric-transfer-api-v1, fabric-resource-conditions-api-v1, fabric-renderer-api-v1, fabric-entity-events-v1, fabric-model-loading-api-v1, fabric-loot-api-v2, fabric-rendering-data-attachment-v1, fabric-data-attachment-api-v1, fabric-command-api-v2, fabric-containers-v0, fabricloader, fabric-dimensions-v1, fabric-screen-api-v1)
-[13:41:30] [Worker-Main-2/INFO] (Minecraft) Found unifont_all_no_pua-15.0.06.hex, loading
-[13:41:30] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
-[13:41:32] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
-[13:41:32] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[13:41:33] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on Speakers (HyperX Cloud Stinger Core (Wireless) – PS)
-[13:41:33] [Render thread/INFO] (Minecraft) Sound engine started
-[13:41:33] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[13:41:33] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[13:41:33] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[13:41:33] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[13:41:33] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[13:41:33] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[13:41:33] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[13:41:33] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[13:41:33] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[13:41:33] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[13:41:34] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[13:41:34] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[13:41:34] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[13:42:26] [Render thread/INFO] (FabricRegistrySync) [fabric-registry-sync] Loaded registry data [file 1/4]
-[13:42:27] [Render thread/INFO] (Minecraft) Loaded 7 recipes
-[13:42:28] [Render thread/INFO] (Minecraft) Loaded 1474 advancements
-[13:42:29] [Render thread/INFO] (BiomeModificationImpl) Applied 178 biome modifications to 64 of 64 new biomes in 26.07 ms
-[13:42:29] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.20.1
-[13:42:29] [Server thread/INFO] (Minecraft) Generating keypair
-[13:42:29] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:34] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
-[13:42:35] [Render thread/INFO] (Minecraft) Preparing spawn area: 9%
-[13:42:35] [Render thread/INFO] (Minecraft) Time elapsed: 6060 ms
-[13:42:35] [Server thread/INFO] (Minecraft) Changing view distance to 8, from 10
-[13:42:35] [Server thread/INFO] (Minecraft) Changing simulation distance to 5, from 0
-[13:42:35] [Server thread/WARN] (Minecraft) Block entity minecraft:smoker @ BlockPos{x=0, y=-60, z=13} state Block{excessive_building:kiln}[facing=south,lit=false] invalid for ticking:
-[13:42:35] [Server thread/WARN] (Minecraft) Block entity minecraft:smoker @ BlockPos{x=1, y=-60, z=13} state Block{excessive_building:kiln}[facing=south,lit=true] invalid for ticking:
-[13:42:37] [Server thread/INFO] (Minecraft) Player861[local:E:0a1743f2] logged in with entity id 6 at (-1.6412029626330773, -58.0, 76.01249998807907)
-[13:42:37] [Server thread/INFO] (Minecraft) Player861 joined the game
-[13:42:37] [Render thread/INFO] (Minecraft) Loaded 2 advancements
-[13:43:09] [Render thread/INFO] (Minecraft) Loaded 11 advancements
-[13:43:13] [Render thread/INFO] (Minecraft) [System] [CHAT] Saved screenshot as 2025-08-17_13.43.12.png
-[13:46:55] [Render thread/INFO] (Minecraft) Loaded 12 advancements
-[13:47:03] [Render thread/INFO] (Minecraft) Loaded 21 advancements
-[13:47:29] [Render thread/INFO] (Minecraft) Loaded 22 advancements
-[13:47:43] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[13:47:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:overworld
-[13:47:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_end
-[13:47:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_nether
-[13:47:48] [Render thread/INFO] (Minecraft) [System] [CHAT] Saved screenshot as 2025-08-17_13.47.48.png
-[13:47:49] [Server thread/INFO] (Minecraft) Saving and pausing game...
-[13:47:49] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:overworld
-[13:47:49] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_end
-[13:47:49] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_nether
+[04:01:47] [Render thread/INFO] (Minecraft) Setting user: Player137
+[04:01:47] [Render thread/ERROR] (Minecraft) No data fixer registered for appledog
+[04:01:48] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[04:01:49] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.2-snapshot
+[04:01:51] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla, fabric (fabric-dimensions-v1, fabric-data-attachment-api-v1, fabric-models-v0, fabric-rendering-v0, fabric-keybindings-v0, fabric-rendering-data-attachment-v1, fabric-convention-tags-v1, fabric-resource-conditions-api-v1, fabric-block-view-api-v2, fabric-transfer-api-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-biome-api-v1, fabric-lifecycle-events-v1, excessive_building, fabric-recipe-api-v1, fabric-api-base, fabric-content-registries-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-transitive-access-wideners-v1, fabric-commands-v0, fabric-containers-v0, fabric-object-builder-api-v1, fabric-api, runiclib, fabric-events-interaction-v0, fabric-screen-api-v1, fabric-blockrenderlayer-v1, fabric-sound-api-v1, fabric-crash-report-info-v1, fabric-entity-events-v1, fabric-events-lifecycle-v0, fabric-loot-api-v2, fabric-networking-api-v1, fabric-networking-v0, fabric-data-generation-api-v1, fabric-registry-sync-v0, fabric-item-group-api-v1, fabric-renderer-indigo, fabric-command-api-v2, fabric-key-binding-api-v1, fabric-screen-handler-api-v1, fabric-rendering-fluids-v1, appledog, fabric-api-lookup-api-v1, fabric-resource-loader-v0, fabricloader, fabric-renderer-api-v1, fabric-block-api-v1, fabric-gametest-api-v1, fabric-loot-tables-v1, fabric-message-api-v1, fabric-mining-level-api-v1, fabric-particles-v1, fabric-renderer-registries-v1, fabric-model-loading-api-v1, fabric-rendering-v1)
+[04:01:52] [Worker-Main-3/INFO] (Minecraft) Found unifont_all_no_pua-15.0.06.hex, loading
+[04:01:52] [Realms Notification Availability checker #1/INFO] (Minecraft) Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: FabricMC
+[04:01:55] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:item.goat_horn.play
+[04:01:55] [Render thread/WARN] (Minecraft) Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[04:01:55] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on Speakers (HyperX Cloud Stinger Core (Wireless) – PS)
+[04:01:55] [Render thread/INFO] (Minecraft) Sound engine started
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[04:01:55] [Render thread/WARN] (Minecraft) Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[04:01:55] [Render thread/INFO] (Minecraft) Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[04:02:04] [Render thread/INFO] (FabricRegistrySync) [fabric-registry-sync] Loaded registry data [file 1/4]
+[04:02:06] [Render thread/INFO] (Minecraft) Loaded 7 recipes
+[04:02:06] [Render thread/INFO] (Minecraft) Loaded 1508 advancements
+[04:02:06] [Render thread/INFO] (BiomeModificationImpl) Applied 178 biome modifications to 64 of 64 new biomes in 13.86 ms
+[04:02:07] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.20.1
+[04:02:07] [Server thread/INFO] (Minecraft) Generating keypair
+[04:02:07] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[04:02:08] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[04:02:08] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[04:02:08] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[04:02:09] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[04:02:09] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[04:02:10] [Render thread/INFO] (Minecraft) Preparing spawn area: 1%
+[04:02:10] [Render thread/INFO] (Minecraft) Preparing spawn area: 55%
+[04:02:10] [Render thread/INFO] (Minecraft) Time elapsed: 3248 ms
+[04:02:11] [Server thread/INFO] (Minecraft) Changing view distance to 8, from 10
+[04:02:11] [Server thread/INFO] (Minecraft) Changing simulation distance to 5, from 0
+[04:02:11] [Server thread/WARN] (Minecraft) Block entity minecraft:smoker @ BlockPos{x=0, y=-60, z=13} state Block{excessive_building:kiln}[facing=south,lit=false] invalid for ticking:
+[04:02:11] [Server thread/WARN] (Minecraft) Block entity minecraft:smoker @ BlockPos{x=1, y=-60, z=13} state Block{excessive_building:kiln}[facing=south,lit=true] invalid for ticking:
+[04:02:12] [Server thread/INFO] (Minecraft) Player137[local:E:a03b7ae3] logged in with entity id 12 at (32.03169022607818, -60.0, 34.90810990045037)
+[04:02:12] [Server thread/INFO] (Minecraft) Player137 joined the game
+[04:02:13] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[04:02:13] [Worker-Main-3/WARN] (Minecraft) Couldn't look up profile properties for com.mojang.authlib.GameProfile@486322dd[id=37e4a5df-2479-34b7-be52-2f491341f6b1,name=Player137,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:119) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:91) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:175) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:51) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:48) ~[authlib-4.0.43.jar:?]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3533) ~[guava-31.1-jre.jar:?]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2282) ~[guava-31.1-jre.jar:?]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2159) ~[guava-31.1-jre.jar:?]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2049) ~[guava-31.1-jre.jar:?]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3966) ~[guava-31.1-jre.jar:?]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3989) ~[guava-31.1-jre.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4950) ~[guava-31.1-jre.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4956) ~[guava-31.1-jre.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:149) ~[authlib-4.0.43.jar:?]
+	at net.minecraft.client.Minecraft.getProfileProperties(Minecraft.java:2507) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at net.minecraft.client.resources.SkinManager.method_4653(SkinManager.java:107) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1423) ~[?:?]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[?:?]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?]
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?]
+Caused by: com.mojang.authlib.exceptions.MinecraftClientException: Failed to read value <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+    <meta content='text/html; charset=utf-8' http-equiv='content-type' />
+    <style type='text/css'>
+        body {
+            font-family: Arial;
+            margin-left: 40px;
+        }
+
+        img {
+            border: 0 none;
+        }
+
+        #content {
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        #message h1 {
+            font-size: 24px;
+            font-weight: normal;
+            color: #000000;
+            margin: 34px 0px 0px 0px
+        }
+
+        #message h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: #000000;
+            margin: 34px 0px 0px 0px
+        }
+
+        #message p {
+            font-size: 16px;
+            color: #000000;
+            margin: 8px 0px 0px 0px
+        }
+
+        #message hr {
+            margin: 15px 0px
+        }
+
+        #errorref {
+            font-size: 11px;
+            color: #737373;
+            margin-top: 41px
+        }
+    </style>
+    <title>Service unavailable</title>
+</head>
+
+<body>
+    <div id='content'>
+        <div id='message'>
+            <h2>The request is blocked.</h2>
+        </div>
+        <div id='errorref'>
+            <span>20250818T080213Z-166895f5c89r5bmthC1MIAmcec0000001p1g00000000yvx4            </span>
+        </div>
+    </div>
+</body>
+</html>
+
+	at com.mojang.authlib.minecraft.client.ObjectMapper.readValue(ObjectMapper.java:32) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:97) ~[authlib-4.0.43.jar:?]
+	... 21 more
+Caused by: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:395) ~[gson-2.10.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1124) ~[gson-2.10.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1034) ~[gson-2.10.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:969) ~[gson-2.10.jar:?]
+	at com.mojang.authlib.minecraft.client.ObjectMapper.readValue(ObjectMapper.java:30) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:97) ~[authlib-4.0.43.jar:?]
+	... 21 more
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393) ~[gson-2.10.jar:?]
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:384) ~[gson-2.10.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1124) ~[gson-2.10.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:1034) ~[gson-2.10.jar:?]
+	at com.google.gson.Gson.fromJson(Gson.java:969) ~[gson-2.10.jar:?]
+	at com.mojang.authlib.minecraft.client.ObjectMapper.readValue(ObjectMapper.java:30) ~[authlib-4.0.43.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:97) ~[authlib-4.0.43.jar:?]
+	... 21 more
+[04:02:23] [Render thread/INFO] (Minecraft) Loaded 6 advancements
+[04:02:45] [Render thread/INFO] (Minecraft) Loaded 13 advancements
+[04:02:50] [Render thread/INFO] (Minecraft) Loaded 17 advancements
+[04:03:05] [Render thread/INFO] (Minecraft) Loaded 24 advancements
+[04:03:06] [Render thread/INFO] (Minecraft) Loaded 28 advancements
+[04:04:07] [Render thread/INFO] (Minecraft) [System] [CHAT] Saved screenshot as 2025-08-18_04.04.06.png
+[04:04:08] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[04:04:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:overworld
+[04:04:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_end
+[04:04:08] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_nether
+[04:05:28] [Render thread/INFO] (Minecraft) Loaded 32 advancements
+[04:07:18] [Render thread/INFO] (Minecraft) Loaded 43 advancements
+[04:08:22] [Render thread/INFO] (Minecraft) Loaded 44 advancements
+[04:08:27] [Render thread/INFO] (Minecraft) Loaded 51 advancements
+[04:08:52] [Render thread/INFO] (Minecraft) Loaded 52 advancements
+[04:09:18] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[04:09:18] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:overworld
+[04:09:18] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_end
+[04:09:18] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_nether
+[04:09:41] [Render thread/INFO] (Minecraft) [System] [CHAT] Saved screenshot as 2025-08-18_04.09.40.png
+[04:10:14] [Render thread/INFO] (Minecraft) [System] [CHAT] Saved screenshot as 2025-08-18_04.10.14.png
+[04:10:15] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[04:10:16] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:overworld
+[04:10:16] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_end
+[04:10:16] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_nether
+[04:10:17] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[04:10:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:overworld
+[04:10:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_end
+[04:10:17] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[BUILD THE TOWN]'/minecraft:the_nether

@@ -137,6 +137,26 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.DIORITE_BRICK_SLAB.get(), "Diorite Brick Slab");
         build.add(EBBlocks.DIORITE_BRICK_WALL.get(), "Diorite Brick Wall");
 
+        build.add(EBBlocks.POLISHED_PRISMARINE.get(), "Polished Prismarine");
+        build.add(EBBlocks.POLISHED_PRISMARINE_STAIRS.get(), "Polished Prismarine Stairs");
+        build.add(EBBlocks.POLISHED_PRISMARINE_SLAB.get(), "Polished Prismarine Slab");
+        
+        build.add(EBBlocks.PRISMARINE_TILES.get(), "Prismarine Tiles");
+        build.add(EBBlocks.PRISMARINE_TILE_STAIRS.get(), "Prismarine Tile Stairs");
+        build.add(EBBlocks.PRISMARINE_TILE_SLAB.get(), "Prismarine Tile Slab");
+
+        build.add(EBBlocks.POLISHED_DARK_PRISMARINE.get(), "Polished Dark Prismarine");
+        build.add(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get(), "Polished Dark Prismarine Stairs");
+        build.add(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get(), "Polished Dark Prismarine Slab");
+
+        build.add(EBBlocks.DARK_PRISMARINE_BRICKS.get(), "Dark Prismarine Bricks");
+        build.add(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get(), "Dark Prismarine Brick Stairs");
+        build.add(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get(), "Dark Prismarine Brick Slab");
+        
+        build.add(EBBlocks.DARK_PRISMARINE_TILES.get(), "Dark Prismarine Tiles");
+        build.add(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get(), "Dark Prismarine Tile Stairs");
+        build.add(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get(), "Dark Prismarine Tile Slab");
+
         build.add(EBBlocks.KILN.get(), "Kiln");
 
         //ITEMS

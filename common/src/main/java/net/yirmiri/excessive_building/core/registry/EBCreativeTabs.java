@@ -5,6 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 import java.util.function.Supplier;
@@ -98,6 +99,41 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.ANDESITE_BRICK_SLAB.get());
                         entry.accept(EBBlocks.ANDESITE_BRICK_WALL.get());
 
+                        //PRISMARINE
+                        entry.accept(Blocks.PRISMARINE);
+                        entry.accept(Blocks.PRISMARINE_STAIRS);
+                        entry.accept(Blocks.PRISMARINE_SLAB);
+                        entry.accept(Blocks.PRISMARINE_WALL);
+
+                        entry.accept(EBBlocks.POLISHED_PRISMARINE.get());
+                        entry.accept(EBBlocks.POLISHED_PRISMARINE_STAIRS.get());
+                        entry.accept(EBBlocks.POLISHED_PRISMARINE_SLAB.get());
+                        
+                        entry.accept(Blocks.PRISMARINE_BRICKS);
+                        entry.accept(Blocks.PRISMARINE_BRICK_STAIRS);
+                        entry.accept(Blocks.PRISMARINE_BRICK_SLAB);
+
+                        entry.accept(EBBlocks.PRISMARINE_TILES.get());
+                        entry.accept(EBBlocks.PRISMARINE_TILE_STAIRS.get());
+                        entry.accept(EBBlocks.PRISMARINE_TILE_SLAB.get());
+
+                        //DARK PRISMARINE
+                        entry.accept(Blocks.DARK_PRISMARINE);
+                        entry.accept(Blocks.DARK_PRISMARINE_STAIRS);
+                        entry.accept(Blocks.DARK_PRISMARINE_SLAB);
+
+                        entry.accept(EBBlocks.POLISHED_DARK_PRISMARINE.get());
+                        entry.accept(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get());
+                        entry.accept(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get());
+                        
+                        entry.accept(EBBlocks.DARK_PRISMARINE_BRICKS.get());
+                        entry.accept(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get());
+
+                        entry.accept(EBBlocks.DARK_PRISMARINE_TILES.get());
+                        entry.accept(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get());
+                        entry.accept(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get());
+                        
                         //OAK WOOD
                         entry.accept(EBBlocks.ALCHEMY_SHELF.get());
 

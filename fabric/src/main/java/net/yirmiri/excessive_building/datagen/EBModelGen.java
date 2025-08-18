@@ -152,6 +152,26 @@ public class EBModelGen extends FabricModelProvider {
         createBookshelf(generator, EBBlocks.ALCHEMY_SHELF_VARIANT3.get(), Blocks.OAK_PLANKS);
         createBookshelf(generator, EBBlocks.ALCHEMY_SHELF_VARIANT4.get(), Blocks.OAK_PLANKS);
         createBookshelf(generator, EBBlocks.ALCHEMY_SHELF_VARIANT5.get(), Blocks.OAK_PLANKS);
+
+        BlockModelGenerators.BlockFamilyProvider polishedPrismarine = generator.family(EBBlocks.POLISHED_PRISMARINE.get());
+        polishedPrismarine.stairs(EBBlocks.POLISHED_PRISMARINE_STAIRS.get());
+        polishedPrismarine.slab(EBBlocks.POLISHED_PRISMARINE_SLAB.get());
+
+        BlockModelGenerators.BlockFamilyProvider prismarineTiles = generator.family(EBBlocks.PRISMARINE_TILES.get());
+        prismarineTiles.stairs(EBBlocks.PRISMARINE_TILE_STAIRS.get());
+        prismarineTiles.slab(EBBlocks.PRISMARINE_TILE_SLAB.get());
+
+        BlockModelGenerators.BlockFamilyProvider polishedDarkPrismarine = generator.family(EBBlocks.POLISHED_DARK_PRISMARINE.get());
+        polishedDarkPrismarine.stairs(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get());
+        polishedDarkPrismarine.slab(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get());
+
+        BlockModelGenerators.BlockFamilyProvider darkPrismarineBricks = generator.family(EBBlocks.DARK_PRISMARINE_BRICKS.get());
+        darkPrismarineBricks.stairs(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get());
+        darkPrismarineBricks.slab(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get());
+        
+        BlockModelGenerators.BlockFamilyProvider darkPrismarineTiles = generator.family(EBBlocks.DARK_PRISMARINE_TILES.get());
+        darkPrismarineTiles.stairs(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get());
+        darkPrismarineTiles.slab(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get());
     }
 
     @Override

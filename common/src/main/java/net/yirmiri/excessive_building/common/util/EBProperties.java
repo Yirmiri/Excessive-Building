@@ -33,6 +33,8 @@ public class EBProperties {
         public static final BlockBehaviour.Properties POLISHED_GRANITE = BlockBehaviour.Properties.copy(Blocks.POLISHED_GRANITE);
         public static final BlockBehaviour.Properties POLISHED_ANDESITE = BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE);
         public static final BlockBehaviour.Properties POLISHED_DIORITE = BlockBehaviour.Properties.copy(Blocks.POLISHED_DIORITE);
+        public static final BlockBehaviour.Properties PRISMARINE = BlockBehaviour.Properties.copy(Blocks.PRISMARINE);
+        public static final BlockBehaviour.Properties DARK_PRISMARINE = BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE);
 
         public static final BlockBehaviour.Properties ELYERIUM = BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE).strength(6.0F, 12.0F);
         public static final BlockBehaviour.Properties POLISHED_ELYERIUM = BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE).strength(6.0F, 12.0F);
