@@ -4,6 +4,7 @@ import net.azurune.runiclib.core.platform.Services;
 import net.minecraft.world.item.BoatItem;
 import net.minecraft.world.item.Item;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.common.item.BookOfFormationsItem;
 import net.yirmiri.excessive_building.common.item.RadianceMalletItem;
 import net.yirmiri.excessive_building.common.util.EBMaterials;
 import net.yirmiri.excessive_building.common.util.EBProperties;
@@ -18,7 +19,8 @@ public class EBItems {
     public static final Supplier<Item> RADIANCE_CRYSTAL = register("radiance_crystal", () -> new Item(EBProperties.ItemP.UNCOMMON));
     public static final Supplier<Item> RADIANCE_INGOT = register("radiance_ingot", () -> new Item(EBProperties.ItemP.UNCOMMON));
     public static final Supplier<Item> RADIANCE_MALLET = register("radiance_mallet", () -> new RadianceMalletItem(2, -3.0F, EBMaterials.RADIANCE_MALLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.UNCOMMON));
-    public static final Supplier<Item> RADIANCE_GAUNTLET = register("radiance_gauntlet", () -> new RadianceGauntletItem(1, -2.5F, EBMaterials.RADIANCE_GAUNTLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.RADIANCE_GAUNTLET));
+    public static final Supplier<Item> RADIANCE_GAUNTLET = register("radiance_gauntlet", () -> new RadianceGauntletItem(1, -2.5F, EBMaterials.RADIANCE_GAUNTLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.RADIANCE_TOOL));
+    public static final Supplier<Item> BOOK_OF_FORMATION = register("book_of_formation", () -> new BookOfFormationsItem(EBProperties.ItemP.RADIANCE_BOOK));
 
     //ANCIENT
     public static final Supplier<Item> ANCIENT_BOAT = register("ancient_boat", () -> new BoatItem(false, EBUtil.ANCIENT_BOAT, EBProperties.ItemP.GENERIC.stacksTo(1)));

@@ -521,11 +521,19 @@ public class EBRecipeGen extends FabricRecipeProvider {
         stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get(), EBBlocks.DARK_PRISMARINE_BRICKS.get());
         stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get(), EBBlocks.DARK_PRISMARINE_BRICKS.get(), 2);
 
+        createWendysFourForFourMeal(Items.PRISMARINE, EBBlocks.HECTALITE.get().asItem(), Items.PRISMARINE_CRYSTALS);
+
         //==========================ANCIENT WOOD==========================
         //TODO: boat recipes
 
         //==========================OTHER==========================
         createShelf(EBBlocks.ALCHEMY_SHELF.get().asItem(), Blocks.OAK_PLANKS.asItem(), Items.GLASS_BOTTLE);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.BOOK_OF_FORMATION.get(), 1)
+                .define('#', EBItems.RADIANCE_CRYSTAL.get()).define('@', Items.ENCHANTED_BOOK).define('!', Items.ICE)
+                .pattern("#!#")
+                .pattern("!@!")
+                .pattern("#!#");
 
         //====================================================
         stonecutterRecipeTreeGenerator.generateRecipes(consumer);

@@ -172,6 +172,13 @@ public class EBModelGen extends FabricModelProvider {
         BlockModelGenerators.BlockFamilyProvider darkPrismarineTiles = generator.family(EBBlocks.DARK_PRISMARINE_TILES.get());
         darkPrismarineTiles.stairs(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get());
         darkPrismarineTiles.slab(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get());
+
+        generator.createAmethystCluster(EBBlocks.PRISMARINE_CLUSTER.get());
+        generator.createAmethystCluster(EBBlocks.LARGE_PRISMARINE_BUD.get());
+        generator.createAmethystCluster(EBBlocks.MEDIUM_PRISMARINE_BUD.get());
+        generator.createAmethystCluster(EBBlocks.SMALL_PRISMARINE_BUD.get());
+
+        createCrystalLantern(generator, EBBlocks.ICE_PILLAR.get());
     }
 
     @Override
@@ -181,6 +188,7 @@ public class EBModelGen extends FabricModelProvider {
         generator.generateFlatItem(EBItems.RADIANCE_MALLET.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         generator.generateFlatItem(EBItems.ANCIENT_BOAT.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.ANCIENT_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.BOOK_OF_FORMATION.get(), ModelTemplates.FLAT_ITEM);
     }
 
     //GENERATORS

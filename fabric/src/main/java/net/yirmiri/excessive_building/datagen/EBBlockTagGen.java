@@ -25,6 +25,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendBeaconBaseBlocks();
         appendEnchantmentPowerProvider();
         appendMineableWithAxe();
+        appendReplaceable();
     }
 
     private void appendMineableWithMallet() {
@@ -131,6 +132,13 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     private void appendMineableWithPickaxe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(EBBlocks.ICE_PILLAR.get())
+
+                .add(EBBlocks.PRISMARINE_CLUSTER.get())
+                .add(EBBlocks.LARGE_PRISMARINE_BUD.get())
+                .add(EBBlocks.SMALL_PRISMARINE_BUD.get())
+                .add(EBBlocks.MEDIUM_PRISMARINE_BUD.get())
+
                 .add(EBBlocks.POLISHED_PRISMARINE.get())
                 .add(EBBlocks.POLISHED_PRISMARINE_STAIRS.get())
                 .add(EBBlocks.POLISHED_PRISMARINE_SLAB.get())
@@ -270,6 +278,12 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.GRANITE_BRICK_WALL.get())
                 .add(EBBlocks.DIORITE_BRICK_WALL.get())
                 .add(EBBlocks.ANDESITE_BRICK_WALL.get())
+        ;
+    }
+
+    private void appendReplaceable() {
+        getOrCreateTagBuilder(BlockTags.REPLACEABLE)
+                .add(EBBlocks.ICE_PILLAR.get())
         ;
     }
 

@@ -157,13 +157,21 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get(), "Dark Prismarine Tile Stairs");
         build.add(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get(), "Dark Prismarine Tile Slab");
 
+        build.add(EBBlocks.PRISMARINE_CLUSTER.get(), "Prismarine Cluster");
+        build.add(EBBlocks.LARGE_PRISMARINE_BUD.get(), "Large Prismarine Bud");
+        build.add(EBBlocks.MEDIUM_PRISMARINE_BUD.get(), "Medium Prismarine Bud");
+        build.add(EBBlocks.SMALL_PRISMARINE_BUD.get(), "Small Prismarine Bud");
+
         build.add(EBBlocks.KILN.get(), "Kiln");
+        build.add(EBBlocks.ICE_PILLAR.get(), "Ice Pillar");
 
         //ITEMS
         build.add(EBItems.RADIANCE_CRYSTAL.get(), "Radiance Crystal");
         build.add(EBItems.RADIANCE_INGOT.get(), "Radiance Ingot");
         build.add(EBItems.RADIANCE_GAUNTLET.get(), "Radiance Gauntlet");
         build.add(EBItems.RADIANCE_MALLET.get(), "Radiance Mallet");
+        build.add(EBItems.BOOK_OF_FORMATION.get(), "Book of Formation");
+
         build.add(EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
         build.add(EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");
 

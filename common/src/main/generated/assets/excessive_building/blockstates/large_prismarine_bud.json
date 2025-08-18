@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "excessive_building:block/large_prismarine_bud",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "excessive_building:block/large_prismarine_bud",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "excessive_building:block/large_prismarine_bud",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "excessive_building:block/large_prismarine_bud",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "excessive_building:block/large_prismarine_bud"
+    },
+    "facing=west": {
+      "model": "excessive_building:block/large_prismarine_bud",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

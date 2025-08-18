@@ -23,6 +23,7 @@ public class EBProperties {
         public static final BlockBehaviour.Properties INDESTRUCTIBLE = BlockBehaviour.Properties.copy(Blocks.BEDROCK);
         public static final BlockBehaviour.Properties FROSTED_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS);
         public static final BlockBehaviour.Properties KILN = BlockBehaviour.Properties.copy(Blocks.FURNACE).lightLevel(litBlockEmission(3, 13));
+        public static final BlockBehaviour.Properties ICE = BlockBehaviour.Properties.copy(Blocks.ICE);
 
         //WOOD
         public static final BlockBehaviour.Properties PLANKS = BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS);
@@ -60,6 +61,10 @@ public class EBProperties {
 
         //CRYSTALS
         public static final BlockBehaviour.Properties AMETHYST_BRICKS = BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK);
+        public static final BlockBehaviour.Properties CRYSTAL_CLUSTER = BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER);
+        public static final BlockBehaviour.Properties SMALL_BUD = BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD);
+        public static final BlockBehaviour.Properties MEDIUM_BUD = BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD);
+        public static final BlockBehaviour.Properties LARGE_BUD = BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD);
         public static final BlockBehaviour.Properties CRYSTAL_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion();
         public static final BlockBehaviour.Properties CRYSTAL_LANTERN = BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN);
 
@@ -73,7 +78,8 @@ public class EBProperties {
         //MISC
         public static final Item.Properties GENERIC = new Item.Properties();
         public static final Item.Properties UNCOMMON = new Item.Properties().rarity(Rarity.UNCOMMON);
-        public static final Item.Properties RADIANCE_GAUNTLET = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1);
+        public static final Item.Properties RADIANCE_TOOL = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1);
+        public static final Item.Properties RADIANCE_BOOK = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1).durability(128);
     }
 
     public static class Food {

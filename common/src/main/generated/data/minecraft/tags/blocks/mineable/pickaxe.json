@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+    "excessive_building:ice_pillar",
+    "excessive_building:prismarine_cluster",
+    "excessive_building:large_prismarine_bud",
+    "excessive_building:small_prismarine_bud",
+    "excessive_building:medium_prismarine_bud",
     "excessive_building:polished_prismarine",
     "excessive_building:polished_prismarine_stairs",
     "excessive_building:polished_prismarine_slab",

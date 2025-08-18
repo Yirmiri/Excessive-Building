@@ -133,6 +133,13 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.DARK_PRISMARINE_TILES.get());
                         entry.accept(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get());
                         entry.accept(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get());
+
+                        //CRYSTAL PRISMARINE
+                        entry.accept(Blocks.SEA_LANTERN);
+                        entry.accept(EBBlocks.PRISMARINE_CLUSTER.get());
+                        entry.accept(EBBlocks.LARGE_PRISMARINE_BUD.get());
+                        entry.accept(EBBlocks.MEDIUM_PRISMARINE_BUD.get());
+                        entry.accept(EBBlocks.SMALL_PRISMARINE_BUD.get());
                         
                         //OAK WOOD
                         entry.accept(EBBlocks.ALCHEMY_SHELF.get());
@@ -183,6 +190,7 @@ public class EBCreativeTabs {
                         entry.accept(EBItems.RADIANCE_INGOT.get());
                         entry.accept(EBItems.RADIANCE_MALLET.get());
                         entry.accept(EBItems.RADIANCE_GAUNTLET.get());
+                        entry.accept(EBItems.BOOK_OF_FORMATION.get());
 
                         //FUNCTION
                         entry.accept(EBBlocks.KILN.get());

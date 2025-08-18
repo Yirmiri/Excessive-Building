@@ -2,15 +2,20 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
@@ -169,6 +174,11 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         dropSelf(EBBlocks.DARK_PRISMARINE_TILES.get());
         dropSelf(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get());
         add(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get(), createSlabItemTable(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get()));
+
+        add(EBBlocks.PRISMARINE_CLUSTER.get(), (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.PRISMARINE_CRYSTALS).apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)).when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES))).otherwise(this.applyExplosionDecay(block, LootItem.lootTableItem(Items.PRISMARINE_CRYSTALS).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))))));
+        dropWhenSilkTouch(EBBlocks.SMALL_PRISMARINE_BUD.get());
+        dropWhenSilkTouch(EBBlocks.MEDIUM_PRISMARINE_BUD.get());
+        dropWhenSilkTouch(EBBlocks.LARGE_PRISMARINE_BUD.get());
     }
 
     private void addDyedFrostedGlassDrops() {
