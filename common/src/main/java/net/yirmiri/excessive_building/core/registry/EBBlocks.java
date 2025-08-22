@@ -1,9 +1,12 @@
 package net.yirmiri.excessive_building.core.registry;
 
+import net.azurune.runiclib.common.publicized.PublicButtonBlock;
+import net.azurune.runiclib.common.publicized.PublicPressurePlateBlock;
 import net.azurune.runiclib.common.publicized.PublicStairBlock;
 import net.azurune.runiclib.core.platform.Services;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.AmethystGlassBlock;
 import net.yirmiri.excessive_building.common.block.CloneOtherBlock;
@@ -219,6 +222,19 @@ public class EBBlocks {
     public static final Supplier<Block> POLISHED_DARK_PRISMARINE = register("polished_dark_prismarine", () -> new Block(EBProperties.BlockP.DARK_PRISMARINE), true);
     public static final Supplier<Block> POLISHED_DARK_PRISMARINE_STAIRS = register("polished_dark_prismarine_stairs", () -> new PublicStairBlock(POLISHED_DARK_PRISMARINE.get().defaultBlockState(), EBProperties.BlockP.DARK_PRISMARINE), true);
     public static final Supplier<Block> POLISHED_DARK_PRISMARINE_SLAB = register("polished_dark_prismarine_slab", () -> new SlabBlock(EBProperties.BlockP.DARK_PRISMARINE), true);
+
+    //ANCIENT WOOD
+    public static final Supplier<Block> ANCIENT_LOG = register("ancient_log", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
+    public static final Supplier<Block> STRIPPED_ANCIENT_LOG = register("stripped_ancient_log", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
+    public static final Supplier<Block> ANCIENT_WOOD = register("ancient_wood", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
+    public static final Supplier<Block> STRIPPED_ANCIENT_WOOD = register("stripped_ancient_wood", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
+    public static final Supplier<Block> ANCIENT_PLANKS = register("ancient_planks", () -> new Block(EBProperties.BlockP.PLANKS), true);
+    public static final Supplier<Block> ANCIENT_STAIRS = register("ancient_stairs", () -> new PublicStairBlock(ANCIENT_PLANKS.get().defaultBlockState(), EBProperties.BlockP.PLANKS), true);
+    public static final Supplier<Block> ANCIENT_SLAB = register("ancient_slab", () -> new SlabBlock(EBProperties.BlockP.PLANKS), true);
+    public static final Supplier<Block> ANCIENT_FENCE = register("ancient_fence", () -> new FenceBlock(EBProperties.BlockP.FENCE), true);
+    public static final Supplier<Block> ANCIENT_FENCE_GATE = register("ancient_fence_gate", () -> new FenceGateBlock(EBProperties.BlockP.GATE, EBRegistries.ANCIENT), true);
+    public static final Supplier<Block> ANCIENT_PRESSURE_PLATE = register("ancient_pressure_plate", () -> new PublicPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, EBProperties.BlockP.PLANKS, BlockSetType.OAK), true);
+    public static final Supplier<Block> ANCIENT_BUTTON = register("ancient_button", () -> new PublicButtonBlock(EBProperties.BlockP.PLANKS, BlockSetType.OAK, 30, true), true);
 
     //MISC
     public static final Supplier<Block> KILN = register("kiln", () -> new KilnBlock(EBProperties.BlockP.KILN), true);

@@ -4,10 +4,14 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CaveVines;
+import net.minecraft.world.level.block.CaveVinesBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.ToIntFunction;
 
@@ -26,7 +30,14 @@ public class EBProperties {
         public static final BlockBehaviour.Properties ICE = BlockBehaviour.Properties.copy(Blocks.ICE);
 
         //WOOD
+        public static final BlockBehaviour.Properties LOG = BlockBehaviour.Properties.copy(Blocks.OAK_LOG);
         public static final BlockBehaviour.Properties PLANKS = BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS);
+        public static final BlockBehaviour.Properties FENCE = BlockBehaviour.Properties.copy(Blocks.OAK_FENCE);
+        public static final BlockBehaviour.Properties GATE = BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE);
+        public static final BlockBehaviour.Properties PLATE = BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE);
+        public static final BlockBehaviour.Properties BUTTON = BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON);
+        public static final BlockBehaviour.Properties LEAVES = BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES);
+        public static final BlockBehaviour.Properties HANG_VINES = BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY);
         public static final BlockBehaviour.Properties BOOKSHELF = BlockBehaviour.Properties.copy(Blocks.BOOKSHELF);
 
         //STONES
