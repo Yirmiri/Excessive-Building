@@ -193,7 +193,7 @@ public class EBCreativeTabs {
                         entry.accept(EBItems.BOOK_OF_FORMATION.get());
 
                         //FUNCTION
-                        entry.accept(EBBlocks.KILN.get());
+                        //entry.accept(EBBlocks.KILN.get());
                     }).build());
 
     public static void loadCreativeTabs() {

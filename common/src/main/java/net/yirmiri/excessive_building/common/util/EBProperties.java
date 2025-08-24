@@ -37,6 +37,9 @@ public class EBProperties {
         public static final BlockBehaviour.Properties PLATE = BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE);
         public static final BlockBehaviour.Properties BUTTON = BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON);
         public static final BlockBehaviour.Properties LEAVES = BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES);
+        public static final BlockBehaviour.Properties GLOW_LEAVES = BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).lightLevel(s -> 7);
+        public static final BlockBehaviour.Properties GLOW_SAPLING = BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).lightLevel(s -> 3);
+        public static final BlockBehaviour.Properties GLOW_SAPLING_POT = BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING).lightLevel(s -> 3);
         public static final BlockBehaviour.Properties HANG_VINES = BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY);
         public static final BlockBehaviour.Properties BOOKSHELF = BlockBehaviour.Properties.copy(Blocks.BOOKSHELF);
 

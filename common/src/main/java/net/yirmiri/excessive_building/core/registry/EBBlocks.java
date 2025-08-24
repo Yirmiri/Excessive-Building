@@ -2,10 +2,12 @@ package net.yirmiri.excessive_building.core.registry;
 
 import net.azurune.runiclib.common.publicized.PublicButtonBlock;
 import net.azurune.runiclib.common.publicized.PublicPressurePlateBlock;
+import net.azurune.runiclib.common.publicized.PublicSaplingBlock;
 import net.azurune.runiclib.common.publicized.PublicStairBlock;
 import net.azurune.runiclib.core.platform.Services;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.AmethystGlassBlock;
@@ -235,6 +237,9 @@ public class EBBlocks {
     public static final Supplier<Block> ANCIENT_FENCE_GATE = register("ancient_fence_gate", () -> new FenceGateBlock(EBProperties.BlockP.GATE, EBRegistries.ANCIENT), true);
     public static final Supplier<Block> ANCIENT_PRESSURE_PLATE = register("ancient_pressure_plate", () -> new PublicPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, EBProperties.BlockP.PLANKS, BlockSetType.OAK), true);
     public static final Supplier<Block> ANCIENT_BUTTON = register("ancient_button", () -> new PublicButtonBlock(EBProperties.BlockP.PLANKS, BlockSetType.OAK, 30, true), true);
+    public static final Supplier<Block> ANCIENT_LEAVES = register("ancient_leaves", () -> new LeavesBlock(EBProperties.BlockP.GLOW_LEAVES), true);
+    public static final Supplier<Block> ANCIENT_SAPLING = register("ancient_sapling", () -> new PublicSaplingBlock(new OakTreeGrower(), EBProperties.BlockP.GLOW_LEAVES), true);
+    public static final Supplier<Block> POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", () -> new FlowerPotBlock(ANCIENT_SAPLING.get(), EBProperties.BlockP.GLOW_LEAVES), true);
 
     //MISC
     public static final Supplier<Block> KILN = register("kiln", () -> new KilnBlock(EBProperties.BlockP.KILN), true);
