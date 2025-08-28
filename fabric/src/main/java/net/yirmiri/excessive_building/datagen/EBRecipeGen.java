@@ -535,6 +535,11 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("!@!")
                 .pattern("#!#");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBBlocks.ZEUS_EPIC_BLOCK.get(), 1)
+                .define('#', Items.PURPLE_DYE)
+                .pattern("## ")
+                .pattern(" ##");
+
         //====================================================
         stonecutterRecipeTreeGenerator.generateRecipes(consumer);
     }

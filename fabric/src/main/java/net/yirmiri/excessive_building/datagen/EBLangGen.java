@@ -164,6 +164,7 @@ public class EBLangGen extends FabricLanguageProvider {
 
         build.add(EBBlocks.KILN.get(), "Kiln");
         build.add(EBBlocks.ICE_PILLAR.get(), "Ice Pillar");
+        build.add(EBBlocks.ZEUS_EPIC_BLOCK.get(), "Zeus' Epic Block");
 
         //ITEMS
         build.add(EBItems.RADIANCE_CRYSTAL.get(), "Radiance Crystal");
@@ -176,6 +177,7 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");
 
         //YAPPING TOOLTIPS
+        addYT(build, EBBlocks.ZEUS_EPIC_BLOCK.get(), "The most powerful block of them all... its the best block objectively.");
         addYT(build, EBBlocks.ARIDITE.get(), "A sedimentary rock that can be found generating in cluster under deserts.");
     }
 

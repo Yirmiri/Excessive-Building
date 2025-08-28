@@ -11,7 +11,8 @@
     "ChestBoatMixin",
     "EfficiencyEnchantmentMixin",
     "EnchantmentHelperMixin",
-    "ItemMixin"
+    "ItemMixin",
+    "RarityMixin"
   ],
   "client": [
     "MinecraftMixin",

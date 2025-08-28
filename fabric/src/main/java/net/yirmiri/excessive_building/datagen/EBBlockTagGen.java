@@ -132,6 +132,7 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     private void appendMineableWithPickaxe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(EBBlocks.ZEUS_EPIC_BLOCK.get())
                 .add(EBBlocks.ICE_PILLAR.get())
 
                 .add(EBBlocks.PRISMARINE_CLUSTER.get())

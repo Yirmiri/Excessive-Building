@@ -243,6 +243,7 @@ public class EBBlocks {
 
     //MISC
     public static final Supplier<Block> KILN = register("kiln", () -> new KilnBlock(EBProperties.BlockP.KILN), true);
+    public static final Supplier<Block> ZEUS_EPIC_BLOCK = register("zeus_epic_block", () -> new RotatedPillarBlock(EBProperties.BlockP.ZEUS), true);
 
     private static Supplier<Block> register(String id, Supplier<Block> block, boolean hasItem) {
         return Services.REGISTRY.registerBlock(ExcessiveBuilding.MOD_ID, id, block, hasItem);

@@ -179,6 +179,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         dropWhenSilkTouch(EBBlocks.SMALL_PRISMARINE_BUD.get());
         dropWhenSilkTouch(EBBlocks.MEDIUM_PRISMARINE_BUD.get());
         dropWhenSilkTouch(EBBlocks.LARGE_PRISMARINE_BUD.get());
+        dropSelf(EBBlocks.ZEUS_EPIC_BLOCK.get());
     }
 
     private void addDyedFrostedGlassDrops() {

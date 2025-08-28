@@ -179,6 +179,7 @@ public class EBModelGen extends FabricModelProvider {
         generator.createAmethystCluster(EBBlocks.SMALL_PRISMARINE_BUD.get());
 
         createCrystalLantern(generator, EBBlocks.ICE_PILLAR.get());
+        generator.createTrivialCube(EBBlocks.ZEUS_EPIC_BLOCK.get());
     }
 
     @Override
@@ -189,6 +190,10 @@ public class EBModelGen extends FabricModelProvider {
         generator.generateFlatItem(EBItems.ANCIENT_BOAT.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.ANCIENT_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.BOOK_OF_FORMATION.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.PRISMARINE_CLUSTER.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.LARGE_PRISMARINE_BUD.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.MEDIUM_PRISMARINE_BUD.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.SMALL_PRISMARINE_BUD.get().asItem(), ModelTemplates.FLAT_ITEM);
     }
 
     //GENERATORS

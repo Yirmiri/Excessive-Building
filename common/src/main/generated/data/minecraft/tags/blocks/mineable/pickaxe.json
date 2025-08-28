@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "excessive_building:zeus_epic_block",
     "excessive_building:ice_pillar",
     "excessive_building:prismarine_cluster",
     "excessive_building:large_prismarine_bud",

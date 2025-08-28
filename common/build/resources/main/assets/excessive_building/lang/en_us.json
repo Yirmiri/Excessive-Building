@@ -124,6 +124,7 @@
   "block.excessive_building.small_prismarine_bud": "Small Prismarine Bud",
   "block.excessive_building.white_stained_frosted_glass": "White Stained Frosted Glass",
   "block.excessive_building.yellow_stained_frosted_glass": "Yellow Stained Frosted Glass",
+  "block.excessive_building.zeus_epic_block": "Zeus' Epic Block",
   "excessive_building.container.kiln": "Kiln",
   "item.excessive_building.ancient_boat": "Ancient Boat",
   "item.excessive_building.ancient_chest_boat": "Ancient Chest Boat",
@@ -139,5 +140,6 @@
   "itemgroup.excessive_building_vertical_stairs": "Excessive Building: Vertical Stairs",
   "message.item.radiance_gauntlet": "Gauntlet power level:",
   "tooltip.excessive_building.malleable": "Has mallet variants",
-  "yapping_tooltips.block.excessive_building.aridite.desc": "A sedimentary rock that can be found generating in cluster under deserts."
+  "yapping_tooltips.block.excessive_building.aridite.desc": "A sedimentary rock that can be found generating in cluster under deserts.",
+  "yapping_tooltips.block.excessive_building.zeus_epic_block.desc": "The most powerful block of them all... its the best block objectively."
 }

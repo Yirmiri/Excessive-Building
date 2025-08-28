@@ -17,7 +17,6 @@ import java.util.List;
 
 @Mixin(Item.class)
 public abstract class ItemMixin {
-
     @Inject(at = @At("HEAD"), method = "appendHoverText")
     private void excessiveBuilding$appendTooltip(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag context, CallbackInfo ci) {
         if (stack.is(EBTags.ItemT.HAS_MALLET_VARIANTS)) {

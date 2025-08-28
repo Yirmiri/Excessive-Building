@@ -28,6 +28,7 @@ public class EBProperties {
         public static final BlockBehaviour.Properties FROSTED_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS);
         public static final BlockBehaviour.Properties KILN = BlockBehaviour.Properties.copy(Blocks.FURNACE).lightLevel(litBlockEmission(3, 13));
         public static final BlockBehaviour.Properties ICE = BlockBehaviour.Properties.copy(Blocks.ICE);
+        public static final BlockBehaviour.Properties ZEUS = BlockBehaviour.Properties.copy(Blocks.STONE).strength(6.0F, 12.0F).mapColor(MapColor.COLOR_PURPLE);
 
         //WOOD
         public static final BlockBehaviour.Properties LOG = BlockBehaviour.Properties.copy(Blocks.OAK_LOG);
@@ -92,6 +93,8 @@ public class EBProperties {
         //MISC
         public static final Item.Properties GENERIC = new Item.Properties();
         public static final Item.Properties UNCOMMON = new Item.Properties().rarity(Rarity.UNCOMMON);
+        public static final Item.Properties RARE = new Item.Properties().rarity(Rarity.RARE);
+        public static final Item.Properties EPIC = new Item.Properties().rarity(Rarity.EPIC);
         public static final Item.Properties RADIANCE_TOOL = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1);
         public static final Item.Properties RADIANCE_BOOK = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1).durability(128);
     }
