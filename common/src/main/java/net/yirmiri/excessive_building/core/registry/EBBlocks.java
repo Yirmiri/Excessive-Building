@@ -2,6 +2,8 @@ package net.yirmiri.excessive_building.core.registry;
 
 import net.azurune.runiclib.common.publicized.*;
 import net.azurune.runiclib.core.platform.Services;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.OakTreeGrower;
@@ -12,6 +14,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.*;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 import net.yirmiri.excessive_building.common.util.blockfamilycreator.BlockFamilyCreator;
+import net.yirmiri.excessive_building.common.worldgen.tree.AncientTreeGrower;
 
 import java.util.*;
 import java.util.function.Supplier;
@@ -231,10 +234,10 @@ public class EBBlocks {
             .fence(true).fenceGate(EBRegistries.ANCIENT)
             .button(EBRegistries.ANCIENT.setType(), true, false, 15, true)
             .pressurePlate(PressurePlateBlock.Sensitivity.EVERYTHING, true, false, EBRegistries.ANCIENT.setType())
-            .glowLeaves(SoundType.CHERRY_LEAVES, false)
+            .glowLeaves(ParticleTypes.CRIMSON_SPORE, SoundType.CHERRY_LEAVES, false)
             ;
 
-    public static final Supplier<Block> ANCIENT_SAPLING = register("ancient_sapling", () -> new PublicSaplingBlock(new OakTreeGrower(), EBProperties.BlockP.GLOW_SAPLING), true);
+    public static final Supplier<Block> ANCIENT_SAPLING = register("ancient_sapling", () -> new PublicSaplingBlock(new AncientTreeGrower(), EBProperties.BlockP.GLOW_SAPLING), true);
     public static final Supplier<Block> POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", () -> new FlowerPotBlock(ANCIENT_SAPLING.get(), EBProperties.BlockP.GLOW_SAPLING_POT), false);
     public static final Supplier<Block> ANCIENT_VINES = register("ancient_vines", () -> new AncientVinesBlock(EBProperties.BlockP.ANCIENT_VINES), true);
     public static final Supplier<Block> ANCIENT_VINES_PLANT = register("ancient_vines_plant", () -> new AncientVinesPlantBlock(EBProperties.BlockP.ANCIENT_VINES_PLANT), false);

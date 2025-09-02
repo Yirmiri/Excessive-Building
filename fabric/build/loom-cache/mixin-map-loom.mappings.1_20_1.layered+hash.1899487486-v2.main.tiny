@@ -2,8 +2,11 @@ v1	named	intermediary
 FIELD	net/yirmiri/excessive_building/core/mixin/BoatTypeMixin	[Lnet/minecraft/world/entity/vehicle/Boat$Type;	$VALUES	field_7724
 FIELD	net/yirmiri/excessive_building/core/mixin/BoatTypeMixin	Lnet/minecraft/util/StringRepresentable$EnumCodec;	CODEC	field_41599
 FIELD	net/yirmiri/excessive_building/core/mixin/BoatTypeMixin	Ljava/util/function/IntFunction;	BY_ID	field_41675
+FIELD	net/yirmiri/excessive_building/core/mixin/GrowingPlantBlockMixin	Lnet/minecraft/core/Direction;	growthDirection	field_22507
 FIELD	net/yirmiri/excessive_building/core/mixin/MinecraftMixin	I	rightClickDelay	field_1752
 FIELD	net/yirmiri/excessive_building/core/mixin/MinecraftMixin	Lnet/minecraft/client/player/LocalPlayer;	player	field_1724
 METHOD	net/yirmiri/excessive_building/core/mixin/BoatMixin	()Ljava/lang/Object;	getVariant	method_47827
 METHOD	net/yirmiri/excessive_building/core/mixin/client/ItemRendererMixin	()Lnet/minecraft/client/renderer/ItemModelShaper;	getItemModelShaper	method_4012
 METHOD	net/yirmiri/excessive_building/core/mixin/client/ModelBakeryMixin	(Lnet/minecraft/client/resources/model/ModelResourceLocation;)V	loadTopLevel	method_4727
+METHOD	net/yirmiri/excessive_building/core/mixin/GrowingPlantBlockMixin	()Lnet/minecraft/world/level/block/GrowingPlantHeadBlock;	getHeadBlock	method_24945
+METHOD	net/yirmiri/excessive_building/core/mixin/GrowingPlantBlockMixin	()Lnet/minecraft/world/level/block/Block;	getBodyBlock	method_24946

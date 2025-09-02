@@ -2,6 +2,7 @@ package net.yirmiri.excessive_building.common.util.blockfamilycreator;
 
 import net.azurune.runiclib.common.publicized.*;
 import net.azurune.runiclib.core.platform.Services;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.yirmiri.excessive_building.common.block.FallingLeavesBlock;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -317,8 +319,8 @@ public class BlockFamilyCreator {
         return this;
     }
 
-    public BlockFamilyCreator glowLeaves(SoundType sounds, boolean tint) {
-        Supplier<Block> block = registerBlock(name + "_leaves", Mineables.HOE, MinMiningToolTier.NONE, () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).lightLevel(s -> 7).sound(sounds)));
+    public BlockFamilyCreator glowLeaves(SimpleParticleType particle, SoundType sounds, boolean tint) {
+        Supplier<Block> block = registerBlock(name + "_leaves", Mineables.HOE, MinMiningToolTier.NONE, () -> new FallingLeavesBlock(particle, BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).lightLevel(s -> 7).sound(sounds)));
         LEAVES.add(block);
         if (tint) {
             FOLIAGE_TINTED.add(block);

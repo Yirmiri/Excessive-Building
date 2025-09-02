@@ -3,6 +3,7 @@ package net.yirmiri.excessive_building;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -19,9 +21,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.yirmiri.excessive_building.common.particle.FallingLeavesParticle;
 import net.yirmiri.excessive_building.common.util.BlockTransmutation;
 import net.yirmiri.excessive_building.common.util.EBUtil;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBParticles;
 
 @Mod(ExcessiveBuilding.MOD_ID)
 public class ForgeExcessiveBuilding {
@@ -33,6 +37,12 @@ public class ForgeExcessiveBuilding {
         eventBus.addListener(this::clientSetup);
         eventBus.addListener(this::onRegisterReloadListeners);
         eventBus.addListener(this::playerRightClickInteractEvent);
+        eventBus.addListener(this::onRegisterParticles);
+    }
+
+    @SubscribeEvent
+    public void onRegisterParticles(RegisterParticleProvidersEvent event) {
+        //event.registerSpriteSet((SimpleParticleType) EBParticles.ANCIENT.get(), FallingLeavesParticle.Provider::new);
     }
 
     @SubscribeEvent
