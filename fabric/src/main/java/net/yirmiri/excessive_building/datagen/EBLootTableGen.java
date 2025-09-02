@@ -2,6 +2,8 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
@@ -9,6 +11,7 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
@@ -18,12 +21,30 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
+import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.common.util.EBUtil;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
+import java.util.ArrayList;
+
 public class EBLootTableGen extends FabricBlockLootTableProvider {
+    public static final float[] LEAVES_STICK_DROP_CHANCE = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
+    public static final float[] SAPLING_DROP_CHANCE = new float[]{0.01F, 0.05F, 0.08F, 0.1F};
+
     public EBLootTableGen(FabricDataOutput dataOutput) {
         super(dataOutput);
+    }
+
+    public static final ArrayList<Block> usedBlocks = new ArrayList<>();
+
+    @Override
+    public void add(Block block, LootTable.Builder lootTable) {
+        if(usedBlocks.contains(block)) {
+            return;
+        }
+        super.add(block, lootTable);
+        usedBlocks.add(block);
     }
 
     @Override
@@ -180,6 +201,29 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         dropWhenSilkTouch(EBBlocks.MEDIUM_PRISMARINE_BUD.get());
         dropWhenSilkTouch(EBBlocks.LARGE_PRISMARINE_BUD.get());
         dropSelf(EBBlocks.ZEUS_EPIC_BLOCK.get());
+
+        add(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_leaves").get(),
+                createLeavesDrops(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_leaves").get(), EBBlocks.ANCIENT_SAPLING.get(), SAPLING_DROP_CHANCE));
+
+        dropPottedContents(EBBlocks.POTTED_ANCIENT_SAPLING.get());
+
+        add(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_door").get(),
+                createDoorTable(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_door").get()));
+
+        addNetherVinesDropTable(EBBlocks.ANCIENT_VINES.get(), EBBlocks.ANCIENT_VINES_PLANT.get());
+
+        //USED
+        usedBlocks.add(EBBlocks.BOOKSHELF_VARIANT1.get());
+        usedBlocks.add(EBBlocks.BOOKSHELF_VARIANT2.get());
+        usedBlocks.add(EBBlocks.BOOKSHELF_VARIANT3.get());
+        usedBlocks.add(EBBlocks.BOOKSHELF_VARIANT4.get());
+        usedBlocks.add(EBBlocks.BOOKSHELF_VARIANT5.get());
+
+        for(ResourceLocation id : EBUtil.allBlockIdsInNamespace(ExcessiveBuilding.MOD_ID)) {
+            Block block = BuiltInRegistries.BLOCK.get(id);
+            if(usedBlocks.contains(block)) { continue; }
+            this.dropSelf(block);
+        }
     }
 
     private void addDyedFrostedGlassDrops() {

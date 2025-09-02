@@ -11,7 +11,7 @@
         "homepage": "*",
         "sources": "*"
     },
-    "license": "All Rights Reserved",
+    "license": "AZURUNE License",
     "icon": "icon.png",
     "environment": "*",
     "entrypoints": {

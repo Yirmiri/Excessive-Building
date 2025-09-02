@@ -17,6 +17,7 @@ public class EBTags {
 
     public static class ItemT {
         public static final TagKey<Item> HAS_MALLET_VARIANTS = create("has_mallet_variants");
+        public static final TagKey<Item> ANCIENT_LOGS = create("ancient_logs");
 
         private static TagKey<Item> create(String id) {
             return TagKey.create(Registries.ITEM, ExcessiveBuilding.modid(id));

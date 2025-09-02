@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "top=false": {
+      "model": "excessive_building:block/ancient_vines_plant"
+    },
+    "top=true": {
+      "model": "excessive_building:block/ancient_vines_plant_top"
+    }
+  }
+}

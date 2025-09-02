@@ -1,9 +1,15 @@
 {
-  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+  "minecraft:recipes/decorations/crafting_table": {
     "criteria": {
-      "has_iron_sword": "2025-05-29 18:49:36 -0400"
+      "unlock_right_away": "2025-05-29 18:47:55 -0400"
     },
     "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2025-05-29 18:47:56 -0400"
+    },
+    "done": false
   },
   "minecraft:recipes/building_blocks/oak_slab": {
     "criteria": {
@@ -41,12 +47,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/crafting_table": {
-    "criteria": {
-      "unlock_right_away": "2025-05-29 18:47:55 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/misc/stick": {
     "criteria": {
       "has_planks": "2025-05-29 18:48:12 -0400"
@@ -56,6 +56,36 @@
   "minecraft:recipes/building_blocks/oak_stairs": {
     "criteria": {
       "has_planks": "2025-05-29 18:48:12 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/oak_fence": {
+    "criteria": {
+      "has_planks": "2025-05-29 18:48:12 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/barrel": {
+    "criteria": {
+      "has_planks": "2025-05-29 18:48:12 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/oak_button": {
+    "criteria": {
+      "has_planks": "2025-05-29 18:48:12 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_smelting": {
+    "criteria": {
+      "has_iron_sword": "2025-05-29 18:49:36 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_sword": "2025-05-29 18:49:36 -0400"
     },
     "done": true
   },
@@ -71,39 +101,27 @@
     },
     "done": false
   },
-  "minecraft:recipes/decorations/oak_fence": {
-    "criteria": {
-      "has_planks": "2025-05-29 18:48:12 -0400"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/iron_nugget_from_blasting": {
-    "criteria": {
-      "has_iron_sword": "2025-05-29 18:49:36 -0400"
-    },
-    "done": true
-  },
   "minecraft:adventure/kill_a_mob": {
     "criteria": {
       "minecraft:husk": "2025-05-29 18:49:52 -0400"
     },
     "done": true
   },
-  "minecraft:adventure/adventuring_time": {
+  "excessive_building:recipes/building_blocks/hectalite_brick_slab": {
     "criteria": {
-      "minecraft:plains": "2025-05-29 18:47:56 -0400"
-    },
-    "done": false
-  },
-  "minecraft:recipes/decorations/barrel": {
-    "criteria": {
-      "has_planks": "2025-05-29 18:48:12 -0400"
+      "has_hectalite_bricks": "2025-09-02 05:34:35 -0400"
     },
     "done": true
   },
-  "minecraft:recipes/redstone/oak_button": {
+  "excessive_building:recipes/building_blocks/hectalite_brick_wall": {
     "criteria": {
-      "has_planks": "2025-05-29 18:48:12 -0400"
+      "has_hectalite_bricks": "2025-09-02 05:34:35 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/hectalite_brick_stairs": {
+    "criteria": {
+      "has_hectalite_bricks": "2025-09-02 05:34:35 -0400"
     },
     "done": true
   },

@@ -145,8 +145,26 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.ALCHEMY_SHELF.get());
 
                         //ANCIENT WOOD
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_log"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_wood"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("stripped_ancient_log"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("stripped_ancient_wood"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_stairs"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_slab"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_fence"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_fence_gate"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_door"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_trapdoor"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_pressure_plate"));
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_button"));
                         entry.accept(EBItems.ANCIENT_BOAT.get());
                         entry.accept(EBItems.ANCIENT_CHEST_BOAT.get());
+
+                        entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_leaves"));
+                        entry.accept(EBBlocks.ANCIENT_VINES.get());
+                        entry.accept(EBBlocks.ANCIENT_SAPLING.get());
+                        entry.accept(EBItems.ICHOR_FRUIT.get());
 
                         //FROSTED GLASS
                         entry.accept(EBBlocks.FROSTED_GLASS.get());
@@ -190,7 +208,7 @@ public class EBCreativeTabs {
                         entry.accept(EBItems.RADIANCE_INGOT.get());
                         entry.accept(EBItems.RADIANCE_MALLET.get());
                         entry.accept(EBItems.RADIANCE_GAUNTLET.get());
-                        entry.accept(EBItems.BOOK_OF_FORMATION.get());
+                        //entry.accept(EBItems.BOOK_OF_FORMATION.get());
 
                         //FUNCTION
                         //entry.accept(EBBlocks.KILN.get());

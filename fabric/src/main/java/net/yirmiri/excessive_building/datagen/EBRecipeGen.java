@@ -3,16 +3,22 @@ package net.yirmiri.excessive_building.datagen;
 import com.google.common.collect.ImmutableList;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.data.BlockFamily;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
+import static net.minecraft.data.BlockFamilies.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.core.init.EBTags;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
@@ -524,16 +530,33 @@ public class EBRecipeGen extends FabricRecipeProvider {
         createWendysFourForFourMeal(Items.PRISMARINE, EBBlocks.HECTALITE.get().asItem(), Items.PRISMARINE_CRYSTALS);
 
         //==========================ANCIENT WOOD==========================
-        //TODO: boat recipes
+        BlockFamily ancientFamily = familyBuilder(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_planks").get())
+                .button(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_button").get())
+                .fence(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_fence").get())
+                .fenceGate(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_fence_gate").get())
+                .pressurePlate(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_pressure_plate").get())
+                //.sign(BFBlocks.WALNUT_SIGN, BFBlocks.WALNUT_WALL_SIGN) TODO
+                .slab(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_slab").get())
+                .stairs(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_stairs").get())
+                .door(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_door").get())
+                .trapdoor(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_trapdoor").get())
+                .recipeGroupPrefix("wooden")
+                .recipeUnlockedBy("has_planks")
+                .getFamily();
+        generateRecipes(consumer, ancientFamily);
+
+        planksFromLogs(consumer, EBBlocks.ANCIENT_WOODSET.getBlock("ancient_planks").get(), EBTags.ItemT.ANCIENT_LOGS, 4);
+        woodenBoat(consumer, EBItems.ANCIENT_BOAT.get(), EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks"));
+        chestBoat(consumer, EBItems.ANCIENT_CHEST_BOAT.get(), EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks"));
 
         //==========================OTHER==========================
         createShelf(EBBlocks.ALCHEMY_SHELF.get().asItem(), Blocks.OAK_PLANKS.asItem(), Items.GLASS_BOTTLE);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.BOOK_OF_FORMATION.get(), 1)
-                .define('#', EBItems.RADIANCE_CRYSTAL.get()).define('@', Items.ENCHANTED_BOOK).define('!', Items.ICE)
-                .pattern("#!#")
-                .pattern("!@!")
-                .pattern("#!#");
+//        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.BOOK_OF_FORMATION.get(), 1)
+//                .define('#', EBItems.RADIANCE_CRYSTAL.get()).define('@', Items.ENCHANTED_BOOK).define('!', Items.ICE)
+//                .pattern("#!#")
+//                .pattern("!@!")
+//                .pattern("#!#");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBBlocks.ZEUS_EPIC_BLOCK.get(), 1)
                 .define('#', Items.PURPLE_DYE)
@@ -549,6 +572,20 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .define('#', ingredient).define('@', ingredient2)
                 .pattern("@#")
                 .pattern("#@");
+    }
+
+    public static void woodenBoat(Consumer<FinishedRecipe> consumer, ItemLike boat, ItemLike material) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, boat).define('#', material)
+                .pattern("# #")
+                .pattern("###")
+                .group("boat").unlockedBy("in_water", insideOf(Blocks.WATER))
+                .save(consumer);
+    }
+
+    public static void chestBoat(Consumer<FinishedRecipe> consumer, ItemLike boat, ItemLike material) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION, boat).requires(Blocks.CHEST).requires(material)
+                .group("chest_boat").unlockedBy("has_boat", has(ItemTags.BOATS))
+                .save(consumer);
     }
 
     public static ShapedRecipeBuilder createShelf(Item output, Item wood, Item ingredient) {

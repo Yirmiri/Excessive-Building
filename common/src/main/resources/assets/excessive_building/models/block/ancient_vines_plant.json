@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "excessive_building:block/ancient_vines_plant"
+  }
+}

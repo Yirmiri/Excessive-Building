@@ -1,11 +1,12 @@
 package net.yirmiri.excessive_building.common.util;
 
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CaveVines;
-import net.minecraft.world.level.block.CaveVinesBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -43,6 +44,8 @@ public class EBProperties {
         public static final BlockBehaviour.Properties GLOW_SAPLING_POT = BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING).lightLevel(s -> 3);
         public static final BlockBehaviour.Properties HANG_VINES = BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY);
         public static final BlockBehaviour.Properties BOOKSHELF = BlockBehaviour.Properties.copy(Blocks.BOOKSHELF);
+        public static final BlockBehaviour.Properties ANCIENT_VINES = BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES).lightLevel(s -> 5);
+        public static final BlockBehaviour.Properties ANCIENT_VINES_PLANT = BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES_PLANT).lightLevel(s -> 5);
 
         //STONES
         public static final BlockBehaviour.Properties COBBLESTONE = BlockBehaviour.Properties.copy(Blocks.COBBLESTONE);
@@ -97,10 +100,12 @@ public class EBProperties {
         public static final Item.Properties EPIC = new Item.Properties().rarity(Rarity.EPIC);
         public static final Item.Properties RADIANCE_TOOL = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1);
         public static final Item.Properties RADIANCE_BOOK = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1).durability(128);
+        public static final Item.Properties ICHOR_FRUIT = new Item.Properties().food(FoodP.ICHOR_FRUIT);
     }
 
-    public static class Food {
+    public static class FoodP {
         //MISC
-        public static final FoodProperties NOTHING = new FoodProperties.Builder().alwaysEat().build();
+        public static final FoodProperties ICHOR_FRUIT = new FoodProperties.Builder()
+                .effect(new MobEffectInstance(MobEffects.DIG_SPEED, 100, 0), 1.0F).build();
     }
 }

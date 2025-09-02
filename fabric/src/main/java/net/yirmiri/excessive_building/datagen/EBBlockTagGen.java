@@ -4,12 +4,17 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.common.util.blockfamilycreator.BlockFamilyCreator;
 import net.yirmiri.excessive_building.core.init.EBTags;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Supplier;
 
 public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     public EBBlockTagGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> future) {
@@ -26,6 +31,9 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendEnchantmentPowerProvider();
         appendMineableWithAxe();
         appendReplaceable();
+        generateBlockFamilyBlockTags();
+        appendSapling();
+        appendFlowerPots();
     }
 
     private void appendMineableWithMallet() {
@@ -105,6 +113,18 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         ;
     }
 
+    private void appendSapling() {
+        getOrCreateTagBuilder(BlockTags.SAPLINGS)
+                .add(EBBlocks.ANCIENT_SAPLING.get())
+        ;
+    }
+
+    private void appendFlowerPots() {
+        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                .add(EBBlocks.POTTED_ANCIENT_SAPLING.get())
+        ;
+    }
+
     private void appendNeedsIronTool() {
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(EBBlocks.RADIANCE_ORE.get())
@@ -115,6 +135,9 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     private void appendMineableWithAxe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .add(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_stairs").get())
+                .add(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_slab").get())
+
                 .add(EBBlocks.ALCHEMY_SHELF.get())
                 .add(EBBlocks.ALCHEMY_SHELF_VARIANT1.get())
                 .add(EBBlocks.ALCHEMY_SHELF_VARIANT2.get())
@@ -292,5 +315,124 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(EBBlocks.RADIANCE_BLOCK.get())
         ;
+    }
+
+    public void generateBlockFamilyBlockTags() {
+        for (BlockFamilyCreator blockFamily : BlockFamilyCreator.BLOCK_FAMILIES.values()) {
+            if (blockFamily.isOfMod(ExcessiveBuilding.MOD_ID)) {
+                for (Supplier<Block> block : blockFamily.WALLS) {
+                    getOrCreateTagBuilder(BlockTags.WALLS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.STAIRS) {
+                    getOrCreateTagBuilder(BlockTags.STAIRS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.SLABS) {
+                    getOrCreateTagBuilder(BlockTags.SLABS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.WOODEN_SLABS) {
+                    getOrCreateTagBuilder(BlockTags.SLABS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.FENCES) {
+                    getOrCreateTagBuilder(BlockTags.FENCES).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.WOODEN_FENCES) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_FENCES).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.FENCE_GATES) {
+                    getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.WOODEN_DOORS) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_DOORS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.DOORS) {
+                    getOrCreateTagBuilder(BlockTags.DOORS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.WOODEN_TRAPDOORS) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.TRAPDOORS) {
+                    getOrCreateTagBuilder(BlockTags.TRAPDOORS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.WOODEN_PRESSURE_PLATES) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.STONE_PRESSURE_PLATES) {
+                    getOrCreateTagBuilder(BlockTags.STONE_PRESSURE_PLATES).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.PRESSURE_PLATES) {
+                    getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.WOODEN_BUTTONS) {
+                    getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.STONE_BUTTONS) {
+                    getOrCreateTagBuilder(BlockTags.STONE_BUTTONS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.PLANKS) {
+                    getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.BUTTONS) {
+                    getOrCreateTagBuilder(BlockTags.BUTTONS).add(block.get());
+                }
+                for (TagKey<Block> tag : blockFamily.FLAMMABLE_LOG_TAGS) {
+                    String name = tag.location().getPath().replace("_logs", "");
+                    getOrCreateTagBuilder(tag)
+                            .add(blockFamily.getBlock(name + "_log").get())
+                            .add(blockFamily.getBlock(name + "_wood").get())
+                            .add(blockFamily.getBlock("stripped_" + name + "_log").get())
+                            .add(blockFamily.getBlock("stripped_" + name + "_wood").get())
+                    ;
+                    getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN).addTag(tag);
+                }
+                for (TagKey<Block> tag : blockFamily.LOG_TAGS) {
+                    String name = tag.location().getPath().replace("_logs", "");
+                    getOrCreateTagBuilder(tag)
+                            .add(blockFamily.getBlock(name + "_log").get())
+                            .add(blockFamily.getBlock(name + "_wood").get())
+                            .add(blockFamily.getBlock("stripped_" + name + "_log").get())
+                            .add(blockFamily.getBlock("stripped_" + name + "_wood").get())
+                    ;
+                    getOrCreateTagBuilder(BlockTags.LOGS).addTag(tag);
+                }
+                for (Supplier<Block> block : blockFamily.OVERWORLD_NATURAL_LOGS) {
+                    getOrCreateTagBuilder(BlockTags.OVERWORLD_NATURAL_LOGS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.LEAVES) {
+                    getOrCreateTagBuilder(BlockTags.LEAVES).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.FLOWERS) {
+                    getOrCreateTagBuilder(BlockTags.FLOWERS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.SAPLINGS) {
+                    getOrCreateTagBuilder(BlockTags.SAPLINGS).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.FLOWER_POTS) {
+                    getOrCreateTagBuilder(BlockTags.FLOWER_POTS).add(block.get());
+                }
+
+
+                for (Supplier<Block> block : blockFamily.PICKAXE_MINEABLE) {
+                    getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.AXE_MINEABLE) {
+                    getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.SHOVEL_MINEABLE) {
+                    getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_SHOVEL).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.HOE_MINEABLE) {
+                    getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_HOE).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.NEEDS_STONE_TOOL) {
+                    getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.NEEDS_IRON_TOOL) {
+                    getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL).add(block.get());
+                }
+                for (Supplier<Block> block : blockFamily.NEEDS_DIAMOND_TOOL) {
+                    getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL).add(block.get());
+                }
+            }
+        }
     }
 }

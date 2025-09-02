@@ -1,9 +1,23 @@
-// 1.20.1	2025-08-27T18:34:40.9892609	Excessive Building/Tags for minecraft:block
-4f8160a6b1cbe4f2467ec698a9d4d4aa7c1518ac data\minecraft\tags\blocks\walls.json
-89cf7fba29b715afe9827a7eee059f360e1de1b6 data\minecraft\tags\blocks\mineable\axe.json
-e871545efe4b5cf3da30cb1c9a86d27323893986 data\minecraft\tags\blocks\replaceable.json
+// 1.20.1	2025-09-02T05:39:26.9841839	Excessive Building/Tags for minecraft:block
+c474d0c7d61ce32856dddcc22cf87150d0b1c28e data\minecraft\tags\blocks\slabs.json
+6ed131ccea46af1f9ee64066c9f3292f99c69cd9 data\minecraft\tags\blocks\mineable\axe.json
+cd5bc44ed602ab0098c1fed75a633d7c6ae24ba5 data\minecraft\tags\blocks\mineable\hoe.json
+c56fb325fba9e489f5722f03fe17eec24f408c8b data\minecraft\tags\blocks\wooden_pressure_plates.json
 ba6629ca9b6316785dbf5df09a898c409efba23c data\minecraft\tags\blocks\beacon_base_blocks.json
 2a1af5f0670850471a14b529fa5f2f27094cb13e data\excessive_building\tags\blocks\mineable_with_mallet.json
+c961787dd6feb3f7383b3bb42adc46fb46288a0d data\minecraft\tags\blocks\fence_gates.json
+cacddeb4f0453e5a7249fb00df5e8dffbe99f1dc data\minecraft\tags\blocks\wooden_trapdoors.json
+e4215810bd5090605f345413ee8e1888f8d58afa data\minecraft\tags\blocks\needs_iron_tool.json
+4f8160a6b1cbe4f2467ec698a9d4d4aa7c1518ac data\minecraft\tags\blocks\walls.json
+cd5bc44ed602ab0098c1fed75a633d7c6ae24ba5 data\minecraft\tags\blocks\leaves.json
+63e536c99e097cc6535fa2e9c41a11e6b260021a data\minecraft\tags\blocks\stairs.json
+9514b016224003660c183a22ffca11a62ac3abc6 data\minecraft\tags\blocks\wooden_doors.json
+f84c893f3b6f74bb4c2cff26bd4089720f7bb82c data\minecraft\tags\blocks\saplings.json
+2c36f6032581c5bfd252f43d578ae38847cbbb8d data\minecraft\tags\blocks\wooden_buttons.json
+e871545efe4b5cf3da30cb1c9a86d27323893986 data\minecraft\tags\blocks\replaceable.json
+5fb66c1130328a7cf0e74d8ce0179834e52d5aec data\minecraft\tags\blocks\wooden_fences.json
+acc89d1f118494ca0d02024c86ac772e0bcc3dba data\minecraft\tags\blocks\flower_pots.json
 89cf7fba29b715afe9827a7eee059f360e1de1b6 data\minecraft\tags\blocks\enchantment_power_provider.json
 b26168d08980520f3bc14abcdda3de47e359ba86 data\minecraft\tags\blocks\mineable\pickaxe.json
-e4215810bd5090605f345413ee8e1888f8d58afa data\minecraft\tags\blocks\needs_iron_tool.json
+9552d798293cd216aa8dae9f734d807baecfaff4 data\excessive_building\tags\blocks\ancient_logs.json
+ed66a60d224eafa32222f04f5f305d88b374a938 data\minecraft\tags\blocks\logs_that_burn.json

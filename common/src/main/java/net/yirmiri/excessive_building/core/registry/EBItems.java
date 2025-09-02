@@ -23,6 +23,7 @@ public class EBItems {
     public static final Supplier<Item> BOOK_OF_FORMATION = register("book_of_formation", () -> new BookOfFormationsItem(EBProperties.ItemP.RADIANCE_BOOK));
 
     //ANCIENT
+    public static final Supplier<Item> ICHOR_FRUIT = register("ichor_fruit", () -> new Item(EBProperties.ItemP.ICHOR_FRUIT));
     public static final Supplier<Item> ANCIENT_BOAT = register("ancient_boat", () -> new BoatItem(false, EBUtil.ANCIENT_BOAT, EBProperties.ItemP.GENERIC.stacksTo(1)));
     public static final Supplier<Item> ANCIENT_CHEST_BOAT = register("ancient_chest_boat", () -> new BoatItem(true, EBUtil.ANCIENT_BOAT, EBProperties.ItemP.GENERIC.stacksTo(1)));
 

@@ -1,20 +1,17 @@
 package net.yirmiri.excessive_building.core.registry;
 
-import net.azurune.runiclib.common.publicized.PublicButtonBlock;
-import net.azurune.runiclib.common.publicized.PublicPressurePlateBlock;
-import net.azurune.runiclib.common.publicized.PublicSaplingBlock;
-import net.azurune.runiclib.common.publicized.PublicStairBlock;
+import net.azurune.runiclib.common.publicized.*;
 import net.azurune.runiclib.core.platform.Services;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.OakTreeGrower;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.material.MapColor;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.common.block.AmethystGlassBlock;
-import net.yirmiri.excessive_building.common.block.CloneOtherBlock;
-import net.yirmiri.excessive_building.common.block.KilnBlock;
-import net.yirmiri.excessive_building.common.block.TemporaryBlock;
+import net.yirmiri.excessive_building.common.block.*;
 import net.yirmiri.excessive_building.common.util.EBProperties;
+import net.yirmiri.excessive_building.common.util.blockfamilycreator.BlockFamilyCreator;
 
 import java.util.*;
 import java.util.function.Supplier;
@@ -226,20 +223,21 @@ public class EBBlocks {
     public static final Supplier<Block> POLISHED_DARK_PRISMARINE_SLAB = register("polished_dark_prismarine_slab", () -> new SlabBlock(EBProperties.BlockP.DARK_PRISMARINE), true);
 
     //ANCIENT WOOD
-    public static final Supplier<Block> ANCIENT_LOG = register("ancient_log", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
-    public static final Supplier<Block> STRIPPED_ANCIENT_LOG = register("stripped_ancient_log", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
-    public static final Supplier<Block> ANCIENT_WOOD = register("ancient_wood", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
-    public static final Supplier<Block> STRIPPED_ANCIENT_WOOD = register("stripped_ancient_wood", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
-    public static final Supplier<Block> ANCIENT_PLANKS = register("ancient_planks", () -> new Block(EBProperties.BlockP.PLANKS), true);
-    public static final Supplier<Block> ANCIENT_STAIRS = register("ancient_stairs", () -> new PublicStairBlock(ANCIENT_PLANKS.get().defaultBlockState(), EBProperties.BlockP.PLANKS), true);
-    public static final Supplier<Block> ANCIENT_SLAB = register("ancient_slab", () -> new SlabBlock(EBProperties.BlockP.PLANKS), true);
-    public static final Supplier<Block> ANCIENT_FENCE = register("ancient_fence", () -> new FenceBlock(EBProperties.BlockP.FENCE), true);
-    public static final Supplier<Block> ANCIENT_FENCE_GATE = register("ancient_fence_gate", () -> new FenceGateBlock(EBProperties.BlockP.GATE, EBRegistries.ANCIENT), true);
-    public static final Supplier<Block> ANCIENT_PRESSURE_PLATE = register("ancient_pressure_plate", () -> new PublicPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, EBProperties.BlockP.PLANKS, BlockSetType.OAK), true);
-    public static final Supplier<Block> ANCIENT_BUTTON = register("ancient_button", () -> new PublicButtonBlock(EBProperties.BlockP.PLANKS, BlockSetType.OAK, 30, true), true);
-    public static final Supplier<Block> ANCIENT_LEAVES = register("ancient_leaves", () -> new LeavesBlock(EBProperties.BlockP.GLOW_LEAVES), true);
-    public static final Supplier<Block> ANCIENT_SAPLING = register("ancient_sapling", () -> new PublicSaplingBlock(new OakTreeGrower(), EBProperties.BlockP.GLOW_LEAVES), true);
-    public static final Supplier<Block> POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", () -> new FlowerPotBlock(ANCIENT_SAPLING.get(), EBProperties.BlockP.GLOW_LEAVES), true);
+    public static final BlockFamilyCreator ANCIENT_WOODSET = new BlockFamilyCreator(ExcessiveBuilding.MOD_ID, "ancient", BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).mapColor(MapColor.SNOW))
+            .planks()
+            .stairs().slab(true)
+            .logs(true, false)
+            .door(true, EBRegistries.ANCIENT.setType()).trapdoor(true, EBRegistries.ANCIENT.setType())
+            .fence(true).fenceGate(EBRegistries.ANCIENT)
+            .button(EBRegistries.ANCIENT.setType(), true, false, 15, true)
+            .pressurePlate(PressurePlateBlock.Sensitivity.EVERYTHING, true, false, EBRegistries.ANCIENT.setType())
+            .glowLeaves(SoundType.CHERRY_LEAVES, false)
+            ;
+
+    public static final Supplier<Block> ANCIENT_SAPLING = register("ancient_sapling", () -> new PublicSaplingBlock(new OakTreeGrower(), EBProperties.BlockP.GLOW_SAPLING), true);
+    public static final Supplier<Block> POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", () -> new FlowerPotBlock(ANCIENT_SAPLING.get(), EBProperties.BlockP.GLOW_SAPLING_POT), false);
+    public static final Supplier<Block> ANCIENT_VINES = register("ancient_vines", () -> new AncientVinesBlock(EBProperties.BlockP.ANCIENT_VINES), true);
+    public static final Supplier<Block> ANCIENT_VINES_PLANT = register("ancient_vines_plant", () -> new AncientVinesPlantBlock(EBProperties.BlockP.ANCIENT_VINES_PLANT), false);
 
     //MISC
     public static final Supplier<Block> KILN = register("kiln", () -> new KilnBlock(EBProperties.BlockP.KILN), true);
