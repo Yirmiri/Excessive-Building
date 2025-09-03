@@ -2,26 +2,27 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.blockstates.*;
-import net.minecraft.data.models.model.ModelLocationUtils;
-import net.minecraft.data.models.model.ModelTemplates;
-import net.minecraft.data.models.model.TextureMapping;
-import net.minecraft.data.models.model.TexturedModel;
+import net.minecraft.data.models.model.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.AncientVinesBlock;
 import net.yirmiri.excessive_building.common.block.AncientVinesPlantBlock;
+import net.yirmiri.excessive_building.common.block.VerticalStairBlock;
 import net.yirmiri.excessive_building.common.util.blockfamilycreator.BlockFamilyCreator;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
+import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
@@ -192,7 +193,6 @@ public class EBModelGen extends FabricModelProvider {
         generator.createTrivialCube(EBBlocks.ZEUS_EPIC_BLOCK.get());
 
         generator.createPlant(EBBlocks.ANCIENT_SAPLING.get(), EBBlocks.POTTED_ANCIENT_SAPLING.get(), BlockModelGenerators.TintState.NOT_TINTED);
-        //createTripleGrowingPlant(generator, EBBlocks.ANCIENT_VINES.get(), EBBlocks.ANCIENT_VINES_PLANT.get(), BlockModelGenerators.TintState.NOT_TINTED);
         generator.skipAutoItemBlock(EBBlocks.ANCIENT_VINES_PLANT.get());
 
         //AUTOGEN
@@ -215,15 +215,6 @@ public class EBModelGen extends FabricModelProvider {
     }
 
     //GENERATORS
-//    public final void createTripleGrowingPlant(BlockModelGenerators generator, Block plantBlock, Block growingPlantBlock, BlockModelGenerators.TintState tintState) {
-//        generator.createCrossBlock(plantBlock, tintState);
-//        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(growingPlantBlock).with(PropertyDispatch.property(AncientVinesPlantBlock.TOP)
-//                .select(true, Variant.variant().with(VariantProperties.MODEL, ModelTemplates.CROSS.create(
-//                        ModelLocationUtils.getModelLocation(growingPlantBlock, "_top"), TextureMapping.cross(growingPlantBlock), generator.modelOutput)))
-//                .select(false, Variant.variant().with(VariantProperties.MODEL, ModelTemplates.CROSS.create(
-//                        ModelLocationUtils.getModelLocation(growingPlantBlock), TextureMapping.cross(growingPlantBlock), generator.modelOutput)))));
-//    }
-
     private void createBookshelf(BlockModelGenerators generator, Block block, Block wood) {
         TextureMapping textureMapping = TextureMapping.column(TextureMapping.getBlockTexture(block), TextureMapping.getBlockTexture(wood));
         ResourceLocation resourceLocation = ModelTemplates.CUBE_COLUMN.create(block, textureMapping, generator.modelOutput);
@@ -234,6 +225,28 @@ public class EBModelGen extends FabricModelProvider {
         TextureMapping textureMapping = TextureMapping.column(TextureMapping.getBlockTexture(block), TextureMapping.getBlockTexture(block, "_top"));
         ResourceLocation resourceLocation = ModelTemplates.CUBE_COLUMN.create(block, textureMapping, generator.modelOutput);
         generator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block, resourceLocation));
+    }
+
+    public static final ModelTemplate VERTICAL_STAIRS = new ModelTemplate(
+            Optional.of(new ResourceLocation(ExcessiveBuilding.MOD_ID, "block/template_vertical_stairs")),
+            Optional.empty(), TextureSlot.TEXTURE, TextureSlot.PARTICLE
+    );
+
+    public static void registerVerticalStairs(BlockModelGenerators generator, Block verticalStairs, Block texture) {
+        ResourceLocation model = VERTICAL_STAIRS.create(verticalStairs, TextureMapping.cube(texture), generator.modelOutput);
+
+        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(verticalStairs).with(
+                PropertyDispatch.property(BlockStateProperties.HORIZONTAL_FACING)
+                        .select(Direction.NORTH, Variant.variant().with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R0).with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.EAST, Variant.variant().with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R90).with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.WEST, Variant.variant().with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R270).with(VariantProperties.UV_LOCK, true))
+                        .select(Direction.SOUTH, Variant.variant().with(VariantProperties.MODEL, model)
+                                .with(VariantProperties.Y_ROT, VariantProperties.Rotation.R180).with(VariantProperties.UV_LOCK, true))
+                )
+        );
     }
 
     public void generateBlockFamilyModels(BlockModelGenerators blockStateModelGenerator) {

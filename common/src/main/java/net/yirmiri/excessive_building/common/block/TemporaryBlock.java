@@ -22,7 +22,6 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
-import org.jetbrains.annotations.Nullable;
 
 public class TemporaryBlock extends FrostedIceBlock {
     public static final int MAX_AGE = 3;
@@ -112,7 +111,7 @@ public class TemporaryBlock extends FrostedIceBlock {
         return Blocks.AIR.defaultBlockState();
     }
 
-    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
+    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, BlockEntity blockEntity, ItemStack tool) {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
         if (EnchantmentHelper.getItemEnchantmentLevel(Enchantments.SILK_TOUCH, tool) == 0) {
             if (level.dimensionType().ultraWarm()) {

@@ -14,7 +14,6 @@ public class ExcessiveBuilding {
         EBItems.loadItems();
         EBBlockEntities.loadBlockEntities();
         EBCreativeTabs.loadCreativeTabs();
-        EBRegistries.loadRegistries();
         EBParticles.loadParticles();
     }
 

@@ -212,6 +212,9 @@ public class EBCreativeTabs {
 
                         //FUNCTION
                         //entry.accept(EBBlocks.KILN.get());
+
+                        //VERTICAL STAIRS
+                        //EBBlocks.VERTICAL_STAIRS.forEach(blockSupplier -> entry.accept(blockSupplier.get()));
                     }).build());
 
     public static void loadCreativeTabs() {

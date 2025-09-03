@@ -2,8 +2,11 @@ package net.yirmiri.excessive_building.core.registry;
 
 import net.azurune.runiclib.common.publicized.*;
 import net.azurune.runiclib.core.platform.Services;
+import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.OakTreeGrower;
@@ -20,33 +23,6 @@ import java.util.*;
 import java.util.function.Supplier;
 
 public class EBBlocks {
-    //VERTICAL STAIRS
-    public static final List<Supplier<Block>> VERTICAL_STAIRS = new ArrayList<>();
-
-//    public static void createVerticalStairs() {
-//        //This creates a VerticalStairBlock for every registered StairBlock
-//        Registry<Block> blockRegistry = BuiltInRegistries.BLOCK;
-//        Set<ResourceKey<Block>> keys = new HashSet<>(blockRegistry.registryKeySet());
-//
-//        for (ResourceKey<Block> key : keys) {
-//            Block originalBlock = blockRegistry.get(key);
-//            if (originalBlock instanceof StairBlock) {
-//                String originalPath = key.location().getPath();
-//                String blockId;
-//
-//                //This cuts _stairs from the id and adds _vertical_stairs so we can have mod_id:block_vertical stairs instead of mod_id:vertical_block_stairs
-//                if (originalPath.endsWith("_stairs")) {
-//                    blockId = originalPath.substring(0, originalPath.length() - "_stairs".length()) + "_vertical_stairs";
-//                } else {
-//                    blockId = "vertical_" + originalPath; //Fallback
-//                }
-//
-//                registerVerticalStair(key.location().getNamespace(), blockId, () ->
-//                        new VerticalStairBlock(BlockBehaviour.Properties.copy(originalBlock)), true);
-//            }
-//        }
-//    }
-
     //VANILLA ADDITIONS
     public static final Supplier<Block> COBBLESTONE_BRICKS = register("cobblestone_bricks", () -> new Block(EBProperties.BlockP.COBBLESTONE), true);
     public static final Supplier<Block> COBBLESTONE_BRICK_STAIRS = register("cobblestone_brick_stairs", () -> new PublicStairBlock(COBBLESTONE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.COBBLESTONE), true);
@@ -250,12 +226,40 @@ public class EBBlocks {
         return Services.REGISTRY.registerBlock(ExcessiveBuilding.MOD_ID, id, block, hasItem);
     }
 
+    //VERTICAL STAIRS
+    public static final List<Supplier<Block>> VERTICAL_STAIRS = new ArrayList<>();
+
+    public static void createVerticalStairs() {
+        //This creates a VerticalStairBlock for every registered StairBlock
+        Registry<Block> blockRegistry = BuiltInRegistries.BLOCK;
+        Set<ResourceKey<Block>> keys = new HashSet<>(blockRegistry.registryKeySet());
+
+        for (ResourceKey<Block> key : keys) {
+            Block originalBlock = blockRegistry.get(key);
+            String namespace = key.location().getNamespace();
+            if (originalBlock instanceof StairBlock && (namespace.equals("minecraft") || namespace.equals(ExcessiveBuilding.MOD_ID))) {
+                String originalPath = key.location().getPath();
+                String blockId;
+
+                //This cuts _stairs from the id and adds _vertical_stairs so we can have mod_id:block_vertical_stairs instead of mod_id:vertical_block_stairs
+                if (originalPath.endsWith("_stairs")) {
+                    blockId = originalPath.substring(0, originalPath.length() - "_stairs".length()) + "_vertical_stairs";
+                } else {
+                    blockId = "vertical_" + originalPath; //Fallback
+                }
+
+                registerVerticalStair(namespace, blockId, () ->
+                        new VerticalStairBlock(BlockBehaviour.Properties.copy(originalBlock)), true);
+            }
+        }
+    }
+
     private static Supplier<Block> registerVerticalStair(String modId, String id, Supplier<Block> block, boolean hasItem) {
         VERTICAL_STAIRS.add(block);
         return Services.REGISTRY.registerBlock(modId, id, block, hasItem);
     }
 
     public static void loadBlocks() {
-        //createVerticalStairs();
+        createVerticalStairs();
     }
 }

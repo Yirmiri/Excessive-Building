@@ -18,6 +18,7 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.yirmiri.excessive_building.common.util.BlockTransmutation;
 import net.yirmiri.excessive_building.common.util.EBUtil;
 import net.yirmiri.excessive_building.core.init.EBFeatures;
+import net.yirmiri.excessive_building.core.registry.EBRegistries;
 import net.yirmiri.excessive_building.util.FabricBlockTransmutation;
 
 public class FabricExcessiveBuilding implements ModInitializer {
@@ -25,6 +26,7 @@ public class FabricExcessiveBuilding implements ModInitializer {
     @Override
     public void onInitialize() {
         ExcessiveBuilding.init();
+        EBRegistries.loadRegistries();
 
         //BIOME MODIFIERS
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_OVERWORLD), GenerationStep.Decoration.UNDERGROUND_ORES, EBFeatures.PlacedFeatures.ORE_RADIANCE);

@@ -13,12 +13,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Boat.class)
 public abstract class BoatMixin {
-    @Shadow public abstract Object getVariant();
+//    @Shadow public abstract Object getVariant();
 
-    @Inject(method = "getDropItem", at = @At(value = "RETURN"), cancellable = true)
-    private void excessiveBuilding$getDropItem(CallbackInfoReturnable<Item> cir) {
-        if (this.getVariant() == EBUtil.ANCIENT_BOAT) {
-            cir.setReturnValue(EBItems.ANCIENT_BOAT.get());
-        }
-    }
+//    @Inject(method = "getDropItem", at = @At(value = "RETURN"), cancellable = true)
+//    private void excessiveBuilding$getDropItem(CallbackInfoReturnable<Item> cir) {
+//        if (this.getVariant() == EBUtil.ANCIENT_BOAT) {
+//            cir.setReturnValue(EBItems.ANCIENT_BOAT.get());
+//        }
+//    }
 }
