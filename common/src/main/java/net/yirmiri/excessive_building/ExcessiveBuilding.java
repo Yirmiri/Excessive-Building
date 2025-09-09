@@ -15,6 +15,8 @@ public class ExcessiveBuilding {
         EBBlockEntities.loadBlockEntities();
         EBCreativeTabs.loadCreativeTabs();
         EBParticles.loadParticles();
+        EBPotions.loadPotions();
+        EBEffects.loadEffects();
     }
 
     public static ResourceLocation modid(String id) {
@@ -22,4 +24,4 @@ public class ExcessiveBuilding {
     }
 }
 
-//TODO::: Ancient Tree Leaf Particle | Ancient Signs | Ancient Tree from Sniffer | Ancient Fruit from Leaves | Potion of Reaching(?) | Better Ancient tree gen
+//TODO::: Ancient Tree Leaf Particle | Ancient Signs | Ancient Tree from Sniffer | Ancient Fruit from Leaves | Potion of Reaching(?)

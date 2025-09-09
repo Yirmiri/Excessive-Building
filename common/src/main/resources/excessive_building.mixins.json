@@ -12,7 +12,8 @@
     "EfficiencyEnchantmentMixin",
     "EnchantmentHelperMixin",
     "GrowingPlantBlockMixin",
-    "ItemMixin"
+    "ItemMixin",
+    "PotionBrewingMixin"
   ],
   "client": [
     "MinecraftMixin",

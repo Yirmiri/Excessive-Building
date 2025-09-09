@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.util.EBUtil;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBEffects;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 import org.apache.commons.lang3.StringUtils;
 
@@ -211,19 +212,49 @@ public class EBLangGen extends FabricLanguageProvider {
         generate(build, EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");
         generate(build, EBItems.ICHOR_FRUIT.get(), "Ichor Fruit");
 
+        //EFFECT
+        build.add(EBEffects.RAPIDITY.get(), "Rapidity");
+        
+        //POTION
+        build.add("item.minecraft.potion.effect.reaching_potion", "Potion of Reaching");
+        build.add("item.minecraft.splash_potion.effect.reaching_potion", "Splash Potion of Reaching");
+        build.add("item.minecraft.lingering_potion.effect.reaching_potion", "Lingering Potion of Reaching");
+        build.add("item.minecraft.tipped_arrow.effect.reaching_potion", "Arrow of Reaching");
+        build.add("item.minecraft.potion.effect.long_reaching_potion", "Potion of Reaching");
+        build.add("item.minecraft.splash_potion.effect.long_reaching_potion", "Splash Potion of Reaching");
+        build.add("item.minecraft.lingering_potion.effect.long_reaching_potion", "Lingering Potion of Reaching");
+        build.add("item.minecraft.tipped_arrow.effect.long_reaching_potion", "Arrow of Reaching");
+        build.add("item.minecraft.potion.effect.strong_reaching_potion", "Potion of Reaching");
+        build.add("item.minecraft.splash_potion.effect.strong_reaching_potion", "Splash Potion of Reaching");
+        build.add("item.minecraft.lingering_potion.effect.strong_reaching_potion", "Lingering Potion of Reaching");
+        build.add("item.minecraft.tipped_arrow.effect.strong_reaching_potion", "Arrow of Reaching");
+
+        build.add("item.minecraft.potion.effect.rapidity_potion", "Potion of Rapidity");
+        build.add("item.minecraft.splash_potion.effect.rapidity_potion", "Splash Potion of Rapidity");
+        build.add("item.minecraft.lingering_potion.effect.rapidity_potion", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.rapidity_potion", "Arrow of Rapidity");
+        build.add("item.minecraft.potion.effect.long_rapidity_potion", "Potion of Rapidity");
+        build.add("item.minecraft.splash_potion.effect.long_rapidity_potion", "Splash Potion of Rapidity");
+        build.add("item.minecraft.lingering_potion.effect.long_rapidity_potion", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.long_rapidity_potion", "Arrow of Rapidity");
+        build.add("item.minecraft.potion.effect.strong_rapidity_potion", "Potion of Rapidity");
+        build.add("item.minecraft.splash_potion.effect.strong_rapidity_potion", "Splash Potion of Rapidity");
+        build.add("item.minecraft.lingering_potion.effect.strong_rapidity_potion", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.strong_rapidity_potion", "Arrow of Rapidity");
+
         //YAPPING TOOLTIPS //TODO (not priority)
         addYT(build, EBBlocks.ZEUS_EPIC_BLOCK.get(), "The most powerful block of them all... its the best block objectively.");
         addYT(build, EBBlocks.ARIDITE.get(), "A sedimentary rock that can be found generating in cluster under deserts.");
 
         //AUTOGEN
-        for(ResourceLocation id : EBUtil.allBlockIdsInNamespace(ExcessiveBuilding.MOD_ID)) {
+        for (ResourceLocation id : EBUtil.allBlockIdsInNamespace(ExcessiveBuilding.MOD_ID)) {
             String key = BuiltInRegistries.BLOCK.get(id).getDescriptionId();
             if(usedTranslationKeys.contains(key)) { continue; }
             usedTranslationKeys.add(key);
             generate(build, key, toSentenceCase(id.getPath()));
         }
 
-        for(ResourceLocation id : EBUtil.allItemIdsInNamespace(ExcessiveBuilding.MOD_ID)) {
+        for (ResourceLocation id : EBUtil.allItemIdsInNamespace(ExcessiveBuilding.MOD_ID)) {
             String key = BuiltInRegistries.ITEM.get(id).getDescriptionId();
             if (usedTranslationKeys.contains(key)) {
                 continue;

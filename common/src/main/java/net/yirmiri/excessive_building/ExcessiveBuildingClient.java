@@ -8,7 +8,6 @@ import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBParticles;
 
 public class ExcessiveBuildingClient {
-
     public static void clientinit() {
         //CUTOUT
         Services.loadClient().registerBlockRenderType(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_leaves").get(), RenderType.cutout());
