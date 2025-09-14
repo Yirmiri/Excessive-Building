@@ -565,22 +565,22 @@ public class EBRecipeGen extends FabricRecipeProvider {
 
         //==========================CHAIR==========================
 
-        createChair(EBBlocks.getDyedChairs(DyeColor.WHITE.getId()).get().asItem(), Items.WHITE_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.LIGHT_GRAY.getId()).get().asItem(), Items.LIGHT_GRAY_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.GRAY.getId()).get().asItem(), Items.GRAY_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.BLACK.getId()).get().asItem(), Items.BLACK_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.BROWN.getId()).get().asItem(), Items.BROWN_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.RED.getId()).get().asItem(), Items.RED_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.ORANGE.getId()).get().asItem(), Items.ORANGE_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.YELLOW.getId()).get().asItem(), Items.YELLOW_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.LIME.getId()).get().asItem(), Items.LIME_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.GREEN.getId()).get().asItem(), Items.GREEN_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.CYAN.getId()).get().asItem(), Items.CYAN_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.LIGHT_BLUE.getId()).get().asItem(), Items.LIGHT_BLUE_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.BLUE.getId()).get().asItem(), Items.BLUE_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.PURPLE.getId()).get().asItem(), Items.PURPLE_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.MAGENTA.getId()).get().asItem(), Items.MAGENTA_WOOL).save(consumer);
-        createChair(EBBlocks.getDyedChairs(DyeColor.PINK.getId()).get().asItem(), Items.PINK_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.WHITE.getId()).get().asItem(), Items.WHITE_WOOL).save(consumer, "white_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.LIGHT_GRAY.getId()).get().asItem(), Items.LIGHT_GRAY_WOOL).save(consumer, "light_gray_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.GRAY.getId()).get().asItem(), Items.GRAY_WOOL).save(consumer, "gray_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.BLACK.getId()).get().asItem(), Items.BLACK_WOOL).save(consumer, "black_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.BROWN.getId()).get().asItem(), Items.BROWN_WOOL).save(consumer, "brown_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.RED.getId()).get().asItem(), Items.RED_WOOL).save(consumer, "red_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.ORANGE.getId()).get().asItem(), Items.ORANGE_WOOL).save(consumer, "orange_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.YELLOW.getId()).get().asItem(), Items.YELLOW_WOOL).save(consumer, "yellow_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.LIME.getId()).get().asItem(), Items.LIME_WOOL).save(consumer, "lime_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.GREEN.getId()).get().asItem(), Items.GREEN_WOOL).save(consumer, "green_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.CYAN.getId()).get().asItem(), Items.CYAN_WOOL).save(consumer, "cyan_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.LIGHT_BLUE.getId()).get().asItem(), Items.LIGHT_BLUE_WOOL).save(consumer, "light_blue_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.BLUE.getId()).get().asItem(), Items.BLUE_WOOL).save(consumer, "blue_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.PURPLE.getId()).get().asItem(), Items.PURPLE_WOOL).save(consumer, "purple_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.MAGENTA.getId()).get().asItem(), Items.MAGENTA_WOOL).save(consumer, "magenta_chair");
+        createChair(EBBlocks.getDyedChairs(DyeColor.PINK.getId()).get().asItem(), Items.PINK_WOOL)  .save(consumer, "pink_chair");
 
         //====================================================
         stonecutterRecipeTreeGenerator.generateRecipes(consumer);

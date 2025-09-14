@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "excessive_building:pink_chair"
+        "recipe": "minecraft:pink_chair"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "excessive_building:pink_chair"
+      "minecraft:pink_chair"
     ]
   },
   "sends_telemetry_event": false

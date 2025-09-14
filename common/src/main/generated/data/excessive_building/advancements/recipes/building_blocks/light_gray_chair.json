@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "excessive_building:light_gray_chair"
+        "recipe": "minecraft:light_gray_chair"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "excessive_building:light_gray_chair"
+      "minecraft:light_gray_chair"
     ]
   },
   "sends_telemetry_event": false

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "excessive_building:blue_chair"
+        "recipe": "minecraft:blue_chair"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "excessive_building:blue_chair"
+      "minecraft:blue_chair"
     ]
   },
   "sends_telemetry_event": false
