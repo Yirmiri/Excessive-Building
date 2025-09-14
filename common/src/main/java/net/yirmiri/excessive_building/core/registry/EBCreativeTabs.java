@@ -166,6 +166,24 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.ANCIENT_SAPLING.get());
                         entry.accept(EBItems.ICHOR_FRUIT.get());
 
+                        //CHAIRS
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.WHITE.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.LIGHT_GRAY.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.GRAY.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.BLACK.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.BROWN.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.RED.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.ORANGE.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.YELLOW.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.LIME.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.GREEN.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.CYAN.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.LIGHT_BLUE.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.BLUE.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.PURPLE.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.MAGENTA.getId()).get());
+                        entry.accept(EBBlocks.getDyedChairs(DyeColor.PINK.getId()).get());
+
                         //FROSTED GLASS
                         entry.accept(EBBlocks.FROSTED_GLASS.get());
                         entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.WHITE.getId()).get());

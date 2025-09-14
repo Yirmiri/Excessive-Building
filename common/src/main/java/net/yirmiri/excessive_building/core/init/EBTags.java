@@ -9,6 +9,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 public class EBTags {
     public static class BlockT {
         public static final TagKey<Block> MINEABLE_WITH_MALLET = create("mineable_with_mallet");
+        public static final TagKey<Block> CHAIRS = create("chairs");
 
         private static TagKey<Block> create(String id) {
             return TagKey.create(Registries.BLOCK, ExcessiveBuilding.modid(id));

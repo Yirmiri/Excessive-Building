@@ -8,19 +8,13 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
-import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.util.EBUtil;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
@@ -88,7 +82,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         add(EBBlocks.AMETHYST_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.AMETHYST_BRICK_SLAB.get()));
         dropSelf(EBBlocks.AMETHYST_BRICK_WALL.get());
 
-        addDyedFrostedGlassDrops();
+        addDyedDrops();
         dropSelf(EBBlocks.FROSTED_GLASS.get());
 
         dropSelf(EBBlocks.CHLOROSLATE.get());
@@ -226,9 +220,10 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         }
     }
 
-    private void addDyedFrostedGlassDrops() {
+    private void addDyedDrops() {
         for (DyeColor colors : DyeColor.values()) {
             dropSelf(EBBlocks.getDyedFrostedGlass(colors.getId()).get());
+            dropSelf(EBBlocks.getDyedChairs(colors.getId()).get());
         }
     }
 }

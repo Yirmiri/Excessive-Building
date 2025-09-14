@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-02T05:39:26.9841839	Excessive Building/Tags for minecraft:block
+// 1.20.1	2025-09-13T22:42:47.488234	Excessive Building/Tags for minecraft:block
 c474d0c7d61ce32856dddcc22cf87150d0b1c28e data\minecraft\tags\blocks\slabs.json
 6ed131ccea46af1f9ee64066c9f3292f99c69cd9 data\minecraft\tags\blocks\mineable\axe.json
 cd5bc44ed602ab0098c1fed75a633d7c6ae24ba5 data\minecraft\tags\blocks\mineable\hoe.json
@@ -21,3 +21,4 @@ acc89d1f118494ca0d02024c86ac772e0bcc3dba data\minecraft\tags\blocks\flower_pots.
 b26168d08980520f3bc14abcdda3de47e359ba86 data\minecraft\tags\blocks\mineable\pickaxe.json
 9552d798293cd216aa8dae9f734d807baecfaff4 data\excessive_building\tags\blocks\ancient_logs.json
 ed66a60d224eafa32222f04f5f305d88b374a938 data\minecraft\tags\blocks\logs_that_burn.json
+b1f88c34ad3e0f9cda9765083fdade165dbf2818 data\excessive_building\tags\blocks\chairs.json

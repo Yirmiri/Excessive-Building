@@ -34,6 +34,8 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         generateBlockFamilyBlockTags();
         appendSapling();
         appendFlowerPots();
+        appendChairs();
+        appendClimbable();
     }
 
     private void appendMineableWithMallet() {
@@ -96,6 +98,18 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         }
     }
 
+    private void appendChairs() {
+        getOrCreateTagBuilder(EBTags.BlockT.CHAIRS)
+
+        ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(EBTags.BlockT.CHAIRS)
+                    .add(EBBlocks.getDyedChairs(colors.getId()).get())
+            ;
+        }
+    }
+
     private void appendEnchantmentPowerProvider() {
         getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_PROVIDER)
                 .add(EBBlocks.ALCHEMY_SHELF.get())
@@ -110,6 +124,13 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.BOOKSHELF_VARIANT3.get())
                 .add(EBBlocks.BOOKSHELF_VARIANT4.get())
                 .add(EBBlocks.BOOKSHELF_VARIANT5.get())
+        ;
+    }
+
+    private void appendClimbable() {
+        getOrCreateTagBuilder(BlockTags.CLIMBABLE)
+                .add(EBBlocks.ANCIENT_VINES.get())
+                .add(EBBlocks.ANCIENT_VINES_PLANT.get())
         ;
     }
 

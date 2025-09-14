@@ -43,6 +43,7 @@ public class EBLangGen extends FabricLanguageProvider {
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
 
             build.add(EBBlocks.getDyedFrostedGlass(colors.getId()).get(), dyeString + " Stained Frosted Glass");
+            build.add(EBBlocks.getDyedChairs(colors.getId()).get(), dyeString + " Chair");
         }
 
         //MISC

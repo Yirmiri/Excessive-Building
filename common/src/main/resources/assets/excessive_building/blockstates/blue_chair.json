@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "excessive_building:block/blue_chair",
+      "uvlock": false
+    },
+    "facing=south": {
+      "model": "excessive_building:block/blue_chair",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west": {
+      "model": "excessive_building:block/blue_chair",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east": {
+      "model": "excessive_building:block/blue_chair",
+      "y": 90,
+      "uvlock": false
+    }
+  }
+}

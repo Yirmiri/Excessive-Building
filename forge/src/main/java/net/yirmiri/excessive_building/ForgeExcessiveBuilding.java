@@ -7,6 +7,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -15,8 +16,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.yirmiri.excessive_building.common.entity.render.InvisibleEntityRenderer;
 import net.yirmiri.excessive_building.common.util.BlockTransmutation;
 import net.yirmiri.excessive_building.common.util.EBUtil;
+import net.yirmiri.excessive_building.core.registry.EBEntities;
 
 @Mod(ExcessiveBuilding.MOD_ID)
 public class ForgeExcessiveBuilding {
@@ -29,11 +32,17 @@ public class ForgeExcessiveBuilding {
         //eventBus.addListener(this::onRegisterReloadListeners); //TODO (also on top of this todo strippables/registries)
         //eventBus.addListener(this::playerRightClickInteractEvent); //TODO
         eventBus.addListener(this::registerParticles);
+        eventBus.addListener(this::registerEntityRenderer);
     }
 
     @SubscribeEvent
     public void registerParticles(RegisterParticleProvidersEvent event) {
         //event.registerSpriteSet((SimpleParticleType) EBParticles.ANCIENT.get(), FallingLeavesParticle.Provider::new);
+    }
+
+    @SubscribeEvent
+    public void registerEntityRenderer(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(EBEntities.CHAIR.get(), InvisibleEntityRenderer::new);
     }
 
     @SubscribeEvent

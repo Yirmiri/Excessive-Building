@@ -1,5 +1,5 @@
-[00:44:03] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.9
-[00:44:03] [main/INFO] (FabricLoader) Loading 60 mods:
+[23:19:37] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.9
+[23:19:37] [main/INFO] (FabricLoader) Loading 60 mods:
 	- excessive_building 4.0.0
 	- fabric-api 0.92.1+1.20.1
 	- fabric-api-base 0.4.31+1802ada577
@@ -60,114 +60,16 @@
 	- minecraft 1.20.1
 	- mixinextras 0.4.1
 	- runiclib 4.3.5
-[00:44:04] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[00:44:04] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[00:44:05] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[00:44:09] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[00:44:32] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 180 milliseconds
-[00:44:34] [main/WARN] (FabricLoader/Mixin) Discarding @Unique public field effect in runiclib.mixins.json:server.MobEffectInstanceMixin from mod runiclib because it already exists in net.minecraft.world.effect.MobEffectInstance. Note that declared FIELD INITIALISERS will NOT be removed!
-[00:44:38] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
-[00:44:38] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[00:44:40] [Yggdrasil Key Fetcher/ERROR] (Minecraft) Failed to request yggdrasil public key
-com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:119) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:91) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo.fetch(YggdrasilServicesKeyInfo.java:94) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo.lambda$get$1(YggdrasilServicesKeyInfo.java:81) ~[authlib-4.0.43.jar:?]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[?:?]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[?:?]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
-	at java.lang.Thread.run(Thread.java:1583) ~[?:?]
-Caused by: com.mojang.authlib.exceptions.MinecraftClientException: Failed to read value <!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
-<html xmlns='http://www.w3.org/1999/xhtml'>
-
-<head>
-    <meta content='text/html; charset=utf-8' http-equiv='content-type' />
-    <style type='text/css'>
-        body {
-            font-family: Arial;
-            margin-left: 40px;
-        }
-
-        img {
-            border: 0 none;
-        }
-
-        #content {
-            margin-left: auto;
-            margin-right: auto
-        }
-
-        #message h1 {
-            font-size: 24px;
-            font-weight: normal;
-            color: #000000;
-            margin: 34px 0px 0px 0px
-        }
-
-        #message h2 {
-            font-size: 20px;
-            font-weight: normal;
-            color: #000000;
-            margin: 34px 0px 0px 0px
-        }
-
-        #message p {
-            font-size: 16px;
-            color: #000000;
-            margin: 8px 0px 0px 0px
-        }
-
-        #message hr {
-            margin: 15px 0px
-        }
-
-        #errorref {
-            font-size: 11px;
-            color: #737373;
-            margin-top: 41px
-        }
-    </style>
-    <title>Service unavailable</title>
-</head>
-
-<body>
-    <div id='content'>
-        <div id='message'>
-            <h2>The request is blocked.</h2>
-        </div>
-        <div id='errorref'>
-            <span>20250909T044441Z-177958b6665rtzdnhC1MIAnbgw0000000p4g00000000bbmh            </span>
-        </div>
-    </div>
-</body>
-</html>
-
-	at com.mojang.authlib.minecraft.client.ObjectMapper.readValue(ObjectMapper.java:32) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:97) ~[authlib-4.0.43.jar:?]
-	... 9 more
-Caused by: com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
-	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:395) ~[gson-2.10.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1124) ~[gson-2.10.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1034) ~[gson-2.10.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:969) ~[gson-2.10.jar:?]
-	at com.mojang.authlib.minecraft.client.ObjectMapper.readValue(ObjectMapper.java:30) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:97) ~[authlib-4.0.43.jar:?]
-	... 9 more
-Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
-	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:393) ~[gson-2.10.jar:?]
-	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:384) ~[gson-2.10.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1214) ~[gson-2.10.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1124) ~[gson-2.10.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:1034) ~[gson-2.10.jar:?]
-	at com.google.gson.Gson.fromJson(Gson.java:969) ~[gson-2.10.jar:?]
-	at com.mojang.authlib.minecraft.client.ObjectMapper.readValue(ObjectMapper.java:30) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:97) ~[authlib-4.0.43.jar:?]
-	... 9 more
-[00:44:40] [Render thread/ERROR] (Minecraft) Failed to verify authentication
+[23:19:38] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[23:19:38] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[23:19:38] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[23:19:38] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[23:19:40] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[23:19:52] [main/WARN] (FabricLoader/Mixin) Discarding @Unique public field effect in runiclib.mixins.json:server.MobEffectInstanceMixin from mod runiclib because it already exists in net.minecraft.world.effect.MobEffectInstance. Note that declared FIELD INITIALISERS will NOT be removed!
+[23:19:52] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 1738 milliseconds
+[23:19:54] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
+[23:19:54] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[23:19:55] [Render thread/ERROR] (Minecraft) Failed to verify authentication
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-4.0.43.jar:?]
@@ -185,20 +87,21 @@ Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 4
 	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-4.0.43.jar:?]
 	... 9 more
-[00:44:40] [Render thread/INFO] (Minecraft) Setting user: Player308
-[00:44:43] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[00:44:43] [Render thread/INFO] (FabricDataGenHelper) Running data generator for excessive_building
-[00:44:44] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Language (en_us)
-[00:44:44] [Render thread/INFO] (Minecraft) Excessive Building/Language (en_us) finished after 21 ms
-[00:44:44] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:block
-[00:44:44] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:block finished after 387 ms
-[00:44:44] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:item
-[00:44:44] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:item finished after 7 ms
-[00:44:44] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Recipes
-[00:44:44] [Render thread/INFO] (Minecraft) Excessive Building/Recipes finished after 121 ms
-[00:44:44] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Block Loot Tables
-[00:44:44] [Render thread/INFO] (Minecraft) Excessive Building/Block Loot Tables finished after 68 ms
-[00:44:44] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Model Definitions
-[00:44:44] [Render thread/INFO] (Minecraft) Excessive Building/Model Definitions finished after 134 ms
-[00:44:44] [Render thread/INFO] (Minecraft) All providers took: 742 ms
-[00:44:44] [Render thread/INFO] (Minecraft) Caching: total files: 1310, old count: 1310, new count: 1311, removed stale: 0, written: 1
+[23:19:55] [Render thread/INFO] (Minecraft) Setting user: Player391
+[23:19:56] [Render thread/ERROR] (Minecraft) No data fixer registered for excessive_building:chair
+[23:19:57] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[23:19:57] [Render thread/INFO] (FabricDataGenHelper) Running data generator for excessive_building
+[23:19:58] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Language (en_us)
+[23:19:58] [Render thread/INFO] (Minecraft) Excessive Building/Language (en_us) finished after 47 ms
+[23:19:58] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:block
+[23:19:59] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:block finished after 789 ms
+[23:19:59] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:item
+[23:19:59] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:item finished after 34 ms
+[23:19:59] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Recipes
+[23:19:59] [Render thread/INFO] (Minecraft) Excessive Building/Recipes finished after 247 ms
+[23:19:59] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Block Loot Tables
+[23:19:59] [Render thread/INFO] (Minecraft) Excessive Building/Block Loot Tables finished after 193 ms
+[23:19:59] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Model Definitions
+[23:19:59] [Render thread/INFO] (Minecraft) Excessive Building/Model Definitions finished after 322 ms
+[23:19:59] [Render thread/INFO] (Minecraft) All providers took: 1646 ms
+[23:20:00] [Render thread/INFO] (Minecraft) Caching: total files: 1360, old count: 1359, new count: 1361, removed stale: 0, written: 17

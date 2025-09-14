@@ -218,6 +218,20 @@ public class EBBlocks {
     public static final Supplier<Block> ANCIENT_VINES = register("ancient_vines", () -> new AncientVinesBlock(EBProperties.BlockP.ANCIENT_VINES), true);
     public static final Supplier<Block> ANCIENT_VINES_PLANT = register("ancient_vines_plant", () -> new AncientVinesPlantBlock(EBProperties.BlockP.ANCIENT_VINES_PLANT), false);
 
+    //CHAIRS
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_CHAIRS = new HashMap<>();
+
+    static {
+        for (DyeColor colors : DyeColor.values()) {
+            DYED_CHAIRS.put(colors, register(colors + "_chair", () -> new ChairBlock(
+                    BlockBehaviour.Properties.copy(Blocks.RED_BED).mapColor(colors)), true));
+        }
+    }
+
+    public static Supplier<Block> getDyedChairs(int colors){
+        return DYED_CHAIRS.get(DyeColor.byId(colors));
+    }
+
     //MISC
     public static final Supplier<Block> KILN = register("kiln", () -> new KilnBlock(EBProperties.BlockP.KILN), true);
     public static final Supplier<Block> ZEUS_EPIC_BLOCK = register("zeus_epic_block", () -> new RotatedPillarBlock(EBProperties.BlockP.ZEUS), true);

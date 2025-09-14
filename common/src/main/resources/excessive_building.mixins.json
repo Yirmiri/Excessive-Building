@@ -12,6 +12,7 @@
     "EfficiencyEnchantmentMixin",
     "EnchantmentHelperMixin",
     "GrowingPlantBlockMixin",
+    "ItemEntityMixin",
     "ItemMixin",
     "PotionBrewingMixin"
   ],

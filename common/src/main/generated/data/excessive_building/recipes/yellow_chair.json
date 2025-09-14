@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "chair",
+  "key": {
+    "#": {
+      "item": "minecraft:yellow_wool"
+    },
+    "@": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "@ @"
+  ],
+  "result": {
+    "count": 2,
+    "item": "excessive_building:yellow_chair"
+  },
+  "show_notification": true
+}

@@ -17,6 +17,7 @@ public class ExcessiveBuilding {
         EBParticles.loadParticles();
         EBPotions.loadPotions();
         EBEffects.loadEffects();
+        EBEntities.loadEntities();
     }
 
     public static ResourceLocation modid(String id) {

@@ -563,6 +563,25 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("## ")
                 .pattern(" ##");
 
+        //==========================CHAIR==========================
+
+        createChair(EBBlocks.getDyedChairs(DyeColor.WHITE.getId()).get().asItem(), Items.WHITE_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.LIGHT_GRAY.getId()).get().asItem(), Items.LIGHT_GRAY_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.GRAY.getId()).get().asItem(), Items.GRAY_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.BLACK.getId()).get().asItem(), Items.BLACK_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.BROWN.getId()).get().asItem(), Items.BROWN_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.RED.getId()).get().asItem(), Items.RED_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.ORANGE.getId()).get().asItem(), Items.ORANGE_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.YELLOW.getId()).get().asItem(), Items.YELLOW_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.LIME.getId()).get().asItem(), Items.LIME_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.GREEN.getId()).get().asItem(), Items.GREEN_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.CYAN.getId()).get().asItem(), Items.CYAN_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.LIGHT_BLUE.getId()).get().asItem(), Items.LIGHT_BLUE_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.BLUE.getId()).get().asItem(), Items.BLUE_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.PURPLE.getId()).get().asItem(), Items.PURPLE_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.MAGENTA.getId()).get().asItem(), Items.MAGENTA_WOOL).save(consumer);
+        createChair(EBBlocks.getDyedChairs(DyeColor.PINK.getId()).get().asItem(), Items.PINK_WOOL).save(consumer);
+
         //====================================================
         stonecutterRecipeTreeGenerator.generateRecipes(consumer);
     }
@@ -625,6 +644,14 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .pattern("###")
                 .pattern("#@#")
                 .pattern("###");
+    }
+
+    public static ShapedRecipeBuilder createChair(Item output, Item wool) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 2)
+                .define('@', ItemTags.PLANKS).define('#', wool)
+                .pattern("###")
+                .pattern("@ @")
+                .group("chair").unlockedBy("has_wool", has(wool));
     }
 
     public static ShapedRecipeBuilder createChiseled(Item output, Item ingredient) {

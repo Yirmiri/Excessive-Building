@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-09T00:44:44.8524408	Excessive Building/Tags for minecraft:item
+// 1.20.1	2025-09-13T23:19:59.861861	Excessive Building/Tags for minecraft:item
 63e536c99e097cc6535fa2e9c41a11e6b260021a data\minecraft\tags\items\stairs.json
 cd5bc44ed602ab0098c1fed75a633d7c6ae24ba5 data\minecraft\tags\items\leaves.json
 c961787dd6feb3f7383b3bb42adc46fb46288a0d data\minecraft\tags\items\fence_gates.json
@@ -6,8 +6,8 @@ c961787dd6feb3f7383b3bb42adc46fb46288a0d data\minecraft\tags\items\fence_gates.j
 c474d0c7d61ce32856dddcc22cf87150d0b1c28e data\minecraft\tags\items\slabs.json
 2c36f6032581c5bfd252f43d578ae38847cbbb8d data\minecraft\tags\items\wooden_buttons.json
 9552d798293cd216aa8dae9f734d807baecfaff4 data\excessive_building\tags\items\ancient_logs.json
-d6baa765882ad7b35baf7948e3743e0417de04b7 data\minecraft\tags\items\beacon_payment_items.json
 437d085c25e1593bff306e0b8187644ce395bdb1 data\minecraft\tags\items\boats.json
+d6baa765882ad7b35baf7948e3743e0417de04b7 data\minecraft\tags\items\beacon_payment_items.json
 5fb66c1130328a7cf0e74d8ce0179834e52d5aec data\minecraft\tags\items\wooden_fences.json
 ed66a60d224eafa32222f04f5f305d88b374a938 data\minecraft\tags\items\logs_that_burn.json
 c474d0c7d61ce32856dddcc22cf87150d0b1c28e data\minecraft\tags\items\wooden_slabs.json
