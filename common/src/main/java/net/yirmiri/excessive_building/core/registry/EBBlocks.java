@@ -269,11 +269,11 @@ public class EBBlocks {
     }
 
     private static Supplier<Block> registerVerticalStair(String modId, String id, Supplier<Block> block, boolean hasItem) {
-        VERTICAL_STAIRS.add(block);
+        //VERTICAL_STAIRS.add(block); //Consider adding vertical stairs back in
         return Services.REGISTRY.registerBlock(modId, id, block, hasItem);
     }
 
     public static void loadBlocks() {
-        createVerticalStairs();
+        //createVerticalStairs(); //Consider adding vertical stairs back in
     }
 }

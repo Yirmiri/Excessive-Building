@@ -2,7 +2,9 @@ package net.yirmiri.excessive_building;
 
 import net.azurune.runiclib.core.platform.Services;
 import net.minecraft.client.renderer.RenderType;
+import net.yirmiri.excessive_building.common.particle.FallingLeavesParticle;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBParticles;
 
 public class ExcessiveBuildingClient {
     public static void clientinit() {

@@ -9,7 +9,7 @@ public class FallingLeavesParticle extends TextureSheetParticle {
     private final float particleRandom;
     private final float spinAcceleration;
 
-    protected FallingLeavesParticle(ClientLevel level, double x, double y, double z, SpriteSet spriteSet) {
+    public FallingLeavesParticle(ClientLevel level, double x, double y, double z, SpriteSet spriteSet) {
         super(level, x, y, z);
         this.setSprite(spriteSet.get(this.random.nextInt(12), 12));
         this.rotSpeed = (float)Math.toRadians(this.random.nextBoolean() ? -30.0D : 30.0D);

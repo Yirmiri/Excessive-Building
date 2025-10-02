@@ -17,9 +17,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yirmiri.excessive_building.common.entity.render.InvisibleEntityRenderer;
+import net.yirmiri.excessive_building.common.particle.FallingLeavesParticle;
 import net.yirmiri.excessive_building.common.util.BlockTransmutation;
 import net.yirmiri.excessive_building.common.util.EBUtil;
 import net.yirmiri.excessive_building.core.registry.EBEntities;
+import net.yirmiri.excessive_building.core.registry.EBParticles;
 
 @Mod(ExcessiveBuilding.MOD_ID)
 public class ForgeExcessiveBuilding {
@@ -37,7 +39,7 @@ public class ForgeExcessiveBuilding {
 
     @SubscribeEvent
     public void registerParticles(RegisterParticleProvidersEvent event) {
-        //event.registerSpriteSet((SimpleParticleType) EBParticles.ANCIENT.get(), FallingLeavesParticle.Provider::new);
+        //event.registerSpriteSet(EBParticles.ANCIENT.get(), FallingLeavesParticle.Provider::new);
     }
 
     @SubscribeEvent

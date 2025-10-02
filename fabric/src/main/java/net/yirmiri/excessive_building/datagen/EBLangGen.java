@@ -243,7 +243,7 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add("item.minecraft.lingering_potion.effect.strong_rapidity_potion", "Lingering Potion of Rapidity");
         build.add("item.minecraft.tipped_arrow.effect.strong_rapidity_potion", "Arrow of Rapidity");
 
-        //YAPPING TOOLTIPS //TODO (not priority)
+        //YAPPING TOOLTIPS //TODO (not priority), chairs should reference wikipedia
         addYT(build, EBBlocks.ZEUS_EPIC_BLOCK.get(), "The most powerful block of them all... its the best block objectively.");
         addYT(build, EBBlocks.ARIDITE.get(), "A sedimentary rock that can be found generating in cluster under deserts.");
 
