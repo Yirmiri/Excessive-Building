@@ -46,25 +46,6 @@ public class EBBlocks {
     public static final Supplier<Block> DIORITE_BRICK_SLAB = register("diorite_brick_slab", () -> new SlabBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
     public static final Supplier<Block> DIORITE_BRICK_WALL = register("diorite_brick_wall", () -> new WallBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
 
-    //ELYERIUM
-    public static final Supplier<Block> ELYERIUM = register("elyerium", () -> new Block(EBProperties.BlockP.ELYERIUM), true);
-    public static final Supplier<Block> ELYERIUM_STAIRS = register("elyerium_stairs", () -> new PublicStairBlock(ELYERIUM.get().defaultBlockState(), EBProperties.BlockP.ELYERIUM), true);
-    public static final Supplier<Block> ELYERIUM_SLAB = register("elyerium_slab", () -> new SlabBlock(EBProperties.BlockP.ELYERIUM), true);
-    public static final Supplier<Block> ELYERIUM_WALL = register("elyerium_wall", () -> new WallBlock(EBProperties.BlockP.ELYERIUM), true);
-
-    public static final Supplier<Block> POLISHED_ELYERIUM = register("polished_elyerium", () -> new Block(EBProperties.BlockP.POLISHED_ELYERIUM), true);
-    public static final Supplier<Block> POLISHED_ELYERIUM_STAIRS = register("polished_elyerium_stairs", () -> new PublicStairBlock(POLISHED_ELYERIUM.get().defaultBlockState(), EBProperties.BlockP.POLISHED_ELYERIUM), true);
-    public static final Supplier<Block> POLISHED_ELYERIUM_SLAB = register("polished_elyerium_slab", () -> new SlabBlock(EBProperties.BlockP.POLISHED_ELYERIUM), true);
-    public static final Supplier<Block> POLISHED_ELYERIUM_WALL = register("polished_elyerium_wall", () -> new WallBlock(EBProperties.BlockP.POLISHED_ELYERIUM), true);
-
-    public static final Supplier<Block> ELYERIUM_BRICKS = register("elyerium_bricks", () -> new Block(EBProperties.BlockP.ELYERIUM_BRICKS), true);
-    public static final Supplier<Block> ELYERIUM_BRICK_STAIRS = register("elyerium_brick_stairs", () -> new PublicStairBlock(ELYERIUM_BRICKS.get().defaultBlockState(), EBProperties.BlockP.ELYERIUM_BRICKS), true);
-    public static final Supplier<Block> ELYERIUM_BRICK_SLAB = register("elyerium_brick_slab", () -> new SlabBlock(EBProperties.BlockP.ELYERIUM_BRICKS), true);
-    public static final Supplier<Block> ELYERIUM_BRICK_WALL = register("elyerium_brick_wall", () -> new WallBlock(EBProperties.BlockP.ELYERIUM_BRICKS), true);
-
-    public static final Supplier<Block> CHISELED_ELYERIUM = register("chiseled_elyerium", () -> new Block(EBProperties.BlockP.POLISHED_ELYERIUM), true);
-    public static final Supplier<Block> ELYERIUM_PILLAR = register("elyerium_pillar", () -> new RotatedPillarBlock(EBProperties.BlockP.POLISHED_ELYERIUM), true);
-
     //HECTALITE
     public static final Supplier<Block> HECTALITE = register("hectalite", () -> new Block(EBProperties.BlockP.HECTALITE), true);
     public static final Supplier<Block> HECTALITE_STAIRS = register("hectalite_stairs", () -> new PublicStairBlock(HECTALITE.get().defaultBlockState(), EBProperties.BlockP.HECTALITE), true);
@@ -148,18 +129,6 @@ public class EBBlocks {
         return DYED_FROSTED_GLASS.get(DyeColor.byId(colors));
     }
 
-    //RADIANCE
-    public static final Supplier<Block> RADIANCE_ORE = register("radiance_ore", () -> new Block(EBProperties.BlockP.RADIANCE), true);
-    public static final Supplier<Block> DEEPSLATE_RADIANCE_ORE = register("deepslate_radiance_ore", () -> new Block(EBProperties.BlockP.DEEPSLATE_RADIANCE), true);
-    public static final Supplier<Block> RADIANCE_BLOCK = register("radiance_block", () -> new Block(EBProperties.BlockP.RADIANCE_BLOCK), true);
-
-    public static final Supplier<Block> RADIANCE_FRAMED_GLASS = register("radiance_framed_glass", () -> new GlassBlock(EBProperties.BlockP.CRYSTAL_GLASS), true);
-    public static final Supplier<Block> RADIANCE_FRAMED_GLASS_PANE = register("radiance_framed_glass_pane", () -> new StainedGlassPaneBlock(DyeColor.BLUE, EBProperties.BlockP.CRYSTAL_GLASS), true);
-
-    public static final Supplier<Block> RADIANCE_LANTERN = register("radiance_lantern", () -> new Block(EBProperties.BlockP.CRYSTAL_LANTERN), true);
-
-    public static final Supplier<Block> ICE_PILLAR = register("ice_pillar", () -> new TemporaryBlock(EBProperties.BlockP.ICE), true);
-
     //SHELVES
     public static final Supplier<Block> ALCHEMY_SHELF = register("alchemy_shelf", () -> new Block(EBProperties.BlockP.BOOKSHELF), true);
     public static final Supplier<Block> ALCHEMY_SHELF_VARIANT1 = register("alchemy_shelf_variant1", () -> new CloneOtherBlock(ALCHEMY_SHELF.get(), EBProperties.BlockP.BOOKSHELF), false);
@@ -175,27 +144,9 @@ public class EBBlocks {
     public static final Supplier<Block> BOOKSHELF_VARIANT5 = register("bookshelf_variant5", () -> new CloneOtherBlock(Blocks.BOOKSHELF, EBProperties.BlockP.BOOKSHELF), false);
 
     //PRISMARINE
-    public static final Supplier<Block> PRISMARINE_CLUSTER = register("prismarine_cluster", () -> new AmethystClusterBlock(7, 3, EBProperties.BlockP.CRYSTAL_CLUSTER), true);
-    public static final Supplier<Block> LARGE_PRISMARINE_BUD = register("large_prismarine_bud", () -> new AmethystClusterBlock(5, 3, EBProperties.BlockP.LARGE_BUD), true);
-    public static final Supplier<Block> MEDIUM_PRISMARINE_BUD = register("medium_prismarine_bud", () -> new AmethystClusterBlock(4, 3, EBProperties.BlockP.MEDIUM_BUD), true);
-    public static final Supplier<Block> SMALL_PRISMARINE_BUD = register("small_prismarine_bud", () -> new AmethystClusterBlock(3, 4, EBProperties.BlockP.SMALL_BUD), true);
-
-    public static final Supplier<Block> PRISMARINE_TILES = register("prismarine_tiles", () -> new Block(EBProperties.BlockP.PRISMARINE), true);
-    public static final Supplier<Block> PRISMARINE_TILE_STAIRS = register("prismarine_tile_stairs", () -> new PublicStairBlock(PRISMARINE_TILES.get().defaultBlockState(), EBProperties.BlockP.PRISMARINE), true);
-    public static final Supplier<Block> PRISMARINE_TILE_SLAB = register("prismarine_tile_slab", () -> new SlabBlock(EBProperties.BlockP.PRISMARINE), true);
-
     public static final Supplier<Block> POLISHED_PRISMARINE = register("polished_prismarine", () -> new Block(EBProperties.BlockP.PRISMARINE), true);
     public static final Supplier<Block> POLISHED_PRISMARINE_STAIRS = register("polished_prismarine_stairs", () -> new PublicStairBlock(POLISHED_PRISMARINE.get().defaultBlockState(), EBProperties.BlockP.PRISMARINE), true);
     public static final Supplier<Block> POLISHED_PRISMARINE_SLAB = register("polished_prismarine_slab", () -> new SlabBlock(EBProperties.BlockP.PRISMARINE), true);
-
-    //DARK PRISMARINE
-    public static final Supplier<Block> DARK_PRISMARINE_BRICKS = register("dark_prismarine_bricks", () -> new Block(EBProperties.BlockP.DARK_PRISMARINE), true);
-    public static final Supplier<Block> DARK_PRISMARINE_BRICK_STAIRS = register("dark_prismarine_brick_stairs", () -> new PublicStairBlock(DARK_PRISMARINE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.DARK_PRISMARINE), true);
-    public static final Supplier<Block> DARK_PRISMARINE_BRICK_SLAB = register("dark_prismarine_brick_slab", () -> new SlabBlock(EBProperties.BlockP.DARK_PRISMARINE), true);
-
-    public static final Supplier<Block> DARK_PRISMARINE_TILES = register("dark_prismarine_tiles", () -> new Block(EBProperties.BlockP.DARK_PRISMARINE), true);
-    public static final Supplier<Block> DARK_PRISMARINE_TILE_STAIRS = register("dark_prismarine_tile_stairs", () -> new PublicStairBlock(DARK_PRISMARINE_TILES.get().defaultBlockState(), EBProperties.BlockP.DARK_PRISMARINE), true);
-    public static final Supplier<Block> DARK_PRISMARINE_TILE_SLAB = register("dark_prismarine_tile_slab", () -> new SlabBlock(EBProperties.BlockP.DARK_PRISMARINE), true);
 
     public static final Supplier<Block> POLISHED_DARK_PRISMARINE = register("polished_dark_prismarine", () -> new Block(EBProperties.BlockP.DARK_PRISMARINE), true);
     public static final Supplier<Block> POLISHED_DARK_PRISMARINE_STAIRS = register("polished_dark_prismarine_stairs", () -> new PublicStairBlock(POLISHED_DARK_PRISMARINE.get().defaultBlockState(), EBProperties.BlockP.DARK_PRISMARINE), true);

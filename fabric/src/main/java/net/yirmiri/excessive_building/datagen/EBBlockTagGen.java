@@ -26,11 +26,8 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendMineableWithPickaxe();
         appendWalls();
         appendMineableWithMallet();
-        appendNeedsIronTool();
-        appendBeaconBaseBlocks();
         appendEnchantmentPowerProvider();
         appendMineableWithAxe();
-        appendReplaceable();
         generateBlockFamilyBlockTags();
         appendSapling();
         appendFlowerPots();
@@ -40,15 +37,12 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     private void appendMineableWithMallet() {
         getOrCreateTagBuilder(EBTags.BlockT.MINEABLE_WITH_MALLET)
-                .add(EBBlocks.RADIANCE_FRAMED_GLASS.get())
-                .add(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get())
                 .add(Blocks.SEA_LANTERN)
                 .add(Blocks.GLOWSTONE)
                 .add(Blocks.REDSTONE_LAMP)
                 .add(EBBlocks.AMETHYST_FRAMED_GLASS.get())
                 .add(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get())
                 .add(EBBlocks.AMETHYST_LANTERN.get())
-                .add(EBBlocks.RADIANCE_LANTERN.get())
                 .add(Blocks.TINTED_GLASS)
                 .add(Blocks.GLASS)
                 .add(Blocks.GLASS_PANE)
@@ -146,14 +140,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         ;
     }
 
-    private void appendNeedsIronTool() {
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(EBBlocks.RADIANCE_ORE.get())
-                .add(EBBlocks.DEEPSLATE_RADIANCE_ORE.get())
-                .add(EBBlocks.RADIANCE_BLOCK.get())
-        ;
-    }
-
     private void appendMineableWithAxe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
                 .add(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_stairs").get())
@@ -177,53 +163,20 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
     private void appendMineableWithPickaxe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(EBBlocks.ZEUS_EPIC_BLOCK.get())
-                .add(EBBlocks.ICE_PILLAR.get())
-
-                .add(EBBlocks.PRISMARINE_CLUSTER.get())
-                .add(EBBlocks.LARGE_PRISMARINE_BUD.get())
-                .add(EBBlocks.SMALL_PRISMARINE_BUD.get())
-                .add(EBBlocks.MEDIUM_PRISMARINE_BUD.get())
 
                 .add(EBBlocks.POLISHED_PRISMARINE.get())
                 .add(EBBlocks.POLISHED_PRISMARINE_STAIRS.get())
                 .add(EBBlocks.POLISHED_PRISMARINE_SLAB.get())
 
-                .add(EBBlocks.PRISMARINE_TILES.get())
-                .add(EBBlocks.PRISMARINE_TILE_STAIRS.get())
-                .add(EBBlocks.PRISMARINE_TILE_SLAB.get())
-
                 .add(EBBlocks.POLISHED_DARK_PRISMARINE.get())
                 .add(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get())
                 .add(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get())
 
-                .add(EBBlocks.DARK_PRISMARINE_TILES.get())
-                .add(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get())
-                .add(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get())
-
-                .add(EBBlocks.DARK_PRISMARINE_TILES.get())
-                .add(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get())
-                .add(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get())
-
                 .add(EBBlocks.KILN.get())
 
-                .add(EBBlocks.ELYERIUM_PILLAR.get())
                 .add(EBBlocks.HECTALITE_PILLAR.get())
                 .add(EBBlocks.CHLOROSLATE_PILLAR.get())
                 .add(EBBlocks.ARIDITE_PILLAR.get())
-
-                .add(EBBlocks.ELYERIUM.get())
-                .add(EBBlocks.ELYERIUM_STAIRS.get())
-                .add(EBBlocks.ELYERIUM_SLAB.get())
-                .add(EBBlocks.ELYERIUM_WALL.get())
-                .add(EBBlocks.POLISHED_ELYERIUM.get())
-                .add(EBBlocks.POLISHED_ELYERIUM_STAIRS.get())
-                .add(EBBlocks.POLISHED_ELYERIUM_SLAB.get())
-                .add(EBBlocks.POLISHED_ELYERIUM_WALL.get())
-                .add(EBBlocks.ELYERIUM_BRICKS.get())
-                .add(EBBlocks.ELYERIUM_BRICK_STAIRS.get())
-                .add(EBBlocks.ELYERIUM_BRICK_SLAB.get())
-                .add(EBBlocks.ELYERIUM_BRICK_WALL.get())
-                .add(EBBlocks.CHISELED_ELYERIUM.get())
 
                 .add(EBBlocks.CHLOROSLATE.get())
                 .add(EBBlocks.CHLOROSLATE_STAIRS.get())
@@ -272,10 +225,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.AMETHYST_BRICK_SLAB.get())
                 .add(EBBlocks.AMETHYST_BRICK_WALL.get())
 
-                .add(EBBlocks.RADIANCE_BLOCK.get())
-                .add(EBBlocks.RADIANCE_ORE.get())
-                .add(EBBlocks.DEEPSLATE_RADIANCE_ORE.get())
-
                 .add(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get())
                 .add(EBBlocks.COBBLESTONE_BRICKS.get())
                 .add(EBBlocks.COBBLESTONE_BRICK_STAIRS.get())
@@ -301,10 +250,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
 
     private void appendWalls() {
         getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(EBBlocks.ELYERIUM_WALL.get())
-                .add(EBBlocks.POLISHED_ELYERIUM_WALL.get())
-                .add(EBBlocks.ELYERIUM_BRICK_WALL.get())
-
                 .add(EBBlocks.HECTALITE_WALL.get())
                 .add(EBBlocks.POLISHED_HECTALITE_WALL.get())
                 .add(EBBlocks.HECTALITE_BRICK_WALL.get())
@@ -323,18 +268,6 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.GRANITE_BRICK_WALL.get())
                 .add(EBBlocks.DIORITE_BRICK_WALL.get())
                 .add(EBBlocks.ANDESITE_BRICK_WALL.get())
-        ;
-    }
-
-    private void appendReplaceable() {
-        getOrCreateTagBuilder(BlockTags.REPLACEABLE)
-                .add(EBBlocks.ICE_PILLAR.get())
-        ;
-    }
-
-    private void appendBeaconBaseBlocks() {
-        getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
-                .add(EBBlocks.RADIANCE_BLOCK.get())
         ;
     }
 

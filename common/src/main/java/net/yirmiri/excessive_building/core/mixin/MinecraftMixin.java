@@ -29,8 +29,8 @@ public class MinecraftMixin {
     private int getClickDelay() {
         int clickDelay = 4;
 
-        boolean mainHandGauntlet = player.getMainHandItem().is(EBItems.RADIANCE_GAUNTLET.get());
-        boolean offHandGauntlet = player.getOffhandItem().is(EBItems.RADIANCE_GAUNTLET.get());
+        boolean mainHandGauntlet = player.getMainHandItem().is(EBItems.GAUNTLET.get());
+        boolean offHandGauntlet = player.getOffhandItem().is(EBItems.GAUNTLET.get());
         boolean mainHandBlock = player.getMainHandItem().getItem() instanceof BlockItem;
         boolean offHandBlock = player.getOffhandItem().getItem() instanceof BlockItem;
 

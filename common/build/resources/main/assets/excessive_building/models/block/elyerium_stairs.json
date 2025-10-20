@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "excessive_building:block/elyerium",
-    "side": "excessive_building:block/elyerium",
-    "top": "excessive_building:block/elyerium"
-  }
-}

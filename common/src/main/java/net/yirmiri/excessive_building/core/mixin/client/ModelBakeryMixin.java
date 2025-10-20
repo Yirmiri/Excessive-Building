@@ -20,7 +20,7 @@ public abstract class ModelBakeryMixin {
     @SuppressWarnings("rawtypes")
     @Inject(method = "<init>", at = @At(value = "TAIL"))
     void excessiveBuilding$init(BlockColors colors, ProfilerFiller filler, Map modelresources, Map map, CallbackInfo ci) {
-        loadTopLevel(new ModelResourceLocation(ExcessiveBuilding.MOD_ID, "radiance_gauntlet_model", "inventory"));
-        loadTopLevel(new ModelResourceLocation(ExcessiveBuilding.MOD_ID, "radiance_gauntlet_model_offhand", "inventory"));
+        loadTopLevel(new ModelResourceLocation(ExcessiveBuilding.MOD_ID, "gauntlet_model", "inventory"));
+        loadTopLevel(new ModelResourceLocation(ExcessiveBuilding.MOD_ID, "gauntlet_model_offhand", "inventory"));
     }
 }

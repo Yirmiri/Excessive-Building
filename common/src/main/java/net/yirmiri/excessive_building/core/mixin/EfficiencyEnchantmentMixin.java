@@ -13,7 +13,7 @@ public abstract class EfficiencyEnchantmentMixin {
 
     @Inject(method = "canEnchant", at = @At("HEAD"), cancellable = true)
     private void excessiveBuilding$canEnchant(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        if (stack.is(EBItems.RADIANCE_GAUNTLET.get())) {
+        if (stack.is(EBItems.GAUNTLET.get())) {
             cir.setReturnValue(false);
         }
     }

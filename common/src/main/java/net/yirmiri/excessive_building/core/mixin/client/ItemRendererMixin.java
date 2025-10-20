@@ -22,13 +22,13 @@ public abstract class ItemRendererMixin {
 
     @ModifyVariable(method = "render", at = @At(value = "HEAD"), argsOnly = true)
     public BakedModel excessiveBuilding$render(BakedModel model, ItemStack stack, ItemDisplayContext ctx, boolean leftHanded, PoseStack matrices, MultiBufferSource buffer, int light, int overlay) {
-        if (stack.is(EBItems.RADIANCE_GAUNTLET.get())) {
+        if (stack.is(EBItems.GAUNTLET.get())) {
             if (ctx == ItemDisplayContext.FIRST_PERSON_RIGHT_HAND || ctx == ItemDisplayContext.THIRD_PERSON_RIGHT_HAND) {
                 return (this.getItemModelShaper().getModelManager()
-                        .getModel(new ModelResourceLocation(ExcessiveBuilding.MOD_ID, "radiance_gauntlet_model", "inventory")));
+                        .getModel(new ModelResourceLocation(ExcessiveBuilding.MOD_ID, "gauntlet_model", "inventory")));
             } else if (ctx == ItemDisplayContext.FIRST_PERSON_LEFT_HAND || ctx == ItemDisplayContext.THIRD_PERSON_LEFT_HAND) {
                 return (this.getItemModelShaper().getModelManager()
-                        .getModel(new ModelResourceLocation(ExcessiveBuilding.MOD_ID, "radiance_gauntlet_model_offhand", "inventory")));
+                        .getModel(new ModelResourceLocation(ExcessiveBuilding.MOD_ID, "gauntlet_model_offhand", "inventory")));
             }
         }
         return model;

@@ -25,13 +25,13 @@ import net.yirmiri.excessive_building.core.registry.EBParticles;
 
 @Mod(ExcessiveBuilding.MOD_ID)
 public class ForgeExcessiveBuilding {
-    public ForgeExcessiveBuilding() {
+    public ForgeExcessiveBuilding() { //todo also fix strippables
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ExcessiveBuilding.init();
 
         eventBus.addListener(this::clientSetup);
-        //eventBus.addListener(this::onRegisterReloadListeners); //TODO (also on top of this todo strippables/registries)
+        //eventBus.addListener(this::onRegisterReloadListeners); //TODO fix
         //eventBus.addListener(this::playerRightClickInteractEvent); //TODO
         eventBus.addListener(this::registerParticles);
         eventBus.addListener(this::registerEntityRenderer);

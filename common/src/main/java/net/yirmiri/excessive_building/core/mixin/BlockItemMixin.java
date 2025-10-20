@@ -17,9 +17,9 @@ public class BlockItemMixin {
     private void excessiveBuilding$placeBlock(BlockPlaceContext ctx, BlockState state, CallbackInfoReturnable<Boolean> cir) {
         Player player = ctx.getPlayer();
         if (player != null && !player.isCreative()) {
-            if (player.getMainHandItem().is(EBItems.RADIANCE_GAUNTLET.get())) {
+            if (player.getMainHandItem().is(EBItems.GAUNTLET.get())) {
                 player.getMainHandItem().setDamageValue(player.getMainHandItem().getDamageValue() + 1);
-            } else if (player.getOffhandItem().is(EBItems.RADIANCE_GAUNTLET.get())) {
+            } else if (player.getOffhandItem().is(EBItems.GAUNTLET.get())) {
                 player.getOffhandItem().setDamageValue(player.getOffhandItem().getDamageValue() + 1);
             }
         }

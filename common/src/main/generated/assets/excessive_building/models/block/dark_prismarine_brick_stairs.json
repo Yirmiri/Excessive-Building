@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "excessive_building:block/dark_prismarine_bricks",
-    "side": "excessive_building:block/dark_prismarine_bricks",
-    "top": "excessive_building:block/dark_prismarine_bricks"
-  }
-}

@@ -1,11 +1,11 @@
 package net.yirmiri.excessive_building.common.util;
 
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.yirmiri.excessive_building.core.registry.EBItems;
 
 public class EBMaterials {
-    public static final Tier RADIANCE_GAUNTLET = new Tier() {
+    public static final Tier GAUNTLET = new Tier() {
         public int getLevel() {
             return 4;
         }
@@ -19,7 +19,7 @@ public class EBMaterials {
         }
 
         public float getAttackDamageBonus() {
-            return 2.5F;
+            return 1.5F;
         }
 
         public int getEnchantmentValue() {
@@ -27,11 +27,11 @@ public class EBMaterials {
         }
 
         public Ingredient getRepairIngredient() {
-            return Ingredient.of(EBItems.RADIANCE_INGOT.get());
+            return Ingredient.of(Items.AMETHYST_SHARD);
         }
     };
 
-    public static final Tier RADIANCE_MALLET = new Tier() {
+    public static final Tier MALLET = new Tier() {
         public int getLevel() {
             return 4;
         }
@@ -45,7 +45,7 @@ public class EBMaterials {
         }
 
         public float getAttackDamageBonus() {
-            return 2.5F;
+            return 1.5F;
         }
 
         public int getEnchantmentValue() {
@@ -53,7 +53,7 @@ public class EBMaterials {
         }
 
         public Ingredient getRepairIngredient() {
-            return Ingredient.of(EBItems.RADIANCE_INGOT.get());
+            return Ingredient.of(Items.AMETHYST_SHARD);
         }
     };
 

@@ -25,7 +25,6 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         appendWalls();
-        appendBeaconPaymentItems();
         appendHasMalletVariants();
         appendBoats();
         generateBlockFamilyItemTags();
@@ -40,10 +39,6 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
 
     private void appendWalls() {
         getOrCreateTagBuilder(ItemTags.WALLS)
-                .add(EBBlocks.ELYERIUM_WALL.get().asItem())
-                .add(EBBlocks.POLISHED_ELYERIUM_WALL.get().asItem())
-                .add(EBBlocks.ELYERIUM_BRICK_WALL.get().asItem())
-
                 .add(EBBlocks.HECTALITE_WALL.get().asItem())
                 .add(EBBlocks.POLISHED_HECTALITE_WALL.get().asItem())
                 .add(EBBlocks.HECTALITE_BRICK_WALL.get().asItem())
@@ -58,12 +53,6 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.GRANITE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.DIORITE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.ANDESITE_BRICK_WALL.get().asItem())
-        ;
-    }
-
-    private void appendBeaconPaymentItems() {
-        getOrCreateTagBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
-                .add(EBItems.RADIANCE_INGOT.get().asItem())
         ;
     }
 

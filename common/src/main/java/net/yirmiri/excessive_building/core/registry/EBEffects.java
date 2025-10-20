@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 
 public class EBEffects {
     //BENEFICIAL
-    public static final Supplier<MobEffect> RAPIDITY = registerEffect("rapidity", () -> new PublicMobEffect(MobEffectCategory.BENEFICIAL, 0xbca2e9));
+    public static final Supplier<MobEffect> RAPIDITY = registerEffect("rapidity", () -> new PublicMobEffect(MobEffectCategory.BENEFICIAL, 0x7e4fd1));
 
     private static Supplier<MobEffect> registerEffect(String id, Supplier<MobEffect> type) {
         return Services.REGISTRY.registerEffect(ExcessiveBuilding.MOD_ID, id, type);

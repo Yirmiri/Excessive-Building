@@ -1,15 +1,12 @@
 {
   "replace": false,
   "values": [
-    "excessive_building:radiance_framed_glass",
-    "excessive_building:radiance_framed_glass_pane",
     "minecraft:sea_lantern",
     "minecraft:glowstone",
     "minecraft:redstone_lamp",
     "excessive_building:amethyst_framed_glass",
     "excessive_building:amethyst_framed_glass_pane",
     "excessive_building:amethyst_lantern",
-    "excessive_building:radiance_lantern",
     "minecraft:tinted_glass",
     "minecraft:glass",
     "minecraft:glass_pane",

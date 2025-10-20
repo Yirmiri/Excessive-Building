@@ -15,9 +15,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.common.block.AncientVinesBlock;
-import net.yirmiri.excessive_building.common.block.AncientVinesPlantBlock;
-import net.yirmiri.excessive_building.common.block.VerticalStairBlock;
 import net.yirmiri.excessive_building.common.util.blockfamilycreator.BlockFamilyCreator;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
@@ -33,23 +30,6 @@ public class EBModelGen extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators generator) {
-        BlockModelGenerators.BlockFamilyProvider elyerium = generator.family(EBBlocks.ELYERIUM.get());
-        elyerium.stairs(EBBlocks.ELYERIUM_STAIRS.get());
-        elyerium.slab(EBBlocks.ELYERIUM_SLAB.get());
-        elyerium.wall(EBBlocks.ELYERIUM_WALL.get());
-
-        BlockModelGenerators.BlockFamilyProvider polishedElyerium = generator.family(EBBlocks.POLISHED_ELYERIUM.get());
-        polishedElyerium.stairs(EBBlocks.POLISHED_ELYERIUM_STAIRS.get());
-        polishedElyerium.slab(EBBlocks.POLISHED_ELYERIUM_SLAB.get());
-        polishedElyerium.wall(EBBlocks.POLISHED_ELYERIUM_WALL.get());
-
-        BlockModelGenerators.BlockFamilyProvider elyeriumbricks = generator.family(EBBlocks.ELYERIUM_BRICKS.get());
-        elyeriumbricks.stairs(EBBlocks.ELYERIUM_BRICK_STAIRS.get());
-        elyeriumbricks.slab(EBBlocks.ELYERIUM_BRICK_SLAB.get());
-        elyeriumbricks.wall(EBBlocks.ELYERIUM_BRICK_WALL.get());
-
-        generator.createTrivialCube(EBBlocks.CHISELED_ELYERIUM.get());
-
         BlockModelGenerators.BlockFamilyProvider hectalite = generator.family(EBBlocks.HECTALITE.get());
         hectalite.stairs(EBBlocks.HECTALITE_STAIRS.get());
         hectalite.slab(EBBlocks.HECTALITE_SLAB.get());
@@ -95,10 +75,6 @@ public class EBModelGen extends FabricModelProvider {
 
         generator.createTrivialCube(EBBlocks.CHISELED_CHLOROSLATE.get());
 
-        generator.createTrivialCube(EBBlocks.RADIANCE_BLOCK.get());
-        generator.createTrivialCube(EBBlocks.RADIANCE_ORE.get());
-        generator.createTrivialCube(EBBlocks.DEEPSLATE_RADIANCE_ORE.get());
-
         BlockModelGenerators.BlockFamilyProvider carmatite = generator.family(EBBlocks.ARIDITE.get());
         carmatite.stairs(EBBlocks.ARIDITE_STAIRS.get());
         carmatite.slab(EBBlocks.ARIDITE_SLAB.get());
@@ -117,7 +93,6 @@ public class EBModelGen extends FabricModelProvider {
         generator.createTrivialCube(EBBlocks.CHISELED_ARIDITE.get());
 
         generator.createRotatedPillarWithHorizontalVariant(EBBlocks.HECTALITE_PILLAR.get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
-        generator.createRotatedPillarWithHorizontalVariant(EBBlocks.ELYERIUM_PILLAR.get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
         generator.createRotatedPillarWithHorizontalVariant(EBBlocks.CHLOROSLATE_PILLAR.get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
         generator.createRotatedPillarWithHorizontalVariant(EBBlocks.ARIDITE_PILLAR.get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
 
@@ -146,9 +121,6 @@ public class EBModelGen extends FabricModelProvider {
         generator.createGlassBlocks(EBBlocks.AMETHYST_FRAMED_GLASS.get(), EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
         createCrystalLantern(generator, EBBlocks.AMETHYST_LANTERN.get());
 
-        createCrystalLantern(generator, EBBlocks.RADIANCE_LANTERN.get());
-        generator.createGlassBlocks(EBBlocks.RADIANCE_FRAMED_GLASS.get(), EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get());
-
         generator.createFurnace(EBBlocks.KILN.get(), TexturedModel.ORIENTABLE);
 
         createBookshelf(generator, EBBlocks.BOOKSHELF_VARIANT1.get(), Blocks.OAK_PLANKS);
@@ -168,28 +140,10 @@ public class EBModelGen extends FabricModelProvider {
         polishedPrismarine.stairs(EBBlocks.POLISHED_PRISMARINE_STAIRS.get());
         polishedPrismarine.slab(EBBlocks.POLISHED_PRISMARINE_SLAB.get());
 
-        BlockModelGenerators.BlockFamilyProvider prismarineTiles = generator.family(EBBlocks.PRISMARINE_TILES.get());
-        prismarineTiles.stairs(EBBlocks.PRISMARINE_TILE_STAIRS.get());
-        prismarineTiles.slab(EBBlocks.PRISMARINE_TILE_SLAB.get());
-
         BlockModelGenerators.BlockFamilyProvider polishedDarkPrismarine = generator.family(EBBlocks.POLISHED_DARK_PRISMARINE.get());
         polishedDarkPrismarine.stairs(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get());
         polishedDarkPrismarine.slab(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get());
 
-        BlockModelGenerators.BlockFamilyProvider darkPrismarineBricks = generator.family(EBBlocks.DARK_PRISMARINE_BRICKS.get());
-        darkPrismarineBricks.stairs(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get());
-        darkPrismarineBricks.slab(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get());
-        
-        BlockModelGenerators.BlockFamilyProvider darkPrismarineTiles = generator.family(EBBlocks.DARK_PRISMARINE_TILES.get());
-        darkPrismarineTiles.stairs(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get());
-        darkPrismarineTiles.slab(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get());
-
-        generator.createAmethystCluster(EBBlocks.PRISMARINE_CLUSTER.get());
-        generator.createAmethystCluster(EBBlocks.LARGE_PRISMARINE_BUD.get());
-        generator.createAmethystCluster(EBBlocks.MEDIUM_PRISMARINE_BUD.get());
-        generator.createAmethystCluster(EBBlocks.SMALL_PRISMARINE_BUD.get());
-
-        createCrystalLantern(generator, EBBlocks.ICE_PILLAR.get());
         generator.createTrivialCube(EBBlocks.ZEUS_EPIC_BLOCK.get());
 
         generator.createPlant(EBBlocks.ANCIENT_SAPLING.get(), EBBlocks.POTTED_ANCIENT_SAPLING.get(), BlockModelGenerators.TintState.NOT_TINTED);
@@ -201,16 +155,9 @@ public class EBModelGen extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators generator) {
-        generator.generateFlatItem(EBItems.RADIANCE_CRYSTAL.get(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(EBItems.RADIANCE_INGOT.get(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(EBItems.RADIANCE_MALLET.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        generator.generateFlatItem(EBItems.MALLET.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         generator.generateFlatItem(EBItems.ANCIENT_BOAT.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.ANCIENT_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(EBItems.BOOK_OF_FORMATION.get(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(EBBlocks.PRISMARINE_CLUSTER.get().asItem(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(EBBlocks.LARGE_PRISMARINE_BUD.get().asItem(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(EBBlocks.MEDIUM_PRISMARINE_BUD.get().asItem(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(EBBlocks.SMALL_PRISMARINE_BUD.get().asItem(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.ICHOR_FRUIT.get(), ModelTemplates.FLAT_ITEM);
     }
 

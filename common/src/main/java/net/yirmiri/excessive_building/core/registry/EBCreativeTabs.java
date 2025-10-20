@@ -5,7 +5,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 import java.util.function.Supplier;
@@ -14,8 +13,12 @@ public class EBCreativeTabs {
     public static final Supplier<CreativeModeTab> EXCESSIVE_BUILDING = Services.REGISTRY.registerCreativeModeTab(
             ExcessiveBuilding.MOD_ID, "excessive_building", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
                     .title(Component.translatable("itemgroup.excessive_building"))
-                    .icon(() -> new ItemStack(EBItems.RADIANCE_GAUNTLET.get()))
+                    .icon(() -> new ItemStack(EBItems.GAUNTLET.get()))
                     .displayItems((displayParameters, entry) -> {
+                        //TOOLS
+                        entry.accept(EBItems.MALLET.get());
+                        entry.accept(EBItems.GAUNTLET.get());
+
                         //STONES
                         entry.accept(EBBlocks.ARIDITE.get());
                         entry.accept(EBBlocks.ARIDITE_STAIRS.get());
@@ -62,21 +65,6 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.CHISELED_HECTALITE.get());
                         entry.accept(EBBlocks.HECTALITE_PILLAR.get());
 
-                        entry.accept(EBBlocks.ELYERIUM.get());
-                        entry.accept(EBBlocks.ELYERIUM_STAIRS.get());
-                        entry.accept(EBBlocks.ELYERIUM_SLAB.get());
-                        entry.accept(EBBlocks.ELYERIUM_WALL.get());
-                        entry.accept(EBBlocks.POLISHED_ELYERIUM.get());
-                        entry.accept(EBBlocks.POLISHED_ELYERIUM_STAIRS.get());
-                        entry.accept(EBBlocks.POLISHED_ELYERIUM_SLAB.get());
-                        entry.accept(EBBlocks.POLISHED_ELYERIUM_WALL.get());
-                        entry.accept(EBBlocks.ELYERIUM_BRICKS.get());
-                        entry.accept(EBBlocks.ELYERIUM_BRICK_STAIRS.get());
-                        entry.accept(EBBlocks.ELYERIUM_BRICK_SLAB.get());
-                        entry.accept(EBBlocks.ELYERIUM_BRICK_WALL.get());
-                        entry.accept(EBBlocks.CHISELED_ELYERIUM.get());
-                        entry.accept(EBBlocks.ELYERIUM_PILLAR.get());
-
                         //VANILLA STONES
                         entry.accept(EBBlocks.COBBLESTONE_BRICKS.get());
                         entry.accept(EBBlocks.COBBLESTONE_BRICK_STAIRS.get());
@@ -100,46 +88,13 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.ANDESITE_BRICK_WALL.get());
 
                         //PRISMARINE
-                        entry.accept(Blocks.PRISMARINE);
-                        entry.accept(Blocks.PRISMARINE_STAIRS);
-                        entry.accept(Blocks.PRISMARINE_SLAB);
-                        entry.accept(Blocks.PRISMARINE_WALL);
-
                         entry.accept(EBBlocks.POLISHED_PRISMARINE.get());
                         entry.accept(EBBlocks.POLISHED_PRISMARINE_STAIRS.get());
                         entry.accept(EBBlocks.POLISHED_PRISMARINE_SLAB.get());
-                        
-                        entry.accept(Blocks.PRISMARINE_BRICKS);
-                        entry.accept(Blocks.PRISMARINE_BRICK_STAIRS);
-                        entry.accept(Blocks.PRISMARINE_BRICK_SLAB);
-
-                        entry.accept(EBBlocks.PRISMARINE_TILES.get());
-                        entry.accept(EBBlocks.PRISMARINE_TILE_STAIRS.get());
-                        entry.accept(EBBlocks.PRISMARINE_TILE_SLAB.get());
-
-                        //DARK PRISMARINE
-                        entry.accept(Blocks.DARK_PRISMARINE);
-                        entry.accept(Blocks.DARK_PRISMARINE_STAIRS);
-                        entry.accept(Blocks.DARK_PRISMARINE_SLAB);
 
                         entry.accept(EBBlocks.POLISHED_DARK_PRISMARINE.get());
                         entry.accept(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get());
                         entry.accept(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get());
-                        
-                        entry.accept(EBBlocks.DARK_PRISMARINE_BRICKS.get());
-                        entry.accept(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get());
-                        entry.accept(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get());
-
-                        entry.accept(EBBlocks.DARK_PRISMARINE_TILES.get());
-                        entry.accept(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get());
-                        entry.accept(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get());
-
-                        //CRYSTAL PRISMARINE
-                        entry.accept(Blocks.SEA_LANTERN);
-                        entry.accept(EBBlocks.PRISMARINE_CLUSTER.get());
-                        entry.accept(EBBlocks.LARGE_PRISMARINE_BUD.get());
-                        entry.accept(EBBlocks.MEDIUM_PRISMARINE_BUD.get());
-                        entry.accept(EBBlocks.SMALL_PRISMARINE_BUD.get());
                         
                         //OAK WOOD
                         entry.accept(EBBlocks.ALCHEMY_SHELF.get());
@@ -212,21 +167,6 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.AMETHYST_LANTERN.get());
                         entry.accept(EBBlocks.AMETHYST_FRAMED_GLASS.get());
                         entry.accept(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
-
-                        //RADIANCE
-                        entry.accept(EBBlocks.RADIANCE_ORE.get());
-                        entry.accept(EBBlocks.DEEPSLATE_RADIANCE_ORE.get());
-                        entry.accept(EBBlocks.RADIANCE_BLOCK.get());
-
-                        entry.accept(EBBlocks.RADIANCE_LANTERN.get());
-                        entry.accept(EBBlocks.RADIANCE_FRAMED_GLASS.get());
-                        entry.accept(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get());
-
-                        entry.accept(EBItems.RADIANCE_CRYSTAL.get());
-                        entry.accept(EBItems.RADIANCE_INGOT.get());
-                        entry.accept(EBItems.RADIANCE_MALLET.get());
-                        entry.accept(EBItems.RADIANCE_GAUNTLET.get());
-                        //entry.accept(EBItems.BOOK_OF_FORMATION.get());
 
                         //FUNCTION
                         //entry.accept(EBBlocks.KILN.get());

@@ -43,23 +43,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        dropSelf(EBBlocks.ELYERIUM.get());
-        dropSelf(EBBlocks.ELYERIUM_STAIRS.get());
-        add(EBBlocks.ELYERIUM_SLAB.get(), createSlabItemTable(EBBlocks.ELYERIUM_SLAB.get()));
-        dropSelf(EBBlocks.ELYERIUM_WALL.get());
-
-        dropSelf(EBBlocks.POLISHED_ELYERIUM.get());
-        dropSelf(EBBlocks.POLISHED_ELYERIUM_STAIRS.get());
-        add(EBBlocks.POLISHED_ELYERIUM_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_ELYERIUM_SLAB.get()));
-        dropSelf(EBBlocks.POLISHED_ELYERIUM_WALL.get());
-
-        dropSelf(EBBlocks.ELYERIUM_BRICKS.get());
-        dropSelf(EBBlocks.ELYERIUM_BRICK_STAIRS.get());
-        add(EBBlocks.ELYERIUM_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.ELYERIUM_BRICK_SLAB.get()));
-        dropSelf(EBBlocks.ELYERIUM_BRICK_WALL.get());
-
-        dropSelf(EBBlocks.CHISELED_ELYERIUM.get());
-
         dropSelf(EBBlocks.HECTALITE.get());
         dropSelf(EBBlocks.HECTALITE_STAIRS.get());
         add(EBBlocks.HECTALITE_SLAB.get(), createSlabItemTable(EBBlocks.HECTALITE_SLAB.get()));
@@ -102,10 +85,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
 
         dropSelf(EBBlocks.CHISELED_CHLOROSLATE.get());
 
-        dropSelf(EBBlocks.RADIANCE_BLOCK.get());
-        createOreDrop(EBBlocks.RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get());
-        createOreDrop(EBBlocks.DEEPSLATE_RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get());
-
         dropSelf(EBBlocks.ARIDITE.get());
         dropSelf(EBBlocks.ARIDITE_STAIRS.get());
         add(EBBlocks.ARIDITE_SLAB.get(), createSlabItemTable(EBBlocks.ARIDITE_SLAB.get()));
@@ -126,7 +105,6 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         dropSelf(EBBlocks.HECTALITE_PILLAR.get());
         dropSelf(EBBlocks.CHLOROSLATE_PILLAR.get());
         dropSelf(EBBlocks.ARIDITE_PILLAR.get());
-        dropSelf(EBBlocks.ELYERIUM_PILLAR.get());
 
         dropSelf(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get());
         
@@ -154,14 +132,7 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         add(EBBlocks.AMETHYST_FRAMED_GLASS.get(), createSilkTouchOnlyTable(EBBlocks.AMETHYST_FRAMED_GLASS.get()));
         add(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get(), createSilkTouchOnlyTable(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get()));
 
-        dropSelf(EBBlocks.RADIANCE_LANTERN.get());
-        add(EBBlocks.RADIANCE_FRAMED_GLASS.get(), createSilkTouchOnlyTable(EBBlocks.RADIANCE_FRAMED_GLASS.get()));
-        add(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get(), createSilkTouchOnlyTable(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get()));
-
         dropSelf(EBBlocks.KILN.get());
-
-        add(EBBlocks.RADIANCE_ORE.get(), createOreDrop(EBBlocks.RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get()));
-        add(EBBlocks.DEEPSLATE_RADIANCE_ORE.get(), createOreDrop(EBBlocks.DEEPSLATE_RADIANCE_ORE.get(), EBItems.RADIANCE_CRYSTAL.get()));
 
         add(EBBlocks.ALCHEMY_SHELF.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
         add(EBBlocks.ALCHEMY_SHELF_VARIANT1.get(), createSingleItemTableWithSilkTouch(EBBlocks.ALCHEMY_SHELF.get(), Items.GLASS_BOTTLE, ConstantValue.exactly(3.0F)));
@@ -174,26 +145,10 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
         dropSelf(EBBlocks.POLISHED_PRISMARINE_STAIRS.get());
         add(EBBlocks.POLISHED_PRISMARINE_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_PRISMARINE_SLAB.get()));
 
-        dropSelf(EBBlocks.PRISMARINE_TILES.get());
-        dropSelf(EBBlocks.PRISMARINE_TILE_STAIRS.get());
-        add(EBBlocks.PRISMARINE_TILE_SLAB.get(), createSlabItemTable(EBBlocks.PRISMARINE_TILE_SLAB.get()));
-
         dropSelf(EBBlocks.POLISHED_DARK_PRISMARINE.get());
         dropSelf(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get());
         add(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get()));
 
-        dropSelf(EBBlocks.DARK_PRISMARINE_BRICKS.get());
-        dropSelf(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get());
-        add(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get()));
-        
-        dropSelf(EBBlocks.DARK_PRISMARINE_TILES.get());
-        dropSelf(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get());
-        add(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get(), createSlabItemTable(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get()));
-
-        add(EBBlocks.PRISMARINE_CLUSTER.get(), (block) -> createSilkTouchDispatchTable(block, LootItem.lootTableItem(Items.PRISMARINE_CRYSTALS).apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)).when(MatchTool.toolMatches(net.minecraft.advancements.critereon.ItemPredicate.Builder.item().of(ItemTags.CLUSTER_MAX_HARVESTABLES))).otherwise(this.applyExplosionDecay(block, LootItem.lootTableItem(Items.PRISMARINE_CRYSTALS).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))))));
-        dropWhenSilkTouch(EBBlocks.SMALL_PRISMARINE_BUD.get());
-        dropWhenSilkTouch(EBBlocks.MEDIUM_PRISMARINE_BUD.get());
-        dropWhenSilkTouch(EBBlocks.LARGE_PRISMARINE_BUD.get());
         dropSelf(EBBlocks.ZEUS_EPIC_BLOCK.get());
 
         add(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_leaves").get(),

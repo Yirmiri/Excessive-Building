@@ -1,9 +1,6 @@
 {
   "replace": false,
   "values": [
-    "excessive_building:elyerium_wall",
-    "excessive_building:polished_elyerium_wall",
-    "excessive_building:elyerium_brick_wall",
     "excessive_building:hectalite_wall",
     "excessive_building:polished_hectalite_wall",
     "excessive_building:hectalite_brick_wall",

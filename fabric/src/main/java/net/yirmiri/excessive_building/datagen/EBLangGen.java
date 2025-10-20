@@ -59,20 +59,6 @@ public class EBLangGen extends FabricLanguageProvider {
         //BLOCKS
         generate(build, EBBlocks.ALCHEMY_SHELF.get(), "Alchemy Shelf");
 
-        generate(build, EBBlocks.ELYERIUM.get(), "Elyerium");
-        generate(build, EBBlocks.ELYERIUM_STAIRS.get(), "Elyerium Stairs");
-        generate(build, EBBlocks.ELYERIUM_SLAB.get(), "Elyerium Slab");
-        generate(build, EBBlocks.ELYERIUM_WALL.get(), "Elyerium Wall");
-        generate(build, EBBlocks.POLISHED_ELYERIUM.get(), "Polished Elyerium");
-        generate(build, EBBlocks.POLISHED_ELYERIUM_STAIRS.get(), "Polished Elyerium Stairs");
-        generate(build, EBBlocks.POLISHED_ELYERIUM_SLAB.get(), "Polished Elyerium Slab");
-        generate(build, EBBlocks.POLISHED_ELYERIUM_WALL.get(), "Polished Elyerium Wall");
-        generate(build, EBBlocks.ELYERIUM_BRICKS.get(), "Elyerium Bricks");
-        generate(build, EBBlocks.ELYERIUM_BRICK_STAIRS.get(), "Elyerium Brick Stairs");
-        generate(build, EBBlocks.ELYERIUM_BRICK_SLAB.get(), "Elyerium Brick Slab");
-        generate(build, EBBlocks.ELYERIUM_BRICK_WALL.get(), "Elyerium Brick Wall");
-        generate(build, EBBlocks.CHISELED_ELYERIUM.get(), "Chiseled Elyerium");
-
         generate(build, EBBlocks.HECTALITE.get(), "Hectalite");
         generate(build, EBBlocks.HECTALITE_STAIRS.get(), "Hectalite Stairs");
         generate(build, EBBlocks.HECTALITE_SLAB.get(), "Hectalite Slab");
@@ -125,16 +111,8 @@ public class EBLangGen extends FabricLanguageProvider {
 
         generate(build, EBBlocks.FROSTED_GLASS.get(), "Frosted Glass");
 
-        generate(build, EBBlocks.RADIANCE_BLOCK.get(), "Block of Radiance");
-        generate(build, EBBlocks.RADIANCE_ORE.get(), "Radiance Ore");
-        generate(build, EBBlocks.DEEPSLATE_RADIANCE_ORE.get(), "Deepslate Radiance Ore");
-        generate(build, EBBlocks.RADIANCE_LANTERN.get(), "Radiance Lantern");
-        generate(build, EBBlocks.RADIANCE_FRAMED_GLASS.get(), "Radiance Framed Glass");
-        generate(build, EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get(), "Radiance Framed Glass Pane");
-
         generate(build, EBBlocks.CHLOROSLATE_PILLAR.get(), "Chloroslate Pillar");
         generate(build, EBBlocks.ARIDITE_PILLAR.get(), "Aridite Pillar");
-        generate(build, EBBlocks.ELYERIUM_PILLAR.get(), "Elyerium Pillar");
         generate(build, EBBlocks.HECTALITE_PILLAR.get(), "Hectalite Pillar");
 
         generate(build, EBBlocks.COBBLESTONE_BRICKS.get(), "Cobblestone Bricks");
@@ -161,30 +139,12 @@ public class EBLangGen extends FabricLanguageProvider {
         generate(build, EBBlocks.POLISHED_PRISMARINE.get(), "Polished Prismarine");
         generate(build, EBBlocks.POLISHED_PRISMARINE_STAIRS.get(), "Polished Prismarine Stairs");
         generate(build, EBBlocks.POLISHED_PRISMARINE_SLAB.get(), "Polished Prismarine Slab");
-        
-        generate(build, EBBlocks.PRISMARINE_TILES.get(), "Prismarine Tiles");
-        generate(build, EBBlocks.PRISMARINE_TILE_STAIRS.get(), "Prismarine Tile Stairs");
-        generate(build, EBBlocks.PRISMARINE_TILE_SLAB.get(), "Prismarine Tile Slab");
 
         generate(build, EBBlocks.POLISHED_DARK_PRISMARINE.get(), "Polished Dark Prismarine");
         generate(build, EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get(), "Polished Dark Prismarine Stairs");
         generate(build, EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get(), "Polished Dark Prismarine Slab");
 
-        generate(build, EBBlocks.DARK_PRISMARINE_BRICKS.get(), "Dark Prismarine Bricks");
-        generate(build, EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get(), "Dark Prismarine Brick Stairs");
-        generate(build, EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get(), "Dark Prismarine Brick Slab");
-        
-        generate(build, EBBlocks.DARK_PRISMARINE_TILES.get(), "Dark Prismarine Tiles");
-        generate(build, EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get(), "Dark Prismarine Tile Stairs");
-        generate(build, EBBlocks.DARK_PRISMARINE_TILE_SLAB.get(), "Dark Prismarine Tile Slab");
-
-        generate(build, EBBlocks.PRISMARINE_CLUSTER.get(), "Prismarine Cluster");
-        generate(build, EBBlocks.LARGE_PRISMARINE_BUD.get(), "Large Prismarine Bud");
-        generate(build, EBBlocks.MEDIUM_PRISMARINE_BUD.get(), "Medium Prismarine Bud");
-        generate(build, EBBlocks.SMALL_PRISMARINE_BUD.get(), "Small Prismarine Bud");
-
         generate(build, EBBlocks.KILN.get(), "Kiln");
-        generate(build, EBBlocks.ICE_PILLAR.get(), "Ice Pillar");
         generate(build, EBBlocks.ZEUS_EPIC_BLOCK.get(), "Zeus' Epic Block");
 
         generate(build, EBBlocks.ANCIENT_SAPLING.get(), "Ancient Sapling");
@@ -200,14 +160,13 @@ public class EBLangGen extends FabricLanguageProvider {
         generate(build, EBBlocks.ANCIENT_WOODSET.getBlock("ancient_trapdoor").get(), "Ancient Trapdoor");
         generate(build, EBBlocks.ANCIENT_WOODSET.getBlock("ancient_door").get(), "Ancient Door");
         generate(build, EBBlocks.ANCIENT_WOODSET.getBlock("ancient_leaves").get(), "Ancient Leaves");
+        generate(build, EBBlocks.ANCIENT_WOODSET.getBlock("ancient_fence").get(), "Ancient Fence");
+        generate(build, EBBlocks.ANCIENT_WOODSET.getBlock("ancient_fence_gate").get(), "Ancient Fence Gate");
         generate(build, EBBlocks.ANCIENT_VINES.get(), "Ancient Vines");
 
         //ITEMS
-        generate(build, EBItems.RADIANCE_CRYSTAL.get(), "Radiance Crystal");
-        generate(build, EBItems.RADIANCE_INGOT.get(), "Radiance Ingot");
-        generate(build, EBItems.RADIANCE_GAUNTLET.get(), "Radiance Gauntlet");
-        generate(build, EBItems.RADIANCE_MALLET.get(), "Radiance Mallet");
-        generate(build, EBItems.BOOK_OF_FORMATION.get(), "Book of Formation");
+        generate(build, EBItems.GAUNTLET.get(), "Gauntlet");
+        generate(build, EBItems.MALLET.get(), "Mallet");
 
         generate(build, EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
         generate(build, EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");
@@ -217,33 +176,33 @@ public class EBLangGen extends FabricLanguageProvider {
         build.add(EBEffects.RAPIDITY.get(), "Rapidity");
         
         //POTION
-        build.add("item.minecraft.potion.effect.reaching_potion", "Potion of Reaching");
-        build.add("item.minecraft.splash_potion.effect.reaching_potion", "Splash Potion of Reaching");
-        build.add("item.minecraft.lingering_potion.effect.reaching_potion", "Lingering Potion of Reaching");
-        build.add("item.minecraft.tipped_arrow.effect.reaching_potion", "Arrow of Reaching");
-        build.add("item.minecraft.potion.effect.long_reaching_potion", "Potion of Reaching");
-        build.add("item.minecraft.splash_potion.effect.long_reaching_potion", "Splash Potion of Reaching");
-        build.add("item.minecraft.lingering_potion.effect.long_reaching_potion", "Lingering Potion of Reaching");
-        build.add("item.minecraft.tipped_arrow.effect.long_reaching_potion", "Arrow of Reaching");
-        build.add("item.minecraft.potion.effect.strong_reaching_potion", "Potion of Reaching");
-        build.add("item.minecraft.splash_potion.effect.strong_reaching_potion", "Splash Potion of Reaching");
-        build.add("item.minecraft.lingering_potion.effect.strong_reaching_potion", "Lingering Potion of Reaching");
-        build.add("item.minecraft.tipped_arrow.effect.strong_reaching_potion", "Arrow of Reaching");
+        build.add("item.minecraft.potion.effect.reaching", "Potion of Reaching");
+        build.add("item.minecraft.splash.effect.reaching", "Splash Potion of Reaching");
+        build.add("item.minecraft.lingering.effect.reaching", "Lingering Potion of Reaching");
+        build.add("item.minecraft.tipped_arrow.effect.reaching", "Arrow of Reaching");
+        build.add("item.minecraft.potion.effect.long_reaching", "Potion of Reaching");
+        build.add("item.minecraft.splash.effect.long_reaching", "Splash Potion of Reaching");
+        build.add("item.minecraft.lingering.effect.long_reaching", "Lingering Potion of Reaching");
+        build.add("item.minecraft.tipped_arrow.effect.long_reaching", "Arrow of Reaching");
+        build.add("item.minecraft.potion.effect.strong_reaching", "Potion of Reaching");
+        build.add("item.minecraft.splash.effect.strong_reaching", "Splash Potion of Reaching");
+        build.add("item.minecraft.lingering.effect.strong_reaching", "Lingering Potion of Reaching");
+        build.add("item.minecraft.tipped_arrow.effect.strong_reaching", "Arrow of Reaching");
 
-        build.add("item.minecraft.potion.effect.rapidity_potion", "Potion of Rapidity");
-        build.add("item.minecraft.splash_potion.effect.rapidity_potion", "Splash Potion of Rapidity");
-        build.add("item.minecraft.lingering_potion.effect.rapidity_potion", "Lingering Potion of Rapidity");
-        build.add("item.minecraft.tipped_arrow.effect.rapidity_potion", "Arrow of Rapidity");
-        build.add("item.minecraft.potion.effect.long_rapidity_potion", "Potion of Rapidity");
-        build.add("item.minecraft.splash_potion.effect.long_rapidity_potion", "Splash Potion of Rapidity");
-        build.add("item.minecraft.lingering_potion.effect.long_rapidity_potion", "Lingering Potion of Rapidity");
-        build.add("item.minecraft.tipped_arrow.effect.long_rapidity_potion", "Arrow of Rapidity");
-        build.add("item.minecraft.potion.effect.strong_rapidity_potion", "Potion of Rapidity");
-        build.add("item.minecraft.splash_potion.effect.strong_rapidity_potion", "Splash Potion of Rapidity");
-        build.add("item.minecraft.lingering_potion.effect.strong_rapidity_potion", "Lingering Potion of Rapidity");
-        build.add("item.minecraft.tipped_arrow.effect.strong_rapidity_potion", "Arrow of Rapidity");
+        build.add("item.minecraft.potion.effect.rapidity", "Potion of Rapidity");
+        build.add("item.minecraft.splash.effect.rapidity", "Splash Potion of Rapidity");
+        build.add("item.minecraft.lingering.effect.rapidity", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.rapidity", "Arrow of Rapidity");
+        build.add("item.minecraft.potion.effect.long_rapidity", "Potion of Rapidity");
+        build.add("item.minecraft.splash.effect.long_rapidity", "Splash Potion of Rapidity");
+        build.add("item.minecraft.lingering.effect.long_rapidity", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.long_rapidity", "Arrow of Rapidity");
+        build.add("item.minecraft.potion.effect.strong_rapidity", "Potion of Rapidity");
+        build.add("item.minecraft.splash.effect.strong_rapidity", "Splash Potion of Rapidity");
+        build.add("item.minecraft.lingering.effect.strong_rapidity", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.strong_rapidity", "Arrow of Rapidity");
 
-        //YAPPING TOOLTIPS //TODO (not priority), chairs should reference wikipedia
+        //YAPPING TOOLTIPS //TODO
         addYT(build, EBBlocks.ZEUS_EPIC_BLOCK.get(), "The most powerful block of them all... its the best block objectively.");
         addYT(build, EBBlocks.ARIDITE.get(), "A sedimentary rock that can be found generating in cluster under deserts.");
 

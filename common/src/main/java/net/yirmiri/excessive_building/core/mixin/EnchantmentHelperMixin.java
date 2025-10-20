@@ -20,11 +20,11 @@ public class EnchantmentHelperMixin {
 
     @Inject(method = "getKnockbackBonus", at = @At("HEAD"), cancellable = true)
     private static void excessiveBuilding$getKnockbackBonus(LivingEntity player, CallbackInfoReturnable<Integer> cir) {
-        if (player.getMainHandItem().is(EBItems.RADIANCE_GAUNTLET.get())) {
+        if (player.getMainHandItem().is(EBItems.GAUNTLET.get())) {
             cir.setReturnValue(3);
         }
 
-        if (player.getOffhandItem().is(EBItems.RADIANCE_GAUNTLET.get())) {
+        if (player.getOffhandItem().is(EBItems.GAUNTLET.get())) {
             cir.setReturnValue(3);
         }
     }

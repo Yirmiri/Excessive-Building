@@ -4,23 +4,19 @@ import net.azurune.runiclib.core.platform.Services;
 import net.minecraft.world.item.BoatItem;
 import net.minecraft.world.item.Item;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.common.item.BookOfFormationsItem;
-import net.yirmiri.excessive_building.common.item.RadianceMalletItem;
+import net.yirmiri.excessive_building.common.item.MalletItem;
 import net.yirmiri.excessive_building.common.util.EBMaterials;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 import net.yirmiri.excessive_building.common.util.EBUtil;
 import net.yirmiri.excessive_building.core.init.EBTags;
-import net.yirmiri.excessive_building.common.item.RadianceGauntletItem;
+import net.yirmiri.excessive_building.common.item.GauntletItem;
 
 import java.util.function.Supplier;
 
 public class EBItems {
-    //RADIANCE
-    public static final Supplier<Item> RADIANCE_CRYSTAL = register("radiance_crystal", () -> new Item(EBProperties.ItemP.UNCOMMON));
-    public static final Supplier<Item> RADIANCE_INGOT = register("radiance_ingot", () -> new Item(EBProperties.ItemP.UNCOMMON));
-    public static final Supplier<Item> RADIANCE_MALLET = register("radiance_mallet", () -> new RadianceMalletItem(2, -3.0F, EBMaterials.RADIANCE_MALLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.UNCOMMON));
-    public static final Supplier<Item> RADIANCE_GAUNTLET = register("radiance_gauntlet", () -> new RadianceGauntletItem(1, -2.5F, EBMaterials.RADIANCE_GAUNTLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.RADIANCE_TOOL));
-    public static final Supplier<Item> BOOK_OF_FORMATION = register("book_of_formation", () -> new BookOfFormationsItem(EBProperties.ItemP.RADIANCE_BOOK));
+    //TOOLS
+    public static final Supplier<Item> MALLET = register("mallet", () -> new MalletItem(2, -3.0F, EBMaterials.MALLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.AMETHYST_TOOL));
+    public static final Supplier<Item> GAUNTLET = register("gauntlet", () -> new GauntletItem(1, -2.5F, EBMaterials.GAUNTLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.AMETHYST_TOOL));
 
     //ANCIENT
     public static final Supplier<Item> ICHOR_FRUIT = register("ichor_fruit", () -> new Item(EBProperties.ItemP.ICHOR_FRUIT));

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "excessive_building:elyerium"
-  },
-  "result": "excessive_building:elyerium_brick_wall"
-}

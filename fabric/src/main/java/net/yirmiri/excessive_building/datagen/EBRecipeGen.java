@@ -7,8 +7,6 @@ import net.minecraft.data.BlockFamily;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.flag.FeatureFlagSet;
-import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.DyeItem;
 import static net.minecraft.data.BlockFamilies.*;
@@ -32,73 +30,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> consumer) {
         StonecutterRecipeTreeGenerator stonecutterRecipeTreeGenerator = new StonecutterRecipeTreeGenerator();
-
-        //==========================BASE==========================
-        createWendysFourForFourMeal(EBBlocks.ELYERIUM.get().asItem(),
-                EBBlocks.HECTALITE.get().asItem(), EBBlocks.ARIDITE.get().asItem())
-                .unlockedBy(getHasName(EBBlocks.HECTALITE.get()), has(EBBlocks.HECTALITE.get()))
-                .unlockedBy(getHasName(EBBlocks.ARIDITE.get()), has(EBBlocks.ARIDITE.get()))
-                .save(consumer, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.ELYERIUM.get())));
-
-        stairBuilder(EBBlocks.ELYERIUM_STAIRS.get(), Ingredient.of(EBBlocks.ELYERIUM.get()))
-                .unlockedBy(getHasName(EBBlocks.ELYERIUM.get()), has(EBBlocks.ELYERIUM.get()))
-                .save(consumer);
-
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ELYERIUM_SLAB.get(), Ingredient.of(EBBlocks.ELYERIUM.get()))
-                .unlockedBy(getHasName(EBBlocks.ELYERIUM.get()), has(EBBlocks.ELYERIUM.get()))
-                .save(consumer);
-
-        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ELYERIUM_WALL.get(), Ingredient.of(EBBlocks.ELYERIUM.get()))
-                .unlockedBy(getHasName(EBBlocks.ELYERIUM.get()), has(EBBlocks.ELYERIUM.get()))
-                .save(consumer);
-
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.ELYERIUM_STAIRS.get(), EBBlocks.ELYERIUM.get());
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.ELYERIUM_SLAB.get(), EBBlocks.ELYERIUM.get(), 2);
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.ELYERIUM_WALL.get(), EBBlocks.ELYERIUM.get());
-
-        //==========================POLISHED==========================
-        polished(consumer, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ELYERIUM.get(), EBBlocks.ELYERIUM.get());
-
-        stairBuilder(EBBlocks.POLISHED_ELYERIUM_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_ELYERIUM.get()))
-                .unlockedBy(getHasName(EBBlocks.POLISHED_ELYERIUM.get()), has(EBBlocks.POLISHED_ELYERIUM.get()))
-                .save(consumer);
-
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ELYERIUM_SLAB.get(), Ingredient.of(EBBlocks.POLISHED_ELYERIUM.get()))
-                .unlockedBy(getHasName(EBBlocks.POLISHED_ELYERIUM.get()), has(EBBlocks.POLISHED_ELYERIUM.get()))
-                .save(consumer);
-
-        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ELYERIUM_WALL.get(), Ingredient.of(EBBlocks.POLISHED_ELYERIUM.get()))
-                .unlockedBy(getHasName(EBBlocks.POLISHED_ELYERIUM.get()), has(EBBlocks.POLISHED_ELYERIUM.get()))
-                .save(consumer);
-
-        createChiseled(EBBlocks.CHISELED_ELYERIUM.get().asItem(), EBBlocks.ELYERIUM.get().asItem());
-
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_ELYERIUM.get(), EBBlocks.ELYERIUM.get());
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_ELYERIUM_STAIRS.get(), EBBlocks.ELYERIUM.get());
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_ELYERIUM_SLAB.get(), EBBlocks.ELYERIUM.get(), 2);
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_ELYERIUM_WALL.get(), EBBlocks.ELYERIUM.get());
-
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.CHISELED_ELYERIUM.get(), EBBlocks.POLISHED_ELYERIUM.get());
-
-        //==========================BRICKS==========================
-        polished(consumer, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ELYERIUM_BRICKS.get(), EBBlocks.POLISHED_ELYERIUM.get());
-
-        stairBuilder(EBBlocks.ELYERIUM_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.ELYERIUM_BRICKS.get()))
-                .unlockedBy(getHasName(EBBlocks.ELYERIUM_BRICKS.get()), has(EBBlocks.ELYERIUM_BRICKS.get()))
-                .save(consumer);
-
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ELYERIUM_BRICK_SLAB.get(), Ingredient.of(EBBlocks.ELYERIUM_BRICKS.get()))
-                .unlockedBy(getHasName(EBBlocks.ELYERIUM_BRICKS.get()), has(EBBlocks.ELYERIUM_BRICKS.get()))
-                .save(consumer);
-
-        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ELYERIUM_BRICK_WALL.get(), Ingredient.of(EBBlocks.ELYERIUM_BRICKS.get()))
-                .unlockedBy(getHasName(EBBlocks.ELYERIUM_BRICKS.get()), has(EBBlocks.ELYERIUM_BRICKS.get()))
-                .save(consumer);
-
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.ELYERIUM_BRICKS.get(), EBBlocks.POLISHED_ELYERIUM.get());
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.ELYERIUM_BRICK_STAIRS.get(), EBBlocks.POLISHED_ELYERIUM.get());
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.ELYERIUM_BRICK_SLAB.get(), EBBlocks.POLISHED_ELYERIUM.get(), 2);
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.ELYERIUM_BRICK_WALL.get(), EBBlocks.POLISHED_ELYERIUM.get());
 
         //==========================BASE==========================
         stairBuilder(EBBlocks.CHLOROSLATE_STAIRS.get(), Ingredient.of(EBBlocks.CHLOROSLATE.get()))
@@ -334,9 +265,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
         createChiseled(EBBlocks.CHLOROSLATE_PILLAR.get().asItem(), EBBlocks.CHLOROSLATE_SLAB.get().asItem());
         stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.CHLOROSLATE_PILLAR.get(), EBBlocks.POLISHED_CHLOROSLATE.get());
 
-        createChiseled(EBBlocks.ELYERIUM_PILLAR.get().asItem(), EBBlocks.ELYERIUM_SLAB.get().asItem());
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.ELYERIUM_PILLAR.get(), EBBlocks.POLISHED_ELYERIUM.get());
-
         //==========================MISC==========================
         polished(consumer, RecipeCategory.BUILDING_BLOCKS, EBBlocks.COBBLESTONE_BRICKS.get(), Blocks.COBBLESTONE);
 
@@ -424,38 +352,18 @@ public class EBRecipeGen extends FabricRecipeProvider {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.COBBLESTONE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS,
                 EBBlocks.CRACKED_COBBLESTONE_BRICKS.get(), 0.1F, 200).unlockedBy(getHasName(EBBlocks.COBBLESTONE_BRICKS.get()), has(EBBlocks.COBBLESTONE_BRICKS.get())).save(consumer);
 
-        //==========================RADIANCE==========================
-        final ImmutableList<ItemLike> RADIANCE_SMELTABLES = ImmutableList.of(EBBlocks.RADIANCE_ORE.get(), EBBlocks.DEEPSLATE_RADIANCE_ORE.get());
-
-        //oreSmelting(consumer, RADIANCE_SMELTABLES, RecipeCategory.MISC, EBItems.RADIANCE_CRYSTAL.get(), 1.0F, 200, "radiance_crystal");
-        oreBlasting(consumer, RADIANCE_SMELTABLES, RecipeCategory.MISC, EBItems.RADIANCE_CRYSTAL.get(), 1.0F, 100, "radiance_crystal");
-
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(EBItems.RADIANCE_CRYSTAL.get()), RecipeCategory.MISC, EBItems.RADIANCE_INGOT.get(), 1.0F, 200)
-                .unlockedBy("has_radiance_crystal", has(EBItems.RADIANCE_CRYSTAL.get())).save(consumer, getBlastingRecipeName(EBItems.RADIANCE_INGOT.get()));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.RADIANCE_GAUNTLET.get(), 1)
-                .define('#', EBItems.RADIANCE_INGOT.get()).define('@', Items.GOLD_INGOT).define('!', EBItems.RADIANCE_CRYSTAL.get())
+        //==========================TOOLS==========================
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.GAUNTLET.get(), 1)
+                .define('#', Items.AMETHYST_SHARD).define('@', Items.COPPER_INGOT).define('!', Items.AMETHYST_SHARD)
                 .pattern(" ##")
                 .pattern("@!#")
                 .pattern("@@ ");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.RADIANCE_MALLET.get(), 1)
-                .define('#', EBItems.RADIANCE_INGOT.get()).define('@', Items.GOLD_INGOT).define('!', Items.STICK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.MALLET.get(), 1)
+                .define('#', Items.AMETHYST_SHARD).define('@', Items.COPPER_INGOT).define('!', Items.STICK)
                 .pattern("###")
                 .pattern("#@#")
                 .pattern(" ! ");
-
-        createCrystalLantern(EBBlocks.RADIANCE_LANTERN.get().asItem(), EBItems.RADIANCE_CRYSTAL.get())
-                .unlockedBy(getHasName(EBItems.RADIANCE_CRYSTAL.get()), has(EBItems.RADIANCE_CRYSTAL.get()))
-                .save(consumer, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.RADIANCE_LANTERN.get())));
-
-        createCrystalGlass(EBBlocks.RADIANCE_FRAMED_GLASS.get().asItem(), EBItems.RADIANCE_CRYSTAL.get())
-                .unlockedBy(getHasName(EBItems.RADIANCE_CRYSTAL.get()), has(EBItems.RADIANCE_CRYSTAL.get()))
-                .save(consumer, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.RADIANCE_FRAMED_GLASS.get())));
-
-        createPane(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get().asItem(), EBBlocks.RADIANCE_FRAMED_GLASS.get().asItem())
-                .unlockedBy(getHasName(EBBlocks.RADIANCE_FRAMED_GLASS.get()), has(EBBlocks.RADIANCE_FRAMED_GLASS.get()))
-                .save(consumer, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.RADIANCE_FRAMED_GLASS_PANE.get())));
         //==========================PRISMARINE==========================
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.PRISMARINE), RecipeCategory.MISC, EBBlocks.POLISHED_PRISMARINE.get(), 0.1F, 200)
                 .unlockedBy("has_prismarine", has(Blocks.PRISMARINE)).save(consumer, getSmeltingRecipeName(EBBlocks.POLISHED_PRISMARINE.get()));
@@ -485,48 +393,6 @@ public class EBRecipeGen extends FabricRecipeProvider {
         stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get(), EBBlocks.POLISHED_DARK_PRISMARINE.get());
         stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get(), EBBlocks.POLISHED_DARK_PRISMARINE.get(), 2);
 
-        createWendysFourForFourMeal(EBBlocks.PRISMARINE_TILES.get().asItem(), Blocks.PRISMARINE_BRICKS.asItem(), Blocks.PRISMARINE_BRICKS.asItem());
-
-        stairBuilder(EBBlocks.PRISMARINE_TILE_STAIRS.get(), Ingredient.of(EBBlocks.PRISMARINE_TILES.get()))
-                .unlockedBy(getHasName(EBBlocks.PRISMARINE_TILES.get()), has(EBBlocks.PRISMARINE_TILES.get()))
-                .save(consumer);
-
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_TILE_SLAB.get(), Ingredient.of(EBBlocks.PRISMARINE_TILES.get()))
-                .unlockedBy(getHasName(EBBlocks.PRISMARINE_TILES.get()), has(EBBlocks.PRISMARINE_TILES.get()))
-                .save(consumer);
-        
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.PRISMARINE_TILES.get(), Blocks.PRISMARINE_BRICKS);
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.PRISMARINE_TILE_STAIRS.get(), EBBlocks.PRISMARINE_TILES.get());
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.PRISMARINE_TILE_SLAB.get(), EBBlocks.PRISMARINE_TILES.get(), 2);
-
-        createWendysFourForFourMeal(EBBlocks.DARK_PRISMARINE_TILES.get().asItem(), EBBlocks.DARK_PRISMARINE_BRICKS.get().asItem(), EBBlocks.DARK_PRISMARINE_BRICKS.get().asItem());
-
-        stairBuilder(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get(), Ingredient.of(EBBlocks.DARK_PRISMARINE_TILES.get()))
-                .unlockedBy(getHasName(EBBlocks.DARK_PRISMARINE_TILES.get()), has(EBBlocks.DARK_PRISMARINE_TILES.get()))
-                .save(consumer);
-
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DARK_PRISMARINE_TILE_SLAB.get(), Ingredient.of(EBBlocks.DARK_PRISMARINE_TILES.get()))
-                .unlockedBy(getHasName(EBBlocks.DARK_PRISMARINE_TILES.get()), has(EBBlocks.DARK_PRISMARINE_TILES.get()))
-                .save(consumer);
-
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_TILES.get(), EBBlocks.DARK_PRISMARINE_BRICKS.get());
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_TILE_STAIRS.get(), EBBlocks.DARK_PRISMARINE_TILES.get());
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_TILE_SLAB.get(), EBBlocks.DARK_PRISMARINE_TILES.get(), 2);
-
-        createWendysFourForFourMeal(EBBlocks.DARK_PRISMARINE_BRICKS.get().asItem(), Blocks.DARK_PRISMARINE.asItem(), Blocks.DARK_PRISMARINE.asItem());
-
-        stairBuilder(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.DARK_PRISMARINE_BRICKS.get()))
-                .unlockedBy(getHasName(EBBlocks.DARK_PRISMARINE_BRICKS.get()), has(EBBlocks.DARK_PRISMARINE_BRICKS.get()))
-                .save(consumer);
-
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.DARK_PRISMARINE_BRICKS.get()))
-                .unlockedBy(getHasName(EBBlocks.DARK_PRISMARINE_BRICKS.get()), has(EBBlocks.DARK_PRISMARINE_BRICKS.get()))
-                .save(consumer);
-
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_BRICKS.get(), Blocks.DARK_PRISMARINE);
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_BRICK_STAIRS.get(), EBBlocks.DARK_PRISMARINE_BRICKS.get());
-        stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.DARK_PRISMARINE_BRICK_SLAB.get(), EBBlocks.DARK_PRISMARINE_BRICKS.get(), 2);
-
         createWendysFourForFourMeal(Items.PRISMARINE, EBBlocks.HECTALITE.get().asItem(), Items.PRISMARINE_CRYSTALS);
 
         //==========================ANCIENT WOOD==========================
@@ -552,19 +418,15 @@ public class EBRecipeGen extends FabricRecipeProvider {
         //==========================OTHER==========================
         createShelf(EBBlocks.ALCHEMY_SHELF.get().asItem(), Blocks.OAK_PLANKS.asItem(), Items.GLASS_BOTTLE);
 
-//        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.BOOK_OF_FORMATION.get(), 1)
-//                .define('#', EBItems.RADIANCE_CRYSTAL.get()).define('@', Items.ENCHANTED_BOOK).define('!', Items.ICE)
-//                .pattern("#!#")
-//                .pattern("!@!")
-//                .pattern("#!#");
-
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBBlocks.ZEUS_EPIC_BLOCK.get(), 1)
                 .define('#', Items.PURPLE_DYE)
                 .pattern("## ")
                 .pattern(" ##");
 
-        //==========================CHAIR==========================
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.RED_DYE, 2)
+                .requires(EBBlocks.ANCIENT_VINES.get()).group("red_dye");
 
+        //==========================CHAIR==========================
         createChair(EBBlocks.getDyedChairs(DyeColor.WHITE.getId()).get().asItem(), Items.WHITE_WOOL).save(consumer, "white_chair");
         createChair(EBBlocks.getDyedChairs(DyeColor.LIGHT_GRAY.getId()).get().asItem(), Items.LIGHT_GRAY_WOOL).save(consumer, "light_gray_chair");
         createChair(EBBlocks.getDyedChairs(DyeColor.GRAY.getId()).get().asItem(), Items.GRAY_WOOL).save(consumer, "gray_chair");

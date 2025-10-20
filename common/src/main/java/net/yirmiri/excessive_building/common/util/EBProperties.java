@@ -17,8 +17,6 @@ import net.minecraft.world.level.material.PushReaction;
 import java.util.function.ToIntFunction;
 
 public class EBProperties {
-//0xbca2e9 - RADIANT RARITY COLOR (for the future)
-
     public static class BlockP {
         private static ToIntFunction<BlockState> litBlockEmission(int defaultVal, int lightValue) {
             return (state) -> (Boolean)state.getValue(BlockStateProperties.LIT) ? lightValue : defaultVal;
@@ -79,17 +77,8 @@ public class EBProperties {
 
         //CRYSTALS
         public static final BlockBehaviour.Properties AMETHYST_BRICKS = BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK);
-        public static final BlockBehaviour.Properties CRYSTAL_CLUSTER = BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER);
-        public static final BlockBehaviour.Properties SMALL_BUD = BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD);
-        public static final BlockBehaviour.Properties MEDIUM_BUD = BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD);
-        public static final BlockBehaviour.Properties LARGE_BUD = BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD);
         public static final BlockBehaviour.Properties CRYSTAL_GLASS = BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion();
         public static final BlockBehaviour.Properties CRYSTAL_LANTERN = BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN);
-
-        //RADIANCE
-        public static final BlockBehaviour.Properties RADIANCE = BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).lightLevel(s -> 5).mapColor(MapColor.COLOR_PURPLE);
-        public static final BlockBehaviour.Properties DEEPSLATE_RADIANCE = BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE).lightLevel(s -> 5).mapColor(MapColor.COLOR_PURPLE);
-        public static final BlockBehaviour.Properties RADIANCE_BLOCK = BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).mapColor(MapColor.COLOR_PURPLE);
     }
 
     public static class ItemP {
@@ -98,8 +87,7 @@ public class EBProperties {
         public static final Item.Properties UNCOMMON = new Item.Properties().rarity(Rarity.UNCOMMON);
         public static final Item.Properties RARE = new Item.Properties().rarity(Rarity.RARE);
         public static final Item.Properties EPIC = new Item.Properties().rarity(Rarity.EPIC);
-        public static final Item.Properties RADIANCE_TOOL = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1);
-        public static final Item.Properties RADIANCE_BOOK = new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1).durability(128);
+        public static final Item.Properties AMETHYST_TOOL = new Item.Properties().stacksTo(1);
         public static final Item.Properties ICHOR_FRUIT = new Item.Properties().food(FoodP.ICHOR_FRUIT);
     }
 

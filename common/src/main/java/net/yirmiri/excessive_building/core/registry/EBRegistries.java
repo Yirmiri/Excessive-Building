@@ -21,7 +21,7 @@ public class EBRegistries {
 //        PotionBrewingMixin.excessiveBuilding$addMix(EBPotions.REACHING.get(), Items.REDSTONE, EBPotions.LONG_REACHING.get());
 //        PotionBrewingMixin.excessiveBuilding$addMix(EBPotions.REACHING.get(), Items.GLOWSTONE_DUST, EBPotions.STRONG_REACHING.get());
 
-        PotionBrewingMixin.excessiveBuilding$addMix(Potions.AWKWARD, EBItems.RADIANCE_CRYSTAL.get(), EBPotions.RAPIDITY.get());
+        PotionBrewingMixin.excessiveBuilding$addMix(Potions.AWKWARD, Items.AMETHYST_SHARD, EBPotions.RAPIDITY.get());
         PotionBrewingMixin.excessiveBuilding$addMix(EBPotions.RAPIDITY.get(), Items.REDSTONE, EBPotions.LONG_RAPIDITY.get());
         PotionBrewingMixin.excessiveBuilding$addMix(EBPotions.RAPIDITY.get(), Items.GLOWSTONE_DUST, EBPotions.STRONG_RAPIDITY.get());
     }
