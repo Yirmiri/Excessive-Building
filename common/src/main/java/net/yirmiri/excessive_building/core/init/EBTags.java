@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.core.init;
 
+import net.azurune.runiclib.RunicLib;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -12,7 +13,7 @@ public class EBTags {
         public static final TagKey<Block> CHAIRS = create("chairs");
 
         private static TagKey<Block> create(String id) {
-            return TagKey.create(Registries.BLOCK, ExcessiveBuilding.modid(id));
+            return TagKey.create(Registries.BLOCK, RunicLib.customid(ExcessiveBuilding.MOD_ID, id));
         }
     }
 
@@ -21,7 +22,7 @@ public class EBTags {
         public static final TagKey<Item> ANCIENT_LOGS = create("ancient_logs");
 
         private static TagKey<Item> create(String id) {
-            return TagKey.create(Registries.ITEM, ExcessiveBuilding.modid(id));
+            return TagKey.create(Registries.ITEM, RunicLib.customid(ExcessiveBuilding.MOD_ID, id));
         }
     }
 }

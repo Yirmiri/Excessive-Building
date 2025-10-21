@@ -9,6 +9,7 @@ fabricApi {
 
 repositories {
     maven { url = "https://cursemaven.com" }
+    maven { url = "https://api.modrinth.com/maven" } //mod maven because curseforge is being really fRIcking annoying with files :)))))))))))))))
 }
 
 base {
@@ -26,7 +27,8 @@ dependencies {
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":common")
     //RUNICLIB
-    modImplementation "curse.maven:runiclib-880879:${fabric_runiclib}"
+    //modImplementation "curse.maven:runiclib-880879:${fabric_runiclib}"
+    modImplementation "maven.modrinth:runiclib:CAzuDTZ2"
 }
 
 loom {

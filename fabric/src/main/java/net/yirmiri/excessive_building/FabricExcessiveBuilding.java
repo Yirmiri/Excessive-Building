@@ -20,6 +20,7 @@ import net.yirmiri.excessive_building.common.util.EBUtil;
 import net.yirmiri.excessive_building.core.init.EBFeatures;
 import net.yirmiri.excessive_building.core.registry.EBRegistries;
 import net.yirmiri.excessive_building.util.FabricBlockTransmutation;
+import net.yirmiri.excessive_building.util.FabricEBLootModifiers;
 
 public class FabricExcessiveBuilding implements ModInitializer {
     
@@ -27,6 +28,7 @@ public class FabricExcessiveBuilding implements ModInitializer {
     public void onInitialize() {
         ExcessiveBuilding.init();
         EBRegistries.loadRegistries();
+        FabricEBLootModifiers.loadLootModifiers();
 
         //BIOME MODIFIERS
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.LUSH_CAVES), GenerationStep.Decoration.UNDERGROUND_ORES, EBFeatures.PlacedFeatures.ORE_CHLOROSLATE);

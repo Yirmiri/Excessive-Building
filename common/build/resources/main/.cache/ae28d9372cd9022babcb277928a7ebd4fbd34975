@@ -1,22 +1,26 @@
-// 1.20.1	2025-10-20T04:42:23.6092559	Excessive Building/Tags for minecraft:block
+// 1.20.1	2025-10-21T03:58:49.3081447	Excessive Building/Tags for minecraft:block
 c474d0c7d61ce32856dddcc22cf87150d0b1c28e data\minecraft\tags\blocks\slabs.json
-6ed131ccea46af1f9ee64066c9f3292f99c69cd9 data\minecraft\tags\blocks\mineable\axe.json
-cd5bc44ed602ab0098c1fed75a633d7c6ae24ba5 data\minecraft\tags\blocks\mineable\hoe.json
 c56fb325fba9e489f5722f03fe17eec24f408c8b data\minecraft\tags\blocks\wooden_pressure_plates.json
 d26ea24c3e057f4e998c5d5e351c5d67fc5e7561 data\minecraft\tags\blocks\climbable.json
-6ac72af714b9b1949d170a069561a62aa46bc109 data\excessive_building\tags\blocks\mineable_with_mallet.json
-c961787dd6feb3f7383b3bb42adc46fb46288a0d data\minecraft\tags\blocks\fence_gates.json
+ed5501016451776d459f80d79cf0cd70967f3f02 data\minecraft\tags\blocks\signs.json
 cacddeb4f0453e5a7249fb00df5e8dffbe99f1dc data\minecraft\tags\blocks\wooden_trapdoors.json
 2bc5bad155d6c52014e0ef998eee5dc6de3c61c6 data\minecraft\tags\blocks\walls.json
-cd5bc44ed602ab0098c1fed75a633d7c6ae24ba5 data\minecraft\tags\blocks\leaves.json
 63e536c99e097cc6535fa2e9c41a11e6b260021a data\minecraft\tags\blocks\stairs.json
+2c36f6032581c5bfd252f43d578ae38847cbbb8d data\minecraft\tags\blocks\wooden_buttons.json
+f33b007ffe85f1be2fd9c85d7d925b46566b78e4 data\minecraft\tags\blocks\wall_signs.json
+1d2883118f151a77d244ecd688165fbacded4207 data\minecraft\tags\blocks\wall_hanging_signs.json
+ed66a60d224eafa32222f04f5f305d88b374a938 data\minecraft\tags\blocks\logs_that_burn.json
+b1f88c34ad3e0f9cda9765083fdade165dbf2818 data\excessive_building\tags\blocks\chairs.json
+23bd8ee6d60ed1bab5559d97178a91b187f98c27 data\minecraft\tags\blocks\mineable\axe.json
+cd5bc44ed602ab0098c1fed75a633d7c6ae24ba5 data\minecraft\tags\blocks\mineable\hoe.json
+6ac72af714b9b1949d170a069561a62aa46bc109 data\excessive_building\tags\blocks\mineable_with_mallet.json
+c961787dd6feb3f7383b3bb42adc46fb46288a0d data\minecraft\tags\blocks\fence_gates.json
+cd5bc44ed602ab0098c1fed75a633d7c6ae24ba5 data\minecraft\tags\blocks\leaves.json
 9514b016224003660c183a22ffca11a62ac3abc6 data\minecraft\tags\blocks\wooden_doors.json
 f84c893f3b6f74bb4c2cff26bd4089720f7bb82c data\minecraft\tags\blocks\saplings.json
-2c36f6032581c5bfd252f43d578ae38847cbbb8d data\minecraft\tags\blocks\wooden_buttons.json
+5c6fd61c80e4bab3ea032ed3b24b23fe71dda569 data\minecraft\tags\blocks\ceiling_hanging_signs.json
 5fb66c1130328a7cf0e74d8ce0179834e52d5aec data\minecraft\tags\blocks\wooden_fences.json
 acc89d1f118494ca0d02024c86ac772e0bcc3dba data\minecraft\tags\blocks\flower_pots.json
 89cf7fba29b715afe9827a7eee059f360e1de1b6 data\minecraft\tags\blocks\enchantment_power_provider.json
 660a0fbcba006897eaf54970af3906c314d06b9e data\minecraft\tags\blocks\mineable\pickaxe.json
 9552d798293cd216aa8dae9f734d807baecfaff4 data\excessive_building\tags\blocks\ancient_logs.json
-ed66a60d224eafa32222f04f5f305d88b374a938 data\minecraft\tags\blocks\logs_that_burn.json
-b1f88c34ad3e0f9cda9765083fdade165dbf2818 data\excessive_building\tags\blocks\chairs.json

@@ -161,6 +161,11 @@ public class EBLootTableGen extends FabricBlockLootTableProvider {
 
         addNetherVinesDropTable(EBBlocks.ANCIENT_VINES.get(), EBBlocks.ANCIENT_VINES_PLANT.get());
 
+        dropOther(EBBlocks.ANCIENT_SIGN.get(), EBItems.ANCIENT_SIGN.get());
+        dropOther(EBBlocks.ANCIENT_WALL_SIGN.get(), EBItems.ANCIENT_SIGN.get());
+        dropOther(EBBlocks.ANCIENT_HANGING_SIGN.get(), EBItems.ANCIENT_HANGING_SIGN.get());
+        dropOther(EBBlocks.ANCIENT_WALL_HANGING_SIGN.get(), EBItems.ANCIENT_HANGING_SIGN.get());
+
         //USED
         usedBlocks.add(EBBlocks.BOOKSHELF_VARIANT1.get());
         usedBlocks.add(EBBlocks.BOOKSHELF_VARIANT2.get());

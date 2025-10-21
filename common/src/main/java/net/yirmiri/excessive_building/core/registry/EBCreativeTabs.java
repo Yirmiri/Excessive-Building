@@ -113,13 +113,15 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_trapdoor"));
                         entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_pressure_plate"));
                         entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_button"));
+                        entry.accept(EBItems.ANCIENT_SIGN.get());
+                        entry.accept(EBItems.ANCIENT_HANGING_SIGN.get());
                         entry.accept(EBItems.ANCIENT_BOAT.get());
                         entry.accept(EBItems.ANCIENT_CHEST_BOAT.get());
 
                         entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_leaves"));
                         entry.accept(EBBlocks.ANCIENT_VINES.get());
                         entry.accept(EBBlocks.ANCIENT_SAPLING.get());
-                        entry.accept(EBItems.ICHOR_FRUIT.get());
+                        entry.accept(EBItems.ANCIENT_FRUIT.get());
 
                         //CHAIRS
                         entry.accept(EBBlocks.getDyedChairs(DyeColor.WHITE.getId()).get());

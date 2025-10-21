@@ -5,6 +5,7 @@ plugins {
 
 repositories {
     maven { url = "https://cursemaven.com" }
+    maven { url = "https://api.modrinth.com/maven" } //mod maven because curseforge is being really fRIcking annoying with files :)))))))))))))))
 }
 
 legacyForge {
@@ -22,7 +23,8 @@ dependencies {
     compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     //RUNICLIB
-    modCompileOnly "curse.maven:runiclib-880879:${forge_runiclib}"
+    //modCompileOnly "curse.maven:runiclib-880879:${forge_runiclib}"
+    modImplementation "maven.modrinth:runiclib:SGMIvE0e"
 }
 
 configurations {

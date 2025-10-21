@@ -4,14 +4,11 @@ import net.azurune.runiclib.common.publicized.*;
 import net.azurune.runiclib.core.platform.Services;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.*;
@@ -163,6 +160,11 @@ public class EBBlocks {
             .pressurePlate(PressurePlateBlock.Sensitivity.EVERYTHING, true, false, EBRegistries.ANCIENT.setType())
             .glowLeaves(ParticleTypes.CRIMSON_SPORE, SoundType.CHERRY_LEAVES, false)
             ;
+
+    public static final Supplier<Block> ANCIENT_SIGN = register("ancient_sign", () -> new StandingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_SIGN).mapColor(MapColor.SNOW), EBRegistries.ANCIENT), false);
+    public static final Supplier<Block> ANCIENT_WALL_SIGN = register("ancient_wall_sign", () -> new WallSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WALL_SIGN).mapColor(MapColor.SNOW), EBRegistries.ANCIENT), false);
+    public static final Supplier<Block> ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", () -> new CeilingHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_HANGING_SIGN).mapColor(MapColor.SNOW), EBRegistries.ANCIENT), false);
+    public static final Supplier<Block> ANCIENT_WALL_HANGING_SIGN = register("ancient_wall_hanging_sign", () -> new WallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WALL_HANGING_SIGN).mapColor(MapColor.SNOW), EBRegistries.ANCIENT), false);
 
     public static final Supplier<Block> ANCIENT_SAPLING = register("ancient_sapling", () -> new PublicSaplingBlock(new AncientTreeGrower(), EBProperties.BlockP.GLOW_SAPLING), true);
     public static final Supplier<Block> POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", () -> new FlowerPotBlock(ANCIENT_SAPLING.get(), EBProperties.BlockP.GLOW_SAPLING_POT), false);

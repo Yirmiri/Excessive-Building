@@ -53,12 +53,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/glow_item_frame": {
-    "criteria": {
-      "has_item_frame": "2025-05-30 00:24:19 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/pink_stained_glass": {
     "criteria": {
       "has_glass": "2025-05-30 00:14:55 -0400"
@@ -95,23 +89,11 @@
     },
     "done": true
   },
-  "minecraft:adventure/root": {
-    "criteria": {
-      "killed_something": "2025-05-30 00:21:40 -0400"
-    },
-    "done": true
-  },
   "minecraft:recipes/building_blocks/lime_stained_glass": {
     "criteria": {
       "has_glass": "2025-05-30 00:14:55 -0400"
     },
     "done": true
-  },
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:plains": "2025-05-30 00:14:56 -0400"
-    },
-    "done": false
   },
   "minecraft:recipes/decorations/glass_pane": {
     "criteria": {
@@ -128,6 +110,84 @@
   "minecraft:recipes/building_blocks/white_stained_glass": {
     "criteria": {
       "has_glass": "2025-05-30 00:14:55 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2025-05-30 00:14:56 -0400"
+    },
+    "done": false
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2025-05-30 00:21:40 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/glow_item_frame": {
+    "criteria": {
+      "has_item_frame": "2025-05-30 00:24:19 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/chloroslate_bricks_from_polished_chloroslate_stonecutting": {
+    "criteria": {
+      "has_polished_chloroslate": "2025-10-20 18:42:49 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/chloroslate_brick_stairs_from_polished_chloroslate_stonecutting": {
+    "criteria": {
+      "has_polished_chloroslate": "2025-10-20 18:42:49 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/polished_chloroslate_stairs": {
+    "criteria": {
+      "has_polished_chloroslate": "2025-10-20 18:42:49 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/polished_chloroslate_slab": {
+    "criteria": {
+      "has_polished_chloroslate": "2025-10-20 18:42:49 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/chiseled_chloroslate_from_polished_chloroslate_stonecutting": {
+    "criteria": {
+      "has_polished_chloroslate": "2025-10-20 18:42:49 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/chloroslate_brick_slab_from_polished_chloroslate_stonecutting": {
+    "criteria": {
+      "has_polished_chloroslate": "2025-10-20 18:42:49 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/polished_chloroslate_wall": {
+    "criteria": {
+      "has_polished_chloroslate": "2025-10-20 18:42:49 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/chloroslate_brick_wall_from_polished_chloroslate_stonecutting": {
+    "criteria": {
+      "has_polished_chloroslate": "2025-10-20 18:42:49 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/chloroslate_pillar_from_polished_chloroslate_stonecutting": {
+    "criteria": {
+      "has_polished_chloroslate": "2025-10-20 18:42:49 -0400"
+    },
+    "done": true
+  },
+  "excessive_building:recipes/building_blocks/chloroslate_bricks": {
+    "criteria": {
+      "has_polished_chloroslate": "2025-10-20 18:42:49 -0400"
     },
     "done": true
   },

@@ -14,6 +14,10 @@
     "excessive_building:bookshelf_variant3",
     "excessive_building:bookshelf_variant4",
     "excessive_building:bookshelf_variant5",
+    "excessive_building:ancient_sign",
+    "excessive_building:ancient_hanging_sign",
+    "excessive_building:ancient_wall_hanging_sign",
+    "excessive_building:ancient_wall_sign",
     "excessive_building:ancient_planks"
   ]
 }

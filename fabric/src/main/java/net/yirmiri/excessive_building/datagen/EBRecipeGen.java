@@ -1,6 +1,7 @@
 package net.yirmiri.excessive_building.datagen;
 
 import com.google.common.collect.ImmutableList;
+import net.azurune.runiclib.RunicLib;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.BlockFamily;
@@ -357,13 +358,17 @@ public class EBRecipeGen extends FabricRecipeProvider {
                 .define('#', Items.AMETHYST_SHARD).define('@', Items.COPPER_INGOT).define('!', Items.AMETHYST_SHARD)
                 .pattern(" ##")
                 .pattern("@!#")
-                .pattern("@@ ");
+                .pattern("@@ ")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.MALLET.get(), 1)
                 .define('#', Items.AMETHYST_SHARD).define('@', Items.COPPER_INGOT).define('!', Items.STICK)
                 .pattern("###")
                 .pattern("#@#")
-                .pattern(" ! ");
+                .pattern(" ! ")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(consumer);
         //==========================PRISMARINE==========================
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.PRISMARINE), RecipeCategory.MISC, EBBlocks.POLISHED_PRISMARINE.get(), 0.1F, 200)
                 .unlockedBy("has_prismarine", has(Blocks.PRISMARINE)).save(consumer, getSmeltingRecipeName(EBBlocks.POLISHED_PRISMARINE.get()));
@@ -393,15 +398,12 @@ public class EBRecipeGen extends FabricRecipeProvider {
         stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_DARK_PRISMARINE_STAIRS.get(), EBBlocks.POLISHED_DARK_PRISMARINE.get());
         stonecutterRecipeTreeGenerator.putRecipe(EBBlocks.POLISHED_DARK_PRISMARINE_SLAB.get(), EBBlocks.POLISHED_DARK_PRISMARINE.get(), 2);
 
-        createWendysFourForFourMeal(Items.PRISMARINE, EBBlocks.HECTALITE.get().asItem(), Items.PRISMARINE_CRYSTALS);
-
         //==========================ANCIENT WOOD==========================
         BlockFamily ancientFamily = familyBuilder(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_planks").get())
                 .button(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_button").get())
                 .fence(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_fence").get())
                 .fenceGate(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_fence_gate").get())
                 .pressurePlate(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_pressure_plate").get())
-                //.sign(BFBlocks.WALNUT_SIGN, BFBlocks.WALNUT_WALL_SIGN) TODO
                 .slab(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_slab").get())
                 .stairs(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_stairs").get())
                 .door(EBBlocks.ANCIENT_WOODSET.getBlock("ancient_door").get())
@@ -414,9 +416,13 @@ public class EBRecipeGen extends FabricRecipeProvider {
         planksFromLogs(consumer, EBBlocks.ANCIENT_WOODSET.getBlock("ancient_planks").get(), EBTags.ItemT.ANCIENT_LOGS, 4);
         woodenBoat(consumer, EBItems.ANCIENT_BOAT.get(), EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks"));
         chestBoat(consumer, EBItems.ANCIENT_CHEST_BOAT.get(), EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks"));
+        signBuilder(EBItems.ANCIENT_SIGN.get(), Ingredient.of(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks")));
+                //.save(consumer, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBItems.ANCIENT_SIGN.get())));
+        hangingSign(consumer, EBItems.ANCIENT_HANGING_SIGN.get(), EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks"));
 
         //==========================OTHER==========================
         createShelf(EBBlocks.ALCHEMY_SHELF.get().asItem(), Blocks.OAK_PLANKS.asItem(), Items.GLASS_BOTTLE);
+                //.save(consumer, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.ALCHEMY_SHELF.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBBlocks.ZEUS_EPIC_BLOCK.get(), 1)
                 .define('#', Items.PURPLE_DYE)

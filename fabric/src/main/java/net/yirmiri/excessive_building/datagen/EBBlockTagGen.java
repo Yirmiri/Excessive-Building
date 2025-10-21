@@ -33,6 +33,10 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
         appendFlowerPots();
         appendChairs();
         appendClimbable();
+        appendSigns();
+        appendWallSigns();
+        appendCeilingHangingSigns();
+        appendWallHangingSigns();
     }
 
     private void appendMineableWithMallet() {
@@ -157,6 +161,11 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.BOOKSHELF_VARIANT3.get())
                 .add(EBBlocks.BOOKSHELF_VARIANT4.get())
                 .add(EBBlocks.BOOKSHELF_VARIANT5.get())
+
+                .add(EBBlocks.ANCIENT_SIGN.get())
+                .add(EBBlocks.ANCIENT_HANGING_SIGN.get())
+                .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN.get())
+                .add(EBBlocks.ANCIENT_WALL_SIGN.get())
         ;
     }
 
@@ -268,6 +277,29 @@ public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.GRANITE_BRICK_WALL.get())
                 .add(EBBlocks.DIORITE_BRICK_WALL.get())
                 .add(EBBlocks.ANDESITE_BRICK_WALL.get())
+        ;
+    }
+
+    private void appendSigns() {
+        getOrCreateTagBuilder(BlockTags.SIGNS)
+                .add(EBBlocks.ANCIENT_SIGN.get())
+        ;
+    }
+
+    private void appendWallSigns() {
+        getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
+                .add(EBBlocks.ANCIENT_WALL_SIGN.get())
+        ;
+    }
+    private void appendCeilingHangingSigns() {
+        getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
+                .add(EBBlocks.ANCIENT_HANGING_SIGN.get())
+        ;
+    }
+
+    private void appendWallHangingSigns() {
+        getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
+                .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN.get())
         ;
     }
 

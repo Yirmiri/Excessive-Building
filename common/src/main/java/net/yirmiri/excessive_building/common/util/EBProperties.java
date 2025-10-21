@@ -88,12 +88,12 @@ public class EBProperties {
         public static final Item.Properties RARE = new Item.Properties().rarity(Rarity.RARE);
         public static final Item.Properties EPIC = new Item.Properties().rarity(Rarity.EPIC);
         public static final Item.Properties AMETHYST_TOOL = new Item.Properties().stacksTo(1);
-        public static final Item.Properties ICHOR_FRUIT = new Item.Properties().food(FoodP.ICHOR_FRUIT);
+        public static final Item.Properties ANCIENT = new Item.Properties().food(FoodP.ANCIENT_FRUIT);
     }
 
     public static class FoodP {
         //MISC
-        public static final FoodProperties ICHOR_FRUIT = new FoodProperties.Builder()
+        public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationMod(0.2F)
                 .effect(new MobEffectInstance(MobEffects.DIG_SPEED, 100, 0), 1.0F).build();
     }
 }

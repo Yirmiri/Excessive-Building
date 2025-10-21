@@ -158,7 +158,9 @@ public class EBModelGen extends FabricModelProvider {
         generator.generateFlatItem(EBItems.MALLET.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         generator.generateFlatItem(EBItems.ANCIENT_BOAT.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.ANCIENT_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
-        generator.generateFlatItem(EBItems.ICHOR_FRUIT.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.ANCIENT_FRUIT.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.ANCIENT_SIGN.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.ANCIENT_HANGING_SIGN.get(), ModelTemplates.FLAT_ITEM);
     }
 
     //GENERATORS

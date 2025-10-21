@@ -28,6 +28,8 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
         appendHasMalletVariants();
         appendBoats();
         generateBlockFamilyItemTags();
+        appendSigns();
+        appendHangingSigns();
     }
 
     private void appendHasMalletVariants() {
@@ -53,6 +55,18 @@ public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.GRANITE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.DIORITE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.ANDESITE_BRICK_WALL.get().asItem())
+        ;
+    }
+
+    private void appendSigns() {
+        getOrCreateTagBuilder(ItemTags.SIGNS)
+                .add(EBItems.ANCIENT_SIGN.get())
+        ;
+    }
+
+    private void appendHangingSigns() {
+        getOrCreateTagBuilder(ItemTags.HANGING_SIGNS)
+                .add(EBItems.ANCIENT_HANGING_SIGN.get())
         ;
     }
 

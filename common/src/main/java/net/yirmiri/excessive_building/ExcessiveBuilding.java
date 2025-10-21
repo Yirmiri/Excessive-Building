@@ -1,6 +1,5 @@
 package net.yirmiri.excessive_building;
 
-import net.minecraft.resources.ResourceLocation;
 import net.yirmiri.excessive_building.core.registry.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,10 +18,16 @@ public class ExcessiveBuilding {
         EBEffects.loadEffects();
         EBEntities.loadEntities();
     }
-
-    public static ResourceLocation modid(String id) {
-        return new ResourceLocation(MOD_ID, id);
-    }
 }
 
-//TODO::: Ancient Tree Leaf Particle | Ancient Signs | Ancient Tree from Sniffer | Ancient Fruit from Leaves | Potion of Reaching(?)
+//TODO
+//Ancient fruit from leaves
+//Fix neoforge block transmutation
+//Check if neo saplings even drop from sniffers
+//Fix save consumer on some recipes
+//Fix sign rendering
+//Update gauntlet recipe
+
+//TODO 1.21.1+
+//Ancient tree particle
+//Potion of reaching (1.21.1)

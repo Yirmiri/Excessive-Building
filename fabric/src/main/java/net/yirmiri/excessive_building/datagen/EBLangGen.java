@@ -170,7 +170,9 @@ public class EBLangGen extends FabricLanguageProvider {
 
         generate(build, EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
         generate(build, EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");
-        generate(build, EBItems.ICHOR_FRUIT.get(), "Ichor Fruit");
+        generate(build, EBItems.ANCIENT_SIGN.get(), "Ancient Sign");
+        generate(build, EBItems.ANCIENT_HANGING_SIGN.get(), "Ancient Hanging Sign");
+        generate(build, EBItems.ANCIENT_FRUIT.get(), "Ancient Fruit");
 
         //EFFECT
         build.add(EBEffects.RAPIDITY.get(), "Rapidity");
