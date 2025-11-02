@@ -355,10 +355,10 @@ public class EBRecipeGen extends FabricRecipeProvider {
 
         //==========================TOOLS==========================
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.GAUNTLET.get(), 1)
-                .define('#', Items.AMETHYST_SHARD).define('@', Items.COPPER_INGOT).define('!', Items.AMETHYST_SHARD)
-                .pattern(" ##")
-                .pattern("@!#")
-                .pattern("@@ ")
+                .define('#', Items.AMETHYST_SHARD).define('@', Items.COPPER_INGOT).define('!', Items.AMETHYST_BLOCK)
+                .pattern("!# ")
+                .pattern("#!@")
+                .pattern(" @@")
                 .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
                 .save(consumer);
 
@@ -416,13 +416,13 @@ public class EBRecipeGen extends FabricRecipeProvider {
         planksFromLogs(consumer, EBBlocks.ANCIENT_WOODSET.getBlock("ancient_planks").get(), EBTags.ItemT.ANCIENT_LOGS, 4);
         woodenBoat(consumer, EBItems.ANCIENT_BOAT.get(), EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks"));
         chestBoat(consumer, EBItems.ANCIENT_CHEST_BOAT.get(), EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks"));
-        signBuilder(EBItems.ANCIENT_SIGN.get(), Ingredient.of(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks")));
-                //.save(consumer, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBItems.ANCIENT_SIGN.get())));
+        signBuilder(EBItems.ANCIENT_SIGN.get(), Ingredient.of(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks")))
+                .save(consumer, "ancient_sign");
         hangingSign(consumer, EBItems.ANCIENT_HANGING_SIGN.get(), EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_planks"));
 
         //==========================OTHER==========================
-        createShelf(EBBlocks.ALCHEMY_SHELF.get().asItem(), Blocks.OAK_PLANKS.asItem(), Items.GLASS_BOTTLE);
-                //.save(consumer, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.ALCHEMY_SHELF.get())));
+        createShelf(EBBlocks.ALCHEMY_SHELF.get().asItem(), Blocks.OAK_PLANKS.asItem(), Items.GLASS_BOTTLE)
+                .save(consumer, "alchemy_shelf");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBBlocks.ZEUS_EPIC_BLOCK.get(), 1)
                 .define('#', Items.PURPLE_DYE)

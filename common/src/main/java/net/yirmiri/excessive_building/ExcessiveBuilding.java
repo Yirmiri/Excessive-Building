@@ -20,13 +20,10 @@ public class ExcessiveBuilding {
     }
 }
 
-//TODO
-//Ancient fruit from leaves
-//Fix neoforge block transmutation
-//Check if neo saplings even drop from sniffers
-//Fix save consumer on some recipes
-//Fix sign rendering
-//Update gauntlet recipe
+//TODO 4.1
+//Almentra
+//Marble/Marquina Marble
+//Frosted Lanterns
 
 //TODO 1.21.1+
 //Ancient tree particle

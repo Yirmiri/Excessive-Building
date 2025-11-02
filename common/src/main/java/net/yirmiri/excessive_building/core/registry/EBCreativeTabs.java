@@ -113,8 +113,8 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_trapdoor"));
                         entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_pressure_plate"));
                         entry.accept(EBBlocks.ANCIENT_WOODSET.getBlockItem("ancient_button"));
-                        entry.accept(EBItems.ANCIENT_SIGN.get());
-                        entry.accept(EBItems.ANCIENT_HANGING_SIGN.get());
+                        //entry.accept(EBItems.ANCIENT_SIGN.get());
+                        //entry.accept(EBItems.ANCIENT_HANGING_SIGN.get());
                         entry.accept(EBItems.ANCIENT_BOAT.get());
                         entry.accept(EBItems.ANCIENT_CHEST_BOAT.get());
 
