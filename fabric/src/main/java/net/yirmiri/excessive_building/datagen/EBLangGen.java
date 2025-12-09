@@ -49,6 +49,7 @@ public class EBLangGen extends FabricLanguageProvider {
         //MISC
         generate(build, "itemgroup.excessive_building", "Excessive Building");
         generate(build, "itemgroup.excessive_building_vertical_stairs", "Excessive Building: Vertical Stairs");
+        generate(build, "item.excessive_building.hand", "When in Hand:");
         generate(build, "item.excessive_building.gauntlet.desc", "Reduces the delay of placing blocks");
         generate(build, "item.excessive_building.mallet.use", "When used on specific blocks:");
         generate(build, "item.excessive_building.mallet.desc", "Changes variant");

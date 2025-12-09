@@ -1,5 +1,5 @@
-[03:58:31] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.9
-[03:58:32] [main/INFO] (FabricLoader) Loading 60 mods:
+[11:32:28] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.9
+[11:32:28] [main/INFO] (FabricLoader) Loading 60 mods:
 	- excessive_building 4.0.0
 	- fabric-api 0.92.1+1.20.1
 	- fabric-api-base 0.4.31+1802ada577
@@ -60,16 +60,16 @@
 	- minecraft 1.20.1
 	- mixinextras 0.4.1
 	- runiclib 4.3.8
-[03:58:32] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[03:58:32] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[03:58:32] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[03:58:32] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[03:58:34] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[03:58:42] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 562 milliseconds
-[03:58:43] [main/WARN] (FabricLoader/Mixin) Discarding @Unique public field effect in runiclib.mixins.json:server.MobEffectInstanceMixin from mod runiclib because it already exists in net.minecraft.world.effect.MobEffectInstance. Note that declared FIELD INITIALISERS will NOT be removed!
-[03:58:45] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
-[03:58:45] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[03:58:46] [Render thread/ERROR] (Minecraft) Failed to verify authentication
+[11:32:29] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[11:32:29] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[11:32:29] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[11:32:29] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[11:32:30] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[11:32:34] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 130 milliseconds
+[11:32:34] [main/WARN] (FabricLoader/Mixin) Discarding @Unique public field effect in runiclib.mixins.json:server.MobEffectInstanceMixin from mod runiclib because it already exists in net.minecraft.world.effect.MobEffectInstance. Note that declared FIELD INITIALISERS will NOT be removed!
+[11:32:35] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
+[11:32:35] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[11:32:36] [Render thread/ERROR] (Minecraft) Failed to verify authentication
 com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
 	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-4.0.43.jar:?]
@@ -87,21 +87,37 @@ Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 4
 	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-4.0.43.jar:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-4.0.43.jar:?]
 	... 9 more
-[03:58:46] [Render thread/INFO] (Minecraft) Setting user: Player968
-[03:58:46] [Render thread/ERROR] (Minecraft) No data fixer registered for excessive_building:chair
-[03:58:46] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[03:58:47] [Render thread/INFO] (FabricDataGenHelper) Running data generator for excessive_building
-[03:58:48] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Language (en_us)
-[03:58:48] [Render thread/INFO] (Minecraft) Excessive Building/Language (en_us) finished after 21 ms
-[03:58:48] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:block
-[03:58:48] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:block finished after 259 ms
-[03:58:48] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:item
-[03:58:48] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:item finished after 8 ms
-[03:58:48] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Recipes
-[03:58:48] [Render thread/INFO] (Minecraft) Excessive Building/Recipes finished after 331 ms
-[03:58:48] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Block Loot Tables
-[03:58:49] [Render thread/INFO] (Minecraft) Excessive Building/Block Loot Tables finished after 275 ms
-[03:58:49] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Model Definitions
-[03:58:49] [Render thread/INFO] (Minecraft) Excessive Building/Model Definitions finished after 270 ms
-[03:58:49] [Render thread/INFO] (Minecraft) All providers took: 1171 ms
-[03:58:49] [Render thread/INFO] (Minecraft) Caching: total files: 1059, old count: 1044, new count: 1059, removed stale: 1, written: 17
+[11:32:36] [Render thread/INFO] (Minecraft) Setting user: Player305
+[11:32:36] [Render thread/ERROR] (Minecraft) No data fixer registered for excessive_building:chair
+[11:32:36] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[11:32:37] [Render thread/INFO] (FabricDataGenHelper) Running data generator for excessive_building
+[11:32:37] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Language (en_us)
+[11:32:37] [Render thread/INFO] (Minecraft) Excessive Building/Language (en_us) finished after 11 ms
+[11:32:37] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:block
+[11:32:37] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:block finished after 216 ms
+[11:32:37] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:item
+[11:32:37] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:item finished after 3 ms
+[11:32:37] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Recipes
+[11:32:37] [Render thread/ERROR] (FabricDataGenHelper) Failed to run data generation
+java.lang.RuntimeException: Failed to run data generator from mod (excessive_building)
+	at net.fabricmc.fabric.impl.datagen.FabricDataGenHelper.runInternal(FabricDataGenHelper.java:150) ~[fabric-data-generation-api-v1-12.3.4+1802ada577.jar:?]
+	at net.fabricmc.fabric.impl.datagen.FabricDataGenHelper.run(FabricDataGenHelper.java:89) ~[fabric-data-generation-api-v1-12.3.4+1802ada577.jar:?]
+	at net.minecraft.client.Minecraft.handler$zjd000$fabric-data-generation-api-v1$main(Minecraft.java:6017) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:468) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:211) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) ~[fabric-loader-0.16.9.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) ~[fabric-loader-0.16.9.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.16.9.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar:?]
+Caused by: java.lang.IllegalStateException: No way of obtaining recipe minecraft:ancient_sign
+	at net.minecraft.data.recipes.ShapedRecipeBuilder.ensureValid(ShapedRecipeBuilder.java:140) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at net.minecraft.data.recipes.ShapedRecipeBuilder.save(ShapedRecipeBuilder.java:104) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at net.minecraft.data.recipes.RecipeBuilder.save(RecipeBuilder.java:33) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at net.yirmiri.excessive_building.datagen.EBRecipeGen.buildRecipes(EBRecipeGen.java:420) ~[main/:?]
+	at net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider.run(FabricRecipeProvider.java:76) ~[fabric-data-generation-api-v1-12.3.4+1802ada577.jar:?]
+	at net.minecraft.data.HashCache.generateUpdate(HashCache.java:190) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at net.minecraft.data.DataGenerator.method_46563(DataGenerator.java:52) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[?:?]
+	at net.minecraft.data.DataGenerator.run(DataGenerator.java:45) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
+	at net.fabricmc.fabric.impl.datagen.FabricDataGenHelper.runInternal(FabricDataGenHelper.java:145) ~[fabric-data-generation-api-v1-12.3.4+1802ada577.jar:?]
+	... 8 more

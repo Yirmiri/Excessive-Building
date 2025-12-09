@@ -132,6 +132,7 @@
   "item.excessive_building.ancient_fruit": "Ancient Fruit",
   "item.excessive_building.gauntlet": "Gauntlet",
   "item.excessive_building.gauntlet.desc": "Reduces the delay of placing blocks",
+  "item.excessive_building.hand": "When in Hand:",
   "item.excessive_building.mallet": "Mallet",
   "item.excessive_building.mallet.desc": "Changes variant",
   "item.excessive_building.mallet.use": "When used on specific blocks:",

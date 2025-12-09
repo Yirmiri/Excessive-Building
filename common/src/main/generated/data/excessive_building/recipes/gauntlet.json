@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "!": {
-      "item": "minecraft:amethyst_shard"
+      "item": "minecraft:amethyst_block"
     },
     "#": {
       "item": "minecraft:amethyst_shard"
@@ -13,9 +13,9 @@
     }
   },
   "pattern": [
-    " ##",
-    "@!#",
-    "@@ "
+    "!# ",
+    "#!@",
+    " @@"
   ],
   "result": {
     "item": "excessive_building:gauntlet"
