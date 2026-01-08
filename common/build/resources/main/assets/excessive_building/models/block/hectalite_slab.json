@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "excessive_building:block/hectalite",
-    "side": "excessive_building:block/hectalite",
-    "top": "excessive_building:block/hectalite"
-  }
-}

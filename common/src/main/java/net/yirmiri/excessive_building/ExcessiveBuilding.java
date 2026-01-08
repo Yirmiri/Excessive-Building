@@ -1,6 +1,7 @@
 package net.yirmiri.excessive_building;
 
-import net.yirmiri.excessive_building.core.registry.*;
+import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBCreativeTabs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,21 +11,6 @@ public class ExcessiveBuilding {
 
     public static void init() {
         EBBlocks.loadBlocks();
-        EBItems.loadItems();
-        EBBlockEntities.loadBlockEntities();
-        EBCreativeTabs.loadCreativeTabs();
-        EBParticles.loadParticles();
-        EBPotions.loadPotions();
-        EBEffects.loadEffects();
-        EBEntities.loadEntities();
+        EBCreativeTabs.loadItemGroups();
     }
-}
-
-//TODO 4.1
-//Almentra
-//Marble/Marquina Marble
-//Frosted Lanterns
-
-//TODO 1.21.1+
-//Ancient tree particle
-//Potion of reaching (1.21.1)
+}//todo make integration cleaner (delicate recipe)

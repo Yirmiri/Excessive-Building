@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "lavender",
+  "ingredients": [
+    {
+      "item": "excessive_building:lavender_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "excessive_building:lavender"
+  }
+}

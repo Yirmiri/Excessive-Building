@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "excessive_building:hectalite"
-  },
-  "result": "excessive_building:hectalite_brick_wall"
-}

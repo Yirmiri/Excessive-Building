@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "excessive_building:block/aridite",
-    "side": "excessive_building:block/aridite",
-    "top": "excessive_building:block/aridite"
-  }
-}

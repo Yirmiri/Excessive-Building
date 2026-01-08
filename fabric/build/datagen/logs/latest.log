@@ -1,123 +1,86 @@
-[11:32:28] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.20.1 with Fabric Loader 0.16.9
-[11:32:28] [main/INFO] (FabricLoader) Loading 60 mods:
+[13:25:56] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.1 with Fabric Loader 0.16.9
+[13:25:56] [main/INFO] (FabricLoader) Loading 56 mods:
 	- excessive_building 4.0.0
-	- fabric-api 0.92.1+1.20.1
-	- fabric-api-base 0.4.31+1802ada577
-	- fabric-api-lookup-api-v1 1.6.36+1802ada577
-	- fabric-biome-api-v1 13.0.13+1802ada577
-	- fabric-block-api-v1 1.0.11+1802ada577
-	- fabric-block-view-api-v2 1.0.1+1802ada577
-	- fabric-blockrenderlayer-v1 1.1.41+1802ada577
-	- fabric-client-tags-api-v1 1.1.2+1802ada577
-	- fabric-command-api-v1 1.2.34+f71b366f77
-	- fabric-command-api-v2 2.2.13+1802ada577
-	- fabric-commands-v0 0.2.51+df3654b377
-	- fabric-containers-v0 0.1.64+df3654b377
-	- fabric-content-registries-v0 4.0.11+1802ada577
-	- fabric-convention-tags-v1 1.5.5+1802ada577
-	- fabric-crash-report-info-v1 0.2.19+1802ada577
-	- fabric-data-attachment-api-v1 1.0.0+de0fd6d177
-	- fabric-data-generation-api-v1 12.3.4+1802ada577
-	- fabric-dimensions-v1 2.1.54+1802ada577
-	- fabric-entity-events-v1 1.6.0+1c78457f77
-	- fabric-events-interaction-v0 0.6.2+1802ada577
-	- fabric-events-lifecycle-v0 0.2.63+df3654b377
-	- fabric-game-rule-api-v1 1.0.40+1802ada577
-	- fabric-gametest-api-v1 1.2.13+1802ada577
-	- fabric-item-api-v1 2.1.28+1802ada577
-	- fabric-item-group-api-v1 4.0.12+1802ada577
-	- fabric-key-binding-api-v1 1.0.37+1802ada577
-	- fabric-keybindings-v0 0.2.35+df3654b377
-	- fabric-lifecycle-events-v1 2.2.22+1802ada577
-	- fabric-loot-api-v2 1.2.1+1802ada577
-	- fabric-loot-tables-v1 1.1.45+9e7660c677
-	- fabric-message-api-v1 5.1.9+1802ada577
-	- fabric-mining-level-api-v1 2.1.50+1802ada577
-	- fabric-model-loading-api-v1 1.0.3+1802ada577
-	- fabric-models-v0 0.4.2+9386d8a777
-	- fabric-networking-api-v1 1.3.11+1802ada577
-	- fabric-networking-v0 0.3.51+df3654b377
-	- fabric-object-builder-api-v1 11.1.3+1802ada577
-	- fabric-particles-v1 1.1.2+1802ada577
-	- fabric-recipe-api-v1 1.0.21+1802ada577
-	- fabric-registry-sync-v0 2.3.3+1802ada577
-	- fabric-renderer-api-v1 3.2.1+1802ada577
-	- fabric-renderer-indigo 1.5.1+1802ada577
-	- fabric-renderer-registries-v1 3.2.46+df3654b377
-	- fabric-rendering-data-attachment-v1 0.3.37+92a0d36777
-	- fabric-rendering-fluids-v1 3.0.28+1802ada577
-	- fabric-rendering-v0 1.1.49+df3654b377
-	- fabric-rendering-v1 3.0.8+1802ada577
-	- fabric-resource-conditions-api-v1 2.3.8+1802ada577
-	- fabric-resource-loader-v0 0.11.10+1802ada577
-	- fabric-screen-api-v1 2.0.8+1802ada577
-	- fabric-screen-handler-api-v1 1.3.30+1802ada577
-	- fabric-sound-api-v1 1.0.13+1802ada577
-	- fabric-transfer-api-v1 3.3.5+8dd72ea377
-	- fabric-transitive-access-wideners-v1 4.3.1+1802ada577
+	- fabric-api 0.109.0+1.21.1
+	- fabric-api-base 0.4.42+6573ed8c19
+	- fabric-api-lookup-api-v1 1.6.70+b559734419
+	- fabric-biome-api-v1 13.0.30+be1ed2d719
+	- fabric-block-api-v1 1.0.22+0af3f5a719
+	- fabric-block-view-api-v2 1.0.10+6573ed8c19
+	- fabric-blockrenderlayer-v1 1.1.52+0af3f5a719
+	- fabric-client-tags-api-v1 1.1.15+6573ed8c19
+	- fabric-command-api-v1 1.2.49+f71b366f19
+	- fabric-command-api-v2 2.2.28+6ced4dd919
+	- fabric-commands-v0 0.2.66+df3654b319
+	- fabric-content-registries-v0 8.0.18+b559734419
+	- fabric-convention-tags-v1 2.1.2+7f945d5b19
+	- fabric-convention-tags-v2 2.9.2+e60e56d419
+	- fabric-crash-report-info-v1 0.2.29+0af3f5a719
+	- fabric-data-attachment-api-v1 1.4.0+da19b51a19
+	- fabric-data-generation-api-v1 20.2.23+16c4ae2519
+	- fabric-dimensions-v1 4.0.0+6fc22b9919
+	- fabric-entity-events-v1 1.7.0+2122d82819
+	- fabric-events-interaction-v0 0.7.13+ba9dae0619
+	- fabric-game-rule-api-v1 1.0.53+6ced4dd919
+	- fabric-gametest-api-v1 2.0.5+6fc22b9919
+	- fabric-item-api-v1 11.1.1+d5debaed19
+	- fabric-item-group-api-v1 4.1.6+6823f7cd19
+	- fabric-key-binding-api-v1 1.0.47+0af3f5a719
+	- fabric-keybindings-v0 0.2.45+df3654b319
+	- fabric-lifecycle-events-v1 2.5.0+01d9a51c19
+	- fabric-loot-api-v2 3.0.15+3f89f5a519
+	- fabric-loot-api-v3 1.0.3+3f89f5a519
+	- fabric-message-api-v1 6.0.13+6573ed8c19
+	- fabric-model-loading-api-v1 2.0.0+fe474d6b19
+	- fabric-networking-api-v1 4.3.0+c7469b2119
+	- fabric-object-builder-api-v1 15.2.1+40875a9319
+	- fabric-particles-v1 4.0.2+6573ed8c19
+	- fabric-recipe-api-v1 5.0.13+6508971219
+	- fabric-registry-sync-v0 5.1.3+60c3209b19
+	- fabric-renderer-api-v1 3.4.0+c705a49c19
+	- fabric-renderer-indigo 1.7.0+c705a49c19
+	- fabric-renderer-registries-v1 3.2.68+df3654b319
+	- fabric-rendering-data-attachment-v1 0.3.48+73761d2e19
+	- fabric-rendering-fluids-v1 3.1.6+1daea21519
+	- fabric-rendering-v0 1.1.71+df3654b319
+	- fabric-rendering-v1 5.0.5+df16efd019
+	- fabric-resource-conditions-api-v1 4.3.0+8dc279b119
+	- fabric-resource-loader-v0 1.3.1+5b5275af19
+	- fabric-screen-api-v1 2.0.25+8b68f1c719
+	- fabric-screen-handler-api-v1 1.3.87+b559734419
+	- fabric-sound-api-v1 1.0.23+6573ed8c19
+	- fabric-transfer-api-v1 5.4.2+95bead5f19
+	- fabric-transitive-access-wideners-v1 6.1.0+1daea21519
 	- fabricloader 0.16.9
 	- java 21
-	- minecraft 1.20.1
+	- minecraft 1.21.1
 	- mixinextras 0.4.1
-	- runiclib 4.3.8
-[11:32:29] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[11:32:29] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[11:32:29] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[11:32:29] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[11:32:30] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[11:32:34] [Datafixer Bootstrap/INFO] (Minecraft) 188 Datafixer optimizations took 130 milliseconds
-[11:32:34] [main/WARN] (FabricLoader/Mixin) Discarding @Unique public field effect in runiclib.mixins.json:server.MobEffectInstanceMixin from mod runiclib because it already exists in net.minecraft.world.effect.MobEffectInstance. Note that declared FIELD INITIALISERS will NOT be removed!
-[11:32:35] [Render thread/INFO] (Minecraft) [STDERR]: [LWJGL] [ThreadLocalUtil] Unsupported JNI version detected, this may result in a crash. Please inform LWJGL developers.
-[11:32:35] [Render thread/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[11:32:36] [Render thread/ERROR] (Minecraft) Failed to verify authentication
-com.mojang.authlib.exceptions.InvalidCredentialsException: Status: 401
-	at com.mojang.authlib.exceptions.MinecraftClientHttpException.toAuthenticationException(MinecraftClientHttpException.java:56) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:156) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.<init>(YggdrasilUserApiService.java:55) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.createUserApiService(YggdrasilAuthenticationService.java:124) ~[authlib-4.0.43.jar:?]
-	at net.minecraft.client.Minecraft.createUserApiService(Minecraft.java:733) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.minecraft.client.Minecraft.<init>(Minecraft.java:442) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:211) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) ~[fabric-loader-0.16.9.jar:?]
-	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) ~[fabric-loader-0.16.9.jar:?]
-	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.16.9.jar:?]
-	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar:?]
-Caused by: com.mojang.authlib.exceptions.MinecraftClientHttpException: Status: 401
-	at com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:85) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:48) ~[authlib-4.0.43.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilUserApiService.fetchProperties(YggdrasilUserApiService.java:129) ~[authlib-4.0.43.jar:?]
-	... 9 more
-[11:32:36] [Render thread/INFO] (Minecraft) Setting user: Player305
-[11:32:36] [Render thread/ERROR] (Minecraft) No data fixer registered for excessive_building:chair
-[11:32:36] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[11:32:37] [Render thread/INFO] (FabricDataGenHelper) Running data generator for excessive_building
-[11:32:37] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Language (en_us)
-[11:32:37] [Render thread/INFO] (Minecraft) Excessive Building/Language (en_us) finished after 11 ms
-[11:32:37] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:block
-[11:32:37] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:block finished after 216 ms
-[11:32:37] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:item
-[11:32:37] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:item finished after 3 ms
-[11:32:37] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Recipes
-[11:32:37] [Render thread/ERROR] (FabricDataGenHelper) Failed to run data generation
-java.lang.RuntimeException: Failed to run data generator from mod (excessive_building)
-	at net.fabricmc.fabric.impl.datagen.FabricDataGenHelper.runInternal(FabricDataGenHelper.java:150) ~[fabric-data-generation-api-v1-12.3.4+1802ada577.jar:?]
-	at net.fabricmc.fabric.impl.datagen.FabricDataGenHelper.run(FabricDataGenHelper.java:89) ~[fabric-data-generation-api-v1-12.3.4+1802ada577.jar:?]
-	at net.minecraft.client.Minecraft.handler$zjd000$fabric-data-generation-api-v1$main(Minecraft.java:6017) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.minecraft.client.Minecraft.<init>(Minecraft.java:468) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:211) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480) ~[fabric-loader-0.16.9.jar:?]
-	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) ~[fabric-loader-0.16.9.jar:?]
-	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.16.9.jar:?]
-	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar:?]
-Caused by: java.lang.IllegalStateException: No way of obtaining recipe minecraft:ancient_sign
-	at net.minecraft.data.recipes.ShapedRecipeBuilder.ensureValid(ShapedRecipeBuilder.java:140) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.minecraft.data.recipes.ShapedRecipeBuilder.save(ShapedRecipeBuilder.java:104) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.minecraft.data.recipes.RecipeBuilder.save(RecipeBuilder.java:33) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.yirmiri.excessive_building.datagen.EBRecipeGen.buildRecipes(EBRecipeGen.java:420) ~[main/:?]
-	at net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider.run(FabricRecipeProvider.java:76) ~[fabric-data-generation-api-v1-12.3.4+1802ada577.jar:?]
-	at net.minecraft.data.HashCache.generateUpdate(HashCache.java:190) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.minecraft.data.DataGenerator.method_46563(DataGenerator.java:52) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:986) ~[?:?]
-	at net.minecraft.data.DataGenerator.run(DataGenerator.java:45) ~[minecraft-merged-7787b014d4-1.20.1-loom.mappings.1_20_1.layered+hash.1899487486-v2.jar:?]
-	at net.fabricmc.fabric.impl.datagen.FabricDataGenHelper.runInternal(FabricDataGenHelper.java:145) ~[fabric-data-generation-api-v1-12.3.4+1802ada577.jar:?]
-	... 8 more
+	- runiclib 5.0.0
+[13:25:56] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[13:25:56] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[13:25:56] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[13:25:56] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[13:25:57] [main/WARN] (FabricLoader/Mixin) Reference map 'excessive_building.refmap.json' for excessive_building.mixins.json could not be read. If this is a development environment you can ignore this message
+[13:25:57] [main/WARN] (FabricLoader/Mixin) Reference map 'excessive_building.refmap.json' for excessive_building.fabric.mixins.json could not be read. If this is a development environment you can ignore this message
+[13:25:58] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[13:25:58] [Datafixer Bootstrap/INFO] (Minecraft) 226 Datafixer optimizations took 340 milliseconds
+[13:26:03] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[13:26:03] [Render thread/INFO] (Minecraft) Setting user: Player548
+[13:26:03] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[13:26:03] [Render thread/INFO] (FabricDataGenHelper) Running data generator for excessive_building
+[13:26:04] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Language (en_us)
+[13:26:04] [Render thread/INFO] (Minecraft) Excessive Building/Language (en_us) finished after 13 ms
+[13:26:04] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:block
+[13:26:04] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:block finished after 9 ms
+[13:26:04] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:item
+[13:26:04] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:item finished after 1 ms
+[13:26:04] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Block Loot Tables
+[13:26:04] [Render thread/INFO] (Minecraft) Excessive Building/Block Loot Tables finished after 16 ms
+[13:26:04] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Model Definitions
+[13:26:04] [Render thread/INFO] (Minecraft) Excessive Building/Model Definitions finished after 45 ms
+[13:26:04] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Recipes
+[13:26:04] [Render thread/INFO] (Minecraft) Excessive Building/Recipes finished after 44 ms
+[13:26:04] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:worldgen/biome
+[13:26:04] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:worldgen/biome finished after 0 ms
+[13:26:04] [Render thread/INFO] (Minecraft) All providers took: 133 ms
+[13:26:04] [Render thread/INFO] (Minecraft) Caching: total files: 352, old count: 345, new count: 351, removed stale: 2, written: 11

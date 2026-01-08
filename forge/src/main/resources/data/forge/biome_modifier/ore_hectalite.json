@@ -1,8 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": [
-    "excessive_building:ore_hectalite"
-  ],
-  "step": "underground_ores"
-}

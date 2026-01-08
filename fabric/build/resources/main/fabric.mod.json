@@ -16,13 +16,13 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "net.yirmiri.excessive_building.FabricExcessiveBuilding"
+          "net.yirmiri.excessive_building.FabricExcessiveBuilding"
         ],
         "client": [
-            "net.yirmiri.excessive_building.FabricExcessiveBuildingClient"
+          "net.yirmiri.excessive_building.FabricEBClient"
         ],
         "fabric-datagen": [
-            "net.yirmiri.excessive_building.FabricExcessiveBuildingDatagen"
+          "net.yirmiri.excessive_building.FabricEBDatagen"
         ]
     },
     "mixins": [
@@ -30,11 +30,11 @@
         "excessive_building.fabric.mixins.json"
     ],
     "depends": {
-        "fabricloader": ">=0.14",
-        "fabric": "*",
-        "minecraft": "1.20.1",
-        "java": ">=17",
-        "runiclib": ">=4.3.3"
+        "fabricloader": ">=0.16.9",
+        "fabric-api": "*",
+        "minecraft": "1.21.1",
+        "java": ">=21",
+        "runiclib": ">=5.0.0"
     },
     "suggests": {
         "another-mod": "*"

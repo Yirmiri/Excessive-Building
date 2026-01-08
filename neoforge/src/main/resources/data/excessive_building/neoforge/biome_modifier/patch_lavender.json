@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#excessive_building:lavender_generates_in",
+  "features": [
+    "excessive_building:patch_lavender"
+  ],
+  "step": "vegetal_decoration"
+}

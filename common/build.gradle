@@ -1,17 +1,18 @@
 plugins {
     id 'multiloader-common'
-    id 'net.neoforged.moddev.legacyforge'
+    id 'net.neoforged.moddev'
 }
 
 repositories {
     maven { url = "https://cursemaven.com" }
-    maven { url = "https://api.modrinth.com/maven" } //mod maven because curseforge is being really fRIcking annoying with files :)))))))))))))))
 }
 
-legacyForge {
-    mcpVersion = minecraft_version
-    if (file("src/main/resources/META-INF/accesstransformer.cfg").exists()) {
-        accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
+neoForge {
+    neoFormVersion = neo_form_version
+    // Automatically enable AccessTransformers if the file exists
+    def at = file('src/main/resources/META-INF/accesstransformer.cfg')
+    if (at.exists()) {
+        accessTransformers.from(at.absolutePath)
     }
     parchment {
         minecraftVersion = parchment_minecraft
@@ -21,10 +22,11 @@ legacyForge {
 
 dependencies {
     compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
-    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+    // fabric and neoforge both bundle mixinextras, so it is safe to use it in common
+    compileOnly group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
+    annotationProcessor group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
     //RUNICLIB
-    //modCompileOnly "curse.maven:runiclib-880879:${forge_runiclib}"
-    modImplementation "maven.modrinth:runiclib:SGMIvE0e"
+    implementation("curse.maven:runiclib-880879:${neoforge_runiclib}")
 }
 
 configurations {
@@ -43,6 +45,4 @@ artifacts {
     commonResources sourceSets.main.resources.sourceDirectories.singleFile
 }
 
-sourceSets.main.resources {
-    srcDir project(":common").file('src/main/generated/').getAbsolutePath()
-}
+sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }

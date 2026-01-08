@@ -1,7 +1,0 @@
-{
-  "parent": "excessive_building:block/template_chair",
-  "textures": {
-    "0": "excessive_building:block/white_chair",
-    "particle": "minecraft:block/oak_planks"
-  }
-}

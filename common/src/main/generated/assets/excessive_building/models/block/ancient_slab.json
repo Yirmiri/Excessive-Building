@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "excessive_building:block/ancient_planks",
-    "side": "excessive_building:block/ancient_planks",
-    "top": "excessive_building:block/ancient_planks"
-  }
-}

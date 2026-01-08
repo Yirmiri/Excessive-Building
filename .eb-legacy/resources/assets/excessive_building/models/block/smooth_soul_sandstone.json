@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "excessive_building:block/soul_sandstone_top",
-    "particle": "excessive_building:block/soul_sandstone_top"
-  },
-  "render_type": "solid"
-}
