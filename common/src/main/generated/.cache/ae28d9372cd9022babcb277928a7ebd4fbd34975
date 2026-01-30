@@ -1,24 +1,25 @@
-// 1.21.1	2026-01-30T05:24:00.2546449	Excessive Building/Tags for minecraft:block
+// 1.21.1	2026-01-30T06:33:14.6736141	Excessive Building/Tags for minecraft:block
 2714b86fd272c4dc23f625ad6e85ee0df304a93e data\minecraft\tags\block\wooden_trapdoors.json
 5c9b4a714d5526b57f39d429e68c80213cc5f481 data\minecraft\tags\block\walls.json
 57d16cfe3867b211870e103e54e86c25dfddb226 data\minecraft\tags\block\ceiling_hanging_signs.json
-cb1303d8550c1c44f5c1d93061aeb00421641afb data\minecraft\tags\block\wooden_doors.json
 92e63a1cf04e6f7d0d8664a806c62bbad480c675 data\minecraft\tags\block\wooden_buttons.json
 6d7806362f9b22375e2f6e9b05536a40dadbdd27 data\minecraft\tags\block\wall_signs.json
-e16dd0216b65049658bf81ff05bc00cb45041d92 data\minecraft\tags\block\logs.json
-a3f16e11210ad065b683325932a516acc7fbf29e data\minecraft\tags\block\flower_pots.json
 b53d92c11c5c471749999f8e155706faffb15b65 data\minecraft\tags\block\planks.json
+a4a13428b41ed53a35e627f7d7d47cede9f3954e data\minecraft\tags\block\needs_stone_tool.json
+e05777f505cb8a218e6a221fa779322c5014b7db data\minecraft\tags\block\leaves.json
+1edde5b91b69f573f9016cf1a6e79cffaa8871b3 data\minecraft\tags\block\wooden_pressure_plates.json
+3acdb3aefd331cf0e07f2f6292c306aeb2cd223d data\minecraft\tags\block\wooden_slabs.json
+cb1303d8550c1c44f5c1d93061aeb00421641afb data\minecraft\tags\block\wooden_doors.json
+e16dd0216b65049658bf81ff05bc00cb45041d92 data\minecraft\tags\block\logs.json
+f90c964f3c3607cae3953d763bc600427f16cc76 data\excessive_building\tags\block\mineable_with_mallet.json
+a3f16e11210ad065b683325932a516acc7fbf29e data\minecraft\tags\block\flower_pots.json
 4b846755972b841727e95a863d1120a60518f243 data\minecraft\tags\block\mineable\hoe.json
 d473cddf817f5afc0c7a2cefc6b9091c8f6de0ee data\minecraft\tags\block\mineable\axe.json
 095466cfb20ebee0e4c4f3bcf6f7161881895e68 data\minecraft\tags\block\small_flowers.json
 ba3d71a2828a2171d5d06009ddcf7ce06e159d53 data\minecraft\tags\block\signs.json
-a4a13428b41ed53a35e627f7d7d47cede9f3954e data\minecraft\tags\block\needs_stone_tool.json
 0a9a95cb3e4d9b46a04be84a5b181eac399f5ac0 data\minecraft\tags\block\mineable\shovel.json
-e05777f505cb8a218e6a221fa779322c5014b7db data\minecraft\tags\block\leaves.json
 4feea691b696eb3e8425372891b1e13021c1a14a data\minecraft\tags\block\wall_hanging_signs.json
 a990398e3eaf85d89e46bffcb0260eedcd978474 data\minecraft\tags\block\mineable\pickaxe.json
-1edde5b91b69f573f9016cf1a6e79cffaa8871b3 data\minecraft\tags\block\wooden_pressure_plates.json
 15f232853523acd25853c58e0f94256933a1a194 data\minecraft\tags\block\wooden_fences.json
-3acdb3aefd331cf0e07f2f6292c306aeb2cd223d data\minecraft\tags\block\wooden_slabs.json
 b1996b2acccaaa61ab847967148616b98e1b7e5b data\minecraft\tags\block\wooden_stairs.json
 d11ee62b5054d22a7ae04b7d42261c098e598229 data\minecraft\tags\block\fence_gates.json

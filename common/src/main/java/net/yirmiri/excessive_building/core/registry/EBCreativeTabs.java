@@ -12,8 +12,11 @@ public class EBCreativeTabs {
     public static final Supplier<CreativeModeTab> EXCESSIVE_BUILDING = RLServices.REGISTRY.registerCreativeModeTab(
             ExcessiveBuilding.MOD_ID, "excessive_building", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
                     .title(Component.translatable("itemgroup.excessive_building"))
-                    .icon(() -> new ItemStack(EBBlocks.COBBLESTONE_BRICKS.get()))
+                    .icon(() -> new ItemStack(EBItems.GAUNTLET.get()))
                     .displayItems((displayParameters, entry) -> {
+                        //TOOLS
+                        entry.accept(EBItems.GAUNTLET.get());
+
                         //ANCIENT
                         entry.accept(EBBlocks.ANCIENT_LOG.get());
                         entry.accept(EBBlocks.ANCIENT_WOOD.get());

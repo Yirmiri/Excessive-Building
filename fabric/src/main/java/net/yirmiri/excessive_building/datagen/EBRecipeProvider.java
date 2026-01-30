@@ -417,6 +417,16 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         woodenBoat(exporter, EBItems.ANCIENT_BOAT.get(), EBBlocks.ANCIENT_PLANKS.get());
         chestBoat(exporter, EBItems.ANCIENT_CHEST_BOAT.get(), EBItems.ANCIENT_BOAT.get());
         hangingSign(exporter, EBItems.ANCIENT_HANGING_SIGN.get(), EBBlocks.STRIPPED_ANCIENT_LOG.get());
+
+        //==========================TOOLS==========================
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.GAUNTLET.get(), 1)
+                .define('#', Items.AMETHYST_SHARD).define('@', Items.COPPER_INGOT)
+                .define('!', Items.AMETHYST_BLOCK).define('%', Items.DIAMOND)
+                .pattern("!# ")
+                .pattern("#%@")
+                .pattern(" @@")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(exporter);
         
         //====================================================
         stonecutter.generateRecipes(exporter);

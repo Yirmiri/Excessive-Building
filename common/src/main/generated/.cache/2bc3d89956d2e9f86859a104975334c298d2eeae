@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-30T05:24:00.2658793	Excessive Building/Block Loot Tables
+// 1.21.1	2026-01-30T06:33:14.6850448	Excessive Building/Block Loot Tables
 740a1895f6dcac128f375640caa58af83202998c data\excessive_building\loot_table\blocks\copper_brick_slab.json
 f82fd37df01f03d8740457837092c20a51b14770 data\excessive_building\loot_table\blocks\cobblestone_brick_slab.json
 4d30d262c85bc54b8f5a59c2d90283c418b56c9d data\excessive_building\loot_table\blocks\weathered_copper_brick_stairs.json
@@ -6,8 +6,8 @@ a6bc522be5d52038348579a1905a8332cbee0719 data\excessive_building\loot_table\bloc
 6323343087735679f897e59884d7efe745b80205 data\excessive_building\loot_table\blocks\coralsoil.json
 cb93fbb0fd22de285008cd003830713a137a3d81 data\excessive_building\loot_table\blocks\ancient_planks.json
 03e2c5ce2f33bb5ad318762bf1bdc7c2e2b4910e data\excessive_building\loot_table\blocks\potted_ancient_sapling.json
-4c6833c3299673e44da85b8082456b02579a3756 data\excessive_building\loot_table\blocks\conglomerate_brick_slab.json
 9ea3fe1fafa784e77020ab65d560e3a114d3419e data\excessive_building\loot_table\blocks\weathered_copper_brick_slab.json
+4c6833c3299673e44da85b8082456b02579a3756 data\excessive_building\loot_table\blocks\conglomerate_brick_slab.json
 c91b0cea8d4b6f0435257fadaf70f85d31aa95d2 data\excessive_building\loot_table\blocks\ancient_trapdoor.json
 a9477d7a028c7d177ac0faffc116f8b236c6438d data\excessive_building\loot_table\blocks\waxed_weathered_copper_brick_stairs.json
 9f92b708ecc25715a0e3e9e1d97f6a02cc602300 data\excessive_building\loot_table\blocks\ancient_fence_gate.json

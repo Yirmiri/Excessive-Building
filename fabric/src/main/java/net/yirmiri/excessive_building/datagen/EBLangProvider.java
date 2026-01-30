@@ -29,6 +29,8 @@ public class EBLangProvider extends FabricLanguageProvider {
 
         //MISC
         build.add("itemgroup.excessive_building", "Excessive Building");
+        build.add("item.excessive_building.hand", "When in Any Hand:");
+        build.add("item.excessive_building.gauntlet.desc", "Reduces the delay of placing blocks");
 
         //BLOCKS
         build.add(EBBlocks.COPPER_BRICKS.get(), "Copper Bricks");
@@ -138,6 +140,38 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBItems.ANCIENT_SIGN.get(), "Ancient Sign");
         build.add(EBItems.ANCIENT_HANGING_SIGN.get(), "Ancient Hanging Sign");
         build.add(EBItems.ANCIENT_FRUIT.get(), "Ancient Fruit");
+        build.add(EBItems.GAUNTLET.get(), "Gauntlet");
+        
+        //POTIONS
+        build.add("effect.excessive_building.reaching", "Reaching");
+        build.add("item.minecraft.potion.effect.excessive_building.reaching", "Potion of Reaching");
+        build.add("item.minecraft.potion.effect.excessive_building.long_reaching", "Potion of Reaching");
+        build.add("item.minecraft.potion.effect.excessive_building.strong_reaching", "Potion of Reaching");
+        build.add("item.minecraft.splash_potion.effect.excessive_building.reaching", "Splash Potion of Reaching");
+        build.add("item.minecraft.splash_potion.effect.excessive_building.long_reaching", "Splash Potion of Reaching");
+        build.add("item.minecraft.splash_potion.effect.excessive_building.strong_reaching", "Splash Potion of Reaching");
+        build.add("item.minecraft.lingering_potion.effect.excessive_building.reaching", "Lingering Potion of Reaching");
+        build.add("item.minecraft.lingering_potion.effect.excessive_building.long_reaching", "Lingering Potion of Reaching");
+        build.add("item.minecraft.lingering_potion.effect.excessive_building.strong_reaching", "Lingering Potion of Reaching");
+        build.add("item.minecraft.tipped_arrow.effect.excessive_building.reaching", "Arrow of Reaching");
+        build.add("item.minecraft.tipped_arrow.effect.excessive_building.long_reaching", "Arrow of Reaching");
+        build.add("item.minecraft.tipped_arrow.effect.excessive_building.strong_reaching", "Arrow of Reaching");
+        build.add("effect.excessive_building.reaching.description", "Increases the interaction range for building and breaking of the user.");
+
+        build.add("effect.excessive_building.rapidity", "Rapidity");
+        build.add("item.minecraft.potion.effect.excessive_building.rapidity", "Potion of Rapidity");
+        build.add("item.minecraft.potion.effect.excessive_building.long_rapidity", "Potion of Rapidity");
+        build.add("item.minecraft.potion.effect.excessive_building.strong_rapidity", "Potion of Rapidity");
+        build.add("item.minecraft.splash_potion.effect.excessive_building.rapidity", "Splash Potion of Rapidity");
+        build.add("item.minecraft.splash_potion.effect.excessive_building.long_rapidity", "Splash Potion of Rapidity");
+        build.add("item.minecraft.splash_potion.effect.excessive_building.strong_rapidity", "Splash Potion of Rapidity");
+        build.add("item.minecraft.lingering_potion.effect.excessive_building.rapidity", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.lingering_potion.effect.excessive_building.long_rapidity", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.lingering_potion.effect.excessive_building.strong_rapidity", "Lingering Potion of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.excessive_building.rapidity", "Arrow of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.excessive_building.long_rapidity", "Arrow of Rapidity");
+        build.add("item.minecraft.tipped_arrow.effect.excessive_building.strong_rapidity", "Arrow of Rapidity");
+        build.add("effect.excessive_building.rapidity.description", "Decreases the cooldown between placement of blocks, allowing for faster building.");
     }
 
     private void addDamage(TranslationBuilder build, ResourceKey<DamageType> type, String deathMsg, String killMsg) {

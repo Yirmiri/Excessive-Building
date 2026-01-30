@@ -5,11 +5,17 @@
   "refmap": "excessive_building.refmap.json",
   "compatibilityLevel": "JAVA_18",
   "mixins": [
+    "BlockItemMixin",
     "BoatMixin",
     "BoatTypeMixin",
-    "ChestBoatMixin"
+    "BrewingRecipeRegistryMixin",
+    "ChestBoatMixin",
+    "GrowingPlantBlockMixin"
   ],
   "client": [
+    "MinecraftMixin",
+    "client.ItemRendererMixin",
+    "client.ModelBakeryMixin"
   ],
   "server": [],
   "injectors": {

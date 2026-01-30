@@ -10,6 +10,7 @@ import net.minecraft.world.item.Items;
 import net.yirmiri.excessive_building.common.util.EBIntegrationIds;
 import net.yirmiri.excessive_building.core.init.EBTags;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -34,6 +35,8 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
         appendWoodenStairs();
         appendWoodenTrapdoors();
         appendAncientLogs();
+        appendMiningEnchantable();
+        appendDurabilityEnchantable();
     }
 
     private void appendWalls() {
@@ -135,6 +138,18 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
     private void appendWoodenTrapdoors() {
         getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
                 .add(EBBlocks.ANCIENT_TRAPDOOR.get().asItem())
+        ;
+    }
+
+    private void appendDurabilityEnchantable() {
+        getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(EBItems.GAUNTLET.get().asItem())
+        ;
+    }
+
+    private void appendMiningEnchantable() {
+        getOrCreateTagBuilder(ItemTags.MINING_ENCHANTABLE)
+                .add(EBItems.GAUNTLET.get().asItem())
         ;
     }
 }

@@ -6,12 +6,18 @@ import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.common.item.GauntletItem;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 import net.yirmiri.excessive_building.common.util.EBUtil;
+import net.yirmiri.excessive_building.core.init.EBTiers;
+import net.yirmiri.excessive_building.core.init.EBTags;
 
 import java.util.function.Supplier;
 
 public class EBItems {
+    //TOOLS
+    public static final Supplier<Item> GAUNTLET = register("gauntlet", () -> new GauntletItem(EBTiers.GAUNTLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.GAUNTLET));
+
     //ANCIENT
     public static final Supplier<Item> ANCIENT_FRUIT = register("ancient_fruit", () -> new Item(EBProperties.ItemP.ANCIENT_FRUIT));
     public static final Supplier<Item> ANCIENT_BOAT = register("ancient_boat", () -> new BoatItem(false, EBUtil.ANCIENT_BOAT, EBProperties.ItemP.GENERIC_1));

@@ -11,6 +11,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 public class EBTags {
     public static class BlockT {
         //MISC
+        public static final TagKey<Block> MINEABLE_WITH_MALLET = create("mineable_with_mallet");
 
         private static TagKey<Block> create(String id) {
             return TagKey.create(Registries.BLOCK, RunicLib.customid(ExcessiveBuilding.MOD_ID, id));

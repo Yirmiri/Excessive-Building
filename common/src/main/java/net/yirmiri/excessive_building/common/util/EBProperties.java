@@ -1,5 +1,7 @@
 package net.yirmiri.excessive_building.common.util;
 
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CaveVines;
@@ -9,6 +11,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
+import net.yirmiri.excessive_building.common.item.GauntletItem;
+import net.yirmiri.excessive_building.core.init.EBTiers;
+import net.yirmiri.excessive_building.core.registry.EBEffects;
 
 import java.util.function.ToIntFunction;
 
@@ -65,8 +70,16 @@ public class EBProperties {
         public static final Item.Properties GENERIC = new Item.Properties();
         public static final Item.Properties GENERIC_1 = new Item.Properties().stacksTo(1);
         public static final Item.Properties GENERIC_16 = new Item.Properties().stacksTo(16);
+        public static final Item.Properties GAUNTLET = new Item.Properties().stacksTo(1).attributes(GauntletItem.createAttributes(EBTiers.GAUNTLET, 1, -2.5F));
 
         //FOOD
-        public static final Item.Properties ANCIENT_FRUIT = new Item.Properties();
+        public static final Item.Properties ANCIENT_FRUIT = new Item.Properties().food(FoodP.ANCIENT_FRUIT);
+    }
+
+    public static class FoodP {
+        //MISC
+        public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2F)
+                .effect(new MobEffectInstance(EBEffects.REACHING, 200, 0), 1.0F)
+                .build();
     }
 }
