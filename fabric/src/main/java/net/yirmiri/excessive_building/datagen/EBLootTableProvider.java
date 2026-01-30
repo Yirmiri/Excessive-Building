@@ -4,10 +4,14 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 
 import java.util.concurrent.CompletableFuture;
 
 public class EBLootTableProvider extends FabricBlockLootTableProvider {
+    public static final float[] LEAVES_STICK_DROP_CHANCE = new float[] { 0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F };
+    public static final float[] SAPLING_DROP_CHANCE = new float[] { 0.01F, 0.05F, 0.08F, 0.1F };
+
     public EBLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
@@ -79,5 +83,28 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(EBBlocks.CONGLOMERATE_BRICK_WALL.get());
 
         dropSelf(EBBlocks.PEBBLESTONE.get());
+
+        add(EBBlocks.ANCIENT_LEAVES.get(), createLeavesDrops(EBBlocks.ANCIENT_LEAVES.get(), EBBlocks.ANCIENT_SAPLING.get(), SAPLING_DROP_CHANCE));
+        add(EBBlocks.ANCIENT_DOOR.get(), createDoorTable(EBBlocks.ANCIENT_DOOR.get()));
+        addNetherVinesDropTable(EBBlocks.ANCIENT_VINES.get(), EBBlocks.ANCIENT_VINES_PLANT.get());
+        dropOther(EBBlocks.ANCIENT_SIGN.get(), EBItems.ANCIENT_SIGN.get());
+        dropOther(EBBlocks.ANCIENT_WALL_SIGN.get(), EBItems.ANCIENT_SIGN.get());
+        dropOther(EBBlocks.ANCIENT_HANGING_SIGN.get(), EBItems.ANCIENT_HANGING_SIGN.get());
+        dropOther(EBBlocks.ANCIENT_WALL_HANGING_SIGN.get(), EBItems.ANCIENT_HANGING_SIGN.get());
+        dropSelf(EBBlocks.ANCIENT_PLANKS.get());
+        dropSelf(EBBlocks.ANCIENT_STAIRS.get());
+        add(EBBlocks.ANCIENT_SLAB.get(), createSlabItemTable(EBBlocks.ANCIENT_SLAB.get()));
+        dropSelf(EBBlocks.ANCIENT_FENCE_GATE.get());
+        dropSelf(EBBlocks.ANCIENT_FENCE.get());
+        dropSelf(EBBlocks.ANCIENT_PRESSURE_PLATE.get());
+        dropSelf(EBBlocks.ANCIENT_BUTTON.get());
+        dropSelf(EBBlocks.ANCIENT_LOG.get());
+        dropSelf(EBBlocks.ANCIENT_WOOD.get());
+        dropSelf(EBBlocks.STRIPPED_ANCIENT_LOG.get());
+        dropSelf(EBBlocks.STRIPPED_ANCIENT_WOOD.get());
+        dropSelf(EBBlocks.ANCIENT_SAPLING.get());
+        dropPottedContents(EBBlocks.POTTED_ANCIENT_SAPLING.get());
+        add(EBBlocks.ANCIENT_DOOR.get(), createDoorTable(EBBlocks.ANCIENT_DOOR.get()));
+        dropSelf(EBBlocks.ANCIENT_TRAPDOOR.get());
     }
 }

@@ -14,6 +14,29 @@ public class EBCreativeTabs {
                     .title(Component.translatable("itemgroup.excessive_building"))
                     .icon(() -> new ItemStack(EBBlocks.COBBLESTONE_BRICKS.get()))
                     .displayItems((displayParameters, entry) -> {
+                        //ANCIENT
+                        entry.accept(EBBlocks.ANCIENT_LOG.get());
+                        entry.accept(EBBlocks.ANCIENT_WOOD.get());
+                        entry.accept(EBBlocks.STRIPPED_ANCIENT_LOG.get());
+                        entry.accept(EBBlocks.STRIPPED_ANCIENT_WOOD.get());
+                        entry.accept(EBBlocks.ANCIENT_PLANKS.get());
+                        entry.accept(EBBlocks.ANCIENT_STAIRS.get());
+                        entry.accept(EBBlocks.ANCIENT_SLAB.get());
+                        entry.accept(EBBlocks.ANCIENT_FENCE.get());
+                        entry.accept(EBBlocks.ANCIENT_FENCE_GATE.get());
+                        entry.accept(EBBlocks.ANCIENT_PRESSURE_PLATE.get());
+                        entry.accept(EBBlocks.ANCIENT_BUTTON.get());
+                        entry.accept(EBBlocks.ANCIENT_DOOR.get());
+                        entry.accept(EBBlocks.ANCIENT_TRAPDOOR.get());
+                        entry.accept(EBItems.ANCIENT_SIGN.get());
+                        entry.accept(EBItems.ANCIENT_HANGING_SIGN.get());
+                        entry.accept(EBItems.ANCIENT_BOAT.get());
+                        entry.accept(EBItems.ANCIENT_CHEST_BOAT.get());
+                        entry.accept(EBBlocks.ANCIENT_LEAVES.get());
+                        entry.accept(EBBlocks.ANCIENT_SAPLING.get());
+                        entry.accept(EBBlocks.ANCIENT_VINES.get());
+                        entry.accept(EBItems.ANCIENT_FRUIT.get());
+
                         //NEW BLOCK TYPES
                         entry.accept(EBBlocks.CORALSOIL.get());
                         entry.accept(EBBlocks.CORALSOIL_BRICKS.get());
@@ -84,6 +107,6 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB.get());
                     }).build());
 
-    public static void loadItemGroups() {
+    public static void load() {
     }
 }

@@ -1,0 +1,21 @@
+{
+  "values": [
+    "excessive_building:ancient_planks",
+    "excessive_building:ancient_stairs",
+    "excessive_building:ancient_slab",
+    "excessive_building:ancient_fence",
+    "excessive_building:ancient_fence_gate",
+    "excessive_building:ancient_pressure_plate",
+    "excessive_building:ancient_button",
+    "excessive_building:ancient_log",
+    "excessive_building:ancient_wood",
+    "excessive_building:stripped_ancient_log",
+    "excessive_building:stripped_ancient_wood",
+    "excessive_building:ancient_door",
+    "excessive_building:ancient_trapdoor",
+    "excessive_building:ancient_sign",
+    "excessive_building:ancient_wall_sign",
+    "excessive_building:ancient_hanging_sign",
+    "excessive_building:ancient_wall_hanging_sign"
+  ]
+}

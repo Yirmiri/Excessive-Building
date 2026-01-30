@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "textures": {
+    "bottom": "excessive_building:block/ancient_door_bottom",
+    "top": "excessive_building:block/ancient_door_top"
+  }
+}

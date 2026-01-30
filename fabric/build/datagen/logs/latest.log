@@ -1,5 +1,5 @@
-[23:42:29] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.1 with Fabric Loader 0.16.9
-[23:42:30] [main/INFO] (FabricLoader) Loading 56 mods:
+[04:46:40] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.1 with Fabric Loader 0.16.9
+[04:46:41] [main/INFO] (FabricLoader) Loading 56 mods:
 	- excessive_building 4.0.0
 	- fabric-api 0.109.0+1.21.1
 	- fabric-api-base 0.4.42+6573ed8c19
@@ -55,33 +55,30 @@
 	- java 21
 	- minecraft 1.21.1
 	- mixinextras 0.4.1
-	- runiclib 5.0.0
-[23:42:30] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[23:42:30] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[23:42:30] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[23:42:30] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_18
-[23:42:30] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
-[23:42:30] [main/WARN] (FabricLoader/Mixin) Reference map 'excessive_building.refmap.json' for excessive_building.mixins.json could not be read. If this is a development environment you can ignore this message
-[23:42:30] [main/WARN] (FabricLoader/Mixin) Reference map 'excessive_building.refmap.json' for excessive_building.fabric.mixins.json could not be read. If this is a development environment you can ignore this message
-[23:42:31] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[23:42:32] [Datafixer Bootstrap/INFO] (Minecraft) 226 Datafixer optimizations took 344 milliseconds
-[23:42:37] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[23:42:37] [Render thread/INFO] (Minecraft) Setting user: Player214
-[23:42:38] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[23:42:38] [Render thread/INFO] (FabricDataGenHelper) Running data generator for excessive_building
-[23:42:38] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Language (en_us)
-[23:42:38] [Render thread/INFO] (Minecraft) Excessive Building/Language (en_us) finished after 13 ms
-[23:42:38] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:block
-[23:42:38] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:block finished after 14 ms
-[23:42:38] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:item
-[23:42:38] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:item finished after 3 ms
-[23:42:38] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Block Loot Tables
-[23:42:38] [Render thread/INFO] (Minecraft) Excessive Building/Block Loot Tables finished after 33 ms
-[23:42:38] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Model Definitions
-[23:42:38] [Render thread/INFO] (Minecraft) Excessive Building/Model Definitions finished after 88 ms
-[23:42:38] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Recipes
-[23:42:39] [Render thread/INFO] (Minecraft) Excessive Building/Recipes finished after 113 ms
-[23:42:39] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:worldgen/biome
-[23:42:39] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:worldgen/biome finished after 3 ms
-[23:42:39] [Render thread/INFO] (Minecraft) All providers took: 272 ms
-[23:42:39] [Render thread/INFO] (Minecraft) Caching: total files: 431, old count: 0, new count: 432, removed stale: 0, written: 431
+	- runiclib 5.0.3
+[04:46:41] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/yirmi/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[04:46:41] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[04:46:41] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[04:46:41] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[04:46:42] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[04:46:43] [Datafixer Bootstrap/INFO] (Minecraft) 226 Datafixer optimizations took 338 milliseconds
+[04:46:47] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[04:46:47] [Render thread/INFO] (Minecraft) Setting user: Player33
+[04:46:48] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[04:46:48] [Render thread/INFO] (FabricDataGenHelper) Running data generator for excessive_building
+[04:46:49] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Language (en_us)
+[04:46:49] [Render thread/INFO] (Minecraft) Excessive Building/Language (en_us) finished after 20 ms
+[04:46:49] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:block
+[04:46:49] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:block finished after 10 ms
+[04:46:49] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:item
+[04:46:49] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:item finished after 1 ms
+[04:46:49] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Block Loot Tables
+[04:46:49] [Render thread/INFO] (Minecraft) Excessive Building/Block Loot Tables finished after 24 ms
+[04:46:49] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Model Definitions
+[04:46:49] [Render thread/INFO] (Minecraft) Excessive Building/Model Definitions finished after 63 ms
+[04:46:49] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Recipes
+[04:46:49] [Render thread/INFO] (Minecraft) Excessive Building/Recipes finished after 67 ms
+[04:46:49] [Render thread/INFO] (Minecraft) Starting provider: Excessive Building/Tags for minecraft:worldgen/biome
+[04:46:49] [Render thread/INFO] (Minecraft) Excessive Building/Tags for minecraft:worldgen/biome finished after 0 ms
+[04:46:49] [Render thread/INFO] (Minecraft) All providers took: 190 ms
+[04:46:49] [Render thread/INFO] (Minecraft) Caching: total files: 588, old count: 588, new count: 589, removed stale: 0, written: 1

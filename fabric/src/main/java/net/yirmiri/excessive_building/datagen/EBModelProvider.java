@@ -4,9 +4,11 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 
 public class EBModelProvider extends FabricModelProvider {
     public EBModelProvider(FabricDataOutput output) {
@@ -81,10 +83,37 @@ public class EBModelProvider extends FabricModelProvider {
                 .slab(EBBlocks.CONGLOMERATE_BRICK_SLAB.get())
                 .wall(EBBlocks.CONGLOMERATE_BRICK_WALL.get())
         ;
+
+        generator.createPlant(EBBlocks.ANCIENT_SAPLING.get(), EBBlocks.POTTED_ANCIENT_SAPLING.get(), BlockModelGenerators.TintState.NOT_TINTED);
+
+        generator.createGrowingPlant(EBBlocks.ANCIENT_VINES.get(), EBBlocks.ANCIENT_VINES_PLANT.get(), BlockModelGenerators.TintState.NOT_TINTED);
+        generator.skipAutoItemBlock(EBBlocks.ANCIENT_VINES_PLANT.get());
+
+        generator.family(EBBlocks.ANCIENT_PLANKS.get())
+                .stairs(EBBlocks.ANCIENT_STAIRS.get())
+                .slab(EBBlocks.ANCIENT_SLAB.get())
+                .fence(EBBlocks.ANCIENT_FENCE.get())
+                .fenceGate(EBBlocks.ANCIENT_FENCE_GATE.get())
+                .pressurePlate(EBBlocks.ANCIENT_PRESSURE_PLATE.get())
+                .button(EBBlocks.ANCIENT_BUTTON.get())
+        ;
+
+        generator.createDoor(EBBlocks.ANCIENT_DOOR.get());
+        generator.createOrientableTrapdoor(EBBlocks.ANCIENT_TRAPDOOR.get());
+
+        generator.createHangingSign(EBBlocks.ANCIENT_PLANKS.get(), EBBlocks.ANCIENT_HANGING_SIGN.get(), EBBlocks.ANCIENT_WALL_HANGING_SIGN.get());
+        generator.createTrivialCube(EBBlocks.ANCIENT_LEAVES.get());
+
+        generator.woodProvider(EBBlocks.ANCIENT_LOG.get()).logWithHorizontal(EBBlocks.ANCIENT_LOG.get()).wood(EBBlocks.ANCIENT_WOOD.get());
+        generator.woodProvider(EBBlocks.STRIPPED_ANCIENT_LOG.get()).logWithHorizontal(EBBlocks.STRIPPED_ANCIENT_LOG.get()).wood(EBBlocks.STRIPPED_ANCIENT_WOOD.get());
     }
 
     @Override
     public void generateItemModels(ItemModelGenerators generator) {
-
+        generator.generateFlatItem(EBItems.ANCIENT_BOAT.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.ANCIENT_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.ANCIENT_FRUIT.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.ANCIENT_SIGN.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBBlocks.ANCIENT_VINES.get().asItem(), ModelTemplates.FLAT_ITEM);
     }
 }

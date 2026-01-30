@@ -19,10 +19,10 @@
           "net.yirmiri.excessive_building.FabricExcessiveBuilding"
         ],
         "client": [
-          "net.yirmiri.excessive_building.FabricEBClient"
+          "net.yirmiri.excessive_building.FabricExcessiveBuildingClient"
         ],
         "fabric-datagen": [
-          "net.yirmiri.excessive_building.FabricEBDatagen"
+          "net.yirmiri.excessive_building.FabricExcessiveBuildingDatagen"
         ]
     },
     "mixins": [

@@ -3,18 +3,25 @@ package net.yirmiri.excessive_building.datagen;
 import net.azurune.runiclib.RunicLib;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.data.BlockFamily;
 import net.minecraft.data.recipes.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.core.init.EBTags;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 import net.yirmiri.excessive_building.datagen.util.StonecutterRecipeTreeGenerator;
 
 import java.util.concurrent.CompletableFuture;
+
+import static net.minecraft.data.BlockFamilies.familyBuilder;
 
 public class EBRecipeProvider extends FabricRecipeProvider {
     public EBRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
@@ -317,6 +324,27 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         stonecutter.putRecipe(EBBlocks.CONGLOMERATE_BRICK_STAIRS.get(), EBBlocks.CONGLOMERATE_BRICKS.get());
         stonecutter.putRecipe(EBBlocks.CONGLOMERATE_BRICK_SLAB.get(), EBBlocks.CONGLOMERATE_BRICKS.get(), 2);
         stonecutter.putRecipe(EBBlocks.CONGLOMERATE_BRICK_WALL.get(), EBBlocks.CONGLOMERATE_BRICKS.get());
+
+        //=======================ANCIENT WOOD=======================
+        BlockFamily ancientFamily = familyBuilder(EBBlocks.ANCIENT_PLANKS.get())
+                .stairs(EBBlocks.ANCIENT_STAIRS.get())
+                .slab(EBBlocks.ANCIENT_SLAB.get())
+                .door(EBBlocks.ANCIENT_DOOR.get())
+                .trapdoor(EBBlocks.ANCIENT_TRAPDOOR.get())
+                .fence(EBBlocks.ANCIENT_FENCE.get())
+                .fenceGate(EBBlocks.ANCIENT_FENCE_GATE.get())
+                .sign(EBBlocks.ANCIENT_SIGN.get(), EBBlocks.ANCIENT_WALL_SIGN.get())
+                .button(EBBlocks.ANCIENT_BUTTON.get())
+                .pressurePlate(EBBlocks.ANCIENT_PRESSURE_PLATE.get())
+                .recipeGroupPrefix("wooden")
+                .recipeUnlockedBy("has_planks")
+                .getFamily();
+        generateRecipes(exporter, ancientFamily, FeatureFlagSet.of(FeatureFlags.VANILLA));
+
+        planksFromLogs(exporter, EBBlocks.ANCIENT_PLANKS.get(), EBTags.ItemT.ANCIENT_LOGS, 4);
+        woodenBoat(exporter, EBItems.ANCIENT_BOAT.get(), EBBlocks.ANCIENT_PLANKS.get());
+        chestBoat(exporter, EBItems.ANCIENT_CHEST_BOAT.get(), EBItems.ANCIENT_BOAT.get());
+        hangingSign(exporter, EBItems.ANCIENT_HANGING_SIGN.get(), EBBlocks.STRIPPED_ANCIENT_LOG.get());
         
         //====================================================
         stonecutter.generateRecipes(exporter);

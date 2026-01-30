@@ -9,6 +9,7 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.concurrent.CompletableFuture;
@@ -92,6 +93,30 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.CONGLOMERATE_BRICK_STAIRS.get(), "Conglomerate Brick Stairs");
         build.add(EBBlocks.CONGLOMERATE_BRICK_SLAB.get(), "Conglomerate Brick Slab");
         build.add(EBBlocks.CONGLOMERATE_BRICK_WALL.get(), "Conglomerate Brick Wall");
+
+        build.add(EBBlocks.ANCIENT_SAPLING.get(), "Ancient Sapling");
+        build.add(EBBlocks.ANCIENT_LOG.get(), "Ancient Log");
+        build.add(EBBlocks.ANCIENT_WOOD.get(), "Ancient Wood");
+        build.add(EBBlocks.STRIPPED_ANCIENT_LOG.get(), "Stripped Ancient Log");
+        build.add(EBBlocks.STRIPPED_ANCIENT_WOOD.get(), "Stripped Ancient Wood");
+        build.add(EBBlocks.ANCIENT_PLANKS.get(), "Ancient Planks");
+        build.add(EBBlocks.ANCIENT_STAIRS.get(), "Ancient Stairs");
+        build.add(EBBlocks.ANCIENT_SLAB.get(), "Ancient Slab");
+        build.add(EBBlocks.ANCIENT_PRESSURE_PLATE.get(), "Ancient Pressure Plate");
+        build.add(EBBlocks.ANCIENT_BUTTON.get(), "Ancient Button");
+        build.add(EBBlocks.ANCIENT_TRAPDOOR.get(), "Ancient Trapdoor");
+        build.add(EBBlocks.ANCIENT_DOOR.get(), "Ancient Door");
+        build.add(EBBlocks.ANCIENT_LEAVES.get(), "Ancient Leaves");
+        build.add(EBBlocks.ANCIENT_FENCE.get(), "Ancient Fence");
+        build.add(EBBlocks.ANCIENT_FENCE_GATE.get(), "Ancient Fence Gate");
+        build.add(EBBlocks.ANCIENT_VINES.get(), "Ancient Vines");
+
+        //ITEMS
+        build.add(EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
+        build.add(EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");
+        build.add(EBItems.ANCIENT_SIGN.get(), "Ancient Sign");
+        build.add(EBItems.ANCIENT_HANGING_SIGN.get(), "Ancient Hanging Sign");
+        build.add(EBItems.ANCIENT_FRUIT.get(), "Ancient Fruit");
     }
 
     private void addDamage(TranslationBuilder build, ResourceKey<DamageType> type, String deathMsg, String killMsg) {

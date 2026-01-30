@@ -4,9 +4,12 @@
   "package": "net.yirmiri.excessive_building.core.mixin",
   "refmap": "excessive_building.refmap.json",
   "compatibilityLevel": "JAVA_18",
-  "mixins": [],
+  "mixins": [
+    "BoatMixin",
+    "BoatTypeMixin",
+    "ChestBoatMixin"
+  ],
   "client": [
-
   ],
   "server": [],
   "injectors": {

@@ -4,6 +4,7 @@ import net.azurune.runiclib.RunicLib;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.yirmiri.excessive_building.common.util.EBIntegrationIds;
@@ -22,6 +23,17 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
         appendWalls();
         appendDeadCoralBlocks();
         appendSmallFlowers();
+        appendSigns();
+        appendHangingSigns();
+        appendWoodenButtons();
+        appendWoodenDoors();
+        appendWoodenFenceGates();
+        appendWoodenFences();
+        appendWoodenPressurePlates();
+        appendWoodenSlabs();
+        appendWoodenStairs();
+        appendWoodenTrapdoors();
+        appendAncientLogs();
     }
 
     private void appendWalls() {
@@ -40,6 +52,15 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
         ;
     }
 
+    private void appendAncientLogs() {
+        getOrCreateTagBuilder(EBTags.ItemT.ANCIENT_LOGS)
+                .add(EBBlocks.ANCIENT_LOG.get().asItem())
+                .add(EBBlocks.ANCIENT_WOOD.get().asItem())
+                .add(EBBlocks.STRIPPED_ANCIENT_LOG.get().asItem())
+                .add(EBBlocks.STRIPPED_ANCIENT_WOOD.get().asItem())
+        ;
+    }
+
     private void appendDeadCoralBlocks() {
         getOrCreateTagBuilder(EBTags.ItemT.DEAD_CORAL_BLOCKS)
                 .add(Items.DEAD_BRAIN_CORAL_BLOCK)
@@ -52,6 +73,66 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .addOptional(RunicLib.customid(EBIntegrationIds.FF_ID, "dead_leaf_coral_block"))
                 .addOptional(RunicLib.customid(EBIntegrationIds.FF_ID, "dead_pillar_coral_block"))
                 .addOptional(RunicLib.customid(EBIntegrationIds.FF_ID, "dead_sun_coral_block"))
+        ;
+    }
+
+    private void appendSigns() {
+        getOrCreateTagBuilder(ItemTags.SIGNS)
+                .add(EBBlocks.ANCIENT_SIGN.get().asItem())
+        ;
+    }
+
+    private void appendHangingSigns() {
+        getOrCreateTagBuilder(ItemTags.HANGING_SIGNS)
+                .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN.get().asItem())
+        ;
+    }
+
+    private void appendWoodenButtons() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_BUTTONS)
+                .add(EBBlocks.ANCIENT_BUTTON.get().asItem())
+        ;
+    }
+
+    private void appendWoodenPressurePlates() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_PRESSURE_PLATES)
+                .add(EBBlocks.ANCIENT_PRESSURE_PLATE.get().asItem())
+        ;
+    }
+
+    private void appendWoodenSlabs() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
+                .add(EBBlocks.ANCIENT_SLAB.get().asItem())
+        ;
+    }
+
+    private void appendWoodenStairs() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
+                .add(EBBlocks.ANCIENT_STAIRS.get().asItem())
+        ;
+    }
+
+    private void appendWoodenFences() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_FENCES)
+                .add(EBBlocks.ANCIENT_FENCE.get().asItem())
+        ;
+    }
+
+    private void appendWoodenFenceGates() {
+        getOrCreateTagBuilder(ItemTags.FENCE_GATES)
+                .add(EBBlocks.ANCIENT_FENCE_GATE.get().asItem())
+        ;
+    }
+
+    private void appendWoodenDoors() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_DOORS)
+                .add(EBBlocks.ANCIENT_DOOR.get().asItem())
+        ;
+    }
+
+    private void appendWoodenTrapdoors() {
+        getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
+                .add(EBBlocks.ANCIENT_TRAPDOOR.get().asItem())
         ;
     }
 }

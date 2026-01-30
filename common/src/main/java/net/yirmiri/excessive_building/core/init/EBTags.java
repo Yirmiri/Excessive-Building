@@ -20,6 +20,7 @@ public class EBTags {
     public static class ItemT {
         //MISC
         public static final TagKey<Item> DEAD_CORAL_BLOCKS = create("dead_coral_blocks");
+        public static final TagKey<Item> ANCIENT_LOGS = create("ancient_logs");
 
         private static TagKey<Item> create(String id) {
             return TagKey.create(Registries.ITEM, RunicLib.customid(ExcessiveBuilding.MOD_ID, id));

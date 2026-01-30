@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "excessive_building:block/ancient_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "excessive_building:block/ancient_log"
+    },
+    "axis=z": {
+      "model": "excessive_building:block/ancient_log_horizontal",
+      "x": 90
+    }
+  }
+}
