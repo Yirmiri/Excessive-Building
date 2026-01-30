@@ -17,7 +17,11 @@ public class EBFeatureKeys {
     }
 
     public static class PlacedFeatures {
+        //NATURE
         public static final ResourceKey<PlacedFeature> PATCH_LAVENDER = create("patch_lavender");
+
+        //ROCK
+        public static final ResourceKey<PlacedFeature> ORE_BRIMSTONE = create("ore_brimstone");
 
         public static ResourceKey<PlacedFeature> create(String id) {
             return ResourceKey.create(Registries.PLACED_FEATURE, RunicLib.customid(ExcessiveBuilding.MOD_ID, id));

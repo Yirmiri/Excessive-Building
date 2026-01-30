@@ -325,6 +325,78 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         stonecutter.putRecipe(EBBlocks.CONGLOMERATE_BRICK_SLAB.get(), EBBlocks.CONGLOMERATE_BRICKS.get(), 2);
         stonecutter.putRecipe(EBBlocks.CONGLOMERATE_BRICK_WALL.get(), EBBlocks.CONGLOMERATE_BRICKS.get());
 
+        //=======================BRIMSTONE=======================
+        BlockFamily brimstoneFamily = familyBuilder(EBBlocks.BRIMSTONE.get())
+                .stairs(EBBlocks.BRIMSTONE_STAIRS.get())
+                .slab(EBBlocks.BRIMSTONE_SLAB.get())
+                .wall(EBBlocks.BRIMSTONE_WALL.get())
+                .polished(EBBlocks.POLISHED_BRIMSTONE.get())
+                .recipeUnlockedBy("has_brimstone")
+                .getFamily();
+        generateRecipes(exporter, brimstoneFamily, FeatureFlagSet.of(FeatureFlags.VANILLA));
+
+        stonecutter.putRecipe(EBBlocks.POLISHED_BRIMSTONE.get(), EBBlocks.BRIMSTONE.get());
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_STAIRS.get(), EBBlocks.BRIMSTONE.get());
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_SLAB.get(), EBBlocks.BRIMSTONE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_WALL.get(), EBBlocks.BRIMSTONE.get());
+
+        //=======================POLISHED BRIMSTONE=======================
+        BlockFamily polishedBrimstoneFamily = familyBuilder(EBBlocks.POLISHED_BRIMSTONE.get())
+                .stairs(EBBlocks.POLISHED_BRIMSTONE_STAIRS.get())
+                .slab(EBBlocks.POLISHED_BRIMSTONE_SLAB.get())
+                .polished(EBBlocks.BRIMSTONE_BRICKS.get())
+                .recipeUnlockedBy("has_polished_brimstone")
+                .getFamily();
+        generateRecipes(exporter, polishedBrimstoneFamily, FeatureFlagSet.of(FeatureFlags.VANILLA));
+
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_BRICKS.get(), EBBlocks.POLISHED_BRIMSTONE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_BRIMSTONE_STAIRS.get(), EBBlocks.POLISHED_BRIMSTONE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_BRIMSTONE_SLAB.get(), EBBlocks.POLISHED_BRIMSTONE.get(), 2);
+
+        //=======================BRIMSTONE BRICKS=======================
+        BlockFamily brimstoneBricksFamily = familyBuilder(EBBlocks.BRIMSTONE_BRICKS.get())
+                .stairs(EBBlocks.BRIMSTONE_BRICK_STAIRS.get())
+                .slab(EBBlocks.BRIMSTONE_BRICK_SLAB.get())
+                .wall(EBBlocks.BRIMSTONE_BRICK_WALL.get())
+                .polished(EBBlocks.BRIMSTONE_TILES.get())
+                .recipeUnlockedBy("has_brimstone_bricks")
+                .getFamily();
+        generateRecipes(exporter, brimstoneBricksFamily, FeatureFlagSet.of(FeatureFlags.VANILLA));
+
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_TILES.get(), EBBlocks.BRIMSTONE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_BRICK_STAIRS.get(), EBBlocks.BRIMSTONE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_BRICK_SLAB.get(), EBBlocks.BRIMSTONE_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_BRICK_WALL.get(), EBBlocks.BRIMSTONE_BRICKS.get());
+
+        //=======================BRIMSTONE TILES=======================
+        BlockFamily brimstoneTilesFamily = familyBuilder(EBBlocks.BRIMSTONE_TILES.get())
+                .stairs(EBBlocks.BRIMSTONE_TILE_STAIRS.get())
+                .slab(EBBlocks.BRIMSTONE_TILE_SLAB.get())
+                .recipeUnlockedBy("has_brimstone_tiles")
+                .getFamily();
+        generateRecipes(exporter, brimstoneTilesFamily, FeatureFlagSet.of(FeatureFlags.VANILLA));
+
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_TILE_STAIRS.get(), EBBlocks.BRIMSTONE_TILES.get());
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_TILE_SLAB.get(), EBBlocks.BRIMSTONE_TILES.get(), 2);
+
+        //=======================BRIMSTONE MISC=======================
+        stonecutter.putRecipe(EBBlocks.BRIMSTONE_PILLAR.get(), EBBlocks.POLISHED_BRIMSTONE.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BRIMSTONE_PILLAR.get(), 2)
+                .define('#', EBBlocks.POLISHED_BRIMSTONE.get())
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy(getHasName(EBBlocks.POLISHED_BRIMSTONE.get()), has(EBBlocks.POLISHED_BRIMSTONE.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.BRIMSTONE_PILLAR.get())));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BRIMSTONE_LAMP.get(), 5)
+                .define('#', EBBlocks.POLISHED_BRIMSTONE.get()).define('@', Items.GLOWSTONE_DUST).define('!', Items.REDSTONE)
+                .pattern("@#@")
+                .pattern("#!#")
+                .pattern("@#@")
+                .unlockedBy(getHasName(EBBlocks.POLISHED_BRIMSTONE.get()), has(EBBlocks.POLISHED_BRIMSTONE.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.BRIMSTONE_LAMP.get())));
+
         //=======================ANCIENT WOOD=======================
         BlockFamily ancientFamily = familyBuilder(EBBlocks.ANCIENT_PLANKS.get())
                 .stairs(EBBlocks.ANCIENT_STAIRS.get())

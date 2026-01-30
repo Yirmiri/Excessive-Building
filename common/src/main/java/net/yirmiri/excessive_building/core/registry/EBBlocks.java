@@ -10,7 +10,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.AncientVinesBlock;
 import net.yirmiri.excessive_building.common.block.AncientVinesPlantBlock;
 import net.yirmiri.excessive_building.common.block.AncientLeavesBlock;
-import net.yirmiri.excessive_building.common.block.LavenderBaleBlock;
+import net.yirmiri.excessive_building.common.block.ClayPlantBaleBlock;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 import net.yirmiri.excessive_building.common.util.EBRegistries;
 import net.yirmiri.excessive_building.core.init.EBTreeGrowers;
@@ -28,7 +28,7 @@ public class EBBlocks {
     //LAVENDER
     public static final Supplier<Block> LAVENDER = register("lavender", () -> new FlowerBlock(MobEffects.HEALTH_BOOST, 7, EBProperties.BlockP.LAVENDER), true);
     public static final Supplier<Block> POTTED_LAVENDER = register("potted_lavender", () -> new FlowerPotBlock(LAVENDER.get(), EBProperties.BlockP.POTTED_LAVENDER), true);
-    public static final Supplier<Block> LAVENDER_BLOCK = register("lavender_block", () -> new LavenderBaleBlock(EBProperties.BlockP.LAVENDER_BALE), true);
+    public static final Supplier<Block> LAVENDER_BLOCK = register("lavender_block", () -> new ClayPlantBaleBlock(EBProperties.BlockP.LAVENDER_BALE), true);
     public static final Supplier<Block> LAVENDER_CLAY = register("lavender_clay", () -> new Block(EBProperties.BlockP.LAVENDER_CLAY), true);
     public static final Supplier<Block> LAVENDER_BRICKS = register("lavender_bricks", () -> new Block(EBProperties.BlockP.LAVENDER_BRICKS), true);
     public static final Supplier<Block> LAVENDER_BRICK_STAIRS = register("lavender_brick_stairs", () -> new PublicStairBlock(LAVENDER_BRICKS.get().defaultBlockState(), EBProperties.BlockP.LAVENDER_BRICKS), true);
@@ -86,9 +86,31 @@ public class EBBlocks {
     public static final Supplier<Block> CONGLOMERATE_WALL = register("conglomerate_wall", () -> new WallBlock(EBProperties.BlockP.CONGLOMERATE), true);
 
     public static final Supplier<Block> CONGLOMERATE_BRICKS = register("conglomerate_bricks", () -> new Block(EBProperties.BlockP.CONGLOMERATE), true);
-    public static final Supplier<Block> CONGLOMERATE_BRICK_STAIRS = register("conglomerate_brick_stairs", () -> new PublicStairBlock(CONGLOMERATE.get().defaultBlockState(), EBProperties.BlockP.CONGLOMERATE), true);
+    public static final Supplier<Block> CONGLOMERATE_BRICK_STAIRS = register("conglomerate_brick_stairs", () -> new PublicStairBlock(CONGLOMERATE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.CONGLOMERATE), true);
     public static final Supplier<Block> CONGLOMERATE_BRICK_SLAB = register("conglomerate_brick_slab", () -> new SlabBlock(EBProperties.BlockP.CONGLOMERATE), true);
     public static final Supplier<Block> CONGLOMERATE_BRICK_WALL = register("conglomerate_brick_wall", () -> new WallBlock(EBProperties.BlockP.CONGLOMERATE), true);
+
+    //BRIMSTONE
+    public static final Supplier<Block> BRIMSTONE = register("brimstone", () -> new Block(EBProperties.BlockP.BRIMSTONE), true);
+    public static final Supplier<Block> BRIMSTONE_STAIRS = register("brimstone_stairs", () -> new PublicStairBlock(BRIMSTONE.get().defaultBlockState(), EBProperties.BlockP.BRIMSTONE), true);
+    public static final Supplier<Block> BRIMSTONE_SLAB = register("brimstone_slab", () -> new SlabBlock(EBProperties.BlockP.BRIMSTONE), true);
+    public static final Supplier<Block> BRIMSTONE_WALL = register("brimstone_wall", () -> new WallBlock(EBProperties.BlockP.BRIMSTONE), true);
+
+    public static final Supplier<Block> POLISHED_BRIMSTONE = register("polished_brimstone", () -> new Block(EBProperties.BlockP.POLISHED_BRIMSTONE), true);
+    public static final Supplier<Block> POLISHED_BRIMSTONE_STAIRS = register("polished_brimstone_stairs", () -> new PublicStairBlock(POLISHED_BRIMSTONE.get().defaultBlockState(), EBProperties.BlockP.POLISHED_BRIMSTONE), true);
+    public static final Supplier<Block> POLISHED_BRIMSTONE_SLAB = register("polished_brimstone_slab", () -> new SlabBlock(EBProperties.BlockP.POLISHED_BRIMSTONE), true);
+
+    public static final Supplier<Block> BRIMSTONE_BRICKS = register("brimstone_bricks", () -> new Block(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Supplier<Block> BRIMSTONE_BRICK_STAIRS = register("brimstone_brick_stairs", () -> new PublicStairBlock(BRIMSTONE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Supplier<Block> BRIMSTONE_BRICK_SLAB = register("brimstone_brick_slab", () -> new SlabBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Supplier<Block> BRIMSTONE_BRICK_WALL = register("brimstone_brick_wall", () -> new WallBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+
+    public static final Supplier<Block> BRIMSTONE_TILES = register("brimstone_tiles", () -> new Block(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Supplier<Block> BRIMSTONE_TILE_STAIRS = register("brimstone_tile_stairs", () -> new PublicStairBlock(BRIMSTONE_TILES.get().defaultBlockState(), EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Supplier<Block> BRIMSTONE_TILE_SLAB = register("brimstone_tile_slab", () -> new SlabBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+
+    public static final Supplier<Block> BRIMSTONE_PILLAR = register("brimstone_pillar", () -> new RotatedPillarBlock(EBProperties.BlockP.BRIMSTONE_BRICKS), true);
+    public static final Supplier<Block> BRIMSTONE_LAMP = register("brimstone_lamp", () -> new CopperBulbBlock(EBProperties.BlockP.BRIMSTONE_LAMP), true);
 
     //ANCIENT WOOD
     public static final Supplier<Block> ANCIENT_PLANKS = register("ancient_planks", () -> new Block(EBProperties.BlockP.PLANKS), true);

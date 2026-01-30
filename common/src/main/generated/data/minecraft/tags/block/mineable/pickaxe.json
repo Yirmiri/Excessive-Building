@@ -46,6 +46,22 @@
     "excessive_building:lavender_brick_stairs",
     "excessive_building:lavender_brick_slab",
     "excessive_building:lavender_brick_wall",
-    "excessive_building:mossy_lavender_bricks"
+    "excessive_building:mossy_lavender_bricks",
+    "excessive_building:brimstone",
+    "excessive_building:brimstone_stairs",
+    "excessive_building:brimstone_slab",
+    "excessive_building:brimstone_wall",
+    "excessive_building:polished_brimstone",
+    "excessive_building:polished_brimstone_stairs",
+    "excessive_building:polished_brimstone_slab",
+    "excessive_building:brimstone_bricks",
+    "excessive_building:brimstone_brick_stairs",
+    "excessive_building:brimstone_brick_slab",
+    "excessive_building:brimstone_brick_wall",
+    "excessive_building:brimstone_tiles",
+    "excessive_building:brimstone_tile_stairs",
+    "excessive_building:brimstone_tile_slab",
+    "excessive_building:brimstone_pillar",
+    "excessive_building:brimstone_lamp"
   ]
 }

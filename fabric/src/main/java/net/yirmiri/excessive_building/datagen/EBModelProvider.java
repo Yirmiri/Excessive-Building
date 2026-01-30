@@ -106,6 +106,31 @@ public class EBModelProvider extends FabricModelProvider {
 
         generator.woodProvider(EBBlocks.ANCIENT_LOG.get()).logWithHorizontal(EBBlocks.ANCIENT_LOG.get()).wood(EBBlocks.ANCIENT_WOOD.get());
         generator.woodProvider(EBBlocks.STRIPPED_ANCIENT_LOG.get()).logWithHorizontal(EBBlocks.STRIPPED_ANCIENT_LOG.get()).wood(EBBlocks.STRIPPED_ANCIENT_WOOD.get());
+
+        generator.family(EBBlocks.BRIMSTONE.get())
+                .stairs(EBBlocks.BRIMSTONE_STAIRS.get())
+                .slab(EBBlocks.BRIMSTONE_SLAB.get())
+                .wall(EBBlocks.BRIMSTONE_WALL.get())
+        ;
+
+        generator.family(EBBlocks.POLISHED_BRIMSTONE.get())
+                .stairs(EBBlocks.POLISHED_BRIMSTONE_STAIRS.get())
+                .slab(EBBlocks.POLISHED_BRIMSTONE_SLAB.get())
+        ;
+
+        generator.family(EBBlocks.BRIMSTONE_BRICKS.get())
+                .stairs(EBBlocks.BRIMSTONE_BRICK_STAIRS.get())
+                .slab(EBBlocks.BRIMSTONE_BRICK_SLAB.get())
+                .wall(EBBlocks.BRIMSTONE_BRICK_WALL.get())
+        ;
+
+        generator.family(EBBlocks.BRIMSTONE_TILES.get())
+                .stairs(EBBlocks.BRIMSTONE_TILE_STAIRS.get())
+                .slab(EBBlocks.BRIMSTONE_TILE_SLAB.get())
+        ;
+
+        generator.woodProvider(EBBlocks.BRIMSTONE_PILLAR.get()).logWithHorizontal(EBBlocks.BRIMSTONE_PILLAR.get());
+        generator.createCopperBulb(EBBlocks.BRIMSTONE_LAMP.get());
     }
 
     @Override

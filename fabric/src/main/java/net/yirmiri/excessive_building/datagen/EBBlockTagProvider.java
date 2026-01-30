@@ -102,6 +102,27 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.LAVENDER_BRICK_SLAB.get())
                 .add(EBBlocks.LAVENDER_BRICK_WALL.get())
                 .add(EBBlocks.MOSSY_LAVENDER_BRICKS.get())
+
+                .add(EBBlocks.BRIMSTONE.get())
+                .add(EBBlocks.BRIMSTONE_STAIRS.get())
+                .add(EBBlocks.BRIMSTONE_SLAB.get())
+                .add(EBBlocks.BRIMSTONE_WALL.get())
+
+                .add(EBBlocks.POLISHED_BRIMSTONE.get())
+                .add(EBBlocks.POLISHED_BRIMSTONE_STAIRS.get())
+                .add(EBBlocks.POLISHED_BRIMSTONE_SLAB.get())
+
+                .add(EBBlocks.BRIMSTONE_BRICKS.get())
+                .add(EBBlocks.BRIMSTONE_BRICK_STAIRS.get())
+                .add(EBBlocks.BRIMSTONE_BRICK_SLAB.get())
+                .add(EBBlocks.BRIMSTONE_BRICK_WALL.get())
+
+                .add(EBBlocks.BRIMSTONE_TILES.get())
+                .add(EBBlocks.BRIMSTONE_TILE_STAIRS.get())
+                .add(EBBlocks.BRIMSTONE_TILE_SLAB.get())
+
+                .add(EBBlocks.BRIMSTONE_PILLAR.get())
+                .add(EBBlocks.BRIMSTONE_LAMP.get())
         ;
     }
 
@@ -112,6 +133,8 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.LAVENDER_BRICK_WALL.get())
                 .add(EBBlocks.CONGLOMERATE_WALL.get())
                 .add(EBBlocks.CONGLOMERATE_BRICK_WALL.get())
+                .add(EBBlocks.BRIMSTONE_WALL.get())
+                .add(EBBlocks.BRIMSTONE_BRICK_WALL.get())
         ;
     }
 

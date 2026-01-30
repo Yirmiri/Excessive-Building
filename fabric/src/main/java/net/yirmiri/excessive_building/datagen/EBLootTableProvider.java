@@ -106,5 +106,26 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
         dropPottedContents(EBBlocks.POTTED_ANCIENT_SAPLING.get());
         add(EBBlocks.ANCIENT_DOOR.get(), createDoorTable(EBBlocks.ANCIENT_DOOR.get()));
         dropSelf(EBBlocks.ANCIENT_TRAPDOOR.get());
+
+        dropSelf(EBBlocks.BRIMSTONE.get());
+        dropSelf(EBBlocks.BRIMSTONE_STAIRS.get());
+        add(EBBlocks.BRIMSTONE_SLAB.get(), createSlabItemTable(EBBlocks.BRIMSTONE_SLAB.get()));
+        dropSelf(EBBlocks.BRIMSTONE_WALL.get());
+
+        dropSelf(EBBlocks.POLISHED_BRIMSTONE.get());
+        dropSelf(EBBlocks.POLISHED_BRIMSTONE_STAIRS.get());
+        add(EBBlocks.POLISHED_BRIMSTONE_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_BRIMSTONE_SLAB.get()));
+
+        dropSelf(EBBlocks.BRIMSTONE_BRICKS.get());
+        dropSelf(EBBlocks.BRIMSTONE_BRICK_STAIRS.get());
+        add(EBBlocks.BRIMSTONE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.BRIMSTONE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.BRIMSTONE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.BRIMSTONE_TILES.get());
+        dropSelf(EBBlocks.BRIMSTONE_TILE_STAIRS.get());
+        add(EBBlocks.BRIMSTONE_TILE_SLAB.get(), createSlabItemTable(EBBlocks.BRIMSTONE_TILE_SLAB.get()));
+
+        dropSelf(EBBlocks.BRIMSTONE_LAMP.get());
+        dropSelf(EBBlocks.BRIMSTONE_PILLAR.get());
     }
 }

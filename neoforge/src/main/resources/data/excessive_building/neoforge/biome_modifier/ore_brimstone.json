@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": [
+    "excessive_building:ore_brimstone"
+  ],
+  "step": "underground_ores"
+}

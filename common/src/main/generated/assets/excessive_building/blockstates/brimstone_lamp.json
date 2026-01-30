@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lit=false,powered=false": {
+      "model": "excessive_building:block/brimstone_lamp"
+    },
+    "lit=false,powered=true": {
+      "model": "excessive_building:block/brimstone_lamp_powered"
+    },
+    "lit=true,powered=false": {
+      "model": "excessive_building:block/brimstone_lamp_lit"
+    },
+    "lit=true,powered=true": {
+      "model": "excessive_building:block/brimstone_lamp_lit_powered"
+    }
+  }
+}

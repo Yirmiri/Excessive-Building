@@ -67,6 +67,28 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.CONGLOMERATE_BRICK_SLAB.get());
                         entry.accept(EBBlocks.CONGLOMERATE_BRICK_WALL.get());
 
+                        //BRIMSTONE
+                        entry.accept(EBBlocks.BRIMSTONE.get());
+                        entry.accept(EBBlocks.BRIMSTONE_STAIRS.get());
+                        entry.accept(EBBlocks.BRIMSTONE_SLAB.get());
+                        entry.accept(EBBlocks.BRIMSTONE_WALL.get());
+
+                        entry.accept(EBBlocks.POLISHED_BRIMSTONE.get());
+                        entry.accept(EBBlocks.POLISHED_BRIMSTONE_STAIRS.get());
+                        entry.accept(EBBlocks.POLISHED_BRIMSTONE_SLAB.get());
+
+                        entry.accept(EBBlocks.BRIMSTONE_BRICKS.get());
+                        entry.accept(EBBlocks.BRIMSTONE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.BRIMSTONE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.BRIMSTONE_BRICK_WALL.get());
+
+                        entry.accept(EBBlocks.BRIMSTONE_TILES.get());
+                        entry.accept(EBBlocks.BRIMSTONE_TILE_STAIRS.get());
+                        entry.accept(EBBlocks.BRIMSTONE_TILE_SLAB.get());
+
+                        entry.accept(EBBlocks.BRIMSTONE_PILLAR.get());
+                        entry.accept(EBBlocks.BRIMSTONE_LAMP.get());
+
                         //VANILLA BLOCK VARIANTS
                         entry.accept(EBBlocks.COBBLESTONE_BRICKS.get());
                         entry.accept(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get());

@@ -1,6 +1,5 @@
 package net.yirmiri.excessive_building;
 
-import net.yirmiri.excessive_building.common.util.EBRegistries;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBCreativeTabs;
 import net.yirmiri.excessive_building.core.registry.EBItems;

@@ -13,10 +13,10 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 
-public class LavenderBaleBlock extends Block {
+public class ClayPlantBaleBlock extends Block {
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
 
-    public LavenderBaleBlock(BlockBehaviour.Properties properties) {
+    public ClayPlantBaleBlock(BlockBehaviour.Properties properties) {
         super(properties);
         registerDefaultState(stateDefinition.any()
                 .setValue(FACING, Direction.NORTH)

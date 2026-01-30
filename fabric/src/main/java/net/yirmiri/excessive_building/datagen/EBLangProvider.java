@@ -111,6 +111,27 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.ANCIENT_FENCE_GATE.get(), "Ancient Fence Gate");
         build.add(EBBlocks.ANCIENT_VINES.get(), "Ancient Vines");
 
+        build.add(EBBlocks.BRIMSTONE.get(), "Brimstone");
+        build.add(EBBlocks.BRIMSTONE_STAIRS.get(), "Brimstone Stairs");
+        build.add(EBBlocks.BRIMSTONE_SLAB.get(), "Brimstone Slab");
+        build.add(EBBlocks.BRIMSTONE_WALL.get(), "Brimstone Wall");
+
+        build.add(EBBlocks.POLISHED_BRIMSTONE.get(), "Polished Brimstone");
+        build.add(EBBlocks.POLISHED_BRIMSTONE_STAIRS.get(), "Polished Brimstone Stairs");
+        build.add(EBBlocks.POLISHED_BRIMSTONE_SLAB.get(), "Polished Brimstone Slab");
+
+        build.add(EBBlocks.BRIMSTONE_BRICKS.get(), "Brimstone Bricks");
+        build.add(EBBlocks.BRIMSTONE_BRICK_STAIRS.get(), "Brimstone Brick Stairs");
+        build.add(EBBlocks.BRIMSTONE_BRICK_SLAB.get(), "Brimstone Brick Slab");
+        build.add(EBBlocks.BRIMSTONE_BRICK_WALL.get(), "Brimstone Brick Wall");
+
+        build.add(EBBlocks.BRIMSTONE_TILES.get(), "Brimstone Tiles");
+        build.add(EBBlocks.BRIMSTONE_TILE_STAIRS.get(), "Brimstone Tile Stairs");
+        build.add(EBBlocks.BRIMSTONE_TILE_SLAB.get(), "Brimstone Tile Slab");
+
+        build.add(EBBlocks.BRIMSTONE_LAMP.get(), "Brimstone Lamp");
+        build.add(EBBlocks.BRIMSTONE_PILLAR.get(), "Brimstone Pillar");
+
         //ITEMS
         build.add(EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
         build.add(EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");

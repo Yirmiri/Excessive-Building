@@ -43,6 +43,8 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.LAVENDER_BRICK_WALL.get().asItem())
                 .add(EBBlocks.CONGLOMERATE_WALL.get().asItem())
                 .add(EBBlocks.CONGLOMERATE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.BRIMSTONE_WALL.get().asItem())
+                .add(EBBlocks.BRIMSTONE_BRICK_WALL.get().asItem())
         ;
     }
 

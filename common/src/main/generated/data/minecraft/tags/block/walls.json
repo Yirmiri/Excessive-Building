@@ -4,6 +4,8 @@
     "excessive_building:coralsoil_brick_wall",
     "excessive_building:lavender_brick_wall",
     "excessive_building:conglomerate_wall",
-    "excessive_building:conglomerate_brick_wall"
+    "excessive_building:conglomerate_brick_wall",
+    "excessive_building:brimstone_wall",
+    "excessive_building:brimstone_brick_wall"
   ]
 }
