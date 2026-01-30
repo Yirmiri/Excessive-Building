@@ -262,14 +262,9 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         nineBlockStorageRecipesRecipesWithCustomUnpacking(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAVENDER.get(), RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAVENDER_BLOCK.get(), "lavender", "lavender");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBBlocks.MOSSY_LAVENDER_BRICKS.get(), 1)
-                .requires(EBBlocks.LAVENDER_BRICKS.get()).requires(Items.MOSS_BLOCK)
+                .requires(EBBlocks.LAVENDER_BRICKS.get()).requires(EBBlocks.LAVENDER.get())
                 .unlockedBy(getHasName(EBBlocks.LAVENDER_BRICKS.get().asItem()), has(EBBlocks.LAVENDER_BRICKS.get().asItem()))
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.MOSSY_LAVENDER_BRICKS.get()) + "_from_moss_block"));
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBBlocks.MOSSY_LAVENDER_BRICKS.get(), 1)
-                .requires(EBBlocks.LAVENDER_BRICKS.get()).requires(Items.VINE)
-                .unlockedBy(getHasName(EBBlocks.LAVENDER_BRICKS.get().asItem()), has(EBBlocks.LAVENDER_BRICKS.get().asItem()))
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.MOSSY_LAVENDER_BRICKS.get()) + "_from_vine"));
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.MOSSY_LAVENDER_BRICKS.get()) + "_from_lavender"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Blocks.TARGET)
                 .define('H', EBBlocks.LAVENDER_BLOCK.get().asItem()).define('R', Items.REDSTONE)
@@ -277,6 +272,7 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .pattern("RHR")
                 .pattern(" R ")
                 .unlockedBy(getHasName(Items.REDSTONE), has(EBBlocks.LAVENDER_BLOCK.get().asItem()))
+                .group("target")
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.TARGET) + "_from_lavender_block"));
         
         //=======================CONGLOMERATE=======================
@@ -701,6 +697,50 @@ public class EBRecipeProvider extends FabricRecipeProvider {
 
         createChiseled(EBBlocks.CHISELED_ARIDITE.get().asItem(), EBBlocks.POLISHED_ARIDITE_SLAB.get().asItem())
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CHISELED_ARIDITE.get())));
+
+        //=======================SAGE=======================
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_CLAY.get(), 2)
+                .define('#', Items.CLAY_BALL).define('@', EBBlocks.SAGE.get())
+                .pattern("@#")
+                .pattern("#@")
+                .unlockedBy(getHasName(Items.BONE_MEAL), has(Items.BONE_MEAL))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.SAGE_CLAY.get())));
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.SAGE_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
+                        EBBlocks.SAGE_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.SAGE_CLAY.get()), has(EBBlocks.SAGE_CLAY.get())).save(exporter);
+
+        stairBuilder(EBBlocks.SAGE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SAGE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get()), has(EBBlocks.SAGE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SAGE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get()), has(EBBlocks.SAGE_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_BRICK_WALL.get(), Ingredient.of(EBBlocks.SAGE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get()), has(EBBlocks.SAGE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.SAGE_BRICK_STAIRS.get(), EBBlocks.SAGE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.SAGE_BRICK_SLAB.get(), EBBlocks.SAGE_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.SAGE_BRICK_WALL.get(), EBBlocks.SAGE_BRICKS.get());
+
+        nineBlockStorageRecipesRecipesWithCustomUnpacking(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE.get(), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_BLOCK.get(), "sage", "sage");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBBlocks.MOSSY_SAGE_BRICKS.get(), 1)
+                .requires(EBBlocks.SAGE_BRICKS.get()).requires(EBBlocks.SAGE.get())
+                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get().asItem()), has(EBBlocks.SAGE_BRICKS.get().asItem()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.MOSSY_SAGE_BRICKS.get()) + "_from_sage"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Blocks.TARGET)
+                .define('H', EBBlocks.SAGE_BLOCK.get().asItem()).define('R', Items.REDSTONE)
+                .pattern(" R ")
+                .pattern("RHR")
+                .pattern(" R ")
+                .unlockedBy(getHasName(Items.REDSTONE), has(EBBlocks.SAGE_BLOCK.get().asItem()))
+                .group("target")
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.TARGET) + "_from_sage_block"));
         
         //====================================================
         stonecutter.generateRecipes(exporter);

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "sage",
+  "ingredients": [
+    {
+      "item": "excessive_building:sage_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "excessive_building:sage"
+  }
+}

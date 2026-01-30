@@ -14,5 +14,7 @@ public class ExcessiveBuildingClient {
         RLServices.loadClient().registerBlockRenderType(EBBlocks.POTTED_ANCIENT_SAPLING.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(EBBlocks.LAVENDER.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(EBBlocks.POTTED_LAVENDER.get(), RenderType.cutout());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.SAGE.get(), RenderType.cutout());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.POTTED_SAGE.get(), RenderType.cutout());
     }
 }

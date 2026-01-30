@@ -60,12 +60,14 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.CHLOROSLATE_WALL.get().asItem())
                 .add(EBBlocks.POLISHED_CHLOROSLATE_WALL.get().asItem())
                 .add(EBBlocks.CHLOROSLATE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.SAGE_BRICK_WALL.get().asItem())
         ;
     }
 
     private void appendSmallFlowers() {
         getOrCreateTagBuilder(ItemTags.SMALL_FLOWERS)
                 .add(EBBlocks.LAVENDER.get().asItem())
+                .add(EBBlocks.SAGE.get().asItem())
         ;
     }
 

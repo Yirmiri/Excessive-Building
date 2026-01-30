@@ -19,13 +19,21 @@ public class EBBiomeTagProvider extends TagsProvider<Biome> {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         appendLavenderGeneratesIn();
+        appendSageGeneratesIn();
     }
 
     private void appendLavenderGeneratesIn() {
         getOrCreateRawBuilder(EBTags.BiomeT.LAVENDER_GENERATES_IN)
                 .add(TagEntry.element(Biomes.PLAINS.location()))
                 .add(TagEntry.element(Biomes.SNOWY_PLAINS.location()))
-                .add(TagEntry.element(Biomes.MEADOW.location()))
+                .add(TagEntry.element(Biomes.FLOWER_FOREST.location()))
+        ;
+    }
+
+    private void appendSageGeneratesIn() {
+        getOrCreateRawBuilder(EBTags.BiomeT.SAGE_GENERATES_IN)
+                .add(TagEntry.element(Biomes.TAIGA.location()))
+                .add(TagEntry.element(Biomes.SNOWY_TAIGA.location()))
                 .add(TagEntry.element(Biomes.FLOWER_FOREST.location()))
         ;
     }

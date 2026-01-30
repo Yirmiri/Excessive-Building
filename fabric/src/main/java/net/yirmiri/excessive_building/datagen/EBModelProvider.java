@@ -201,6 +201,16 @@ public class EBModelProvider extends FabricModelProvider {
         hectalitebricks.wall(EBBlocks.HECTALITE_BRICK_WALL.get());
 
         generator.createTrivialCube(EBBlocks.CHISELED_HECTALITE.get());
+
+        BlockModelGenerators.BlockFamilyProvider sageBricks = generator.family(EBBlocks.SAGE_BRICKS.get());
+        sageBricks.stairs(EBBlocks.SAGE_BRICK_STAIRS.get());
+        sageBricks.slab(EBBlocks.SAGE_BRICK_SLAB.get());
+        sageBricks.wall(EBBlocks.SAGE_BRICK_WALL.get());
+
+        generator.createTrivialCube(EBBlocks.MOSSY_SAGE_BRICKS.get());
+        generator.createTrivialCube(EBBlocks.SAGE_CLAY.get());
+
+        generator.createPlant(EBBlocks.SAGE.get(), EBBlocks.POTTED_SAGE.get(), BlockModelGenerators.TintState.NOT_TINTED);
     }
 
     @Override

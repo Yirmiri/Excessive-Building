@@ -72,6 +72,16 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
         dropPottedContents(EBBlocks.POTTED_LAVENDER.get());
         dropSelf(EBBlocks.LAVENDER_BLOCK.get());
 
+        dropSelf(EBBlocks.SAGE_CLAY.get());
+        dropSelf(EBBlocks.SAGE_BRICKS.get());
+        dropSelf(EBBlocks.MOSSY_SAGE_BRICKS.get());
+        dropSelf(EBBlocks.SAGE_BRICK_STAIRS.get());
+        add(EBBlocks.SAGE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.SAGE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.SAGE_BRICK_WALL.get());
+        dropSelf(EBBlocks.SAGE.get());
+        dropPottedContents(EBBlocks.POTTED_SAGE.get());
+        dropSelf(EBBlocks.SAGE_BLOCK.get());
+
         dropSelf(EBBlocks.CONGLOMERATE.get());
         dropSelf(EBBlocks.CONGLOMERATE_STAIRS.get());
         add(EBBlocks.CONGLOMERATE_SLAB.get(), createSlabItemTable(EBBlocks.CONGLOMERATE_SLAB.get()));

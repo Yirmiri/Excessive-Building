@@ -121,6 +121,12 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.LAVENDER_BRICK_WALL.get())
                 .add(EBBlocks.MOSSY_LAVENDER_BRICKS.get())
 
+                .add(EBBlocks.SAGE_BRICKS.get())
+                .add(EBBlocks.SAGE_BRICK_STAIRS.get())
+                .add(EBBlocks.SAGE_BRICK_SLAB.get())
+                .add(EBBlocks.SAGE_BRICK_WALL.get())
+                .add(EBBlocks.MOSSY_SAGE_BRICKS.get())
+
                 .add(EBBlocks.BRIMSTONE.get())
                 .add(EBBlocks.BRIMSTONE_STAIRS.get())
                 .add(EBBlocks.BRIMSTONE_SLAB.get())
@@ -211,6 +217,7 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.CHLOROSLATE_WALL.get())
                 .add(EBBlocks.POLISHED_CHLOROSLATE_WALL.get())
                 .add(EBBlocks.CHLOROSLATE_BRICK_WALL.get())
+                .add(EBBlocks.SAGE_BRICK_WALL.get())
         ;
     }
 
@@ -286,6 +293,7 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     private void appendMineableWithShovel() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(EBBlocks.LAVENDER_CLAY.get())
+                .add(EBBlocks.SAGE_CLAY.get())
                 .add(EBBlocks.CORALSOIL.get())
         ;
     }
@@ -293,6 +301,7 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     private void appendMineableWithHoe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_HOE)
                 .add(EBBlocks.LAVENDER_BLOCK.get())
+                .add(EBBlocks.SAGE_BLOCK.get())
                 .add(EBBlocks.ANCIENT_LEAVES.get())
         ;
     }
@@ -300,12 +309,14 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     private void appendSmallFlowers() {
         getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
                 .add(EBBlocks.LAVENDER.get())
+                .add(EBBlocks.SAGE.get())
         ;
     }
 
     private void appendFlowerPots() {
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                 .add(EBBlocks.POTTED_LAVENDER.get())
+                .add(EBBlocks.POTTED_SAGE.get())
                 .add(EBBlocks.POTTED_ANCIENT_SAPLING.get())
         ;
     }

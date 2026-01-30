@@ -7,10 +7,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.common.block.AncientVinesBlock;
-import net.yirmiri.excessive_building.common.block.AncientVinesPlantBlock;
-import net.yirmiri.excessive_building.common.block.AncientLeavesBlock;
-import net.yirmiri.excessive_building.common.block.ClayPlantBaleBlock;
+import net.yirmiri.excessive_building.common.block.*;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 import net.yirmiri.excessive_building.common.util.EBRegistries;
 import net.yirmiri.excessive_building.core.init.EBTreeGrowers;
@@ -41,7 +38,7 @@ public class EBBlocks {
     public static final Supplier<Block> DIORITE_BRICK_WALL = register("diorite_brick_wall", () -> new WallBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
 
     //LAVENDER
-    public static final Supplier<Block> LAVENDER = register("lavender", () -> new FlowerBlock(MobEffects.HEALTH_BOOST, 7, EBProperties.BlockP.LAVENDER), true);
+    public static final Supplier<Block> LAVENDER = register("lavender", () -> new ClayPlantBlock(MobEffects.HEALTH_BOOST, 7, EBProperties.BlockP.LAVENDER), true);
     public static final Supplier<Block> POTTED_LAVENDER = register("potted_lavender", () -> new FlowerPotBlock(LAVENDER.get(), EBProperties.BlockP.POTTED_LAVENDER), true);
     public static final Supplier<Block> LAVENDER_BLOCK = register("lavender_block", () -> new ClayPlantBaleBlock(EBProperties.BlockP.LAVENDER_BALE), true);
     public static final Supplier<Block> LAVENDER_CLAY = register("lavender_clay", () -> new Block(EBProperties.BlockP.LAVENDER_CLAY), true);
@@ -50,6 +47,17 @@ public class EBBlocks {
     public static final Supplier<Block> LAVENDER_BRICK_SLAB = register("lavender_brick_slab", () -> new SlabBlock(EBProperties.BlockP.LAVENDER_BRICKS), true);
     public static final Supplier<Block> LAVENDER_BRICK_WALL = register("lavender_brick_wall", () -> new WallBlock(EBProperties.BlockP.LAVENDER_BRICKS), true);
     public static final Supplier<Block> MOSSY_LAVENDER_BRICKS = register("mossy_lavender_bricks", () -> new Block(EBProperties.BlockP.LAVENDER_BRICKS), true);
+
+    //SAGE
+    public static final Supplier<Block> SAGE = register("sage", () -> new ClayPlantBlock(MobEffects.ABSORPTION, 7, EBProperties.BlockP.SAGE), true);
+    public static final Supplier<Block> POTTED_SAGE = register("potted_sage", () -> new FlowerPotBlock(SAGE.get(), EBProperties.BlockP.POTTED_SAGE), true);
+    public static final Supplier<Block> SAGE_BLOCK = register("sage_block", () -> new ClayPlantBaleBlock(EBProperties.BlockP.SAGE_BALE), true);
+    public static final Supplier<Block> SAGE_CLAY = register("sage_clay", () -> new Block(EBProperties.BlockP.SAGE_CLAY), true);
+    public static final Supplier<Block> SAGE_BRICKS = register("sage_bricks", () -> new Block(EBProperties.BlockP.SAGE_BRICKS), true);
+    public static final Supplier<Block> SAGE_BRICK_STAIRS = register("sage_brick_stairs", () -> new PublicStairBlock(SAGE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.SAGE_BRICKS), true);
+    public static final Supplier<Block> SAGE_BRICK_SLAB = register("sage_brick_slab", () -> new SlabBlock(EBProperties.BlockP.SAGE_BRICKS), true);
+    public static final Supplier<Block> SAGE_BRICK_WALL = register("sage_brick_wall", () -> new WallBlock(EBProperties.BlockP.SAGE_BRICKS), true);
+    public static final Supplier<Block> MOSSY_SAGE_BRICKS = register("mossy_sage_bricks", () -> new Block(EBProperties.BlockP.SAGE_BRICKS), true);
 
     //CORALSOIL
     public static final Supplier<Block> CORALSOIL = register("coralsoil", () -> new Block(EBProperties.BlockP.CORALSOIL_CLAY), true);

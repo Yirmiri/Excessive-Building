@@ -19,6 +19,7 @@ public class EBFeatureKeys {
     public static class PlacedFeatures {
         //NATURE
         public static final ResourceKey<PlacedFeature> PATCH_LAVENDER = create("patch_lavender");
+        public static final ResourceKey<PlacedFeature> PATCH_SAGE = create("patch_sage");
 
         //ORE
         public static final ResourceKey<PlacedFeature> ORE_BRIMSTONE = create("ore_brimstone");

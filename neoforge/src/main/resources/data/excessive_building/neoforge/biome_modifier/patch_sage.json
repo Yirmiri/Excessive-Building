@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#excessive_building:sage_generates_in",
+  "features": [
+    "excessive_building:patch_sage"
+  ],
+  "step": "vegetal_decoration"
+}

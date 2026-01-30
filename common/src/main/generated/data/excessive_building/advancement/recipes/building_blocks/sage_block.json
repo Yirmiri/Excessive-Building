@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sage": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:sage"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sage_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sage"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sage_block"
+    ]
+  }
+}

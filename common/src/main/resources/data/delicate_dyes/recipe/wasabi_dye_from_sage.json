@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "wasabi_dye",
+  "ingredients": [
+    {
+      "item": "excessive_building:sage"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "delicate_dyes:wasabi_dye"
+  }
+}

@@ -86,6 +86,15 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.LAVENDER_BRICK_SLAB.get(), "Lavender Brick Slab");
         build.add(EBBlocks.LAVENDER_BRICK_WALL.get(), "Lavender Brick Wall");
 
+        build.add(EBBlocks.SAGE_BLOCK.get(), "Sage Bale");
+        build.add(EBBlocks.SAGE.get(), "Sage");
+        build.add(EBBlocks.SAGE_CLAY.get(), "Sage Clay");
+        build.add(EBBlocks.MOSSY_SAGE_BRICKS.get(), "Mossy Sage Bricks");
+        build.add(EBBlocks.SAGE_BRICKS.get(), "Sage Bricks");
+        build.add(EBBlocks.SAGE_BRICK_STAIRS.get(), "Sage Brick Stairs");
+        build.add(EBBlocks.SAGE_BRICK_SLAB.get(), "Sage Brick Slab");
+        build.add(EBBlocks.SAGE_BRICK_WALL.get(), "Sage Brick Wall");
+
         build.add(EBBlocks.PEBBLESTONE.get(), "Pebblestone");
         build.add(EBBlocks.CONGLOMERATE.get(), "Conglomerate");
         build.add(EBBlocks.CONGLOMERATE_STAIRS.get(), "Conglomerate Stairs");

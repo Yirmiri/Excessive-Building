@@ -31,6 +31,7 @@ public class EBTags {
     public static class BiomeT {
         //FEATURES
         public static final TagKey<Biome> LAVENDER_GENERATES_IN = create("lavender_generates_in");
+        public static final TagKey<Biome> SAGE_GENERATES_IN = create("sage_generates_in");
 
         private static TagKey<Biome> create(String id) {
             return TagKey.create(Registries.BIOME, RunicLib.customid(ExcessiveBuilding.MOD_ID, id));

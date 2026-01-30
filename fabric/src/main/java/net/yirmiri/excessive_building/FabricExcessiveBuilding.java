@@ -32,6 +32,9 @@ public class FabricExcessiveBuilding implements ModInitializer {
         BiomeModifications.addFeature(BiomeSelectors.tag(EBTags.BiomeT.LAVENDER_GENERATES_IN),
                 GenerationStep.Decoration.VEGETAL_DECORATION, EBFeatureKeys.PlacedFeatures.PATCH_LAVENDER);
 
+        BiomeModifications.addFeature(BiomeSelectors.tag(EBTags.BiomeT.SAGE_GENERATES_IN),
+                GenerationStep.Decoration.VEGETAL_DECORATION, EBFeatureKeys.PlacedFeatures.PATCH_SAGE);
+
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_NETHER),
                 GenerationStep.Decoration.UNDERGROUND_ORES, EBFeatureKeys.PlacedFeatures.ORE_BRIMSTONE);
     }

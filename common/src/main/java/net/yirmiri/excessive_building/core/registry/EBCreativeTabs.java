@@ -128,6 +128,16 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.CORALSOIL_BRICK_SLAB.get());
                         entry.accept(EBBlocks.CORALSOIL_BRICK_WALL.get());
 
+                        //SAGE
+                        entry.accept(EBBlocks.SAGE.get());
+                        entry.accept(EBBlocks.SAGE_BLOCK.get());
+                        entry.accept(EBBlocks.SAGE_CLAY.get());
+                        entry.accept(EBBlocks.SAGE_BRICKS.get());
+                        entry.accept(EBBlocks.MOSSY_SAGE_BRICKS.get());
+                        entry.accept(EBBlocks.SAGE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.SAGE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.SAGE_BRICK_WALL.get());
+
                         //LAVENDER
                         entry.accept(EBBlocks.LAVENDER.get());
                         entry.accept(EBBlocks.LAVENDER_BLOCK.get());
