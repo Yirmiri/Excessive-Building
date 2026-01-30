@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_corrugated_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:green_corrugated_iron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:green_corrugated_iron_slab_from_green_corrugated_iron_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_green_corrugated_iron"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:green_corrugated_iron_slab_from_green_corrugated_iron_stonecutting"
+    ]
+  }
+}

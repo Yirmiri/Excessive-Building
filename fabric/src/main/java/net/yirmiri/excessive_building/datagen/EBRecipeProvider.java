@@ -762,6 +762,9 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                     .unlockedBy(getHasName(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()), has(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()))
                     .save(exporter);
 
+            stonecutter.putRecipe(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get(), EBBlocks.getDyedCorrugatedIron(colors.getId()).get());
+            stonecutter.putRecipe(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get(), EBBlocks.getDyedCorrugatedIron(colors.getId()).get(), 2);
+
             //FROSTED GLASS
             dyeEightForEight(EBBlocks.getDyedFrostedGlass(colors.getId()).get().asItem(), EBBlocks.FROSTED_GLASS.get().asItem(), DyeItem.byColor(colors).getDyeColor())
                     .unlockedBy(getHasName(EBBlocks.FROSTED_GLASS.get()), has(EBBlocks.FROSTED_GLASS.get()))
