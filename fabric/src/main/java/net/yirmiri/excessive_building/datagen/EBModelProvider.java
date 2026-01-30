@@ -6,6 +6,7 @@ import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TexturedModel;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
@@ -211,6 +212,13 @@ public class EBModelProvider extends FabricModelProvider {
         generator.createTrivialCube(EBBlocks.SAGE_CLAY.get());
 
         generator.createPlant(EBBlocks.SAGE.get(), EBBlocks.POTTED_SAGE.get(), BlockModelGenerators.TintState.NOT_TINTED);
+
+        for (DyeColor colors : DyeColor.values()) {
+            generator.family(EBBlocks.getDyedCorrugatedIron(colors.getId()).get())
+                    .stairs(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get())
+                    .slab(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get())
+            ;
+        }
     }
 
     @Override

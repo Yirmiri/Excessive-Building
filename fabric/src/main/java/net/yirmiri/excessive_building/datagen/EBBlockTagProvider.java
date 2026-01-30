@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.core.init.EBTags;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
@@ -194,6 +195,14 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.ARIDITE_BRICK_WALL.get())
                 .add(EBBlocks.CHISELED_ARIDITE.get())
         ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                    .add(EBBlocks.getDyedCorrugatedIron(colors.getId()).get())
+                    .add(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get())
+                    .add(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get())
+            ;
+        }
     }
 
     private void appendWalls() {

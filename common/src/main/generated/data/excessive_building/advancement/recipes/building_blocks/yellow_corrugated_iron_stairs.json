@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "excessive_building:yellow_corrugated_iron_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_corrugated_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:yellow_corrugated_iron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_corrugated_iron"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "excessive_building:yellow_corrugated_iron_stairs"
+    ]
+  }
+}

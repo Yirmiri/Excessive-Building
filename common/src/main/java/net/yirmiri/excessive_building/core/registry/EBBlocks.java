@@ -3,6 +3,7 @@ package net.yirmiri.excessive_building.core.registry;
 import net.azurune.runiclib.common.publicized.*;
 import net.azurune.runiclib.core.platform.RLServices;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -12,6 +13,7 @@ import net.yirmiri.excessive_building.common.util.EBProperties;
 import net.yirmiri.excessive_building.common.util.EBRegistries;
 import net.yirmiri.excessive_building.core.init.EBTreeGrowers;
 
+import java.util.HashMap;
 import java.util.function.Supplier;
 
 public class EBBlocks {
@@ -219,6 +221,36 @@ public class EBBlocks {
 
     public static final Supplier<Block> CHISELED_ARIDITE = register("chiseled_aridite", () -> new Block(EBProperties.BlockP.POLISHED_ARIDITE), true);
     public static final Supplier<Block> ARIDITE_PILLAR = register("aridite_pillar", () -> new RotatedPillarBlock(EBProperties.BlockP.POLISHED_ARIDITE), true);
+
+    //DYED
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_CORRUGATED_IRON = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_CORRUGATED_IRON_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_CORRUGATED_IRON_SLAB = new HashMap<>();
+
+    static {
+        for (DyeColor colors : DyeColor.values()) {
+            DYED_CORRUGATED_IRON.put(colors, register(colors + "_corrugated_iron", () -> new Block(
+                    EBProperties.BlockP.CORRUGATED_IRON.mapColor(colors)), true));
+
+            DYED_CORRUGATED_IRON_STAIRS.put(colors, register(colors + "_corrugated_iron_stairs", () -> new PublicStairBlock(DYED_CORRUGATED_IRON.get(colors).get().defaultBlockState(),
+                    EBProperties.BlockP.CORRUGATED_IRON.mapColor(colors)), true));
+
+            DYED_CORRUGATED_IRON_SLAB.put(colors, register(colors + "_corrugated_iron_slab", () -> new SlabBlock(
+                    EBProperties.BlockP.CORRUGATED_IRON.mapColor(colors)), true));
+        }
+    }
+
+    public static Supplier<Block> getDyedCorrugatedIron(int colors){
+        return DYED_CORRUGATED_IRON.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedCorrugatedIronStairs(int colors){
+        return DYED_CORRUGATED_IRON_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedCorrugatedIronSlab(int colors){
+        return DYED_CORRUGATED_IRON_SLAB.get(DyeColor.byId(colors));
+    }
 
     public static Supplier<Block> register(String id, Supplier<Block> supplier, boolean hasItem) {
         return RLServices.REGISTRY.registerBlock(ExcessiveBuilding.MOD_ID, id, supplier, hasItem);

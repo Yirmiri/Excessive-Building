@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cyan_corrugated_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:cyan_corrugated_iron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "excessive_building:cyan_corrugated_iron_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cyan_corrugated_iron"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "excessive_building:cyan_corrugated_iron_slab"
+    ]
+  }
+}

@@ -9,6 +9,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.DyeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -741,7 +743,23 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(Items.REDSTONE), has(EBBlocks.SAGE_BLOCK.get().asItem()))
                 .group("target")
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.TARGET) + "_from_sage_block"));
-        
+
+        //=======================DYED=======================
+        for (DyeColor colors : DyeColor.values()) {
+            //CORRUGATED IRON
+            createCorrugatedIron(EBBlocks.getDyedCorrugatedIron(colors.getId()).get(), DyeItem.byColor(colors).getDyeColor())
+                    .unlockedBy(getHasName(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()), has(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()))
+                    .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.getDyedCorrugatedIron(colors.getId()).get())));
+
+            stairBuilder(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get(), Ingredient.of(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()))
+                    .unlockedBy(getHasName(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()), has(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()))
+                    .save(exporter);
+
+            slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get(), Ingredient.of(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()))
+                    .unlockedBy(getHasName(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()), has(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()))
+                    .save(exporter);
+        }
+
         //====================================================
         stonecutter.generateRecipes(exporter);
     }
@@ -752,5 +770,13 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .pattern("#")
                 .pattern("#")
                 .unlockedBy(getHasName(ingredient), has(ingredient));
+    }
+
+    public static ShapedRecipeBuilder createCorrugatedIron(ItemLike output, DyeColor color) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 8)
+                .define('#', Items.IRON_INGOT).define('@', Items.IRON_NUGGET).define('!', DyeItem.byColor(color))
+                .pattern("#@#")
+                .pattern("@!@")
+                .pattern("#@#");
     }
 }

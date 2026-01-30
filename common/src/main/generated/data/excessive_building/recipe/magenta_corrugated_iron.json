@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "minecraft:magenta_dye"
+    },
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "@": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "@!@",
+    "#@#"
+  ],
+  "result": {
+    "count": 8,
+    "id": "excessive_building:magenta_corrugated_iron"
+  }
+}

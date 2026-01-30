@@ -3,6 +3,7 @@ package net.yirmiri.excessive_building.core.registry;
 import net.azurune.runiclib.core.platform.RLServices;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
@@ -147,6 +148,71 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.LAVENDER_BRICK_STAIRS.get());
                         entry.accept(EBBlocks.LAVENDER_BRICK_SLAB.get());
                         entry.accept(EBBlocks.LAVENDER_BRICK_WALL.get());
+
+                        //CORRUGATED IRON
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.WHITE.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.WHITE.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.WHITE.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.LIGHT_GRAY.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.LIGHT_GRAY.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.LIGHT_GRAY.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.GRAY.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.GRAY.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.GRAY.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.BLACK.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.BLACK.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.BLACK.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.BROWN.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.BROWN.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.BROWN.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.RED.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.RED.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.RED.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.ORANGE.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.ORANGE.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.ORANGE.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.YELLOW.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.YELLOW.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.YELLOW.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.LIME.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.LIME.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.LIME.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.GREEN.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.GREEN.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.GREEN.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.CYAN.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.CYAN.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.CYAN.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.LIGHT_BLUE.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.LIGHT_BLUE.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.LIGHT_BLUE.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.BLUE.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.BLUE.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.BLUE.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.PURPLE.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.PURPLE.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.PURPLE.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.MAGENTA.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.MAGENTA.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.MAGENTA.getId()).get());
+
+                        entry.accept(EBBlocks.getDyedCorrugatedIron(DyeColor.PINK.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.PINK.getId()).get());
+                        entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.PINK.getId()).get());
 
                         //VANILLA BLOCK VARIANTS
                         entry.accept(EBBlocks.COBBLESTONE_BRICKS.get());

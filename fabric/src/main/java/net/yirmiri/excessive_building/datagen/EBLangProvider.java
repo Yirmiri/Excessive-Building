@@ -25,6 +25,10 @@ public class EBLangProvider extends FabricLanguageProvider {
         for (DyeColor colors : DyeColor.values()) {
             String dyeString = StringUtils.capitalize(StringUtils.replace(StringUtils.replace(StringUtils.replace(colors.getName(),
                     "_", " "), "gray", "Gray"), "blue", "Blue"));
+
+            build.add(EBBlocks.getDyedCorrugatedIron(colors.getId()).get(), dyeString + " Corrugated Iron");
+            build.add(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get(), dyeString + " Corrugated Iron Stairs");
+            build.add(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get(), dyeString + " Corrugated Iron Slab");
         }
 
         //MISC

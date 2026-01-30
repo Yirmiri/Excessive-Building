@@ -3,6 +3,7 @@ package net.yirmiri.excessive_building.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.world.item.DyeColor;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
@@ -207,5 +208,15 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(EBBlocks.ANDESITE_BRICK_STAIRS.get());
         add(EBBlocks.ANDESITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.ANDESITE_BRICK_SLAB.get()));
         dropSelf(EBBlocks.ANDESITE_BRICK_WALL.get());
+
+        addDyedDrops();
+    }
+
+    private void addDyedDrops() {
+        for (DyeColor colors : DyeColor.values()) {
+            dropSelf(EBBlocks.getDyedCorrugatedIron(colors.getId()).get());
+            dropSelf(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get());
+            add(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get(), createSlabItemTable(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get()));
+        }
     }
 }
