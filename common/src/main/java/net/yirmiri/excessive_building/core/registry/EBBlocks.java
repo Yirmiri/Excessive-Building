@@ -70,6 +70,19 @@ public class EBBlocks {
     public static final Supplier<Block> WAXED_OXIDIZED_COPPER_BRICK_STAIRS = register("waxed_oxidized_copper_brick_stairs", () -> new PublicStairBlock(WAXED_OXIDIZED_COPPER_BRICKS.get().defaultBlockState(), EBProperties.BlockP.COPPER), true);
     public static final Supplier<Block> WAXED_OXIDIZED_COPPER_BRICK_SLAB = register("waxed_oxidized_copper_brick_slab", () -> new SlabBlock(EBProperties.BlockP.COPPER), true);
 
+    //CONGLOMERATE
+    public static final Supplier<Block> PEBBLESTONE = register("pebblestone", () -> new Block(EBProperties.BlockP.PEBBLESTONE), true);
+
+    public static final Supplier<Block> CONGLOMERATE = register("conglomerate", () -> new Block(EBProperties.BlockP.CONGLOMERATE), true);
+    public static final Supplier<Block> CONGLOMERATE_STAIRS = register("conglomerate_stairs", () -> new PublicStairBlock(CONGLOMERATE.get().defaultBlockState(), EBProperties.BlockP.CONGLOMERATE), true);
+    public static final Supplier<Block> CONGLOMERATE_SLAB = register("conglomerate_slab", () -> new SlabBlock(EBProperties.BlockP.CONGLOMERATE), true);
+    public static final Supplier<Block> CONGLOMERATE_WALL = register("conglomerate_wall", () -> new WallBlock(EBProperties.BlockP.CONGLOMERATE), true);
+
+    public static final Supplier<Block> CONGLOMERATE_BRICKS = register("conglomerate_bricks", () -> new Block(EBProperties.BlockP.CONGLOMERATE), true);
+    public static final Supplier<Block> CONGLOMERATE_BRICK_STAIRS = register("conglomerate_brick_stairs", () -> new PublicStairBlock(CONGLOMERATE.get().defaultBlockState(), EBProperties.BlockP.CONGLOMERATE), true);
+    public static final Supplier<Block> CONGLOMERATE_BRICK_SLAB = register("conglomerate_brick_slab", () -> new SlabBlock(EBProperties.BlockP.CONGLOMERATE), true);
+    public static final Supplier<Block> CONGLOMERATE_BRICK_WALL = register("conglomerate_brick_wall", () -> new WallBlock(EBProperties.BlockP.CONGLOMERATE), true);
+
     public static Supplier<Block> register(String id, Supplier<Block> supplier, boolean hasItem) {
         return RLServices.REGISTRY.registerBlock(ExcessiveBuilding.MOD_ID, id, supplier, hasItem);
     }

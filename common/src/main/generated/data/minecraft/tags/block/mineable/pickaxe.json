@@ -1,5 +1,14 @@
 {
   "values": [
+    "excessive_building:pebblestone",
+    "excessive_building:conglomerate",
+    "excessive_building:conglomerate_stairs",
+    "excessive_building:conglomerate_slab",
+    "excessive_building:conglomerate_wall",
+    "excessive_building:conglomerate_bricks",
+    "excessive_building:conglomerate_brick_stairs",
+    "excessive_building:conglomerate_brick_slab",
+    "excessive_building:conglomerate_brick_wall",
     "excessive_building:copper_bricks",
     "excessive_building:copper_brick_stairs",
     "excessive_building:copper_brick_slab",

@@ -66,7 +66,21 @@ public class EBModelProvider extends FabricModelProvider {
         generator.createTrivialCube(EBBlocks.LAVENDER_CLAY.get());
 
         generator.createPlant(EBBlocks.LAVENDER.get(), EBBlocks.POTTED_LAVENDER.get(), BlockModelGenerators.TintState.NOT_TINTED);
-        generator.createTrivialBlock(EBBlocks.LAVENDER_BLOCK.get(), TexturedModel.CUBE_TOP_BOTTOM);
+        //generator.createTrivialBlock(EBBlocks.LAVENDER_BLOCK.get(), TexturedModel.CUBE_TOP_BOTTOM);
+
+        generator.createTrivialCube(EBBlocks.PEBBLESTONE.get());
+
+        generator.family(EBBlocks.CONGLOMERATE.get())
+                .stairs(EBBlocks.CONGLOMERATE_STAIRS.get())
+                .slab(EBBlocks.CONGLOMERATE_SLAB.get())
+                .wall(EBBlocks.CONGLOMERATE_WALL.get())
+        ;
+
+        generator.family(EBBlocks.CONGLOMERATE_BRICKS.get())
+                .stairs(EBBlocks.CONGLOMERATE_BRICK_STAIRS.get())
+                .slab(EBBlocks.CONGLOMERATE_BRICK_SLAB.get())
+                .wall(EBBlocks.CONGLOMERATE_BRICK_WALL.get())
+        ;
     }
 
     @Override

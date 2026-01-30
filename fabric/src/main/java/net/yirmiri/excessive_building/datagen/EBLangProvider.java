@@ -82,6 +82,16 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.LAVENDER_BRICK_STAIRS.get(), "Lavender Brick Stairs");
         build.add(EBBlocks.LAVENDER_BRICK_SLAB.get(), "Lavender Brick Slab");
         build.add(EBBlocks.LAVENDER_BRICK_WALL.get(), "Lavender Brick Wall");
+
+        build.add(EBBlocks.PEBBLESTONE.get(), "Pebblestone");
+        build.add(EBBlocks.CONGLOMERATE.get(), "Conglomerate");
+        build.add(EBBlocks.CONGLOMERATE_STAIRS.get(), "Conglomerate Stairs");
+        build.add(EBBlocks.CONGLOMERATE_SLAB.get(), "Conglomerate Slab");
+        build.add(EBBlocks.CONGLOMERATE_WALL.get(), "Conglomerate Wall");
+        build.add(EBBlocks.CONGLOMERATE_BRICKS.get(), "Conglomerate Bricks");
+        build.add(EBBlocks.CONGLOMERATE_BRICK_STAIRS.get(), "Conglomerate Brick Stairs");
+        build.add(EBBlocks.CONGLOMERATE_BRICK_SLAB.get(), "Conglomerate Brick Slab");
+        build.add(EBBlocks.CONGLOMERATE_BRICK_WALL.get(), "Conglomerate Brick Wall");
     }
 
     private void addDamage(TranslationBuilder build, ResourceKey<DamageType> type, String deathMsg, String killMsg) {

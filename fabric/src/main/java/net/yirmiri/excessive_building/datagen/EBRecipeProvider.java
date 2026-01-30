@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
@@ -185,8 +186,7 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(EBBlocks.COBBLESTONE_BRICKS.get()), has(EBBlocks.COBBLESTONE_BRICKS.get()))
                 .save(exporter);
 
-        stonecutter.putRecipe(EBBlocks.COBBLESTONE_BRICKS.get(), Blocks.COBBLESTONE);
-
+        stonecutter.putShadowRecipe(EBBlocks.COBBLESTONE_BRICKS.get(), Blocks.COBBLESTONE);
         stonecutter.putRecipe(EBBlocks.COBBLESTONE_BRICK_STAIRS.get(), EBBlocks.COBBLESTONE_BRICKS.get());
         stonecutter.putRecipe(EBBlocks.COBBLESTONE_BRICK_SLAB.get(), EBBlocks.COBBLESTONE_BRICKS.get(), 2);
         stonecutter.putRecipe(EBBlocks.COBBLESTONE_BRICK_WALL.get(), EBBlocks.COBBLESTONE_BRICKS.get());
@@ -270,7 +270,54 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .pattern(" R ")
                 .unlockedBy(getHasName(Items.REDSTONE), has(EBBlocks.LAVENDER_BLOCK.get().asItem()))
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.TARGET) + "_from_lavender_block"));
+        
+        //=======================CONGLOMERATE=======================
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PEBBLESTONE.get(), 8)
+                .define('#', Blocks.SAND).define('!', Blocks.GRAVEL).define('@', ItemTags.STONE_CRAFTING_MATERIALS)
+                .pattern("!!!")
+                .pattern("!#@")
+                .pattern("@@@")
+                .unlockedBy(getHasName(Blocks.SAND), has(Blocks.SAND))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.PEBBLESTONE.get())));
 
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CONGLOMERATE.get(), EBBlocks.PEBBLESTONE.get());
+
+        stairBuilder(EBBlocks.CONGLOMERATE_STAIRS.get(), Ingredient.of(EBBlocks.CONGLOMERATE.get()))
+                .unlockedBy(getHasName(EBBlocks.CONGLOMERATE.get()), has(EBBlocks.CONGLOMERATE.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CONGLOMERATE_SLAB.get(), Ingredient.of(EBBlocks.CONGLOMERATE.get()))
+                .unlockedBy(getHasName(EBBlocks.CONGLOMERATE.get()), has(EBBlocks.CONGLOMERATE.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CONGLOMERATE_WALL.get(), Ingredient.of(EBBlocks.CONGLOMERATE.get()))
+                .unlockedBy(getHasName(EBBlocks.CONGLOMERATE.get()), has(EBBlocks.CONGLOMERATE.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.CONGLOMERATE_STAIRS.get(), EBBlocks.CONGLOMERATE.get());
+        stonecutter.putRecipe(EBBlocks.CONGLOMERATE_SLAB.get(), EBBlocks.CONGLOMERATE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.CONGLOMERATE_WALL.get(), EBBlocks.CONGLOMERATE.get());
+
+        //=======================CONGLOMERATE BRICKS=======================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CONGLOMERATE_BRICKS.get(), EBBlocks.CONGLOMERATE.get());
+
+        stairBuilder(EBBlocks.CONGLOMERATE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.CONGLOMERATE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CONGLOMERATE_BRICKS.get()), has(EBBlocks.CONGLOMERATE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CONGLOMERATE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.CONGLOMERATE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CONGLOMERATE_BRICKS.get()), has(EBBlocks.CONGLOMERATE_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CONGLOMERATE_BRICK_WALL.get(), Ingredient.of(EBBlocks.CONGLOMERATE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CONGLOMERATE_BRICKS.get()), has(EBBlocks.CONGLOMERATE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.CONGLOMERATE_BRICKS.get(), EBBlocks.CONGLOMERATE.get());
+        stonecutter.putRecipe(EBBlocks.CONGLOMERATE_BRICK_STAIRS.get(), EBBlocks.CONGLOMERATE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.CONGLOMERATE_BRICK_SLAB.get(), EBBlocks.CONGLOMERATE_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.CONGLOMERATE_BRICK_WALL.get(), EBBlocks.CONGLOMERATE_BRICKS.get());
+        
         //====================================================
         stonecutter.generateRecipes(exporter);
     }

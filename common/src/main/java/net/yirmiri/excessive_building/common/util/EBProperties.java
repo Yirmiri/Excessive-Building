@@ -1,6 +1,5 @@
 package net.yirmiri.excessive_building.common.util;
 
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -30,6 +29,8 @@ public class EBProperties {
 
         //STONES
         public static final BlockBehaviour.Properties COBBLESTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE);
+        public static final BlockBehaviour.Properties CONGLOMERATE = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).mapColor(MapColor.TERRACOTTA_WHITE);
+        public static final BlockBehaviour.Properties PEBBLESTONE = BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL).sound(SoundType.STONE);
 
         //METALS
         public static final BlockBehaviour.Properties COPPER = BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK);

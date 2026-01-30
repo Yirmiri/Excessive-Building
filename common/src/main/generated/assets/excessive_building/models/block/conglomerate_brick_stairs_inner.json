@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/conglomerate_bricks",
+    "side": "excessive_building:block/conglomerate_bricks",
+    "top": "excessive_building:block/conglomerate_bricks"
+  }
+}

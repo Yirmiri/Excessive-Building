@@ -26,6 +26,18 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     private void appendMineableWithPickaxe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(EBBlocks.PEBBLESTONE.get())
+
+                .add(EBBlocks.CONGLOMERATE.get())
+                .add(EBBlocks.CONGLOMERATE_STAIRS.get())
+                .add(EBBlocks.CONGLOMERATE_SLAB.get())
+                .add(EBBlocks.CONGLOMERATE_WALL.get())
+
+                .add(EBBlocks.CONGLOMERATE_BRICKS.get())
+                .add(EBBlocks.CONGLOMERATE_BRICK_STAIRS.get())
+                .add(EBBlocks.CONGLOMERATE_BRICK_SLAB.get())
+                .add(EBBlocks.CONGLOMERATE_BRICK_WALL.get())
+
                 .add(EBBlocks.COPPER_BRICKS.get())
                 .add(EBBlocks.COPPER_BRICK_STAIRS.get())
                 .add(EBBlocks.COPPER_BRICK_SLAB.get())
@@ -82,6 +94,8 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.COBBLESTONE_BRICK_WALL.get())
                 .add(EBBlocks.CORALSOIL_BRICK_WALL.get())
                 .add(EBBlocks.LAVENDER_BRICK_WALL.get())
+                .add(EBBlocks.CONGLOMERATE_WALL.get())
+                .add(EBBlocks.CONGLOMERATE_BRICK_WALL.get())
         ;
     }
 

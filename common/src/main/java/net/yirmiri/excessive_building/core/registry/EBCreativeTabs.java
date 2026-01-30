@@ -31,6 +31,19 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.LAVENDER_BRICK_SLAB.get());
                         entry.accept(EBBlocks.LAVENDER_BRICK_WALL.get());
 
+                        //CONGLOMERATE
+                        entry.accept(EBBlocks.PEBBLESTONE.get());
+
+                        entry.accept(EBBlocks.CONGLOMERATE.get());
+                        entry.accept(EBBlocks.CONGLOMERATE_STAIRS.get());
+                        entry.accept(EBBlocks.CONGLOMERATE_SLAB.get());
+                        entry.accept(EBBlocks.CONGLOMERATE_WALL.get());
+
+                        entry.accept(EBBlocks.CONGLOMERATE_BRICKS.get());
+                        entry.accept(EBBlocks.CONGLOMERATE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.CONGLOMERATE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.CONGLOMERATE_BRICK_WALL.get());
+
                         //VANILLA BLOCK VARIANTS
                         entry.accept(EBBlocks.COBBLESTONE_BRICKS.get());
                         entry.accept(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get());

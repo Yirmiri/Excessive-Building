@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "!": {
+      "item": "minecraft:gravel"
+    },
+    "#": {
+      "item": "minecraft:sand"
+    },
+    "@": {
+      "tag": "minecraft:stone_crafting_materials"
+    }
+  },
+  "pattern": [
+    "!!!",
+    "!#@",
+    "@@@"
+  ],
+  "result": {
+    "count": 8,
+    "id": "excessive_building:pebblestone"
+  }
+}
