@@ -41,6 +41,23 @@
     "minecraft:ice",
     "minecraft:blue_ice",
     "minecraft:frosted_ice",
-    "minecraft:packed_ice"
+    "minecraft:packed_ice",
+    "excessive_building:frosted_glass",
+    "excessive_building:white_stained_frosted_glass",
+    "excessive_building:orange_stained_frosted_glass",
+    "excessive_building:magenta_stained_frosted_glass",
+    "excessive_building:light_blue_stained_frosted_glass",
+    "excessive_building:yellow_stained_frosted_glass",
+    "excessive_building:lime_stained_frosted_glass",
+    "excessive_building:pink_stained_frosted_glass",
+    "excessive_building:gray_stained_frosted_glass",
+    "excessive_building:light_gray_stained_frosted_glass",
+    "excessive_building:cyan_stained_frosted_glass",
+    "excessive_building:purple_stained_frosted_glass",
+    "excessive_building:blue_stained_frosted_glass",
+    "excessive_building:brown_stained_frosted_glass",
+    "excessive_building:green_stained_frosted_glass",
+    "excessive_building:red_stained_frosted_glass",
+    "excessive_building:black_stained_frosted_glass"
   ]
 }

@@ -41,7 +41,7 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         appendPlanks();
         appendLeaves();
         appendLogs();
-        appendMineableWithMallet();
+        appendMineableWithBluntForce();
     }
 
     private void appendMineableWithPickaxe() {
@@ -252,8 +252,8 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         ;
     }
 
-    private void appendMineableWithMallet() {
-        getOrCreateTagBuilder(EBTags.BlockT.MINEABLE_WITH_MALLET)
+    private void appendMineableWithBluntForce() {
+        getOrCreateTagBuilder(EBTags.BlockT.MINEABLE_WITH_BLUNT_FORCE)
                 .add(Blocks.SEA_LANTERN)
                 .add(Blocks.GLOWSTONE)
                 .add(Blocks.REDSTONE_LAMP)
@@ -296,7 +296,14 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.BLUE_ICE)
                 .add(Blocks.FROSTED_ICE)
                 .add(Blocks.PACKED_ICE)
+                .add(EBBlocks.FROSTED_GLASS.get())
         ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(EBTags.BlockT.MINEABLE_WITH_BLUNT_FORCE)
+                    .add(EBBlocks.getDyedFrostedGlass(colors.getId()).get())
+            ;
+        }
     }
 
     private void appendMineableWithShovel() {

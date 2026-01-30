@@ -222,10 +222,15 @@ public class EBBlocks {
     public static final Supplier<Block> CHISELED_ARIDITE = register("chiseled_aridite", () -> new Block(EBProperties.BlockP.POLISHED_ARIDITE), true);
     public static final Supplier<Block> ARIDITE_PILLAR = register("aridite_pillar", () -> new RotatedPillarBlock(EBProperties.BlockP.POLISHED_ARIDITE), true);
 
+    //UNDYED
+    public static final Supplier<Block> FROSTED_GLASS = register("frosted_glass", () -> new PublicHalfTransparentBlock(EBProperties.BlockP.FROSTED_GLASS), true);
+
     //DYED
     public static final HashMap<DyeColor, Supplier<Block>> DYED_CORRUGATED_IRON = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_CORRUGATED_IRON_STAIRS = new HashMap<>();
     public static final HashMap<DyeColor, Supplier<Block>> DYED_CORRUGATED_IRON_SLAB = new HashMap<>();
+
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_FROSTED_GLASS = new HashMap<>();
 
     static {
         for (DyeColor colors : DyeColor.values()) {
@@ -237,6 +242,9 @@ public class EBBlocks {
 
             DYED_CORRUGATED_IRON_SLAB.put(colors, register(colors + "_corrugated_iron_slab", () -> new SlabBlock(
                     EBProperties.BlockP.CORRUGATED_IRON.mapColor(colors)), true));
+
+            DYED_FROSTED_GLASS.put(colors, register(colors + "_stained_frosted_glass", () -> new StainedGlassBlock(
+                    colors, EBProperties.BlockP.FROSTED_GLASS.mapColor(colors)), true));
         }
     }
 
@@ -250,6 +258,10 @@ public class EBBlocks {
 
     public static Supplier<Block> getDyedCorrugatedIronSlab(int colors){
         return DYED_CORRUGATED_IRON_SLAB.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedFrostedGlass(int colors){
+        return DYED_FROSTED_GLASS.get(DyeColor.byId(colors));
     }
 
     public static Supplier<Block> register(String id, Supplier<Block> supplier, boolean hasItem) {

@@ -29,6 +29,7 @@ public class EBLangProvider extends FabricLanguageProvider {
             build.add(EBBlocks.getDyedCorrugatedIron(colors.getId()).get(), dyeString + " Corrugated Iron");
             build.add(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get(), dyeString + " Corrugated Iron Stairs");
             build.add(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get(), dyeString + " Corrugated Iron Slab");
+            build.add(EBBlocks.getDyedFrostedGlass(colors.getId()).get(), dyeString + " Stained Frosted Glass");
         }
 
         //MISC
@@ -207,6 +208,8 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.ARIDITE_PILLAR.get(), "Aridite Pillar");
         build.add(EBBlocks.CHLOROSLATE_PILLAR.get(), "Chloroslate Pillar");
         build.add(EBBlocks.HECTALITE_PILLAR.get(), "Hectalite Pillar");
+
+        build.add(EBBlocks.FROSTED_GLASS.get(), "Frosted Glass");
 
         //ITEMS
         build.add(EBItems.ANCIENT_BOAT.get(), "Ancient Boat");

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cyan_corrugated_iron": {
+    "has_iron_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "excessive_building:cyan_corrugated_iron"
+            "items": "minecraft:iron_ingot"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cyan_corrugated_iron"
+      "has_iron_ingot"
     ]
   ],
   "rewards": {

@@ -209,6 +209,8 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
         add(EBBlocks.ANDESITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.ANDESITE_BRICK_SLAB.get()));
         dropSelf(EBBlocks.ANDESITE_BRICK_WALL.get());
 
+        dropSelf(EBBlocks.FROSTED_GLASS.get());
+
         addDyedDrops();
     }
 
@@ -217,6 +219,7 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
             dropSelf(EBBlocks.getDyedCorrugatedIron(colors.getId()).get());
             dropSelf(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get());
             add(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get(), createSlabItemTable(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get()));
+            dropSelf(EBBlocks.getDyedFrostedGlass(colors.getId()).get());
         }
     }
 }

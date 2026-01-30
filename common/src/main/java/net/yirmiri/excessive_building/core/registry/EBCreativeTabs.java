@@ -214,6 +214,25 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.getDyedCorrugatedIronStairs(DyeColor.PINK.getId()).get());
                         entry.accept(EBBlocks.getDyedCorrugatedIronSlab(DyeColor.PINK.getId()).get());
 
+                        //FROSTED GLASS
+                        entry.accept(EBBlocks.FROSTED_GLASS.get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.WHITE.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.LIGHT_GRAY.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.GRAY.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.BLACK.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.BROWN.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.RED.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.ORANGE.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.YELLOW.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.LIME.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.GREEN.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.CYAN.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.LIGHT_BLUE.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.BLUE.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.PURPLE.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.MAGENTA.getId()).get());
+                        entry.accept(EBBlocks.getDyedFrostedGlass(DyeColor.PINK.getId()).get());
+
                         //VANILLA BLOCK VARIANTS
                         entry.accept(EBBlocks.COBBLESTONE_BRICKS.get());
                         entry.accept(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get());

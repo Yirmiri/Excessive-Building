@@ -745,10 +745,13 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.TARGET) + "_from_sage_block"));
 
         //=======================DYED=======================
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.GLASS), RecipeCategory.BUILDING_BLOCKS,
+                EBBlocks.FROSTED_GLASS.get(), 0.1F, 200).unlockedBy(getHasName(Blocks.GLASS), has(Blocks.GLASS)).save(exporter);
+
         for (DyeColor colors : DyeColor.values()) {
             //CORRUGATED IRON
             createCorrugatedIron(EBBlocks.getDyedCorrugatedIron(colors.getId()).get(), DyeItem.byColor(colors).getDyeColor())
-                    .unlockedBy(getHasName(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()), has(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()))
+                    .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                     .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.getDyedCorrugatedIron(colors.getId()).get())));
 
             stairBuilder(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get(), Ingredient.of(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()))
@@ -758,6 +761,11 @@ public class EBRecipeProvider extends FabricRecipeProvider {
             slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get(), Ingredient.of(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()))
                     .unlockedBy(getHasName(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()), has(EBBlocks.getDyedCorrugatedIron(colors.getId()).get()))
                     .save(exporter);
+
+            //FROSTED GLASS
+            dyeEightForEight(EBBlocks.getDyedFrostedGlass(colors.getId()).get().asItem(), EBBlocks.FROSTED_GLASS.get().asItem(), DyeItem.byColor(colors).getDyeColor())
+                    .unlockedBy(getHasName(EBBlocks.FROSTED_GLASS.get()), has(EBBlocks.FROSTED_GLASS.get()))
+                    .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.getDyedFrostedGlass(colors.getId()).get())));
         }
 
         //====================================================
@@ -778,5 +786,13 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .pattern("#@#")
                 .pattern("@!@")
                 .pattern("#@#");
+    }
+
+    public static ShapedRecipeBuilder dyeEightForEight(Item output, Item ingredient, DyeColor color) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8)
+                .define('#', ingredient).define('@', DyeItem.byColor(color))
+                .pattern("###")
+                .pattern("#@#")
+                .pattern("###");
     }
 }

@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 
 public class EBItems {
     //TOOLS
-    public static final Supplier<Item> GAUNTLET = register("gauntlet", () -> new GauntletItem(EBTiers.GAUNTLET, EBTags.BlockT.MINEABLE_WITH_MALLET, EBProperties.ItemP.GAUNTLET));
+    public static final Supplier<Item> GAUNTLET = register("gauntlet", () -> new GauntletItem(EBTiers.GAUNTLET, EBTags.BlockT.MINEABLE_WITH_BLUNT_FORCE, EBProperties.ItemP.GAUNTLET));
 
     //ANCIENT
     public static final Supplier<Item> ANCIENT_FRUIT = register("ancient_fruit", () -> new Item(EBProperties.ItemP.ANCIENT_FRUIT));

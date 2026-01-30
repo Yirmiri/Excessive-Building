@@ -213,12 +213,15 @@ public class EBModelProvider extends FabricModelProvider {
 
         generator.createPlant(EBBlocks.SAGE.get(), EBBlocks.POTTED_SAGE.get(), BlockModelGenerators.TintState.NOT_TINTED);
 
+        //DYED
         for (DyeColor colors : DyeColor.values()) {
             generator.family(EBBlocks.getDyedCorrugatedIron(colors.getId()).get())
                     .stairs(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get())
                     .slab(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get())
             ;
+            generator.createTrivialCube(EBBlocks.getDyedFrostedGlass(colors.getId()).get());
         }
+        generator.createTrivialCube(EBBlocks.FROSTED_GLASS.get());
     }
 
     @Override
