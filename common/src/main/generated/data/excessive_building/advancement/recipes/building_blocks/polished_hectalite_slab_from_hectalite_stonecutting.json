@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hectalite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:hectalite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:polished_hectalite_slab_from_hectalite_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_hectalite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:polished_hectalite_slab_from_hectalite_stonecutting"
+    ]
+  }
+}

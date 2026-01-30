@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_jungle",
+  "features": [
+    "excessive_building:ore_chloroslate"
+  ],
+  "step": "underground_ores"
+}

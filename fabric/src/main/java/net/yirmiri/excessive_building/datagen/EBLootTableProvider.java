@@ -127,5 +127,75 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
 
         dropSelf(EBBlocks.BRIMSTONE_LAMP.get());
         dropSelf(EBBlocks.BRIMSTONE_PILLAR.get());
+
+        dropSelf(EBBlocks.HECTALITE.get());
+        dropSelf(EBBlocks.HECTALITE_STAIRS.get());
+        add(EBBlocks.HECTALITE_SLAB.get(), createSlabItemTable(EBBlocks.HECTALITE_SLAB.get()));
+        dropSelf(EBBlocks.HECTALITE_WALL.get());
+
+        dropSelf(EBBlocks.POLISHED_HECTALITE.get());
+        dropSelf(EBBlocks.POLISHED_HECTALITE_STAIRS.get());
+        add(EBBlocks.POLISHED_HECTALITE_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_HECTALITE_SLAB.get()));
+        dropSelf(EBBlocks.POLISHED_HECTALITE_WALL.get());
+
+        dropSelf(EBBlocks.HECTALITE_BRICKS.get());
+        dropSelf(EBBlocks.HECTALITE_BRICK_STAIRS.get());
+        add(EBBlocks.HECTALITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.HECTALITE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.HECTALITE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.CHISELED_HECTALITE.get());
+
+        dropSelf(EBBlocks.CHLOROSLATE.get());
+        dropSelf(EBBlocks.CHLOROSLATE_STAIRS.get());
+        add(EBBlocks.CHLOROSLATE_SLAB.get(), createSlabItemTable(EBBlocks.CHLOROSLATE_SLAB.get()));
+        dropSelf(EBBlocks.CHLOROSLATE_WALL.get());
+
+        dropSelf(EBBlocks.POLISHED_CHLOROSLATE.get());
+        dropSelf(EBBlocks.POLISHED_CHLOROSLATE_STAIRS.get());
+        add(EBBlocks.POLISHED_CHLOROSLATE_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_CHLOROSLATE_SLAB.get()));
+        dropSelf(EBBlocks.POLISHED_CHLOROSLATE_WALL.get());
+
+        dropSelf(EBBlocks.CHLOROSLATE_BRICKS.get());
+        dropSelf(EBBlocks.CHLOROSLATE_BRICK_STAIRS.get());
+        add(EBBlocks.CHLOROSLATE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.CHLOROSLATE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.CHLOROSLATE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.CHISELED_CHLOROSLATE.get());
+
+        dropSelf(EBBlocks.ARIDITE.get());
+        dropSelf(EBBlocks.ARIDITE_STAIRS.get());
+        add(EBBlocks.ARIDITE_SLAB.get(), createSlabItemTable(EBBlocks.ARIDITE_SLAB.get()));
+        dropSelf(EBBlocks.ARIDITE_WALL.get());
+
+        dropSelf(EBBlocks.POLISHED_ARIDITE.get());
+        dropSelf(EBBlocks.POLISHED_ARIDITE_STAIRS.get());
+        add(EBBlocks.POLISHED_ARIDITE_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_ARIDITE_SLAB.get()));
+        dropSelf(EBBlocks.POLISHED_ARIDITE_WALL.get());
+
+        dropSelf(EBBlocks.ARIDITE_BRICKS.get());
+        dropSelf(EBBlocks.ARIDITE_BRICK_STAIRS.get());
+        add(EBBlocks.ARIDITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.ARIDITE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.ARIDITE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.CHISELED_ARIDITE.get());
+
+        dropSelf(EBBlocks.HECTALITE_PILLAR.get());
+        dropSelf(EBBlocks.CHLOROSLATE_PILLAR.get());
+        dropSelf(EBBlocks.ARIDITE_PILLAR.get());
+
+        dropSelf(EBBlocks.DIORITE_BRICKS.get());
+        dropSelf(EBBlocks.DIORITE_BRICK_STAIRS.get());
+        add(EBBlocks.DIORITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.DIORITE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.DIORITE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.GRANITE_BRICKS.get());
+        dropSelf(EBBlocks.GRANITE_BRICK_STAIRS.get());
+        add(EBBlocks.GRANITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.GRANITE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.GRANITE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.ANDESITE_BRICKS.get());
+        dropSelf(EBBlocks.ANDESITE_BRICK_STAIRS.get());
+        add(EBBlocks.ANDESITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.ANDESITE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.ANDESITE_BRICK_WALL.get());
     }
 }

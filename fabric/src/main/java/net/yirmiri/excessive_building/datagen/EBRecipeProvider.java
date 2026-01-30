@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -427,8 +428,289 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .pattern(" @@")
                 .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
                 .save(exporter);
+        //==========================MISC==========================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIORITE_BRICKS.get(), Blocks.POLISHED_DIORITE);
+
+        stairBuilder(EBBlocks.DIORITE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.DIORITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.DIORITE_BRICKS.get()), has(EBBlocks.DIORITE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIORITE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.DIORITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.DIORITE_BRICKS.get()), has(EBBlocks.DIORITE_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIORITE_BRICK_WALL.get(), Ingredient.of(EBBlocks.DIORITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.DIORITE_BRICKS.get()), has(EBBlocks.DIORITE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putShadowRecipe(EBBlocks.DIORITE_BRICKS.get(), Blocks.POLISHED_DIORITE);
+        stonecutter.putRecipe(EBBlocks.DIORITE_BRICK_STAIRS.get(), EBBlocks.DIORITE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.DIORITE_BRICK_SLAB.get(), EBBlocks.DIORITE_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.DIORITE_BRICK_WALL.get(), EBBlocks.DIORITE_BRICKS.get());
+
+        //==========================MISC==========================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.GRANITE_BRICKS.get(), Blocks.POLISHED_GRANITE);
+
+        stairBuilder(EBBlocks.GRANITE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.GRANITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.GRANITE_BRICKS.get()), has(EBBlocks.GRANITE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GRANITE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.GRANITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.GRANITE_BRICKS.get()), has(EBBlocks.GRANITE_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GRANITE_BRICK_WALL.get(), Ingredient.of(EBBlocks.GRANITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.GRANITE_BRICKS.get()), has(EBBlocks.GRANITE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putShadowRecipe(EBBlocks.GRANITE_BRICKS.get(), Blocks.POLISHED_GRANITE);
+        stonecutter.putRecipe(EBBlocks.GRANITE_BRICK_STAIRS.get(), EBBlocks.GRANITE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.GRANITE_BRICK_SLAB.get(), EBBlocks.GRANITE_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.GRANITE_BRICK_WALL.get(), EBBlocks.GRANITE_BRICKS.get());
+
+        //==========================MISC==========================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANDESITE_BRICKS.get(), Blocks.POLISHED_ANDESITE);
+
+        stairBuilder(EBBlocks.ANDESITE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.ANDESITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ANDESITE_BRICKS.get()), has(EBBlocks.ANDESITE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANDESITE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.ANDESITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ANDESITE_BRICKS.get()), has(EBBlocks.ANDESITE_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANDESITE_BRICK_WALL.get(), Ingredient.of(EBBlocks.ANDESITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ANDESITE_BRICKS.get()), has(EBBlocks.ANDESITE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putShadowRecipe(EBBlocks.ANDESITE_BRICKS.get(), Blocks.POLISHED_ANDESITE);
+        stonecutter.putRecipe(EBBlocks.ANDESITE_BRICK_STAIRS.get(), EBBlocks.ANDESITE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.ANDESITE_BRICK_SLAB.get(), EBBlocks.ANDESITE_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.ANDESITE_BRICK_WALL.get(), EBBlocks.ANDESITE_BRICKS.get());
+
+        //==========================BASE==========================
+        stairBuilder(EBBlocks.CHLOROSLATE_STAIRS.get(), Ingredient.of(EBBlocks.CHLOROSLATE.get()))
+                .unlockedBy(getHasName(EBBlocks.CHLOROSLATE.get()), has(EBBlocks.CHLOROSLATE.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHLOROSLATE_SLAB.get(), Ingredient.of(EBBlocks.CHLOROSLATE.get()))
+                .unlockedBy(getHasName(EBBlocks.CHLOROSLATE.get()), has(EBBlocks.CHLOROSLATE.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHLOROSLATE_WALL.get(), Ingredient.of(EBBlocks.CHLOROSLATE.get()))
+                .unlockedBy(getHasName(EBBlocks.CHLOROSLATE.get()), has(EBBlocks.CHLOROSLATE.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.CHLOROSLATE_STAIRS.get(), EBBlocks.CHLOROSLATE.get());
+        stonecutter.putRecipe(EBBlocks.CHLOROSLATE_SLAB.get(), EBBlocks.CHLOROSLATE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.CHLOROSLATE_WALL.get(), EBBlocks.CHLOROSLATE.get());
+
+        //==========================POLISHED==========================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_CHLOROSLATE.get(), EBBlocks.CHLOROSLATE.get());
+
+        stairBuilder(EBBlocks.POLISHED_CHLOROSLATE_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_CHLOROSLATE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_CHLOROSLATE.get()), has(EBBlocks.POLISHED_CHLOROSLATE.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_CHLOROSLATE_SLAB.get(), Ingredient.of(EBBlocks.POLISHED_CHLOROSLATE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_CHLOROSLATE.get()), has(EBBlocks.POLISHED_CHLOROSLATE.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_CHLOROSLATE_WALL.get(), Ingredient.of(EBBlocks.POLISHED_CHLOROSLATE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_CHLOROSLATE.get()), has(EBBlocks.POLISHED_CHLOROSLATE.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.POLISHED_CHLOROSLATE.get(), EBBlocks.CHLOROSLATE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_CHLOROSLATE_STAIRS.get(), EBBlocks.CHLOROSLATE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_CHLOROSLATE_SLAB.get(), EBBlocks.CHLOROSLATE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.POLISHED_CHLOROSLATE_WALL.get(), EBBlocks.CHLOROSLATE.get());
+
+        stonecutter.putRecipe(EBBlocks.CHISELED_CHLOROSLATE.get(), EBBlocks.POLISHED_CHLOROSLATE.get());
+
+        //==========================BRICKS==========================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHLOROSLATE_BRICKS.get(), EBBlocks.POLISHED_CHLOROSLATE.get());
+
+        stairBuilder(EBBlocks.CHLOROSLATE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.CHLOROSLATE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CHLOROSLATE_BRICKS.get()), has(EBBlocks.CHLOROSLATE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHLOROSLATE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.CHLOROSLATE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CHLOROSLATE_BRICKS.get()), has(EBBlocks.CHLOROSLATE_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHLOROSLATE_BRICK_WALL.get(), Ingredient.of(EBBlocks.CHLOROSLATE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CHLOROSLATE_BRICKS.get()), has(EBBlocks.CHLOROSLATE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.CHLOROSLATE_BRICKS.get(), EBBlocks.POLISHED_CHLOROSLATE.get());
+        stonecutter.putRecipe(EBBlocks.CHLOROSLATE_BRICK_STAIRS.get(), EBBlocks.POLISHED_CHLOROSLATE.get());
+        stonecutter.putRecipe(EBBlocks.CHLOROSLATE_BRICK_SLAB.get(), EBBlocks.POLISHED_CHLOROSLATE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.CHLOROSLATE_BRICK_WALL.get(), EBBlocks.POLISHED_CHLOROSLATE.get());
+
+        //==========================BASE==========================
+        stairBuilder(EBBlocks.HECTALITE_STAIRS.get(), Ingredient.of(EBBlocks.HECTALITE.get()))
+                .unlockedBy(getHasName(EBBlocks.HECTALITE.get()), has(EBBlocks.HECTALITE.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HECTALITE_SLAB.get(), Ingredient.of(EBBlocks.HECTALITE.get()))
+                .unlockedBy(getHasName(EBBlocks.HECTALITE.get()), has(EBBlocks.HECTALITE.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HECTALITE_WALL.get(), Ingredient.of(EBBlocks.HECTALITE.get()))
+                .unlockedBy(getHasName(EBBlocks.HECTALITE.get()), has(EBBlocks.HECTALITE.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.HECTALITE_STAIRS.get(), EBBlocks.HECTALITE.get());
+        stonecutter.putRecipe(EBBlocks.HECTALITE_SLAB.get(), EBBlocks.HECTALITE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.HECTALITE_WALL.get(), EBBlocks.HECTALITE.get());
+
+        //==========================POLISHED==========================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_HECTALITE.get(), EBBlocks.HECTALITE.get());
+
+        stairBuilder(EBBlocks.POLISHED_HECTALITE_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_HECTALITE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_HECTALITE.get()), has(EBBlocks.POLISHED_HECTALITE.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_HECTALITE_SLAB.get(), Ingredient.of(EBBlocks.POLISHED_HECTALITE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_HECTALITE.get()), has(EBBlocks.POLISHED_HECTALITE.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_HECTALITE_WALL.get(), Ingredient.of(EBBlocks.POLISHED_HECTALITE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_HECTALITE.get()), has(EBBlocks.POLISHED_HECTALITE.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.POLISHED_HECTALITE.get(), EBBlocks.HECTALITE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_HECTALITE_STAIRS.get(), EBBlocks.HECTALITE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_HECTALITE_SLAB.get(), EBBlocks.HECTALITE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.POLISHED_HECTALITE_WALL.get(), EBBlocks.HECTALITE.get());
+
+        stonecutter.putRecipe(EBBlocks.CHISELED_HECTALITE.get(), EBBlocks.POLISHED_HECTALITE.get());
+
+        //==========================BRICKS==========================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.HECTALITE_BRICKS.get(), EBBlocks.POLISHED_HECTALITE.get());
+
+        stairBuilder(EBBlocks.HECTALITE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.HECTALITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.HECTALITE_BRICKS.get()), has(EBBlocks.HECTALITE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HECTALITE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.HECTALITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.HECTALITE_BRICKS.get()), has(EBBlocks.HECTALITE_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HECTALITE_BRICK_WALL.get(), Ingredient.of(EBBlocks.HECTALITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.HECTALITE_BRICKS.get()), has(EBBlocks.HECTALITE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.HECTALITE_BRICKS.get(), EBBlocks.POLISHED_HECTALITE.get());
+        stonecutter.putRecipe(EBBlocks.HECTALITE_BRICK_STAIRS.get(), EBBlocks.POLISHED_HECTALITE.get());
+        stonecutter.putRecipe(EBBlocks.HECTALITE_BRICK_SLAB.get(), EBBlocks.POLISHED_HECTALITE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.HECTALITE_BRICK_WALL.get(), EBBlocks.POLISHED_HECTALITE.get());
+
+        //==========================BASE==========================
+        stairBuilder(EBBlocks.ARIDITE_STAIRS.get(), Ingredient.of(EBBlocks.ARIDITE.get()))
+                .unlockedBy(getHasName(EBBlocks.ARIDITE.get()), has(EBBlocks.ARIDITE.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ARIDITE_SLAB.get(), Ingredient.of(EBBlocks.ARIDITE.get()))
+                .unlockedBy(getHasName(EBBlocks.ARIDITE.get()), has(EBBlocks.ARIDITE.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ARIDITE_WALL.get(), Ingredient.of(EBBlocks.ARIDITE.get()))
+                .unlockedBy(getHasName(EBBlocks.ARIDITE.get()), has(EBBlocks.ARIDITE.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.ARIDITE_STAIRS.get(), EBBlocks.ARIDITE.get());
+        stonecutter.putRecipe(EBBlocks.ARIDITE_SLAB.get(), EBBlocks.ARIDITE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.ARIDITE_WALL.get(), EBBlocks.ARIDITE.get());
+
+        //==========================POLISHED==========================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ARIDITE.get(), EBBlocks.ARIDITE.get());
+
+        stairBuilder(EBBlocks.POLISHED_ARIDITE_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_ARIDITE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_ARIDITE.get()), has(EBBlocks.POLISHED_ARIDITE.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ARIDITE_SLAB.get(), Ingredient.of(EBBlocks.POLISHED_ARIDITE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_ARIDITE.get()), has(EBBlocks.POLISHED_ARIDITE.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_ARIDITE_WALL.get(), Ingredient.of(EBBlocks.POLISHED_ARIDITE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_ARIDITE.get()), has(EBBlocks.POLISHED_ARIDITE.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.POLISHED_ARIDITE.get(), EBBlocks.ARIDITE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_ARIDITE_STAIRS.get(), EBBlocks.ARIDITE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_ARIDITE_SLAB.get(), EBBlocks.ARIDITE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.POLISHED_ARIDITE_WALL.get(), EBBlocks.ARIDITE.get());
+
+        stonecutter.putRecipe(EBBlocks.CHISELED_ARIDITE.get(), EBBlocks.POLISHED_ARIDITE.get());
+
+        //==========================BRICKS==========================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ARIDITE_BRICKS.get(), EBBlocks.POLISHED_ARIDITE.get());
+
+        stairBuilder(EBBlocks.ARIDITE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.ARIDITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ARIDITE_BRICKS.get()), has(EBBlocks.ARIDITE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ARIDITE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.ARIDITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ARIDITE_BRICKS.get()), has(EBBlocks.ARIDITE_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ARIDITE_BRICK_WALL.get(), Ingredient.of(EBBlocks.ARIDITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ARIDITE_BRICKS.get()), has(EBBlocks.ARIDITE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.ARIDITE_BRICKS.get(), EBBlocks.POLISHED_ARIDITE.get());
+        stonecutter.putRecipe(EBBlocks.ARIDITE_BRICK_STAIRS.get(), EBBlocks.POLISHED_ARIDITE.get());
+        stonecutter.putRecipe(EBBlocks.ARIDITE_BRICK_SLAB.get(), EBBlocks.POLISHED_ARIDITE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.ARIDITE_BRICK_WALL.get(), EBBlocks.POLISHED_ARIDITE.get());
+
+        //==========================COLOR MISC==========================
+        stonecutter.putRecipe(EBBlocks.ARIDITE_PILLAR.get(), EBBlocks.POLISHED_ARIDITE.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ARIDITE_PILLAR.get(), 2)
+                .define('#', EBBlocks.POLISHED_ARIDITE.get())
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy(getHasName(EBBlocks.POLISHED_ARIDITE.get()), has(EBBlocks.POLISHED_ARIDITE.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.ARIDITE_PILLAR.get())));
+
+        stonecutter.putRecipe(EBBlocks.HECTALITE_PILLAR.get(), EBBlocks.POLISHED_HECTALITE.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HECTALITE_PILLAR.get(), 2)
+                .define('#', EBBlocks.POLISHED_HECTALITE.get())
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy(getHasName(EBBlocks.POLISHED_HECTALITE.get()), has(EBBlocks.POLISHED_HECTALITE.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.HECTALITE_PILLAR.get())));
+
+        stonecutter.putRecipe(EBBlocks.CHLOROSLATE_PILLAR.get(), EBBlocks.POLISHED_CHLOROSLATE.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHLOROSLATE_PILLAR.get(), 2)
+                .define('#', EBBlocks.POLISHED_CHLOROSLATE.get())
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy(getHasName(EBBlocks.POLISHED_CHLOROSLATE.get()), has(EBBlocks.POLISHED_CHLOROSLATE.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CHLOROSLATE_PILLAR.get())));
+
+        createChiseled(EBBlocks.CHISELED_CHLOROSLATE.get().asItem(), EBBlocks.POLISHED_CHLOROSLATE_SLAB.get().asItem())
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CHISELED_CHLOROSLATE.get())));
+
+        createChiseled(EBBlocks.CHISELED_HECTALITE.get().asItem(), EBBlocks.POLISHED_HECTALITE_SLAB.get().asItem())
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CHISELED_HECTALITE.get())));
+
+        createChiseled(EBBlocks.CHISELED_ARIDITE.get().asItem(), EBBlocks.POLISHED_ARIDITE_SLAB.get().asItem())
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CHISELED_ARIDITE.get())));
         
         //====================================================
         stonecutter.generateRecipes(exporter);
+    }
+
+    public static ShapedRecipeBuilder createChiseled(Item output, Item ingredient) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 1)
+                .define('#', ingredient)
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy(getHasName(ingredient), has(ingredient));
     }
 }

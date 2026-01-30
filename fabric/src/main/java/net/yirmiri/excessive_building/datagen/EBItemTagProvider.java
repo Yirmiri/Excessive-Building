@@ -48,6 +48,18 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.CONGLOMERATE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.BRIMSTONE_WALL.get().asItem())
                 .add(EBBlocks.BRIMSTONE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.DIORITE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.GRANITE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.ANDESITE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.HECTALITE_WALL.get().asItem())
+                .add(EBBlocks.POLISHED_HECTALITE_WALL.get().asItem())
+                .add(EBBlocks.HECTALITE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.ARIDITE_WALL.get().asItem())
+                .add(EBBlocks.POLISHED_ARIDITE_WALL.get().asItem())
+                .add(EBBlocks.ARIDITE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.CHLOROSLATE_WALL.get().asItem())
+                .add(EBBlocks.POLISHED_CHLOROSLATE_WALL.get().asItem())
+                .add(EBBlocks.CHLOROSLATE_BRICK_WALL.get().asItem())
         ;
     }
 

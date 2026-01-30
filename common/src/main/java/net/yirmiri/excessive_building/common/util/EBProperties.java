@@ -48,6 +48,18 @@ public class EBProperties {
         public static final BlockBehaviour.Properties POLISHED_BRIMSTONE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE).sound(SoundType.POLISHED_DEEPSLATE);
         public static final BlockBehaviour.Properties BRIMSTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE_BRICKS).sound(SoundType.POLISHED_DEEPSLATE);
         public static final BlockBehaviour.Properties BRIMSTONE_LAMP = BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE).sound(SoundType.GLASS).lightLevel(s -> 12);
+        public static final BlockBehaviour.Properties POLISHED_GRANITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_GRANITE);
+        public static final BlockBehaviour.Properties POLISHED_ANDESITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE);
+        public static final BlockBehaviour.Properties POLISHED_DIORITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DIORITE);
+        public static final BlockBehaviour.Properties HECTALITE = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLED_DEEPSLATE).strength(3.0F, 6.0F);
+        public static final BlockBehaviour.Properties POLISHED_HECTALITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DEEPSLATE).strength(3.0F, 6.0F);
+        public static final BlockBehaviour.Properties HECTALITE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DEEPSLATE).strength(3.0F, 6.0F);
+        public static final BlockBehaviour.Properties CHLOROSLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLED_DEEPSLATE).strength(1.0F, 3.0F);
+        public static final BlockBehaviour.Properties POLISHED_CHLOROSLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DEEPSLATE).strength(1.0F, 3.0F);
+        public static final BlockBehaviour.Properties CHLOROSLATE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DEEPSLATE).strength(1.0F, 3.0F);
+        public static final BlockBehaviour.Properties ARIDITE = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.5F, 6.0F);
+        public static final BlockBehaviour.Properties POLISHED_ARIDITE = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.5F, 6.0F);
+        public static final BlockBehaviour.Properties ARIDITE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.5F, 6.0F);
 
         //METALS
         public static final BlockBehaviour.Properties COPPER = BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK);

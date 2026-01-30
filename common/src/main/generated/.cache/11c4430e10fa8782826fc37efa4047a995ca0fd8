@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-30T06:33:14.6766734	Excessive Building/Tags for minecraft:item
+// 1.21.1	2026-01-30T07:10:18.2487393	Excessive Building/Tags for minecraft:item
 1edde5b91b69f573f9016cf1a6e79cffaa8871b3 data\minecraft\tags\item\wooden_pressure_plates.json
 92e63a1cf04e6f7d0d8664a806c62bbad480c675 data\minecraft\tags\item\wooden_buttons.json
 ba3d71a2828a2171d5d06009ddcf7ce06e159d53 data\minecraft\tags\item\signs.json
@@ -6,7 +6,7 @@ ba3d71a2828a2171d5d06009ddcf7ce06e159d53 data\minecraft\tags\item\signs.json
 cb1303d8550c1c44f5c1d93061aeb00421641afb data\minecraft\tags\item\wooden_doors.json
 3acdb3aefd331cf0e07f2f6292c306aeb2cd223d data\minecraft\tags\item\wooden_slabs.json
 b58fc2221bf4f504362d4449f96f82232cd269f2 data\minecraft\tags\item\enchantable\durability.json
-5c9b4a714d5526b57f39d429e68c80213cc5f481 data\minecraft\tags\item\walls.json
+8deea4588109f80de5ba23dc3236e623c132184c data\minecraft\tags\item\walls.json
 d11ee62b5054d22a7ae04b7d42261c098e598229 data\minecraft\tags\item\fence_gates.json
 e16dd0216b65049658bf81ff05bc00cb45041d92 data\excessive_building\tags\item\ancient_logs.json
 7f2a6063c22b1dbf94a82a556a8ce5302a2dbce0 data\excessive_building\tags\item\dead_coral_blocks.json

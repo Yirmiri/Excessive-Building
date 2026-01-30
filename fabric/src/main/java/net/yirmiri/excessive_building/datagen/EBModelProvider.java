@@ -131,6 +131,76 @@ public class EBModelProvider extends FabricModelProvider {
 
         generator.woodProvider(EBBlocks.BRIMSTONE_PILLAR.get()).logWithHorizontal(EBBlocks.BRIMSTONE_PILLAR.get());
         generator.createCopperBulb(EBBlocks.BRIMSTONE_LAMP.get());
+
+        BlockModelGenerators.BlockFamilyProvider andesiteBricks = generator.family(EBBlocks.ANDESITE_BRICKS.get());
+        andesiteBricks.stairs(EBBlocks.ANDESITE_BRICK_STAIRS.get());
+        andesiteBricks.slab(EBBlocks.ANDESITE_BRICK_SLAB.get());
+        andesiteBricks.wall(EBBlocks.ANDESITE_BRICK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider graniteBricks = generator.family(EBBlocks.GRANITE_BRICKS.get());
+        graniteBricks.stairs(EBBlocks.GRANITE_BRICK_STAIRS.get());
+        graniteBricks.slab(EBBlocks.GRANITE_BRICK_SLAB.get());
+        graniteBricks.wall(EBBlocks.GRANITE_BRICK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider dioriteBricks = generator.family(EBBlocks.DIORITE_BRICKS.get());
+        dioriteBricks.stairs(EBBlocks.DIORITE_BRICK_STAIRS.get());
+        dioriteBricks.slab(EBBlocks.DIORITE_BRICK_SLAB.get());
+        dioriteBricks.wall(EBBlocks.DIORITE_BRICK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider chloroslate = generator.family(EBBlocks.CHLOROSLATE.get());
+        chloroslate.stairs(EBBlocks.CHLOROSLATE_STAIRS.get());
+        chloroslate.slab(EBBlocks.CHLOROSLATE_SLAB.get());
+        chloroslate.wall(EBBlocks.CHLOROSLATE_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider polishedChloroslate = generator.family(EBBlocks.POLISHED_CHLOROSLATE.get());
+        polishedChloroslate.stairs(EBBlocks.POLISHED_CHLOROSLATE_STAIRS.get());
+        polishedChloroslate.slab(EBBlocks.POLISHED_CHLOROSLATE_SLAB.get());
+        polishedChloroslate.wall(EBBlocks.POLISHED_CHLOROSLATE_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider chloroslatebricks = generator.family(EBBlocks.CHLOROSLATE_BRICKS.get());
+        chloroslatebricks.stairs(EBBlocks.CHLOROSLATE_BRICK_STAIRS.get());
+        chloroslatebricks.slab(EBBlocks.CHLOROSLATE_BRICK_SLAB.get());
+        chloroslatebricks.wall(EBBlocks.CHLOROSLATE_BRICK_WALL.get());
+
+        generator.createTrivialCube(EBBlocks.CHISELED_CHLOROSLATE.get());
+
+        BlockModelGenerators.BlockFamilyProvider carmatite = generator.family(EBBlocks.ARIDITE.get());
+        carmatite.stairs(EBBlocks.ARIDITE_STAIRS.get());
+        carmatite.slab(EBBlocks.ARIDITE_SLAB.get());
+        carmatite.wall(EBBlocks.ARIDITE_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider polishedCarmatite = generator.family(EBBlocks.POLISHED_ARIDITE.get());
+        polishedCarmatite.stairs(EBBlocks.POLISHED_ARIDITE_STAIRS.get());
+        polishedCarmatite.slab(EBBlocks.POLISHED_ARIDITE_SLAB.get());
+        polishedCarmatite.wall(EBBlocks.POLISHED_ARIDITE_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider carmatitebricks = generator.family(EBBlocks.ARIDITE_BRICKS.get());
+        carmatitebricks.stairs(EBBlocks.ARIDITE_BRICK_STAIRS.get());
+        carmatitebricks.slab(EBBlocks.ARIDITE_BRICK_SLAB.get());
+        carmatitebricks.wall(EBBlocks.ARIDITE_BRICK_WALL.get());
+
+        generator.createTrivialCube(EBBlocks.CHISELED_ARIDITE.get());
+
+        generator.createRotatedPillarWithHorizontalVariant(EBBlocks.HECTALITE_PILLAR.get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
+        generator.createRotatedPillarWithHorizontalVariant(EBBlocks.CHLOROSLATE_PILLAR.get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
+        generator.createRotatedPillarWithHorizontalVariant(EBBlocks.ARIDITE_PILLAR.get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
+
+        BlockModelGenerators.BlockFamilyProvider hectalite = generator.family(EBBlocks.HECTALITE.get());
+        hectalite.stairs(EBBlocks.HECTALITE_STAIRS.get());
+        hectalite.slab(EBBlocks.HECTALITE_SLAB.get());
+        hectalite.wall(EBBlocks.HECTALITE_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider polishedHectalite = generator.family(EBBlocks.POLISHED_HECTALITE.get());
+        polishedHectalite.stairs(EBBlocks.POLISHED_HECTALITE_STAIRS.get());
+        polishedHectalite.slab(EBBlocks.POLISHED_HECTALITE_SLAB.get());
+        polishedHectalite.wall(EBBlocks.POLISHED_HECTALITE_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider hectalitebricks = generator.family(EBBlocks.HECTALITE_BRICKS.get());
+        hectalitebricks.stairs(EBBlocks.HECTALITE_BRICK_STAIRS.get());
+        hectalitebricks.slab(EBBlocks.HECTALITE_BRICK_SLAB.get());
+        hectalitebricks.wall(EBBlocks.HECTALITE_BRICK_WALL.get());
+
+        generator.createTrivialCube(EBBlocks.CHISELED_HECTALITE.get());
     }
 
     @Override

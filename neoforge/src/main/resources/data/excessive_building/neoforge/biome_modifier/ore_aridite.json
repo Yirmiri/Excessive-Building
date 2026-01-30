@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:has_ruined_portal_desert",
+  "features": [
+    "excessive_building:ore_aridite"
+  ],
+  "step": "underground_ores"
+}

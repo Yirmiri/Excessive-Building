@@ -40,22 +40,51 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.ANCIENT_VINES.get());
                         entry.accept(EBItems.ANCIENT_FRUIT.get());
 
-                        //NEW BLOCK TYPES
-                        entry.accept(EBBlocks.CORALSOIL.get());
-                        entry.accept(EBBlocks.CORALSOIL_BRICKS.get());
-                        entry.accept(EBBlocks.CORALSOIL_BRICK_STAIRS.get());
-                        entry.accept(EBBlocks.CORALSOIL_BRICK_SLAB.get());
-                        entry.accept(EBBlocks.CORALSOIL_BRICK_WALL.get());
+                        //STONES
+                        entry.accept(EBBlocks.ARIDITE.get());
+                        entry.accept(EBBlocks.ARIDITE_STAIRS.get());
+                        entry.accept(EBBlocks.ARIDITE_SLAB.get());
+                        entry.accept(EBBlocks.ARIDITE_WALL.get());
+                        entry.accept(EBBlocks.POLISHED_ARIDITE.get());
+                        entry.accept(EBBlocks.POLISHED_ARIDITE_STAIRS.get());
+                        entry.accept(EBBlocks.POLISHED_ARIDITE_SLAB.get());
+                        entry.accept(EBBlocks.POLISHED_ARIDITE_WALL.get());
+                        entry.accept(EBBlocks.ARIDITE_BRICKS.get());
+                        entry.accept(EBBlocks.ARIDITE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.ARIDITE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.ARIDITE_BRICK_WALL.get());
+                        entry.accept(EBBlocks.CHISELED_ARIDITE.get());
+                        entry.accept(EBBlocks.ARIDITE_PILLAR.get());
 
-                        //LAVENDER
-                        entry.accept(EBBlocks.LAVENDER.get());
-                        entry.accept(EBBlocks.LAVENDER_BLOCK.get());
-                        entry.accept(EBBlocks.LAVENDER_CLAY.get());
-                        entry.accept(EBBlocks.LAVENDER_BRICKS.get());
-                        entry.accept(EBBlocks.MOSSY_LAVENDER_BRICKS.get());
-                        entry.accept(EBBlocks.LAVENDER_BRICK_STAIRS.get());
-                        entry.accept(EBBlocks.LAVENDER_BRICK_SLAB.get());
-                        entry.accept(EBBlocks.LAVENDER_BRICK_WALL.get());
+                        entry.accept(EBBlocks.CHLOROSLATE.get());
+                        entry.accept(EBBlocks.CHLOROSLATE_STAIRS.get());
+                        entry.accept(EBBlocks.CHLOROSLATE_SLAB.get());
+                        entry.accept(EBBlocks.CHLOROSLATE_WALL.get());
+                        entry.accept(EBBlocks.POLISHED_CHLOROSLATE.get());
+                        entry.accept(EBBlocks.POLISHED_CHLOROSLATE_STAIRS.get());
+                        entry.accept(EBBlocks.POLISHED_CHLOROSLATE_SLAB.get());
+                        entry.accept(EBBlocks.POLISHED_CHLOROSLATE_WALL.get());
+                        entry.accept(EBBlocks.CHLOROSLATE_BRICKS.get());
+                        entry.accept(EBBlocks.CHLOROSLATE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.CHLOROSLATE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.CHLOROSLATE_BRICK_WALL.get());
+                        entry.accept(EBBlocks.CHISELED_CHLOROSLATE.get());
+                        entry.accept(EBBlocks.CHLOROSLATE_PILLAR.get());
+
+                        entry.accept(EBBlocks.HECTALITE.get());
+                        entry.accept(EBBlocks.HECTALITE_STAIRS.get());
+                        entry.accept(EBBlocks.HECTALITE_SLAB.get());
+                        entry.accept(EBBlocks.HECTALITE_WALL.get());
+                        entry.accept(EBBlocks.POLISHED_HECTALITE.get());
+                        entry.accept(EBBlocks.POLISHED_HECTALITE_STAIRS.get());
+                        entry.accept(EBBlocks.POLISHED_HECTALITE_SLAB.get());
+                        entry.accept(EBBlocks.POLISHED_HECTALITE_WALL.get());
+                        entry.accept(EBBlocks.HECTALITE_BRICKS.get());
+                        entry.accept(EBBlocks.HECTALITE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.HECTALITE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.HECTALITE_BRICK_WALL.get());
+                        entry.accept(EBBlocks.CHISELED_HECTALITE.get());
+                        entry.accept(EBBlocks.HECTALITE_PILLAR.get());
 
                         //CONGLOMERATE
                         entry.accept(EBBlocks.PEBBLESTONE.get());
@@ -92,12 +121,44 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.BRIMSTONE_PILLAR.get());
                         entry.accept(EBBlocks.BRIMSTONE_LAMP.get());
 
+                        //CORALSOIL
+                        entry.accept(EBBlocks.CORALSOIL.get());
+                        entry.accept(EBBlocks.CORALSOIL_BRICKS.get());
+                        entry.accept(EBBlocks.CORALSOIL_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.CORALSOIL_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.CORALSOIL_BRICK_WALL.get());
+
+                        //LAVENDER
+                        entry.accept(EBBlocks.LAVENDER.get());
+                        entry.accept(EBBlocks.LAVENDER_BLOCK.get());
+                        entry.accept(EBBlocks.LAVENDER_CLAY.get());
+                        entry.accept(EBBlocks.LAVENDER_BRICKS.get());
+                        entry.accept(EBBlocks.MOSSY_LAVENDER_BRICKS.get());
+                        entry.accept(EBBlocks.LAVENDER_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.LAVENDER_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.LAVENDER_BRICK_WALL.get());
+
                         //VANILLA BLOCK VARIANTS
                         entry.accept(EBBlocks.COBBLESTONE_BRICKS.get());
                         entry.accept(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get());
                         entry.accept(EBBlocks.COBBLESTONE_BRICK_STAIRS.get());
                         entry.accept(EBBlocks.COBBLESTONE_BRICK_SLAB.get());
                         entry.accept(EBBlocks.COBBLESTONE_BRICK_WALL.get());
+
+                        entry.accept(EBBlocks.GRANITE_BRICKS.get());
+                        entry.accept(EBBlocks.GRANITE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.GRANITE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.GRANITE_BRICK_WALL.get());
+
+                        entry.accept(EBBlocks.DIORITE_BRICKS.get());
+                        entry.accept(EBBlocks.DIORITE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.DIORITE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.DIORITE_BRICK_WALL.get());
+
+                        entry.accept(EBBlocks.ANDESITE_BRICKS.get());
+                        entry.accept(EBBlocks.ANDESITE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.ANDESITE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.ANDESITE_BRICK_WALL.get());
 
                         entry.accept(EBBlocks.COPPER_BRICKS.get());
                         entry.accept(EBBlocks.COPPER_BRICK_STAIRS.get());

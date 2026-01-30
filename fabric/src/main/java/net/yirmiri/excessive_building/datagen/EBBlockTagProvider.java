@@ -45,6 +45,21 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     private void appendMineableWithPickaxe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(EBBlocks.ANDESITE_BRICKS.get())
+                .add(EBBlocks.ANDESITE_BRICK_STAIRS.get())
+                .add(EBBlocks.ANDESITE_BRICK_SLAB.get())
+                .add(EBBlocks.ANDESITE_BRICK_WALL.get())
+
+                .add(EBBlocks.GRANITE_BRICKS.get())
+                .add(EBBlocks.GRANITE_BRICK_STAIRS.get())
+                .add(EBBlocks.GRANITE_BRICK_SLAB.get())
+                .add(EBBlocks.GRANITE_BRICK_WALL.get())
+
+                .add(EBBlocks.DIORITE_BRICKS.get())
+                .add(EBBlocks.DIORITE_BRICK_STAIRS.get())
+                .add(EBBlocks.DIORITE_BRICK_SLAB.get())
+                .add(EBBlocks.DIORITE_BRICK_WALL.get())
+
                 .add(EBBlocks.PEBBLESTONE.get())
 
                 .add(EBBlocks.CONGLOMERATE.get())
@@ -126,6 +141,52 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 .add(EBBlocks.BRIMSTONE_PILLAR.get())
                 .add(EBBlocks.BRIMSTONE_LAMP.get())
+
+                .add(EBBlocks.HECTALITE_PILLAR.get())
+                .add(EBBlocks.CHLOROSLATE_PILLAR.get())
+                .add(EBBlocks.ARIDITE_PILLAR.get())
+
+                .add(EBBlocks.CHLOROSLATE.get())
+                .add(EBBlocks.CHLOROSLATE_STAIRS.get())
+                .add(EBBlocks.CHLOROSLATE_SLAB.get())
+                .add(EBBlocks.CHLOROSLATE_WALL.get())
+                .add(EBBlocks.POLISHED_CHLOROSLATE.get())
+                .add(EBBlocks.POLISHED_CHLOROSLATE_STAIRS.get())
+                .add(EBBlocks.POLISHED_CHLOROSLATE_SLAB.get())
+                .add(EBBlocks.POLISHED_CHLOROSLATE_WALL.get())
+                .add(EBBlocks.CHLOROSLATE_BRICKS.get())
+                .add(EBBlocks.CHLOROSLATE_BRICK_STAIRS.get())
+                .add(EBBlocks.CHLOROSLATE_BRICK_SLAB.get())
+                .add(EBBlocks.CHLOROSLATE_BRICK_WALL.get())
+                .add(EBBlocks.CHISELED_CHLOROSLATE.get())
+
+                .add(EBBlocks.HECTALITE.get())
+                .add(EBBlocks.HECTALITE_STAIRS.get())
+                .add(EBBlocks.HECTALITE_SLAB.get())
+                .add(EBBlocks.HECTALITE_WALL.get())
+                .add(EBBlocks.POLISHED_HECTALITE.get())
+                .add(EBBlocks.POLISHED_HECTALITE_STAIRS.get())
+                .add(EBBlocks.POLISHED_HECTALITE_SLAB.get())
+                .add(EBBlocks.POLISHED_HECTALITE_WALL.get())
+                .add(EBBlocks.HECTALITE_BRICKS.get())
+                .add(EBBlocks.HECTALITE_BRICK_STAIRS.get())
+                .add(EBBlocks.HECTALITE_BRICK_SLAB.get())
+                .add(EBBlocks.HECTALITE_BRICK_WALL.get())
+                .add(EBBlocks.CHISELED_HECTALITE.get())
+
+                .add(EBBlocks.ARIDITE.get())
+                .add(EBBlocks.ARIDITE_STAIRS.get())
+                .add(EBBlocks.ARIDITE_SLAB.get())
+                .add(EBBlocks.ARIDITE_WALL.get())
+                .add(EBBlocks.POLISHED_ARIDITE.get())
+                .add(EBBlocks.POLISHED_ARIDITE_STAIRS.get())
+                .add(EBBlocks.POLISHED_ARIDITE_SLAB.get())
+                .add(EBBlocks.POLISHED_ARIDITE_WALL.get())
+                .add(EBBlocks.ARIDITE_BRICKS.get())
+                .add(EBBlocks.ARIDITE_BRICK_STAIRS.get())
+                .add(EBBlocks.ARIDITE_BRICK_SLAB.get())
+                .add(EBBlocks.ARIDITE_BRICK_WALL.get())
+                .add(EBBlocks.CHISELED_ARIDITE.get())
         ;
     }
 
@@ -138,6 +199,18 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.CONGLOMERATE_BRICK_WALL.get())
                 .add(EBBlocks.BRIMSTONE_WALL.get())
                 .add(EBBlocks.BRIMSTONE_BRICK_WALL.get())
+                .add(EBBlocks.DIORITE_BRICK_WALL.get())
+                .add(EBBlocks.GRANITE_BRICK_WALL.get())
+                .add(EBBlocks.ANDESITE_BRICK_WALL.get())
+                .add(EBBlocks.HECTALITE_WALL.get())
+                .add(EBBlocks.POLISHED_HECTALITE_WALL.get())
+                .add(EBBlocks.HECTALITE_BRICK_WALL.get())
+                .add(EBBlocks.ARIDITE_WALL.get())
+                .add(EBBlocks.POLISHED_ARIDITE_WALL.get())
+                .add(EBBlocks.ARIDITE_BRICK_WALL.get())
+                .add(EBBlocks.CHLOROSLATE_WALL.get())
+                .add(EBBlocks.POLISHED_CHLOROSLATE_WALL.get())
+                .add(EBBlocks.CHLOROSLATE_BRICK_WALL.get())
         ;
     }
 

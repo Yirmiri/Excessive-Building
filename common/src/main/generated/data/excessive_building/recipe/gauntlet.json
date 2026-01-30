@@ -8,13 +8,16 @@
     "#": {
       "item": "minecraft:amethyst_shard"
     },
+    "%": {
+      "item": "minecraft:diamond"
+    },
     "@": {
       "item": "minecraft:copper_ingot"
     }
   },
   "pattern": [
     "!# ",
-    "#!@",
+    "#%@",
     " @@"
   ],
   "result": {

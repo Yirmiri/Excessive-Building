@@ -134,6 +134,67 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.BRIMSTONE_LAMP.get(), "Brimstone Lamp");
         build.add(EBBlocks.BRIMSTONE_PILLAR.get(), "Brimstone Pillar");
 
+        build.add(EBBlocks.ANDESITE_BRICKS.get(), "Andesite Bricks");
+        build.add(EBBlocks.ANDESITE_BRICK_STAIRS.get(), "Andesite Brick Stairs");
+        build.add(EBBlocks.ANDESITE_BRICK_SLAB.get(), "Andesite Brick Slab");
+        build.add(EBBlocks.ANDESITE_BRICK_WALL.get(), "Andesite Brick Wall");
+
+        build.add(EBBlocks.GRANITE_BRICKS.get(), "Granite Bricks");
+        build.add(EBBlocks.GRANITE_BRICK_STAIRS.get(), "Granite Brick Stairs");
+        build.add(EBBlocks.GRANITE_BRICK_SLAB.get(), "Granite Brick Slab");
+        build.add(EBBlocks.GRANITE_BRICK_WALL.get(), "Granite Brick Wall");
+
+        build.add(EBBlocks.DIORITE_BRICKS.get(), "Diorite Bricks");
+        build.add(EBBlocks.DIORITE_BRICK_STAIRS.get(), "Diorite Brick Stairs");
+        build.add(EBBlocks.DIORITE_BRICK_SLAB.get(), "Diorite Brick Slab");
+        build.add(EBBlocks.DIORITE_BRICK_WALL.get(), "Diorite Brick Wall");
+
+        build.add(EBBlocks.HECTALITE.get(), "Hectalite");
+        build.add(EBBlocks.HECTALITE_STAIRS.get(), "Hectalite Stairs");
+        build.add(EBBlocks.HECTALITE_SLAB.get(), "Hectalite Slab");
+        build.add(EBBlocks.HECTALITE_WALL.get(), "Hectalite Wall");
+        build.add(EBBlocks.POLISHED_HECTALITE.get(), "Polished Hectalite");
+        build.add(EBBlocks.POLISHED_HECTALITE_STAIRS.get(), "Polished Hectalite Stairs");
+        build.add(EBBlocks.POLISHED_HECTALITE_SLAB.get(), "Polished Hectalite Slab");
+        build.add(EBBlocks.POLISHED_HECTALITE_WALL.get(), "Polished Hectalite Wall");
+        build.add(EBBlocks.HECTALITE_BRICKS.get(), "Hectalite Bricks");
+        build.add(EBBlocks.HECTALITE_BRICK_STAIRS.get(), "Hectalite Brick Stairs");
+        build.add(EBBlocks.HECTALITE_BRICK_SLAB.get(), "Hectalite Brick Slab");
+        build.add(EBBlocks.HECTALITE_BRICK_WALL.get(), "Hectalite Brick Wall");
+        build.add(EBBlocks.CHISELED_HECTALITE.get(), "Chiseled Hectalite");
+
+        build.add(EBBlocks.CHLOROSLATE.get(), "Chloroslate");
+        build.add(EBBlocks.CHLOROSLATE_STAIRS.get(), "Chloroslate Stairs");
+        build.add(EBBlocks.CHLOROSLATE_SLAB.get(), "Chloroslate Slab");
+        build.add(EBBlocks.CHLOROSLATE_WALL.get(), "Chloroslate Wall");
+        build.add(EBBlocks.POLISHED_CHLOROSLATE.get(), "Polished Chloroslate");
+        build.add(EBBlocks.POLISHED_CHLOROSLATE_STAIRS.get(), "Polished Chloroslate Stairs");
+        build.add(EBBlocks.POLISHED_CHLOROSLATE_SLAB.get(), "Polished Chloroslate Slab");
+        build.add(EBBlocks.POLISHED_CHLOROSLATE_WALL.get(), "Polished Chloroslate Wall");
+        build.add(EBBlocks.CHLOROSLATE_BRICKS.get(), "Chloroslate Bricks");
+        build.add(EBBlocks.CHLOROSLATE_BRICK_STAIRS.get(), "Chloroslate Brick Stairs");
+        build.add(EBBlocks.CHLOROSLATE_BRICK_SLAB.get(), "Chloroslate Brick Slab");
+        build.add(EBBlocks.CHLOROSLATE_BRICK_WALL.get(), "Chloroslate Brick Wall");
+        build.add(EBBlocks.CHISELED_CHLOROSLATE.get(), "Chiseled Chloroslate");
+
+        build.add(EBBlocks.ARIDITE.get(), "Aridite");
+        build.add(EBBlocks.ARIDITE_STAIRS.get(), "Aridite Stairs");
+        build.add(EBBlocks.ARIDITE_SLAB.get(), "Aridite Slab");
+        build.add(EBBlocks.ARIDITE_WALL.get(), "Aridite Wall");
+        build.add(EBBlocks.POLISHED_ARIDITE.get(), "Polished Aridite");
+        build.add(EBBlocks.POLISHED_ARIDITE_STAIRS.get(), "Polished Aridite Stairs");
+        build.add(EBBlocks.POLISHED_ARIDITE_SLAB.get(), "Polished Aridite Slab");
+        build.add(EBBlocks.POLISHED_ARIDITE_WALL.get(), "Polished Aridite Wall");
+        build.add(EBBlocks.ARIDITE_BRICKS.get(), "Aridite Bricks");
+        build.add(EBBlocks.ARIDITE_BRICK_STAIRS.get(), "Aridite Brick Stairs");
+        build.add(EBBlocks.ARIDITE_BRICK_SLAB.get(), "Aridite Brick Slab");
+        build.add(EBBlocks.ARIDITE_BRICK_WALL.get(), "Aridite Brick Wall");
+        build.add(EBBlocks.CHISELED_ARIDITE.get(), "Chiseled Aridite");
+
+        build.add(EBBlocks.ARIDITE_PILLAR.get(), "Aridite Pillar");
+        build.add(EBBlocks.CHLOROSLATE_PILLAR.get(), "Chloroslate Pillar");
+        build.add(EBBlocks.HECTALITE_PILLAR.get(), "Hectalite Pillar");
+
         //ITEMS
         build.add(EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
         build.add(EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");

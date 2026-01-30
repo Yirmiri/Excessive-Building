@@ -6,6 +6,18 @@
     "excessive_building:conglomerate_wall",
     "excessive_building:conglomerate_brick_wall",
     "excessive_building:brimstone_wall",
-    "excessive_building:brimstone_brick_wall"
+    "excessive_building:brimstone_brick_wall",
+    "excessive_building:diorite_brick_wall",
+    "excessive_building:granite_brick_wall",
+    "excessive_building:andesite_brick_wall",
+    "excessive_building:hectalite_wall",
+    "excessive_building:polished_hectalite_wall",
+    "excessive_building:hectalite_brick_wall",
+    "excessive_building:aridite_wall",
+    "excessive_building:polished_aridite_wall",
+    "excessive_building:aridite_brick_wall",
+    "excessive_building:chloroslate_wall",
+    "excessive_building:polished_chloroslate_wall",
+    "excessive_building:chloroslate_brick_wall"
   ]
 }

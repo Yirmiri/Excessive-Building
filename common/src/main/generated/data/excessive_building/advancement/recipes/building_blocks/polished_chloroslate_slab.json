@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_chloroslate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:polished_chloroslate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "excessive_building:polished_chloroslate_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_chloroslate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "excessive_building:polished_chloroslate_slab"
+    ]
+  }
+}
