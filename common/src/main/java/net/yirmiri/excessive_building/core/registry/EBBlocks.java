@@ -155,10 +155,10 @@ public class EBBlocks {
     public static final Supplier<Block> ANCIENT_WOOD = register("ancient_wood", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
     public static final Supplier<Block> STRIPPED_ANCIENT_WOOD = register("stripped_ancient_wood", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
 
-    public static final Supplier<Block> ANCIENT_SIGN = register("ancient_sign", () -> new StandingSignBlock(EBRegistries.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SIGN).mapColor(MapColor.SNOW)), false);
-    public static final Supplier<Block> ANCIENT_WALL_SIGN = register("ancient_wall_sign", () -> new WallSignBlock(EBRegistries.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WALL_SIGN).mapColor(MapColor.SNOW)), false);
-    public static final Supplier<Block> ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", () -> new CeilingHangingSignBlock(EBRegistries.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_HANGING_SIGN).mapColor(MapColor.SNOW)), false);
-    public static final Supplier<Block> ANCIENT_WALL_HANGING_SIGN = register("ancient_wall_hanging_sign", () -> new WallHangingSignBlock(EBRegistries.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WALL_HANGING_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> ANCIENT_SIGN = register("ancient_sign", () -> new EBStandingSignBlock(EBRegistries.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> ANCIENT_WALL_SIGN = register("ancient_wall_sign", () -> new EBWallSignBlock(EBRegistries.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WALL_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", () -> new EBHangingSignBlock(EBRegistries.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_HANGING_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> ANCIENT_WALL_HANGING_SIGN = register("ancient_wall_hanging_sign", () -> new EBWallHangingSignBlock(EBRegistries.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WALL_HANGING_SIGN).mapColor(MapColor.SNOW)), false);
 
     public static final Supplier<Block> ANCIENT_SAPLING = register("ancient_sapling", () -> new PublicSaplingBlock(EBTreeGrowers.ANCIENT, EBProperties.BlockP.GLOW_SAPLING), true);
     public static final Supplier<Block> POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", () -> new FlowerPotBlock(ANCIENT_SAPLING.get(), EBProperties.BlockP.GLOW_SAPLING_POT), false);

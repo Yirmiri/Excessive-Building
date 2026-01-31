@@ -2,6 +2,10 @@ package net.yirmiri.excessive_building;
 
 import net.azurune.runiclib.core.platform.RLServices;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.resources.model.Material;
+import net.minecraft.resources.ResourceLocation;
+import net.yirmiri.excessive_building.common.util.EBRegistries;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 
 public class ExcessiveBuildingClient {
@@ -16,5 +20,9 @@ public class ExcessiveBuildingClient {
         RLServices.loadClient().registerBlockRenderType(EBBlocks.POTTED_LAVENDER.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(EBBlocks.SAGE.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(EBBlocks.POTTED_SAGE.get(), RenderType.cutout());
+
+        //SIGN
+        Sheets.SIGN_MATERIALS.put(EBRegistries.ANCIENT, new Material(Sheets.SIGN_SHEET, ResourceLocation.withDefaultNamespace("entity/signs/ancient")));
+        Sheets.HANGING_SIGN_MATERIALS.put(EBRegistries.ANCIENT, new Material(Sheets.SIGN_SHEET, ResourceLocation.withDefaultNamespace("entity/signs/hanging/ancient")));
     }
 }

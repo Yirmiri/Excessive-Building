@@ -15,6 +15,7 @@ public class ExcessiveBuilding {
         EBCreativeTabs.load();
         EBEffects.load();
         EBPotions.load();
+        EBBlockEntities.load();
     }
 }//todo make integration cleaner (delicate recipe)
 //todo remove reach from gauntlet
