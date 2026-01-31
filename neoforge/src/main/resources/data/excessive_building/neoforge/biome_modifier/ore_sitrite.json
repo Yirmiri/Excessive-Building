@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "minecraft:swamp",
+  "features": [
+    "excessive_building:ore_sitrite"
+  ],
+  "step": "underground_ores"
+}

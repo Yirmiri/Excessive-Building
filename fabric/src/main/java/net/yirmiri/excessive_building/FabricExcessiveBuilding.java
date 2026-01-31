@@ -20,6 +20,9 @@ public class FabricExcessiveBuilding implements ModInitializer {
         EBRegistries.load();
 
         //BIOME MODIFIERS
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.SWAMP),
+                GenerationStep.Decoration.UNDERGROUND_ORES, EBFeatureKeys.PlacedFeatures.ORE_SITRITE);
+
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE),
                 GenerationStep.Decoration.UNDERGROUND_ORES, EBFeatureKeys.PlacedFeatures.ORE_CHLOROSLATE);
 
