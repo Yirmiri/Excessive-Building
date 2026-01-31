@@ -222,6 +222,28 @@ public class EBBlocks {
     public static final Supplier<Block> CHISELED_ARIDITE = register("chiseled_aridite", () -> new Block(EBProperties.BlockP.POLISHED_ARIDITE), true);
     public static final Supplier<Block> ARIDITE_PILLAR = register("aridite_pillar", () -> new RotatedPillarBlock(EBProperties.BlockP.POLISHED_ARIDITE), true);
 
+    //SITRITE
+    public static final Supplier<Block> SITRITE = register("sitrite", () -> new Block(EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> SITRITE_STAIRS = register("sitrite_stairs", () -> new PublicStairBlock(SITRITE.get().defaultBlockState(), EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> SITRITE_SLAB = register("sitrite_slab", () -> new SlabBlock(EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> SITRITE_WALL = register("sitrite_wall", () -> new WallBlock(EBProperties.BlockP.SITRITE), true);
+
+    public static final Supplier<Block> POLISHED_SITRITE = register("polished_sitrite", () -> new Block(EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> POLISHED_SITRITE_STAIRS = register("polished_sitrite_stairs", () -> new PublicStairBlock(POLISHED_SITRITE.get().defaultBlockState(), EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> POLISHED_SITRITE_SLAB = register("polished_sitrite_slab", () -> new SlabBlock(EBProperties.BlockP.SITRITE), true);
+
+    public static final Supplier<Block> SITRITE_BRICKS = register("sitrite_bricks", () -> new Block(EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> SITRITE_BRICK_STAIRS = register("sitrite_brick_stairs", () -> new PublicStairBlock(SITRITE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> SITRITE_BRICK_SLAB = register("sitrite_brick_slab", () -> new SlabBlock(EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> SITRITE_BRICK_WALL = register("sitrite_brick_wall", () -> new WallBlock(EBProperties.BlockP.SITRITE), true);
+
+    public static final Supplier<Block> SITRITE_TILES = register("sitrite_tiles", () -> new Block(EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> SITRITE_TILE_STAIRS = register("sitrite_tile_stairs", () -> new PublicStairBlock(SITRITE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> SITRITE_TILE_SLAB = register("sitrite_tile_slab", () -> new SlabBlock(EBProperties.BlockP.SITRITE), true);
+
+    public static final Supplier<Block> CHISELED_SITRITE = register("chiseled_sitrite", () -> new Block(EBProperties.BlockP.SITRITE), true);
+    public static final Supplier<Block> SITRITE_PILLAR = register("sitrite_pillar", () -> new RotatedPillarBlock(EBProperties.BlockP.SITRITE), true);
+
     //UNDYED
     public static final Supplier<Block> FROSTED_GLASS = register("frosted_glass", () -> new PublicHalfTransparentBlock(EBProperties.BlockP.FROSTED_GLASS), true);
 

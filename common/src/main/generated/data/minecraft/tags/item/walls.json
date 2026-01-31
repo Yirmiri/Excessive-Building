@@ -19,6 +19,8 @@
     "excessive_building:chloroslate_wall",
     "excessive_building:polished_chloroslate_wall",
     "excessive_building:chloroslate_brick_wall",
-    "excessive_building:sage_brick_wall"
+    "excessive_building:sage_brick_wall",
+    "excessive_building:sitrite_brick_wall",
+    "excessive_building:sitrite_wall"
   ]
 }

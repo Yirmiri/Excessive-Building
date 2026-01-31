@@ -61,6 +61,8 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.POLISHED_CHLOROSLATE_WALL.get().asItem())
                 .add(EBBlocks.CHLOROSLATE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.SAGE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.SITRITE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.SITRITE_WALL.get().asItem())
         ;
     }
 

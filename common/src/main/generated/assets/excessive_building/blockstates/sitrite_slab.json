@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/sitrite_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/sitrite"
+    },
+    "type=top": {
+      "model": "excessive_building:block/sitrite_slab_top"
+    }
+  }
+}

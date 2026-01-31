@@ -211,6 +211,27 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
 
         dropSelf(EBBlocks.FROSTED_GLASS.get());
 
+        dropSelf(EBBlocks.SITRITE.get());
+        dropSelf(EBBlocks.SITRITE_STAIRS.get());
+        add(EBBlocks.SITRITE_SLAB.get(), createSlabItemTable(EBBlocks.SITRITE_SLAB.get()));
+        dropSelf(EBBlocks.SITRITE_WALL.get());
+
+        dropSelf(EBBlocks.POLISHED_SITRITE.get());
+        dropSelf(EBBlocks.POLISHED_SITRITE_STAIRS.get());
+        add(EBBlocks.POLISHED_SITRITE_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_SITRITE_SLAB.get()));
+
+        dropSelf(EBBlocks.SITRITE_BRICKS.get());
+        dropSelf(EBBlocks.SITRITE_BRICK_STAIRS.get());
+        add(EBBlocks.SITRITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.SITRITE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.SITRITE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.SITRITE_TILES.get());
+        dropSelf(EBBlocks.SITRITE_TILE_STAIRS.get());
+        add(EBBlocks.SITRITE_TILE_SLAB.get(), createSlabItemTable(EBBlocks.SITRITE_TILE_SLAB.get()));
+
+        dropSelf(EBBlocks.CHISELED_SITRITE.get());
+        dropSelf(EBBlocks.SITRITE_PILLAR.get());
+
         addDyedDrops();
     }
 

@@ -1,7 +1,7 @@
 {
   "values": [
-    "minecraft:taiga",
-    "minecraft:snowy_taiga",
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
     "minecraft:flower_forest"
   ]
 }

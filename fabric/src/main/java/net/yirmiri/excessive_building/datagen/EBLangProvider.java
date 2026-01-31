@@ -211,6 +211,27 @@ public class EBLangProvider extends FabricLanguageProvider {
 
         build.add(EBBlocks.FROSTED_GLASS.get(), "Frosted Glass");
 
+        build.add(EBBlocks.SITRITE.get(), "Sitrite");
+        build.add(EBBlocks.SITRITE_STAIRS.get(), "Sitrite Stairs");
+        build.add(EBBlocks.SITRITE_SLAB.get(), "Sitrite Slab");
+        build.add(EBBlocks.SITRITE_WALL.get(), "Sitrite Wall");
+
+        build.add(EBBlocks.POLISHED_SITRITE.get(), "Polished Sitrite");
+        build.add(EBBlocks.POLISHED_SITRITE_STAIRS.get(), "Polished Sitrite Stairs");
+        build.add(EBBlocks.POLISHED_SITRITE_SLAB.get(), "Polished Sitrite Slab");
+
+        build.add(EBBlocks.SITRITE_BRICKS.get(), "Sitrite Bricks");
+        build.add(EBBlocks.SITRITE_BRICK_STAIRS.get(), "Sitrite Brick Stairs");
+        build.add(EBBlocks.SITRITE_BRICK_SLAB.get(), "Sitrite Brick Slab");
+        build.add(EBBlocks.SITRITE_BRICK_WALL.get(), "Sitrite Brick Wall");
+
+        build.add(EBBlocks.SITRITE_TILES.get(), "Sitrite Tiles");
+        build.add(EBBlocks.SITRITE_TILE_STAIRS.get(), "Sitrite Tile Stairs");
+        build.add(EBBlocks.SITRITE_TILE_SLAB.get(), "Sitrite Tile Slab");
+
+        build.add(EBBlocks.CHISELED_SITRITE.get(), "Chiseled Sitrite");
+        build.add(EBBlocks.SITRITE_PILLAR.get(), "Sitrite Pillar");
+
         //ITEMS
         build.add(EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
         build.add(EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");

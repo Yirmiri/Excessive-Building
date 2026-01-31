@@ -100,6 +100,28 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.CONGLOMERATE_BRICK_SLAB.get());
                         entry.accept(EBBlocks.CONGLOMERATE_BRICK_WALL.get());
 
+                        //SITRITE
+                        entry.accept(EBBlocks.SITRITE.get());
+                        entry.accept(EBBlocks.SITRITE_STAIRS.get());
+                        entry.accept(EBBlocks.SITRITE_SLAB.get());
+                        entry.accept(EBBlocks.SITRITE_WALL.get());
+
+                        entry.accept(EBBlocks.POLISHED_SITRITE.get());
+                        entry.accept(EBBlocks.POLISHED_SITRITE_STAIRS.get());
+                        entry.accept(EBBlocks.POLISHED_SITRITE_SLAB.get());
+
+                        entry.accept(EBBlocks.SITRITE_BRICKS.get());
+                        entry.accept(EBBlocks.SITRITE_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.SITRITE_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.SITRITE_BRICK_WALL.get());
+
+                        entry.accept(EBBlocks.SITRITE_TILES.get());
+                        entry.accept(EBBlocks.SITRITE_TILE_STAIRS.get());
+                        entry.accept(EBBlocks.SITRITE_TILE_SLAB.get());
+
+                        entry.accept(EBBlocks.CHISELED_SITRITE.get());
+                        entry.accept(EBBlocks.SITRITE_PILLAR.get());
+
                         //BRIMSTONE
                         entry.accept(EBBlocks.BRIMSTONE.get());
                         entry.accept(EBBlocks.BRIMSTONE_STAIRS.get());

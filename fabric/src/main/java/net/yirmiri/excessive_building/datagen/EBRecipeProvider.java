@@ -744,6 +744,79 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .group("target")
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.TARGET) + "_from_sage_block"));
 
+        //=======================SITRITE=======================
+        BlockFamily sitriteFamily = familyBuilder(EBBlocks.SITRITE.get())
+                .stairs(EBBlocks.SITRITE_STAIRS.get())
+                .slab(EBBlocks.SITRITE_SLAB.get())
+                .wall(EBBlocks.SITRITE_WALL.get())
+                .polished(EBBlocks.POLISHED_SITRITE.get())
+                .recipeUnlockedBy("has_sitrite")
+                .getFamily();
+        generateRecipes(exporter, sitriteFamily, FeatureFlagSet.of(FeatureFlags.VANILLA));
+
+        stonecutter.putRecipe(EBBlocks.POLISHED_SITRITE.get(), EBBlocks.SITRITE.get());
+        stonecutter.putRecipe(EBBlocks.SITRITE_STAIRS.get(), EBBlocks.SITRITE.get());
+        stonecutter.putRecipe(EBBlocks.SITRITE_SLAB.get(), EBBlocks.SITRITE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.SITRITE_WALL.get(), EBBlocks.SITRITE.get());
+
+        //=======================POLISHED SITRITE=======================
+        BlockFamily polishedSitriteFamily = familyBuilder(EBBlocks.POLISHED_SITRITE.get())
+                .stairs(EBBlocks.POLISHED_SITRITE_STAIRS.get())
+                .slab(EBBlocks.POLISHED_SITRITE_SLAB.get())
+                .polished(EBBlocks.SITRITE_BRICKS.get())
+                .recipeUnlockedBy("has_polished_sitrite")
+                .getFamily();
+        generateRecipes(exporter, polishedSitriteFamily, FeatureFlagSet.of(FeatureFlags.VANILLA));
+
+        stonecutter.putRecipe(EBBlocks.SITRITE_BRICKS.get(), EBBlocks.POLISHED_SITRITE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_SITRITE_STAIRS.get(), EBBlocks.POLISHED_SITRITE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_SITRITE_SLAB.get(), EBBlocks.POLISHED_SITRITE.get(), 2);
+
+        //=======================SITRITE BRICKS=======================
+        BlockFamily sitriteBricksFamily = familyBuilder(EBBlocks.SITRITE_BRICKS.get())
+                .stairs(EBBlocks.SITRITE_BRICK_STAIRS.get())
+                .slab(EBBlocks.SITRITE_BRICK_SLAB.get())
+                .wall(EBBlocks.SITRITE_BRICK_WALL.get())
+                .polished(EBBlocks.SITRITE_TILES.get())
+                .recipeUnlockedBy("has_sitrite_bricks")
+                .getFamily();
+        generateRecipes(exporter, sitriteBricksFamily, FeatureFlagSet.of(FeatureFlags.VANILLA));
+
+        stonecutter.putRecipe(EBBlocks.SITRITE_TILES.get(), EBBlocks.SITRITE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.SITRITE_BRICK_STAIRS.get(), EBBlocks.SITRITE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.SITRITE_BRICK_SLAB.get(), EBBlocks.SITRITE_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.SITRITE_BRICK_WALL.get(), EBBlocks.SITRITE_BRICKS.get());
+
+        //=======================SITRITE TILES=======================
+        BlockFamily sitriteTilesFamily = familyBuilder(EBBlocks.SITRITE_TILES.get())
+                .stairs(EBBlocks.SITRITE_TILE_STAIRS.get())
+                .slab(EBBlocks.SITRITE_TILE_SLAB.get())
+                .recipeUnlockedBy("has_sitrite_tiles")
+                .getFamily();
+        generateRecipes(exporter, sitriteTilesFamily, FeatureFlagSet.of(FeatureFlags.VANILLA));
+
+        stonecutter.putRecipe(EBBlocks.SITRITE_TILE_STAIRS.get(), EBBlocks.SITRITE_TILES.get());
+        stonecutter.putRecipe(EBBlocks.SITRITE_TILE_SLAB.get(), EBBlocks.SITRITE_TILES.get(), 2);
+
+        //=======================SITRITE MISC=======================
+        stonecutter.putRecipe(EBBlocks.SITRITE_PILLAR.get(), EBBlocks.POLISHED_SITRITE.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SITRITE_PILLAR.get(), 2)
+                .define('#', EBBlocks.POLISHED_SITRITE.get())
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy(getHasName(EBBlocks.POLISHED_SITRITE.get()), has(EBBlocks.POLISHED_SITRITE.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.SITRITE_PILLAR.get())));
+
+        stonecutter.putRecipe(EBBlocks.CHISELED_SITRITE.get(), EBBlocks.POLISHED_SITRITE.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHISELED_SITRITE.get(), 1)
+                .define('#', EBBlocks.POLISHED_SITRITE_SLAB.get())
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy(getHasName(EBBlocks.POLISHED_SITRITE_SLAB.get()), has(EBBlocks.POLISHED_SITRITE_SLAB.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CHISELED_SITRITE.get())));
+
         //=======================DYED=======================
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.GLASS), RecipeCategory.BUILDING_BLOCKS,
                 EBBlocks.FROSTED_GLASS.get(), 0.1F, 200).unlockedBy(getHasName(Blocks.GLASS), has(Blocks.GLASS)).save(exporter);

@@ -32,8 +32,8 @@ public class EBBiomeTagProvider extends TagsProvider<Biome> {
 
     private void appendSageGeneratesIn() {
         getOrCreateRawBuilder(EBTags.BiomeT.SAGE_GENERATES_IN)
-                .add(TagEntry.element(Biomes.TAIGA.location()))
-                .add(TagEntry.element(Biomes.SNOWY_TAIGA.location()))
+                .add(TagEntry.element(Biomes.SAVANNA.location()))
+                .add(TagEntry.element(Biomes.SAVANNA_PLATEAU.location()))
                 .add(TagEntry.element(Biomes.FLOWER_FOREST.location()))
         ;
     }

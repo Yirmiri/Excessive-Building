@@ -194,6 +194,27 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.ARIDITE_BRICK_SLAB.get())
                 .add(EBBlocks.ARIDITE_BRICK_WALL.get())
                 .add(EBBlocks.CHISELED_ARIDITE.get())
+
+                .add(EBBlocks.SITRITE.get())
+                .add(EBBlocks.SITRITE_STAIRS.get())
+                .add(EBBlocks.SITRITE_SLAB.get())
+                .add(EBBlocks.SITRITE_WALL.get())
+
+                .add(EBBlocks.POLISHED_SITRITE.get())
+                .add(EBBlocks.POLISHED_SITRITE_STAIRS.get())
+                .add(EBBlocks.POLISHED_SITRITE_SLAB.get())
+
+                .add(EBBlocks.SITRITE_BRICKS.get())
+                .add(EBBlocks.SITRITE_BRICK_STAIRS.get())
+                .add(EBBlocks.SITRITE_BRICK_SLAB.get())
+                .add(EBBlocks.SITRITE_BRICK_WALL.get())
+
+                .add(EBBlocks.SITRITE_TILES.get())
+                .add(EBBlocks.SITRITE_TILE_STAIRS.get())
+                .add(EBBlocks.SITRITE_TILE_SLAB.get())
+
+                .add(EBBlocks.SITRITE_PILLAR.get())
+                .add(EBBlocks.CHISELED_SITRITE.get())
         ;
 
         for (DyeColor colors : DyeColor.values()) {
@@ -227,6 +248,8 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.POLISHED_CHLOROSLATE_WALL.get())
                 .add(EBBlocks.CHLOROSLATE_BRICK_WALL.get())
                 .add(EBBlocks.SAGE_BRICK_WALL.get())
+                .add(EBBlocks.SITRITE_WALL.get())
+                .add(EBBlocks.SITRITE_BRICK_WALL.get())
         ;
     }
 

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sitrite_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:sitrite_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sitrite_tiles_from_sitrite_bricks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sitrite_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sitrite_tiles_from_sitrite_bricks_stonecutting"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
-// 1.21.1	2026-01-30T08:48:02.6237928	Excessive Building/Tags for minecraft:block
+// 1.21.1	2026-01-31T02:42:57.4273717	Excessive Building/Tags for minecraft:block
 2714b86fd272c4dc23f625ad6e85ee0df304a93e data\minecraft\tags\block\wooden_trapdoors.json
-9c7d078216ce1872c07096e62bfa861d7978550c data\minecraft\tags\block\walls.json
+26ba6c6ce2f273fbaa5bf88f43b1915b8b1781a5 data\minecraft\tags\block\walls.json
 57d16cfe3867b211870e103e54e86c25dfddb226 data\minecraft\tags\block\ceiling_hanging_signs.json
 6d7806362f9b22375e2f6e9b05536a40dadbdd27 data\minecraft\tags\block\wall_signs.json
 92e63a1cf04e6f7d0d8664a806c62bbad480c675 data\minecraft\tags\block\wooden_buttons.json
@@ -19,7 +19,7 @@ c94e70579bf002ea1f4535d1e110530673a037b9 data\minecraft\tags\block\small_flowers
 ba3d71a2828a2171d5d06009ddcf7ce06e159d53 data\minecraft\tags\block\signs.json
 51db910c66108ad0a3c3054502bf436069814cfd data\minecraft\tags\block\mineable\shovel.json
 4feea691b696eb3e8425372891b1e13021c1a14a data\minecraft\tags\block\wall_hanging_signs.json
-c7926580336da2a67eb0f2f245095fcaf9df1188 data\minecraft\tags\block\mineable\pickaxe.json
+24788756a0f0b2041cf670bbf31a4ab7b8e79938 data\minecraft\tags\block\mineable\pickaxe.json
 15f232853523acd25853c58e0f94256933a1a194 data\minecraft\tags\block\wooden_fences.json
 b1996b2acccaaa61ab847967148616b98e1b7e5b data\minecraft\tags\block\wooden_stairs.json
 d11ee62b5054d22a7ae04b7d42261c098e598229 data\minecraft\tags\block\fence_gates.json

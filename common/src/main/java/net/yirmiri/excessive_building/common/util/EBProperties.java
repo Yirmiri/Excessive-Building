@@ -33,7 +33,7 @@ public class EBProperties {
         public static final BlockBehaviour.Properties BRIMSTONE = BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE).sound(SoundType.DRIPSTONE_BLOCK);
         public static final BlockBehaviour.Properties POLISHED_BRIMSTONE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE).sound(SoundType.POLISHED_DEEPSLATE);
         public static final BlockBehaviour.Properties BRIMSTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE_BRICKS).sound(SoundType.POLISHED_DEEPSLATE);
-        public static final BlockBehaviour.Properties BRIMSTONE_LAMP = BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE).sound(SoundType.GLASS).lightLevel(s -> 12);
+        public static final BlockBehaviour.Properties BRIMSTONE_LAMP = BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE).sound(SoundType.GLASS).lightLevel(createLightLevelFromLitBlockState(12));
         public static final BlockBehaviour.Properties POLISHED_GRANITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_GRANITE);
         public static final BlockBehaviour.Properties POLISHED_ANDESITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE);
         public static final BlockBehaviour.Properties POLISHED_DIORITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DIORITE);
@@ -46,6 +46,7 @@ public class EBProperties {
         public static final BlockBehaviour.Properties ARIDITE = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.5F, 6.0F);
         public static final BlockBehaviour.Properties POLISHED_ARIDITE = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.5F, 6.0F);
         public static final BlockBehaviour.Properties ARIDITE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.5F, 6.0F);
+        public static final BlockBehaviour.Properties SITRITE = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE);
 
         //METALS
         public static final BlockBehaviour.Properties COPPER = BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK);

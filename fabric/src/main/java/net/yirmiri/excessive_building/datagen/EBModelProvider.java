@@ -213,6 +213,31 @@ public class EBModelProvider extends FabricModelProvider {
 
         generator.createPlant(EBBlocks.SAGE.get(), EBBlocks.POTTED_SAGE.get(), BlockModelGenerators.TintState.NOT_TINTED);
 
+        generator.family(EBBlocks.SITRITE.get())
+                .stairs(EBBlocks.SITRITE_STAIRS.get())
+                .slab(EBBlocks.SITRITE_SLAB.get())
+                .wall(EBBlocks.SITRITE_WALL.get())
+        ;
+
+        generator.family(EBBlocks.POLISHED_SITRITE.get())
+                .stairs(EBBlocks.POLISHED_SITRITE_STAIRS.get())
+                .slab(EBBlocks.POLISHED_SITRITE_SLAB.get())
+        ;
+
+        generator.family(EBBlocks.SITRITE_BRICKS.get())
+                .stairs(EBBlocks.SITRITE_BRICK_STAIRS.get())
+                .slab(EBBlocks.SITRITE_BRICK_SLAB.get())
+                .wall(EBBlocks.SITRITE_BRICK_WALL.get())
+        ;
+
+        generator.family(EBBlocks.SITRITE_TILES.get())
+                .stairs(EBBlocks.SITRITE_TILE_STAIRS.get())
+                .slab(EBBlocks.SITRITE_TILE_SLAB.get())
+        ;
+
+        generator.woodProvider(EBBlocks.SITRITE_PILLAR.get()).logWithHorizontal(EBBlocks.SITRITE_PILLAR.get());
+        generator.createTrivialCube(EBBlocks.CHISELED_SITRITE.get());
+        
         //DYED
         for (DyeColor colors : DyeColor.values()) {
             generator.family(EBBlocks.getDyedCorrugatedIron(colors.getId()).get())
