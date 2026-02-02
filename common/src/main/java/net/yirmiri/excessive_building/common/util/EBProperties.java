@@ -98,7 +98,7 @@ public class EBProperties {
     public static class FoodP {
         //MISC
         public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2F)
-                .effect(new MobEffectInstance(EBEffects.REACHING, 200, 0), 1.0F)
+                //.effect(new MobEffectInstance(EBEffects.REACHING, 200, 0), 1.0F)
                 .build();
     }
 }

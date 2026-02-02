@@ -19,3 +19,7 @@ public class ExcessiveBuilding {
     }
 }//todo make integration cleaner (delicate recipe)
 //todo remove reach from gauntlet
+//fix effects
+//fix potions
+//fix signs
+//fix wood types

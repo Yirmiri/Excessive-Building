@@ -33,9 +33,9 @@ public class MinecraftMixin {
         boolean offHandBlock = player.getOffhandItem().getItem() instanceof BlockItem;
 
         if (mainHandBlock || offHandBlock) {
-            if (player.hasEffect(EBEffects.RAPIDITY)) {
-                clickDelay -= player.getEffect(EBEffects.RAPIDITY).getAmplifier() + 1;
-            }
+//            if (player.hasEffect(EBEffects.RAPIDITY)) {
+//                clickDelay -= player.getEffect(EBEffects.RAPIDITY).getAmplifier() + 1;
+//            }
 
             if ((mainHandGauntlet || offHandGauntlet)) {
                 clickDelay -= 1;

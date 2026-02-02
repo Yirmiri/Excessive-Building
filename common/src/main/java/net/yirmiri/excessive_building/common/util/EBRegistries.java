@@ -9,9 +9,10 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 
 public class EBRegistries {
-    public static final WoodType ANCIENT = RLRegistryHelper.registerWoodType(new WoodType("ancient", BlockSetType.OAK));
-    public static final ModelLayerLocation ANCIENT_SIGN = ModelLayers.createSignModelName(ANCIENT);
-    public static final ModelLayerLocation ANCIENT_HANGING_SIGN = ModelLayers.createHangingSignModelName(ANCIENT);
+    //public static final WoodType ANCIENT = WoodType.register(new WoodType("excessive_building:ancient", BlockSetType.OAK));
+    //public static final WoodType ANCIENT = RLRegistryHelper.registerWoodType(new WoodType("ancient", BlockSetType.OAK));
+    //public static final ModelLayerLocation ANCIENT_SIGN = ModelLayers.createSignModelName(WoodType.CHERRY);
+    //public static final ModelLayerLocation ANCIENT_HANGING_SIGN = ModelLayers.createHangingSignModelName(WoodType.CHERRY);
 
     public static void load() {
         registerStrippables();

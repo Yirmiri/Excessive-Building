@@ -12,12 +12,12 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBEffects {
-    //BENEFICIAL
-    public static final Holder<MobEffect> REACHING = register("reaching", new PublicMobEffect(MobEffectCategory.BENEFICIAL, 0xe5246c)
-            .addAttributeModifier(Attributes.BLOCK_INTERACTION_RANGE, RunicLib.customid(ExcessiveBuilding.MOD_ID, "effect.reaching"), 3.0F, AttributeModifier.Operation.ADD_VALUE)
-    );
-
-    public static final Holder<MobEffect> RAPIDITY = register("rapidity", new PublicMobEffect(MobEffectCategory.BENEFICIAL, 0x8953df));
+//    //BENEFICIAL
+//    public static final Holder<MobEffect> REACHING = register("reaching", new PublicMobEffect(MobEffectCategory.BENEFICIAL, 0xe5246c)
+//            .addAttributeModifier(Attributes.BLOCK_INTERACTION_RANGE, RunicLib.customid(ExcessiveBuilding.MOD_ID, "effect.reaching"), 3.0F, AttributeModifier.Operation.ADD_VALUE)
+//    );
+//
+//    public static final Holder<MobEffect> RAPIDITY = register("rapidity", new PublicMobEffect(MobEffectCategory.BENEFICIAL, 0x8953df));
 
     private static Holder<MobEffect> register(String id, MobEffect effect) {
         return RLServices.REGISTRY.registerForHolder(BuiltInRegistries.MOB_EFFECT, ExcessiveBuilding.MOD_ID, id, effect);

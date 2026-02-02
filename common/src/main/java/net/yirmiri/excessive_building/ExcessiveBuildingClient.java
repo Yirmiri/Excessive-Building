@@ -22,7 +22,7 @@ public class ExcessiveBuildingClient {
         RLServices.loadClient().registerBlockRenderType(EBBlocks.POTTED_SAGE.get(), RenderType.cutout());
 
         //SIGN
-        Sheets.SIGN_MATERIALS.put(EBRegistries.ANCIENT, new Material(Sheets.SIGN_SHEET, ResourceLocation.withDefaultNamespace("entity/signs/ancient")));
-        Sheets.HANGING_SIGN_MATERIALS.put(EBRegistries.ANCIENT, new Material(Sheets.SIGN_SHEET, ResourceLocation.withDefaultNamespace("entity/signs/hanging/ancient")));
+        //Sheets.SIGN_MATERIALS.put(EBRegistries.ANCIENT, new Material(Sheets.SIGN_SHEET, ResourceLocation.withDefaultNamespace("entity/signs/ancient")));
+        //Sheets.HANGING_SIGN_MATERIALS.put(EBRegistries.ANCIENT, new Material(Sheets.SIGN_SHEET, ResourceLocation.withDefaultNamespace("entity/signs/hanging/ancient")));
     }
 }
