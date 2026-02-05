@@ -1,4 +1,11 @@
 {
+  "block.excessive_building.amethyst_brick_slab": "Amethyst Brick Slab",
+  "block.excessive_building.amethyst_brick_stairs": "Amethyst Brick Stairs",
+  "block.excessive_building.amethyst_brick_wall": "Amethyst Brick Wall",
+  "block.excessive_building.amethyst_bricks": "Amethyst Bricks",
+  "block.excessive_building.amethyst_framed_glass": "Amethyst Framed Glass",
+  "block.excessive_building.amethyst_framed_glass_pane": "Amethyst Framed Glass Pane",
+  "block.excessive_building.amethyst_lamp": "Amethyst Lamp",
   "block.excessive_building.ancient_button": "Ancient Button",
   "block.excessive_building.ancient_door": "Ancient Door",
   "block.excessive_building.ancient_fence": "Ancient Fence",

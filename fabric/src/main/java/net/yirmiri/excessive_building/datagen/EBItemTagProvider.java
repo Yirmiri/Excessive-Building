@@ -37,6 +37,7 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
         appendAncientLogs();
         appendMiningEnchantable();
         appendDurabilityEnchantable();
+        appendMiningLootEnchantable();
     }
 
     private void appendWalls() {
@@ -63,6 +64,7 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.SAGE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.SITRITE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.SITRITE_WALL.get().asItem())
+                .add(EBBlocks.AMETHYST_BRICK_WALL.get().asItem())
         ;
     }
 
@@ -165,6 +167,12 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     private void appendMiningEnchantable() {
         getOrCreateTagBuilder(ItemTags.MINING_ENCHANTABLE)
+                .add(EBItems.GAUNTLET.get().asItem())
+        ;
+    }
+
+    private void appendMiningLootEnchantable() {
+        getOrCreateTagBuilder(ItemTags.MINING_LOOT_ENCHANTABLE)
                 .add(EBItems.GAUNTLET.get().asItem())
         ;
     }

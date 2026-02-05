@@ -232,6 +232,14 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.CHISELED_SITRITE.get(), "Chiseled Sitrite");
         build.add(EBBlocks.SITRITE_PILLAR.get(), "Sitrite Pillar");
 
+        build.add(EBBlocks.AMETHYST_BRICKS.get(), "Amethyst Bricks");
+        build.add(EBBlocks.AMETHYST_BRICK_STAIRS.get(), "Amethyst Brick Stairs");
+        build.add(EBBlocks.AMETHYST_BRICK_SLAB.get(), "Amethyst Brick Slab");
+        build.add(EBBlocks.AMETHYST_BRICK_WALL.get(), "Amethyst Brick Wall");
+        build.add(EBBlocks.AMETHYST_LAMP.get(), "Amethyst Lamp");
+        build.add(EBBlocks.AMETHYST_FRAMED_GLASS.get(), "Amethyst Framed Glass");
+        build.add(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get(), "Amethyst Framed Glass Pane");
+
         //ITEMS
         build.add(EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
         build.add(EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");

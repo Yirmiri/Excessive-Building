@@ -308,6 +308,15 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS.get());
                         entry.accept(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS.get());
                         entry.accept(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB.get());
+
+                        entry.accept(EBBlocks.AMETHYST_BRICKS.get());
+                        entry.accept(EBBlocks.AMETHYST_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.AMETHYST_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.AMETHYST_BRICK_WALL.get());
+
+                        entry.accept(EBBlocks.AMETHYST_LAMP.get());
+                        entry.accept(EBBlocks.AMETHYST_FRAMED_GLASS.get());
+                        entry.accept(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
                     }).build());
 
     public static void load() {

@@ -1,6 +1,5 @@
 package net.yirmiri.excessive_building.common.util;
 
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
@@ -13,7 +12,6 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.yirmiri.excessive_building.common.item.GauntletItem;
 import net.yirmiri.excessive_building.core.init.EBTiers;
-import net.yirmiri.excessive_building.core.registry.EBEffects;
 
 import java.util.function.ToIntFunction;
 
@@ -25,6 +23,10 @@ public class EBProperties {
     public static class BlockP {
         //MISC
         public static final BlockBehaviour.Properties FROSTED_GLASS = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS);
+        public static final BlockBehaviour.Properties AMETHYST = BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK);
+        public static final BlockBehaviour.Properties AMETHYST_LAMP = BlockBehaviour.Properties.ofFullCopy(Blocks.SEA_LANTERN).mapColor(MapColor.COLOR_PURPLE);
+        public static final BlockBehaviour.Properties FRAMED_GLASS = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).strength(1.0F, 2.0F);
+        public static final BlockBehaviour.Properties FRAMED_GLASS_PANE = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).strength(1.0F, 2.0F);
 
         //STONES
         public static final BlockBehaviour.Properties COBBLESTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE);

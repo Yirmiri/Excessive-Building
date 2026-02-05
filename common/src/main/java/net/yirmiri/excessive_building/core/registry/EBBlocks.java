@@ -11,7 +11,6 @@ import net.minecraft.world.level.material.MapColor;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.*;
 import net.yirmiri.excessive_building.common.util.EBProperties;
-import net.yirmiri.excessive_building.common.util.EBRegistries;
 import net.yirmiri.excessive_building.core.init.EBTreeGrowers;
 
 import java.util.HashMap;
@@ -39,6 +38,15 @@ public class EBBlocks {
     public static final Supplier<Block> DIORITE_BRICK_STAIRS = register("diorite_brick_stairs", () -> new PublicStairBlock(DIORITE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.POLISHED_DIORITE), true);
     public static final Supplier<Block> DIORITE_BRICK_SLAB = register("diorite_brick_slab", () -> new SlabBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
     public static final Supplier<Block> DIORITE_BRICK_WALL = register("diorite_brick_wall", () -> new WallBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
+
+    //AMETHYST
+    public static final Supplier<Block> AMETHYST_BRICKS = register("amethyst_bricks", () -> new Block(EBProperties.BlockP.AMETHYST), true);
+    public static final Supplier<Block> AMETHYST_BRICK_STAIRS = register("amethyst_brick_stairs", () -> new PublicStairBlock(AMETHYST_BRICKS.get().defaultBlockState(), EBProperties.BlockP.AMETHYST), true);
+    public static final Supplier<Block> AMETHYST_BRICK_SLAB = register("amethyst_brick_slab", () -> new SlabBlock(EBProperties.BlockP.AMETHYST), true);
+    public static final Supplier<Block> AMETHYST_BRICK_WALL = register("amethyst_brick_wall", () -> new WallBlock(EBProperties.BlockP.AMETHYST), true);
+    public static final Supplier<Block> AMETHYST_LAMP = register("amethyst_lamp", () -> new Block(EBProperties.BlockP.AMETHYST_LAMP), true);
+    public static final Supplier<Block> AMETHYST_FRAMED_GLASS = register("amethyst_framed_glass", () -> new PublicTransparentBlock(EBProperties.BlockP.FRAMED_GLASS), true);
+    public static final Supplier<Block> AMETHYST_FRAMED_GLASS_PANE = register("amethyst_framed_glass_pane", () -> new PublicIronBarsBlock(EBProperties.BlockP.FRAMED_GLASS_PANE), true);
 
     //LAVENDER
     public static final Supplier<Block> LAVENDER = register("lavender", () -> new ClayPlantBlock(MobEffects.HEALTH_BOOST, 7, EBProperties.BlockP.LAVENDER), true);

@@ -215,6 +215,11 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 .add(EBBlocks.SITRITE_PILLAR.get())
                 .add(EBBlocks.CHISELED_SITRITE.get())
+
+                .add(EBBlocks.AMETHYST_BRICKS.get())
+                .add(EBBlocks.AMETHYST_BRICK_STAIRS.get())
+                .add(EBBlocks.AMETHYST_BRICK_SLAB.get())
+                .add(EBBlocks.AMETHYST_BRICK_WALL.get())
         ;
 
         for (DyeColor colors : DyeColor.values()) {
@@ -228,6 +233,7 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     private void appendWalls() {
         getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(EBBlocks.AMETHYST_BRICK_WALL.get())
                 .add(EBBlocks.COBBLESTONE_BRICK_WALL.get())
                 .add(EBBlocks.CORALSOIL_BRICK_WALL.get())
                 .add(EBBlocks.LAVENDER_BRICK_WALL.get())
@@ -320,6 +326,9 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.FROSTED_ICE)
                 .add(Blocks.PACKED_ICE)
                 .add(EBBlocks.FROSTED_GLASS.get())
+                .add(EBBlocks.AMETHYST_FRAMED_GLASS.get())
+                .add(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get())
+                .add(EBBlocks.AMETHYST_LAMP.get())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

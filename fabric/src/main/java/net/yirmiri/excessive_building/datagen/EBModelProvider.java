@@ -5,8 +5,11 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.data.models.model.TexturedModel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
@@ -21,30 +24,30 @@ public class EBModelProvider extends FabricModelProvider {
         BlockModelGenerators.BlockFamilyProvider copperBricks = generator.family(EBBlocks.COPPER_BRICKS.get());
         copperBricks.stairs(EBBlocks.COPPER_BRICK_STAIRS.get());
         copperBricks.slab(EBBlocks.COPPER_BRICK_SLAB.get());
-        copperBricks.donateModelTo(EBBlocks.COPPER_BRICKS.get(), EBBlocks.WAXED_COPPER_BRICKS.get());
-        copperBricks.donateModelTo(EBBlocks.COPPER_BRICK_STAIRS.get(), EBBlocks.WAXED_COPPER_BRICK_STAIRS.get());
-        copperBricks.donateModelTo(EBBlocks.COPPER_BRICK_SLAB.get(), EBBlocks.WAXED_COPPER_BRICK_SLAB.get());
+        BlockModelGenerators.BlockFamilyProvider copperBricksWax = copperBricks.donateModelTo(EBBlocks.COPPER_BRICKS.get(), EBBlocks.WAXED_COPPER_BRICKS.get());
+        copperBricksWax.stairs(EBBlocks.WAXED_COPPER_BRICK_STAIRS.get());
+        copperBricksWax.slab(EBBlocks.WAXED_COPPER_BRICK_SLAB.get());
 
         BlockModelGenerators.BlockFamilyProvider exposedCopperBricks = generator.family(EBBlocks.EXPOSED_COPPER_BRICKS.get());
         exposedCopperBricks.stairs(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS.get());
         exposedCopperBricks.slab(EBBlocks.EXPOSED_COPPER_BRICK_SLAB.get());
-        copperBricks.donateModelTo(EBBlocks.EXPOSED_COPPER_BRICKS.get(), EBBlocks.WAXED_EXPOSED_COPPER_BRICKS.get());
-        copperBricks.donateModelTo(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS.get(), EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS.get());
-        copperBricks.donateModelTo(EBBlocks.EXPOSED_COPPER_BRICK_SLAB.get(), EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB.get());
+        BlockModelGenerators.BlockFamilyProvider exposedCopperBricksWax = copperBricks.donateModelTo(EBBlocks.EXPOSED_COPPER_BRICKS.get(), EBBlocks.WAXED_EXPOSED_COPPER_BRICKS.get());
+        exposedCopperBricksWax.stairs(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS.get());
+        exposedCopperBricksWax.slab(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB.get());
 
         BlockModelGenerators.BlockFamilyProvider weatheredCopperBricks = generator.family(EBBlocks.WEATHERED_COPPER_BRICKS.get());
         weatheredCopperBricks.stairs(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS.get());
         weatheredCopperBricks.slab(EBBlocks.WEATHERED_COPPER_BRICK_SLAB.get());
-        copperBricks.donateModelTo(EBBlocks.WEATHERED_COPPER_BRICKS.get(), EBBlocks.WAXED_WEATHERED_COPPER_BRICKS.get());
-        copperBricks.donateModelTo(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS.get(), EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS.get());
-        copperBricks.donateModelTo(EBBlocks.WEATHERED_COPPER_BRICK_SLAB.get(), EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB.get());
+        BlockModelGenerators.BlockFamilyProvider weatheredCopperBricksWax = copperBricks.donateModelTo(EBBlocks.WEATHERED_COPPER_BRICKS.get(), EBBlocks.WAXED_WEATHERED_COPPER_BRICKS.get());
+        weatheredCopperBricksWax.stairs(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS.get());
+        weatheredCopperBricksWax.slab(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB.get());
 
         BlockModelGenerators.BlockFamilyProvider oxidizedCopperBricks = generator.family(EBBlocks.OXIDIZED_COPPER_BRICKS.get());
         oxidizedCopperBricks.stairs(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS.get());
         oxidizedCopperBricks.slab(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB.get());
-        copperBricks.donateModelTo(EBBlocks.OXIDIZED_COPPER_BRICKS.get(), EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS.get());
-        copperBricks.donateModelTo(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS.get(), EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS.get());
-        copperBricks.donateModelTo(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB.get(), EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB.get());
+        BlockModelGenerators.BlockFamilyProvider oxidizedCopperBricksWax = copperBricks.donateModelTo(EBBlocks.OXIDIZED_COPPER_BRICKS.get(), EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS.get());
+        oxidizedCopperBricksWax.stairs(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS.get());
+        oxidizedCopperBricksWax.slab(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB.get());
 
         BlockModelGenerators.BlockFamilyProvider cobblestoneBricks = generator.family(EBBlocks.COBBLESTONE_BRICKS.get());
         cobblestoneBricks.stairs(EBBlocks.COBBLESTONE_BRICK_STAIRS.get());
@@ -237,6 +240,14 @@ public class EBModelProvider extends FabricModelProvider {
 
         generator.woodProvider(EBBlocks.SITRITE_PILLAR.get()).logWithHorizontal(EBBlocks.SITRITE_PILLAR.get());
         generator.createTrivialCube(EBBlocks.CHISELED_SITRITE.get());
+
+        BlockModelGenerators.BlockFamilyProvider amethystbricks = generator.family(EBBlocks.AMETHYST_BRICKS.get());
+        amethystbricks.stairs(EBBlocks.AMETHYST_BRICK_STAIRS.get());
+        amethystbricks.slab(EBBlocks.AMETHYST_BRICK_SLAB.get());
+        amethystbricks.wall(EBBlocks.AMETHYST_BRICK_WALL.get());
+
+        generator.createGlassBlocks(EBBlocks.AMETHYST_FRAMED_GLASS.get(), EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
+        createCrystalLantern(generator, EBBlocks.AMETHYST_LAMP.get());
         
         //DYED
         for (DyeColor colors : DyeColor.values()) {
@@ -256,5 +267,11 @@ public class EBModelProvider extends FabricModelProvider {
         generator.generateFlatItem(EBItems.ANCIENT_FRUIT.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.ANCIENT_SIGN.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBBlocks.ANCIENT_VINES.get().asItem(), ModelTemplates.FLAT_ITEM);
+    }
+
+    public void createCrystalLantern(BlockModelGenerators generator, Block block) {
+        TextureMapping textureMapping = TextureMapping.column(TextureMapping.getBlockTexture(block), TextureMapping.getBlockTexture(block, "_top"));
+        ResourceLocation resourceLocation = ModelTemplates.CUBE_COLUMN.create(block, textureMapping, generator.modelOutput);
+        generator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block, resourceLocation));
     }
 }

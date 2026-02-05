@@ -17,8 +17,8 @@ public class ExcessiveBuilding {
         EBPotions.load();
         EBBlockEntities.load();
     }
-}//todo make integration cleaner (delicate recipe)
-//todo remove reach from gauntlet
+}//make integration cleaner (delicate recipe)
+//remove reach from gauntlet
 //fix effects
 //fix potions
 //fix signs

@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
@@ -231,6 +232,14 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
 
         dropSelf(EBBlocks.CHISELED_SITRITE.get());
         dropSelf(EBBlocks.SITRITE_PILLAR.get());
+
+        dropSelf(EBBlocks.AMETHYST_BRICKS.get());
+        dropSelf(EBBlocks.AMETHYST_BRICK_STAIRS.get());
+        add(EBBlocks.AMETHYST_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.AMETHYST_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.AMETHYST_BRICK_WALL.get());
+        dropSelf(EBBlocks.AMETHYST_LAMP.get());
+        dropWhenSilkTouch(EBBlocks.AMETHYST_FRAMED_GLASS.get());
+        dropWhenSilkTouch(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
 
         addDyedDrops();
     }

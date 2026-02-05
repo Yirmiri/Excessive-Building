@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.BlockFamily;
 import net.minecraft.data.recipes.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
@@ -817,6 +818,39 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(EBBlocks.POLISHED_SITRITE_SLAB.get()), has(EBBlocks.POLISHED_SITRITE_SLAB.get()))
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CHISELED_SITRITE.get())));
 
+        //==========================AMETHYST==========================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_BRICKS.get(), Blocks.AMETHYST_BLOCK);
+
+        stairBuilder(EBBlocks.AMETHYST_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.AMETHYST_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_BRICKS.get()), has(EBBlocks.AMETHYST_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_BRICK_SLAB.get(), Ingredient.of(EBBlocks.AMETHYST_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_BRICKS.get()), has(EBBlocks.AMETHYST_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_BRICK_WALL.get(), Ingredient.of(EBBlocks.AMETHYST_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_BRICKS.get()), has(EBBlocks.AMETHYST_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.AMETHYST_BRICKS.get(), Blocks.AMETHYST_BLOCK);
+
+        stonecutter.putRecipe(EBBlocks.AMETHYST_BRICK_STAIRS.get(), EBBlocks.AMETHYST_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.AMETHYST_BRICK_SLAB.get(), EBBlocks.AMETHYST_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.AMETHYST_BRICK_WALL.get(), EBBlocks.AMETHYST_BRICKS.get());
+
+        createCrystalLantern(EBBlocks.AMETHYST_LAMP.get().asItem(), Items.AMETHYST_SHARD)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.AMETHYST_LAMP.get())));
+
+        createCrystalGlass(EBBlocks.AMETHYST_FRAMED_GLASS.get().asItem(), Items.AMETHYST_SHARD)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.AMETHYST_FRAMED_GLASS.get())));
+
+        createPane(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get().asItem(), EBBlocks.AMETHYST_FRAMED_GLASS.get().asItem())
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_FRAMED_GLASS.get()), has(EBBlocks.AMETHYST_FRAMED_GLASS.get()))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get())));
+
         //=======================DYED=======================
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.GLASS), RecipeCategory.BUILDING_BLOCKS,
                 EBBlocks.FROSTED_GLASS.get(), 0.1F, 200).unlockedBy(getHasName(Blocks.GLASS), has(Blocks.GLASS)).save(exporter);
@@ -869,6 +903,29 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .define('#', ingredient).define('@', DyeItem.byColor(color))
                 .pattern("###")
                 .pattern("#@#")
+                .pattern("###");
+    }
+
+    public static ShapedRecipeBuilder createCrystalLantern(Item output, Item ingredient) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 2)
+                .define('#', ingredient).define('@', Items.IRON_INGOT).define('!', Items.IRON_NUGGET)
+                .pattern("!@!")
+                .pattern("###")
+                .pattern("!@!");
+    }
+
+    public static ShapedRecipeBuilder createCrystalGlass(Item output, Item ingredient) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 2)
+                .define('#', ingredient).define('@', Items.GLASS).define('!', Items.IRON_NUGGET)
+                .pattern("!#!")
+                .pattern("#@#")
+                .pattern("!#!");
+    }
+
+    public static ShapedRecipeBuilder createPane(Item output, Item ingredient) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 16)
+                .define('#', ingredient)
+                .pattern("###")
                 .pattern("###");
     }
 }

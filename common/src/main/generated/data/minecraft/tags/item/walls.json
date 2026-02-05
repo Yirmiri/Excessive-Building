@@ -21,6 +21,7 @@
     "excessive_building:chloroslate_brick_wall",
     "excessive_building:sage_brick_wall",
     "excessive_building:sitrite_brick_wall",
-    "excessive_building:sitrite_wall"
+    "excessive_building:sitrite_wall",
+    "excessive_building:amethyst_brick_wall"
   ]
 }
