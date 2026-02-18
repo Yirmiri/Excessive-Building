@@ -31,21 +31,21 @@ public class EBModelProvider extends FabricModelProvider {
         BlockModelGenerators.BlockFamilyProvider exposedCopperBricks = generator.family(EBBlocks.EXPOSED_COPPER_BRICKS.get());
         exposedCopperBricks.stairs(EBBlocks.EXPOSED_COPPER_BRICK_STAIRS.get());
         exposedCopperBricks.slab(EBBlocks.EXPOSED_COPPER_BRICK_SLAB.get());
-        BlockModelGenerators.BlockFamilyProvider exposedCopperBricksWax = copperBricks.donateModelTo(EBBlocks.EXPOSED_COPPER_BRICKS.get(), EBBlocks.WAXED_EXPOSED_COPPER_BRICKS.get());
+        BlockModelGenerators.BlockFamilyProvider exposedCopperBricksWax = exposedCopperBricks.donateModelTo(EBBlocks.EXPOSED_COPPER_BRICKS.get(), EBBlocks.WAXED_EXPOSED_COPPER_BRICKS.get());
         exposedCopperBricksWax.stairs(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_STAIRS.get());
         exposedCopperBricksWax.slab(EBBlocks.WAXED_EXPOSED_COPPER_BRICK_SLAB.get());
 
         BlockModelGenerators.BlockFamilyProvider weatheredCopperBricks = generator.family(EBBlocks.WEATHERED_COPPER_BRICKS.get());
         weatheredCopperBricks.stairs(EBBlocks.WEATHERED_COPPER_BRICK_STAIRS.get());
         weatheredCopperBricks.slab(EBBlocks.WEATHERED_COPPER_BRICK_SLAB.get());
-        BlockModelGenerators.BlockFamilyProvider weatheredCopperBricksWax = copperBricks.donateModelTo(EBBlocks.WEATHERED_COPPER_BRICKS.get(), EBBlocks.WAXED_WEATHERED_COPPER_BRICKS.get());
+        BlockModelGenerators.BlockFamilyProvider weatheredCopperBricksWax = weatheredCopperBricks.donateModelTo(EBBlocks.WEATHERED_COPPER_BRICKS.get(), EBBlocks.WAXED_WEATHERED_COPPER_BRICKS.get());
         weatheredCopperBricksWax.stairs(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_STAIRS.get());
         weatheredCopperBricksWax.slab(EBBlocks.WAXED_WEATHERED_COPPER_BRICK_SLAB.get());
 
         BlockModelGenerators.BlockFamilyProvider oxidizedCopperBricks = generator.family(EBBlocks.OXIDIZED_COPPER_BRICKS.get());
         oxidizedCopperBricks.stairs(EBBlocks.OXIDIZED_COPPER_BRICK_STAIRS.get());
         oxidizedCopperBricks.slab(EBBlocks.OXIDIZED_COPPER_BRICK_SLAB.get());
-        BlockModelGenerators.BlockFamilyProvider oxidizedCopperBricksWax = copperBricks.donateModelTo(EBBlocks.OXIDIZED_COPPER_BRICKS.get(), EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS.get());
+        BlockModelGenerators.BlockFamilyProvider oxidizedCopperBricksWax = oxidizedCopperBricks.donateModelTo(EBBlocks.OXIDIZED_COPPER_BRICKS.get(), EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS.get());
         oxidizedCopperBricksWax.stairs(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS.get());
         oxidizedCopperBricksWax.slab(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB.get());
 
