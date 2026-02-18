@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:clay_ball"
+    },
+    "@": {
+      "item": "excessive_building:sage"
+    }
+  },
+  "pattern": [
+    "@#",
+    "#@"
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:sage_clay_ball"
+  }
+}

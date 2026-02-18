@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:clay_ball"
+    },
+    "@": {
+      "tag": "excessive_building:dead_coral_blocks"
+    }
+  },
+  "pattern": [
+    "@#",
+    "#@"
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:coralsoil_clay_ball"
+  }
+}

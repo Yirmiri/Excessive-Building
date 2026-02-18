@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:block/frosted_lantern_hanging",
+  "textures": {
+	"0": "excessive_building:block/red_frosted_lantern",
+	"particle": "excessive_building:block/red_frosted_lantern"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "excessive_building:block/green_frosted_lantern"
+    },
+    "hanging=true": {
+      "model": "excessive_building:block/green_frosted_lantern_hanging"
+    }
+  }
+}

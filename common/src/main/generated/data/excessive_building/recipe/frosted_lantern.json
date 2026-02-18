@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "!": {
+      "item": "minecraft:iron_nugget"
+    },
+    "#": {
+      "item": "excessive_building:frosted_glass"
+    },
+    "@": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    "!#!",
+    "#@#",
+    "!#!"
+  ],
+  "result": {
+    "count": 8,
+    "id": "excessive_building:frosted_lantern"
+  }
+}

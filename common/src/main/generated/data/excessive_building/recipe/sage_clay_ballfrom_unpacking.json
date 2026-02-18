@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "excessive_building:sage_clay"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:sage_clay_ball"
+  }
+}

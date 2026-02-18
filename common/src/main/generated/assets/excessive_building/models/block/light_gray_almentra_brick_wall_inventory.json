@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "excessive_building:block/light_gray_almentra_bricks"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lavender_hardened_clay": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:lavender_hardened_clay"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:lavender_clay_bricks_from_lavender_hardened_clay_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lavender_hardened_clay"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:lavender_clay_bricks_from_lavender_hardened_clay_stonecutting"
+    ]
+  }
+}

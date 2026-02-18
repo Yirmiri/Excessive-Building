@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "excessive_building:block/cyan_corrugated_iron_top",
+    "side": "excessive_building:block/cyan_corrugated_iron"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sage_hardened_clay": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:sage_hardened_clay"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:sage_clay_brick_slab_from_sage_hardened_clay_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sage_hardened_clay"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:sage_clay_brick_slab_from_sage_hardened_clay_stonecutting"
+    ]
+  }
+}

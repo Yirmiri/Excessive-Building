@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "excessive_building:block/light_gray_almentra_bricks"
+  }
+}

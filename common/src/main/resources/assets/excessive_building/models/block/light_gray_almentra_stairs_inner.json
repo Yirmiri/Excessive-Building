@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/light_gray_almentra",
+    "side": "excessive_building:block/light_gray_almentra",
+    "top": "excessive_building:block/light_gray_almentra"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "excessive_building:lavender_clay"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:lavender_clay_ball"
+  }
+}

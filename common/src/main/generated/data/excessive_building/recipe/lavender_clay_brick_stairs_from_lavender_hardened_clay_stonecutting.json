@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "excessive_building:lavender_hardened_clay"
+  },
+  "result": {
+    "count": 1,
+    "id": "excessive_building:lavender_clay_brick_stairs"
+  }
+}

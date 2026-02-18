@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "excessive_building:wintergreen_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "excessive_building:wintergreen_planks"
+  }
+}

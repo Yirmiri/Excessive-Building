@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "excessive_building:block/lavender_glazed_clay",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "excessive_building:block/lavender_glazed_clay",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "excessive_building:block/lavender_glazed_clay"
+    },
+    "facing=west": {
+      "model": "excessive_building:block/lavender_glazed_clay",
+      "y": 90
+    }
+  }
+}

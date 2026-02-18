@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/black_almentra",
+    "side": "excessive_building:block/black_almentra",
+    "top": "excessive_building:block/black_almentra"
+  }
+}
