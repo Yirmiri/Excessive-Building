@@ -10,7 +10,6 @@ import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
@@ -56,19 +55,19 @@ public class EBModelProvider extends FabricModelProvider {
 
         generator.createTrivialCube(EBBlocks.CRACKED_COBBLESTONE_BRICKS.get());
 
-        BlockModelGenerators.BlockFamilyProvider coralsoilBricks = generator.family(EBBlocks.CORALSOIL_BRICKS.get());
-        coralsoilBricks.stairs(EBBlocks.CORALSOIL_BRICK_STAIRS.get());
-        coralsoilBricks.slab(EBBlocks.CORALSOIL_BRICK_SLAB.get());
-        coralsoilBricks.wall(EBBlocks.CORALSOIL_BRICK_WALL.get());
+        BlockModelGenerators.BlockFamilyProvider coralsoilBricks = generator.family(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get());
+        coralsoilBricks.stairs(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_STAIRS.get());
+        coralsoilBricks.slab(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_SLAB.get());
+        coralsoilBricks.wall(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_WALL.get());
 
-        generator.createTrivialCube(EBBlocks.CORALSOIL.get());
+        generator.createTrivialCube(EBBlocks.CORALSOIL_CLAY.get());
 
-        BlockModelGenerators.BlockFamilyProvider lavenderBricks = generator.family(EBBlocks.LAVENDER_BRICKS.get());
-        lavenderBricks.stairs(EBBlocks.LAVENDER_BRICK_STAIRS.get());
-        lavenderBricks.slab(EBBlocks.LAVENDER_BRICK_SLAB.get());
-        lavenderBricks.wall(EBBlocks.LAVENDER_BRICK_WALL.get());
+        BlockModelGenerators.BlockFamilyProvider lavenderBricks = generator.family(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get());
+        lavenderBricks.stairs(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_STAIRS.get());
+        lavenderBricks.slab(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_SLAB.get());
+        lavenderBricks.wall(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_WALL.get());
 
-        generator.createTrivialCube(EBBlocks.MOSSY_LAVENDER_BRICKS.get());
+        generator.createTrivialCube(EBBlocks.MOSSY_LAVENDER_HARDENED_CLAY_BRICKS.get());
         generator.createTrivialCube(EBBlocks.LAVENDER_CLAY.get());
 
         generator.createPlant(EBBlocks.LAVENDER.get(), EBBlocks.POTTED_LAVENDER.get(), BlockModelGenerators.TintState.NOT_TINTED);
@@ -206,12 +205,12 @@ public class EBModelProvider extends FabricModelProvider {
 
         generator.createTrivialCube(EBBlocks.CHISELED_HECTALITE.get());
 
-        BlockModelGenerators.BlockFamilyProvider sageBricks = generator.family(EBBlocks.SAGE_BRICKS.get());
-        sageBricks.stairs(EBBlocks.SAGE_BRICK_STAIRS.get());
-        sageBricks.slab(EBBlocks.SAGE_BRICK_SLAB.get());
-        sageBricks.wall(EBBlocks.SAGE_BRICK_WALL.get());
+        BlockModelGenerators.BlockFamilyProvider sageBricks = generator.family(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get());
+        sageBricks.stairs(EBBlocks.SAGE_HARDENED_CLAY_BRICK_STAIRS.get());
+        sageBricks.slab(EBBlocks.SAGE_HARDENED_CLAY_BRICK_SLAB.get());
+        sageBricks.wall(EBBlocks.SAGE_HARDENED_CLAY_BRICK_WALL.get());
 
-        generator.createTrivialCube(EBBlocks.MOSSY_SAGE_BRICKS.get());
+        generator.createTrivialCube(EBBlocks.MOSSY_SAGE_HARDENED_CLAY_BRICKS.get());
         generator.createTrivialCube(EBBlocks.SAGE_CLAY.get());
 
         generator.createPlant(EBBlocks.SAGE.get(), EBBlocks.POTTED_SAGE.get(), BlockModelGenerators.TintState.NOT_TINTED);
@@ -248,14 +247,85 @@ public class EBModelProvider extends FabricModelProvider {
 
         generator.createGlassBlocks(EBBlocks.AMETHYST_FRAMED_GLASS.get(), EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
         createCrystalLantern(generator, EBBlocks.AMETHYST_LAMP.get());
-        
+
+        generator.createTrivialCube(EBBlocks.CORALSOIL_HARDENED_CLAY.get());
+        generator.createColoredBlockWithStateRotations(TexturedModel.GLAZED_TERRACOTTA, EBBlocks.CORALSOIL_GLAZED_CLAY.get());
+
+        BlockModelGenerators.BlockFamilyProvider coralsoilBricks2 = generator.family(EBBlocks.CORALSOIL_BRICKS.get());
+        coralsoilBricks2.stairs(EBBlocks.CORALSOIL_BRICK_STAIRS.get());
+        coralsoilBricks2.slab(EBBlocks.CORALSOIL_BRICK_SLAB.get());
+        coralsoilBricks2.wall(EBBlocks.CORALSOIL_BRICK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider smoothCoralsoilBricks2 = generator.family(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get());
+        smoothCoralsoilBricks2.stairs(EBBlocks.SMOOTH_CORALSOIL_BRICK_STAIRS.get());
+        smoothCoralsoilBricks2.slab(EBBlocks.SMOOTH_CORALSOIL_BRICK_SLAB.get());
+        smoothCoralsoilBricks2.wall(EBBlocks.SMOOTH_CORALSOIL_BRICK_WALL.get());
+
+        generator.createTrivialCube(EBBlocks.LAVENDER_HARDENED_CLAY.get());
+        generator.createColoredBlockWithStateRotations(TexturedModel.GLAZED_TERRACOTTA, EBBlocks.LAVENDER_GLAZED_CLAY.get());
+
+        BlockModelGenerators.BlockFamilyProvider lavenderBricks2 = generator.family(EBBlocks.LAVENDER_BRICKS.get());
+        lavenderBricks2.stairs(EBBlocks.LAVENDER_BRICK_STAIRS.get());
+        lavenderBricks2.slab(EBBlocks.LAVENDER_BRICK_SLAB.get());
+        lavenderBricks2.wall(EBBlocks.LAVENDER_BRICK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider smoothLavenderBricks2 = generator.family(EBBlocks.SMOOTH_LAVENDER_BRICKS.get());
+        smoothLavenderBricks2.stairs(EBBlocks.SMOOTH_LAVENDER_BRICK_STAIRS.get());
+        smoothLavenderBricks2.slab(EBBlocks.SMOOTH_LAVENDER_BRICK_SLAB.get());
+        smoothLavenderBricks2.wall(EBBlocks.SMOOTH_LAVENDER_BRICK_WALL.get());
+
+        generator.createTrivialCube(EBBlocks.SAGE_HARDENED_CLAY.get());
+        generator.createColoredBlockWithStateRotations(TexturedModel.GLAZED_TERRACOTTA, EBBlocks.SAGE_GLAZED_CLAY.get());
+
+        BlockModelGenerators.BlockFamilyProvider sageBricks2 = generator.family(EBBlocks.SAGE_BRICKS.get());
+        sageBricks2.stairs(EBBlocks.SAGE_BRICK_STAIRS.get());
+        sageBricks2.slab(EBBlocks.SAGE_BRICK_SLAB.get());
+        sageBricks2.wall(EBBlocks.SAGE_BRICK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider smoothSageBricks2 = generator.family(EBBlocks.SMOOTH_SAGE_BRICKS.get());
+        smoothSageBricks2.stairs(EBBlocks.SMOOTH_SAGE_BRICK_STAIRS.get());
+        smoothSageBricks2.slab(EBBlocks.SMOOTH_SAGE_BRICK_SLAB.get());
+        smoothSageBricks2.wall(EBBlocks.SMOOTH_SAGE_BRICK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider smoothBricks2 = generator.family(EBBlocks.SMOOTH_BRICKS.get());
+        smoothBricks2.stairs(EBBlocks.SMOOTH_BRICK_STAIRS.get());
+        smoothBricks2.slab(EBBlocks.SMOOTH_BRICK_SLAB.get());
+        smoothBricks2.wall(EBBlocks.SMOOTH_BRICK_WALL.get());
+
+        generator.createPlant(EBBlocks.WINTERGREEN_SAPLING.get(), EBBlocks.POTTED_WINTERGREEN_SAPLING.get(), BlockModelGenerators.TintState.NOT_TINTED);
+
+        generator.family(EBBlocks.WINTERGREEN_PLANKS.get())
+                .stairs(EBBlocks.WINTERGREEN_STAIRS.get())
+                .slab(EBBlocks.WINTERGREEN_SLAB.get())
+                .fence(EBBlocks.WINTERGREEN_FENCE.get())
+                .fenceGate(EBBlocks.WINTERGREEN_FENCE_GATE.get())
+                .pressurePlate(EBBlocks.WINTERGREEN_PRESSURE_PLATE.get())
+                .button(EBBlocks.WINTERGREEN_BUTTON.get())
+        ;
+
+        generator.family(EBBlocks.ALMENTRA_BRICKS.get())
+                .wall(EBBlocks.ALMENTRA_BRICK_WALL.get())
+        ;
+
+        generator.createDoor(EBBlocks.WINTERGREEN_DOOR.get());
+        generator.createOrientableTrapdoor(EBBlocks.WINTERGREEN_TRAPDOOR.get());
+
+        generator.createHangingSign(EBBlocks.WINTERGREEN_PLANKS.get(), EBBlocks.WINTERGREEN_HANGING_SIGN.get(), EBBlocks.WINTERGREEN_WALL_HANGING_SIGN.get());
+        generator.createTrivialCube(EBBlocks.WINTERGREEN_LEAVES.get());
+
+        generator.woodProvider(EBBlocks.WINTERGREEN_LOG.get()).logWithHorizontal(EBBlocks.WINTERGREEN_LOG.get()).wood(EBBlocks.WINTERGREEN_WOOD.get());
+        generator.woodProvider(EBBlocks.STRIPPED_WINTERGREEN_LOG.get()).logWithHorizontal(EBBlocks.STRIPPED_WINTERGREEN_LOG.get()).wood(EBBlocks.STRIPPED_WINTERGREEN_WOOD.get());
+
+        generator.createTrivialCube(EBBlocks.ZEUS_EPIC_BLOCK.get());
+
         //DYED
         for (DyeColor colors : DyeColor.values()) {
-            generator.family(EBBlocks.getDyedCorrugatedIron(colors.getId()).get())
-                    .stairs(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get())
-                    .slab(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get())
-            ;
+            generator.createRotatedPillarWithHorizontalVariant(EBBlocks.getDyedCorrugatedIron(colors.getId()).get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
             generator.createTrivialCube(EBBlocks.getDyedFrostedGlass(colors.getId()).get());
+
+            generator.family(EBBlocks.getDyedAlmentraBricks(colors.getId()).get())
+                    .wall(EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get())
+            ;
         }
         generator.createTrivialCube(EBBlocks.FROSTED_GLASS.get());
     }
@@ -267,6 +337,14 @@ public class EBModelProvider extends FabricModelProvider {
         generator.generateFlatItem(EBItems.ANCIENT_FRUIT.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.ANCIENT_SIGN.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBBlocks.ANCIENT_VINES.get().asItem(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.CORALSOIL_CLAY_BALL.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.SAGE_CLAY_BALL.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.LAVENDER_CLAY_BALL.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.WINTERGREEN_BOAT.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.WINTERGREEN_CHEST_BOAT.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.WINTER_BERRIES.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.WINTERGREEN_SIGN.get(), ModelTemplates.FLAT_ITEM);
+        generator.generateFlatItem(EBItems.MALLET.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 
     public void createCrystalLantern(BlockModelGenerators generator, Block block) {

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "excessive_building:block/black_corrugated_iron",
-    "side": "excessive_building:block/black_corrugated_iron",
-    "top": "excessive_building:block/black_corrugated_iron"
-  }
-}

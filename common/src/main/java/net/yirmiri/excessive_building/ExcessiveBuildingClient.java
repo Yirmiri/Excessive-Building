@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.yirmiri.excessive_building.common.util.EBFamilyTypes;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 
@@ -20,6 +21,13 @@ public class ExcessiveBuildingClient {
         RLServices.loadClient().registerBlockRenderType(EBBlocks.POTTED_LAVENDER.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(EBBlocks.SAGE.get(), RenderType.cutout());
         RLServices.loadClient().registerBlockRenderType(EBBlocks.POTTED_SAGE.get(), RenderType.cutout());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.WINTERGREEN_LEAVES.get(), RenderType.cutout());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.WINTERGREEN_SAPLING.get(), RenderType.cutout());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.POTTED_WINTERGREEN_SAPLING.get(), RenderType.cutout());
+
+        for (DyeColor colors : DyeColor.values()) {
+            RLServices.loadClient().registerBlockRenderType(EBBlocks.getDyedFrostedLantern(colors.getId()).get(), RenderType.cutout());
+        }
 
         //TRANSLUCENT
         RLServices.loadClient().registerBlockRenderType(EBBlocks.AMETHYST_FRAMED_GLASS.get(), RenderType.translucent());

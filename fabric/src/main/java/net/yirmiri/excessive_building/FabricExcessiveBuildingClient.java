@@ -5,6 +5,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.yirmiri.excessive_building.common.particle.FallingLeafParticle;
+import net.yirmiri.excessive_building.common.particle.FrostedParticle;
 import net.yirmiri.excessive_building.core.registry.EBParticles;
 
 @Environment(EnvType.CLIENT)
@@ -15,5 +16,7 @@ public class FabricExcessiveBuildingClient implements ClientModInitializer {
         ExcessiveBuildingClient.init();
 
         ParticleFactoryRegistry.getInstance().register(EBParticles.ANCIENT.get(), FallingLeafParticle.Provider::new);
+        ParticleFactoryRegistry.getInstance().register(EBParticles.FROSTED.get(), FrostedParticle.Provider::new);
+        ParticleFactoryRegistry.getInstance().register(EBParticles.WINTERGREEN.get(), FallingLeafParticle.Provider::new);
     }
 }

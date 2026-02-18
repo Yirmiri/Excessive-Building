@@ -8,6 +8,8 @@ import java.util.function.Supplier;
 
 public class EBParticles {
     public static final Supplier<SimpleParticleType> ANCIENT = register("ancient");
+    public static final Supplier<SimpleParticleType> FROSTED = register("frosted");
+    public static final Supplier<SimpleParticleType> WINTERGREEN = register("wintergreen");
 
     private static Supplier<SimpleParticleType> register(String id) {
         return RLServices.REGISTRY.registerParticle(ExcessiveBuilding.MOD_ID, id);

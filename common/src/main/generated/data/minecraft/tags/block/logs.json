@@ -3,6 +3,10 @@
     "excessive_building:ancient_log",
     "excessive_building:ancient_wood",
     "excessive_building:stripped_ancient_log",
-    "excessive_building:stripped_ancient_wood"
+    "excessive_building:stripped_ancient_wood",
+    "excessive_building:wintergreen_log",
+    "excessive_building:wintergreen_wood",
+    "excessive_building:stripped_wintergreen_log",
+    "excessive_building:stripped_wintergreen_wood"
   ]
 }

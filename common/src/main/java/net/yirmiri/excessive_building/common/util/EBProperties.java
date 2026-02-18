@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.yirmiri.excessive_building.common.item.GauntletItem;
+import net.yirmiri.excessive_building.common.item.MalletItem;
 import net.yirmiri.excessive_building.core.init.EBTiers;
 
 import java.util.function.ToIntFunction;
@@ -27,6 +28,7 @@ public class EBProperties {
         public static final BlockBehaviour.Properties AMETHYST_LAMP = BlockBehaviour.Properties.ofFullCopy(Blocks.SEA_LANTERN).mapColor(MapColor.COLOR_PURPLE);
         public static final BlockBehaviour.Properties FRAMED_GLASS = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).strength(1.0F, 2.0F);
         public static final BlockBehaviour.Properties FRAMED_GLASS_PANE = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).strength(1.0F, 2.0F);
+        public static final BlockBehaviour.Properties FROSTED_LANTERN = BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN).sound(SoundType.GLASS).lightLevel(s -> 12);
 
         //STONES
         public static final BlockBehaviour.Properties COBBLESTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE);
@@ -49,6 +51,9 @@ public class EBProperties {
         public static final BlockBehaviour.Properties POLISHED_ARIDITE = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.5F, 6.0F);
         public static final BlockBehaviour.Properties ARIDITE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.5F, 6.0F);
         public static final BlockBehaviour.Properties SITRITE = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE);
+        public static final BlockBehaviour.Properties ALMENTRA = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.DRIPSTONE_BLOCK);
+        public static final BlockBehaviour.Properties POLISHED_ALMENTRA = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.POLISHED_DEEPSLATE);
+        public static final BlockBehaviour.Properties ALMENTRA_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.DEEPSLATE_BRICKS);
 
         //METALS
         public static final BlockBehaviour.Properties COPPER = BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK);
@@ -58,15 +63,19 @@ public class EBProperties {
         public static final BlockBehaviour.Properties LAVENDER = BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties POTTED_LAVENDER = BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_POPPY).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties LAVENDER_CLAY = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD).mapColor(MapColor.COLOR_MAGENTA);
-        public static final BlockBehaviour.Properties LAVENDER_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).mapColor(MapColor.COLOR_MAGENTA);
+        public static final BlockBehaviour.Properties LAVENDER_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties LAVENDER_BALE = BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK).sound(SoundType.MOSS).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties SAGE = BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties POTTED_SAGE = BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_POPPY).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties SAGE_CLAY = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD).mapColor(MapColor.COLOR_MAGENTA);
-        public static final BlockBehaviour.Properties SAGE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).mapColor(MapColor.COLOR_MAGENTA);
+        public static final BlockBehaviour.Properties SAGE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties SAGE_BALE = BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK).sound(SoundType.MOSS).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties CORALSOIL_CLAY = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD).mapColor(MapColor.COLOR_ORANGE);
-        public static final BlockBehaviour.Properties CORALSOIL = BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE).mapColor(MapColor.COLOR_ORANGE).sound(SoundType.PACKED_MUD);
+        public static final BlockBehaviour.Properties CORALSOIL_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).mapColor(MapColor.COLOR_ORANGE);
+        public static final BlockBehaviour.Properties BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS);
+        public static final BlockBehaviour.Properties HARD_CLAY = BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA);
+        public static final BlockBehaviour.Properties GLAZED = BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_GLAZED_TERRACOTTA);
+        public static final BlockBehaviour.Properties ZEUS = BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE).sound(SoundType.VAULT).strength(12, 24);
 
         //WOOD
         public static final BlockBehaviour.Properties LOG = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG);
@@ -84,6 +93,8 @@ public class EBProperties {
         public static final BlockBehaviour.Properties HANG_VINES = BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY);
         public static final BlockBehaviour.Properties ANCIENT_VINES = BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES).lightLevel(s -> 7).sound(SoundType.CAVE_VINES);
         public static final BlockBehaviour.Properties ANCIENT_VINES_PLANT = BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES_PLANT).lightLevel(s -> 7).sound(SoundType.CAVE_VINES);
+        public static final BlockBehaviour.Properties SAPLING = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).sound(SoundType.CHERRY_SAPLING);
+        public static final BlockBehaviour.Properties SAPLING_POT = BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING);
     }
 
     public static class ItemP {
@@ -91,15 +102,24 @@ public class EBProperties {
         public static final Item.Properties GENERIC = new Item.Properties();
         public static final Item.Properties GENERIC_1 = new Item.Properties().stacksTo(1);
         public static final Item.Properties GENERIC_16 = new Item.Properties().stacksTo(16);
-        public static final Item.Properties GAUNTLET = new Item.Properties().stacksTo(1).attributes(GauntletItem.createAttributes(EBTiers.GAUNTLET, 1, -2.5F));
+
+        //TOOLS
+        public static final Item.Properties MALLET = new Item.Properties().stacksTo(1)
+                .attributes(MalletItem.createAttributes(EBTiers.MALLET, 1, -2.8F));
+
+        public static final Item.Properties GAUNTLET = new Item.Properties().stacksTo(1)
+                .attributes(GauntletItem.createAttributes(EBTiers.GAUNTLET, 1, -2.5F));
 
         //FOOD
         public static final Item.Properties ANCIENT_FRUIT = new Item.Properties().food(FoodP.ANCIENT_FRUIT);
+        public static final Item.Properties WINTER_BERRIES = new Item.Properties().food(FoodP.WINTER_BERRIES);
     }
 
     public static class FoodP {
         //MISC
-        public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2F)
+        public static final FoodProperties WINTER_BERRIES = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2F).fast().build();
+
+        public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(6).saturationModifier(0.5F)
                 //.effect(new MobEffectInstance(EBEffects.REACHING, 200, 0), 1.0F)
                 .build();
     }

@@ -37,5 +37,9 @@ public class BoatTypeMixin {
         var ancient = newBoatType("ANCIENT", last.ordinal() + 1, Blocks.OAK_PLANKS, "ancient");
         values.add(ancient);
         $VALUES = values.toArray(new Boat.Type[0]);
+
+        var wintergreen = newBoatType("WINTERGREEN", last.ordinal() + 2, Blocks.OAK_PLANKS, "wintergreen");
+        values.add(wintergreen);
+        $VALUES = values.toArray(new Boat.Type[0]);
     }
 }

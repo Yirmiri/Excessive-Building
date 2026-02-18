@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_coralsoil": {
+    "has_coralsoil_clay_ball": {
       "conditions": {
         "items": [
           {
-            "items": "excessive_building:coralsoil"
+            "items": "excessive_building:coralsoil_clay_ball"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_coralsoil"
+      "has_coralsoil_clay_ball"
     ]
   ],
   "rewards": {

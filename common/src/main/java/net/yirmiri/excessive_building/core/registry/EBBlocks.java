@@ -48,34 +48,71 @@ public class EBBlocks {
     public static final Supplier<Block> AMETHYST_FRAMED_GLASS = register("amethyst_framed_glass", () -> new PublicTransparentBlock(EBProperties.BlockP.FRAMED_GLASS), true);
     public static final Supplier<Block> AMETHYST_FRAMED_GLASS_PANE = register("amethyst_framed_glass_pane", () -> new PublicIronBarsBlock(EBProperties.BlockP.FRAMED_GLASS_PANE), true);
 
+    //MISC
+    public static final Supplier<Block> SMOOTH_BRICKS = register("smooth_bricks", () -> new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_BRICK_STAIRS = register("smooth_brick_stairs", () -> new PublicStairBlock(SMOOTH_BRICKS.get().defaultBlockState(), EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_BRICK_SLAB = register("smooth_brick_slab", () -> new SlabBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_BRICK_WALL = register("smooth_brick_wall", () -> new WallBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> ZEUS_EPIC_BLOCK = register("zeus_epic_block", () -> new Block(EBProperties.BlockP.ZEUS), true);
+
     //LAVENDER
     public static final Supplier<Block> LAVENDER = register("lavender", () -> new ClayPlantBlock(MobEffects.HEALTH_BOOST, 7, EBProperties.BlockP.LAVENDER), true);
     public static final Supplier<Block> POTTED_LAVENDER = register("potted_lavender", () -> new FlowerPotBlock(LAVENDER.get(), EBProperties.BlockP.POTTED_LAVENDER), true);
     public static final Supplier<Block> LAVENDER_BLOCK = register("lavender_block", () -> new ClayPlantBaleBlock(EBProperties.BlockP.LAVENDER_BALE), true);
     public static final Supplier<Block> LAVENDER_CLAY = register("lavender_clay", () -> new Block(EBProperties.BlockP.LAVENDER_CLAY), true);
-    public static final Supplier<Block> LAVENDER_BRICKS = register("lavender_bricks", () -> new Block(EBProperties.BlockP.LAVENDER_BRICKS), true);
-    public static final Supplier<Block> LAVENDER_BRICK_STAIRS = register("lavender_brick_stairs", () -> new PublicStairBlock(LAVENDER_BRICKS.get().defaultBlockState(), EBProperties.BlockP.LAVENDER_BRICKS), true);
-    public static final Supplier<Block> LAVENDER_BRICK_SLAB = register("lavender_brick_slab", () -> new SlabBlock(EBProperties.BlockP.LAVENDER_BRICKS), true);
-    public static final Supplier<Block> LAVENDER_BRICK_WALL = register("lavender_brick_wall", () -> new WallBlock(EBProperties.BlockP.LAVENDER_BRICKS), true);
-    public static final Supplier<Block> MOSSY_LAVENDER_BRICKS = register("mossy_lavender_bricks", () -> new Block(EBProperties.BlockP.LAVENDER_BRICKS), true);
-
+    public static final Supplier<Block> LAVENDER_HARDENED_CLAY = register("lavender_hardened_clay", () -> new Block(EBProperties.BlockP.HARD_CLAY), true);
+    public static final Supplier<Block> LAVENDER_HARDENED_CLAY_BRICKS = register("lavender_clay_bricks", () -> new Block(EBProperties.BlockP.LAVENDER_BRICKS), true);
+    public static final Supplier<Block> LAVENDER_HARDENED_CLAY_BRICK_STAIRS = register("lavender_clay_brick_stairs", () -> new PublicStairBlock(LAVENDER_HARDENED_CLAY_BRICKS.get().defaultBlockState(), EBProperties.BlockP.LAVENDER_BRICKS), true);
+    public static final Supplier<Block> LAVENDER_HARDENED_CLAY_BRICK_SLAB = register("lavender_clay_brick_slab", () -> new SlabBlock(EBProperties.BlockP.LAVENDER_BRICKS), true);
+    public static final Supplier<Block> LAVENDER_HARDENED_CLAY_BRICK_WALL = register("lavender_clay_brick_wall", () -> new WallBlock(EBProperties.BlockP.LAVENDER_BRICKS), true);
+    public static final Supplier<Block> MOSSY_LAVENDER_HARDENED_CLAY_BRICKS = register("mossy_lavender_clay_bricks", () -> new Block(EBProperties.BlockP.LAVENDER_BRICKS), true);
+    public static final Supplier<Block> LAVENDER_GLAZED_CLAY = register("lavender_glazed_clay", () -> new GlazedTerracottaBlock(EBProperties.BlockP.GLAZED), true);
+    public static final Supplier<Block> LAVENDER_BRICKS = register("lavender_bricks", () -> new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> LAVENDER_BRICK_STAIRS = register("lavender_brick_stairs", () -> new PublicStairBlock(LAVENDER_BRICKS.get().defaultBlockState(), EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> LAVENDER_BRICK_SLAB = register("lavender_brick_slab", () -> new SlabBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> LAVENDER_BRICK_WALL = register("lavender_brick_wall", () -> new WallBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_LAVENDER_BRICKS = register("smooth_lavender_bricks", () -> new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_LAVENDER_BRICK_STAIRS = register("smooth_lavender_brick_stairs", () -> new PublicStairBlock(LAVENDER_BRICKS.get().defaultBlockState(), EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_LAVENDER_BRICK_SLAB = register("smooth_lavender_brick_slab", () -> new SlabBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_LAVENDER_BRICK_WALL = register("smooth_lavender_brick_wall", () -> new WallBlock(EBProperties.BlockP.BRICKS), true);
+    
     //SAGE
     public static final Supplier<Block> SAGE = register("sage", () -> new ClayPlantBlock(MobEffects.ABSORPTION, 7, EBProperties.BlockP.SAGE), true);
     public static final Supplier<Block> POTTED_SAGE = register("potted_sage", () -> new FlowerPotBlock(SAGE.get(), EBProperties.BlockP.POTTED_SAGE), true);
     public static final Supplier<Block> SAGE_BLOCK = register("sage_block", () -> new ClayPlantBaleBlock(EBProperties.BlockP.SAGE_BALE), true);
     public static final Supplier<Block> SAGE_CLAY = register("sage_clay", () -> new Block(EBProperties.BlockP.SAGE_CLAY), true);
-    public static final Supplier<Block> SAGE_BRICKS = register("sage_bricks", () -> new Block(EBProperties.BlockP.SAGE_BRICKS), true);
-    public static final Supplier<Block> SAGE_BRICK_STAIRS = register("sage_brick_stairs", () -> new PublicStairBlock(SAGE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.SAGE_BRICKS), true);
-    public static final Supplier<Block> SAGE_BRICK_SLAB = register("sage_brick_slab", () -> new SlabBlock(EBProperties.BlockP.SAGE_BRICKS), true);
-    public static final Supplier<Block> SAGE_BRICK_WALL = register("sage_brick_wall", () -> new WallBlock(EBProperties.BlockP.SAGE_BRICKS), true);
-    public static final Supplier<Block> MOSSY_SAGE_BRICKS = register("mossy_sage_bricks", () -> new Block(EBProperties.BlockP.SAGE_BRICKS), true);
+    public static final Supplier<Block> SAGE_HARDENED_CLAY = register("sage_hardened_clay", () -> new Block(EBProperties.BlockP.HARD_CLAY), true);
+    public static final Supplier<Block> SAGE_HARDENED_CLAY_BRICKS = register("sage_clay_bricks", () -> new Block(EBProperties.BlockP.SAGE_BRICKS), true);
+    public static final Supplier<Block> SAGE_HARDENED_CLAY_BRICK_STAIRS = register("sage_clay_brick_stairs", () -> new PublicStairBlock(SAGE_HARDENED_CLAY_BRICKS.get().defaultBlockState(), EBProperties.BlockP.SAGE_BRICKS), true);
+    public static final Supplier<Block> SAGE_HARDENED_CLAY_BRICK_SLAB = register("sage_clay_brick_slab", () -> new SlabBlock(EBProperties.BlockP.SAGE_BRICKS), true);
+    public static final Supplier<Block> SAGE_HARDENED_CLAY_BRICK_WALL = register("sage_clay_brick_wall", () -> new WallBlock(EBProperties.BlockP.SAGE_BRICKS), true);
+    public static final Supplier<Block> MOSSY_SAGE_HARDENED_CLAY_BRICKS = register("mossy_sage_clay_bricks", () -> new Block(EBProperties.BlockP.SAGE_BRICKS), true);
+    public static final Supplier<Block> SAGE_GLAZED_CLAY = register("sage_glazed_clay", () -> new GlazedTerracottaBlock(EBProperties.BlockP.GLAZED), true);
+    public static final Supplier<Block> SAGE_BRICKS = register("sage_bricks", () -> new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SAGE_BRICK_STAIRS = register("sage_brick_stairs", () -> new PublicStairBlock(SAGE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SAGE_BRICK_SLAB = register("sage_brick_slab", () -> new SlabBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SAGE_BRICK_WALL = register("sage_brick_wall", () -> new WallBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_SAGE_BRICKS = register("smooth_sage_bricks", () -> new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_SAGE_BRICK_STAIRS = register("smooth_sage_brick_stairs", () -> new PublicStairBlock(SAGE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_SAGE_BRICK_SLAB = register("smooth_sage_brick_slab", () -> new SlabBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_SAGE_BRICK_WALL = register("smooth_sage_brick_wall", () -> new WallBlock(EBProperties.BlockP.BRICKS), true);
 
     //CORALSOIL
-    public static final Supplier<Block> CORALSOIL = register("coralsoil", () -> new Block(EBProperties.BlockP.CORALSOIL_CLAY), true);
-    public static final Supplier<Block> CORALSOIL_BRICKS = register("coralsoil_bricks", () -> new Block(EBProperties.BlockP.CORALSOIL), true);
-    public static final Supplier<Block> CORALSOIL_BRICK_STAIRS = register("coralsoil_brick_stairs", () -> new PublicStairBlock(CORALSOIL_BRICKS.get().defaultBlockState(), EBProperties.BlockP.CORALSOIL), true);
-    public static final Supplier<Block> CORALSOIL_BRICK_SLAB = register("coralsoil_brick_slab", () -> new SlabBlock(EBProperties.BlockP.CORALSOIL), true);
-    public static final Supplier<Block> CORALSOIL_BRICK_WALL = register("coralsoil_brick_wall", () -> new WallBlock(EBProperties.BlockP.CORALSOIL), true);
+    public static final Supplier<Block> CORALSOIL_CLAY = register("coralsoil_clay", () -> new Block(EBProperties.BlockP.CORALSOIL_CLAY), true);
+    public static final Supplier<Block> CORALSOIL_HARDENED_CLAY = register("coralsoil_hardened_clay", () -> new Block(EBProperties.BlockP.HARD_CLAY), true);
+    public static final Supplier<Block> CORALSOIL_HARDENED_CLAY_BRICKS = register("coralsoil_clay_bricks", () -> new Block(EBProperties.BlockP.CORALSOIL_BRICKS), true);
+    public static final Supplier<Block> CORALSOIL_HARDENED_CLAY_BRICK_STAIRS = register("coralsoil_clay_brick_stairs", () -> new PublicStairBlock(CORALSOIL_HARDENED_CLAY_BRICKS.get().defaultBlockState(), EBProperties.BlockP.CORALSOIL_BRICKS), true);
+    public static final Supplier<Block> CORALSOIL_HARDENED_CLAY_BRICK_SLAB = register("coralsoil_clay_brick_slab", () -> new SlabBlock(EBProperties.BlockP.CORALSOIL_BRICKS), true);
+    public static final Supplier<Block> CORALSOIL_HARDENED_CLAY_BRICK_WALL = register("coralsoil_clay_brick_wall", () -> new WallBlock(EBProperties.BlockP.CORALSOIL_BRICKS), true);
+    public static final Supplier<Block> CORALSOIL_GLAZED_CLAY = register("coralsoil_glazed_clay", () -> new GlazedTerracottaBlock(EBProperties.BlockP.GLAZED), true);
+    public static final Supplier<Block> CORALSOIL_BRICKS = register("coralsoil_bricks", () -> new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> CORALSOIL_BRICK_STAIRS = register("coralsoil_brick_stairs", () -> new PublicStairBlock(CORALSOIL_BRICKS.get().defaultBlockState(), EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> CORALSOIL_BRICK_SLAB = register("coralsoil_brick_slab", () -> new SlabBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> CORALSOIL_BRICK_WALL = register("coralsoil_brick_wall", () -> new WallBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_CORALSOIL_BRICKS = register("smooth_coralsoil_bricks", () -> new Block(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_CORALSOIL_BRICK_STAIRS = register("smooth_coralsoil_brick_stairs", () -> new PublicStairBlock(CORALSOIL_BRICKS.get().defaultBlockState(), EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_CORALSOIL_BRICK_SLAB = register("smooth_coralsoil_brick_slab", () -> new SlabBlock(EBProperties.BlockP.BRICKS), true);
+    public static final Supplier<Block> SMOOTH_CORALSOIL_BRICK_WALL = register("smooth_coralsoil_brick_wall", () -> new WallBlock(EBProperties.BlockP.BRICKS), true);
 
     //COPPER BRICKS
     public static final Supplier<Block> COPPER_BRICKS = register("copper_bricks", () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, EBProperties.BlockP.COPPER), true);
@@ -174,6 +211,32 @@ public class EBBlocks {
     public static final Supplier<Block> ANCIENT_VINES = register("ancient_vines", () -> new AncientVinesBlock(EBProperties.BlockP.ANCIENT_VINES), true);
     public static final Supplier<Block> ANCIENT_VINES_PLANT = register("ancient_vines_plant", () -> new AncientVinesPlantBlock(EBProperties.BlockP.ANCIENT_VINES_PLANT), false);
 
+    //WINTERGREEN WOOD
+    public static final Supplier<Block> WINTERGREEN_PLANKS = register("wintergreen_planks", () -> new Block(EBProperties.BlockP.PLANKS), true);
+    public static final Supplier<Block> WINTERGREEN_STAIRS = register("wintergreen_stairs", () -> new PublicStairBlock(WINTERGREEN_PLANKS.get().defaultBlockState(), EBProperties.BlockP.PLANKS), true);
+    public static final Supplier<Block> WINTERGREEN_SLAB = register("wintergreen_slab", () -> new SlabBlock(EBProperties.BlockP.PLANKS), true);
+
+    public static final Supplier<Block> WINTERGREEN_PRESSURE_PLATE = register("wintergreen_pressure_plate", () -> new PublicPressurePlateBlock(EBFamilyTypes.BlockSetTypes.WINTERGREEN, EBProperties.BlockP.PLATE), true);
+    public static final Supplier<Block> WINTERGREEN_BUTTON = register("wintergreen_button", () -> new PublicButtonBlock(EBFamilyTypes.BlockSetTypes.WINTERGREEN, 30, EBProperties.BlockP.BUTTON), true);
+    public static final Supplier<Block> WINTERGREEN_FENCE = register("wintergreen_fence", () -> new FenceBlock(EBProperties.BlockP.FENCE), true);
+    public static final Supplier<Block> WINTERGREEN_FENCE_GATE = register("wintergreen_fence_gate", () -> new FenceGateBlock(EBFamilyTypes.WoodTypes.WINTERGREEN, EBProperties.BlockP.GATE), true);
+    public static final Supplier<Block> WINTERGREEN_DOOR = register("wintergreen_door", () -> new PublicDoorBlock(EBFamilyTypes.BlockSetTypes.WINTERGREEN, EBProperties.BlockP.DOOR), true);
+    public static final Supplier<Block> WINTERGREEN_TRAPDOOR = register("wintergreen_trapdoor", () -> new PublicTrapdoorBlock(EBFamilyTypes.BlockSetTypes.WINTERGREEN, EBProperties.BlockP.TRAPDOOR), true);
+
+    public static final Supplier<Block> WINTERGREEN_LEAVES = register("wintergreen_leaves", () -> new WintergreenLeavesBlock(EBProperties.BlockP.LEAVES), true);
+    public static final Supplier<Block> WINTERGREEN_LOG = register("wintergreen_log", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
+    public static final Supplier<Block> STRIPPED_WINTERGREEN_LOG = register("stripped_wintergreen_log", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
+    public static final Supplier<Block> WINTERGREEN_WOOD = register("wintergreen_wood", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
+    public static final Supplier<Block> STRIPPED_WINTERGREEN_WOOD = register("stripped_wintergreen_wood", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
+
+    public static final Supplier<Block> WINTERGREEN_SIGN = register("wintergreen_sign", () -> new StandingSignBlock(EBFamilyTypes.WoodTypes.WINTERGREEN, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> WINTERGREEN_WALL_SIGN = register("wintergreen_wall_sign", () -> new WallSignBlock(EBFamilyTypes.WoodTypes.WINTERGREEN, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WALL_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> WINTERGREEN_HANGING_SIGN = register("wintergreen_hanging_sign", () -> new CeilingHangingSignBlock(EBFamilyTypes.WoodTypes.WINTERGREEN, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_HANGING_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> WINTERGREEN_WALL_HANGING_SIGN = register("wintergreen_wall_hanging_sign", () -> new WallHangingSignBlock(EBFamilyTypes.WoodTypes.WINTERGREEN, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WALL_HANGING_SIGN).mapColor(MapColor.SNOW)), false);
+
+    public static final Supplier<Block> WINTERGREEN_SAPLING = register("wintergreen_sapling", () -> new PublicSaplingBlock(EBTreeGrowers.WINTERGREEN, EBProperties.BlockP.SAPLING), true);
+    public static final Supplier<Block> POTTED_WINTERGREEN_SAPLING = register("potted_wintergreen_sapling", () -> new FlowerPotBlock(WINTERGREEN_SAPLING.get(), EBProperties.BlockP.SAPLING_POT), false);
+
     //HECTALITE
     public static final Supplier<Block> HECTALITE = register("hectalite", () -> new Block(EBProperties.BlockP.HECTALITE), true);
     public static final Supplier<Block> HECTALITE_STAIRS = register("hectalite_stairs", () -> new PublicStairBlock(HECTALITE.get().defaultBlockState(), EBProperties.BlockP.HECTALITE), true);
@@ -255,6 +318,17 @@ public class EBBlocks {
 
     //UNDYED
     public static final Supplier<Block> FROSTED_GLASS = register("frosted_glass", () -> new PublicHalfTransparentBlock(EBProperties.BlockP.FROSTED_GLASS), true);
+    public static final Supplier<Block> FROSTED_LANTERN = register("frosted_lantern", () -> new FrostedLanternBlock(null, EBProperties.BlockP.FROSTED_LANTERN), true);
+
+    public static final Supplier<Block> ALMENTRA_STATUE = register("almentra_statue", () -> new StatueBlock(EBProperties.BlockP.POLISHED_ALMENTRA), true);
+    public static final Supplier<Block> ALMENTRA = register("almentra", () -> new AlmentraBlock(ALMENTRA_STATUE.get(), EBProperties.BlockP.ALMENTRA), true);
+    public static final Supplier<Block> ALMENTRA_STAIRS = register("almentra_stairs", () -> new PublicStairBlock(ALMENTRA.get().defaultBlockState(), EBProperties.BlockP.ALMENTRA), true);
+    public static final Supplier<Block> ALMENTRA_SLAB = register("almentra_slab", () -> new SlabBlock(EBProperties.BlockP.ALMENTRA), true);
+
+    public static final Supplier<Block> ALMENTRA_BRICKS = register("almentra_bricks", () -> new Block(EBProperties.BlockP.ALMENTRA_BRICKS), true);
+    public static final Supplier<Block> ALMENTRA_BRICK_STAIRS = register("almentra_brick_stairs", () -> new PublicStairBlock(ALMENTRA_BRICKS.get().defaultBlockState(), EBProperties.BlockP.ALMENTRA_BRICKS), true);
+    public static final Supplier<Block> ALMENTRA_BRICK_SLAB = register("almentra_brick_slab", () -> new SlabBlock(EBProperties.BlockP.ALMENTRA_BRICKS), true);
+    public static final Supplier<Block> ALMENTRA_BRICK_WALL = register("almentra_brick_wall", () -> new WallBlock(EBProperties.BlockP.ALMENTRA_BRICKS), true);
 
     //DYED
     public static final HashMap<DyeColor, Supplier<Block>> DYED_CORRUGATED_IRON = new HashMap<>();
@@ -262,10 +336,22 @@ public class EBBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_CORRUGATED_IRON_SLAB = new HashMap<>();
 
     public static final HashMap<DyeColor, Supplier<Block>> DYED_FROSTED_GLASS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_FROSTED_LANTERN = new HashMap<>();
+
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ALMENTRA_STATUE = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ALMENTRA = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ALMENTRA_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ALMENTRA_SLAB = new HashMap<>();
+
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ALMENTRA_BRICKS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ALMENTRA_BRICK_STAIRS = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ALMENTRA_BRICK_SLAB = new HashMap<>();
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_ALMENTRA_BRICK_WALL = new HashMap<>();
 
     static {
         for (DyeColor colors : DyeColor.values()) {
-            DYED_CORRUGATED_IRON.put(colors, register(colors + "_corrugated_iron", () -> new Block(
+            //IRON
+            DYED_CORRUGATED_IRON.put(colors, register(colors + "_corrugated_iron", () -> new RotatedPillarBlock(
                     EBProperties.BlockP.CORRUGATED_IRON.mapColor(colors)), true));
 
             DYED_CORRUGATED_IRON_STAIRS.put(colors, register(colors + "_corrugated_iron_stairs", () -> new PublicStairBlock(DYED_CORRUGATED_IRON.get(colors).get().defaultBlockState(),
@@ -274,8 +360,38 @@ public class EBBlocks {
             DYED_CORRUGATED_IRON_SLAB.put(colors, register(colors + "_corrugated_iron_slab", () -> new SlabBlock(
                     EBProperties.BlockP.CORRUGATED_IRON.mapColor(colors)), true));
 
+            //FROSTED GLASS
             DYED_FROSTED_GLASS.put(colors, register(colors + "_stained_frosted_glass", () -> new StainedGlassBlock(
                     colors, EBProperties.BlockP.FROSTED_GLASS.mapColor(colors)), true));
+
+            DYED_FROSTED_LANTERN.put(colors, register(colors + "_frosted_lantern", () -> new FrostedLanternBlock(
+                    colors, EBProperties.BlockP.FROSTED_LANTERN.mapColor(colors)), true));
+
+            //ALMENTRA
+            DYED_ALMENTRA_STATUE.put(colors, register(colors + "_almentra_statue", () -> new StatueBlock(
+                    EBProperties.BlockP.POLISHED_ALMENTRA.mapColor(colors)), true));
+
+            DYED_ALMENTRA.put(colors, register(colors + "_almentra", () -> new AlmentraBlock(DYED_ALMENTRA_STATUE.get(colors).get(),
+                    EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+
+            DYED_ALMENTRA_STAIRS.put(colors, register(colors + "_almentra_stairs", () -> new PublicStairBlock(DYED_ALMENTRA.get(colors).get().defaultBlockState(),
+                    EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+
+            DYED_ALMENTRA_SLAB.put(colors, register(colors + "_almentra_slab", () -> new SlabBlock(
+                    EBProperties.BlockP.ALMENTRA.mapColor(colors)), true));
+
+            //ALMENTRA BRICKS
+            DYED_ALMENTRA_BRICKS.put(colors, register(colors + "_almentra_bricks", () -> new Block(
+                    EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
+
+            DYED_ALMENTRA_BRICK_STAIRS.put(colors, register(colors + "_almentra_brick_stairs", () -> new PublicStairBlock(DYED_ALMENTRA_BRICKS.get(colors).get().defaultBlockState(),
+                    EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
+
+            DYED_ALMENTRA_BRICK_SLAB.put(colors, register(colors + "_almentra_brick_slab", () -> new SlabBlock(
+                    EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
+
+            DYED_ALMENTRA_BRICK_WALL.put(colors, register(colors + "_almentra_brick_wall", () -> new WallBlock(
+                    EBProperties.BlockP.ALMENTRA_BRICKS.mapColor(colors)), true));
         }
     }
 
@@ -293,6 +409,42 @@ public class EBBlocks {
 
     public static Supplier<Block> getDyedFrostedGlass(int colors){
         return DYED_FROSTED_GLASS.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedFrostedLantern(int colors){
+        return DYED_FROSTED_LANTERN.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedAlmentra(int colors){
+        return DYED_ALMENTRA.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedAlmentraStairs(int colors){
+        return DYED_ALMENTRA_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedAlmentraSlab(int colors){
+        return DYED_ALMENTRA_SLAB.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedAlmentraStatue(int colors){
+        return DYED_ALMENTRA_STATUE.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedAlmentraBricks(int colors){
+        return DYED_ALMENTRA_BRICKS.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedAlmentraBrickStairs(int colors){
+        return DYED_ALMENTRA_BRICK_STAIRS.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedAlmentraBrickSlab(int colors){
+        return DYED_ALMENTRA_BRICK_SLAB.get(DyeColor.byId(colors));
+    }
+
+    public static Supplier<Block> getDyedAlmentraBrickWall(int colors){
+        return DYED_ALMENTRA_BRICK_WALL.get(DyeColor.byId(colors));
     }
 
     public static Supplier<Block> register(String id, Supplier<Block> supplier, boolean hasItem) {

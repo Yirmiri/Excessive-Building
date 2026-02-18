@@ -23,5 +23,9 @@ public abstract class ChestBoatMixin extends Boat {
         if (this.getVariant() == EBUtil.ANCIENT_BOAT) {
             cir.setReturnValue(EBItems.ANCIENT_CHEST_BOAT.get());
         }
+
+        if (this.getVariant() == EBUtil.WINTERGREEN_BOAT) {
+            cir.setReturnValue(EBItems.WINTERGREEN_CHEST_BOAT.get());
+        }
     }
 }

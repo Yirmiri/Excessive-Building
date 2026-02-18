@@ -30,6 +30,15 @@ public class EBLangProvider extends FabricLanguageProvider {
             build.add(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get(), dyeString + " Corrugated Iron Stairs");
             build.add(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get(), dyeString + " Corrugated Iron Slab");
             build.add(EBBlocks.getDyedFrostedGlass(colors.getId()).get(), dyeString + " Stained Frosted Glass");
+            build.add(EBBlocks.getDyedFrostedLantern(colors.getId()).get(), dyeString + " Frosted Lantern");
+            build.add(EBBlocks.getDyedAlmentra(colors.getId()).get(), dyeString + " Almentra");
+            build.add(EBBlocks.getDyedAlmentraStairs(colors.getId()).get(), dyeString + " Almentra Stairs");
+            build.add(EBBlocks.getDyedAlmentraSlab(colors.getId()).get(), dyeString + " Almentra Slab");
+            build.add(EBBlocks.getDyedAlmentraStatue(colors.getId()).get(), dyeString + " Almentra Statue");
+            build.add(EBBlocks.getDyedAlmentraBricks(colors.getId()).get(), dyeString + " Almentra Bricks");
+            build.add(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()).get(), dyeString + " Almentra Brick Stairs");
+            build.add(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()).get(), dyeString + " Almentra Brick Slab");
+            build.add(EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get(), dyeString + " Almentra Statue");
         }
 
         //MISC
@@ -76,29 +85,66 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.COBBLESTONE_BRICK_SLAB.get(), "Cobblestone Brick Slab");
         build.add(EBBlocks.COBBLESTONE_BRICK_WALL.get(), "Cobblestone Brick Wall");
 
-        build.add(EBBlocks.CORALSOIL.get(), "Coralsoil");
+        build.add(EBBlocks.CORALSOIL_CLAY.get(), "Coralsoil Clay");
+        build.add(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get(), "Coralsoil Clay Bricks");
+        build.add(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_STAIRS.get(), "Coralsoil Clay Brick Stairs");
+        build.add(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_SLAB.get(), "Coralsoil Clay Brick Slab");
+        build.add(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_WALL.get(), "Coralsoil Clay Brick Wall");
+        build.add(EBBlocks.CORALSOIL_HARDENED_CLAY.get(), "Coralsoil Hardened Clay");
+        build.add(EBBlocks.CORALSOIL_GLAZED_CLAY.get(), "Coralsoil Glazed Clay");
         build.add(EBBlocks.CORALSOIL_BRICKS.get(), "Coralsoil Bricks");
         build.add(EBBlocks.CORALSOIL_BRICK_STAIRS.get(), "Coralsoil Brick Stairs");
         build.add(EBBlocks.CORALSOIL_BRICK_SLAB.get(), "Coralsoil Brick Slab");
         build.add(EBBlocks.CORALSOIL_BRICK_WALL.get(), "Coralsoil Brick Wall");
+        build.add(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get(), "Smooth Coralsoil Bricks");
+        build.add(EBBlocks.SMOOTH_CORALSOIL_BRICK_STAIRS.get(), "Smooth Coralsoil Brick Stairs");
+        build.add(EBBlocks.SMOOTH_CORALSOIL_BRICK_SLAB.get(), "Smooth Coralsoil Brick Slab");
+        build.add(EBBlocks.SMOOTH_CORALSOIL_BRICK_WALL.get(), "Smooth Coralsoil Brick Wall");
 
         build.add(EBBlocks.LAVENDER_BLOCK.get(), "Lavender Bale");
         build.add(EBBlocks.LAVENDER.get(), "Lavender");
         build.add(EBBlocks.LAVENDER_CLAY.get(), "Lavender Clay");
-        build.add(EBBlocks.MOSSY_LAVENDER_BRICKS.get(), "Mossy Lavender Bricks");
+        build.add(EBBlocks.MOSSY_LAVENDER_HARDENED_CLAY_BRICKS.get(), "Mossy Lavender Clay Bricks");
+        build.add(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get(), "Lavender Clay Bricks");
+        build.add(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_STAIRS.get(), "Lavender Clay Brick Stairs");
+        build.add(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_SLAB.get(), "Lavender Clay Brick Slab");
+        build.add(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_WALL.get(), "Lavender Clay Brick Wall");
+        build.add(EBBlocks.LAVENDER_HARDENED_CLAY.get(), "Lavender Hardened Clay");
+        build.add(EBBlocks.LAVENDER_GLAZED_CLAY.get(), "Lavender Glazed Clay");
         build.add(EBBlocks.LAVENDER_BRICKS.get(), "Lavender Bricks");
         build.add(EBBlocks.LAVENDER_BRICK_STAIRS.get(), "Lavender Brick Stairs");
         build.add(EBBlocks.LAVENDER_BRICK_SLAB.get(), "Lavender Brick Slab");
         build.add(EBBlocks.LAVENDER_BRICK_WALL.get(), "Lavender Brick Wall");
+        build.add(EBBlocks.SMOOTH_LAVENDER_BRICKS.get(), "Smooth Lavender Bricks");
+        build.add(EBBlocks.SMOOTH_LAVENDER_BRICK_STAIRS.get(), "Smooth Lavender Brick Stairs");
+        build.add(EBBlocks.SMOOTH_LAVENDER_BRICK_SLAB.get(), "Smooth Lavender Brick Slab");
+        build.add(EBBlocks.SMOOTH_LAVENDER_BRICK_WALL.get(), "Smooth Lavender Brick Wall");
 
         build.add(EBBlocks.SAGE_BLOCK.get(), "Sage Bale");
         build.add(EBBlocks.SAGE.get(), "Sage");
         build.add(EBBlocks.SAGE_CLAY.get(), "Sage Clay");
-        build.add(EBBlocks.MOSSY_SAGE_BRICKS.get(), "Mossy Sage Bricks");
+        build.add(EBBlocks.MOSSY_SAGE_HARDENED_CLAY_BRICKS.get(), "Mossy Sage Clay Bricks");
+        build.add(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get(), "Sage Clay Bricks");
+        build.add(EBBlocks.SAGE_HARDENED_CLAY_BRICK_STAIRS.get(), "Sage Clay Brick Stairs");
+        build.add(EBBlocks.SAGE_HARDENED_CLAY_BRICK_SLAB.get(), "Sage Clay Brick Slab");
+        build.add(EBBlocks.SAGE_HARDENED_CLAY_BRICK_WALL.get(), "Sage Clay Brick Wall");
+        build.add(EBBlocks.SAGE_HARDENED_CLAY.get(), "Sage Hardened Clay");
+        build.add(EBBlocks.SAGE_GLAZED_CLAY.get(), "Sage Glazed Clay");
         build.add(EBBlocks.SAGE_BRICKS.get(), "Sage Bricks");
         build.add(EBBlocks.SAGE_BRICK_STAIRS.get(), "Sage Brick Stairs");
         build.add(EBBlocks.SAGE_BRICK_SLAB.get(), "Sage Brick Slab");
         build.add(EBBlocks.SAGE_BRICK_WALL.get(), "Sage Brick Wall");
+        build.add(EBBlocks.SMOOTH_SAGE_BRICKS.get(), "Smooth Sage Bricks");
+        build.add(EBBlocks.SMOOTH_SAGE_BRICK_STAIRS.get(), "Smooth Sage Brick Stairs");
+        build.add(EBBlocks.SMOOTH_SAGE_BRICK_SLAB.get(), "Smooth Sage Brick Slab");
+        build.add(EBBlocks.SMOOTH_SAGE_BRICK_WALL.get(), "Smooth Sage Brick Wall");
+
+        build.add(EBBlocks.SMOOTH_BRICKS.get(), "Smooth Bricks");
+        build.add(EBBlocks.SMOOTH_BRICK_STAIRS.get(), "Smooth Brick Stairs");
+        build.add(EBBlocks.SMOOTH_BRICK_SLAB.get(), "Smooth Brick Slab");
+        build.add(EBBlocks.SMOOTH_BRICK_WALL.get(), "Smooth Brick Wall");
+
+        build.add(EBBlocks.FROSTED_LANTERN.get(), "Frosted Lantern");
 
         build.add(EBBlocks.PEBBLESTONE.get(), "Pebblestone");
         build.add(EBBlocks.CONGLOMERATE.get(), "Conglomerate");
@@ -126,6 +172,22 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.ANCIENT_FENCE.get(), "Ancient Fence");
         build.add(EBBlocks.ANCIENT_FENCE_GATE.get(), "Ancient Fence Gate");
         build.add(EBBlocks.ANCIENT_VINES.get(), "Ancient Vines");
+
+        build.add(EBBlocks.WINTERGREEN_SAPLING.get(), "Wintergreen Sapling");
+        build.add(EBBlocks.WINTERGREEN_LOG.get(), "Wintergreen Log");
+        build.add(EBBlocks.WINTERGREEN_WOOD.get(), "Wintergreen Wood");
+        build.add(EBBlocks.STRIPPED_WINTERGREEN_LOG.get(), "Stripped Wintergreen Log");
+        build.add(EBBlocks.STRIPPED_WINTERGREEN_WOOD.get(), "Stripped Wintergreen Wood");
+        build.add(EBBlocks.WINTERGREEN_PLANKS.get(), "Wintergreen Planks");
+        build.add(EBBlocks.WINTERGREEN_STAIRS.get(), "Wintergreen Stairs");
+        build.add(EBBlocks.WINTERGREEN_SLAB.get(), "Wintergreen Slab");
+        build.add(EBBlocks.WINTERGREEN_PRESSURE_PLATE.get(), "Wintergreen Pressure Plate");
+        build.add(EBBlocks.WINTERGREEN_BUTTON.get(), "Wintergreen Button");
+        build.add(EBBlocks.WINTERGREEN_TRAPDOOR.get(), "Wintergreen Trapdoor");
+        build.add(EBBlocks.WINTERGREEN_DOOR.get(), "Wintergreen Door");
+        build.add(EBBlocks.WINTERGREEN_LEAVES.get(), "Wintergreen Leaves");
+        build.add(EBBlocks.WINTERGREEN_FENCE.get(), "Wintergreen Fence");
+        build.add(EBBlocks.WINTERGREEN_FENCE_GATE.get(), "Wintergreen Fence Gate");
 
         build.add(EBBlocks.BRIMSTONE.get(), "Brimstone");
         build.add(EBBlocks.BRIMSTONE_STAIRS.get(), "Brimstone Stairs");
@@ -240,6 +302,18 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.AMETHYST_FRAMED_GLASS.get(), "Amethyst Framed Glass");
         build.add(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get(), "Amethyst Framed Glass Pane");
 
+        build.add(EBBlocks.ZEUS_EPIC_BLOCK.get(), "Zeus' Epic Block");
+
+        build.add(EBBlocks.ALMENTRA.get(), "Almentra");
+        build.add(EBBlocks.ALMENTRA_STAIRS.get(), "Almentra Stairs");
+        build.add(EBBlocks.ALMENTRA_SLAB.get(), "Almentra Slab");
+        build.add(EBBlocks.ALMENTRA_STATUE.get(), "Almentra Statue");
+        
+        build.add(EBBlocks.ALMENTRA_BRICKS.get(), "Almentra Bricks");
+        build.add(EBBlocks.ALMENTRA_BRICK_STAIRS.get(), "Almentra Brick Stairs");
+        build.add(EBBlocks.ALMENTRA_BRICK_SLAB.get(), "Almentra Brick Slab");
+        build.add(EBBlocks.ALMENTRA_BRICK_WALL.get(), "Almentra Brick Wall");
+
         //ITEMS
         build.add(EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
         build.add(EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");
@@ -247,6 +321,15 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBItems.ANCIENT_HANGING_SIGN.get(), "Ancient Hanging Sign");
         build.add(EBItems.ANCIENT_FRUIT.get(), "Ancient Fruit");
         build.add(EBItems.GAUNTLET.get(), "Gauntlet");
+        build.add(EBItems.SAGE_CLAY_BALL.get(), "Sage Clay Ball");
+        build.add(EBItems.LAVENDER_CLAY_BALL.get(), "Lavender Clay Ball");
+        build.add(EBItems.CORALSOIL_CLAY_BALL.get(), "Coralsoil Clay Ball");
+        build.add(EBItems.WINTERGREEN_BOAT.get(), "Wintergreen Boat");
+        build.add(EBItems.WINTERGREEN_CHEST_BOAT.get(), "Wintergreen Chest Boat");
+        build.add(EBItems.WINTERGREEN_SIGN.get(), "Wintergreen Sign");
+        build.add(EBItems.WINTERGREEN_HANGING_SIGN.get(), "Wintergreen Hanging Sign");
+        build.add(EBItems.WINTER_BERRIES.get(), "Winter Berries");
+        build.add(EBItems.MALLET.get(), "Mallet");
         
         //POTIONS
         build.add("effect.excessive_building.reaching", "Reaching");

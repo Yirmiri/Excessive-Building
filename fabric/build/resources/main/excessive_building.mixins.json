@@ -11,7 +11,9 @@
     "BoatTypeMixin",
     "BrewingRecipeRegistryMixin",
     "ChestBoatMixin",
-    "GrowingPlantBlockMixin"
+    "FoliagePlacerInvoker",
+    "GrowingPlantBlockMixin",
+    "TrunkPlacerInvoker"
   ],
   "client": [
     "MinecraftMixin",

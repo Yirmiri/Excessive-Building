@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sage_clay": {
+    "has_sage_clay_ball": {
       "conditions": {
         "items": [
           {
-            "items": "excessive_building:sage_clay"
+            "items": "excessive_building:sage_clay_ball"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_sage_clay"
+      "has_sage_clay_ball"
     ]
   ],
   "rewards": {

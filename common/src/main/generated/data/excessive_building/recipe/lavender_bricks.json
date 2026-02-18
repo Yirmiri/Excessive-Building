@@ -1,12 +1,20 @@
 {
-  "type": "minecraft:smelting",
-  "category": "blocks",
-  "cookingtime": 200,
-  "experience": 0.1,
-  "ingredient": {
-    "item": "excessive_building:lavender_clay"
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:brick"
+    },
+    "@": {
+      "item": "excessive_building:lavender_clay_ball"
+    }
   },
+  "pattern": [
+    "@#",
+    "#@"
+  ],
   "result": {
+    "count": 4,
     "id": "excessive_building:lavender_bricks"
   }
 }

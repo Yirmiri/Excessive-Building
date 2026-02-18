@@ -12,4 +12,12 @@ public class EBTreeGrowers {
             Optional.empty(),
             Optional.empty(),
             Optional.empty());
+
+    public static final TreeGrower WINTERGREEN = new TreeGrower("wintergreen", 0F,
+            Optional.empty(),
+            Optional.empty(),
+            Optional.of(EBFeatureKeys.ConfiguredFeatures.WINTERGREEN),
+            Optional.empty(),
+            Optional.empty(),
+            Optional.empty());
 }

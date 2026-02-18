@@ -11,5 +11,8 @@ public class EBRegistries {
     private static void registerStrippables() {
         RLToolActions.addStrippable(EBBlocks.ANCIENT_LOG.get(), EBBlocks.STRIPPED_ANCIENT_LOG.get());
         RLToolActions.addStrippable(EBBlocks.ANCIENT_WOOD.get(), EBBlocks.STRIPPED_ANCIENT_WOOD.get());
+
+        RLToolActions.addStrippable(EBBlocks.WINTERGREEN_LOG.get(), EBBlocks.STRIPPED_WINTERGREEN_LOG.get());
+        RLToolActions.addStrippable(EBBlocks.WINTERGREEN_WOOD.get(), EBBlocks.STRIPPED_WINTERGREEN_WOOD.get());
     }
 }

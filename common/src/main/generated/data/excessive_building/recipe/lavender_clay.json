@@ -3,18 +3,15 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:clay_ball"
-    },
-    "@": {
-      "item": "excessive_building:lavender"
+      "item": "excessive_building:lavender_clay_ball"
     }
   },
   "pattern": [
-    "@#",
-    "#@"
+    "##",
+    "##"
   ],
   "result": {
-    "count": 2,
+    "count": 1,
     "id": "excessive_building:lavender_clay"
   }
 }

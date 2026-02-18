@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "excessive_building:block/light_blue_corrugated_iron",
-    "side": "excessive_building:block/light_blue_corrugated_iron",
-    "top": "excessive_building:block/light_blue_corrugated_iron"
-  }
-}

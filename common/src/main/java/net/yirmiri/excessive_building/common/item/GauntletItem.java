@@ -14,9 +14,9 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.List;
 
-public class GauntletItem extends DiggerItem {
-    public GauntletItem(Tier tier, TagKey<Block> blocks, Properties properties) {
-        super(tier, blocks, properties);
+public class GauntletItem extends TieredItem {
+    public GauntletItem(Tier tier, Properties properties) {
+        super(tier, properties);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class GauntletItem extends DiggerItem {
                 .add(Attributes.ATTACK_KNOCKBACK, new AttributeModifier(ResourceLocation.withDefaultNamespace("base_attack_knockbback"), 1.5, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND)
 
                 .add(Attributes.BLOCK_INTERACTION_RANGE, new AttributeModifier(ResourceLocation.withDefaultNamespace("base_bir"),
-                        2.5, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HAND) //todo remove when potions added
+                        3.0, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HAND)
                 .build();
     }
 }

@@ -1,10 +1,6 @@
 package net.yirmiri.excessive_building.core.mixin;
 
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
-import net.minecraft.world.item.alchemy.Potions;
-import net.yirmiri.excessive_building.core.registry.EBItems;
-import net.yirmiri.excessive_building.core.registry.EBPotions;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

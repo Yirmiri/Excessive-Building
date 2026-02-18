@@ -3,8 +3,19 @@ package net.yirmiri.excessive_building.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
@@ -58,28 +69,28 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
         add(EBBlocks.COBBLESTONE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.COBBLESTONE_BRICK_SLAB.get()));
         dropSelf(EBBlocks.COBBLESTONE_BRICK_WALL.get());
 
-        dropSelf(EBBlocks.CORALSOIL.get());
-        dropSelf(EBBlocks.CORALSOIL_BRICKS.get());
-        dropSelf(EBBlocks.CORALSOIL_BRICK_STAIRS.get());
-        add(EBBlocks.CORALSOIL_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.CORALSOIL_BRICK_SLAB.get()));
-        dropSelf(EBBlocks.CORALSOIL_BRICK_WALL.get());
+        dropSelf(EBBlocks.CORALSOIL_CLAY.get());
+        dropSelf(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get());
+        dropSelf(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_STAIRS.get());
+        add(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_WALL.get());
 
         dropSelf(EBBlocks.LAVENDER_CLAY.get());
-        dropSelf(EBBlocks.LAVENDER_BRICKS.get());
-        dropSelf(EBBlocks.MOSSY_LAVENDER_BRICKS.get());
-        dropSelf(EBBlocks.LAVENDER_BRICK_STAIRS.get());
-        add(EBBlocks.LAVENDER_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.LAVENDER_BRICK_SLAB.get()));
-        dropSelf(EBBlocks.LAVENDER_BRICK_WALL.get());
+        dropSelf(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get());
+        dropSelf(EBBlocks.MOSSY_LAVENDER_HARDENED_CLAY_BRICKS.get());
+        dropSelf(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_STAIRS.get());
+        add(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_WALL.get());
         dropSelf(EBBlocks.LAVENDER.get());
         dropPottedContents(EBBlocks.POTTED_LAVENDER.get());
         dropSelf(EBBlocks.LAVENDER_BLOCK.get());
 
         dropSelf(EBBlocks.SAGE_CLAY.get());
-        dropSelf(EBBlocks.SAGE_BRICKS.get());
-        dropSelf(EBBlocks.MOSSY_SAGE_BRICKS.get());
-        dropSelf(EBBlocks.SAGE_BRICK_STAIRS.get());
-        add(EBBlocks.SAGE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.SAGE_BRICK_SLAB.get()));
-        dropSelf(EBBlocks.SAGE_BRICK_WALL.get());
+        dropSelf(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get());
+        dropSelf(EBBlocks.MOSSY_SAGE_HARDENED_CLAY_BRICKS.get());
+        dropSelf(EBBlocks.SAGE_HARDENED_CLAY_BRICK_STAIRS.get());
+        add(EBBlocks.SAGE_HARDENED_CLAY_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.SAGE_HARDENED_CLAY_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.SAGE_HARDENED_CLAY_BRICK_WALL.get());
         dropSelf(EBBlocks.SAGE.get());
         dropPottedContents(EBBlocks.POTTED_SAGE.get());
         dropSelf(EBBlocks.SAGE_BLOCK.get());
@@ -96,7 +107,7 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
 
         dropSelf(EBBlocks.PEBBLESTONE.get());
 
-        add(EBBlocks.ANCIENT_LEAVES.get(), createLeavesDrops(EBBlocks.ANCIENT_LEAVES.get(), EBBlocks.ANCIENT_SAPLING.get(), SAPLING_DROP_CHANCE));
+        add(EBBlocks.ANCIENT_LEAVES.get(), createFruitLeavesDrops(EBBlocks.ANCIENT_LEAVES.get(), EBItems.ANCIENT_FRUIT.get(), EBBlocks.ANCIENT_SAPLING.get(), SAPLING_DROP_CHANCE));
         add(EBBlocks.ANCIENT_DOOR.get(), createDoorTable(EBBlocks.ANCIENT_DOOR.get()));
         addNetherVinesDropTable(EBBlocks.ANCIENT_VINES.get(), EBBlocks.ANCIENT_VINES_PLANT.get());
         dropOther(EBBlocks.ANCIENT_SIGN.get(), EBItems.ANCIENT_SIGN.get());
@@ -118,6 +129,28 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
         dropPottedContents(EBBlocks.POTTED_ANCIENT_SAPLING.get());
         add(EBBlocks.ANCIENT_DOOR.get(), createDoorTable(EBBlocks.ANCIENT_DOOR.get()));
         dropSelf(EBBlocks.ANCIENT_TRAPDOOR.get());
+
+        add(EBBlocks.WINTERGREEN_LEAVES.get(), createFruitLeavesDrops(EBBlocks.WINTERGREEN_LEAVES.get(), EBItems.WINTER_BERRIES.get(), EBBlocks.WINTERGREEN_SAPLING.get(), SAPLING_DROP_CHANCE));
+        add(EBBlocks.WINTERGREEN_DOOR.get(), createDoorTable(EBBlocks.WINTERGREEN_DOOR.get()));
+        dropOther(EBBlocks.WINTERGREEN_SIGN.get(), EBItems.WINTERGREEN_SIGN.get());
+        dropOther(EBBlocks.WINTERGREEN_WALL_SIGN.get(), EBItems.WINTERGREEN_SIGN.get());
+        dropOther(EBBlocks.WINTERGREEN_HANGING_SIGN.get(), EBItems.WINTERGREEN_HANGING_SIGN.get());
+        dropOther(EBBlocks.WINTERGREEN_WALL_HANGING_SIGN.get(), EBItems.WINTERGREEN_HANGING_SIGN.get());
+        dropSelf(EBBlocks.WINTERGREEN_PLANKS.get());
+        dropSelf(EBBlocks.WINTERGREEN_STAIRS.get());
+        add(EBBlocks.WINTERGREEN_SLAB.get(), createSlabItemTable(EBBlocks.WINTERGREEN_SLAB.get()));
+        dropSelf(EBBlocks.WINTERGREEN_FENCE_GATE.get());
+        dropSelf(EBBlocks.WINTERGREEN_FENCE.get());
+        dropSelf(EBBlocks.WINTERGREEN_PRESSURE_PLATE.get());
+        dropSelf(EBBlocks.WINTERGREEN_BUTTON.get());
+        dropSelf(EBBlocks.WINTERGREEN_LOG.get());
+        dropSelf(EBBlocks.WINTERGREEN_WOOD.get());
+        dropSelf(EBBlocks.STRIPPED_WINTERGREEN_LOG.get());
+        dropSelf(EBBlocks.STRIPPED_WINTERGREEN_WOOD.get());
+        dropSelf(EBBlocks.WINTERGREEN_SAPLING.get());
+        dropPottedContents(EBBlocks.POTTED_WINTERGREEN_SAPLING.get());
+        add(EBBlocks.WINTERGREEN_DOOR.get(), createDoorTable(EBBlocks.WINTERGREEN_DOOR.get()));
+        dropSelf(EBBlocks.WINTERGREEN_TRAPDOOR.get());
 
         dropSelf(EBBlocks.BRIMSTONE.get());
         dropSelf(EBBlocks.BRIMSTONE_STAIRS.get());
@@ -241,6 +274,46 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
         dropWhenSilkTouch(EBBlocks.AMETHYST_FRAMED_GLASS.get());
         dropWhenSilkTouch(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
 
+        dropSelf(EBBlocks.SMOOTH_BRICKS.get());
+        dropSelf(EBBlocks.SMOOTH_BRICK_STAIRS.get());
+        add(EBBlocks.SMOOTH_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.SMOOTH_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.SMOOTH_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.CORALSOIL_HARDENED_CLAY.get());
+        dropSelf(EBBlocks.CORALSOIL_GLAZED_CLAY.get());
+        dropSelf(EBBlocks.CORALSOIL_BRICKS.get());
+        dropSelf(EBBlocks.CORALSOIL_BRICK_STAIRS.get());
+        add(EBBlocks.CORALSOIL_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.CORALSOIL_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.CORALSOIL_BRICK_WALL.get());
+        dropSelf(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get());
+        dropSelf(EBBlocks.SMOOTH_CORALSOIL_BRICK_STAIRS.get());
+        add(EBBlocks.SMOOTH_CORALSOIL_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.SMOOTH_CORALSOIL_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.SMOOTH_CORALSOIL_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.LAVENDER_HARDENED_CLAY.get());
+        dropSelf(EBBlocks.LAVENDER_GLAZED_CLAY.get());
+        dropSelf(EBBlocks.LAVENDER_BRICKS.get());
+        dropSelf(EBBlocks.LAVENDER_BRICK_STAIRS.get());
+        add(EBBlocks.LAVENDER_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.LAVENDER_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.LAVENDER_BRICK_WALL.get());
+        dropSelf(EBBlocks.SMOOTH_LAVENDER_BRICKS.get());
+        dropSelf(EBBlocks.SMOOTH_LAVENDER_BRICK_STAIRS.get());
+        add(EBBlocks.SMOOTH_LAVENDER_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.SMOOTH_LAVENDER_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.SMOOTH_LAVENDER_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.SAGE_HARDENED_CLAY.get());
+        dropSelf(EBBlocks.SAGE_GLAZED_CLAY.get());
+        dropSelf(EBBlocks.SAGE_BRICKS.get());
+        dropSelf(EBBlocks.SAGE_BRICK_STAIRS.get());
+        add(EBBlocks.SAGE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.SAGE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.SAGE_BRICK_WALL.get());
+        dropSelf(EBBlocks.SMOOTH_SAGE_BRICKS.get());
+        dropSelf(EBBlocks.SMOOTH_SAGE_BRICK_STAIRS.get());
+        add(EBBlocks.SMOOTH_SAGE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.SMOOTH_SAGE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.SMOOTH_SAGE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.ZEUS_EPIC_BLOCK.get());
+
         addDyedDrops();
     }
 
@@ -250,6 +323,24 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
             dropSelf(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get());
             add(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get(), createSlabItemTable(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get()));
             dropSelf(EBBlocks.getDyedFrostedGlass(colors.getId()).get());
+            dropSelf(EBBlocks.getDyedFrostedLantern(colors.getId()).get());
+            dropSelf(EBBlocks.getDyedAlmentra(colors.getId()).get());
+            dropSelf(EBBlocks.getDyedAlmentraStairs(colors.getId()).get());
+            add(EBBlocks.getDyedAlmentraSlab(colors.getId()).get(), createSlabItemTable(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get()));
+            dropSelf(EBBlocks.getDyedAlmentraStatue(colors.getId()).get());
+            dropSelf(EBBlocks.getDyedAlmentraBricks(colors.getId()).get());
+            dropSelf(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()).get());
+            add(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()).get(), createSlabItemTable(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get()));
+            dropSelf(EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get());
         }
+    }
+
+    public LootTable.Builder createFruitLeavesDrops(Block leavesBlock, Item fruit, Block saplingBlock, float... chances) {
+        HolderLookup.RegistryLookup<Enchantment> registryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createLeavesDrops(leavesBlock, saplingBlock, chances).withPool(LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0F)).when(this.doesNotHaveShearsOrSilkTouch())
+                .add(((LootPoolSingletonContainer.Builder)this.applyExplosionCondition(leavesBlock, LootItem.lootTableItem(fruit)))
+                        .when(BonusLevelTableCondition.bonusLevelFlatChance(registryLookup.getOrThrow(Enchantments.FORTUNE),
+                                0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F))));
     }
 }

@@ -1,18 +1,20 @@
-// 1.21.1	2026-02-17T22:17:11.0929959	Excessive Building/Tags for minecraft:item
-1edde5b91b69f573f9016cf1a6e79cffaa8871b3 data\minecraft\tags\item\wooden_pressure_plates.json
-92e63a1cf04e6f7d0d8664a806c62bbad480c675 data\minecraft\tags\item\wooden_buttons.json
-ba3d71a2828a2171d5d06009ddcf7ce06e159d53 data\minecraft\tags\item\signs.json
+// 1.21.1	2026-02-18T16:09:37.630473	Excessive Building/Tags for minecraft:item
+df342941993ded3c5b3206ddc93960392064f803 data\minecraft\tags\item\wooden_pressure_plates.json
+7085cfd6d37d25e00967e92a5be3f667c09f5532 data\minecraft\tags\item\wooden_buttons.json
+0598f169f64f4d004be1674788dfd451623cc56c data\minecraft\tags\item\signs.json
 c94e70579bf002ea1f4535d1e110530673a037b9 data\minecraft\tags\item\small_flowers.json
-cb1303d8550c1c44f5c1d93061aeb00421641afb data\minecraft\tags\item\wooden_doors.json
-3acdb3aefd331cf0e07f2f6292c306aeb2cd223d data\minecraft\tags\item\wooden_slabs.json
+5395510270c9a4d385435896ebd0d4e89f0fbc32 data\minecraft\tags\item\wooden_doors.json
+427678a0bf947c9db50d48bb96308433d6cb03b7 data\minecraft\tags\item\wooden_slabs.json
 b58fc2221bf4f504362d4449f96f82232cd269f2 data\minecraft\tags\item\enchantable\durability.json
-06d789708176c4b19aa96a9434f8630c42cb53b0 data\minecraft\tags\item\walls.json
-d11ee62b5054d22a7ae04b7d42261c098e598229 data\minecraft\tags\item\fence_gates.json
+a4e82cc5521ed9ed18d5c2c4f0aa1753a2ba2d59 data\minecraft\tags\item\walls.json
+e0cf13a4a587ebba97574592ab1bd5be6b6c4a1b data\minecraft\tags\item\fence_gates.json
 e16dd0216b65049658bf81ff05bc00cb45041d92 data\excessive_building\tags\item\ancient_logs.json
 7f2a6063c22b1dbf94a82a556a8ce5302a2dbce0 data\excessive_building\tags\item\dead_coral_blocks.json
+a22ce8bc0c40f0c42676c8c61716e55e016d5fb1 data\excessive_building\tags\item\wintergreen_logs.json
 b58fc2221bf4f504362d4449f96f82232cd269f2 data\minecraft\tags\item\enchantable\mining_loot.json
-2714b86fd272c4dc23f625ad6e85ee0df304a93e data\minecraft\tags\item\wooden_trapdoors.json
+1e27e5f10eb44fe0b22a7ab4ddb31fc666319830 data\minecraft\tags\item\wooden_trapdoors.json
 b58fc2221bf4f504362d4449f96f82232cd269f2 data\minecraft\tags\item\enchantable\mining.json
-15f232853523acd25853c58e0f94256933a1a194 data\minecraft\tags\item\wooden_fences.json
-b1996b2acccaaa61ab847967148616b98e1b7e5b data\minecraft\tags\item\wooden_stairs.json
-57d16cfe3867b211870e103e54e86c25dfddb226 data\minecraft\tags\item\hanging_signs.json
+6530f5914fd4a44aadc4bc46f7405870686bdae1 data\minecraft\tags\item\wooden_fences.json
+df4780f413558c2cfbff472b736591ee1849e8eb data\minecraft\tags\item\wooden_stairs.json
+7d87cc66b8a6b13b93700870328a541b261ab92a data\minecraft\tags\item\hanging_signs.json
+70c924cb31e3b5bbdd8c4ce122646c55941ea40c data\minecraft\tags\item\planks.json

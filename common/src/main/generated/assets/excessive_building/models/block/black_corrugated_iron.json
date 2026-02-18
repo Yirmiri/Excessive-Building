@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "excessive_building:block/black_corrugated_iron"
+    "end": "excessive_building:block/black_corrugated_iron_top",
+    "side": "excessive_building:block/black_corrugated_iron"
   }
 }

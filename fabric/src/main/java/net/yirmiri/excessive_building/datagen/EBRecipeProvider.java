@@ -207,17 +207,34 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(EBBlocks.COBBLESTONE_BRICKS.get()), has(EBBlocks.COBBLESTONE_BRICKS.get())).save(exporter);
 
         //=======================CORALSOIL=======================
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CORALSOIL.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBItems.CORALSOIL_CLAY_BALL.get(), 4)
                 .define('#', Items.CLAY_BALL).define('@', EBTags.ItemT.DEAD_CORAL_BLOCKS)
                 .pattern("@#")
                 .pattern("#@")
-                .unlockedBy(getHasName(Items.CLAY_BALL), has(Items.CLAY_BALL))
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CORALSOIL.get())));
+                .unlockedBy(getHasName(Items.CLAY_BALL), has(EBTags.ItemT.DEAD_CORAL_BLOCKS))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBItems.CORALSOIL_CLAY_BALL.get())));
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.CORALSOIL.get()), RecipeCategory.BUILDING_BLOCKS,
-                        EBBlocks.CORALSOIL_BRICKS.get(), 0.1F, 200)
-                .unlockedBy(getHasName(EBBlocks.CORALSOIL.get()), has(EBBlocks.CORALSOIL.get())).save(exporter);
+        twoByTwoPacker(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CORALSOIL_CLAY.get(), EBItems.CORALSOIL_CLAY_BALL.get());
 
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.CORALSOIL_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
+                        EBBlocks.CORALSOIL_HARDENED_CLAY.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.CORALSOIL_CLAY.get()), has(EBBlocks.CORALSOIL_CLAY.get())).save(exporter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.CORALSOIL_HARDENED_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
+                        EBBlocks.CORALSOIL_GLAZED_CLAY.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.CORALSOIL_HARDENED_CLAY.get()), has(EBBlocks.CORALSOIL_HARDENED_CLAY.get())).save(exporter);
+
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get(), EBBlocks.CORALSOIL_HARDENED_CLAY.get());
+        stonecutter.putRecipe(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get(), EBBlocks.CORALSOIL_HARDENED_CLAY.get());
+
+        //BRICKS
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CORALSOIL_BRICKS.get(), 4)
+                .define('#', Items.BRICK).define('@', EBItems.CORALSOIL_CLAY_BALL.get())
+                .pattern("@#")
+                .pattern("#@")
+                .unlockedBy(getHasName(EBItems.CORALSOIL_CLAY_BALL.get()), has(EBItems.CORALSOIL_CLAY_BALL.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CORALSOIL_BRICKS.get())));
+        
         stairBuilder(EBBlocks.CORALSOIL_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.CORALSOIL_BRICKS.get()))
                 .unlockedBy(getHasName(EBBlocks.CORALSOIL_BRICKS.get()), has(EBBlocks.CORALSOIL_BRICKS.get()))
                 .save(exporter);
@@ -234,17 +251,71 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         stonecutter.putRecipe(EBBlocks.CORALSOIL_BRICK_SLAB.get(), EBBlocks.CORALSOIL_BRICKS.get(), 2);
         stonecutter.putRecipe(EBBlocks.CORALSOIL_BRICK_WALL.get(), EBBlocks.CORALSOIL_BRICKS.get());
 
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.CORALSOIL_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS,
+                        EBBlocks.SMOOTH_CORALSOIL_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.CORALSOIL_BRICKS.get()), has(EBBlocks.CORALSOIL_BRICKS.get())).save(exporter);
+
+        stairBuilder(EBBlocks.SMOOTH_CORALSOIL_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get()), has(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_CORALSOIL_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get()), has(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_CORALSOIL_BRICK_WALL.get(), Ingredient.of(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get()), has(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.SMOOTH_CORALSOIL_BRICK_STAIRS.get(), EBBlocks.SMOOTH_CORALSOIL_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.SMOOTH_CORALSOIL_BRICK_SLAB.get(), EBBlocks.SMOOTH_CORALSOIL_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.SMOOTH_CORALSOIL_BRICK_WALL.get(), EBBlocks.SMOOTH_CORALSOIL_BRICKS.get());
+        
+        //NORMAL
+        stairBuilder(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get()), has(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_SLAB.get(), Ingredient.of(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get()), has(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_WALL.get(), Ingredient.of(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get()), has(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_STAIRS.get(), EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_SLAB.get(), EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_WALL.get(), EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get());
+
         //=======================LAVENDER=======================
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAVENDER_CLAY.get(), 2)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBItems.LAVENDER_CLAY_BALL.get(), 4)
                 .define('#', Items.CLAY_BALL).define('@', EBBlocks.LAVENDER.get())
                 .pattern("@#")
                 .pattern("#@")
-                .unlockedBy(getHasName(Items.BONE_MEAL), has(Items.BONE_MEAL))
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.LAVENDER_CLAY.get())));
+                .unlockedBy(getHasName(Items.CLAY_BALL), has(EBBlocks.LAVENDER.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBItems.LAVENDER_CLAY_BALL.get())));
+
+        twoByTwoPacker(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAVENDER_CLAY.get(), EBItems.LAVENDER_CLAY_BALL.get());
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.LAVENDER_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
-                EBBlocks.LAVENDER_BRICKS.get(), 0.1F, 200)
+                        EBBlocks.LAVENDER_HARDENED_CLAY.get(), 0.1F, 200)
                 .unlockedBy(getHasName(EBBlocks.LAVENDER_CLAY.get()), has(EBBlocks.LAVENDER_CLAY.get())).save(exporter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.LAVENDER_HARDENED_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
+                        EBBlocks.LAVENDER_GLAZED_CLAY.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.LAVENDER_HARDENED_CLAY.get()), has(EBBlocks.LAVENDER_HARDENED_CLAY.get())).save(exporter);
+
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get(), EBBlocks.LAVENDER_HARDENED_CLAY.get());
+        stonecutter.putRecipe(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get(), EBBlocks.LAVENDER_HARDENED_CLAY.get());
+
+        //BRICKS
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAVENDER_BRICKS.get(), 4)
+                .define('#', Items.BRICK).define('@', EBItems.LAVENDER_CLAY_BALL.get())
+                .pattern("@#")
+                .pattern("#@")
+                .unlockedBy(getHasName(EBItems.LAVENDER_CLAY_BALL.get()), has(EBItems.LAVENDER_CLAY_BALL.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.LAVENDER_BRICKS.get())));
 
         stairBuilder(EBBlocks.LAVENDER_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.LAVENDER_BRICKS.get()))
                 .unlockedBy(getHasName(EBBlocks.LAVENDER_BRICKS.get()), has(EBBlocks.LAVENDER_BRICKS.get()))
@@ -262,12 +333,49 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         stonecutter.putRecipe(EBBlocks.LAVENDER_BRICK_SLAB.get(), EBBlocks.LAVENDER_BRICKS.get(), 2);
         stonecutter.putRecipe(EBBlocks.LAVENDER_BRICK_WALL.get(), EBBlocks.LAVENDER_BRICKS.get());
 
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.LAVENDER_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS,
+                        EBBlocks.SMOOTH_LAVENDER_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.LAVENDER_BRICKS.get()), has(EBBlocks.LAVENDER_BRICKS.get())).save(exporter);
+
+        stairBuilder(EBBlocks.SMOOTH_LAVENDER_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_LAVENDER_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_LAVENDER_BRICKS.get()), has(EBBlocks.SMOOTH_LAVENDER_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_LAVENDER_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_LAVENDER_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_LAVENDER_BRICKS.get()), has(EBBlocks.SMOOTH_LAVENDER_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_LAVENDER_BRICK_WALL.get(), Ingredient.of(EBBlocks.SMOOTH_LAVENDER_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_LAVENDER_BRICKS.get()), has(EBBlocks.SMOOTH_LAVENDER_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.SMOOTH_LAVENDER_BRICK_STAIRS.get(), EBBlocks.SMOOTH_LAVENDER_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.SMOOTH_LAVENDER_BRICK_SLAB.get(), EBBlocks.SMOOTH_LAVENDER_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.SMOOTH_LAVENDER_BRICK_WALL.get(), EBBlocks.SMOOTH_LAVENDER_BRICKS.get());
+
+        //NORMAL
+        stairBuilder(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get()), has(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_SLAB.get(), Ingredient.of(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get()), has(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_WALL.get(), Ingredient.of(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get()), has(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_STAIRS.get(), EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_SLAB.get(), EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_WALL.get(), EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get());
+
         nineBlockStorageRecipesRecipesWithCustomUnpacking(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAVENDER.get(), RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAVENDER_BLOCK.get(), "lavender", "lavender");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBBlocks.MOSSY_LAVENDER_BRICKS.get(), 1)
-                .requires(EBBlocks.LAVENDER_BRICKS.get()).requires(EBBlocks.LAVENDER.get())
-                .unlockedBy(getHasName(EBBlocks.LAVENDER_BRICKS.get().asItem()), has(EBBlocks.LAVENDER_BRICKS.get().asItem()))
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.MOSSY_LAVENDER_BRICKS.get()) + "_from_lavender"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBBlocks.MOSSY_LAVENDER_HARDENED_CLAY_BRICKS.get(), 1)
+                .requires(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get()).requires(EBBlocks.LAVENDER.get())
+                .unlockedBy(getHasName(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get().asItem()), has(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get().asItem()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.MOSSY_LAVENDER_HARDENED_CLAY_BRICKS.get()) + "_from_lavender"));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Blocks.TARGET)
                 .define('H', EBBlocks.LAVENDER_BLOCK.get().asItem()).define('R', Items.REDSTONE)
@@ -277,7 +385,105 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(Items.REDSTONE), has(EBBlocks.LAVENDER_BLOCK.get().asItem()))
                 .group("target")
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.TARGET) + "_from_lavender_block"));
-        
+
+        //=======================SAGE=======================
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBItems.SAGE_CLAY_BALL.get(), 4)
+                .define('#', Items.CLAY_BALL).define('@', EBBlocks.SAGE.get())
+                .pattern("@#")
+                .pattern("#@")
+                .unlockedBy(getHasName(Items.CLAY_BALL), has(EBBlocks.SAGE.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBItems.SAGE_CLAY_BALL.get())));
+
+        twoByTwoPacker(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_CLAY.get(), EBItems.SAGE_CLAY_BALL.get());
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.SAGE_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
+                        EBBlocks.SAGE_HARDENED_CLAY.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.SAGE_CLAY.get()), has(EBBlocks.SAGE_CLAY.get())).save(exporter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.SAGE_HARDENED_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
+                        EBBlocks.SAGE_GLAZED_CLAY.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.SAGE_HARDENED_CLAY.get()), has(EBBlocks.SAGE_HARDENED_CLAY.get())).save(exporter);
+
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get(), EBBlocks.SAGE_HARDENED_CLAY.get());
+        stonecutter.putRecipe(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get(), EBBlocks.SAGE_HARDENED_CLAY.get());
+
+        //BRICKS
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_BRICKS.get(), 4)
+                .define('#', Items.BRICK).define('@', EBItems.SAGE_CLAY_BALL.get())
+                .pattern("@#")
+                .pattern("#@")
+                .unlockedBy(getHasName(EBItems.SAGE_CLAY_BALL.get()), has(EBItems.SAGE_CLAY_BALL.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.SAGE_BRICKS.get())));
+
+        stairBuilder(EBBlocks.SAGE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SAGE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get()), has(EBBlocks.SAGE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SAGE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get()), has(EBBlocks.SAGE_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_BRICK_WALL.get(), Ingredient.of(EBBlocks.SAGE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get()), has(EBBlocks.SAGE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.SAGE_BRICK_STAIRS.get(), EBBlocks.SAGE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.SAGE_BRICK_SLAB.get(), EBBlocks.SAGE_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.SAGE_BRICK_WALL.get(), EBBlocks.SAGE_BRICKS.get());
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.SAGE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS,
+                        EBBlocks.SMOOTH_SAGE_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get()), has(EBBlocks.SAGE_BRICKS.get())).save(exporter);
+
+        stairBuilder(EBBlocks.SMOOTH_SAGE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_SAGE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_SAGE_BRICKS.get()), has(EBBlocks.SMOOTH_SAGE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_SAGE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_SAGE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_SAGE_BRICKS.get()), has(EBBlocks.SMOOTH_SAGE_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_SAGE_BRICK_WALL.get(), Ingredient.of(EBBlocks.SMOOTH_SAGE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_SAGE_BRICKS.get()), has(EBBlocks.SMOOTH_SAGE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.SMOOTH_SAGE_BRICK_STAIRS.get(), EBBlocks.SMOOTH_SAGE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.SMOOTH_SAGE_BRICK_SLAB.get(), EBBlocks.SMOOTH_SAGE_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.SMOOTH_SAGE_BRICK_WALL.get(), EBBlocks.SMOOTH_SAGE_BRICKS.get());
+
+        //NORMAL
+        stairBuilder(EBBlocks.SAGE_HARDENED_CLAY_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get()), has(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_HARDENED_CLAY_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get()), has(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_HARDENED_CLAY_BRICK_WALL.get(), Ingredient.of(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get()), has(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.SAGE_HARDENED_CLAY_BRICK_STAIRS.get(), EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.SAGE_HARDENED_CLAY_BRICK_SLAB.get(), EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.SAGE_HARDENED_CLAY_BRICK_WALL.get(), EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get());
+
+        nineBlockStorageRecipesRecipesWithCustomUnpacking(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE.get(), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_BLOCK.get(), "sage", "sage");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBBlocks.MOSSY_SAGE_HARDENED_CLAY_BRICKS.get(), 1)
+                .requires(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get()).requires(EBBlocks.SAGE.get())
+                .unlockedBy(getHasName(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get().asItem()), has(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get().asItem()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.MOSSY_SAGE_HARDENED_CLAY_BRICKS.get()) + "_from_sage"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Blocks.TARGET)
+                .define('H', EBBlocks.SAGE_BLOCK.get().asItem()).define('R', Items.REDSTONE)
+                .pattern(" R ")
+                .pattern("RHR")
+                .pattern(" R ")
+                .unlockedBy(getHasName(Items.REDSTONE), has(EBBlocks.SAGE_BLOCK.get().asItem()))
+                .group("target")
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.TARGET) + "_from_sage_block"));
+
         //=======================CONGLOMERATE=======================
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PEBBLESTONE.get(), 8)
                 .define('#', Blocks.SAND).define('!', Blocks.GRAVEL).define('@', ItemTags.STONE_CRAFTING_MATERIALS)
@@ -418,6 +624,27 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         chestBoat(exporter, EBItems.ANCIENT_CHEST_BOAT.get(), EBItems.ANCIENT_BOAT.get());
         hangingSign(exporter, EBItems.ANCIENT_HANGING_SIGN.get(), EBBlocks.STRIPPED_ANCIENT_LOG.get());
 
+        //=======================WINTERGREEN WOOD=======================
+        BlockFamily wintergreenFamily = familyBuilder(EBBlocks.WINTERGREEN_PLANKS.get())
+                .stairs(EBBlocks.WINTERGREEN_STAIRS.get())
+                .slab(EBBlocks.WINTERGREEN_SLAB.get())
+                .door(EBBlocks.WINTERGREEN_DOOR.get())
+                .trapdoor(EBBlocks.WINTERGREEN_TRAPDOOR.get())
+                .fence(EBBlocks.WINTERGREEN_FENCE.get())
+                .fenceGate(EBBlocks.WINTERGREEN_FENCE_GATE.get())
+                //.sign(EBBlocks.WINTERGREEN_SIGN.get(), EBBlocks.WINTERGREEN_WALL_SIGN.get())
+                .button(EBBlocks.WINTERGREEN_BUTTON.get())
+                .pressurePlate(EBBlocks.WINTERGREEN_PRESSURE_PLATE.get())
+                .recipeGroupPrefix("wooden")
+                .recipeUnlockedBy("has_planks")
+                .getFamily();
+        generateRecipes(exporter, wintergreenFamily, FeatureFlagSet.of(FeatureFlags.VANILLA));
+
+        planksFromLogs(exporter, EBBlocks.WINTERGREEN_PLANKS.get(), EBTags.ItemT.WINTERGREEN_LOGS, 4);
+        woodenBoat(exporter, EBItems.WINTERGREEN_BOAT.get(), EBBlocks.WINTERGREEN_PLANKS.get());
+        chestBoat(exporter, EBItems.WINTERGREEN_CHEST_BOAT.get(), EBItems.WINTERGREEN_BOAT.get());
+        hangingSign(exporter, EBItems.WINTERGREEN_HANGING_SIGN.get(), EBBlocks.STRIPPED_WINTERGREEN_LOG.get());
+
         //==========================TOOLS==========================
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.GAUNTLET.get(), 1)
                 .define('#', Items.AMETHYST_SHARD).define('@', Items.COPPER_INGOT)
@@ -425,6 +652,14 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .pattern("!# ")
                 .pattern("#%@")
                 .pattern(" @@")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(exporter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.MALLET.get(), 1)
+                .define('#', Items.AMETHYST_SHARD).define('@', Items.COPPER_INGOT).define('!', Items.STICK)
+                .pattern("###")
+                .pattern("#@#")
+                .pattern(" ! ")
                 .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
                 .save(exporter);
         //==========================MISC==========================
@@ -701,50 +936,6 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         createChiseled(EBBlocks.CHISELED_ARIDITE.get().asItem(), EBBlocks.POLISHED_ARIDITE_SLAB.get().asItem())
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CHISELED_ARIDITE.get())));
 
-        //=======================SAGE=======================
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_CLAY.get(), 2)
-                .define('#', Items.CLAY_BALL).define('@', EBBlocks.SAGE.get())
-                .pattern("@#")
-                .pattern("#@")
-                .unlockedBy(getHasName(Items.BONE_MEAL), has(Items.BONE_MEAL))
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.SAGE_CLAY.get())));
-
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.SAGE_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
-                        EBBlocks.SAGE_BRICKS.get(), 0.1F, 200)
-                .unlockedBy(getHasName(EBBlocks.SAGE_CLAY.get()), has(EBBlocks.SAGE_CLAY.get())).save(exporter);
-
-        stairBuilder(EBBlocks.SAGE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SAGE_BRICKS.get()))
-                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get()), has(EBBlocks.SAGE_BRICKS.get()))
-                .save(exporter);
-
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SAGE_BRICKS.get()))
-                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get()), has(EBBlocks.SAGE_BRICKS.get()))
-                .save(exporter);
-
-        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_BRICK_WALL.get(), Ingredient.of(EBBlocks.SAGE_BRICKS.get()))
-                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get()), has(EBBlocks.SAGE_BRICKS.get()))
-                .save(exporter);
-
-        stonecutter.putRecipe(EBBlocks.SAGE_BRICK_STAIRS.get(), EBBlocks.SAGE_BRICKS.get());
-        stonecutter.putRecipe(EBBlocks.SAGE_BRICK_SLAB.get(), EBBlocks.SAGE_BRICKS.get(), 2);
-        stonecutter.putRecipe(EBBlocks.SAGE_BRICK_WALL.get(), EBBlocks.SAGE_BRICKS.get());
-
-        nineBlockStorageRecipesRecipesWithCustomUnpacking(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE.get(), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SAGE_BLOCK.get(), "sage", "sage");
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBBlocks.MOSSY_SAGE_BRICKS.get(), 1)
-                .requires(EBBlocks.SAGE_BRICKS.get()).requires(EBBlocks.SAGE.get())
-                .unlockedBy(getHasName(EBBlocks.SAGE_BRICKS.get().asItem()), has(EBBlocks.SAGE_BRICKS.get().asItem()))
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.MOSSY_SAGE_BRICKS.get()) + "_from_sage"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, Blocks.TARGET)
-                .define('H', EBBlocks.SAGE_BLOCK.get().asItem()).define('R', Items.REDSTONE)
-                .pattern(" R ")
-                .pattern("RHR")
-                .pattern(" R ")
-                .unlockedBy(getHasName(Items.REDSTONE), has(EBBlocks.SAGE_BLOCK.get().asItem()))
-                .group("target")
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.TARGET) + "_from_sage_block"));
-
         //=======================SITRITE=======================
         BlockFamily sitriteFamily = familyBuilder(EBBlocks.SITRITE.get())
                 .stairs(EBBlocks.SITRITE_STAIRS.get())
@@ -818,7 +1009,49 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(EBBlocks.POLISHED_SITRITE_SLAB.get()), has(EBBlocks.POLISHED_SITRITE_SLAB.get()))
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.CHISELED_SITRITE.get())));
 
-        //==========================AMETHYST==========================
+        //==========================MISC==========================
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ZEUS_EPIC_BLOCK.get(), 1)
+                .define('#', Items.PURPLE_DYE)
+                .pattern("## ")
+                .pattern(" ##")
+                .unlockedBy(getHasName(Items.PURPLE_DYE), has(Items.PURPLE_DYE))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.ZEUS_EPIC_BLOCK.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBItems.CORALSOIL_CLAY_BALL.get(), 4)
+                .requires(EBBlocks.CORALSOIL_CLAY.get())
+                .unlockedBy(getHasName(EBBlocks.CORALSOIL_CLAY.get()), has(EBBlocks.CORALSOIL_CLAY.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBItems.CORALSOIL_CLAY_BALL.get()) + "from_unpacking"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBItems.SAGE_CLAY_BALL.get(), 4)
+                .requires(EBBlocks.SAGE_CLAY.get())
+                .unlockedBy(getHasName(EBBlocks.SAGE_CLAY.get()), has(EBBlocks.SAGE_CLAY.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBItems.SAGE_CLAY_BALL.get()) + "from_unpacking"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBItems.LAVENDER_CLAY_BALL.get(), 4)
+                .requires(EBBlocks.LAVENDER_CLAY.get())
+                .unlockedBy(getHasName(EBBlocks.LAVENDER_CLAY.get()), has(EBBlocks.LAVENDER_CLAY.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBItems.LAVENDER_CLAY_BALL.get()) + "from_unpacking"));
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.BRICKS), RecipeCategory.BUILDING_BLOCKS,
+                        EBBlocks.SMOOTH_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(Blocks.BRICKS), has(Blocks.BRICKS)).save(exporter);
+
+        stairBuilder(EBBlocks.SMOOTH_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_BRICKS.get()), has(EBBlocks.SMOOTH_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_BRICKS.get()), has(EBBlocks.SMOOTH_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BRICK_WALL.get(), Ingredient.of(EBBlocks.SMOOTH_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_BRICKS.get()), has(EBBlocks.SMOOTH_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.SMOOTH_BRICK_STAIRS.get(), EBBlocks.SMOOTH_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.SMOOTH_BRICK_SLAB.get(), EBBlocks.SMOOTH_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.SMOOTH_BRICK_WALL.get(), EBBlocks.SMOOTH_BRICKS.get());
+        
         polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_BRICKS.get(), Blocks.AMETHYST_BLOCK);
 
         stairBuilder(EBBlocks.AMETHYST_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.AMETHYST_BRICKS.get()))
@@ -852,9 +1085,6 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get())));
 
         //=======================DYED=======================
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.GLASS), RecipeCategory.BUILDING_BLOCKS,
-                EBBlocks.FROSTED_GLASS.get(), 0.1F, 200).unlockedBy(getHasName(Blocks.GLASS), has(Blocks.GLASS)).save(exporter);
-
         for (DyeColor colors : DyeColor.values()) {
             //CORRUGATED IRON
             createCorrugatedIron(EBBlocks.getDyedCorrugatedIron(colors.getId()).get(), DyeItem.byColor(colors).getDyeColor())
@@ -876,7 +1106,94 @@ public class EBRecipeProvider extends FabricRecipeProvider {
             dyeEightForEight(EBBlocks.getDyedFrostedGlass(colors.getId()).get().asItem(), EBBlocks.FROSTED_GLASS.get().asItem(), DyeItem.byColor(colors).getDyeColor())
                     .unlockedBy(getHasName(EBBlocks.FROSTED_GLASS.get()), has(EBBlocks.FROSTED_GLASS.get()))
                     .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.getDyedFrostedGlass(colors.getId()).get())));
+
+            //FROSTED LANTERN
+            frostedLantern(EBBlocks.getDyedFrostedLantern(colors.getId()).get().asItem(), EBBlocks.FROSTED_LANTERN.get().asItem(),
+                    DyeItem.byColor(colors).getDyeColor())
+                    .unlockedBy(getHasName(EBBlocks.FROSTED_LANTERN.get().asItem()), has(EBBlocks.FROSTED_LANTERN.get().asItem()))
+                    .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.getDyedFrostedLantern(colors.getId()).get())));
+
+            //ALMENTRA
+            dyeEightForEight(EBBlocks.getDyedAlmentra(colors.getId()).get().asItem(), EBBlocks.ALMENTRA.get().asItem(),
+                    DyeItem.byColor(colors).getDyeColor())
+                    .unlockedBy(getHasName(EBBlocks.ALMENTRA.get().asItem()), has(EBBlocks.ALMENTRA.get().asItem()))
+                    .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.getDyedAlmentra(colors.getId()).get())));
+
+            stairBuilder(EBBlocks.getDyedAlmentraStairs(colors.getId()).get(), Ingredient.of(EBBlocks.getDyedAlmentra(colors.getId()).get()))
+                    .unlockedBy(getHasName(EBBlocks.getDyedAlmentra(colors.getId()).get()), has(EBBlocks.getDyedAlmentra(colors.getId()).get()))
+                    .save(exporter);
+
+            slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraSlab(colors.getId()).get(), Ingredient.of(EBBlocks.getDyedAlmentra(colors.getId()).get()))
+                    .unlockedBy(getHasName(EBBlocks.getDyedAlmentra(colors.getId()).get()), has(EBBlocks.getDyedAlmentra(colors.getId()).get()))
+                    .save(exporter);
+
+            stonecutter.putRecipe(EBBlocks.getDyedAlmentraStairs(colors.getId()).get(), EBBlocks.getDyedAlmentra(colors.getId()).get());
+            stonecutter.putRecipe(EBBlocks.getDyedAlmentraSlab(colors.getId()).get(), EBBlocks.getDyedAlmentra(colors.getId()).get(), 2);
+            
+            //ALMENTRA BRICKS
+            polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraBricks(colors.getId()).get(), EBBlocks.getDyedAlmentra(colors.getId()).get());
+
+            stairBuilder(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()).get(), Ingredient.of(EBBlocks.getDyedAlmentraBricks(colors.getId()).get()))
+                    .unlockedBy(getHasName(EBBlocks.getDyedAlmentraBricks(colors.getId()).get()), has(EBBlocks.getDyedAlmentraBricks(colors.getId()).get()))
+                    .save(exporter);
+
+            slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraBrickSlab(colors.getId()).get(), Ingredient.of(EBBlocks.getDyedAlmentraBricks(colors.getId()).get()))
+                    .unlockedBy(getHasName(EBBlocks.getDyedAlmentraBricks(colors.getId()).get()), has(EBBlocks.getDyedAlmentraBricks(colors.getId()).get()))
+                    .save(exporter);
+
+            wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get(), Ingredient.of(EBBlocks.getDyedAlmentraBricks(colors.getId()).get()))
+                    .unlockedBy(getHasName(EBBlocks.getDyedAlmentraBricks(colors.getId()).get()), has(EBBlocks.getDyedAlmentraBricks(colors.getId()).get()))
+                    .save(exporter);
+
+            stonecutter.putRecipe(EBBlocks.getDyedAlmentraBricks(colors.getId()).get(), EBBlocks.getDyedAlmentra(colors.getId()).get());
+
+            stonecutter.putRecipe(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()).get(), EBBlocks.getDyedAlmentraBricks(colors.getId()).get());
+            stonecutter.putRecipe(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()).get(), EBBlocks.getDyedAlmentraBricks(colors.getId()).get(), 2);
+            stonecutter.putRecipe(EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get(), EBBlocks.getDyedAlmentraBricks(colors.getId()).get());
         }
+
+        //UNDYED
+        stairBuilder(EBBlocks.ALMENTRA_STAIRS.get(), Ingredient.of(EBBlocks.ALMENTRA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ALMENTRA_BRICKS.get()), has(EBBlocks.ALMENTRA_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_SLAB.get(), Ingredient.of(EBBlocks.ALMENTRA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ALMENTRA_BRICKS.get()), has(EBBlocks.ALMENTRA_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.ALMENTRA_STAIRS.get(), EBBlocks.ALMENTRA_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.ALMENTRA_SLAB.get(), EBBlocks.ALMENTRA_BRICKS.get(), 2);
+        
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_BRICKS.get(), EBBlocks.ALMENTRA.get());
+
+        stairBuilder(EBBlocks.ALMENTRA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.ALMENTRA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ALMENTRA_BRICKS.get()), has(EBBlocks.ALMENTRA_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.ALMENTRA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ALMENTRA_BRICKS.get()), has(EBBlocks.ALMENTRA_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ALMENTRA_BRICK_WALL.get(), Ingredient.of(EBBlocks.ALMENTRA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ALMENTRA_BRICKS.get()), has(EBBlocks.ALMENTRA_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.ALMENTRA_BRICKS.get(), EBBlocks.ALMENTRA.get());
+
+        stonecutter.putRecipe(EBBlocks.ALMENTRA_BRICK_STAIRS.get(), EBBlocks.ALMENTRA_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.ALMENTRA_BRICK_SLAB.get(), EBBlocks.ALMENTRA_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.ALMENTRA_BRICK_WALL.get(), EBBlocks.ALMENTRA_BRICKS.get());
+        
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.GLASS), RecipeCategory.BUILDING_BLOCKS,
+                EBBlocks.FROSTED_GLASS.get(), 0.1F, 200).unlockedBy(getHasName(Blocks.GLASS), has(Blocks.GLASS)).save(exporter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.FROSTED_LANTERN.get(), 8)
+                .define('#', EBBlocks.FROSTED_GLASS.get()).define('@', Items.TORCH).define('!', Items.IRON_NUGGET)
+                .pattern("!#!")
+                .pattern("#@#")
+                .pattern("!#!")
+                .unlockedBy(getHasName(EBBlocks.FROSTED_GLASS.get()), has(EBBlocks.FROSTED_GLASS.get()))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.FROSTED_LANTERN.get())));
 
         //====================================================
         stonecutter.generateRecipes(exporter);
@@ -896,6 +1213,12 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .pattern("#@#")
                 .pattern("@!@")
                 .pattern("#@#");
+    }
+
+    public static ShapelessRecipeBuilder frostedLantern(Item output, Item lantern, DyeColor color) {
+        return ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, output, 1)
+                .requires(lantern).requires(DyeItem.byColor(color))
+                .unlockedBy(getHasName(lantern), has(lantern));
     }
 
     public static ShapedRecipeBuilder dyeEightForEight(Item output, Item ingredient, DyeColor color) {

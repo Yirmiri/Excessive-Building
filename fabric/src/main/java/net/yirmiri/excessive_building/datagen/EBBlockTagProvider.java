@@ -46,6 +46,51 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     private void appendMineableWithPickaxe() {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(EBBlocks.ZEUS_EPIC_BLOCK.get())
+
+                .add(EBBlocks.SMOOTH_CORALSOIL_BRICKS.get())
+                .add(EBBlocks.SMOOTH_CORALSOIL_BRICK_STAIRS.get())
+                .add(EBBlocks.SMOOTH_CORALSOIL_BRICK_SLAB.get())
+                .add(EBBlocks.SMOOTH_CORALSOIL_BRICK_WALL.get())
+
+                .add(EBBlocks.SMOOTH_LAVENDER_BRICKS.get())
+                .add(EBBlocks.SMOOTH_LAVENDER_BRICK_STAIRS.get())
+                .add(EBBlocks.SMOOTH_LAVENDER_BRICK_SLAB.get())
+                .add(EBBlocks.SMOOTH_LAVENDER_BRICK_WALL.get())
+
+                .add(EBBlocks.SMOOTH_SAGE_BRICKS.get())
+                .add(EBBlocks.SMOOTH_SAGE_BRICK_STAIRS.get())
+                .add(EBBlocks.SMOOTH_SAGE_BRICK_SLAB.get())
+                .add(EBBlocks.SMOOTH_SAGE_BRICK_WALL.get())
+
+                .add(EBBlocks.SMOOTH_BRICKS.get())
+                .add(EBBlocks.SMOOTH_BRICK_STAIRS.get())
+                .add(EBBlocks.SMOOTH_BRICK_SLAB.get())
+                .add(EBBlocks.SMOOTH_BRICK_WALL.get())
+
+                .add(EBBlocks.CORALSOIL_GLAZED_CLAY.get())
+                .add(EBBlocks.LAVENDER_GLAZED_CLAY.get())
+                .add(EBBlocks.SAGE_GLAZED_CLAY.get())
+
+                .add(EBBlocks.CORALSOIL_HARDENED_CLAY.get())
+                .add(EBBlocks.LAVENDER_HARDENED_CLAY.get())
+                .add(EBBlocks.SAGE_HARDENED_CLAY.get())
+
+                .add(EBBlocks.CORALSOIL_BRICKS.get())
+                .add(EBBlocks.CORALSOIL_BRICK_STAIRS.get())
+                .add(EBBlocks.CORALSOIL_BRICK_SLAB.get())
+                .add(EBBlocks.CORALSOIL_BRICK_WALL.get())
+
+                .add(EBBlocks.LAVENDER_BRICKS.get())
+                .add(EBBlocks.LAVENDER_BRICK_STAIRS.get())
+                .add(EBBlocks.LAVENDER_BRICK_SLAB.get())
+                .add(EBBlocks.LAVENDER_BRICK_WALL.get())
+
+                .add(EBBlocks.SAGE_BRICKS.get())
+                .add(EBBlocks.SAGE_BRICK_STAIRS.get())
+                .add(EBBlocks.SAGE_BRICK_SLAB.get())
+                .add(EBBlocks.SAGE_BRICK_WALL.get())
+
                 .add(EBBlocks.ANDESITE_BRICKS.get())
                 .add(EBBlocks.ANDESITE_BRICK_STAIRS.get())
                 .add(EBBlocks.ANDESITE_BRICK_SLAB.get())
@@ -111,22 +156,22 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.COBBLESTONE_BRICK_SLAB.get())
                 .add(EBBlocks.COBBLESTONE_BRICK_WALL.get())
 
-                .add(EBBlocks.CORALSOIL_BRICKS.get())
-                .add(EBBlocks.CORALSOIL_BRICK_STAIRS.get())
-                .add(EBBlocks.CORALSOIL_BRICK_SLAB.get())
-                .add(EBBlocks.CORALSOIL_BRICK_WALL.get())
+                .add(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICKS.get())
+                .add(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_STAIRS.get())
+                .add(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_SLAB.get())
+                .add(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_WALL.get())
 
-                .add(EBBlocks.LAVENDER_BRICKS.get())
-                .add(EBBlocks.LAVENDER_BRICK_STAIRS.get())
-                .add(EBBlocks.LAVENDER_BRICK_SLAB.get())
-                .add(EBBlocks.LAVENDER_BRICK_WALL.get())
-                .add(EBBlocks.MOSSY_LAVENDER_BRICKS.get())
+                .add(EBBlocks.LAVENDER_HARDENED_CLAY_BRICKS.get())
+                .add(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_STAIRS.get())
+                .add(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_SLAB.get())
+                .add(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_WALL.get())
+                .add(EBBlocks.MOSSY_LAVENDER_HARDENED_CLAY_BRICKS.get())
 
-                .add(EBBlocks.SAGE_BRICKS.get())
-                .add(EBBlocks.SAGE_BRICK_STAIRS.get())
-                .add(EBBlocks.SAGE_BRICK_SLAB.get())
-                .add(EBBlocks.SAGE_BRICK_WALL.get())
-                .add(EBBlocks.MOSSY_SAGE_BRICKS.get())
+                .add(EBBlocks.SAGE_HARDENED_CLAY_BRICKS.get())
+                .add(EBBlocks.SAGE_HARDENED_CLAY_BRICK_STAIRS.get())
+                .add(EBBlocks.SAGE_HARDENED_CLAY_BRICK_SLAB.get())
+                .add(EBBlocks.SAGE_HARDENED_CLAY_BRICK_WALL.get())
+                .add(EBBlocks.MOSSY_SAGE_HARDENED_CLAY_BRICKS.get())
 
                 .add(EBBlocks.BRIMSTONE.get())
                 .add(EBBlocks.BRIMSTONE_STAIRS.get())
@@ -227,6 +272,15 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                     .add(EBBlocks.getDyedCorrugatedIron(colors.getId()).get())
                     .add(EBBlocks.getDyedCorrugatedIronStairs(colors.getId()).get())
                     .add(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get())
+                    .add(EBBlocks.getDyedFrostedLantern(colors.getId()).get())
+                    .add(EBBlocks.getDyedAlmentra(colors.getId()).get())
+                    .add(EBBlocks.getDyedAlmentraStairs(colors.getId()).get())
+                    .add(EBBlocks.getDyedAlmentraSlab(colors.getId()).get())
+                    .add(EBBlocks.getDyedAlmentraStatue(colors.getId()).get())
+                    .add(EBBlocks.getDyedAlmentraBricks(colors.getId()).get())
+                    .add(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()).get())
+                    .add(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()).get())
+                    .add(EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get())
             ;
         }
     }
@@ -235,8 +289,8 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(EBBlocks.AMETHYST_BRICK_WALL.get())
                 .add(EBBlocks.COBBLESTONE_BRICK_WALL.get())
-                .add(EBBlocks.CORALSOIL_BRICK_WALL.get())
-                .add(EBBlocks.LAVENDER_BRICK_WALL.get())
+                .add(EBBlocks.CORALSOIL_HARDENED_CLAY_BRICK_WALL.get())
+                .add(EBBlocks.LAVENDER_HARDENED_CLAY_BRICK_WALL.get())
                 .add(EBBlocks.CONGLOMERATE_WALL.get())
                 .add(EBBlocks.CONGLOMERATE_BRICK_WALL.get())
                 .add(EBBlocks.BRIMSTONE_WALL.get())
@@ -253,10 +307,24 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.CHLOROSLATE_WALL.get())
                 .add(EBBlocks.POLISHED_CHLOROSLATE_WALL.get())
                 .add(EBBlocks.CHLOROSLATE_BRICK_WALL.get())
-                .add(EBBlocks.SAGE_BRICK_WALL.get())
+                .add(EBBlocks.SAGE_HARDENED_CLAY_BRICK_WALL.get())
                 .add(EBBlocks.SITRITE_WALL.get())
                 .add(EBBlocks.SITRITE_BRICK_WALL.get())
+                .add(EBBlocks.AMETHYST_BRICK_WALL.get())
+                .add(EBBlocks.SMOOTH_BRICK_WALL.get())
+                .add(EBBlocks.CORALSOIL_BRICK_WALL.get())
+                .add(EBBlocks.SMOOTH_CORALSOIL_BRICK_WALL.get())
+                .add(EBBlocks.SAGE_BRICK_WALL.get())
+                .add(EBBlocks.SMOOTH_SAGE_BRICK_WALL.get())
+                .add(EBBlocks.LAVENDER_BRICK_WALL.get())
+                .add(EBBlocks.SMOOTH_LAVENDER_BRICK_WALL.get())
         ;
+
+        for (DyeColor colors : DyeColor.values()) {
+            getOrCreateTagBuilder(BlockTags.WALLS)
+                    .add(EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get())
+            ;
+        }
     }
 
     private void appendMineableWithAxe() {
@@ -278,6 +346,24 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.ANCIENT_WALL_SIGN.get())
                 .add(EBBlocks.ANCIENT_HANGING_SIGN.get())
                 .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN.get())
+
+                .add(EBBlocks.WINTERGREEN_PLANKS.get())
+                .add(EBBlocks.WINTERGREEN_STAIRS.get())
+                .add(EBBlocks.WINTERGREEN_SLAB.get())
+                .add(EBBlocks.WINTERGREEN_FENCE.get())
+                .add(EBBlocks.WINTERGREEN_FENCE_GATE.get())
+                .add(EBBlocks.WINTERGREEN_PRESSURE_PLATE.get())
+                .add(EBBlocks.WINTERGREEN_BUTTON.get())
+                .add(EBBlocks.WINTERGREEN_LOG.get())
+                .add(EBBlocks.WINTERGREEN_WOOD.get())
+                .add(EBBlocks.STRIPPED_WINTERGREEN_LOG.get())
+                .add(EBBlocks.STRIPPED_WINTERGREEN_WOOD.get())
+                .add(EBBlocks.WINTERGREEN_DOOR.get())
+                .add(EBBlocks.WINTERGREEN_TRAPDOOR.get())
+                .add(EBBlocks.WINTERGREEN_SIGN.get())
+                .add(EBBlocks.WINTERGREEN_WALL_SIGN.get())
+                .add(EBBlocks.WINTERGREEN_HANGING_SIGN.get())
+                .add(EBBlocks.WINTERGREEN_WALL_HANGING_SIGN.get())
         ;
     }
 
@@ -342,7 +428,7 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(EBBlocks.LAVENDER_CLAY.get())
                 .add(EBBlocks.SAGE_CLAY.get())
-                .add(EBBlocks.CORALSOIL.get())
+                .add(EBBlocks.CORALSOIL_CLAY.get())
         ;
     }
 
@@ -351,6 +437,7 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.LAVENDER_BLOCK.get())
                 .add(EBBlocks.SAGE_BLOCK.get())
                 .add(EBBlocks.ANCIENT_LEAVES.get())
+                .add(EBBlocks.WINTERGREEN_LEAVES.get())
         ;
     }
 
@@ -366,83 +453,98 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.POTTED_LAVENDER.get())
                 .add(EBBlocks.POTTED_SAGE.get())
                 .add(EBBlocks.POTTED_ANCIENT_SAPLING.get())
+                .add(EBBlocks.POTTED_WINTERGREEN_SAPLING.get())
         ;
     }
 
     private void appendSigns() {
         getOrCreateTagBuilder(BlockTags.SIGNS)
                 .add(EBBlocks.ANCIENT_SIGN.get())
+                .add(EBBlocks.WINTERGREEN_SIGN.get())
         ;
     }
 
     private void appendWallSigns() {
         getOrCreateTagBuilder(BlockTags.WALL_SIGNS)
                 .add(EBBlocks.ANCIENT_WALL_SIGN.get())
+                .add(EBBlocks.WINTERGREEN_WALL_SIGN.get())
         ;
     }
+    
     private void appendCeilingHangingSigns() {
         getOrCreateTagBuilder(BlockTags.CEILING_HANGING_SIGNS)
                 .add(EBBlocks.ANCIENT_HANGING_SIGN.get())
+                .add(EBBlocks.WINTERGREEN_HANGING_SIGN.get())
         ;
     }
 
     private void appendWallHangingSigns() {
         getOrCreateTagBuilder(BlockTags.WALL_HANGING_SIGNS)
                 .add(EBBlocks.ANCIENT_WALL_HANGING_SIGN.get())
+                .add(EBBlocks.WINTERGREEN_WALL_HANGING_SIGN.get())
         ;
     }
 
     private void appendWoodenButtons() {
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
                 .add(EBBlocks.ANCIENT_BUTTON.get())
+                .add(EBBlocks.WINTERGREEN_BUTTON.get())
         ;
     }
 
     private void appendWoodenPressurePlates() {
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
                 .add(EBBlocks.ANCIENT_PRESSURE_PLATE.get())
+                .add(EBBlocks.WINTERGREEN_PRESSURE_PLATE.get())
         ;
     }
 
     private void appendWoodenSlabs() {
         getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
                 .add(EBBlocks.ANCIENT_SLAB.get())
+                .add(EBBlocks.WINTERGREEN_SLAB.get())
         ;
     }
 
     private void appendWoodenStairs() {
         getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
                 .add(EBBlocks.ANCIENT_STAIRS.get())
+                .add(EBBlocks.WINTERGREEN_STAIRS.get())
         ;
     }
 
     private void appendWoodenFences() {
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
                 .add(EBBlocks.ANCIENT_FENCE.get())
+                .add(EBBlocks.WINTERGREEN_FENCE.get())
         ;
     }
 
     private void appendWoodenFenceGates() {
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(EBBlocks.ANCIENT_FENCE_GATE.get())
+                .add(EBBlocks.WINTERGREEN_FENCE_GATE.get())
         ;
     }
 
     private void appendWoodenDoors() {
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
                 .add(EBBlocks.ANCIENT_DOOR.get())
+                .add(EBBlocks.WINTERGREEN_DOOR.get())
         ;
     }
 
     private void appendWoodenTrapdoors() {
         getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
                 .add(EBBlocks.ANCIENT_TRAPDOOR.get())
+                .add(EBBlocks.WINTERGREEN_TRAPDOOR.get())
         ;
     }
 
     private void appendPlanks() {
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(EBBlocks.ANCIENT_PLANKS.get())
+                .add(EBBlocks.WINTERGREEN_PLANKS.get())
         ;
     }
 
@@ -452,12 +554,18 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.ANCIENT_WOOD.get())
                 .add(EBBlocks.STRIPPED_ANCIENT_LOG.get())
                 .add(EBBlocks.STRIPPED_ANCIENT_WOOD.get())
+
+                .add(EBBlocks.WINTERGREEN_LOG.get())
+                .add(EBBlocks.WINTERGREEN_WOOD.get())
+                .add(EBBlocks.STRIPPED_WINTERGREEN_LOG.get())
+                .add(EBBlocks.STRIPPED_WINTERGREEN_WOOD.get())
         ;
     }
 
     private void appendLeaves() {
         getOrCreateTagBuilder(BlockTags.LEAVES)
                 .add(EBBlocks.ANCIENT_LEAVES.get())
+                .add(EBBlocks.WINTERGREEN_LEAVES.get())
         ;
     }
 

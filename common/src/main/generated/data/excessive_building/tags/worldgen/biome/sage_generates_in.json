@@ -1,7 +1,10 @@
 {
   "values": [
-    "minecraft:savanna",
-    "minecraft:savanna_plateau",
+    {
+      "id": "#minecraft:is_savanna",
+      "required": false
+    },
+    "minecraft:meadow",
     "minecraft:flower_forest"
   ]
 }

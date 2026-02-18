@@ -31,6 +31,38 @@ public class EBTiers {
 
         @Override
         public int getEnchantmentValue() {
+            return 10;
+        }
+
+        @Override
+        public Ingredient getRepairIngredient() {
+            return Ingredient.of(Items.AMETHYST_SHARD);
+        }
+    };
+
+    public static final Tier MALLET = new Tier() {
+        @Override
+        public int getUses() {
+            return 781;
+        }
+
+        @Override
+        public float getSpeed() {
+            return 1.5F;
+        }
+
+        @Override
+        public float getAttackDamageBonus() {
+            return 0.5F;
+        }
+
+        @Override
+        public TagKey<Block> getIncorrectBlocksForDrops() {
+            return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
+        }
+
+        @Override
+        public int getEnchantmentValue() {
             return 20;
         }
 

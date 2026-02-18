@@ -19,5 +19,9 @@ public abstract class BoatMixin {
         if (this.getVariant() == EBUtil.ANCIENT_BOAT) {
             cir.setReturnValue(EBItems.ANCIENT_BOAT.get());
         }
+
+        if (this.getVariant() == EBUtil.WINTERGREEN_BOAT) {
+            cir.setReturnValue(EBItems.WINTERGREEN_BOAT.get());
+        }
     }
 }

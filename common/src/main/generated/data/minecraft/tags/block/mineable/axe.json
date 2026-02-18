@@ -16,6 +16,23 @@
     "excessive_building:ancient_sign",
     "excessive_building:ancient_wall_sign",
     "excessive_building:ancient_hanging_sign",
-    "excessive_building:ancient_wall_hanging_sign"
+    "excessive_building:ancient_wall_hanging_sign",
+    "excessive_building:wintergreen_planks",
+    "excessive_building:wintergreen_stairs",
+    "excessive_building:wintergreen_slab",
+    "excessive_building:wintergreen_fence",
+    "excessive_building:wintergreen_fence_gate",
+    "excessive_building:wintergreen_pressure_plate",
+    "excessive_building:wintergreen_button",
+    "excessive_building:wintergreen_log",
+    "excessive_building:wintergreen_wood",
+    "excessive_building:stripped_wintergreen_log",
+    "excessive_building:stripped_wintergreen_wood",
+    "excessive_building:wintergreen_door",
+    "excessive_building:wintergreen_trapdoor",
+    "excessive_building:wintergreen_sign",
+    "excessive_building:wintergreen_wall_sign",
+    "excessive_building:wintergreen_hanging_sign",
+    "excessive_building:wintergreen_wall_hanging_sign"
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#excessive_building:wintergreen_generates_in",
+  "features": [
+    "excessive_building:wintergreen"
+  ],
+  "step": "vegetal_decoration"
+}

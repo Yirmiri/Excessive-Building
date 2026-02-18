@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lavender_clay": {
+    "has_lavender_clay_ball": {
       "conditions": {
         "items": [
           {
-            "items": "excessive_building:lavender_clay"
+            "items": "excessive_building:lavender_clay_ball"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lavender_clay"
+      "has_lavender_clay_ball"
     ]
   ],
   "rewards": {

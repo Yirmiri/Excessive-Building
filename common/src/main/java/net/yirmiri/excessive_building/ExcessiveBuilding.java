@@ -15,12 +15,7 @@ public class ExcessiveBuilding {
         EBItems.load();
         EBCreativeTabs.load();
         EBEffects.load();
-        EBPotions.load();
         EBFamilyTypes.load();
+        EBPlacers.load();
     }
-}//make integration cleaner (delicate recipe)
-//remove reach from gauntlet
-//fix effects
-//fix potions
-//fix signs
-//fix wood types
+}
