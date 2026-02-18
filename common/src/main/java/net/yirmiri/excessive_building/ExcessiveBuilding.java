@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building;
 
+import net.yirmiri.excessive_building.common.util.EBFamilyTypes;
 import net.yirmiri.excessive_building.core.registry.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +16,7 @@ public class ExcessiveBuilding {
         EBCreativeTabs.load();
         EBEffects.load();
         EBPotions.load();
-        EBBlockEntities.load();
+        EBFamilyTypes.load();
     }
 }//make integration cleaner (delicate recipe)
 //remove reach from gauntlet

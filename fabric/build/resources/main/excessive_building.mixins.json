@@ -5,6 +5,7 @@
   "refmap": "excessive_building.refmap.json",
   "compatibilityLevel": "JAVA_18",
   "mixins": [
+    "BlockEntityAccessor",
     "BlockItemMixin",
     "BoatMixin",
     "BoatTypeMixin",

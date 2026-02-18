@@ -32,8 +32,8 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.ANCIENT_BUTTON.get());
                         entry.accept(EBBlocks.ANCIENT_DOOR.get());
                         entry.accept(EBBlocks.ANCIENT_TRAPDOOR.get());
-                        entry.accept(EBItems.ANCIENT_SIGN.get());
-                        entry.accept(EBItems.ANCIENT_HANGING_SIGN.get());
+//                        entry.accept(EBItems.ANCIENT_SIGN.get());
+//                        entry.accept(EBItems.ANCIENT_HANGING_SIGN.get());
                         entry.accept(EBItems.ANCIENT_BOAT.get());
                         entry.accept(EBItems.ANCIENT_CHEST_BOAT.get());
                         entry.accept(EBBlocks.ANCIENT_LEAVES.get());

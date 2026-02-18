@@ -405,7 +405,7 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .trapdoor(EBBlocks.ANCIENT_TRAPDOOR.get())
                 .fence(EBBlocks.ANCIENT_FENCE.get())
                 .fenceGate(EBBlocks.ANCIENT_FENCE_GATE.get())
-                .sign(EBBlocks.ANCIENT_SIGN.get(), EBBlocks.ANCIENT_WALL_SIGN.get())
+                //.sign(EBBlocks.ANCIENT_SIGN.get(), EBBlocks.ANCIENT_WALL_SIGN.get())
                 .button(EBBlocks.ANCIENT_BUTTON.get())
                 .pressurePlate(EBBlocks.ANCIENT_PRESSURE_PLATE.get())
                 .recipeGroupPrefix("wooden")

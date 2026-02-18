@@ -6,10 +6,10 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.block.*;
+import net.yirmiri.excessive_building.common.util.EBFamilyTypes;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 import net.yirmiri.excessive_building.core.init.EBTreeGrowers;
 
@@ -151,12 +151,12 @@ public class EBBlocks {
     public static final Supplier<Block> ANCIENT_STAIRS = register("ancient_stairs", () -> new PublicStairBlock(ANCIENT_PLANKS.get().defaultBlockState(), EBProperties.BlockP.PLANKS), true);
     public static final Supplier<Block> ANCIENT_SLAB = register("ancient_slab", () -> new SlabBlock(EBProperties.BlockP.PLANKS), true);
 
-    public static final Supplier<Block> ANCIENT_PRESSURE_PLATE = register("ancient_pressure_plate", () -> new PublicPressurePlateBlock(WoodType.CHERRY.setType(), EBProperties.BlockP.PLATE), true);
-    public static final Supplier<Block> ANCIENT_BUTTON = register("ancient_button", () -> new PublicButtonBlock(WoodType.CHERRY.setType(), 30, EBProperties.BlockP.BUTTON), true);
+    public static final Supplier<Block> ANCIENT_PRESSURE_PLATE = register("ancient_pressure_plate", () -> new PublicPressurePlateBlock(EBFamilyTypes.BlockSetTypes.ANCIENT, EBProperties.BlockP.PLATE), true);
+    public static final Supplier<Block> ANCIENT_BUTTON = register("ancient_button", () -> new PublicButtonBlock(EBFamilyTypes.BlockSetTypes.ANCIENT, 30, EBProperties.BlockP.BUTTON), true);
     public static final Supplier<Block> ANCIENT_FENCE = register("ancient_fence", () -> new FenceBlock(EBProperties.BlockP.FENCE), true);
-    public static final Supplier<Block> ANCIENT_FENCE_GATE = register("ancient_fence_gate", () -> new FenceGateBlock(WoodType.CHERRY, EBProperties.BlockP.GATE), true);
-    public static final Supplier<Block> ANCIENT_DOOR = register("ancient_door", () -> new PublicDoorBlock(WoodType.CHERRY.setType(), EBProperties.BlockP.DOOR), true);
-    public static final Supplier<Block> ANCIENT_TRAPDOOR = register("ancient_trapdoor", () -> new PublicTrapdoorBlock(WoodType.CHERRY.setType(), EBProperties.BlockP.TRAPDOOR), true);
+    public static final Supplier<Block> ANCIENT_FENCE_GATE = register("ancient_fence_gate", () -> new FenceGateBlock(EBFamilyTypes.WoodTypes.ANCIENT, EBProperties.BlockP.GATE), true);
+    public static final Supplier<Block> ANCIENT_DOOR = register("ancient_door", () -> new PublicDoorBlock(EBFamilyTypes.BlockSetTypes.ANCIENT, EBProperties.BlockP.DOOR), true);
+    public static final Supplier<Block> ANCIENT_TRAPDOOR = register("ancient_trapdoor", () -> new PublicTrapdoorBlock(EBFamilyTypes.BlockSetTypes.ANCIENT, EBProperties.BlockP.TRAPDOOR), true);
 
     public static final Supplier<Block> ANCIENT_LEAVES = register("ancient_leaves", () -> new AncientLeavesBlock(EBProperties.BlockP.GLOW_LEAVES), true);
     public static final Supplier<Block> ANCIENT_LOG = register("ancient_log", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
@@ -164,10 +164,10 @@ public class EBBlocks {
     public static final Supplier<Block> ANCIENT_WOOD = register("ancient_wood", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
     public static final Supplier<Block> STRIPPED_ANCIENT_WOOD = register("stripped_ancient_wood", () -> new RotatedPillarBlock(EBProperties.BlockP.LOG), true);
 
-    public static final Supplier<Block> ANCIENT_SIGN = register("ancient_sign", () -> new EBStandingSignBlock(WoodType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SIGN).mapColor(MapColor.SNOW)), false);
-    public static final Supplier<Block> ANCIENT_WALL_SIGN = register("ancient_wall_sign", () -> new EBWallSignBlock(WoodType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WALL_SIGN).mapColor(MapColor.SNOW)), false);
-    public static final Supplier<Block> ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", () -> new EBHangingSignBlock(WoodType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_HANGING_SIGN).mapColor(MapColor.SNOW)), false);
-    public static final Supplier<Block> ANCIENT_WALL_HANGING_SIGN = register("ancient_wall_hanging_sign", () -> new EBWallHangingSignBlock(WoodType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WALL_HANGING_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> ANCIENT_SIGN = register("ancient_sign", () -> new StandingSignBlock(EBFamilyTypes.WoodTypes.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> ANCIENT_WALL_SIGN = register("ancient_wall_sign", () -> new WallSignBlock(EBFamilyTypes.WoodTypes.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WALL_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> ANCIENT_HANGING_SIGN = register("ancient_hanging_sign", () -> new CeilingHangingSignBlock(EBFamilyTypes.WoodTypes.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_HANGING_SIGN).mapColor(MapColor.SNOW)), false);
+    public static final Supplier<Block> ANCIENT_WALL_HANGING_SIGN = register("ancient_wall_hanging_sign", () -> new WallHangingSignBlock(EBFamilyTypes.WoodTypes.ANCIENT, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WALL_HANGING_SIGN).mapColor(MapColor.SNOW)), false);
 
     public static final Supplier<Block> ANCIENT_SAPLING = register("ancient_sapling", () -> new PublicSaplingBlock(EBTreeGrowers.ANCIENT, EBProperties.BlockP.GLOW_SAPLING), true);
     public static final Supplier<Block> POTTED_ANCIENT_SAPLING = register("potted_ancient_sapling", () -> new FlowerPotBlock(ANCIENT_SAPLING.get(), EBProperties.BlockP.GLOW_SAPLING_POT), false);
