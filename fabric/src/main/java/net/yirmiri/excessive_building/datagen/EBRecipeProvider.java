@@ -1084,6 +1084,19 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(EBBlocks.AMETHYST_FRAMED_GLASS.get()), has(EBBlocks.AMETHYST_FRAMED_GLASS.get()))
                 .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get())));
 
+        //TODO REPLACE WITH FLUID INTERACTION
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.CORALSOIL_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
+                Blocks.CLAY, 0.1F, 200).unlockedBy(getHasName(EBBlocks.CORALSOIL_CLAY.get()), has(EBBlocks.CORALSOIL_CLAY.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.CLAY) + "_from_coralsoil_clay"));
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.LAVENDER_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
+                        Blocks.CLAY, 0.1F, 200).unlockedBy(getHasName(EBBlocks.LAVENDER_CLAY.get()), has(EBBlocks.LAVENDER_CLAY.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.CLAY) + "_from_lavender_clay"));
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.SAGE_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
+                        Blocks.CLAY, 0.1F, 200).unlockedBy(getHasName(EBBlocks.SAGE_CLAY.get()), has(EBBlocks.SAGE_CLAY.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.CLAY) + "_from_sage_clay"));
+
         //=======================DYED=======================
         for (DyeColor colors : DyeColor.values()) {
             //CORRUGATED IRON

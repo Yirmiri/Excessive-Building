@@ -25,6 +25,7 @@ public class EBFeatureKeys {
         public static final ResourceKey<PlacedFeature> SNOWY_WINTERGREEN = create("snowy_wintergreen");
 
         //ORE
+        public static final ResourceKey<PlacedFeature> ORE_ALMENTRA = create("ore_almentra");
         public static final ResourceKey<PlacedFeature> ORE_BRIMSTONE = create("ore_brimstone");
         public static final ResourceKey<PlacedFeature> ORE_CHLOROSLATE = create("ore_chloroslate");
         public static final ResourceKey<PlacedFeature> ORE_HECTALITE = create("ore_hectalite");

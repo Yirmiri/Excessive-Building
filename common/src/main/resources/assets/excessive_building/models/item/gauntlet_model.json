@@ -1,4 +1,5 @@
 {
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench by Hecco",
 	"textures": {
 		"0": "excessive_building:item/gauntlet_model",
@@ -62,7 +63,8 @@
 		},
 		"firstperson_righthand": {
 			"rotation": [-75, 0, 0],
-			"translation": [-1.5, 5.5, 0]
+			"translation": [-2.5, 5.5, 2.5],
+			"scale": [0.7, 0.7, 0.7]
 		}
 	}
 }

@@ -27,7 +27,7 @@ public class AlmentraBlock extends Block {
         ItemStack stackHand = player.getItemInHand(hand);
         BlockState stateToReplaceWith = block.withPropertiesOf(level.getBlockState(pos));
 
-        if (stackHand.is(EBItems.MALLET.get())) {
+        if (stackHand.is(EBItems.MALLET.get()) && !level.isClientSide) {
             if (stateToReplaceWith.hasProperty(StatueBlock.ROTATION)) {
                 stateToReplaceWith = stateToReplaceWith.setValue(
                         StatueBlock.ROTATION,
