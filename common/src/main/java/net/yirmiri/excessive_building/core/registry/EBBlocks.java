@@ -40,13 +40,60 @@ public class EBBlocks {
     public static final Supplier<Block> DIORITE_BRICK_WALL = register("diorite_brick_wall", () -> new WallBlock(EBProperties.BlockP.POLISHED_DIORITE), true);
 
     //AMETHYST
-    public static final Supplier<Block> AMETHYST_BRICKS = register("amethyst_bricks", () -> new Block(EBProperties.BlockP.AMETHYST), true);
+    public static final Supplier<Block> AMETHYST_BRICKS = register("amethyst_bricks", () -> new AmethystBlock(EBProperties.BlockP.AMETHYST), true);
     public static final Supplier<Block> AMETHYST_BRICK_STAIRS = register("amethyst_brick_stairs", () -> new PublicStairBlock(AMETHYST_BRICKS.get().defaultBlockState(), EBProperties.BlockP.AMETHYST), true);
     public static final Supplier<Block> AMETHYST_BRICK_SLAB = register("amethyst_brick_slab", () -> new SlabBlock(EBProperties.BlockP.AMETHYST), true);
     public static final Supplier<Block> AMETHYST_BRICK_WALL = register("amethyst_brick_wall", () -> new WallBlock(EBProperties.BlockP.AMETHYST), true);
-    public static final Supplier<Block> AMETHYST_LAMP = register("amethyst_lamp", () -> new Block(EBProperties.BlockP.AMETHYST_LAMP), true);
+    public static final Supplier<Block> AMETHYST_LAMP = register("amethyst_lamp", () -> new Block(EBProperties.BlockP.LAMP), true);
     public static final Supplier<Block> AMETHYST_FRAMED_GLASS = register("amethyst_framed_glass", () -> new PublicTransparentBlock(EBProperties.BlockP.FRAMED_GLASS), true);
     public static final Supplier<Block> AMETHYST_FRAMED_GLASS_PANE = register("amethyst_framed_glass_pane", () -> new PublicIronBarsBlock(EBProperties.BlockP.FRAMED_GLASS_PANE), true);
+
+    //LAPIS
+    public static final Supplier<Block> LAPIS_BRICKS = register("lapis_bricks", () -> new Block(EBProperties.BlockP.LAPIS), true);
+    public static final Supplier<Block> LAPIS_BRICK_STAIRS = register("lapis_brick_stairs", () -> new PublicStairBlock(LAPIS_BRICKS.get().defaultBlockState(), EBProperties.BlockP.LAPIS), true);
+    public static final Supplier<Block> LAPIS_BRICK_SLAB = register("lapis_brick_slab", () -> new SlabBlock(EBProperties.BlockP.LAPIS), true);
+    public static final Supplier<Block> LAPIS_BRICK_WALL = register("lapis_brick_wall", () -> new WallBlock(EBProperties.BlockP.LAPIS), true);
+    public static final Supplier<Block> LAPIS_LAMP = register("lapis_lamp", () -> new Block(EBProperties.BlockP.LAMP), true);
+    public static final Supplier<Block> LAPIS_FRAMED_GLASS = register("lapis_framed_glass", () -> new PublicTransparentBlock(EBProperties.BlockP.FRAMED_GLASS), true);
+    public static final Supplier<Block> LAPIS_FRAMED_GLASS_PANE = register("lapis_framed_glass_pane", () -> new PublicIronBarsBlock(EBProperties.BlockP.FRAMED_GLASS_PANE), true);
+
+    //EMERALD
+    public static final Supplier<Block> EMERALD_BRICKS = register("emerald_bricks", () -> new Block(EBProperties.BlockP.EMERALD), true);
+    public static final Supplier<Block> EMERALD_BRICK_STAIRS = register("emerald_brick_stairs", () -> new PublicStairBlock(EMERALD_BRICKS.get().defaultBlockState(), EBProperties.BlockP.EMERALD), true);
+    public static final Supplier<Block> EMERALD_BRICK_SLAB = register("emerald_brick_slab", () -> new SlabBlock(EBProperties.BlockP.EMERALD), true);
+    public static final Supplier<Block> EMERALD_BRICK_WALL = register("emerald_brick_wall", () -> new WallBlock(EBProperties.BlockP.EMERALD), true);
+    public static final Supplier<Block> EMERALD_LAMP = register("emerald_lamp", () -> new Block(EBProperties.BlockP.LAMP), true);
+    public static final Supplier<Block> EMERALD_FRAMED_GLASS = register("emerald_framed_glass", () -> new PublicTransparentBlock(EBProperties.BlockP.FRAMED_GLASS), true);
+    public static final Supplier<Block> EMERALD_FRAMED_GLASS_PANE = register("emerald_framed_glass_pane", () -> new PublicIronBarsBlock(EBProperties.BlockP.FRAMED_GLASS_PANE), true);
+
+    //DIAMOND
+    public static final Supplier<Block> DIAMOND_BRICKS = register("diamond_bricks", () -> new Block(EBProperties.BlockP.DIAMOND), true);
+    public static final Supplier<Block> DIAMOND_BRICK_STAIRS = register("diamond_brick_stairs", () -> new PublicStairBlock(DIAMOND_BRICKS.get().defaultBlockState(), EBProperties.BlockP.DIAMOND), true);
+    public static final Supplier<Block> DIAMOND_BRICK_SLAB = register("diamond_brick_slab", () -> new SlabBlock(EBProperties.BlockP.DIAMOND), true);
+    public static final Supplier<Block> DIAMOND_BRICK_WALL = register("diamond_brick_wall", () -> new WallBlock(EBProperties.BlockP.DIAMOND), true);
+    public static final Supplier<Block> DIAMOND_LAMP = register("diamond_lamp", () -> new Block(EBProperties.BlockP.LAMP), true);
+    public static final Supplier<Block> DIAMOND_FRAMED_GLASS = register("diamond_framed_glass", () -> new PublicTransparentBlock(EBProperties.BlockP.FRAMED_GLASS), true);
+    public static final Supplier<Block> DIAMOND_FRAMED_GLASS_PANE = register("diamond_framed_glass_pane", () -> new PublicIronBarsBlock(EBProperties.BlockP.FRAMED_GLASS_PANE), true);
+
+    //MALACHITE
+    public static final Supplier<Block> MALACHITE = register("malachite", () -> new Block(EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> MALACHITE_STAIRS = register("malachite_stairs", () -> new PublicStairBlock(MALACHITE.get().defaultBlockState(), EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> MALACHITE_SLAB = register("malachite_slab", () -> new SlabBlock(EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> MALACHITE_WALL = register("malachite_wall", () -> new WallBlock(EBProperties.BlockP.MALACHITE), true);
+
+    public static final Supplier<Block> POLISHED_MALACHITE = register("polished_malachite", () -> new Block(EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> POLISHED_MALACHITE_STAIRS = register("polished_malachite_stairs", () -> new PublicStairBlock(POLISHED_MALACHITE.get().defaultBlockState(), EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> POLISHED_MALACHITE_SLAB = register("polished_malachite_slab", () -> new SlabBlock(EBProperties.BlockP.MALACHITE), true);
+
+    public static final Supplier<Block> MALACHITE_BRICKS = register("malachite_bricks", () -> new Block(EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> MALACHITE_BRICK_STAIRS = register("malachite_brick_stairs", () -> new PublicStairBlock(MALACHITE_BRICKS.get().defaultBlockState(), EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> MALACHITE_BRICK_SLAB = register("malachite_brick_slab", () -> new SlabBlock(EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> MALACHITE_BRICK_WALL = register("malachite_brick_wall", () -> new WallBlock(EBProperties.BlockP.MALACHITE), true);
+
+    public static final Supplier<Block> CUT_MALACHITE = register("cut_malachite", () -> new Block(EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> CUT_MALACHITE_STAIRS = register("cut_malachite_stairs", () -> new PublicStairBlock(MALACHITE.get().defaultBlockState(), EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> CUT_MALACHITE_SLAB = register("cut_malachite_slab", () -> new SlabBlock(EBProperties.BlockP.MALACHITE), true);
+    public static final Supplier<Block> CUT_MALACHITE_WALL = register("cut_malachite_wall", () -> new WallBlock(EBProperties.BlockP.MALACHITE), true);
 
     //MISC
     public static final Supplier<Block> SMOOTH_BRICKS = register("smooth_bricks", () -> new Block(EBProperties.BlockP.BRICKS), true);

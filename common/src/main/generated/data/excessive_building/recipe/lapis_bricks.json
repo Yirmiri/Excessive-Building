@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "@": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "@@@",
+    "@#@",
+    "@@@"
+  ],
+  "result": {
+    "count": 24,
+    "id": "excessive_building:lapis_bricks"
+  }
+}

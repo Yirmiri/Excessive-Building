@@ -32,6 +32,12 @@ public class ExcessiveBuildingClient {
         //TRANSLUCENT
         RLServices.loadClient().registerBlockRenderType(EBBlocks.AMETHYST_FRAMED_GLASS.get(), RenderType.translucent());
         RLServices.loadClient().registerBlockRenderType(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get(), RenderType.translucent());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.DIAMOND_FRAMED_GLASS.get(), RenderType.translucent());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.DIAMOND_FRAMED_GLASS_PANE.get(), RenderType.translucent());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.EMERALD_FRAMED_GLASS.get(), RenderType.translucent());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.EMERALD_FRAMED_GLASS_PANE.get(), RenderType.translucent());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.LAPIS_FRAMED_GLASS.get(), RenderType.translucent());
+        RLServices.loadClient().registerBlockRenderType(EBBlocks.LAPIS_FRAMED_GLASS_PANE.get(), RenderType.translucent());
 
         //SIGN
         Sheets.SIGN_MATERIALS.put(EBFamilyTypes.WoodTypes.ANCIENT, new Material(Sheets.SIGN_SHEET,

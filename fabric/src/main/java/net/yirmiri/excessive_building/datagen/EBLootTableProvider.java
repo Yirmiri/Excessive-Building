@@ -314,6 +314,49 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
 
         dropSelf(EBBlocks.ZEUS_EPIC_BLOCK.get());
 
+        dropSelf(EBBlocks.LAPIS_BRICKS.get());
+        dropSelf(EBBlocks.LAPIS_BRICK_STAIRS.get());
+        add(EBBlocks.LAPIS_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.LAPIS_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.LAPIS_BRICK_WALL.get());
+        dropSelf(EBBlocks.LAPIS_LAMP.get());
+        dropWhenSilkTouch(EBBlocks.LAPIS_FRAMED_GLASS.get());
+        dropWhenSilkTouch(EBBlocks.LAPIS_FRAMED_GLASS_PANE.get());
+
+        dropSelf(EBBlocks.DIAMOND_BRICKS.get());
+        dropSelf(EBBlocks.DIAMOND_BRICK_STAIRS.get());
+        add(EBBlocks.DIAMOND_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.DIAMOND_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.DIAMOND_BRICK_WALL.get());
+        dropSelf(EBBlocks.DIAMOND_LAMP.get());
+        dropWhenSilkTouch(EBBlocks.DIAMOND_FRAMED_GLASS.get());
+        dropWhenSilkTouch(EBBlocks.DIAMOND_FRAMED_GLASS_PANE.get());
+
+        dropSelf(EBBlocks.EMERALD_BRICKS.get());
+        dropSelf(EBBlocks.EMERALD_BRICK_STAIRS.get());
+        add(EBBlocks.EMERALD_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.EMERALD_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.EMERALD_BRICK_WALL.get());
+        dropSelf(EBBlocks.EMERALD_LAMP.get());
+        dropWhenSilkTouch(EBBlocks.EMERALD_FRAMED_GLASS.get());
+        dropWhenSilkTouch(EBBlocks.EMERALD_FRAMED_GLASS_PANE.get());
+
+        dropSelf(EBBlocks.MALACHITE.get());
+        dropSelf(EBBlocks.MALACHITE_STAIRS.get());
+        add(EBBlocks.MALACHITE_SLAB.get(), createSlabItemTable(EBBlocks.MALACHITE_SLAB.get()));
+        dropSelf(EBBlocks.MALACHITE_WALL.get());
+
+        dropSelf(EBBlocks.POLISHED_MALACHITE.get());
+        dropSelf(EBBlocks.POLISHED_MALACHITE_STAIRS.get());
+        add(EBBlocks.POLISHED_MALACHITE_SLAB.get(), createSlabItemTable(EBBlocks.POLISHED_MALACHITE_SLAB.get()));
+
+        dropSelf(EBBlocks.CUT_MALACHITE.get());
+        dropSelf(EBBlocks.CUT_MALACHITE_STAIRS.get());
+        add(EBBlocks.CUT_MALACHITE_SLAB.get(), createSlabItemTable(EBBlocks.CUT_MALACHITE_SLAB.get()));
+        dropSelf(EBBlocks.CUT_MALACHITE_WALL.get());
+
+        dropSelf(EBBlocks.MALACHITE_BRICKS.get());
+        dropSelf(EBBlocks.MALACHITE_BRICK_STAIRS.get());
+        add(EBBlocks.MALACHITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.MALACHITE_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.MALACHITE_BRICK_WALL.get());
+
         addDyedDrops();
     }
 

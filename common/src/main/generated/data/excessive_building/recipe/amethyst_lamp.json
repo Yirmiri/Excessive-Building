@@ -2,23 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "!": {
-      "item": "minecraft:iron_nugget"
-    },
     "#": {
       "item": "minecraft:amethyst_shard"
     },
     "@": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
-    "!@!",
-    "###",
-    "!@!"
+    "@@@",
+    "@#@",
+    "@@@"
   ],
   "result": {
-    "count": 2,
+    "count": 8,
     "id": "excessive_building:amethyst_lamp"
   }
 }

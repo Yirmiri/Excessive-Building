@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/cut_malachite",
+    "side": "excessive_building:block/cut_malachite",
+    "top": "excessive_building:block/cut_malachite"
+  }
+}

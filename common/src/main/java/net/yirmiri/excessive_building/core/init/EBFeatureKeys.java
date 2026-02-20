@@ -31,6 +31,7 @@ public class EBFeatureKeys {
         public static final ResourceKey<PlacedFeature> ORE_HECTALITE = create("ore_hectalite");
         public static final ResourceKey<PlacedFeature> ORE_ARIDITE = create("ore_aridite");
         public static final ResourceKey<PlacedFeature> ORE_SITRITE = create("ore_sitrite");
+        public static final ResourceKey<PlacedFeature> ORE_MALACHITE = create("ore_malachite");
 
         public static ResourceKey<PlacedFeature> create(String id) {
             return ResourceKey.create(Registries.PLACED_FEATURE, RunicLib.customid(ExcessiveBuilding.MOD_ID, id));

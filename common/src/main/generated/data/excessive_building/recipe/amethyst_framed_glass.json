@@ -2,9 +2,6 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "!": {
-      "item": "minecraft:iron_nugget"
-    },
     "#": {
       "item": "minecraft:amethyst_shard"
     },
@@ -13,12 +10,12 @@
     }
   },
   "pattern": [
-    "!#!",
-    "#@#",
-    "!#!"
+    " @ ",
+    "@#@",
+    " @ "
   ],
   "result": {
-    "count": 2,
+    "count": 12,
     "id": "excessive_building:amethyst_framed_glass"
   }
 }

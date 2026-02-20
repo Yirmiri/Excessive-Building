@@ -2,14 +2,21 @@ package net.yirmiri.excessive_building.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.core.Direction;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
+import net.minecraft.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.data.models.blockstates.PropertyDispatch;
+import net.minecraft.data.models.blockstates.Variant;
+import net.minecraft.data.models.blockstates.VariantProperties;
 import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DripstoneThickness;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
@@ -318,6 +325,49 @@ public class EBModelProvider extends FabricModelProvider {
 
         generator.createTrivialCube(EBBlocks.ZEUS_EPIC_BLOCK.get());
 
+        BlockModelGenerators.BlockFamilyProvider emeraldbricks = generator.family(EBBlocks.EMERALD_BRICKS.get());
+        emeraldbricks.stairs(EBBlocks.EMERALD_BRICK_STAIRS.get());
+        emeraldbricks.slab(EBBlocks.EMERALD_BRICK_SLAB.get());
+        emeraldbricks.wall(EBBlocks.EMERALD_BRICK_WALL.get());
+
+        generator.createGlassBlocks(EBBlocks.EMERALD_FRAMED_GLASS.get(), EBBlocks.EMERALD_FRAMED_GLASS_PANE.get());
+        generator.createTrivialCube(EBBlocks.EMERALD_LAMP.get());
+
+        BlockModelGenerators.BlockFamilyProvider lapisbricks = generator.family(EBBlocks.LAPIS_BRICKS.get());
+        lapisbricks.stairs(EBBlocks.LAPIS_BRICK_STAIRS.get());
+        lapisbricks.slab(EBBlocks.LAPIS_BRICK_SLAB.get());
+        lapisbricks.wall(EBBlocks.LAPIS_BRICK_WALL.get());
+
+        generator.createGlassBlocks(EBBlocks.LAPIS_FRAMED_GLASS.get(), EBBlocks.LAPIS_FRAMED_GLASS_PANE.get());
+        generator.createTrivialCube(EBBlocks.LAPIS_LAMP.get());
+
+        BlockModelGenerators.BlockFamilyProvider diamondbricks = generator.family(EBBlocks.DIAMOND_BRICKS.get());
+        diamondbricks.stairs(EBBlocks.DIAMOND_BRICK_STAIRS.get());
+        diamondbricks.slab(EBBlocks.DIAMOND_BRICK_SLAB.get());
+        diamondbricks.wall(EBBlocks.DIAMOND_BRICK_WALL.get());
+
+        generator.createGlassBlocks(EBBlocks.DIAMOND_FRAMED_GLASS.get(), EBBlocks.DIAMOND_FRAMED_GLASS_PANE.get());
+        generator.createTrivialCube(EBBlocks.DIAMOND_LAMP.get());
+
+        BlockModelGenerators.BlockFamilyProvider malachite = generator.family(EBBlocks.MALACHITE.get());
+        malachite.stairs(EBBlocks.MALACHITE_STAIRS.get());
+        malachite.slab(EBBlocks.MALACHITE_SLAB.get());
+        malachite.wall(EBBlocks.MALACHITE_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider polishedmalachite = generator.family(EBBlocks.POLISHED_MALACHITE.get());
+        polishedmalachite.stairs(EBBlocks.POLISHED_MALACHITE_STAIRS.get());
+        polishedmalachite.slab(EBBlocks.POLISHED_MALACHITE_SLAB.get());
+
+        BlockModelGenerators.BlockFamilyProvider malachiteBricks = generator.family(EBBlocks.MALACHITE_BRICKS.get());
+        malachiteBricks.stairs(EBBlocks.MALACHITE_BRICK_STAIRS.get());
+        malachiteBricks.slab(EBBlocks.MALACHITE_BRICK_SLAB.get());
+        malachiteBricks.wall(EBBlocks.MALACHITE_BRICK_WALL.get());
+
+        BlockModelGenerators.BlockFamilyProvider cutmalachite = generator.family(EBBlocks.CUT_MALACHITE.get());
+        cutmalachite.stairs(EBBlocks.CUT_MALACHITE_STAIRS.get());
+        cutmalachite.slab(EBBlocks.CUT_MALACHITE_SLAB.get());
+        cutmalachite.wall(EBBlocks.CUT_MALACHITE_WALL.get());
+
         //DYED
         for (DyeColor colors : DyeColor.values()) {
             generator.createRotatedPillarWithHorizontalVariant(EBBlocks.getDyedCorrugatedIron(colors.getId()).get(), TexturedModel.COLUMN_ALT, TexturedModel.COLUMN_HORIZONTAL_ALT);
@@ -352,4 +402,27 @@ public class EBModelProvider extends FabricModelProvider {
         ResourceLocation resourceLocation = ModelTemplates.CUBE_COLUMN.create(block, textureMapping, generator.modelOutput);
         generator.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block, resourceLocation));
     }
+
+    private void createPointedBlock(BlockModelGenerators generator, Block block) {
+        generator.skipAutoItemBlock(block);
+        PropertyDispatch.C2<Direction, DripstoneThickness> c2 = PropertyDispatch.properties(BlockStateProperties.VERTICAL_DIRECTION, BlockStateProperties.DRIPSTONE_THICKNESS);
+
+        for(DripstoneThickness dripstoneThickness : DripstoneThickness.values()) {
+            c2.select(Direction.UP, dripstoneThickness, this.createPointedBlockVariant(generator, block, Direction.UP, dripstoneThickness));
+        }
+
+        for(DripstoneThickness dripstoneThickness : DripstoneThickness.values()) {
+            c2.select(Direction.DOWN, dripstoneThickness, this.createPointedBlockVariant(generator, block, Direction.DOWN, dripstoneThickness));
+        }
+
+        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(block).with(c2));
+    }
+
+    public final Variant createPointedBlockVariant(BlockModelGenerators generator, Block block, Direction direction, DripstoneThickness dripstoneThickness) {
+        String var10000 = direction.getSerializedName();
+        String string = "_" + var10000 + "_" + dripstoneThickness.getSerializedName();
+        TextureMapping textureMapping = TextureMapping.cross(TextureMapping.getBlockTexture(block, string));
+        return Variant.variant().with(VariantProperties.MODEL, ModelTemplates.POINTED_DRIPSTONE.createWithSuffix(block, string, textureMapping, generator.modelOutput));
+    }
+
 }

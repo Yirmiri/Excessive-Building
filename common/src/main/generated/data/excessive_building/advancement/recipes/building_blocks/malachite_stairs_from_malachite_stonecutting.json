@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_malachite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "excessive_building:malachite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:malachite_stairs_from_malachite_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_malachite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:malachite_stairs_from_malachite_stonecutting"
+    ]
+  }
+}

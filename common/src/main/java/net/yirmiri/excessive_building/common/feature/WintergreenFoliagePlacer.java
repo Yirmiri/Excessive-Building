@@ -35,7 +35,7 @@ public class WintergreenFoliagePlacer extends FoliagePlacer {
     @Override
     protected void createFoliage(LevelSimulatedReader world, FoliagePlacer.FoliageSetter placer, RandomSource random, TreeConfiguration config, int trunkHeight, FoliagePlacer.FoliageAttachment treeNode, int foliageHeight, int radius, int offset) {
         BlockPos blockPos = treeNode.pos();
-        Direction d = EBUtil.randomHorizontalDirectionWithCoordinateSeed(blockPos);
+        Direction d = EBUtil.randomHorizontalDirectionWithCoordinateSeed(blockPos.below(trunkHeight));
 
         int i = 0;
         int j = 1;

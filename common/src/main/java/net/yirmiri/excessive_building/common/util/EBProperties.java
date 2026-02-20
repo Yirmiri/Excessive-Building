@@ -13,6 +13,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.yirmiri.excessive_building.common.item.GauntletItem;
 import net.yirmiri.excessive_building.common.item.MalletItem;
 import net.yirmiri.excessive_building.core.init.EBTiers;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 
 import java.util.function.ToIntFunction;
 
@@ -25,10 +26,13 @@ public class EBProperties {
         //MISC
         public static final BlockBehaviour.Properties FROSTED_GLASS = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS);
         public static final BlockBehaviour.Properties AMETHYST = BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK);
-        public static final BlockBehaviour.Properties AMETHYST_LAMP = BlockBehaviour.Properties.ofFullCopy(Blocks.SEA_LANTERN).mapColor(MapColor.COLOR_PURPLE);
+        public static final BlockBehaviour.Properties LAMP = BlockBehaviour.Properties.ofFullCopy(Blocks.SEA_LANTERN);
         public static final BlockBehaviour.Properties FRAMED_GLASS = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).strength(1.0F, 2.0F);
         public static final BlockBehaviour.Properties FRAMED_GLASS_PANE = BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).strength(1.0F, 2.0F);
         public static final BlockBehaviour.Properties FROSTED_LANTERN = BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN).sound(SoundType.GLASS).lightLevel(s -> 12);
+        public static final BlockBehaviour.Properties DIAMOND = BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_BLOCK);
+        public static final BlockBehaviour.Properties EMERALD = BlockBehaviour.Properties.ofFullCopy(Blocks.EMERALD_BLOCK);
+        public static final BlockBehaviour.Properties LAPIS = BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK);
 
         //STONES
         public static final BlockBehaviour.Properties COBBLESTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE);
@@ -54,6 +58,8 @@ public class EBProperties {
         public static final BlockBehaviour.Properties ALMENTRA = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.DRIPSTONE_BLOCK);
         public static final BlockBehaviour.Properties POLISHED_ALMENTRA = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.POLISHED_DEEPSLATE);
         public static final BlockBehaviour.Properties ALMENTRA_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.DEEPSLATE_BRICKS);
+        public static final BlockBehaviour.Properties MALACHITE = BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE).mapColor(MapColor.COLOR_GREEN);
+        public static final BlockBehaviour.Properties POINTED_MALACHITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POINTED_DRIPSTONE).sound(SoundType.CALCITE).mapColor(MapColor.COLOR_GREEN);
 
         //METALS
         public static final BlockBehaviour.Properties COPPER = BlockBehaviour.Properties.ofFullCopy(Blocks.COPPER_BLOCK);

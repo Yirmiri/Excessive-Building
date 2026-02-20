@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/polished_malachite_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/polished_malachite"
+    },
+    "type=top": {
+      "model": "excessive_building:block/polished_malachite_slab_top"
+    }
+  }
+}

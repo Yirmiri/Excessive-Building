@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "@": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    " @ ",
+    "@#@",
+    " @ "
+  ],
+  "result": {
+    "count": 12,
+    "id": "excessive_building:lapis_framed_glass"
+  }
+}

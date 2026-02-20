@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "@": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "@@@",
+    "@#@",
+    "@@@"
+  ],
+  "result": {
+    "count": 8,
+    "id": "excessive_building:diamond_lamp"
+  }
+}

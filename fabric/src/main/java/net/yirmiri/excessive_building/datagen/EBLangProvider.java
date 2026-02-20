@@ -314,6 +314,49 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBBlocks.ALMENTRA_BRICK_SLAB.get(), "Almentra Brick Slab");
         build.add(EBBlocks.ALMENTRA_BRICK_WALL.get(), "Almentra Brick Wall");
 
+        build.add(EBBlocks.EMERALD_BRICKS.get(), "Emerald Bricks");
+        build.add(EBBlocks.EMERALD_BRICK_STAIRS.get(), "Emerald Brick Stairs");
+        build.add(EBBlocks.EMERALD_BRICK_SLAB.get(), "Emerald Brick Slab");
+        build.add(EBBlocks.EMERALD_BRICK_WALL.get(), "Emerald Brick Wall");
+        build.add(EBBlocks.EMERALD_LAMP.get(), "Emerald Lamp");
+        build.add(EBBlocks.EMERALD_FRAMED_GLASS.get(), "Emerald Framed Glass");
+        build.add(EBBlocks.EMERALD_FRAMED_GLASS_PANE.get(), "Emerald Framed Glass Pane");
+
+        build.add(EBBlocks.DIAMOND_BRICKS.get(), "Diamond Bricks");
+        build.add(EBBlocks.DIAMOND_BRICK_STAIRS.get(), "Diamond Brick Stairs");
+        build.add(EBBlocks.DIAMOND_BRICK_SLAB.get(), "Diamond Brick Slab");
+        build.add(EBBlocks.DIAMOND_BRICK_WALL.get(), "Diamond Brick Wall");
+        build.add(EBBlocks.DIAMOND_LAMP.get(), "Diamond Lamp");
+        build.add(EBBlocks.DIAMOND_FRAMED_GLASS.get(), "Diamond Framed Glass");
+        build.add(EBBlocks.DIAMOND_FRAMED_GLASS_PANE.get(), "Diamond Framed Glass Pane");
+
+        build.add(EBBlocks.LAPIS_BRICKS.get(), "Lapis Bricks");
+        build.add(EBBlocks.LAPIS_BRICK_STAIRS.get(), "Lapis Brick Stairs");
+        build.add(EBBlocks.LAPIS_BRICK_SLAB.get(), "Lapis Brick Slab");
+        build.add(EBBlocks.LAPIS_BRICK_WALL.get(), "Lapis Brick Wall");
+        build.add(EBBlocks.LAPIS_LAMP.get(), "Lapis Lamp");
+        build.add(EBBlocks.LAPIS_FRAMED_GLASS.get(), "Lapis Framed Glass");
+        build.add(EBBlocks.LAPIS_FRAMED_GLASS_PANE.get(), "Lapis Framed Glass Pane");
+
+        build.add(EBBlocks.MALACHITE.get(), "Malachite");
+        build.add(EBBlocks.MALACHITE_STAIRS.get(), "Malachite Stairs");
+        build.add(EBBlocks.MALACHITE_SLAB.get(), "Malachite Slab");
+        build.add(EBBlocks.MALACHITE_WALL.get(), "Malachite Wall");
+
+        build.add(EBBlocks.POLISHED_MALACHITE.get(), "Polished Malachite");
+        build.add(EBBlocks.POLISHED_MALACHITE_STAIRS.get(), "Polished Malachite Stairs");
+        build.add(EBBlocks.POLISHED_MALACHITE_SLAB.get(), "Polished Malachite Slab");
+
+        build.add(EBBlocks.CUT_MALACHITE.get(), "Cut Malachite");
+        build.add(EBBlocks.CUT_MALACHITE_STAIRS.get(), "Cut Malachite Stairs");
+        build.add(EBBlocks.CUT_MALACHITE_SLAB.get(), "Cut Malachite Slab");
+        build.add(EBBlocks.CUT_MALACHITE_WALL.get(), "Cut Malachite Wall");
+
+        build.add(EBBlocks.MALACHITE_BRICKS.get(), "Malachite Bricks");
+        build.add(EBBlocks.MALACHITE_BRICK_STAIRS.get(), "Malachite Brick Stairs");
+        build.add(EBBlocks.MALACHITE_BRICK_SLAB.get(), "Malachite Brick Slab");
+        build.add(EBBlocks.MALACHITE_BRICK_WALL.get(), "Malachite Brick Wall");
+
         //ITEMS
         build.add(EBItems.ANCIENT_BOAT.get(), "Ancient Boat");
         build.add(EBItems.ANCIENT_CHEST_BOAT.get(), "Ancient Chest Boat");

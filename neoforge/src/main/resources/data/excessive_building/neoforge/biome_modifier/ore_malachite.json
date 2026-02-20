@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_mountain",
+  "features": [
+    "excessive_building:ore_malachite"
+  ],
+  "step": "underground_ores"
+}

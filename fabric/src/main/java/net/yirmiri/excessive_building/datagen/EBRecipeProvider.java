@@ -1052,6 +1052,7 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         stonecutter.putRecipe(EBBlocks.SMOOTH_BRICK_SLAB.get(), EBBlocks.SMOOTH_BRICKS.get(), 2);
         stonecutter.putRecipe(EBBlocks.SMOOTH_BRICK_WALL.get(), EBBlocks.SMOOTH_BRICKS.get());
         
+        //AMETHYST
         polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_BRICKS.get(), Blocks.AMETHYST_BLOCK);
 
         stairBuilder(EBBlocks.AMETHYST_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.AMETHYST_BRICKS.get()))
@@ -1066,7 +1067,7 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(EBBlocks.AMETHYST_BRICKS.get()), has(EBBlocks.AMETHYST_BRICKS.get()))
                 .save(exporter);
 
-        stonecutter.putRecipe(EBBlocks.AMETHYST_BRICKS.get(), Blocks.AMETHYST_BLOCK);
+        stonecutter.putRecipe(EBBlocks.AMETHYST_BRICKS.get(), Blocks.AMETHYST_BLOCK, 4);
 
         stonecutter.putRecipe(EBBlocks.AMETHYST_BRICK_STAIRS.get(), EBBlocks.AMETHYST_BRICKS.get());
         stonecutter.putRecipe(EBBlocks.AMETHYST_BRICK_SLAB.get(), EBBlocks.AMETHYST_BRICKS.get(), 2);
@@ -1084,7 +1085,109 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(EBBlocks.AMETHYST_FRAMED_GLASS.get()), has(EBBlocks.AMETHYST_FRAMED_GLASS.get()))
                 .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get())));
 
-        //TODO REPLACE WITH FLUID INTERACTION
+        //LAPIS
+        resourceBlock(EBBlocks.LAPIS_BRICKS.get().asItem(), Items.LAPIS_LAZULI.asItem())
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, "lapis_bricks"));
+
+        stairBuilder(EBBlocks.LAPIS_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.LAPIS_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LAPIS_BRICKS.get()), has(EBBlocks.LAPIS_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAPIS_BRICK_SLAB.get(), Ingredient.of(EBBlocks.LAPIS_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LAPIS_BRICKS.get()), has(EBBlocks.LAPIS_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LAPIS_BRICK_WALL.get(), Ingredient.of(EBBlocks.LAPIS_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LAPIS_BRICKS.get()), has(EBBlocks.LAPIS_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.LAPIS_BRICKS.get(), Items.LAPIS_LAZULI, 24);
+
+        stonecutter.putRecipe(EBBlocks.LAPIS_BRICK_STAIRS.get(), EBBlocks.LAPIS_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.LAPIS_BRICK_SLAB.get(), EBBlocks.LAPIS_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.LAPIS_BRICK_WALL.get(), EBBlocks.LAPIS_BRICKS.get());
+
+        createCrystalLantern(EBBlocks.LAPIS_LAMP.get().asItem(), Items.LAPIS_LAZULI)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.LAPIS_LAMP.get())));
+
+        createCrystalGlass(EBBlocks.LAPIS_FRAMED_GLASS.get().asItem(), Items.LAPIS_LAZULI)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.LAPIS_FRAMED_GLASS.get())));
+
+        createPane(EBBlocks.LAPIS_FRAMED_GLASS_PANE.get().asItem(), EBBlocks.LAPIS_FRAMED_GLASS.get().asItem())
+                .unlockedBy(getHasName(EBBlocks.LAPIS_FRAMED_GLASS.get()), has(EBBlocks.LAPIS_FRAMED_GLASS.get()))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.LAPIS_FRAMED_GLASS_PANE.get())));
+
+        //EMERALD
+        resourceBlock(EBBlocks.EMERALD_BRICKS.get().asItem(), Items.EMERALD.asItem())
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, "emerald_bricks"));
+
+        stairBuilder(EBBlocks.EMERALD_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.EMERALD_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.EMERALD_BRICKS.get()), has(EBBlocks.EMERALD_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICK_SLAB.get(), Ingredient.of(EBBlocks.EMERALD_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.EMERALD_BRICKS.get()), has(EBBlocks.EMERALD_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICK_WALL.get(), Ingredient.of(EBBlocks.EMERALD_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.EMERALD_BRICKS.get()), has(EBBlocks.EMERALD_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.EMERALD_BRICKS.get(), Items.EMERALD, 24);
+
+        stonecutter.putRecipe(EBBlocks.EMERALD_BRICK_STAIRS.get(), EBBlocks.EMERALD_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.EMERALD_BRICK_SLAB.get(), EBBlocks.EMERALD_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.EMERALD_BRICK_WALL.get(), EBBlocks.EMERALD_BRICKS.get());
+
+        createCrystalLantern(EBBlocks.EMERALD_LAMP.get().asItem(), Items.EMERALD)
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.EMERALD_LAMP.get())));
+
+        createCrystalGlass(EBBlocks.EMERALD_FRAMED_GLASS.get().asItem(), Items.EMERALD)
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.EMERALD_FRAMED_GLASS.get())));
+
+        createPane(EBBlocks.EMERALD_FRAMED_GLASS_PANE.get().asItem(), EBBlocks.EMERALD_FRAMED_GLASS.get().asItem())
+                .unlockedBy(getHasName(EBBlocks.EMERALD_FRAMED_GLASS.get()), has(EBBlocks.EMERALD_FRAMED_GLASS.get()))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.EMERALD_FRAMED_GLASS_PANE.get())));
+
+        //DIAMOND
+        resourceBlock(EBBlocks.DIAMOND_BRICKS.get().asItem(), Items.DIAMOND.asItem())
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, "diamond_bricks"));
+
+        stairBuilder(EBBlocks.DIAMOND_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.DIAMOND_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.DIAMOND_BRICKS.get()), has(EBBlocks.DIAMOND_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIAMOND_BRICK_SLAB.get(), Ingredient.of(EBBlocks.DIAMOND_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.DIAMOND_BRICKS.get()), has(EBBlocks.DIAMOND_BRICKS.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIAMOND_BRICK_WALL.get(), Ingredient.of(EBBlocks.DIAMOND_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.DIAMOND_BRICKS.get()), has(EBBlocks.DIAMOND_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putRecipe(EBBlocks.DIAMOND_BRICKS.get(), Items.DIAMOND, 24);
+
+        stonecutter.putRecipe(EBBlocks.DIAMOND_BRICK_STAIRS.get(), EBBlocks.DIAMOND_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.DIAMOND_BRICK_SLAB.get(), EBBlocks.DIAMOND_BRICKS.get(), 2);
+        stonecutter.putRecipe(EBBlocks.DIAMOND_BRICK_WALL.get(), EBBlocks.DIAMOND_BRICKS.get());
+
+        createCrystalLantern(EBBlocks.DIAMOND_LAMP.get().asItem(), Items.DIAMOND)
+                .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.DIAMOND_LAMP.get())));
+
+        createCrystalGlass(EBBlocks.DIAMOND_FRAMED_GLASS.get().asItem(), Items.DIAMOND)
+                .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.DIAMOND_FRAMED_GLASS.get())));
+
+        createPane(EBBlocks.DIAMOND_FRAMED_GLASS_PANE.get().asItem(), EBBlocks.DIAMOND_FRAMED_GLASS.get().asItem())
+                .unlockedBy(getHasName(EBBlocks.DIAMOND_FRAMED_GLASS.get()), has(EBBlocks.DIAMOND_FRAMED_GLASS.get()))
+                .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.DIAMOND_FRAMED_GLASS_PANE.get())));
+
+        //CLAY TODO REPLACE WITH FLUID INTERACTION
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.CORALSOIL_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
                 Blocks.CLAY, 0.1F, 200).unlockedBy(getHasName(EBBlocks.CORALSOIL_CLAY.get()), has(EBBlocks.CORALSOIL_CLAY.get()))
                 .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.CLAY) + "_from_coralsoil_clay"));
@@ -1165,7 +1268,7 @@ public class EBRecipeProvider extends FabricRecipeProvider {
             stonecutter.putRecipe(EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get(), EBBlocks.getDyedAlmentraBricks(colors.getId()).get());
         }
 
-        //UNDYED
+        //=======================UNDYED=======================
         stairBuilder(EBBlocks.ALMENTRA_STAIRS.get(), Ingredient.of(EBBlocks.ALMENTRA_BRICKS.get()))
                 .unlockedBy(getHasName(EBBlocks.ALMENTRA_BRICKS.get()), has(EBBlocks.ALMENTRA_BRICKS.get()))
                 .save(exporter);
@@ -1208,8 +1311,84 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .unlockedBy(getHasName(EBBlocks.FROSTED_GLASS.get()), has(EBBlocks.FROSTED_GLASS.get()))
                 .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.FROSTED_LANTERN.get())));
 
+        //=======================MALACHITE=======================
+        stairBuilder(EBBlocks.MALACHITE_STAIRS.get(), Ingredient.of(EBBlocks.MALACHITE.get()))
+                .unlockedBy(getHasName(EBBlocks.MALACHITE.get()), has(EBBlocks.MALACHITE.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MALACHITE_SLAB.get(), Ingredient.of(EBBlocks.MALACHITE.get()))
+                .unlockedBy(getHasName(EBBlocks.MALACHITE.get()), has(EBBlocks.MALACHITE.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MALACHITE_WALL.get(), Ingredient.of(EBBlocks.MALACHITE.get()))
+                .unlockedBy(getHasName(EBBlocks.MALACHITE.get()), has(EBBlocks.MALACHITE.get()))
+                .save(exporter);
+        
+        stonecutter.putRecipe(EBBlocks.MALACHITE_STAIRS.get(), EBBlocks.MALACHITE.get());
+        stonecutter.putRecipe(EBBlocks.MALACHITE_SLAB.get(), EBBlocks.MALACHITE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.MALACHITE_WALL.get(), EBBlocks.MALACHITE.get());
+
+        //=======================CUT MALACHITE=======================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.CUT_MALACHITE.get(), EBBlocks.MALACHITE.get());
+
+        stairBuilder(EBBlocks.CUT_MALACHITE_STAIRS.get(), Ingredient.of(EBBlocks.CUT_MALACHITE.get()))
+                .unlockedBy(getHasName(EBBlocks.CUT_MALACHITE.get()), has(EBBlocks.CUT_MALACHITE.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CUT_MALACHITE_SLAB.get(), Ingredient.of(EBBlocks.CUT_MALACHITE.get()))
+                .unlockedBy(getHasName(EBBlocks.CUT_MALACHITE.get()), has(EBBlocks.CUT_MALACHITE.get()))
+                .save(exporter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CUT_MALACHITE_WALL.get(), Ingredient.of(EBBlocks.CUT_MALACHITE.get()))
+                .unlockedBy(getHasName(EBBlocks.CUT_MALACHITE.get()), has(EBBlocks.CUT_MALACHITE.get()))
+                .save(exporter);
+
+        stonecutter.putShadowRecipe(EBBlocks.CUT_MALACHITE.get(), EBBlocks.MALACHITE.get());
+        stonecutter.putRecipe(EBBlocks.CUT_MALACHITE_STAIRS.get(), EBBlocks.CUT_MALACHITE.get());
+        stonecutter.putRecipe(EBBlocks.CUT_MALACHITE_SLAB.get(), EBBlocks.CUT_MALACHITE.get(), 2);
+        stonecutter.putRecipe(EBBlocks.CUT_MALACHITE_WALL.get(), EBBlocks.CUT_MALACHITE.get());
+
+        //=======================POLISHED MALACHITE=======================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_MALACHITE.get(), EBBlocks.CUT_MALACHITE.get());
+
+        stairBuilder(EBBlocks.POLISHED_MALACHITE_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_MALACHITE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_MALACHITE.get()), has(EBBlocks.POLISHED_MALACHITE.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_MALACHITE_SLAB.get(), Ingredient.of(EBBlocks.POLISHED_MALACHITE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_MALACHITE.get()), has(EBBlocks.POLISHED_MALACHITE.get()))
+                .save(exporter);
+
+        stonecutter.putShadowRecipe(EBBlocks.POLISHED_MALACHITE.get(), EBBlocks.CUT_MALACHITE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_MALACHITE_STAIRS.get(), EBBlocks.POLISHED_MALACHITE.get());
+        stonecutter.putRecipe(EBBlocks.POLISHED_MALACHITE_SLAB.get(), EBBlocks.POLISHED_MALACHITE.get(), 2);
+
+        //=======================MALACHITE BRICKS=======================
+        polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.MALACHITE_BRICKS.get(), EBBlocks.POLISHED_MALACHITE.get());
+
+        stairBuilder(EBBlocks.MALACHITE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.MALACHITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MALACHITE_BRICKS.get()), has(EBBlocks.MALACHITE_BRICKS.get()))
+                .save(exporter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MALACHITE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.MALACHITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MALACHITE_BRICKS.get()), has(EBBlocks.MALACHITE_BRICKS.get()))
+                .save(exporter);
+
+        stonecutter.putShadowRecipe(EBBlocks.MALACHITE_BRICKS.get(), EBBlocks.POLISHED_MALACHITE.get());
+        stonecutter.putRecipe(EBBlocks.MALACHITE_BRICK_STAIRS.get(), EBBlocks.MALACHITE_BRICKS.get());
+        stonecutter.putRecipe(EBBlocks.MALACHITE_BRICK_SLAB.get(), EBBlocks.MALACHITE_BRICKS.get(), 2);
+
         //====================================================
         stonecutter.generateRecipes(exporter);
+    }
+
+    public static ShapedRecipeBuilder resourceBlock(Item output, Item ingredient) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 24)
+                .define('#', ingredient).define('@', Items.COPPER_INGOT)
+                .pattern("@@@")
+                .pattern("@#@")
+                .pattern("@@@")
+                .unlockedBy(getHasName(ingredient), has(ingredient));
     }
 
     public static ShapedRecipeBuilder createChiseled(Item output, Item ingredient) {
@@ -1243,19 +1422,19 @@ public class EBRecipeProvider extends FabricRecipeProvider {
     }
 
     public static ShapedRecipeBuilder createCrystalLantern(Item output, Item ingredient) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 2)
-                .define('#', ingredient).define('@', Items.IRON_INGOT).define('!', Items.IRON_NUGGET)
-                .pattern("!@!")
-                .pattern("###")
-                .pattern("!@!");
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 8)
+                .define('#', ingredient).define('@', Items.IRON_NUGGET)
+                .pattern("@@@")
+                .pattern("@#@")
+                .pattern("@@@");
     }
 
     public static ShapedRecipeBuilder createCrystalGlass(Item output, Item ingredient) {
-        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 2)
-                .define('#', ingredient).define('@', Items.GLASS).define('!', Items.IRON_NUGGET)
-                .pattern("!#!")
-                .pattern("#@#")
-                .pattern("!#!");
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, output, 12)
+                .define('#', ingredient).define('@', Items.GLASS)
+                .pattern(" @ ")
+                .pattern("@#@")
+                .pattern(" @ ");
     }
 
     public static ShapedRecipeBuilder createPane(Item output, Item ingredient) {

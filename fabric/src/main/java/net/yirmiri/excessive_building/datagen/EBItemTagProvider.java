@@ -75,6 +75,12 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(EBBlocks.SMOOTH_SAGE_BRICK_WALL.get().asItem())
                 .add(EBBlocks.LAVENDER_BRICK_WALL.get().asItem())
                 .add(EBBlocks.SMOOTH_LAVENDER_BRICK_WALL.get().asItem())
+                .add(EBBlocks.EMERALD_BRICK_WALL.get().asItem())
+                .add(EBBlocks.LAPIS_BRICK_WALL.get().asItem())
+                .add(EBBlocks.DIAMOND_BRICK_WALL.get().asItem())
+                .add(EBBlocks.MALACHITE_WALL.get().asItem())
+                .add(EBBlocks.MALACHITE_BRICK_WALL.get().asItem())
+                .add(EBBlocks.CUT_MALACHITE_WALL.get().asItem())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

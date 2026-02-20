@@ -21,6 +21,9 @@ public class FabricExcessiveBuilding implements ModInitializer {
 
         //BIOME MODIFIERS
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN),
+                GenerationStep.Decoration.UNDERGROUND_ORES, EBFeatureKeys.PlacedFeatures.ORE_MALACHITE);
+
+        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_MOUNTAIN),
                 GenerationStep.Decoration.UNDERGROUND_ORES, EBFeatureKeys.PlacedFeatures.ORE_ALMENTRA);
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.SWAMP),
