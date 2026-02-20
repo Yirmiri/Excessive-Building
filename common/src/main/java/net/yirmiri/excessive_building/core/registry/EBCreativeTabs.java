@@ -551,14 +551,14 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.SMOOTH_BRICK_SLAB.get());
                         entry.accept(EBBlocks.SMOOTH_BRICK_WALL.get());
 
-                        entry.accept(EBBlocks.AMETHYST_BRICKS.get());
-                        entry.accept(EBBlocks.AMETHYST_BRICK_STAIRS.get());
-                        entry.accept(EBBlocks.AMETHYST_BRICK_SLAB.get());
-                        entry.accept(EBBlocks.AMETHYST_BRICK_WALL.get());
+                        entry.accept(EBBlocks.EMERALD_BRICKS.get());
+                        entry.accept(EBBlocks.EMERALD_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.EMERALD_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.EMERALD_BRICK_WALL.get());
 
-                        entry.accept(EBBlocks.AMETHYST_LAMP.get());
-                        entry.accept(EBBlocks.AMETHYST_FRAMED_GLASS.get());
-                        entry.accept(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
+                        entry.accept(EBBlocks.EMERALD_LAMP.get());
+                        entry.accept(EBBlocks.EMERALD_FRAMED_GLASS.get());
+                        entry.accept(EBBlocks.EMERALD_FRAMED_GLASS_PANE.get());
 
                         entry.accept(EBBlocks.LAPIS_BRICKS.get());
                         entry.accept(EBBlocks.LAPIS_BRICK_STAIRS.get());
@@ -578,14 +578,14 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.DIAMOND_FRAMED_GLASS.get());
                         entry.accept(EBBlocks.DIAMOND_FRAMED_GLASS_PANE.get());
 
-                        entry.accept(EBBlocks.EMERALD_BRICKS.get());
-                        entry.accept(EBBlocks.EMERALD_BRICK_STAIRS.get());
-                        entry.accept(EBBlocks.EMERALD_BRICK_SLAB.get());
-                        entry.accept(EBBlocks.EMERALD_BRICK_WALL.get());
+                        entry.accept(EBBlocks.AMETHYST_BRICKS.get());
+                        entry.accept(EBBlocks.AMETHYST_BRICK_STAIRS.get());
+                        entry.accept(EBBlocks.AMETHYST_BRICK_SLAB.get());
+                        entry.accept(EBBlocks.AMETHYST_BRICK_WALL.get());
 
-                        entry.accept(EBBlocks.EMERALD_LAMP.get());
-                        entry.accept(EBBlocks.EMERALD_FRAMED_GLASS.get());
-                        entry.accept(EBBlocks.EMERALD_FRAMED_GLASS_PANE.get());
+                        entry.accept(EBBlocks.AMETHYST_LAMP.get());
+                        entry.accept(EBBlocks.AMETHYST_FRAMED_GLASS.get());
+                        entry.accept(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get());
 
                         entry.accept(EBBlocks.COPPER_BRICKS.get());
                         entry.accept(EBBlocks.COPPER_BRICK_STAIRS.get());
