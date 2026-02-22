@@ -442,8 +442,8 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add("painting.excessive_building.sniffing_in_the_pine_forest.title", "Sniffing in the Pine Forest");
         build.add("painting.excessive_building.sniffing_in_the_pine_forest.author", "Brickerman");
 
-        build.add("painting.excessive_building.peace_sells_but_who_is_crafting.title", "Peace Sells But Who Is Crafting?");
-        build.add("painting.excessive_building.peace_sells_but_who_is_crafting.author", "Brickerman");
+        build.add("painting.excessive_building.peace_sells_but_whos_crafting.title", "Peace Sells But Who's Crafting?");
+        build.add("painting.excessive_building.peace_sells_but_whos_crafting.author", "Brickerman");
 
         build.add("painting.excessive_building.imminent_detonation.title", "Imminent Detonation");
         build.add("painting.excessive_building.imminent_detonation.author", "BackupCup");
