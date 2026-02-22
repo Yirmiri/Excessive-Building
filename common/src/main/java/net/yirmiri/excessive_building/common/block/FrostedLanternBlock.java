@@ -66,10 +66,10 @@ public class FrostedLanternBlock extends LanternBlock {
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         if (color != null) {
-            for (int i = 0; i < random.nextIntBetweenInclusive(2, 5); i++) {
-                double posX = (pos.getX() + 0.5) + ((random.nextFloat() * 10) - 5);
-                double posY = (pos.getY() + 0.5) + ((random.nextFloat() * 10) - 5);
-                double posZ = (pos.getZ() + 0.5) + ((random.nextFloat() * 10) - 5);
+            for (int i = 0; i < random.nextIntBetweenInclusive(2, 4); i++) {
+                double posX = (pos.getX() + 0.5) + ((random.nextFloat() * 5) - 2.5);
+                double posY = (pos.getY() + 0.5) + ((random.nextFloat() * 5) - 2.5);
+                double posZ = (pos.getZ() + 0.5) + ((random.nextFloat() * 5) - 2.5);
 
                 if (state.getValue(EMITTING)) {
                     if (state.getValue(HANGING)) {
