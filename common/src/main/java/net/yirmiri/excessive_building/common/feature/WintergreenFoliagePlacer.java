@@ -29,7 +29,7 @@ public class WintergreenFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected FoliagePlacerType<?> type() {
-        return EBPlacers.WINTERGREEN_FOLIAGE.get();
+        return EBPlacers.WINTERGREEN_FOLIAGE.value();
     }
 
     @Override
@@ -42,18 +42,18 @@ public class WintergreenFoliagePlacer extends FoliagePlacer {
         int k = 0;
 
         for (int l = offset+2; l >= -foliageHeight; --l) {
-            if(l >= offset+2) {
+            if (l >= offset+2) {
                 this.placeLeavesRow(world, placer, random, config, blockPos.relative(d, 4), 0, l, treeNode.doubleTrunk());
                 this.placeLeavesRow(world, placer, random, config, blockPos.relative(d, 4), 0, l-1, treeNode.doubleTrunk());
             }
-            else if(l >= offset+1) {
+            else if (l >= offset+1) {
                 this.placeLeavesRow(world, placer, random, config, blockPos.relative(d, 3), 0, l, treeNode.doubleTrunk());
                 this.placeLeavesRow(world, placer, random, config, blockPos.relative(d, 3), 0, l-1, treeNode.doubleTrunk());
             }
-            else if(l >= offset-1) {
+            else if (l >= offset-1) {
                 this.placeLeavesRow(world, placer, random, config, blockPos.relative(d, 2), 1, l, treeNode.doubleTrunk());
             }
-            else if(l >= offset-4) {
+            else if (l >= offset-4) {
                 this.placeLeavesRow(world, placer, random, config, blockPos.relative(d, 1), 1, l, treeNode.doubleTrunk());
             }
             else {

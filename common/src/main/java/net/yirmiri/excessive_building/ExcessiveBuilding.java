@@ -10,12 +10,12 @@ public class ExcessiveBuilding {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public static void init() {
-        EBParticles.load();
         EBBlocks.load();
         EBItems.load();
         EBCreativeTabs.load();
         EBEffects.load();
         EBFamilyTypes.load();
+        EBParticles.load();
         EBPlacers.load();
     }
 }

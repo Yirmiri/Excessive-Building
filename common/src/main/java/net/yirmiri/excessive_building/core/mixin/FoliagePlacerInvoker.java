@@ -10,8 +10,13 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 
 @Mixin(FoliagePlacerType.class)
 public interface FoliagePlacerInvoker {
+    @Invoker("register")
+    static <P extends FoliagePlacer> FoliagePlacerType<P> register(String id, MapCodec<P> codec) {
+        throw new AssertionError();
+    }
+
     @Invoker("<init>")
-    static <P extends FoliagePlacer> FoliagePlacerType<P> register(MapCodec<P> codec) {
+    static <P extends FoliagePlacer> FoliagePlacerType<P> init(MapCodec<P> codec) {
         throw new AssertionError();
     }
 }

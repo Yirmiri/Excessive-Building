@@ -29,7 +29,7 @@ public class WintergreenTrunkPlacer extends TrunkPlacer {
 
     @Override
     protected TrunkPlacerType<?> type() {
-        return EBPlacers.WINTERGREEN_TRUNK.get();
+        return EBPlacers.WINTERGREEN_TRUNK.value();
     }
 
     @Override
@@ -39,18 +39,16 @@ public class WintergreenTrunkPlacer extends TrunkPlacer {
         TrunkPlacer.setDirtAt(world, replacer, random, startPos.below(), config);
         int base = Math.max(this.baseHeight, 11);
         for (int i = 0; i < height; ++i) {
-            if(i < base - 4) {
+            if (i < base - 4) {
                 this.placeLog(world, replacer, random, startPos.above(i), config);
             }
-            else if(i < base - 1) {
+            else if (i < base - 1) {
                 this.placeLog(world, replacer, random, startPos.above(i).relative(d, 1), config);
             }
             else {
                 this.placeLog(world, replacer, random, startPos.above(i).relative(d, 2), config);
             }
         }
-
-        this.placeLog(world, replacer, random, startPos.above(height), config);
 
         return ImmutableList.of(new FoliagePlacer.FoliageAttachment(startPos.above(height), 0, false));
     }

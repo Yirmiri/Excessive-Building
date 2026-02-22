@@ -21,7 +21,7 @@ public class EBTiers {
 
         @Override
         public float getAttackDamageBonus() {
-            return 1.5F;
+            return 2.0F;
         }
 
         @Override

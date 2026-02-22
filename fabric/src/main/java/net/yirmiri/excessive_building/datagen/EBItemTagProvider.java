@@ -209,19 +209,19 @@ public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     private void appendDurabilityEnchantable() {
         getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
-                .add(EBItems.GAUNTLET.get().asItem())
+                .add(EBItems.MALLET.get().asItem())
         ;
     }
 
     private void appendMiningEnchantable() {
         getOrCreateTagBuilder(ItemTags.MINING_ENCHANTABLE)
-                .add(EBItems.GAUNTLET.get().asItem())
+                .add(EBItems.MALLET.get().asItem())
         ;
     }
 
     private void appendMiningLootEnchantable() {
         getOrCreateTagBuilder(ItemTags.MINING_LOOT_ENCHANTABLE)
-                .add(EBItems.GAUNTLET.get().asItem())
+                .add(EBItems.MALLET.get().asItem())
         ;
     }
 }
