@@ -404,6 +404,67 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add("item.minecraft.tipped_arrow.effect.excessive_building.long_rapidity", "Arrow of Rapidity");
         build.add("item.minecraft.tipped_arrow.effect.excessive_building.strong_rapidity", "Arrow of Rapidity");
         build.add("effect.excessive_building.rapidity.description", "Decreases the cooldown between placement of blocks, allowing for faster building.");
+
+        //PAINTING
+        build.add("painting.excessive_building.burrito.title", "Burrito(?)");
+        build.add("painting.excessive_building.burrito.author", "DriSFiSH(?)");
+
+        build.add("painting.excessive_building.floors.title", "Floors");
+        build.add("painting.excessive_building.floors.author", "Brickerman");
+
+        build.add("painting.excessive_building.beacon_of_the_desert.title", "Beacon of the Desert");
+        build.add("painting.excessive_building.beacon_of_the_desert.author", "Brickerman");
+
+        build.add("painting.excessive_building.beacon_of_the_desert_trimmed.title", "Beacon of the Desert Trimmed");
+        build.add("painting.excessive_building.beacon_of_the_desert_trimmed.author", "Brickerman");
+
+        build.add("painting.excessive_building.forgotten_kingdom.title", "Forgotten Kingdom");
+        build.add("painting.excessive_building.forgotten_kingdom.author", "Yirmiri");
+
+        build.add("painting.excessive_building.evil_eye.title", "Evil Eye");
+        build.add("painting.excessive_building.evil_eye.author", "Yirmiri");
+
+        build.add("painting.excessive_building.kolos_bug.title", "Kolos Bug");
+        build.add("painting.excessive_building.kolos_bug.author", "Kolos");
+
+        build.add("painting.excessive_building.the_lone_tree.title", "The Lone Tree");
+        build.add("painting.excessive_building.the_lone_tree.author", "SuperMightByte");
+
+        build.add("painting.excessive_building.lone_bridge.title", "Lone Bridge");
+        build.add("painting.excessive_building.lone_bridge.author", "NebulaIsMine");
+
+        build.add("painting.excessive_building.pufferlight.title", "Pufferlight");
+        build.add("painting.excessive_building.pufferlight.author", "Pepagg");
+
+        build.add("painting.excessive_building.paleobotany.title", "Paleobotany");
+        build.add("painting.excessive_building.paleobotany.author", "Hecco");
+
+        build.add("painting.excessive_building.sniffing_in_the_pine_forest.title", "Sniffing in the Pine Forest");
+        build.add("painting.excessive_building.sniffing_in_the_pine_forest.author", "Brickerman");
+
+        build.add("painting.excessive_building.peace_sells_but_who_is_crafting.title", "Peace Sells But Who Is Crafting?");
+        build.add("painting.excessive_building.peace_sells_but_who_is_crafting.author", "Brickerman");
+
+        build.add("painting.excessive_building.imminent_detonation.title", "Imminent Detonation");
+        build.add("painting.excessive_building.imminent_detonation.author", "BackupCup");
+
+        build.add("painting.excessive_building.scourge_bringer.title", "Scourge Bringer");
+        build.add("painting.excessive_building.scourge_bringer.author", "BackupCup");
+
+        build.add("painting.excessive_building.the_end.title", "The End");
+        build.add("painting.excessive_building.the_end.author", "BackupCup");
+
+        build.add("painting.excessive_building.why_do_my_eyes_hurt.title", "Why Do My Eyes Hurt");
+        build.add("painting.excessive_building.why_do_my_eyes_hurt.author", "BackupCup");
+
+        build.add("painting.excessive_building.crash_landing.title", "Crash Landing");
+        build.add("painting.excessive_building.crash_landing.author", "BackupCup");
+
+        build.add("painting.excessive_building.long_trips.title", "Long Trips");
+        build.add("painting.excessive_building.long_trips.author", "SmillyBlade (also formerly known as SmillyScarfs until they got hacked!)");
+
+        build.add("painting.excessive_building.catastrophes_before_the_calamity.title", "Catastrophes Before The Calamity");
+        build.add("painting.excessive_building.catastrophes_before_the_calamity.author", "BackupCup");
     }
 
     private void addDamage(TranslationBuilder build, ResourceKey<DamageType> type, String deathMsg, String killMsg) {

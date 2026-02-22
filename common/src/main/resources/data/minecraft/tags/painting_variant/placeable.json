@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "excessive_building:beacon_of_the_desert", "required": false },
+    { "id": "excessive_building:beacon_of_the_desert_trimmed", "required": false },
+    { "id": "excessive_building:burrito", "required": false },
+    { "id": "excessive_building:catastrophes_before_the_calamity", "required": false },
+    { "id": "excessive_building:crash_landing", "required": false },
+    { "id": "excessive_building:evil_eye", "required": false },
+    { "id": "excessive_building:floors", "required": false },
+    { "id": "excessive_building:forgotten_kingdom", "required": false },
+    { "id": "excessive_building:imminent_detonation", "required": false },
+    { "id": "excessive_building:kolos_bug", "required": false },
+    { "id": "excessive_building:lone_bridge", "required": false },
+    { "id": "excessive_building:long_trips", "required": false },
+    { "id": "excessive_building:paleobotany", "required": false },
+    { "id": "excessive_building:pufferlight", "required": false },
+    { "id": "excessive_building:scourge_bringer", "required": false },
+    { "id": "excessive_building:sniffing_in_the_pine_forest", "required": false },
+    { "id": "excessive_building:the_end", "required": false },
+    { "id": "excessive_building:the_lone_tree", "required": false },
+    { "id": "excessive_building:why_do_my_eyes_hurt", "required": false },
+    { "id": "excessive_building:peace_sells_but_who_is_crafting", "required": false }
+  ]
+}
