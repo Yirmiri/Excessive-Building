@@ -299,6 +299,18 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(EBBlocks.MALACHITE_BRICK_STAIRS.get())
                 .add(EBBlocks.MALACHITE_BRICK_SLAB.get())
                 .add(EBBlocks.MALACHITE_BRICK_WALL.get())
+
+                .add(EBBlocks.AMETHYST_FRAMED_GLASS.get())
+                .add(EBBlocks.AMETHYST_FRAMED_GLASS_PANE.get())
+
+                .add(EBBlocks.LAPIS_FRAMED_GLASS.get())
+                .add(EBBlocks.LAPIS_FRAMED_GLASS_PANE.get())
+
+                .add(EBBlocks.DIAMOND_FRAMED_GLASS.get())
+                .add(EBBlocks.DIAMOND_FRAMED_GLASS_PANE.get())
+
+                .add(EBBlocks.EMERALD_FRAMED_GLASS.get())
+                .add(EBBlocks.EMERALD_FRAMED_GLASS_PANE.get())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

@@ -648,7 +648,7 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         //==========================TOOLS==========================
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.GAUNTLET.get(), 1)
                 .define('#', Items.AMETHYST_SHARD).define('@', Items.COPPER_INGOT)
-                .define('!', Items.AMETHYST_BLOCK).define('%', Items.DIAMOND)
+                .define('!', Items.AMETHYST_BLOCK).define('%', EBItems.ANCIENT_FRUIT.get())
                 .pattern("!# ")
                 .pattern("#%@")
                 .pattern(" @@")

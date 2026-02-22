@@ -18,4 +18,4 @@ public class ExcessiveBuilding {
         EBParticles.load();
         EBPlacers.load();
     }
-}
+}//todo make all unique stones craft each other(?)

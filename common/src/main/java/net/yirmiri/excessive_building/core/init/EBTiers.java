@@ -6,12 +6,13 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+import net.yirmiri.excessive_building.core.registry.EBItems;
 
 public class EBTiers {
     public static final Tier GAUNTLET = new Tier() {
         @Override
         public int getUses() {
-            return 3591;
+            return 781;
         }
 
         @Override
@@ -36,7 +37,7 @@ public class EBTiers {
 
         @Override
         public Ingredient getRepairIngredient() {
-            return Ingredient.of(Items.AMETHYST_SHARD);
+            return Ingredient.of(EBItems.ANCIENT_FRUIT.get());
         }
     };
 
@@ -48,7 +49,7 @@ public class EBTiers {
 
         @Override
         public float getSpeed() {
-            return 1.5F;
+            return 2.0F;
         }
 
         @Override
