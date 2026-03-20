@@ -24,6 +24,7 @@ public class EBBiomeTagProvider extends BiomeTagsProvider {
         appendSageGeneratesIn();
         appendWintergreenGeneratesIn();
         appendSnowyWintergreenGeneratesIn();
+        appendAriditeGeneratesIn();
     }
 
     private void appendLavenderGeneratesIn() {
@@ -39,6 +40,16 @@ public class EBBiomeTagProvider extends BiomeTagsProvider {
                 .addOptionalTag(BiomeTags.IS_SAVANNA.location())
                 .add(Biomes.MEADOW)
                 .add(Biomes.FLOWER_FOREST)
+        ;
+    }
+
+    private void appendAriditeGeneratesIn() {
+        tag(EBTags.BiomeT.ARIDITE_GENERATES_IN)
+                .addOptionalTag(BiomeTags.IS_SAVANNA.location())
+                .add(Biomes.DESERT)
+                .add(Biomes.BADLANDS)
+                .add(Biomes.ERODED_BADLANDS)
+                .add(Biomes.WOODED_BADLANDS)
         ;
     }
 

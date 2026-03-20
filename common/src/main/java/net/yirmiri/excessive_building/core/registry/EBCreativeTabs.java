@@ -18,6 +18,7 @@ public class EBCreativeTabs {
                         //TOOLS
                         entry.accept(EBItems.GAUNTLET.get());
                         entry.accept(EBItems.MALLET.get());
+                        entry.accept(EBItems.MAGNET.get());
 
                         //WINTERGREEN
                         entry.accept(EBBlocks.WINTERGREEN_LOG.get());

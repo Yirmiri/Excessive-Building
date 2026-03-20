@@ -7,6 +7,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.common.item.GauntletItem;
+import net.yirmiri.excessive_building.common.item.MagnetItem;
 import net.yirmiri.excessive_building.common.item.MalletItem;
 import net.yirmiri.excessive_building.common.util.EBProperties;
 import net.yirmiri.excessive_building.common.util.EBUtil;
@@ -19,6 +20,7 @@ public class EBItems {
     //TOOLS
     public static final Supplier<Item> GAUNTLET = register("gauntlet", () -> new GauntletItem(EBTiers.GAUNTLET, EBProperties.ItemP.GAUNTLET));
     public static final Supplier<Item> MALLET = register("mallet", () -> new MalletItem(EBTiers.MALLET, EBTags.BlockT.MINEABLE_WITH_BLUNT_FORCE, EBProperties.ItemP.MALLET));
+    public static final Supplier<Item> MAGNET = register("magnet", () -> new MagnetItem(EBProperties.ItemP.GENERIC_1));
 
     //INGREDIENTS
     public static final Supplier<Item> CORALSOIL_CLAY_BALL = register("coralsoil_clay_ball", () -> new Item(EBProperties.ItemP.GENERIC));

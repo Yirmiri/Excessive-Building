@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_coralsoil_clay": {
+    "has_lavender_clay_ball": {
       "conditions": {
         "items": [
           {
-            "items": "excessive_building:coralsoil_clay"
+            "items": "excessive_building:lavender_clay_ball"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "excessive_building:clay_from_coralsoil_clay"
+        "recipe": "excessive_building:clay_ball_from_lavender_clay"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_coralsoil_clay"
+      "has_lavender_clay_ball"
     ]
   ],
   "rewards": {
     "recipes": [
-      "excessive_building:clay_from_coralsoil_clay"
+      "excessive_building:clay_ball_from_lavender_clay"
     ]
   }
 }

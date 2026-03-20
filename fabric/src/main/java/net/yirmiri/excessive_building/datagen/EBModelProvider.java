@@ -395,6 +395,7 @@ public class EBModelProvider extends FabricModelProvider {
         generator.generateFlatItem(EBItems.WINTER_BERRIES.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.WINTERGREEN_SIGN.get(), ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(EBItems.MALLET.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        generator.generateFlatItem(EBItems.MAGNET.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 
     public void createCrystalLantern(BlockModelGenerators generator, Block block) {

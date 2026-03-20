@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smelting",
-  "category": "blocks",
+  "category": "misc",
   "cookingtime": 200,
   "experience": 0.1,
   "ingredient": {
-    "item": "excessive_building:lavender_clay"
+    "item": "excessive_building:sage_clay_ball"
   },
   "result": {
-    "id": "minecraft:clay"
+    "id": "minecraft:clay_ball"
   }
 }

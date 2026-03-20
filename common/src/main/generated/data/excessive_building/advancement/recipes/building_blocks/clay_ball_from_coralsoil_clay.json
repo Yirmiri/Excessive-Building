@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sage_clay": {
+    "has_coralsoil_clay_ball": {
       "conditions": {
         "items": [
           {
-            "items": "excessive_building:sage_clay"
+            "items": "excessive_building:coralsoil_clay_ball"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "excessive_building:clay_from_sage_clay"
+        "recipe": "excessive_building:clay_ball_from_coralsoil_clay"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_sage_clay"
+      "has_coralsoil_clay_ball"
     ]
   ],
   "rewards": {
     "recipes": [
-      "excessive_building:clay_from_sage_clay"
+      "excessive_building:clay_ball_from_coralsoil_clay"
     ]
   }
 }

@@ -38,13 +38,15 @@ public class EBLangProvider extends FabricLanguageProvider {
             build.add(EBBlocks.getDyedAlmentraBricks(colors.getId()).get(), dyeString + " Almentra Bricks");
             build.add(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()).get(), dyeString + " Almentra Brick Stairs");
             build.add(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()).get(), dyeString + " Almentra Brick Slab");
-            build.add(EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get(), dyeString + " Almentra Statue");
+            build.add(EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get(), dyeString + " Almentra Brick Wall");
         }
 
         //MISC
         build.add("itemgroup.excessive_building", "Excessive Building");
         build.add("item.excessive_building.hand", "When in Any Hand:");
         build.add("item.excessive_building.gauntlet.desc", "Reduces the delay of placing blocks");
+        build.add("item.excessive_building.magnet.desc", "Broken blocks immediately enter user's inventory");
+        build.add("item.excessive_building.magnet.sneak.desc", "Sneaking attracts items to the user");
 
         //BLOCKS
         build.add(EBBlocks.COPPER_BRICKS.get(), "Copper Bricks");
@@ -373,6 +375,7 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBItems.WINTERGREEN_HANGING_SIGN.get(), "Wintergreen Hanging Sign");
         build.add(EBItems.WINTER_BERRIES.get(), "Winter Berries");
         build.add(EBItems.MALLET.get(), "Mallet");
+        build.add(EBItems.MAGNET.get(), "Magnet");
         
         //POTIONS
         build.add("effect.excessive_building.reaching", "Reaching");

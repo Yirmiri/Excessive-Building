@@ -35,6 +35,7 @@ public class EBTags {
         public static final TagKey<Biome> SAGE_GENERATES_IN = create("sage_generates_in");
         public static final TagKey<Biome> WINTERGREEN_GENERATES_IN = create("wintergreen_generates_in");
         public static final TagKey<Biome> SNOWY_WINTERGREEN_GENERATES_IN = create("snowy_wintergreen_generates_in");
+        public static final TagKey<Biome> ARIDITE_GENERATES_IN = create("aridite_generates_in");
 
         private static TagKey<Biome> create(String id) {
             return TagKey.create(Registries.BIOME, RunicLib.customid(ExcessiveBuilding.MOD_ID, id));

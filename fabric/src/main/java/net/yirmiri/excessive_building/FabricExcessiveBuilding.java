@@ -35,7 +35,7 @@ public class FabricExcessiveBuilding implements ModInitializer {
         BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_OVERWORLD),
                 GenerationStep.Decoration.UNDERGROUND_ORES, EBFeatureKeys.PlacedFeatures.ORE_HECTALITE);
 
-        BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.HAS_RUINED_PORTAL_DESERT),
+        BiomeModifications.addFeature(BiomeSelectors.tag(EBTags.BiomeT.ARIDITE_GENERATES_IN),
                 GenerationStep.Decoration.UNDERGROUND_ORES, EBFeatureKeys.PlacedFeatures.ORE_ARIDITE);
 
         BiomeModifications.addFeature(BiomeSelectors.tag(EBTags.BiomeT.LAVENDER_GENERATES_IN),

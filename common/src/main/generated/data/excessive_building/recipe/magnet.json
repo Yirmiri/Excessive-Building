@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "!": {
+      "item": "minecraft:copper_ingot"
+    },
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "@": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "pattern": [
+    " # ",
+    "# @",
+    " @!"
+  ],
+  "result": {
+    "count": 1,
+    "id": "excessive_building:magnet"
+  }
+}

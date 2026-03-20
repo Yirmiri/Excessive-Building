@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "#minecraft:has_ruined_portal_desert",
+  "biomes": "#excessive_building:aridite_generates_in",
   "features": [
     "excessive_building:ore_aridite"
   ],

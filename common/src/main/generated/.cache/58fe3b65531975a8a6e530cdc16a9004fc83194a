@@ -1,4 +1,5 @@
-// 1.21.1	2026-02-22T11:09:10.327865	Excessive Building/Tags for minecraft:worldgen/biome
+// 1.21.1	2026-03-19T23:02:07.4329761	Excessive Building/Tags for minecraft:worldgen/biome
 0b27f371f614da9cbb3af215d347537adbc5c573 data\excessive_building\tags\worldgen\biome\sage_generates_in.json
 d3f68656d41a5596ec49a468650cf6d04a00828b data\excessive_building\tags\worldgen\biome\wintergreen_generates_in.json
+f80389dca4582dd927b7d0f52928696f0ce84732 data\excessive_building\tags\worldgen\biome\aridite_generates_in.json
 c9c5bb812d18a2cc6d2687448cbe6d0c6b431e94 data\excessive_building\tags\worldgen\biome\lavender_generates_in.json

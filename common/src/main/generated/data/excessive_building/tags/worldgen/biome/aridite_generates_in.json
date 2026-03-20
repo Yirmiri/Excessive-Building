@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#minecraft:is_savanna",
+      "required": false
+    },
+    "minecraft:desert",
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands"
+  ]
+}

@@ -662,6 +662,14 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .pattern(" ! ")
                 .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
                 .save(exporter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.MAGNET.get(), 1)
+                .define('#', Items.IRON_INGOT).define('@', Items.AMETHYST_SHARD).define('!', Items.COPPER_INGOT)
+                .pattern(" # ")
+                .pattern("# @")
+                .pattern(" @!")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(exporter);
         //==========================MISC==========================
         polished(exporter, RecipeCategory.BUILDING_BLOCKS, EBBlocks.DIORITE_BRICKS.get(), Blocks.POLISHED_DIORITE);
 
@@ -1188,17 +1196,17 @@ public class EBRecipeProvider extends FabricRecipeProvider {
                 .save(exporter, ResourceLocation.tryBuild(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(EBBlocks.DIAMOND_FRAMED_GLASS_PANE.get())));
 
         //CLAY TODO REPLACE WITH FLUID INTERACTION
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.CORALSOIL_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
-                Blocks.CLAY, 0.1F, 200).unlockedBy(getHasName(EBBlocks.CORALSOIL_CLAY.get()), has(EBBlocks.CORALSOIL_CLAY.get()))
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.CLAY) + "_from_coralsoil_clay"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBItems.CORALSOIL_CLAY_BALL.get()), RecipeCategory.BUILDING_BLOCKS,
+                        Items.CLAY_BALL, 0.1F, 200).unlockedBy(getHasName(EBItems.CORALSOIL_CLAY_BALL.get()), has(EBItems.CORALSOIL_CLAY_BALL.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Items.CLAY_BALL) + "_from_coralsoil_clay"));
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.LAVENDER_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
-                        Blocks.CLAY, 0.1F, 200).unlockedBy(getHasName(EBBlocks.LAVENDER_CLAY.get()), has(EBBlocks.LAVENDER_CLAY.get()))
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.CLAY) + "_from_lavender_clay"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBItems.LAVENDER_CLAY_BALL.get()), RecipeCategory.BUILDING_BLOCKS,
+                        Items.CLAY_BALL, 0.1F, 200).unlockedBy(getHasName(EBItems.LAVENDER_CLAY_BALL.get()), has(EBItems.LAVENDER_CLAY_BALL.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Items.CLAY_BALL) + "_from_lavender_clay"));
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.SAGE_CLAY.get()), RecipeCategory.BUILDING_BLOCKS,
-                        Blocks.CLAY, 0.1F, 200).unlockedBy(getHasName(EBBlocks.SAGE_CLAY.get()), has(EBBlocks.SAGE_CLAY.get()))
-                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Blocks.CLAY) + "_from_sage_clay"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBItems.SAGE_CLAY_BALL.get()), RecipeCategory.BUILDING_BLOCKS,
+                        Items.CLAY_BALL, 0.1F, 200).unlockedBy(getHasName(EBItems.SAGE_CLAY_BALL.get()), has(EBItems.SAGE_CLAY_BALL.get()))
+                .save(exporter, RunicLib.customid(ExcessiveBuilding.MOD_ID, getSimpleRecipeName(Items.CLAY_BALL) + "_from_sage_clay"));
 
         //=======================DYED=======================
         for (DyeColor colors : DyeColor.values()) {
