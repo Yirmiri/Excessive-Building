@@ -24,7 +24,7 @@ public class MagnetItem extends Item {
         super.appendHoverText(stack, ctx, tooltip, flag);
         tooltip.add(CommonComponents.EMPTY);
         tooltip.add(Component.translatable("item.excessive_building.hand").withStyle(ChatFormatting.GRAY));
-        //tooltip.add(CommonComponents.space().append(Component.translatable("item.excessive_building.magnet.desc").withStyle(ChatFormatting.BLUE)));
+        tooltip.add(CommonComponents.space().append(Component.translatable("item.excessive_building.magnet_sneak.desc").withStyle(ChatFormatting.BLUE)));
     }
 
     @Override

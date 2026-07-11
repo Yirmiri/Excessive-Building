@@ -1,9 +1,9 @@
-// 1.21.1	2026-03-19T23:02:07.4319725	Excessive Building/Tags for minecraft:block
+// 1.21.1	2026-07-11T01:11:34.441269	Excessive Building/Tags for minecraft:block
 1e27e5f10eb44fe0b22a7ab4ddb31fc666319830 data\minecraft\tags\block\wooden_trapdoors.json
 0271dd8513150e99b62fb5d077cff2664f22df59 data\minecraft\tags\block\walls.json
 7d87cc66b8a6b13b93700870328a541b261ab92a data\minecraft\tags\block\ceiling_hanging_signs.json
-7085cfd6d37d25e00967e92a5be3f667c09f5532 data\minecraft\tags\block\wooden_buttons.json
 0d147bfc35155eaf465a9c0907447f9891de8f9a data\minecraft\tags\block\wall_signs.json
+7085cfd6d37d25e00967e92a5be3f667c09f5532 data\minecraft\tags\block\wooden_buttons.json
 70c924cb31e3b5bbdd8c4ce122646c55941ea40c data\minecraft\tags\block\planks.json
 9b8d5be28676c48cfc78ffa80d2db7b3f94f83a8 data\excessive_building\tags\block\mineable_with_blunt_force.json
 a4a13428b41ed53a35e627f7d7d47cede9f3954e data\minecraft\tags\block\needs_stone_tool.json

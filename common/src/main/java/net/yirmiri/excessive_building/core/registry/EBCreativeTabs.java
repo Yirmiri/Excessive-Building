@@ -5,6 +5,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 import java.util.function.Supplier;
@@ -619,6 +621,20 @@ public class EBCreativeTabs {
                         entry.accept(EBBlocks.WAXED_OXIDIZED_COPPER_BRICKS.get());
                         entry.accept(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_STAIRS.get());
                         entry.accept(EBBlocks.WAXED_OXIDIZED_COPPER_BRICK_SLAB.get());
+
+                        //POTIONS
+                        entry.accept(PotionContents.createItemStack(Items.POTION, EBPotions.REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.POTION, EBPotions.LONG_REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.POTION, EBPotions.STRONG_REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.SPLASH_POTION, EBPotions.REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.SPLASH_POTION, EBPotions.LONG_REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.SPLASH_POTION, EBPotions.STRONG_REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.LINGERING_POTION, EBPotions.REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.LINGERING_POTION, EBPotions.LONG_REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.LINGERING_POTION, EBPotions.STRONG_REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.TIPPED_ARROW, EBPotions.REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.TIPPED_ARROW, EBPotions.LONG_REACHING));
+                        entry.accept(PotionContents.createItemStack(Items.TIPPED_ARROW, EBPotions.STRONG_REACHING));
                     }).build());
 
     public static void load() {

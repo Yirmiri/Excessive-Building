@@ -43,10 +43,8 @@ public class EBLangProvider extends FabricLanguageProvider {
 
         //MISC
         build.add("itemgroup.excessive_building", "Excessive Building");
-        build.add("item.excessive_building.hand", "When in Any Hand:");
-        build.add("item.excessive_building.gauntlet.desc", "Reduces the delay of placing blocks");
-        build.add("item.excessive_building.magnet.desc", "Broken blocks immediately enter user's inventory");
-        build.add("item.excessive_building.magnet.sneak.desc", "Sneaking attracts items to the user");
+        build.add("item.excessive_building.hand", "When held:");
+        build.add("item.excessive_building.magnet_sneak.desc", "Attracts items to the user");
 
         //BLOCKS
         build.add(EBBlocks.COPPER_BRICKS.get(), "Copper Bricks");
@@ -376,6 +374,9 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add(EBItems.WINTER_BERRIES.get(), "Winter Berries");
         build.add(EBItems.MALLET.get(), "Mallet");
         build.add(EBItems.MAGNET.get(), "Magnet");
+
+        //ATTRIBUTES
+        build.add("attribute.excessive_building.placement_delay", "Placement Delay");
         
         //POTIONS
         build.add("effect.excessive_building.reaching", "Reaching");
@@ -392,21 +393,6 @@ public class EBLangProvider extends FabricLanguageProvider {
         build.add("item.minecraft.tipped_arrow.effect.excessive_building.long_reaching", "Arrow of Reaching");
         build.add("item.minecraft.tipped_arrow.effect.excessive_building.strong_reaching", "Arrow of Reaching");
         build.add("effect.excessive_building.reaching.description", "Increases the interaction range for building and breaking of the user.");
-
-        build.add("effect.excessive_building.rapidity", "Rapidity");
-        build.add("item.minecraft.potion.effect.excessive_building.rapidity", "Potion of Rapidity");
-        build.add("item.minecraft.potion.effect.excessive_building.long_rapidity", "Potion of Rapidity");
-        build.add("item.minecraft.potion.effect.excessive_building.strong_rapidity", "Potion of Rapidity");
-        build.add("item.minecraft.splash_potion.effect.excessive_building.rapidity", "Splash Potion of Rapidity");
-        build.add("item.minecraft.splash_potion.effect.excessive_building.long_rapidity", "Splash Potion of Rapidity");
-        build.add("item.minecraft.splash_potion.effect.excessive_building.strong_rapidity", "Splash Potion of Rapidity");
-        build.add("item.minecraft.lingering_potion.effect.excessive_building.rapidity", "Lingering Potion of Rapidity");
-        build.add("item.minecraft.lingering_potion.effect.excessive_building.long_rapidity", "Lingering Potion of Rapidity");
-        build.add("item.minecraft.lingering_potion.effect.excessive_building.strong_rapidity", "Lingering Potion of Rapidity");
-        build.add("item.minecraft.tipped_arrow.effect.excessive_building.rapidity", "Arrow of Rapidity");
-        build.add("item.minecraft.tipped_arrow.effect.excessive_building.long_rapidity", "Arrow of Rapidity");
-        build.add("item.minecraft.tipped_arrow.effect.excessive_building.strong_rapidity", "Arrow of Rapidity");
-        build.add("effect.excessive_building.rapidity.description", "Decreases the cooldown between placement of blocks, allowing for faster building.");
 
         //PAINTING
         build.add("painting.excessive_building.burrito.title", "Burrito(?)");

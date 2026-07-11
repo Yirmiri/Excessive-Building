@@ -17,5 +17,8 @@ public class ExcessiveBuilding {
         EBFamilyTypes.load();
         EBParticles.load();
         EBPlacers.load();
+        EBAttributes.load();
+        EBPotions.load();
+        EBBlockEntities.load();
     }
 }//todo make all unique stones craft each other(?)

@@ -3,10 +3,12 @@ package net.yirmiri.excessive_building.core.mixin;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.item.BlockItem;
+import net.yirmiri.excessive_building.core.registry.EBAttributes;
 import net.yirmiri.excessive_building.core.registry.EBEffects;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -24,24 +26,17 @@ public class MinecraftMixin {
         }
     }
 
+    @Unique
     private int getClickDelay() {
         int clickDelay = 4;
-
-        boolean mainHandGauntlet = player.getMainHandItem().is(EBItems.GAUNTLET.get());
-        boolean offHandGauntlet = player.getOffhandItem().is(EBItems.GAUNTLET.get());
         boolean mainHandBlock = player.getMainHandItem().getItem() instanceof BlockItem;
         boolean offHandBlock = player.getOffhandItem().getItem() instanceof BlockItem;
 
         if (mainHandBlock || offHandBlock) {
-//            if (player.hasEffect(EBEffects.RAPIDITY)) {
-//                clickDelay -= player.getEffect(EBEffects.RAPIDITY).getAmplifier() + 1;
-//            }
-
-            if ((mainHandGauntlet || offHandGauntlet)) {
-                clickDelay -= 1;
+            if (player.getAttribute(EBAttributes.PLACEMENT_DELAY) != null) {
+                clickDelay += (int) player.getAttribute(EBAttributes.PLACEMENT_DELAY).getValue();
             }
         }
-
         return Math.max(clickDelay, 0);
     }
 }

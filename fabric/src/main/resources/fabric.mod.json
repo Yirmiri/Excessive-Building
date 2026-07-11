@@ -34,7 +34,7 @@
         "fabric-api": "*",
         "minecraft": "${minecraft_version}",
         "java": ">=${java_version}",
-        "runiclib": ">=5.0.0"
+        "runiclib": ">=5.0.7"
     },
     "suggests": {
         "another-mod": "*"

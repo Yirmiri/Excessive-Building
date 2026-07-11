@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
     "id": "excessive_building",
-    "version": "4.0.0",
+    "version": "4.0.2",
     "name": "Excessive Building",
     "description": "Excessive Building is a mod designed to enhance the building experience while maintaining Minecraft's style.",
     "authors": [
@@ -34,7 +34,7 @@
         "fabric-api": "*",
         "minecraft": "1.21.1",
         "java": ">=21",
-        "runiclib": ">=5.0.0"
+        "runiclib": ">=5.0.7"
     },
     "suggests": {
         "another-mod": "*"

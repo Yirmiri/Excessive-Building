@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.common.util;
 
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Blocks;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.yirmiri.excessive_building.common.item.GauntletItem;
 import net.yirmiri.excessive_building.common.item.MalletItem;
 import net.yirmiri.excessive_building.core.init.EBTiers;
+import net.yirmiri.excessive_building.core.registry.EBEffects;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
 import java.util.function.ToIntFunction;
@@ -125,8 +127,8 @@ public class EBProperties {
         //MISC
         public static final FoodProperties WINTER_BERRIES = new FoodProperties.Builder().nutrition(4).saturationModifier(0.2F).fast().build();
 
-        public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(6).saturationModifier(0.5F)
-                //.effect(new MobEffectInstance(EBEffects.REACHING, 200, 0), 1.0F)
+        public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(6).saturationModifier(0.4F)
+                .effect(new MobEffectInstance(EBEffects.REACHING, 200, 0), 1.0F)
                 .build();
     }
 }

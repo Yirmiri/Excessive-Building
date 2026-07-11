@@ -622,7 +622,7 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         planksFromLogs(exporter, EBBlocks.ANCIENT_PLANKS.get(), EBTags.ItemT.ANCIENT_LOGS, 4);
         woodenBoat(exporter, EBItems.ANCIENT_BOAT.get(), EBBlocks.ANCIENT_PLANKS.get());
         chestBoat(exporter, EBItems.ANCIENT_CHEST_BOAT.get(), EBItems.ANCIENT_BOAT.get());
-        hangingSign(exporter, EBItems.ANCIENT_HANGING_SIGN.get(), EBBlocks.STRIPPED_ANCIENT_LOG.get());
+        //hangingSign(exporter, EBItems.ANCIENT_HANGING_SIGN.get(), EBBlocks.STRIPPED_ANCIENT_LOG.get());
 
         //=======================WINTERGREEN WOOD=======================
         BlockFamily wintergreenFamily = familyBuilder(EBBlocks.WINTERGREEN_PLANKS.get())
@@ -643,7 +643,7 @@ public class EBRecipeProvider extends FabricRecipeProvider {
         planksFromLogs(exporter, EBBlocks.WINTERGREEN_PLANKS.get(), EBTags.ItemT.WINTERGREEN_LOGS, 4);
         woodenBoat(exporter, EBItems.WINTERGREEN_BOAT.get(), EBBlocks.WINTERGREEN_PLANKS.get());
         chestBoat(exporter, EBItems.WINTERGREEN_CHEST_BOAT.get(), EBItems.WINTERGREEN_BOAT.get());
-        hangingSign(exporter, EBItems.WINTERGREEN_HANGING_SIGN.get(), EBBlocks.STRIPPED_WINTERGREEN_LOG.get());
+        //hangingSign(exporter, EBItems.WINTERGREEN_HANGING_SIGN.get(), EBBlocks.STRIPPED_WINTERGREEN_LOG.get());
 
         //==========================TOOLS==========================
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, EBItems.GAUNTLET.get(), 1)
