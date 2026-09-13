@@ -1,20 +1,16 @@
 package net.yirmiri.excessive_building.datagen;
 
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.BiomeTagsProvider;
-import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.BiomeTags;
-import net.minecraft.tags.TagEntry;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.yirmiri.excessive_building.core.init.EBTags;
 
 import java.util.concurrent.CompletableFuture;
 
-public class EBBiomeTagProvider extends BiomeTagsProvider {
-    public EBBiomeTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+public class EBBiomeTagGen extends BiomeTagsProvider {
+    public EBBiomeTagGen(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(output, lookupProvider);
     }
 

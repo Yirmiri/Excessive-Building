@@ -11,8 +11,8 @@ import net.yirmiri.excessive_building.core.registry.EBBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
-public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-    public EBBlockTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> future) {
+public class EBBlockTagGen extends FabricTagProvider.BlockTagProvider {
+    public EBBlockTagGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> future) {
         super(output, future);
     }
 
@@ -311,6 +311,15 @@ public class EBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
                 .add(EBBlocks.EMERALD_FRAMED_GLASS.get())
                 .add(EBBlocks.EMERALD_FRAMED_GLASS_PANE.get())
+
+                .add(EBBlocks.ALMENTRA.get())
+                .add(EBBlocks.ALMENTRA_STAIRS.get())
+                .add(EBBlocks.ALMENTRA_SLAB.get())
+                .add(EBBlocks.ALMENTRA_STATUE.get())
+                .add(EBBlocks.ALMENTRA_BRICKS.get())
+                .add(EBBlocks.ALMENTRA_BRICK_STAIRS.get())
+                .add(EBBlocks.ALMENTRA_BRICK_SLAB.get())
+                .add(EBBlocks.ALMENTRA_BRICK_WALL.get())
         ;
 
         for (DyeColor colors : DyeColor.values()) {

@@ -15,8 +15,8 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
-public class EBLangProvider extends FabricLanguageProvider {
-    public EBLangProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+public class EBLangGen extends FabricLanguageProvider {
+    public EBLangGen(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 

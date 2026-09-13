@@ -6,7 +6,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
@@ -21,11 +20,11 @@ import net.yirmiri.excessive_building.core.registry.EBItems;
 
 import java.util.concurrent.CompletableFuture;
 
-public class EBLootTableProvider extends FabricBlockLootTableProvider {
+public class EBBlockLootGen extends FabricBlockLootTableProvider {
     public static final float[] LEAVES_STICK_DROP_CHANCE = new float[] { 0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F };
     public static final float[] SAPLING_DROP_CHANCE = new float[] { 0.01F, 0.05F, 0.08F, 0.1F };
 
-    public EBLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+    public EBBlockLootGen(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
@@ -356,6 +355,15 @@ public class EBLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(EBBlocks.MALACHITE_BRICK_STAIRS.get());
         add(EBBlocks.MALACHITE_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.MALACHITE_BRICK_SLAB.get()));
         dropSelf(EBBlocks.MALACHITE_BRICK_WALL.get());
+
+        dropSelf(EBBlocks.ALMENTRA.get());
+        dropSelf(EBBlocks.ALMENTRA_STAIRS.get());
+        add(EBBlocks.ALMENTRA_SLAB.get(), createSlabItemTable(EBBlocks.ALMENTRA_SLAB.get()));
+        dropSelf(EBBlocks.ALMENTRA_STATUE.get());
+        dropSelf(EBBlocks.ALMENTRA_BRICKS.get());
+        dropSelf(EBBlocks.ALMENTRA_BRICK_STAIRS.get());
+        add(EBBlocks.ALMENTRA_BRICK_SLAB.get(), createSlabItemTable(EBBlocks.ALMENTRA_BRICK_SLAB.get()));
+        dropSelf(EBBlocks.ALMENTRA_BRICK_WALL.get());
 
         addDyedDrops();
     }

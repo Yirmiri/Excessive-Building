@@ -8,12 +8,12 @@ public class FabricExcessiveBuildingDatagen implements DataGeneratorEntrypoint {
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator generator) {
         FabricDataGenerator.Pack pack = generator.createPack();
-        pack.addProvider(EBLangProvider::new);
-        pack.addProvider(EBBlockTagProvider::new);
-        pack.addProvider(EBItemTagProvider::new);
-        pack.addProvider(EBLootTableProvider::new);
-        pack.addProvider(EBModelProvider::new);
-        pack.addProvider(EBRecipeProvider::new);
-        pack.addProvider(EBBiomeTagProvider::new);
+        pack.addProvider(EBLangGen::new);
+        pack.addProvider(EBBlockTagGen::new);
+        pack.addProvider(EBItemTagGen::new);
+        pack.addProvider(EBBlockLootGen::new);
+        pack.addProvider(EBModelGen::new);
+        pack.addProvider(EBRecipeGen::new);
+        pack.addProvider(EBBiomeTagGen::new);
     }
 }

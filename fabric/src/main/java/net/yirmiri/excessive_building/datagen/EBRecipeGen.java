@@ -27,8 +27,8 @@ import java.util.concurrent.CompletableFuture;
 
 import static net.minecraft.data.BlockFamilies.familyBuilder;
 
-public class EBRecipeProvider extends FabricRecipeProvider {
-    public EBRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+public class EBRecipeGen extends FabricRecipeProvider {
+    public EBRecipeGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 

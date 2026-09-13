@@ -4,7 +4,6 @@ import net.azurune.runiclib.RunicLib;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Items;
@@ -15,8 +14,8 @@ import net.yirmiri.excessive_building.core.registry.EBItems;
 
 import java.util.concurrent.CompletableFuture;
 
-public class EBItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    public EBItemTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> future) {
+public class EBItemTagGen extends FabricTagProvider.ItemTagProvider {
+    public EBItemTagGen(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> future) {
         super(output, future);
     }
 

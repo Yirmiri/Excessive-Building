@@ -1,0 +1,41 @@
+{
+  "block.soft_rock.break": {
+    "sounds": [
+      "excessive_building:block/soft_rock/place1",
+      "excessive_building:block/soft_rock/place2",
+      "excessive_building:block/soft_rock/place3"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.soft_rock.fall": {
+    "sounds": [
+      "excessive_building:block/soft_rock/hit1",
+      "excessive_building:block/soft_rock/hit2",
+      "excessive_building:block/soft_rock/hit3"
+    ]
+  },
+  "block.soft_rock.hit": {
+    "sounds": [
+      "excessive_building:block/soft_rock/hit1",
+      "excessive_building:block/soft_rock/hit2",
+      "excessive_building:block/soft_rock/hit3"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.soft_rock.place": {
+    "sounds": [
+      "excessive_building:block/soft_rock/place1",
+      "excessive_building:block/soft_rock/place2",
+      "excessive_building:block/soft_rock/place3"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.soft_rock.step": {
+    "sounds": [
+      "excessive_building:block/soft_rock/hit1",
+      "excessive_building:block/soft_rock/hit2",
+      "excessive_building:block/soft_rock/hit3"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  }
+}

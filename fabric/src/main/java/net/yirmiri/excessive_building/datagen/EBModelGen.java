@@ -20,8 +20,8 @@ import net.minecraft.world.level.block.state.properties.DripstoneThickness;
 import net.yirmiri.excessive_building.core.registry.EBBlocks;
 import net.yirmiri.excessive_building.core.registry.EBItems;
 
-public class EBModelProvider extends FabricModelProvider {
-    public EBModelProvider(FabricDataOutput output) {
+public class EBModelGen extends FabricModelProvider {
+    public EBModelGen(FabricDataOutput output) {
         super(output);
     }
 

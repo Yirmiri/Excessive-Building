@@ -16,6 +16,8 @@ import net.yirmiri.excessive_building.common.item.MalletItem;
 import net.yirmiri.excessive_building.core.init.EBTiers;
 import net.yirmiri.excessive_building.core.registry.EBEffects;
 import net.yirmiri.excessive_building.core.registry.EBItems;
+import net.yirmiri.excessive_building.core.registry.EBSoundTypes;
+import net.yirmiri.excessive_building.core.registry.EBSounds;
 
 import java.util.function.ToIntFunction;
 
@@ -37,12 +39,12 @@ public class EBProperties {
         public static final BlockBehaviour.Properties LAPIS = BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK);
 
         //STONES
-        public static final BlockBehaviour.Properties COBBLESTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE);
+        public static final BlockBehaviour.Properties COBBLESTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).sound(EBSoundTypes.SOFT_ROCK);
         public static final BlockBehaviour.Properties CONGLOMERATE = BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).mapColor(MapColor.TERRACOTTA_WHITE);
-        public static final BlockBehaviour.Properties PEBBLESTONE = BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL).sound(SoundType.STONE);
+        public static final BlockBehaviour.Properties PEBBLESTONE = BlockBehaviour.Properties.ofFullCopy(Blocks.GRAVEL).sound(EBSoundTypes.SOFT_ROCK);
         public static final BlockBehaviour.Properties BRIMSTONE = BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK).sound(SoundType.DRIPSTONE_BLOCK);
-        public static final BlockBehaviour.Properties POLISHED_BRIMSTONE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE).sound(SoundType.POLISHED_DEEPSLATE);
-        public static final BlockBehaviour.Properties BRIMSTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE_BRICKS).sound(SoundType.POLISHED_DEEPSLATE);
+        public static final BlockBehaviour.Properties POLISHED_BRIMSTONE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE);
+        public static final BlockBehaviour.Properties BRIMSTONE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE_BRICKS);
         public static final BlockBehaviour.Properties BRIMSTONE_LAMP = BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE).sound(SoundType.GLASS).lightLevel(createLightLevelFromLitBlockState(12));
         public static final BlockBehaviour.Properties POLISHED_GRANITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_GRANITE);
         public static final BlockBehaviour.Properties POLISHED_ANDESITE = BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE);
@@ -71,15 +73,15 @@ public class EBProperties {
         public static final BlockBehaviour.Properties LAVENDER = BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties POTTED_LAVENDER = BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_POPPY).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties LAVENDER_CLAY = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD).mapColor(MapColor.COLOR_MAGENTA);
-        public static final BlockBehaviour.Properties LAVENDER_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).mapColor(MapColor.COLOR_MAGENTA);
+        public static final BlockBehaviour.Properties LAVENDER_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).mapColor(MapColor.COLOR_MAGENTA).sound(EBSoundTypes.SOFT_ROCK);
         public static final BlockBehaviour.Properties LAVENDER_BALE = BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK).sound(SoundType.MOSS).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties SAGE = BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties POTTED_SAGE = BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_POPPY).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties SAGE_CLAY = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD).mapColor(MapColor.COLOR_MAGENTA);
-        public static final BlockBehaviour.Properties SAGE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).mapColor(MapColor.COLOR_MAGENTA);
+        public static final BlockBehaviour.Properties SAGE_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).mapColor(MapColor.COLOR_MAGENTA).sound(EBSoundTypes.SOFT_ROCK);
         public static final BlockBehaviour.Properties SAGE_BALE = BlockBehaviour.Properties.ofFullCopy(Blocks.HAY_BLOCK).sound(SoundType.MOSS).mapColor(MapColor.COLOR_MAGENTA);
         public static final BlockBehaviour.Properties CORALSOIL_CLAY = BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD).mapColor(MapColor.COLOR_ORANGE);
-        public static final BlockBehaviour.Properties CORALSOIL_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).mapColor(MapColor.COLOR_ORANGE);
+        public static final BlockBehaviour.Properties CORALSOIL_BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).mapColor(MapColor.COLOR_ORANGE).sound(EBSoundTypes.SOFT_ROCK);
         public static final BlockBehaviour.Properties BRICKS = BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS);
         public static final BlockBehaviour.Properties HARD_CLAY = BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA);
         public static final BlockBehaviour.Properties GLAZED = BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_GLAZED_TERRACOTTA);
