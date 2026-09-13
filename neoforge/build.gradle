@@ -52,6 +52,9 @@ neoForge {
 dependencies {
     //RUNICLIB
     implementation("curse.maven:runiclib-880879:${neoforge_runiclib}")
+
+    //test
+    implementation "curse.maven:gleam-1680660:8866536"
 }
 
 sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }

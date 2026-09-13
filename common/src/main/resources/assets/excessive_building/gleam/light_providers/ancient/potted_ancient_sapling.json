@@ -1,0 +1,11 @@
+{
+  "emitters": [
+    "excessive_building:potted_ancient_sapling"
+  ],
+  "light_properties": {
+    "encoding": "hex",
+    "hex": "#e50000",
+    "radius": 4.0,
+    "intensity": 0.8
+  }
+}

@@ -97,12 +97,12 @@ public class EBProperties {
         public static final BlockBehaviour.Properties PLATE = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE);
         public static final BlockBehaviour.Properties BUTTON = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON);
         public static final BlockBehaviour.Properties LEAVES = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES);
-        public static final BlockBehaviour.Properties GLOW_LEAVES = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).lightLevel(s -> 14).sound(SoundType.FLOWERING_AZALEA);
-        public static final BlockBehaviour.Properties GLOW_SAPLING = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).lightLevel(s -> 6).sound(SoundType.CHERRY_SAPLING);
-        public static final BlockBehaviour.Properties GLOW_SAPLING_POT = BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING).lightLevel(s -> 6);
+        public static final BlockBehaviour.Properties GLOW_LEAVES = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).lightLevel(s -> 8).sound(SoundType.FLOWERING_AZALEA);
+        public static final BlockBehaviour.Properties GLOW_SAPLING = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).lightLevel(s -> 4).sound(SoundType.CHERRY_SAPLING);
+        public static final BlockBehaviour.Properties GLOW_SAPLING_POT = BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING).lightLevel(s -> 4);
         public static final BlockBehaviour.Properties HANG_VINES = BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).randomTicks().noCollission().lightLevel(CaveVines.emission(14)).instabreak().sound(SoundType.CAVE_VINES).pushReaction(PushReaction.DESTROY);
-        public static final BlockBehaviour.Properties ANCIENT_VINES = BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES).lightLevel(s -> 7).sound(SoundType.CAVE_VINES);
-        public static final BlockBehaviour.Properties ANCIENT_VINES_PLANT = BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES_PLANT).lightLevel(s -> 7).sound(SoundType.CAVE_VINES);
+        public static final BlockBehaviour.Properties ANCIENT_VINES = BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES).lightLevel(s -> 6).sound(SoundType.CAVE_VINES);
+        public static final BlockBehaviour.Properties ANCIENT_VINES_PLANT = BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES_PLANT).lightLevel(s -> 6).sound(SoundType.CAVE_VINES);
         public static final BlockBehaviour.Properties SAPLING = BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).sound(SoundType.CHERRY_SAPLING);
         public static final BlockBehaviour.Properties SAPLING_POT = BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING);
     }

@@ -1,0 +1,11 @@
+{
+  "emitters": [
+    "excessive_building:green_frosted_lantern"
+  ],
+  "light_properties": {
+    "encoding": "hex",
+    "hex": "#588921",
+    "radius": 12.0,
+    "intensity": 1.0
+  }
+}

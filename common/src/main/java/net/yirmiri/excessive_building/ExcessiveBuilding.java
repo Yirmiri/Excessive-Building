@@ -23,4 +23,3 @@ public class ExcessiveBuilding {
         EBSounds.load();
     }
 }//todo make all unique stones craft each other(?)
-//todo gleam & colorful lighting integration

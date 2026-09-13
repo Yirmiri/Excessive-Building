@@ -377,11 +377,11 @@ public class EBBlockLootGen extends FabricBlockLootTableProvider {
             dropSelf(EBBlocks.getDyedFrostedLantern(colors.getId()).get());
             dropSelf(EBBlocks.getDyedAlmentra(colors.getId()).get());
             dropSelf(EBBlocks.getDyedAlmentraStairs(colors.getId()).get());
-            add(EBBlocks.getDyedAlmentraSlab(colors.getId()).get(), createSlabItemTable(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get()));
+            add(EBBlocks.getDyedAlmentraSlab(colors.getId()).get(), createSlabItemTable(EBBlocks.getDyedAlmentraSlab(colors.getId()).get()));
             dropSelf(EBBlocks.getDyedAlmentraStatue(colors.getId()).get());
             dropSelf(EBBlocks.getDyedAlmentraBricks(colors.getId()).get());
             dropSelf(EBBlocks.getDyedAlmentraBrickStairs(colors.getId()).get());
-            add(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()).get(), createSlabItemTable(EBBlocks.getDyedCorrugatedIronSlab(colors.getId()).get()));
+            add(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()).get(), createSlabItemTable(EBBlocks.getDyedAlmentraBrickSlab(colors.getId()).get()));
             dropSelf(EBBlocks.getDyedAlmentraBrickWall(colors.getId()).get());
         }
     }

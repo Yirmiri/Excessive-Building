@@ -1,0 +1,11 @@
+{
+  "emitters": [
+    "excessive_building:emerald_lamp"
+  ],
+  "light_properties": {
+    "encoding": "hex",
+    "hex": "#22e143",
+    "radius": 15.0,
+    "intensity": 0.8
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "emitters": [
+    "excessive_building:magenta_frosted_lantern"
+  ],
+  "light_properties": {
+    "encoding": "hex",
+    "hex": "#c963c7",
+    "radius": 12.0,
+    "intensity": 1.0
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "emitters": [
+    "excessive_building:brimstone_lamp[lit=true]"
+  ],
+  "light_properties": {
+    "encoding": "hex",
+    "hex": "#ff0000",
+    "radius": 12.0,
+    "intensity": 1.0
+  }
+}

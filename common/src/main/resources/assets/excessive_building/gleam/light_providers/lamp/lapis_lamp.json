@@ -1,0 +1,11 @@
+{
+  "emitters": [
+    "excessive_building:lapis_lamp"
+  ],
+  "light_properties": {
+    "encoding": "hex",
+    "hex": "#7c7dff",
+    "radius": 15.0,
+    "intensity": 0.8
+  }
+}

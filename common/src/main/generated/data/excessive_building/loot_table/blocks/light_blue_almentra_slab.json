@@ -11,7 +11,7 @@
               "add": false,
               "conditions": [
                 {
-                  "block": "excessive_building:light_blue_corrugated_iron_slab",
+                  "block": "excessive_building:light_blue_almentra_slab",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "type": "double"
@@ -25,7 +25,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "excessive_building:light_blue_corrugated_iron_slab"
+          "name": "excessive_building:light_blue_almentra_slab"
         }
       ],
       "rolls": 1.0

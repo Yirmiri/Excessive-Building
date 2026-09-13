@@ -1,0 +1,11 @@
+{
+  "emitters": [
+    "excessive_building:diamond_lamp"
+  ],
+  "light_properties": {
+    "encoding": "hex",
+    "hex": "#52f4e7",
+    "radius": 15.0,
+    "intensity": 0.8
+  }
+}
